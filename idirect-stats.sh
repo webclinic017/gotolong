@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#!/bin/sh
+
 if test $# -lt 3
 then
    echo "usage: $0 <file> <company | year> <all | tcs |  2017>"
@@ -45,7 +47,7 @@ then
 # 3MIND,3M INDIA LIMITED,INE470A01017,Buy,1,13647.95,120.86,0.40,0.00,Rolling,STT Paid,icicidirect,11-Jul-2017,BSE,
 
 
-cat $FILE | grep -i $SPEC | awk -F',' '{ if (prev_company != $1) { prev_company=$1; prev_year=0; prev_month=0; printf("%s - %s\n",$1, $2);} tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); day=substr(tdate,1,2); if (prev_year != year) { prev_year=year; printf("Year %s\n",year);}  if (prev_month != month) { prev_month=month; printf("\t%s\n",month); } printf("\t\t%s:%s@%s %s\n",$5*$6, $5, $6, $4);   }' 
+cat $FILE | grep -i $SPEC | awk -F',' '{ if (prev_company != $1) { prev_company=$1; prev_year=0; prev_month=0; printf("%s - %s\n",$1, $2);} tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); day=substr(tdate,1,2); if (prev_year != year) { prev_year=year; printf("Year %s\n",year);}  if (prev_month != month) { prev_month=month; printf("\t%s\n",month); } printf("\t\t%3s share@value %5s total %5s %4s\n", int($5), int ($6), int($5*$6), $4);   }' 
 fi
 
 if [ "$ACTION" = "year" ]
@@ -58,11 +60,13 @@ do
        # echo year $year
        # echo month $month
 
-       cat $FILE | grep $year | grep $SPEC | grep $month | awk -F','  ' BEGIN {tbuy = 0; tsale =0;} {tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); buysale=$4; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) {printf("%s %s #txn %s sale %s buy %s net %s\n", year, month, NR, tsale, tbuy, tbuy-tsale); } }' 
+       cat $FILE | grep $year | grep $SPEC | grep $month | awk -F','  ' BEGIN {tbuy = 0; tsale =0;} {tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); buysale=$4; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) {printf("%s %s #txn %3s sale %6s buy %6s net %6s\n", year, month, NR, int(tsale), int(tbuy), int(tbuy-tsale)); } }' 
    done
 done
 fi
 
 # end of the file
 ################################
+
+
 
