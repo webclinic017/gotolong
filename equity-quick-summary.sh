@@ -43,7 +43,13 @@
 
 # BASIC CODE
 
-f=equity-target-units.csv
+if test $# -lt 1
+then
+   echo "usage: $0 equity-target-units-input.csv"
+   exit 1
+fi
+
+f=$1
 lines=`wc -l $f|awk '{print $1}'`
 lines=`expr $lines - 10`
 tail -${lines} $f | sort > sort.csv
