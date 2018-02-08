@@ -25,45 +25,55 @@ BEGIN {
       ind_total=0;
       sub_ind_total=0;
       portfolio_total=0;
+      sub_ind_index=0;
       printf("------------------------------------\n\n");
       printf(": Portfolio Distribution : \n");
       printf("------------------------------------\n\n");
   }
 
   {
-    if (prev_industry != $1) { 
+    if (prev_industry != $1) {
             if (NR != 1)
             {
-              printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total); 
-              printf("\n%s (%d)\n", prev_industry, ind_total); 
+              printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total);
+              printf("\n%s (%d)\n", prev_industry, ind_total);
               printf("------------------------------------\n\n");
             }
             portfolio_total+=ind_total;
             prev_industry=$1;
             prev_sub_industry=$2;
-            ind_total=$6; 
-            sub_ind_total=$6; 
+            ind_total=$6;
+            sub_ind_total=$6;
+            sub_ind_index=0;
      }
      else {
            ind_total+=$6;
 
            if (prev_sub_industry != $2) {
-              printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total); 
+              sub_ind_index=0;
+              printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total);
               portfolio_total+=sub_ind_total;
               prev_sub_industry=$2;
-              sub_ind_total=$6; 
+              sub_ind_total=$6;
             }
             else {
                sub_ind_total+=$6;
             }
      }
-     printf("%s (%s) | ", $3, $6); 
+     sub_ind_index++;
+     printf("%s (%s) | ", $3, $6);
+     if (sub_ind_index%3 == 0)
+     {
+       printf("\n");
+       sub_ind_index = 0;
+     }
   }
 
-END {  
-       printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total); 
-       printf("\n%s (%d)\n", prev_industry, ind_total); 
+END {
+       printf("\n** %s (%d) \n\n", prev_sub_industry, sub_ind_total);
+       printf("\n%s (%d)\n", prev_industry, ind_total);
        printf("------------------------------------\n\n");
-       printf(": Portfolio Value %d :\n", portfolio_total); 
+       printf(": Portfolio Value %d :\n", portfolio_total);
        printf("------------------------------------\n\n");
     } ' sort.csv
+
