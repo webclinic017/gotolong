@@ -20,8 +20,8 @@ fi
 #   ** line # 4 'Account Number' 
 #   ** line # 12 'Transactions list' 
 # Clear contents of Balance Column (Last column)
-# Save it
-# upload to stock-market/fy17-18/
+# Save it as OpTransactionHistory17-04-2018.csv file
+# upload OpTransactionHistory17-04-2018.csv to stock-market/fy17-18/
 
 DIV_FILE=$1
 CSV_OUT=$2
