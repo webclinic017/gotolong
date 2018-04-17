@@ -15,11 +15,13 @@ fi
 # Advanced Search : Transaction Type : Credit
 # Get Statement
 # At bottom :  Download details as XLS file
-# Save it as OpTransactionHistory17-04-2018.xls
+# Save it as OpTransactionHistory17-04-2018.xls (automatic name)
 # Open it and remove personal details information (Name and Account number)
 #   ** line # 4 'Account Number' 
 #   ** line # 12 'Transactions list' 
-# Save it and upload to stock-market/fy17-18/
+# Clear contents of Balance Column (Last column)
+# Save it
+# upload to stock-market/fy17-18/
 
 DIV_FILE=$1
 CSV_OUT=$2
