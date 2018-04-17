@@ -17,6 +17,7 @@ fi
 # 4> Equity Portfolio Tracker (top right) -> Advanced options
 # 5> Download : All Transaction (csv)
 # 6> File : 8501317095_PortFolioEqtSummary.csv
+# 7> Upload the file to github and rename it to 20180417_PortFolioEqtSummary.csv (change the date)
 # 7> Here is a format of the file
 # Stock Symbol,Company Name,ISIN Code,Action,Quantity,Transaction Price,Brokerage,Transaction Charges,StampDuty,Segment,STT Paid/Not Paid,Remarks,Transaction Date,Exchange,
 # 3MIND,3M INDIA LIMITED,INE470A01017,Buy,1,13647.95,120.86,0.40,0.00,Rolling,STT Paid,icicidirect,11-Jul-2017,BSE,
