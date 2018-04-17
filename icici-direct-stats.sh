@@ -11,9 +11,13 @@ fi
 # Developer : Surinder Kumar
 # 
 # Steps to use the script :
-# 1> Download ICICIDirect porfolio (all transaction ) and save it in notepad in .csv format (name the file portfolio-eqt-summary.csv)
-#
-# 2> Here is a format of the file
+# 1> Login to ICICIDirect site
+# 2> Trade & Invest -> Portfolio & Statements  (https://secure.icicidirect.com/IDirectTrading/Trading/Trade.aspx)
+# 3> Portfolio -> Equity
+# 4> Equity Portfolio Tracker (top right) -> Advanced options
+# 5> Download : All Transaction (csv)
+# 6> File : 8501317095_PortFolioEqtSummary.csv
+# 7> Here is a format of the file
 # Stock Symbol,Company Name,ISIN Code,Action,Quantity,Transaction Price,Brokerage,Transaction Charges,StampDuty,Segment,STT Paid/Not Paid,Remarks,Transaction Date,Exchange,
 # 3MIND,3M INDIA LIMITED,INE470A01017,Buy,1,13647.95,120.86,0.40,0.00,Rolling,STT Paid,icicidirect,11-Jul-2017,BSE,
 #
