@@ -14,7 +14,8 @@ fi
 # 1> Login to ICICIDirect site
 # 2> Trade & Invest -> Portfolio & Statements  (https://secure.icicidirect.com/IDirectTrading/Trading/Trade.aspx)
 # 3> Portfolio -> Equity
-# 4> Equity Portfolio Tracker (top right) -> Advanced options
+# 4.1> Grouping : All (to cover zero and negative holdings)
+# 4.2> Equity Portfolio Tracker (top right) -> Advanced options
 # 5> Download : All Transaction (csv)
 # 6> File : 8501317095_PortFolioEqtSummary.csv
 # 7> Upload the file to github (stock-market/all-txn/) and rename it to 20180417_PortFolioEqtSummary.csv (change the date)
