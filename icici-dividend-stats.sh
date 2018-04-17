@@ -11,6 +11,7 @@ fi
 # Login to icici bank account using net banking
 # My accounts -> Bank Accounts -> View Detailed Statement
 # Transaction Date from ... maximum 1 year period
+# 01-04-2017 to 31-03-2018
 # Advanced Search : Transaction Type : Credit
 # Get Statement
 # Download details as XLS file
