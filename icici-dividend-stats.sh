@@ -14,8 +14,8 @@ fi
 # 01-04-2017 to 31-03-2018
 # Advanced Search : Transaction Type : Credit
 # Get Statement
-# Download details as XLS file
-# Save it as OpTransactionHistory.xls
+# At bottom :  Download details as XLS file
+# Save it as OpTransactionHistory17-04-2018.xls
 # Open it and remove lines till line # 12 'Transactions list' 
 # Save it as op-txn-history.csv 
 
