@@ -83,7 +83,9 @@ new_num_lines=0
 old_num_lines=0
 portfolio=0
 echo "YEAR, Month, TXN#, Sale, Buy, Net, Portfolio"
-for year in 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017
+start_year=2007
+current_year=$(date +%Y)
+for year in `seq $start_year $current_year` 
 do
    for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
    do
@@ -116,7 +118,7 @@ old_num_lines=0
 portfolio=0
 
 echo "YEAR, Month, TXN#, Sale, Buy, Net, Portfolio, Companies"
-for year in 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017
+for year in `seq $start_year $current_year` 
 do
    for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
    do
