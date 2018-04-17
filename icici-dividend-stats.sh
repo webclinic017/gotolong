@@ -16,12 +16,13 @@ fi
 # Get Statement
 # At bottom :  Download details as XLS file
 # Save it as OpTransactionHistory17-04-2018.xls (automatic name)
-# Open it and remove personal details information (Name and Account number)
+# Open it and Delete first 12 lines
+#   ** This remove personal details information (Name and Account number)
 #   ** line # 4 'Account Number' 
 #   ** line # 12 'Transactions list' 
 # Clear contents of Balance Column (Last column)
-# Save it as OpTransactionHistory17-04-2018.csv file
-# upload OpTransactionHistory17-04-2018.csv to stock-market/fy17-18/
+# Save it as CSV (Comma delimited) (*.csv) : OpTransactionHistory17-04-2018.csv file
+# Upload OpTransactionHistory17-04-2018.csv to stock-market/fy17-18/
 
 DIV_FILE=$1
 CSV_OUT=$2
