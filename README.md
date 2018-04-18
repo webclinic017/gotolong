@@ -9,8 +9,11 @@ git clone https://github.com/surinder432/stock-market.git
 git pull
 
 2> 
+
 cd stock-market
+
 git config --global --edit
+
 git commit --amend --reset-author
 
 3> Add a file
