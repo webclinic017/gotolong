@@ -38,8 +38,11 @@ fi
 if [[ $CSV_OUT == "csv" ]] 
 then
 
+# TBD : fix it for sort order
+
     echo "Date, Company, Dividend"
-    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s,%s,%s\n", tdate, company, int(damount)); }'  | sort --key=$key
+    # cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s,%s,%s\n", tdate, company, int(damount)); }'  | sort --key=$key
+    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s %s %s\n", tdate, company, int(damount)); }' | sort --key=$key | awk ' { printf("%s,", $1);  for (i=2; i< NF-1; i++) { if (i !=2) { printf(" "); } printf("%s",$i); };  printf(",%s\n",$NF); }'
 
 else
 
