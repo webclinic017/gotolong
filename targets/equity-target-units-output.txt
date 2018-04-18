@@ -6,37 +6,45 @@
 Kaveri Seeds (3000) | 
 ** Agriculture Products (3000) 
 
+
+Agriculture (3000)
+------------------------------------
+
 UPL (5000) | 
 ** Chemicals (5000) 
 
-Chambal Fertilizers (1000) | Coramandel International (2000) | 
-** Fertilizers (3000) 
-
-Bayer (5000) | Monsanto (3000) | P I Industries (3000) | 
-Rallis (1000) | 
-** Pesticides & Agro Chemicals (12000) 
-
-Adani Enterprises (2000) | 
-** Trading (2000) 
+Bayer (5000) | Monsanto (5000) | P I Industries (3000) | 
+Rallis (2000) | 
+** Pesticides & Agro Chemicals (15000) 
 
 
-Agriculture (25000)
+Agro Chemicals (20000)
+------------------------------------
+
+United Breweries (2000) | United Spirits (12000) | 
+** Breweries & Distillaries (14000) 
+
+
+Alcoholic Beverages (14000)
 ------------------------------------
 
 Amara Raja (1000) | Exide (1000) | Motherson Sumi (2000) | 
 
 ** Auto Ancilliary (4000) 
 
+SKF India (1600) | 
+** Bearings (1600) 
+
 Asahi Glass India  (2000) | 
 ** Glass & Glass Products (2000) 
 
 
-Auto components (6000)
+Auto components (7600)
 ------------------------------------
 
-Bajaj Auto (3000) | Hero Motocop (4000) | TVS Motors (2000) | 
-Tube Investment (1000) | 
-** Auto -2&3 (10000) 
+Bajaj Auto (5000) | Hero Motocop (4000) | TVS Motors (2000) | 
+Tube Investment (2000) | 
+** Auto -2&3 (13000) 
 
 Mahindra & Mahindra (2000) | Maruti (5000) | 
 ** Auto -Cars (7000) 
@@ -47,32 +55,25 @@ Tata Motors (3000) |
 VST Tillers (2000) | 
 ** Auto -Tractors (2000) 
 
-SKF India (1600) | 
-** Bearings (1600) 
 
-Apollo Tyres (2000) | Balakrishna Industries  (2000) | CEAT (2000) | 
-J K Tyre (2000) | 
-** Tyres (8000) 
-
-
-Automobiles (31600)
+Automobiles (25000)
 ------------------------------------
 
-AXIS Bank (1000) | HDFC Bank (17000) | ICICI Bank (4000) | 
-Kotak Mahindra Bank (1000) | 
-** Banks-Private (23000) 
+AXIS Bank (2000) | HDFC Bank (17000) | ICICI Bank (4000) | 
+Kotak Mahindra Bank (2000) | 
+** Banks-Private (25000) 
 
 SBI (5000) | 
 ** Banks-Public (5000) 
 
-GIC Re (1000) | HDFC Standard Life (1000) | ICICI Lombard (1500) | 
-ICICI Prudential (2000) | New India Assurance (1000) | SBI Life (1000) | 
-
-** Finance - General (7500) 
-
 HDFC (11000) | Indiabulls Housing Finance (1000) | LIC Housing Finance (2000) | 
 
 ** Finance - Housing (14000) 
+
+GIC Re (1000) | HDFC Standard Life (1000) | ICICI Lombard (1500) | 
+ICICI Prudential (2000) | New India Assurance (1000) | SBI Life (1000) | 
+
+** Finance - Insurance (7500) 
 
 BSE (1000) | Bajaj FinServ (5000) | CDSL (1000) | 
 Muthoot Finance (2000) | 
@@ -84,12 +85,12 @@ Mahindra & Mahindra Finance (1000) | Shriram Transport Finance (1000) |
 Power Finance Corp (PFC) (2000) | Rural Electrification Corp (REC) (2000) | 
 ** Finance - Term Lending Institutions (4000) 
 
-CARE (2000) | CRISIL (2000) | ICRA (4000) | 
+CARE (2000) | CRISIL (4000) | ICRA (4000) | 
 
-** Z Misc : Credit Rating (8000) 
+** Z Misc : Credit Rating (10000) 
 
 
-BFSI (72500)
+BFSI (76500)
 ------------------------------------
 
 ACC (3000) | Ambuja (2000) | UltraTech (12000) | 
@@ -100,30 +101,34 @@ ACC (3000) | Ambuja (2000) | UltraTech (12000) |
 Cement (17000)
 ------------------------------------
 
-BASF (1400) | Pidilite (1600) | Tata Chemicals (1000) | 
-
-** Chemicals (4000) 
-
-Akzo Nobel (2000) | Asian Paints (8000) | Berger Paints (2000) | 
-Kansai Nerolac (2000) | 
-** Paints & Varnishes (14000) 
+Asian Granito Limited (1000) | Cera Sanitaryware (3000) | HSIL (Hindware) (2000) | 
+Kajaria Ceramics (2000) | Somany Ceramics (1000) | 
+** Ceramics & Granite (9000) 
 
 
-Chemicals (18000)
+Ceramics (9000)
+------------------------------------
+
+BASF (3400) | Pidilite (2600) | Tata Chemicals (2000) | 
+
+** Chemicals (8000) 
+
+
+Chemicals (8000)
 ------------------------------------
 
 Voltas (2000) | 
 ** Consumer Goods : Electronic (2000) 
 
 Blue Star (1000) | IFB Industries (1000) | Johnson Control (2000) | 
-Whirlpool (1000) | 
-** Consumer Goods : White Goods (5000) 
+Whirlpool (2000) | 
+** Consumer Goods : White Goods (6000) 
 
 TTK Prestige (6500) | 
 ** Domestic Appliances (6500) 
 
 
-Consumer Goods (13500)
+Consumer Durables (14500)
 ------------------------------------
 
 Godrej Industries (1000) | Grasim (1000) | 
@@ -146,8 +151,8 @@ CUMI (1000) | Grindwell Norton (1000) |
 Havells (1500) | 
 ** Electric Equipments (1500) 
 
-Bharat Electronics (1000) | Crompton Greaves Consumer (1000) | 
-** Electrical (2000) 
+Bharat Electronics (2000) | Crompton Greaves Consumer (1000) | 
+** Electrical (3000) 
 
 Quess corp (1000) | 
 ** Engineering (1000) 
@@ -155,72 +160,49 @@ Quess corp (1000) |
 Cummins (2000) | 
 ** Engines (2000) 
 
-KSB Pumps (1500) | 
-** Pumps (1500) 
+KSB Pumps (2300) | 
+** Pumps (2300) 
 
 
-Engineering (10000)
+Engineering (11800)
 ------------------------------------
 
 Avanti Feeds (3000) | Godrej Agrovet (1000) | 
 ** Aquaculture (4000) 
 
-United Breweries (2000) | United Spirits (12000) | 
-** Breweries & Distillaries (14000) 
-
-ITC (10000) | 
-** Cigarettes (10000) 
-
 Eveready (2000) | 
 ** Dry Cells (2000) 
 
-Britania (3500) | Future consumer limited (1000) | GSK Consumer (5000) | 
+Britania (8500) | Future consumer limited (1000) | GSK Consumer (5000) | 
 KRBL (1000) | Nestle (6500) | Varun Beverages (2000) | 
 Venky's (2000) | 
-** Food Processing (21000) 
+** Food Processing (26000) 
 
-Colgate Palmolive (1000) | Dabur (2000) | Emami (2000) | 
-Gillette India (2000) | Godrej Consumer (1000) | HUL (5000) | 
+Colgate Palmolive (2000) | Dabur (2000) | Emami (2000) | 
+Gillette India (2000) | Godrej Consumer (1000) | HUL (HINLEV) (6000) | 
 Marico (2000) | P & G (7000) | 
-** Personal Care (22000) 
-
-Tata Coffee (2000) | Tata Global Beverages (2000) | 
-** Plantations - Tea & Coffee (4000) 
+** Personal Care (24000) 
 
 
-FMCG (77000)
+FMCG (56000)
 ------------------------------------
 
-PC Jewellers (1000) | Rajesh Exports (1000) | Ttian (3000) | 
+Chambal Fertilizers (1000) | Coramandel International (2000) | 
+** Fertilizers (3000) 
 
-** Diamong Cutting & Jewellery & Precious Metals (5000) 
 
-
-Gems & Jewellery (5000)
+Fertilizers (3000)
 ------------------------------------
 
-Apollo Hospital (7000) | Fortis Healthcare (1000) | Narayana Hrudayalya (2000) | 
+PC Jewellers (1000) | Rajesh Exports (2000) | Titan (4000) | 
 
-** Hospitals & Medical Services (10000) 
-
-Abott India (4000) | Aurobindo Pharma (2000) | Cadila Healthcare (1000) | 
-Cipla (2000) | Dr Lal Path Labs (1000) | Glenmark Pharma (1000) | 
-Lupin (10000) | Pfizer (1000) | Piramal Enterprises (3000) | 
-Sanofi India (4000) | Sun Pharma (11000) | 
-** Pharmaceuticals (40000) 
+** Diamong Cutting & Jewellery & Precious Metals (7000) 
 
 
-Healthcare (50000)
+Gems & Jewellery (7000)
 ------------------------------------
 
-Dr Reddy Labs (3000) | 
-** Pharmaceuticals (3000) 
-
-
-Helathcare (3000)
-------------------------------------
-
-HCL Tech (5000) | InfoEdge (2000) | Infosys (10000) | 
+HCL Tech (5000) | Info Edge (2000) | Infosys (10000) | 
 TCS (18000) | Tech Mahindra (3000) | Wipro (5600) | 
 
 ** Computer Software (43600) 
@@ -229,28 +211,35 @@ TCS (18000) | Tech Mahindra (3000) | Wipro (5600) |
 IT (43600)
 ------------------------------------
 
-ABB India (3000) | Adani Ports (1000) | BHEL (1000) | 
-Engineers India (1000) | L & T (6000) | NBCC (1000) | 
+ABB India (3000) | Adani Ports (1000) | BHEL (2000) | 
+Engineers India (1000) | L & T (7000) | NBCC (2000) | 
 Siemens India (3000) | 
-** Infrastructure - General (16000) 
+** Infrastructure - General (19000) 
 
 
-Infrastructure (16000)
+Infrastructure (19000)
+------------------------------------
+
+Bata (2500) | Relaxo (2000) | 
+** Leather Products (4500) 
+
+
+Leather (4500)
 ------------------------------------
 
 Blue Dart (4000) | 
 ** Couriers (4000) 
 
-Shipping corporation (1000) | 
-** Shipping (1000) 
+Shipping corporation (2000) | 
+** Shipping (2000) 
 
-Aegis Logistics (1000) | Allcargo Logistics (1000) | Container corporation (1000) | 
+Aegis Logistics (1000) | Allcargo Logistics (1000) | Container corporation (2000) | 
 Future supply chain (1000) | Interglobe Aviation (2000) | Mahindra Logistics (1000) | 
 VRL Logistics (2000) | 
-** Transport & Logistics (9000) 
+** Transport & Logistics (10000) 
 
 
-Logistics (14000)
+Logistics (16000)
 ------------------------------------
 
 Dish TV (2000) | PVR India (3000) | Zee Entertainment (5000) | 
@@ -290,20 +279,50 @@ Reliance Industries (8000) |
 Oil & Gas (27000)
 ------------------------------------
 
-Jain irrigation Systems (1000) | Nilkamal (2000) | Supreme Industries (1000) | 
+Akzo Nobel (2000) | Asian Paints (8000) | Berger Paints (2000) | 
+Kansai Nerolac (2000) | 
+** Paints & Varnishes (14000) 
+
+
+Paints (14000)
+------------------------------------
+
+Apollo Hospital (7000) | Fortis Healthcare (2000) | Narayana Hrudayalya (2000) | 
+
+** Hospitals & Medical Services (11000) 
+
+Abott India (4000) | Aurobindo Pharma (2000) | Cadila Healthcare (1000) | 
+Cipla (2000) | Dr Lal Path Labs (1000) | Dr Reddy Labs (5000) | 
+Glenmark Pharma (1000) | Lupin (10000) | Pfizer (1000) | 
+Piramal Enterprises (5000) | Sanofi India (4000) | Sun Pharma (11000) | 
+
+** Pharmaceuticals (47000) 
+
+
+Pharma & Healthcare (58000)
+------------------------------------
+
+Tata Coffee (2000) | Tata Global Beverages (2000) | 
+** Plantations - Tea & Coffee (4000) 
+
+
+Plantations (4000)
+------------------------------------
+
+Jain irrigation Systems (1000) | Nilkamal (2000) | Supreme Industries (2000) | 
 VIP Industries (2000) | 
-** Plastics (6000) 
+** Plastics (7000) 
 
 
-Plastic & Rubber (6000)
+Plastic & Rubber (7000)
 ------------------------------------
 
 NHPC (1000) | NLC (1000) | NTPC (6000) | 
-Power Grid Corp (5000) | Tata Power (1000) | 
-** Power - Generation & Distribution (14000) 
+Power Grid Corp (5000) | Tata Power (2000) | 
+** Power - Generation & Distribution (15000) 
 
 
-Power (14000)
+Power (15000)
 ------------------------------------
 
 J K Paper (2000) | 
@@ -313,41 +332,41 @@ J K Paper (2000) |
 Pulp & Paper (2000)
 ------------------------------------
 
-Asian Granito Limited (1000) | Cera Sanitaryware (3000) | HSIL (Hindware) (1000) | 
-Kajaria Ceramics (2000) | Somany Ceramics (1000) | 
-** Ceramics & Granite (8000) 
-
-NCC (1000) | 
-** Construction & Contracting : Civil (1000) 
+NCC (2000) | 
+** Construction & Contracting : Civil (2000) 
 
 Brigade Enterprise (1500) | DLF (2000) | Godrej Properties (2000) | 
-HUDCO (5600) | Prestige Estates (10000) | Purvankra projects (1000) | 
+HUDCO (5600) | Prestige Estates (10000) | Puravankra Limited (PURPRO) (2000) | 
 Sobha (5000) | 
-** Construction & Contracting : Real Estate (27100) 
+** Construction & Contracting : Real Estate (28100) 
 
 Century Plyboard (2000) | Greenlam (2000) | 
 ** Z Misc: Woodwork (4000) 
 
 
-Real Estate (40100)
+Real Estate (34100)
 ------------------------------------
 
 Sheela Foam (1600) | 
 ** Home Furnishing - Mattresses (1600) 
 
-Bata (2500) | Relaxo (2000) | 
-** Leather Products (4500) 
+Aditya Birla Fashion & Retail (2000) | Avenue Supermarket (1000) | Future Lifestyle & Fashion (2000) | 
+Future Retail (2000) | Shoppers Stop (2000) | Trent (2000) | 
 
-Aditya Birla Fashion & Retail (1000) | Avenue Supermarket (1000) | Future Lifestyle & Fashion (2000) | 
-Future Retail (2000) | Shoppers Stop (2000) | Trent (1000) | 
-
-** Retail (9000) 
+** Retail (11000) 
 
 Talvalkar Better Value Fitness (2000) | 
 ** Z Misc: Fitness (2000) 
 
 
-Retail (17100)
+Retail (14600)
+------------------------------------
+
+Company (Current Value) | 
+** Industry (0) 
+
+
+Sector (0)
 ------------------------------------
 
 JSW Steel (2000) | Tata Steel (5000) | 
@@ -381,8 +400,15 @@ Arvind Limited (1000) |
 Textiles (1000)
 ------------------------------------
 
-Cafe Coffe Day (1000) | 
-** Food Processing (1000) 
+ITC (10000) | 
+** Cigarettes (10000) 
+
+
+Tobacco (10000)
+------------------------------------
+
+Cafe Coffe Day (2000) | 
+** Food Processing (2000) 
 
 EIH (2000) | Indian Hotels (6000) | Mahindra Holidays (2000) | 
 West Life Development (1000) | 
@@ -393,9 +419,24 @@ Cox & Kings (2000) | Jubilant Food (3000) | Thomas Cook (2000) |
 ** Z Misc : Hospitality (7000) 
 
 
-Tourism & Hospitality (19000)
+Tourism & Hospitality (20000)
 ------------------------------------
 
-: Portfolio Value 875000 :
+Adani Enterprises (2000) | 
+** Trading (2000) 
+
+
+Trading (2000)
+------------------------------------
+
+Apollo Tyres (2000) | Balakrishna Industries  (2000) | CEAT (2000) | 
+J K Tyre (2000) | 
+** Tyres (8000) 
+
+
+Tyres (8000)
+------------------------------------
+
+: Portfolio Value 866300 :
 ------------------------------------
 
