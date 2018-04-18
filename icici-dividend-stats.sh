@@ -2,7 +2,7 @@
 
 if test $# -lt 2
 then
-   echo "usage: $0 <op-txn-history.csv> <plain | csv>"
+   echo "usage: $0 <op-txn-history.csv> <plain | csv> <sort_date|sort_company>"
    exit 1
 fi
 
@@ -26,16 +26,24 @@ fi
 
 DIV_FILE=$1
 CSV_OUT=$2
+DATE_COMPANY=$3
+
+if [[ "$DATE_COMPANY" == "sort_company" ]]
+then
+  key=2
+else
+  key=1
+fi
 
 if [[ $CSV_OUT == "csv" ]] 
 then
 
     echo "Date, Company, Dividend"
-    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s,%s,%s\n", tdate, company, int(damount)); }' 
+    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s,%s,%s\n", tdate, company, int(damount)); }'  | sort --key=$key
 
 else
 
     echo "Date Company Dividend "
-    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s %s %s\n", tdate, company, int(damount)); }' 
+    cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s %s %s\n", tdate, company, int(damount)); }' | sort --key=$key
 
 fi
