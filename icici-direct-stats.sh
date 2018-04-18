@@ -2,7 +2,7 @@
 
 if test $# -lt 3
 then
-   echo "usage: $0 <file> <year_company> <all | 2017>  <all | tcs>"
+   echo "usage: $0 <file> <year_company> <all | 2017>  <all | tcs> <year | quarter | month>"
    echo "usage: $0 <file> <year_company_verbose> <all | 2017>  <all | tcs>"
    echo "usage: $0 <file> <company_year> <all | tcs>   <all |  2017>"
    exit 1
@@ -60,6 +60,13 @@ else
    SPEC_YEAR=$YEAR
 fi
 
+YQM=$5
+
+case $YQM in
+"year" ) YQM=year ;;
+"quarter" ) YQM=quarter ;;
+"month" ) YQM=month ;;
+esac
 
 # echo file $1
 # echo action $2
@@ -83,28 +90,95 @@ OUT_FILE=/tmp/year.out
 new_num_lines=0
 old_num_lines=0
 portfolio=0
-echo "YEAR, Month, TXN#, Sale, Buy, Net, Portfolio"
+echo "YEAR, Qtr, Month, TXN#, Sale, Buy, Net, Portfolio"
 start_year=2007
 current_year=$(date +%Y)
 for year in `seq $start_year $current_year` 
 do
-   for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-   do
-       # echo year $year
-       # echo month $month
 
-       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $month | awk -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; tnet=0; company=""; } {tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=tsale; printf("%s, %s, %3s, %6s, %6s, %6s, %7s\n", year, month, NR, int(tsale), int(tbuy), int(tnet), int(portfolio+tnet)); } }'  >> $OUT_FILE 
+  if [ "$YQM" = "year" ] ; then
+       qtr=all
+       month=all
+
+       match=$year
+       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk -v qtr=$qtr -v month=$month -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; tnet=0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") { month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=tsale; printf("%s, Q%s, %s, %3s, %6s, %6s, %6s, %7s\n", year, qtr, month, NR, int(tsale), int(tbuy), int(tnet), int(portfolio+tnet)); } }'  >> $OUT_FILE 
 
        new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
        if [[ "$new_num_lines" -ne "$old_num_lines" ]]
        then
          # get portfolio value 
-         portfolio=`tail -1 $OUT_FILE | awk '{print $7}'`
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
        fi
        old_num_lines=$new_num_lines
 
-   done
-done
+  fi # year
+
+  if [ "$YQM" = "quarter" ]
+  then
+
+   month=all
+   for qtr in `seq 1 4` 
+   do
+       # echo year $year
+       # echo month $month
+
+       case "$qtr" in
+       4)
+             qtr_str="-e Jan -e Feb -e Mar"
+             ;; 
+       1)
+             qtr_str="-e Apr -e May -e Jun"
+             ;; 
+       2)
+             qtr_str="-e Jul -e Aug -e Sep"
+             ;; 
+       3)
+             qtr_str="-e Oct -e Nov -e Dec"
+             ;; 
+       esac
+
+       match=$qtr_str
+       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk -v qtr=$qtr -v month=$month -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; tnet=0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") { month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=tsale; printf("%s, Q%s, %s, %3s, %6s, %6s, %6s, %7s\n", year, qtr, month, NR, int(tsale), int(tbuy), int(tnet), int(portfolio+tnet)); } }'  >> $OUT_FILE 
+
+       new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
+       if [[ "$new_num_lines" -ne "$old_num_lines" ]]
+       then
+         # get portfolio value 
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
+       fi
+       old_num_lines=$new_num_lines
+
+   done # qtr
+
+  fi # qtr
+
+  if [ "$YQM" = "month" ]; then
+
+      for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+      do
+
+      case "$month" in
+        "Jan" | "Feb" | "Mar") qtr=4;;
+        "Apr" | "May" | "Jun") qtr=1;;
+        "Jul" | "Aug" | "Sep") qtr=2;;
+        "Oct" | "Nov" | "Dec") qtr=3;;
+      esac
+
+       match=$month
+       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk -v qtr=$qtr -v month=$month -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; tnet=0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") { month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=tsale; printf("%s, Q%s, %s, %3s, %6s, %6s, %6s, %7s\n", year, qtr, month, NR, int(tsale), int(tbuy), int(tnet), int(portfolio+tnet)); } }'  >> $OUT_FILE 
+
+       new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
+       if [[ "$new_num_lines" -ne "$old_num_lines" ]]
+       then
+         # get portfolio value 
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
+       fi
+       old_num_lines=$new_num_lines
+
+      done # month 
+   fi # month
+
+done # year 
    cat $OUT_FILE
 fi
 
@@ -118,27 +192,89 @@ new_num_lines=0
 old_num_lines=0
 portfolio=0
 
-echo "YEAR, Month, TXN#, Sale, Buy, Net, Portfolio, Companies"
+echo "YEAR, Qtr, Month, TXN#, Sale, Buy, Net, Portfolio, Companies"
+
 for year in `seq $start_year $current_year` 
 do
-   for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-   do
-       # echo year $year
-       # echo month $month
 
-       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $month | awk  -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; company=""; } {tdate=$13; year=substr(tdate,8,4); month=substr(tdate,4,3); buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=-tsale; printf("%s, %s, %3s, %6s, %6s, %6s, %7s, %s\n", year, month, NR, int(tsale), int(tbuy), int(tnet),  int(portfolio+tnet), company); } }'  >> $OUT_FILE 
+  if [ "$YQM" = "year" ]; then
+     qtr=all
+     month=all
+
+     match=$year
+     cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk  -v qtr=$qtr -v month=$month -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") {month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=-tsale; printf("%s, Q%s, %s, %3s, %6s, %6s, %6s, %7s, %s\n", year, qtr, month, NR, int(tsale), int(tbuy), int(tnet),  int(portfolio+tnet), company); } }'  >> $OUT_FILE 
 
        new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
        if [[ "$new_num_lines" -ne "$old_num_lines" ]]
        then
          # get portfolio value 
-         portfolio=`tail -1 $OUT_FILE | awk '{print $7}'`
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
        fi
        old_num_lines=$new_num_lines
 
+  fi # year
+
+  if [ "$YQM" = "quarter" ];  then
+    month=all
+    for qtr in `seq 1 4` 
+    do
+       # echo year $year
+       # echo month $month
+
+       case "$qtr" in
+
+       4) qtr_str="-e Jan -e Feb -e Mar"
+          ;; 
+       1) qtr_str="-e Apr -e May -e Jun"
+          ;; 
+       2) qtr_str="-e Jul -e Aug -e Sep"
+          ;; 
+       3) qtr_str="-e Oct -e Nov -e Dec"
+          ;; 
+       esac
+
+       match=$qtr_str
+       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk -v qtr=$qtr -v month=$month -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") {month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=-tsale; printf("%s, Q%s, %3s, %6s, %6s, %6s, %7s, %s\n", year, qtr, NR, int(tsale), int(tbuy), int(tnet),  int(portfolio+tnet), company); } }'  >> $OUT_FILE 
+
+       new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
+       if [[ "$new_num_lines" -ne "$old_num_lines" ]]
+       then
+         # get portfolio value 
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
+       fi
+       old_num_lines=$new_num_lines
+
+     done # qtr
+
+   fi # quarter
+ 
+   if [ "$YQM" = "month" ]; then
+
+     for month in Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+     do
+
+      case "$month" in
+        "Jan" | "Feb" | "Mar") qtr=4;;
+        "Apr" | "May" | "Jun") qtr=1;;
+        "Jul" | "Aug" | "Sep") qtr=2;;
+        "Oct" | "Nov" | "Dec") qtr=3;;
+      esac
+
+       match=$month
+       cat $FILE | grep $year | grep -i $SPEC_YEAR | grep -i $SPEC_COMPANY | grep $match | awk -v qtr=$qtr -v portfolio=$portfolio -W dump-variables -F','  ' BEGIN {tbuy = 0; tsale =0; company=""; } {tdate=$13; year=substr(tdate,8,4); if (month != "all") { month=substr(tdate,4,3); } buysale=$4; company=company" "$1; if (buysale == "Buy") { tbuy += $5*$6; } else { tsale += $5*$6;} } END { if (tbuy != 0 || tsale != 0) { tnet += tbuy; tnet -=-tsale; printf("%s, Q%s, %s, %3s, %6s, %6s, %6s, %7s, %s\n", year, qtr, month, NR, int(tsale), int(tbuy), int(tnet),  int(portfolio+tnet), company); } }'  >> $OUT_FILE 
+
+       new_num_lines=`wc -l $OUT_FILE | awk '{print $1}'`
+       if [[ "$new_num_lines" -ne "$old_num_lines" ]]
+       then
+         # get portfolio value 
+         portfolio=`tail -1 $OUT_FILE | awk '{print $8}'`
+       fi
+       old_num_lines=$new_num_lines
     
-   done
-done
+     done # month
+   fi # month
+
+done # year
    cat $OUT_FILE
 fi
 
