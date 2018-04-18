@@ -1,6 +1,6 @@
 # stock-market
 
-GIT Setup
+GIT Setup for Github
 
 1> Clone 
 git clone https://github.com/surinder432/stock-market.git
