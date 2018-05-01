@@ -30,7 +30,7 @@ from operator import itemgetter
 program_name = sys.argv[0]
 
 if len(sys.argv) != 4 :
-   print "usage: " + program_name + " <op-txn-history.csv> <plain | csv> <sort_count|sort_company>"
+   print "usage: " + program_name + " <op-txn-history.csv> <plain | csv> <sort_amount|sort_frequency|sort_company>"
    sys.exit(1) 
 
 in_filename= sys.argv[1]
@@ -39,6 +39,7 @@ sort_type= sys.argv[3]
 # Error-1, Warn-2, Log-3
 debug_level=1
 companies=[]
+dividend_amount={}
 
 file_obj = open (in_filename, "r")
 
@@ -124,6 +125,14 @@ for line in file_obj:
                 '''
 		# print company_name, deposit_amount
                 companies.append(company_name)
+                if company_name in dividend_amount.keys():
+			if debug_level > 1:                 
+                        	print 'dividend amount :', dividend_amount[company_name]
+                        	print 'deposit amount :', deposit_amount 
+                	dividend_amount[company_name] = int(dividend_amount[company_name]) + int(float(deposit_amount))
+                else:
+			dividend_amount[company_name] = int(float(deposit_amount))
+                        
                
 		continue
 	
@@ -142,10 +151,22 @@ if debug_level > 1:
 
 if sort_type == "sort_company" :
 	for key, value in sorted(comp_freq.items()):
-		print key, value 
-else:
+		if out_type == "csv" :
+			print key,',', value, ',', dividend_amount[key] 
+		else:
+			print key, value, dividend_amount[key] 
+elif sort_type == "sort_frequency" :
 	for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
-		print key, value 
+		if out_type == "csv" :
+			print key,',', value, ',', dividend_amount[key] 
+		else:
+			print key, value, dividend_amount[key]
+elif sort_type == "sort_amount":
+	for key, value in sorted(dividend_amount.items(), key=itemgetter(1)) :
+		if out_type == "csv" :
+			print key,',', value
+		else:
+			print key, value
 
-print 'dividend entries : ',  len(companies)
-print 'companies count : ',  len(comp_freq)
+print 'total dividend entries : ',  len(companies)
+print 'total companies count : ',  len(comp_freq)
