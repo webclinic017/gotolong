@@ -1,23 +1,5 @@
 #!/usr/bin/python
 
-import sys
-
-program_name = sys.argv[0]
-
-if len(sys.argv) != 4 :
-   print "usage: " + program_name + " <op-txn-history.csv> <plain | csv> <sort_date|sort_company|sort_company_cons>"
-   sys.exit(1) 
-
-in_filename= sys.argv[1]
-out_type= sys.argv[2]
-sort_type= sys.argv[3]
-
-file_obj = open (in_filename, "r")
-
-for line in file_obj:
-	empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2 = line.split(",")
-	print txn_date, txn_remarks, deposit_amount
-
 # Developer : Surinder Kumar 
 #
 # Login to icici bank account using net banking
@@ -36,5 +18,134 @@ for line in file_obj:
 # Save it as CSV (Comma delimited) (*.csv) : OpTransactionHistory17-04-2018.csv file
 # Upload OpTransactionHistory17-04-2018.csv to stock-market/fy17-18/
 
-#cat $DIV_FILE | grep -v -e NEFT -e CASH -e "Int\.Pd" | grep -e ACH -e CMS -e APBS | grep -v -e BLPGCM | sed -e s'/Limited,\//Limited\//g' | sed -e 's/\"//g' | awk -F',' '{ tdate=$3; tcomp=$6; damount=$8; split(tcomp, comp_name, "/"); company = comp_name[2]; printf("%s %s %s\n", tdate, company, int(damount)); }' | sort --key=$key | awk ' { printf("%s,", $1);  for (i=2; i<NF; i++) { if (i !=2) { printf(" "); } printf("%s",$i); };  printf(",%s\n",$NF); }'
+# TODO
+# Handle INT independent as a member of AMR INT
+# Handle company with space and no space
 
+import sys
+import re
+from collections import Counter
+from operator import itemgetter
+
+program_name = sys.argv[0]
+
+if len(sys.argv) != 4 :
+   print "usage: " + program_name + " <op-txn-history.csv> <plain | csv> <sort_count|sort_company>"
+   sys.exit(1) 
+
+in_filename= sys.argv[1]
+out_type= sys.argv[2]
+sort_type= sys.argv[3]
+# Error-1, Warn-2, Log-3
+debug_level=1
+companies=[]
+
+file_obj = open (in_filename, "r")
+
+for line in file_obj:
+	# Replace Limited, with just Limited to avoid split error : ValueError
+	line = re.sub(r'Limited,','Limited',line)
+	line = re.sub(r'Ltd,','Ltd',line)
+
+	
+	try:
+	  empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2 = line.split(",")
+	except ValueError:
+          print 'ValueError ', line
+
+	# avoid cases where txn_remarks itself is double quoted
+	txn_remarks = re.sub(r'"','', txn_remarks);
+
+        if txn_remarks == "":
+		if line != "":
+                	if debug_level > 1:
+			   print 'empty ' + line
+		continue
+
+	if debug_level > 2:
+        	# print 'txn_remarks '+ txn_remarks
+		pass	
+	
+        # match for search at begining
+	# NEFT or RTGS or MMT - Mobile money Transfer	
+	if re.match('NEFT.*|RTGS.*|MMT.*', txn_remarks):
+		if debug_level > 2:
+			print 'NEFT/RTGS/MMT skipped' + line
+		continue
+
+	# CASH deposit
+	if re.match('CASH.*', txn_remarks):
+		if debug_level > 2:
+			print 'CASH skipped' + line
+		continue
+
+ 	# Interest paid	- anywhere in string
+	if re.search('.*:Int\.Pd:.*', txn_remarks):
+		if debug_level > 2:
+			print 'Int.Pd skipped' + line
+		continue
+	
+ 	# APBS / BLPGCM : Aadhaar Payment Bridge System for LPG Subsidy
+	if re.match('APBS/.*', txn_remarks):
+		if debug_level > 2:
+			print 'APBS skipped' + line
+		continue
+
+	if re.match('ACH/.*|CMS/.*', txn_remarks):
+		# print txn_date, txn_remarks, deposit_amount
+                try:
+                	remarks_arr = txn_remarks.split('/')
+                        deposit_way = remarks_arr[0] 
+                        company_name = remarks_arr[1] 
+                        comment_str = remarks_arr[2] 
+                        # ignore rest
+		except ValueError:
+			print 'ValueError ' + txn_remarks
+
+                # remove any numbers like year 2017-2018, hyphen etc
+                # remove words like DIV, DIVIDEND
+                company_name = re.sub('FINAL DIV|FINAL','', company_name)
+                company_name = re.sub('FIN DIV|FINDIV','', company_name)
+                company_name = re.sub('INT DIV|INTDIV','', company_name)
+                company_name = re.sub('DIV|DIV\.|DIVIDEND','', company_name)
+                company_name = re.sub('Limited|LIMITED|LTD','Ltd', company_name)
+                company_name = re.sub('\d*','', company_name)
+                company_name = re.sub('-','', company_name)
+                # convert multiple space to single space
+                company_name = re.sub(' +', ' ', company_name)
+                # remove leading and trailing space
+                company_name = company_name.strip()
+                company_name = company_name.capitalize()
+                '''
+                # remove incomplete word
+                if len(company_name) == 20:
+                     # remove last word which will be mostly incomplete
+                     company_name = company_name.rsplit(' ', 1)[0] 
+                '''
+		# print company_name, deposit_amount
+                companies.append(company_name)
+               
+		continue
+	
+	if debug_level > 1:
+		print 'Unknown skipped' + line
+	continue	
+
+# sort companies
+companies.sort()
+
+# calculate frequency of occurence of each company
+comp_freq = Counter(companies)
+
+if debug_level > 1:
+	print(comp_freq)
+
+if sort_type == "sort_company" :
+	for key, value in sorted(comp_freq.items()):
+		print key, value 
+else:
+	for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
+		print key, value 
+
+print 'dividend entries : ',  len(companies)
+print 'companies count : ',  len(comp_freq)
