@@ -40,6 +40,7 @@ sort_type= sys.argv[3]
 debug_level=1
 companies=[]
 dividend_amount={}
+total_dividend = 0
 
 file_obj = open (in_filename, "r")
 
@@ -69,13 +70,13 @@ for line in file_obj:
 	
         # match for search at begining
 	# NEFT or RTGS or MMT - Mobile money Transfer	
-	if re.match('NEFT.*|RTGS.*|MMT.*', txn_remarks):
+	if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
 		if debug_level > 2:
-			print 'NEFT/RTGS/MMT skipped' + line
+			print 'NEFT-/RTGS-/MMT skipped' + line
 		continue
 
 	# CASH deposit
-	if re.match('CASH.*', txn_remarks):
+	if re.match('BY CASH.*', txn_remarks):
 		if debug_level > 2:
 			print 'CASH skipped' + line
 		continue
@@ -103,15 +104,19 @@ for line in file_obj:
 		except ValueError:
 			print 'ValueError ' + txn_remarks
 
-                # remove any numbers like year 2017-2018, hyphen etc
-                # remove words like DIV, DIVIDEND
+                # remove . (TCS.) and hyphen (2017-2018)
+                company_name = re.sub('\.|-','', company_name)
+                # remove 1STINTDIV, 2NDINTDIV, 3RDINTDIV
+                company_name = re.sub('1ST|2ND|3RD','', company_name)
+                # remove FINALDIV etc
                 company_name = re.sub('FINAL DIV|FINAL','', company_name)
                 company_name = re.sub('FIN DIV|FINDIV','', company_name)
                 company_name = re.sub('INT DIV|INTDIV','', company_name)
+                # remove words like DIV, DIVIDEND
                 company_name = re.sub('DIV|DIV\.|DIVIDEND','', company_name)
                 company_name = re.sub('Limited|LIMITED|LTD','Ltd', company_name)
+                # remove any numbers like year 2017, 2018 etc
                 company_name = re.sub('\d*','', company_name)
-                company_name = re.sub('-','', company_name)
                 # convert multiple space to single space
                 company_name = re.sub(' +', ' ', company_name)
                 # remove leading and trailing space
@@ -143,11 +148,16 @@ for line in file_obj:
 # sort companies
 companies.sort()
 
+for value in dividend_amount.values() :
+	total_dividend += value
+
+
 # calculate frequency of occurence of each company
 comp_freq = Counter(companies)
 
 if debug_level > 1:
 	print(comp_freq)
+
 
 if sort_type == "sort_company" :
 	for key, value in sorted(comp_freq.items()):
@@ -168,5 +178,6 @@ elif sort_type == "sort_amount":
 		else:
 			print key, value
 
+print 'total dividend amount: ',  total_dividend 
 print 'total dividend entries : ',  len(companies)
 print 'total companies count : ',  len(comp_freq)
