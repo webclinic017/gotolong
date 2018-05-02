@@ -16,7 +16,7 @@ git config --global --edit
 
 git commit --amend --reset-author
 
-3> Add a file
+3> Add a file (or Let git know that file must be commited again)
 
 git add
 
