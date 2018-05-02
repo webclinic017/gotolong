@@ -218,7 +218,7 @@ elif sort_type == "sort_amount":
 		else:
 			print key, value
 
-if summary_type == "summary_yes":
+if summary_type == "summary_yes" and sort_type != "sort_amount" :
 	if out_type == "out_csv" :
 		print 'total dividend amount: ',  ', 0 ,', total_dividend 
 		print 'total dividend entries:',  ', 0 ,', len(companies)
@@ -227,3 +227,14 @@ if summary_type == "summary_yes":
 		print 'total dividend amount: ',  ' 0 ', total_dividend 
 		print 'total dividend entries:',  ' 0 ', len(companies)
 		print 'total companies count: ',  ' 0 ', len(comp_freq)
+
+if summary_type == "summary_yes" and sort_type == "sort_amount" :
+	if out_type == "out_csv" :
+		print 'total dividend amount: ',  total_dividend 
+		print 'total dividend entries:',  len(companies)
+		print 'total companies count: ',  len(comp_freq)
+	else:
+		print 'total dividend amount: ',  total_dividend 
+		print 'total dividend entries:',  len(companies)
+		print 'total companies count: ',  len(comp_freq)
+
