@@ -29,26 +29,94 @@ from operator import itemgetter
 
 program_name = sys.argv[0]
 
-if len(sys.argv) != 4 :
-   print "usage: " + program_name + " <op-txn-history.csv> <plain | csv> <sort_amount|sort_frequency|sort_company>"
+if len(sys.argv) < 5 :
+   print "usage: " + program_name + " <out_plain | out_csv> <sort_amount|sort_frequency|sort_name> <debug_level : 1-4> <op-txn-hist.csv> ... "
    sys.exit(1) 
 
-in_filename= sys.argv[1]
-out_type= sys.argv[2]
-sort_type= sys.argv[3]
+out_type= sys.argv[1]
+sort_type= sys.argv[2]
+debug_level= int(sys.argv[3])
+in_filenames= sys.argv[4:]
 # Error-1, Warn-2, Log-3
-debug_level=1
 companies=[]
 dividend_amount={}
 total_dividend = 0
 
-file_obj = open (in_filename, "r")
+def ignore_txn(line, txn_remarks):
+        # match for search at begining
+	# NEFT or RTGS or MMT - Mobile money Transfer	
+	if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
+		if debug_level > 2:
+			print 'NEFT-/RTGS-/MMT skipped' + line
+		return True 
+	
+	# CASH deposit
+	if re.match('BY CASH.*', txn_remarks):
+		if debug_level > 2:
+			print 'CASH skipped' + line
+		return True 
+	
+ 	# Interest paid	- anywhere in string
+	if re.search('.*:Int\.Pd:.*', txn_remarks):
+		if debug_level > 2:
+			print 'Int.Pd skipped' + line
+		return True 
+	
+ 	# APBS / BLPGCM : Aadhaar Payment Bridge System for LPG Subsidy
+	if re.match('APBS/.*', txn_remarks):
+		if debug_level > 2:
+			print 'APBS skipped' + line
+		return True 
+	
+	return False 
 
-for line in file_obj:
+
+def normalize_company_name(company_name):
+	# capitalize
+	company_name = company_name.capitalize()
+	# remove . (TCS.) and hyphen (2017-2018)
+	company_name = re.sub('\.|-','', company_name)
+	# remove 1STINTDIV, 2NDINTDIV, 3RDINTDIV
+	company_name = re.sub('1st|2nd|3rd','', company_name)
+	# remove FINALDIV etc
+	company_name = re.sub('final div|final','', company_name)
+	company_name = re.sub('fin div|findiv','', company_name)
+	company_name = re.sub('int div|intdiv','', company_name)
+	# remove words like DIV, DIVIDEND
+	company_name = re.sub('div\.|dividend|div','', company_name)
+	company_name = re.sub('limited|ltd','ltd', company_name)
+	# remove any numbers like year 2017, 2018 etc
+	company_name = re.sub('\d*','', company_name)
+	# convert multiple space to single space
+	company_name = re.sub(' +', ' ', company_name)
+	# remove leading and trailing space
+	company_name = company_name.strip()
+	'''
+	# remove incomplete word
+	if len(company_name) == 20:
+	# remove last word which will be mostly incomplete
+	company_name = company_name.rsplit(' ', 1)[0] 
+	'''
+	
+	company_name = known_fixes(company_name)
+	return company_name
+
+def known_fixes(company_name):
+	# Amr Int is same as Amr
+	company_name = re.sub('Amr int','Amr', company_name)
+	company_name = re.sub('Balkrishna industris','Balkrishnaindustries', company_name)
+	company_name = re.sub('Hindustan unilever l','Hindustan unilever', company_name)
+	company_name = re.sub('Asianpaints','Asian paints', company_name)
+	company_name = re.sub('Indianulls housing','Indiabulls housing', company_name)
+	company_name = re.sub('Power grid corporati','Powergrid corporatio', company_name)
+	company_name = re.sub('Tube investments of','Tube investments', company_name)
+	return company_name
+
+
+def parse_line(line):
 	# Replace Limited, with just Limited to avoid split error : ValueError
 	line = re.sub(r'Limited,','Limited',line)
 	line = re.sub(r'Ltd,','Ltd',line)
-
 	
 	try:
 	  empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2 = line.split(",")
@@ -62,37 +130,17 @@ for line in file_obj:
 		if line != "":
                 	if debug_level > 1:
 			   print 'empty ' + line
-		continue
+		return	
 
 	if debug_level > 2:
         	# print 'txn_remarks '+ txn_remarks
 		pass	
+
+	if ignore_txn(line, txn_remarks):
+                if debug_level > 2:
+			print 'ignored ', txn_remarks
+		return	
 	
-        # match for search at begining
-	# NEFT or RTGS or MMT - Mobile money Transfer	
-	if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
-		if debug_level > 2:
-			print 'NEFT-/RTGS-/MMT skipped' + line
-		continue
-
-	# CASH deposit
-	if re.match('BY CASH.*', txn_remarks):
-		if debug_level > 2:
-			print 'CASH skipped' + line
-		continue
-
- 	# Interest paid	- anywhere in string
-	if re.search('.*:Int\.Pd:.*', txn_remarks):
-		if debug_level > 2:
-			print 'Int.Pd skipped' + line
-		continue
-	
- 	# APBS / BLPGCM : Aadhaar Payment Bridge System for LPG Subsidy
-	if re.match('APBS/.*', txn_remarks):
-		if debug_level > 2:
-			print 'APBS skipped' + line
-		continue
-
 	if re.match('ACH/.*|CMS/.*', txn_remarks):
 		# print txn_date, txn_remarks, deposit_amount
                 try:
@@ -104,31 +152,11 @@ for line in file_obj:
 		except ValueError:
 			print 'ValueError ' + txn_remarks
 
-                # remove . (TCS.) and hyphen (2017-2018)
-                company_name = re.sub('\.|-','', company_name)
-                # remove 1STINTDIV, 2NDINTDIV, 3RDINTDIV
-                company_name = re.sub('1ST|2ND|3RD','', company_name)
-                # remove FINALDIV etc
-                company_name = re.sub('FINAL DIV|FINAL','', company_name)
-                company_name = re.sub('FIN DIV|FINDIV','', company_name)
-                company_name = re.sub('INT DIV|INTDIV','', company_name)
-                # remove words like DIV, DIVIDEND
-                company_name = re.sub('DIV|DIV\.|DIVIDEND','', company_name)
-                company_name = re.sub('Limited|LIMITED|LTD','Ltd', company_name)
-                # remove any numbers like year 2017, 2018 etc
-                company_name = re.sub('\d*','', company_name)
-                # convert multiple space to single space
-                company_name = re.sub(' +', ' ', company_name)
-                # remove leading and trailing space
-                company_name = company_name.strip()
-                company_name = company_name.capitalize()
-                '''
-                # remove incomplete word
-                if len(company_name) == 20:
-                     # remove last word which will be mostly incomplete
-                     company_name = company_name.rsplit(' ', 1)[0] 
-                '''
 		# print company_name, deposit_amount
+		company_name = normalize_company_name(company_name)
+		if debug_level > 2: 
+			print 'normalized :', company_name
+
                 companies.append(company_name)
                 if company_name in dividend_amount.keys():
 			if debug_level > 1:                 
@@ -139,11 +167,22 @@ for line in file_obj:
 			dividend_amount[company_name] = int(float(deposit_amount))
                         
                
-		continue
+		return	
 	
 	if debug_level > 1:
 		print 'Unknown skipped' + line
-	continue	
+	return	
+
+def read_lines(file_obj):
+	for line in file_obj:
+		parse_line(line)
+
+def scan_files():
+	for in_file_name in in_filenames:
+		file_obj = open (in_file_name, "r")
+		read_lines(file_obj)
+
+scan_files();
 
 # sort companies
 companies.sort()
@@ -159,21 +198,21 @@ if debug_level > 1:
 	print(comp_freq)
 
 
-if sort_type == "sort_company" :
+if sort_type == "sort_name" :
 	for key, value in sorted(comp_freq.items()):
-		if out_type == "csv" :
+		if out_type == "out_csv" :
 			print key,',', value, ',', dividend_amount[key] 
 		else:
 			print key, value, dividend_amount[key] 
 elif sort_type == "sort_frequency" :
 	for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
-		if out_type == "csv" :
+		if out_type == "out_csv" :
 			print key,',', value, ',', dividend_amount[key] 
 		else:
 			print key, value, dividend_amount[key]
 elif sort_type == "sort_amount":
 	for key, value in sorted(dividend_amount.items(), key=itemgetter(1)) :
-		if out_type == "csv" :
+		if out_type == "out_csv" :
 			print key,',', value
 		else:
 			print key, value
