@@ -24,6 +24,7 @@
 
 import sys
 import re
+import csv
 from collections import Counter
 from operator import itemgetter
 
@@ -41,6 +42,7 @@ in_filenames= sys.argv[5:]
 # Error-1, Warn-2, Log-3
 companies=[]
 dividend_amount={}
+company_aliases={}
 total_dividend = 0
 
 def ignore_txn(line, txn_remarks):
@@ -98,19 +100,21 @@ def normalize_company_name(company_name):
 	# remove last word which will be mostly incomplete
 	company_name = company_name.rsplit(' ', 1)[0] 
 	'''
-	
-	company_name = known_fixes(company_name)
+	company_name = resolve_alias(company_name)
 	return company_name
 
-def known_fixes(company_name):
-	# Amr Int is same as Amr
-	company_name = re.sub('Amr int','Amr', company_name)
-	company_name = re.sub('Balkrishna industris','Balkrishnaindustries', company_name)
-	company_name = re.sub('Hindustan unilever l','Hindustan unilever', company_name)
-	company_name = re.sub('Asianpaints','Asian paints', company_name)
-	company_name = re.sub('Indianulls housing','Indiabulls housing', company_name)
-	company_name = re.sub('Power grid corporati','Powergrid corporatio', company_name)
-	company_name = re.sub('Tube investments of','Tube investments', company_name)
+def load_aliases():
+	with open('other-data/company-name-aliases.csv', 'r') as csvfile:
+		reader = csv.reader(csvfile)
+		for row in reader:
+			name_alias, name_real = row
+			if debug_level > 2: 
+				print 'alias ', name_alias
+			company_aliases[name_alias.strip()] = name_real.strip()
+
+def resolve_alias(company_name):
+	if company_name in company_aliases.keys():
+		company_name = company_aliases[company_name]
 	return company_name
 
 
@@ -182,6 +186,12 @@ def scan_files():
 	for in_file_name in in_filenames:
 		file_obj = open (in_file_name, "r")
 		read_lines(file_obj)
+
+
+# main routine
+
+# load aliases
+load_aliases();
 
 scan_files();
 
