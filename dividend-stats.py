@@ -29,14 +29,15 @@ from operator import itemgetter
 
 program_name = sys.argv[0]
 
-if len(sys.argv) < 5 :
-   print "usage: " + program_name + " <out_plain | out_csv> <sort_amount|sort_frequency|sort_name> <debug_level : 1-4> <op-txn-hist.csv> ... "
+if len(sys.argv) < 6 :
+   print "usage: " + program_name + " <out_plain | out_csv> <sort_amount|sort_frequency|sort_name> <summary_yes|sumary_no> <debug_level : 1-4> <op-txn-hist.csv> ... "
    sys.exit(1) 
 
 out_type= sys.argv[1]
 sort_type= sys.argv[2]
-debug_level= int(sys.argv[3])
-in_filenames= sys.argv[4:]
+summary_type= sys.argv[3]
+debug_level= int(sys.argv[4])
+in_filenames= sys.argv[5:]
 # Error-1, Warn-2, Log-3
 companies=[]
 dividend_amount={}
@@ -217,6 +218,7 @@ elif sort_type == "sort_amount":
 		else:
 			print key, value
 
-print 'total dividend amount: ',  total_dividend 
-print 'total dividend entries : ',  len(companies)
-print 'total companies count : ',  len(comp_freq)
+if summary_type == "summary_yes":
+	print 'total dividend amount: ',  '0', total_dividend 
+	print 'total dividend entries : ',  '0', len(companies)
+	print 'total companies count : ',  '0', len(comp_freq)
