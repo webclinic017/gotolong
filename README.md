@@ -17,12 +17,13 @@ git config --global --edit
 
 git commit --amend --reset-author
 
-3.2> credential cache : expiry
+3.2> credential helper and cache expiry
+
+Avoid asking git username (e-mail) and password for every push. Set cache expiry of 24 hours = 24*60*60 = 86400 
 
 git config credential.helper store
-
-# 24 hours = 24*60*60
 git config --global credential.helper 'cache --timeout 86400'
+
 
 3.3> Add a file (or Let git know that file must be commited again)
 
