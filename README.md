@@ -12,11 +12,19 @@ git pull
 
 cd stock-market
 
+3.1> configuration
 git config --global --edit
 
 git commit --amend --reset-author
 
-3> Add a file (or Let git know that file must be commited again)
+3.2> credential cache : expiry
+
+git config credential.helper store
+
+# 24 hours = 24*60*60
+git config --global credential.helper 'cache --timeout 86400'
+
+3.3> Add a file (or Let git know that file must be commited again)
 
 git add
 
