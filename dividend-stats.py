@@ -219,6 +219,11 @@ elif sort_type == "sort_amount":
 			print key, value
 
 if summary_type == "summary_yes":
-	print 'total dividend amount: ',  '0', total_dividend 
-	print 'total dividend entries : ',  '0', len(companies)
-	print 'total companies count : ',  '0', len(comp_freq)
+	if out_type == "out_csv" :
+		print 'total dividend amount: ',  ', 0 ,', total_dividend 
+		print 'total dividend entries:',  ', 0 ,', len(companies)
+		print 'total companies count: ',  ', 0 ,', len(comp_freq)
+	else:
+		print 'total dividend amount: ',  ' 0 ', total_dividend 
+		print 'total dividend entries:',  ' 0 ', len(companies)
+		print 'total companies count: ',  ' 0 ', len(comp_freq)
