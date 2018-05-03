@@ -91,6 +91,8 @@ def normalize_company_name(company_name):
 	company_name = re.sub('limited|ltd','ltd', company_name)
 	# remove any numbers like year 2017, 2018 etc
 	company_name = re.sub('\d*','', company_name)
+	# remove any characters after (  : colgatepalomolive (india)
+	company_name = re.sub('\(.*','', company_name)
 	# convert multiple space to single space
 	company_name = re.sub(' +', ' ', company_name)
 	# remove leading and trailing space
@@ -254,7 +256,17 @@ elif sort_type == "sort_amount":
 		else:
 			print key, value
 
-if summary_type == "summary_yes" and sort_type != "sort_amount" :
+if summary_type == "summary_yes" and sort_type == "sort_name" :
+	if out_type == "out_csv" :
+		print 'total dividend amount:  ,' , ' 0 ,' , total_dividend 
+		print 'total dividend entries: ,' , ' 0 ,' , len(companies)
+		print 'total companies count:  ,' , ' 0 ,' , len(comp_freq)
+	else:
+		print 'total dividend amount:  ' ,  ' 0 ' , total_dividend 
+		print 'total dividend entries: ' ,  ' 0 ' , len(companies)
+		print 'total companies count:  ' ,  ' 0 ' , len(comp_freq)
+
+if summary_type == "summary_yes" and sort_type == "sort_frequency" :
 	if out_type == "out_csv" :
 		print 'total dividend amount:  ,' , ' 0 ,' , total_dividend 
 		print 'total dividend entries: ,' , ' 0 ,' , len(companies)
