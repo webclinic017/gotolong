@@ -31,7 +31,7 @@ from operator import itemgetter
 program_name = sys.argv[0]
 
 if len(sys.argv) < 6 :
-   print "usage: " + program_name + " <out_plain | out_csv> <sort_amount|sort_frequency|sort_name> <summary_yes|sumary_no> <debug_level : 1-4> <op-txn-hist.csv> ... "
+   print "usage: " + program_name + " <out_plain | out_csv> <sort_amount|sort_frequency|sort_name|name_only> <summary_yes|sumary_no> <debug_level : 1-4> <op-txn-hist.csv> ... "
    sys.exit(1) 
 
 out_type= sys.argv[1]
@@ -41,6 +41,7 @@ debug_level= int(sys.argv[4])
 in_filenames= sys.argv[5:]
 # Error-1, Warn-2, Log-3
 companies=[]
+company_real_name_db=[]
 dividend_amount={}
 company_aliases={}
 total_dividend = 0
@@ -101,6 +102,7 @@ def normalize_company_name(company_name):
 	company_name = company_name.rsplit(' ', 1)[0] 
 	'''
 	company_name = resolve_alias(company_name)
+	company_name = resolve_real_company_name_db(company_name)
 	return company_name
 
 def load_aliases():
@@ -117,6 +119,23 @@ def resolve_alias(company_name):
 		company_name = company_aliases[company_name]
 	return company_name
 
+def load_real_company_name_db():
+	comp_name_file_obj = open('reports/targets/name_only.txt', 'r')
+	for row in comp_name_file_obj:
+		name_real = row
+		name_real = name_real.strip()
+		if debug_level > 2:
+			print 'real name', name_real 
+		company_real_name_db.append(name_real)
+
+def resolve_real_company_name_db(company_name):
+	for real_company_name in company_real_name_db:
+		if company_name.find(real_company_name, 0) >= 0:
+			if debug_level > 2:
+				print 'replaced from ', company_name, 'to ', real_company_name
+			company_name = real_company_name
+			return company_name
+	return company_name
 
 def parse_line(line):
 	# Replace Limited, with just Limited to avoid split error : ValueError
@@ -190,9 +209,13 @@ def scan_files():
 
 # main routine
 
-# load aliases
-load_aliases();
+# load real company name
+load_real_company_name_db()
 
+# load aliases
+load_aliases()
+
+# load real company names
 scan_files();
 
 # sort companies
@@ -208,6 +231,9 @@ comp_freq = Counter(companies)
 if debug_level > 1:
 	print(comp_freq)
 
+if sort_type == "name_only" :
+	for key, value in sorted(comp_freq.items()):
+		print key
 
 if sort_type == "sort_name" :
 	for key, value in sorted(comp_freq.items()):
