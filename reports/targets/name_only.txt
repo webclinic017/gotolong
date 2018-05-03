@@ -1,5 +1,5 @@
-Abb india
-Abott india
+Abb
+Abott
 Acc
 Adani enterprises
 Adani ports
@@ -12,7 +12,7 @@ Ambuja
 Apollo hospital
 Apollo tyres
 Arvind limited
-Asahi glass india
+Asahi india glass
 Asian granito limited
 Asian paints
 Aurobindo pharma
@@ -28,17 +28,18 @@ Bata
 Bayer
 Berger paints
 Bharat electronics
+Bharat petroleum
 Bharati infratel
 Bharti airtel
 Bhel
 Blue dart
 Blue star
-Bpcl
-Brigade enterprise
-Britania
+Brigade enterprises
+Britania industries
 Bse
 Cadila healthcare
 Cafe coffe day
+Carborundum universal
 Care
 Castrol
 Cdsl
@@ -52,15 +53,14 @@ Colgate palmolive
 Company
 Container corporation
 Coramandel international
-Cox & kings
+Cox & kings ltd
 Crisil
 Crompton greaves consumer
-Cumi
 Cummins
 Dabur
 Dish tv
 Dlf
-Dr lal path labs
+Dr lal pathlabs
 Dr reddy labs
 Eid parry
 Eih
@@ -69,8 +69,8 @@ Engineers india
 Eveready
 Exide
 Fortis healthcare
-Future consumer limited
-Future lifestyle & fashion
+Future consumer ltd
+Future lifestyle fashions
 Future retail
 Future supply chain
 Gail
@@ -90,13 +90,13 @@ Hcl tech
 Hdfc
 Hdfc bank
 Hdfc standard life
-Hero motocop
+Hero motocorp
 Hindalco
+Hindustan petroleum
+Hindustan unilever
 Hindustan zinc
-Hpcl
-Hsil (hindware)
+Hsil ltd
 Hudco
-Hul (hinlev)
 Icici bank
 Icici lombard
 Icici prudential
@@ -105,24 +105,24 @@ Idea
 Ifb industries
 Indiabulls housing finance
 Indian hotels
-Info edge
+Indian oil
+Infoedge
 Infosys
 Interglobe aviation
-Iocl
 Itc
 J k paper
 J k tyre
 Jain irrigation systems
 Johnson control
 Jsw steel
-Jubilant food
+Jubilant foodworks
 Kajaria ceramics
 Kansai nerolac
 Kaveri seeds
 Kotak mahindra bank
 Krbl
 Ksb pumps
-L & t
+Larsen & toubro ltd
 Lic housing finance
 Lupin
 Mahindra & mahindra
@@ -135,8 +135,8 @@ Maruti
 Monsanto
 Motherson sumi
 Muthoot finance
-Nalco
 Narayana hrudayalya
+National aluminium company
 Nbcc
 Ncc
 Nestle
@@ -146,26 +146,26 @@ Nilkamal
 Nlc
 Nmdc
 Ntpc
+Oil & natural gas
 Oil india
-Ongc
-P & g
 P i industries
 Pc jewellers
 Petronet lng
 Pfizer
 Pidilite
 Piramal enterprises
-Power finance corp (pfc)
+Power finance corp
 Power grid corp
 Prestige estates
-Puravankra limited (purpro)
-Pvr india
+Procter & gamble
+Puravankra
+Pvr
 Quess corp
 Rajesh exports
 Rallis
 Relaxo
 Reliance industries
-Rural electrification corp (rec)
+Rural electrification
 Sanofi india
 Sbi
 Sbi life
@@ -173,13 +173,13 @@ Sheela foam
 Shipping corporation
 Shoppers stop
 Shriram transport finance
-Siemens india
-Skf india
+Siemens
+Skf
 Sobha
 Somany ceramics
 Sun pharma
 Supreme industries
-Talvalkar better value fitness
+Talwalkar better value fitness
 Tata chemicals
 Tata coffee
 Tata global beverages
@@ -193,8 +193,8 @@ Ti financial holdings
 Titan
 Trent
 Ttk prestige
-Tube investment of india ltd
-Tvs motors
+Tube investments
+Tvs motor company
 Ultratech
 United breweries
 United spirits
@@ -206,7 +206,7 @@ Venky's
 Vip industries
 Voltas
 Vrl logistics
-Vst tillers
+Vst tillers tractors
 West life development
 Whirlpool
 Wipro

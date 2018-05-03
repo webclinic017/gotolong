@@ -112,9 +112,11 @@ def load_aliases():
 		reader = csv.reader(csvfile)
 		for row in reader:
 			name_alias, name_real = row
+			name_alias = name_alias.strip().capitalize()
+			name_real = name_real.strip().capitalize()
 			if debug_level > 2: 
-				print 'alias ', name_alias
-			company_aliases[name_alias.strip()] = name_real.strip()
+				print 'alias ', name_alias, 'real ', name_real
+			company_aliases[name_alias] = name_real
 
 def resolve_alias(company_name):
 	if company_name in company_aliases.keys():
@@ -126,6 +128,7 @@ def load_real_company_name_db():
 	for row in comp_name_file_obj:
 		name_real = row
 		name_real = name_real.strip()
+		name_real = name_real.capitalize()
 		if debug_level > 2:
 			print 'real name', name_real 
 		company_real_name_db.append(name_real)
@@ -236,6 +239,7 @@ if debug_level > 1:
 if sort_type == "name_only" :
 	for key, value in sorted(comp_freq.items()):
 		print key
+
 
 if sort_type == "sort_name" :
 	for key, value in sorted(comp_freq.items()):
