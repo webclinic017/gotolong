@@ -153,8 +153,9 @@ def load_conglomerate_name_db():
 
 def resolve_real_company_name_db(company_name):
 	# avoid tinkering conglomerates with same prefix 
-	if company_name in cong_name_db:
-		return company_name
+	for cong_name in cong_name_db:
+		if company_name.find(cong_name, 0) >= 0:
+			return company_name 
 	for real_company_name in company_real_name_db:
 		if company_name.find(real_company_name, 0) >= 0:
 			if debug_level > 2:

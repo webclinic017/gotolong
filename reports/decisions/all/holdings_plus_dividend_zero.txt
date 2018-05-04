@@ -32,8 +32,6 @@ Grasim
 Grindwell norton
 Gsk consumer
 Havells
-Hdfc bank
-Hdfc standard life
 Idea
 Ifb industries
 Jain irrigation systems
