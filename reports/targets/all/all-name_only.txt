@@ -21,8 +21,8 @@ Avenue supermarket
 Axis bank
 Bajaj auto
 Bajaj finserv
-Balakrishna industries
 Balarampur chini mills
+Balkrishna industries
 Basf
 Bata
 Bayer
@@ -35,7 +35,7 @@ Bhel
 Blue dart
 Blue star
 Brigade enterprises
-Britania industries
+Britannia industries
 Bse
 Cadila healthcare
 Cafe coffe day
@@ -52,7 +52,7 @@ Coal india
 Colgate palmolive
 Company
 Container corporation
-Coramandel international
+Coromandel international
 Cox & kings ltd
 Crisil
 Crompton greaves consumer
@@ -110,9 +110,9 @@ Infoedge
 Infosys
 Interglobe aviation
 Itc
-J k paper
-J k tyre
 Jain irrigation systems
+Jk paper
+Jk tyre
 Johnson control
 Jsw steel
 Jubilant foodworks
@@ -158,7 +158,7 @@ Power finance corp
 Power grid corp
 Prestige estates
 Procter & gamble
-Puravankra
+Puravankara
 Pvr
 Quess corp
 Rajesh exports
@@ -167,7 +167,6 @@ Relaxo
 Reliance industries
 Rural electrification
 Sanofi india
-Sbi
 Sbi life
 Sheela foam
 Shipping corporation
@@ -177,9 +176,10 @@ Siemens
 Skf
 Sobha
 Somany ceramics
+State bank of india
 Sun pharma
 Supreme industries
-Talwalkar better value fitness
+Talwalkars better value fitness
 Tata chemicals
 Tata coffee
 Tata global beverages

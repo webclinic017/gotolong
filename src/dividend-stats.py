@@ -22,6 +22,7 @@
 # Handle INT independent as a member of AMR INT
 # Handle company with space and no space
 
+import os
 import sys
 import re
 import csv
@@ -47,9 +48,11 @@ company_aliases={}
 total_dividend = 0
 # conglomerate name db
 cong_name_db=[]
-
-['Tata', 'Reliance', 'Birla', 'HDFC', 'ICICI', 
-                    'Godrej', 'Bajaj', 'Mahindra', 'Future' ]
+PROJ_DATA_LOC=os.getenv('PROJ_DATA_LOC')
+PROJ_REPORTS_LOC=os.getenv('PROJ_REPORTS_LOC')
+company_aliases_filename = PROJ_DATA_LOC + '/other-data/company-name-aliases.csv'
+cong_filename = PROJ_DATA_LOC + '/other-data/conglomerate-name.txt'
+comp_filename = PROJ_REPORTS_LOC + '/targets/all/all-name_only.txt'
 
 def ignore_txn(line, txn_remarks):
         # match for search at begining
@@ -113,7 +116,7 @@ def normalize_company_name(company_name):
 	return company_name
 
 def load_aliases():
-	with open('other-data/company-name-aliases.csv', 'r') as csvfile:
+	with open(company_aliases_filename, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		for row in reader:
 			name_alias, name_real = row
@@ -129,7 +132,7 @@ def resolve_alias(company_name):
 	return company_name
 
 def load_real_company_name_db():
-	comp_name_file_obj = open('reports/targets/all/all-name_only.txt', 'r')
+	comp_name_file_obj = open(comp_filename, 'r')
 	for row in comp_name_file_obj:
 		name_real = row
 		name_real = name_real.strip()
@@ -139,7 +142,7 @@ def load_real_company_name_db():
 		company_real_name_db.append(name_real)
 
 def load_conglomerate_name_db():
-	cong_name_file_obj = open('other-data/conglomerate-name.txt', 'r')
+	cong_name_file_obj = open(cong_filename, 'r')
 	for row in cong_name_file_obj:
 		name_cong = row
 		name_cong = name_cong.strip()

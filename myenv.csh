@@ -1,0 +1,8 @@
+
+setenv PROJECT_ROOT `pwd` 
+
+setenv PROJ_SOURCE_LOC $PROJECT_ROOT/src
+setenv PROJ_DATA_LOC  $PROJECT_ROOT/data
+setenv PROJ_REPORTS_LOC $PROJECT_ROOT/reports
+
+setenv PATH ${PATH}:${PROJ_SOURCE_LOC}

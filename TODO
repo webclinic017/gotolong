@@ -1,6 +1,8 @@
-1. Generate target companies list
-2. Generate dividend paying companies list for last 3 years from moneycontrol
-3. Identify stressed sectors (struggling with profits)
-4. Identify companies to be dropped
-5. Identify companies to be included
-6. Use machine learning tools to reduce the list of companies/sectors
+To Do Items
+* Generate target companies list
+* Include Zerodha target data also apart from icici
+* Generate dividend paying companies list for last 3 years from moneycontrol
+* Identify stressed sectors (struggling with profits)
+* Identify companies to be dropped
+* Identify companies to be included
+* Use machine learning tools to reduce the list of companies/sectors
