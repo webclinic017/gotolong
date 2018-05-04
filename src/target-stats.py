@@ -22,7 +22,7 @@ out_type= sys.argv[1]
 sort_type= sys.argv[2]
 summary_type= sys.argv[3]
 debug_level= int(sys.argv[4])
-in_filename= sys.argv[5]
+in_filenames= sys.argv[5:]
 # Error-1, Warn-2, Log-3
 companies=[]
 dividend_amount={}
@@ -36,10 +36,11 @@ def load_row(row):
 	companies.append(company_name)
 	
 def load_data():
-	with open(in_filename, 'r') as csvfile:
-		reader = csv.reader(csvfile)
-		for row in reader:
-			load_row(row)
+	for in_filename in in_filenames:
+		with open(in_filename, 'r') as csvfile:
+			reader = csv.reader(csvfile)
+			for row in reader:
+				load_row(row)
 
 load_data()
 
