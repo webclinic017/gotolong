@@ -13,6 +13,11 @@ git pull
 cd stock-market
 
 3.1> configuration
+
+git config --global user.email 'surinder.kumar.432@gmail.com'
+
+git config --global user.name 'surinder kumar'
+
 git config --global --edit
 
 git commit --amend --reset-author
