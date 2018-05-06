@@ -26,7 +26,9 @@ git commit --amend --reset-author
 
 Avoid asking git username (e-mail) and password for every push. Set cache expiry of 24 hours = 24*60*60 = 86400 
 
+
 git config credential.helper store
+
 git config --global credential.helper 'cache --timeout 86400'
 
 
