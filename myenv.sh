@@ -1,0 +1,7 @@
+
+export PROJECT_ROOT=`pwd` 
+
+export PROJ_SOURCE_LOC=$PROJECT_ROOT/src
+export PROJ_DATA_LOC=$PROJECT_ROOT/data
+export PROJ_REPORTS_LOC=$PROJECT_ROOT/reports
+export PATH=${PATH}:${PROJ_SOURCE_LOC}
