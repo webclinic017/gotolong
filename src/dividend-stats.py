@@ -52,7 +52,7 @@ PROJ_DATA_LOC=os.getenv('PROJ_DATA_LOC')
 PROJ_REPORTS_LOC=os.getenv('PROJ_REPORTS_LOC')
 company_aliases_filename = PROJ_DATA_LOC + '/other-data/company-name-aliases.csv'
 cong_filename = PROJ_DATA_LOC + '/other-data/conglomerate-name.txt'
-comp_filename = PROJ_REPORTS_LOC + '/targets/all/all-name_only.txt'
+comp_filename = PROJ_REPORTS_LOC + '/targets/all/all-company_name_only.txt'
 
 def ignore_txn(line, txn_remarks):
         # match for search at begining

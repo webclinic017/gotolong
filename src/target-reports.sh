@@ -1,10 +1,13 @@
 #!/bin/sh
 
 OUT_TYPE=out_plain
-SORT_TYPE=sort_name
 SUMMARY_TYPE=summary_no
 DEBUG_LEVEL=0
 
 FY=all
 
-target-stats.py ${OUT_TYPE} ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${PROJ_DATA_LOC}/sample-data/target-hist/*/*-targets.csv  > ${PROJ_REPORTS_LOC}/targets/${FY}/${FY}-name_only.txt
+for SORT_TYPE in company_name_only industry_name_only sector_name_only
+do
+	target-stats.py ${OUT_TYPE} ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${PROJ_DATA_LOC}/sample-data/target-hist/*/*-targets.csv  > ${PROJ_REPORTS_LOC}/targets/${FY}/${FY}-${SORT_TYPE}.txt
+
+done
