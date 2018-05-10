@@ -35,7 +35,27 @@ def load_row(row):
 	security_code, security_name, company_name, ex_date, purpose, record_date, bc_state_date, bc_end_date, nd_start_date, nd_end_date, actual_payment_date = row
 	company_name = company_name.capitalize()
 	company_name = company_name.strip()
-	companies.append(company_name)
+	try:
+		m = re.search("(.*)(Dividend - Rs. -)(.*)", purpose)
+		if m.group(2) != "Dividend - Rs. -" :
+			if debug_level > 1:
+				print 'no dividend match', row 
+			return
+		else:
+			companies.append(company_name)
+
+        	if company_name in dividend_amount.keys():
+			dividend_amount[company_name] =  int(dividend_amount[company_name]) + int(float(m.group(3)))
+		else:
+			dividend_amount[company_name] =  int(float(m.group(3)))
+	except NameError :
+		if debug_level > 1:
+			print 'NameError', row
+	except AttributeError:
+		if debug_level > 1:
+			print 'AttributeError', row
+	
+		
 	
 def load_data():
 	for in_filename in in_filenames:
@@ -63,8 +83,11 @@ if sort_type == "sort_frequency_name_only" :
 		print key
 
 if sort_type == "sort_frequency" :
-	for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
-		if out_type == "out_csv" :
-			print key,',', value
-		else:
-			print key, value
+	try:
+		for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
+			if out_type == "out_csv" :
+				print key,',', value, ',', dividend_amount[key]
+			else:
+				print key, value, dividend_amount[key]
+	except KeyError:
+		print 'failed kery', key 
