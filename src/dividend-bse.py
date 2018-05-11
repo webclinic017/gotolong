@@ -15,7 +15,7 @@ from operator import itemgetter
 program_name = sys.argv[0]
 
 if len(sys.argv) < 6 :
-   print "usage: " + program_name + " <out_plain | out_csv> <sort_frequency| sort_frquency_name_only|company_name_only> <summary_yes|sumary_no> <debug_level : 1-4> <dividend-bse.csv> ... "
+   print "usage: " + program_name + " <out_plain | out_csv> <sort_frequency| sort_frquency_name_only|sort_amount|company_name_only> <summary_yes|sumary_no> <debug_level : 1-4> <dividend-bse.csv> ... "
    sys.exit(1) 
 
 out_type= sys.argv[1]
@@ -89,5 +89,15 @@ if sort_type == "sort_frequency" :
 				print key,',', value, ',', dividend_amount[key]
 			else:
 				print key, value, dividend_amount[key]
+	except KeyError:
+		print 'failed kery', key 
+
+if sort_type == "sort_amount" :
+	try:
+		for key, value in sorted(dividend_amount.items(), key=itemgetter(1)):
+			if out_type == "out_csv" :
+				print key,',', value, ',', comp_freq[key]
+			else:
+				print key, value, comp_freq [key]
 	except KeyError:
 		print 'failed kery', key 
