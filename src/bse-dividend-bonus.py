@@ -93,7 +93,7 @@ def load_bonus(row, company_name, purpose):
 			companies.append(company_name)
 
         	if company_name in bonus_share.keys():
-			bonus_share[company_name] =  bonus_share[company_name] +'&' + m.group(2)
+			bonus_share[company_name] =  bonus_share[company_name] +' &' + m.group(2)
 		else:
 			bonus_share[company_name] =  m.group(2) 
 	except NameError :
