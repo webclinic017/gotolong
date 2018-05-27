@@ -32,6 +32,15 @@ company_aliases={}
 total_dividend = 0
 sect_indu_comp = {}
 
+def portfolio_value(d):
+	total = 0
+	for k, v in d.items():
+		if isinstance(v, dict):
+			total += portfolio_value(v)
+		else:
+			total = total + int(v)
+	return total
+
 def myprint(d, stack_depth):
 	total = 0
 	for k, v in d.items():
@@ -93,8 +102,10 @@ if sort_type == "sector_name_only":
 		print sname
 
 if sort_type == "sector_industry_company": 
-	total = myprint(sect_indu_comp, 0)
-	print 'Portfolio ', total
+	print 'Portfolio Distribution : '
+	print('- - - - - - - - - - - - - - - - - - -')
+	myprint(sect_indu_comp, 0)
+	print 'Portfolio Value : ' , portfolio_value(sect_indu_comp)
 
 if sort_type == "industry_name_only": 
 	for iname in sorted(set(industries)):

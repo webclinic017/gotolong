@@ -1,3 +1,5 @@
+Portfolio Distribution : 
+- - - - - - - - - - - - - - - - - - -
     Johnson control : 2000
     Ifb industries : 1000
     Blue star : 1000
@@ -374,4 +376,4 @@ Sector Auto components( 27600 )
   Industry Textiles - denim( 21000 )
 Sector Textiles( 21000 )
 - - - - - - - - - - - - - - - - - - -
-Portfolio  21000
+Portfolio Value :  826500
