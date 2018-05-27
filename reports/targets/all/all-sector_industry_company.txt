@@ -1,0 +1,340 @@
+Sector Consumer durables
+  Industry Consumer goods : white goods
+    Johnson control : 2000
+    Ifb industries : 1000
+    Blue star : 1000
+    Whirlpool : 2000
+  Industry Domestic appliances
+    Ttk prestige : 6500
+  Industry Consumer goods : electronic
+    Voltas : 2000
+Sector Media
+  Industry Media & entertainment
+    Dish tv : 2000
+    Pvr : 3000
+    Zee entertainment : 5000
+Sector Oil & gas
+  Industry Lubricant
+    Castrol : 2000
+  Industry Oil drilling & exploration
+    Oil india : 2000
+    Oil & natural gas : 5000
+    Petronet lng : 2000
+    Gail : 2000
+  Industry Refineries
+    Reliance industries : 8000
+    Bharat petroleum : 2000
+    Indian oil : 2000
+    Hindustan petroleum : 2000
+Sector Sugar
+  Industry Sugar
+    Balarampur chini mills : 1000
+    Eid parry : 2000
+Sector Bfsi
+  Industry Finance - investments
+    Bajaj finserv : 5000
+    Bse : 1000
+    Cdsl : 1000
+    Ti financial holdings : 1000
+    Muthoot finance : 2000
+  Industry Z misc : credit rating
+    Crisil : 4000
+    Icra : 4000
+    Care : 2000
+  Industry Finance - term lending institutions
+    Power finance corp : 2000
+    Rural electrification : 2000
+  Industry Finance - housing
+    Indiabulls housing finance : 1000
+    Hdfc : 11000
+    Lic housing finance : 2000
+  Industry Finance - insurance
+    New india assurance : 1000
+    Icici prudential : 2000
+    Sbi life : 1000
+    Icici lombard : 1500
+    Hdfc standard life : 1000
+    Gic re : 1000
+  Industry Banks-public
+    State bank of india : 5000
+  Industry Banks-private
+    Axis bank : 2000
+    Icici bank : 4000
+    Hdfc bank : 17000
+    Kotak mahindra bank : 2000
+  Industry Finance - leasing & hire purchase
+    Mahindra & mahindra finance : 1000
+    Shriram transport finance : 1000
+    Manappuram finance : 1000
+Sector Metals
+  Industry Aluminium
+    Hindalco : 2000
+    National aluminium company : 2000
+  Industry Metals - non ferrous
+    Hindustan zinc : 2000
+  Industry Mining & minerals
+    Vedanta : 5000
+    Nmdc : 2000
+    Coal india : 10000
+Sector Alcoholic beverages
+  Industry Breweries & distillaries
+    United breweries : 2000
+    United spirits : 12000
+Sector Infrastructure
+  Industry Infrastructure - general
+    Abb : 3000
+    Engineers india : 1000
+    Bhel : 2000
+    Siemens : 3000
+    Larsen & toubro ltd : 7000
+    Nbcc : 2000
+    Adani ports : 1000
+Sector Power
+  Industry Power - generation & distribution
+    Power grid corp : 5000
+    Ntpc : 6000
+    Nlc : 1000
+    Nhpc : 1000
+    Tata power : 2000
+Sector Pharma & healthcare
+  Industry Pharmaceuticals
+    Abott : 4000
+    Lupin : 10000
+    Pfizer : 1000
+    Sanofi india : 4000
+    Cipla : 2000
+    Dr lal pathlabs : 1000
+    Dr reddy labs : 5000
+    Aurobindo pharma : 2000
+    Glenmark pharma : 1000
+    Piramal enterprises : 5000
+    Cadila healthcare : 1000
+    Sun pharma : 11000
+  Industry Hospitals & medical services
+    Narayana hrudayalya : 2000
+    Fortis healthcare : 2000
+    Apollo hospital : 7000
+Sector Tourism & hospitality
+  Industry Food processing
+    Cafe coffe day : 2000
+  Industry Z misc : hospitality
+    Thomas cook : 2000
+    Cox & kings ltd : 2000
+    Jubilant foodworks : 3000
+    Wonderla : 1000
+  Industry Hotels
+    Mahindra holidays : 2000
+    Eih : 2000
+    Indian hotels : 6000
+    West life development : 1000
+Sector Diversified
+  Industry Diversified
+    Godrej industries : 1000
+    3m : 30000
+    Grasim : 1000
+Sector Cement
+  Industry Cement : major
+    Acc : 3000
+    Ambuja : 2000
+    Ultratech : 12000
+    Shree cements : 20000
+Sector Automobiles
+  Industry Auto -2&3
+    Tube investments : 2000
+    Bajaj auto : 5000
+    Eicher : 20000
+    Tvs motor company : 2000
+    Hero motocorp : 4000
+  Industry Auto -lcv&hcv
+    Tata motors : 3000
+  Industry Auto -tractors
+    Vst tillers tractors : 2000
+  Industry Auto -cars
+    Mahindra & mahindra : 2000
+    Maruti : 5000
+Sector Chemicals
+  Industry Chemicals
+    Basf : 3400
+    Pidilite : 2600
+    Tata chemicals : 2000
+Sector Steel
+  Industry Steel - large
+    Jsw steel : 2000
+    Tata steel : 5000
+Sector Fmcg
+  Industry Food processing
+    Britannia industries : 8500
+    Gsk consumer : 5000
+    Nestle : 6500
+    Venky's : 2000
+    Krbl : 1000
+    Future consumer ltd : 1000
+    Varun beverages : 2000
+  Industry Aquaculture
+    Godrej agrovet : 1000
+    Avanti feeds : 3000
+  Industry Personal care
+    Hindustan unilever : 6000
+    Marico : 2000
+    Emami : 2000
+    Procter & gamble : 7000
+    Godrej consumer : 1000
+    Colgate palmolive : 2000
+    Dabur : 2000
+    Gillette india : 2000
+  Industry Dry cells
+    Eveready : 2000
+Sector Ceramics
+  Industry Ceramics & granite
+    Hsil ltd : 2000
+    Kajaria ceramics : 2000
+    Somany ceramics : 1000
+    Cera sanitaryware : 3000
+    Asian granito limited : 1000
+Sector Tyres
+  Industry Tyres
+    Balkrishna industries : 2000
+    Mrf : 60000
+    Apollo tyres : 2000
+    Jk tyre : 2000
+    Ceat : 2000
+Sector Logistics
+  Industry Couriers
+    Blue dart : 4000
+  Industry Transport & logistics
+    Allcargo logistics : 1000
+    Container corporation : 2000
+    Vrl logistics : 2000
+    Mahindra logistics : 1000
+    Future supply chain : 1000
+    Interglobe aviation : 2000
+    Aegis logistics : 1000
+  Industry Shipping
+    Shipping corporation : 2000
+Sector Agro chemicals
+  Industry Chemicals
+    Upl : 5000
+  Industry Pesticides & agro chemicals
+    Rallis : 2000
+    Monsanto : 5000
+    Bayer : 5000
+    P i industries : 3000
+Sector Plantations
+  Industry Plantations - tea & coffee
+    Tata global beverages : 2000
+    Tata coffee : 2000
+Sector Tobacco
+  Industry Cigarettes
+    Itc : 10000
+Sector Leather
+  Industry Leather products
+    Bata : 2500
+    Relaxo : 2000
+Sector Paints
+  Industry Paints & varnishes
+    Berger paints : 2000
+    Asian paints : 8000
+    Akzo nobel : 2000
+    Kansai nerolac : 2000
+Sector Real estate
+  Industry Z misc: woodwork
+    Greenlam : 2000
+    Century plyboard : 2000
+  Industry Construction & contracting : real estate
+    Dlf : 2000
+    Prestige estates : 10000
+    Brigade enterprises : 1500
+    Hudco : 5600
+    Puravankara : 2000
+    Godrej properties : 2000
+    Sobha : 5000
+  Industry Construction & contracting : civil
+    Ncc : 2000
+Sector Retail
+  Industry Retail
+    Avenue supermarket : 1000
+    Aditya birla fashion & retail : 2000
+    Future retail : 2000
+    Shoppers stop : 2000
+    Trent : 2000
+    Future lifestyle fashions : 2000
+  Industry Home furnishing - mattresses
+    Sheela foam : 1600
+  Industry Z misc: fitness
+    Talwalkars better value fitness : 2000
+Sector Gems & jewellery
+  Industry Diamong cutting & jewellery & precious metals
+    Rajesh exports : 2000
+    Titan : 4000
+    Pc jewellers : 1000
+Sector Sector
+  Industry Industry
+    Company : Present Value
+Sector Telecom
+  Industry Telecommunication - service
+    Bharti airtel : 10000
+    Idea : 1800
+  Industry Telecommunication - equipment
+    Honeywell automation : 20000
+    Bharati infratel : 1000
+Sector Agriculture
+  Industry Agriculture products
+    Kaveri seeds : 3000
+Sector It
+  Industry Computer software
+    Wipro : 5600
+    Infoedge : 2000
+    Tcs : 18000
+    Hcl tech : 5000
+    Infosys : 10000
+    Tech mahindra : 3000
+Sector Fertilizers
+  Industry Fertilizers
+    Chambal fertilizers : 1000
+    Coromandel international : 2000
+Sector Engineering
+  Industry Engines
+    Cummins : 2000
+  Industry Electric equipments
+    Havells : 1500
+    V-guard industries : 1500
+  Industry Abrsavies
+    Carborundum universal : 1000
+    Grindwell norton : 1000
+  Industry Engineering
+    Quess corp : 1000
+  Industry Pumps
+    Ksb pumps : 2300
+  Industry Electrical
+    Crompton greaves consumer : 1000
+    Bharat electronics : 2000
+Sector Trading
+  Industry Trading
+    Adani enterprises : 2000
+Sector Pulp & paper
+  Industry Paper
+    Jk paper : 2000
+Sector Plastic & rubber
+  Industry Plastics
+    Nilkamal : 2000
+    Supreme industries : 2000
+    Vip industries : 2000
+    Jain irrigation systems : 1000
+Sector Education
+  Industry Computer education
+    Zee learn : 2000
+Sector Auto components
+  Industry Auto ancilliary
+    Exide : 1000
+    Motherson sumi : 2000
+    Bosch : 20000
+    Amara raja : 1000
+  Industry Bearings
+    Skf : 1600
+  Industry Glass & glass products
+    Asahi india glass : 2000
+Sector Textiles
+  Industry Textiles - readymade apparels
+    Page industries : 20000
+  Industry Textiles - denim
+    Arvind limited : 1000
