@@ -53,15 +53,16 @@ def myprint(d, stack_depth):
 			total += myprint(v, stack_depth + 1)
 
 			if stack_depth == 0:
-				print('Sector ' + k + '( ' + str(total) + ' )' )
+				print('Sector ' + k + ' (' + str(total) + ')' )
 				print('- - - - - - - - - - - - - - - - - - -')
 			else:
-				print('  Industry ' + k + '( ' + str(total) + ' )' )
+				print('** Industry ' + k + ' (' + str(total) + ')' )
 
 				
 		else:
 			total = total + int(v)
-			print("    {0} : {1}".format(k, v))
+			sys.stdout.write(k + '(' + v +')' + ' | ')
+	print('')		
 	return total
 
 def load_row(row):

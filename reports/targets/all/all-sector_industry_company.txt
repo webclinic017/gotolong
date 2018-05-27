@@ -1,379 +1,275 @@
 Portfolio Distribution : 
 - - - - - - - - - - - - - - - - - - -
-    Johnson control : 2000
-    Ifb industries : 1000
-    Blue star : 1000
-    Whirlpool : 2000
-  Industry Consumer goods : white goods( 6000 )
-    Ttk prestige : 6500
-  Industry Domestic appliances( 12500 )
-    Voltas : 2000
-  Industry Consumer goods : electronic( 14500 )
-Sector Consumer durables( 14500 )
+Johnson control(2000) | Ifb industries(1000) | Blue star(1000) | Whirlpool(2000) | 
+** Industry Consumer goods : white goods (6000)
+Ttk prestige(6500) | 
+** Industry Domestic appliances (12500)
+Voltas(2000) | 
+** Industry Consumer goods : electronic (14500)
+
+Sector Consumer durables (14500)
 - - - - - - - - - - - - - - - - - - -
-    Dish tv : 2000
-    Pvr : 3000
-    Zee entertainment : 5000
-  Industry Media & entertainment( 10000 )
-Sector Media( 10000 )
+Dish tv(2000) | Pvr(3000) | Zee entertainment(5000) | 
+** Industry Media & entertainment (10000)
+
+Sector Media (10000)
 - - - - - - - - - - - - - - - - - - -
-    Castrol : 2000
-  Industry Lubricant( 2000 )
-    Oil india : 2000
-    Oil & natural gas : 5000
-    Petronet lng : 2000
-    Gail : 2000
-  Industry Oil drilling & exploration( 13000 )
-    Reliance industries : 8000
-    Bharat petroleum : 2000
-    Indian oil : 2000
-    Hindustan petroleum : 2000
-  Industry Refineries( 27000 )
-Sector Oil & gas( 27000 )
+Castrol(2000) | 
+** Industry Lubricant (2000)
+Oil india(2000) | Oil & natural gas(5000) | Petronet lng(2000) | Gail(2000) | 
+** Industry Oil drilling & exploration (13000)
+Reliance industries(8000) | Bharat petroleum(2000) | Indian oil(2000) | Hindustan petroleum(2000) | 
+** Industry Refineries (27000)
+
+Sector Oil & gas (27000)
 - - - - - - - - - - - - - - - - - - -
-    Balarampur chini mills : 1000
-    Eid parry : 2000
-  Industry Sugar( 3000 )
-Sector Sugar( 3000 )
+Balarampur chini mills(1000) | Eid parry(2000) | 
+** Industry Sugar (3000)
+
+Sector Sugar (3000)
 - - - - - - - - - - - - - - - - - - -
-    Bajaj finserv : 5000
-    Bse : 1000
-    Cdsl : 1000
-    Ti financial holdings : 1000
-    Muthoot finance : 2000
-  Industry Finance - investments( 10000 )
-    Crisil : 4000
-    Icra : 4000
-    Care : 2000
-  Industry Z misc : credit rating( 20000 )
-    Power finance corp : 2000
-    Rural electrification : 2000
-  Industry Finance - term lending institutions( 24000 )
-    Indiabulls housing finance : 1000
-    Hdfc : 11000
-    Lic housing finance : 2000
-  Industry Finance - housing( 38000 )
-    New india assurance : 1000
-    Icici prudential : 2000
-    Sbi life : 1000
-    Icici lombard : 1500
-    Hdfc standard life : 1000
-    Gic re : 1000
-  Industry Finance - insurance( 45500 )
-    State bank of india : 5000
-  Industry Banks-public( 50500 )
-    Axis bank : 2000
-    Icici bank : 4000
-    Hdfc bank : 17000
-    Kotak mahindra bank : 2000
-  Industry Banks-private( 75500 )
-    Mahindra & mahindra finance : 1000
-    Shriram transport finance : 1000
-    Manappuram finance : 1000
-  Industry Finance - leasing & hire purchase( 78500 )
-Sector Bfsi( 78500 )
+Bajaj finserv(5000) | Bse(1000) | Cdsl(1000) | Ti financial holdings(1000) | Muthoot finance(2000) | 
+** Industry Finance - investments (10000)
+Crisil(4000) | Icra(4000) | Care(2000) | 
+** Industry Z misc : credit rating (20000)
+Power finance corp(2000) | Rural electrification(2000) | 
+** Industry Finance - term lending institutions (24000)
+Indiabulls housing finance(1000) | Hdfc(11000) | Lic housing finance(2000) | 
+** Industry Finance - housing (38000)
+New india assurance(1000) | Icici prudential(2000) | Sbi life(1000) | Icici lombard(1500) | Hdfc standard life(1000) | Gic re(1000) | 
+** Industry Finance - insurance (45500)
+State bank of india(5000) | 
+** Industry Banks-public (50500)
+Axis bank(2000) | Icici bank(4000) | Hdfc bank(17000) | Kotak mahindra bank(2000) | 
+** Industry Banks-private (75500)
+Mahindra & mahindra finance(1000) | Shriram transport finance(1000) | Manappuram finance(1000) | 
+** Industry Finance - leasing & hire purchase (78500)
+
+Sector Bfsi (78500)
 - - - - - - - - - - - - - - - - - - -
-    Hindalco : 2000
-    National aluminium company : 2000
-  Industry Aluminium( 4000 )
-    Hindustan zinc : 2000
-  Industry Metals - non ferrous( 6000 )
-    Vedanta : 5000
-    Nmdc : 2000
-    Coal india : 10000
-  Industry Mining & minerals( 23000 )
-Sector Metals( 23000 )
+Hindalco(2000) | National aluminium company(2000) | 
+** Industry Aluminium (4000)
+Hindustan zinc(2000) | 
+** Industry Metals - non ferrous (6000)
+Vedanta(5000) | Nmdc(2000) | Coal india(10000) | 
+** Industry Mining & minerals (23000)
+
+Sector Metals (23000)
 - - - - - - - - - - - - - - - - - - -
-    United breweries : 2000
-    United spirits : 12000
-  Industry Breweries & distillaries( 14000 )
-Sector Alcoholic beverages( 14000 )
+United breweries(2000) | United spirits(12000) | 
+** Industry Breweries & distillaries (14000)
+
+Sector Alcoholic beverages (14000)
 - - - - - - - - - - - - - - - - - - -
-    Abb : 3000
-    Engineers india : 1000
-    Bhel : 2000
-    Siemens : 3000
-    Larsen & toubro ltd : 7000
-    Nbcc : 2000
-    Adani ports : 1000
-  Industry Infrastructure - general( 19000 )
-Sector Infrastructure( 19000 )
+Abb(3000) | Engineers india(1000) | Bhel(2000) | Siemens(3000) | Larsen & toubro ltd(7000) | Nbcc(2000) | Adani ports(1000) | 
+** Industry Infrastructure - general (19000)
+
+Sector Infrastructure (19000)
 - - - - - - - - - - - - - - - - - - -
-    Power grid corp : 5000
-    Ntpc : 6000
-    Nlc : 1000
-    Nhpc : 1000
-    Tata power : 2000
-  Industry Power - generation & distribution( 15000 )
-Sector Power( 15000 )
+Power grid corp(5000) | Ntpc(6000) | Nlc(1000) | Nhpc(1000) | Tata power(2000) | 
+** Industry Power - generation & distribution (15000)
+
+Sector Power (15000)
 - - - - - - - - - - - - - - - - - - -
-    Abott : 4000
-    Lupin : 10000
-    Pfizer : 1000
-    Sanofi india : 4000
-    Cipla : 2000
-    Dr lal pathlabs : 1000
-    Dr reddy labs : 5000
-    Aurobindo pharma : 2000
-    Glenmark pharma : 1000
-    Piramal enterprises : 5000
-    Cadila healthcare : 1000
-    Sun pharma : 11000
-  Industry Pharmaceuticals( 47000 )
-    Narayana hrudayalya : 2000
-    Fortis healthcare : 2000
-    Apollo hospital : 7000
-  Industry Hospitals & medical services( 58000 )
-Sector Pharma & healthcare( 58000 )
+Abott(4000) | Lupin(10000) | Pfizer(1000) | Sanofi india(4000) | Cipla(2000) | Dr lal pathlabs(1000) | Dr reddy labs(5000) | Aurobindo pharma(2000) | Glenmark pharma(1000) | Piramal enterprises(5000) | Cadila healthcare(1000) | Sun pharma(11000) | 
+** Industry Pharmaceuticals (47000)
+Narayana hrudayalya(2000) | Fortis healthcare(2000) | Apollo hospital(7000) | 
+** Industry Hospitals & medical services (58000)
+
+Sector Pharma & healthcare (58000)
 - - - - - - - - - - - - - - - - - - -
-    Cafe coffe day : 2000
-  Industry Food processing( 2000 )
-    Thomas cook : 2000
-    Cox & kings ltd : 2000
-    Jubilant foodworks : 3000
-    Wonderla : 1000
-  Industry Z misc : hospitality( 10000 )
-    Mahindra holidays : 2000
-    Eih : 2000
-    Indian hotels : 6000
-    West life development : 1000
-  Industry Hotels( 21000 )
-Sector Tourism & hospitality( 21000 )
+Cafe coffe day(2000) | 
+** Industry Food processing (2000)
+Thomas cook(2000) | Cox & kings ltd(2000) | Jubilant foodworks(3000) | Wonderla(1000) | 
+** Industry Z misc : hospitality (10000)
+Mahindra holidays(2000) | Eih(2000) | Indian hotels(6000) | West life development(1000) | 
+** Industry Hotels (21000)
+
+Sector Tourism & hospitality (21000)
 - - - - - - - - - - - - - - - - - - -
-    Godrej industries : 1000
-    3m : 30000
-    Grasim : 1000
-  Industry Diversified( 32000 )
-Sector Diversified( 32000 )
+Godrej industries(1000) | 3m(30000) | Grasim(1000) | 
+** Industry Diversified (32000)
+
+Sector Diversified (32000)
 - - - - - - - - - - - - - - - - - - -
-    Acc : 3000
-    Ambuja : 2000
-    Ultratech : 12000
-    Shree cements : 20000
-  Industry Cement : major( 37000 )
-Sector Cement( 37000 )
+Acc(3000) | Ambuja(2000) | Ultratech(12000) | Shree cements(20000) | 
+** Industry Cement : major (37000)
+
+Sector Cement (37000)
 - - - - - - - - - - - - - - - - - - -
-    Tube investments : 2000
-    Bajaj auto : 5000
-    Eicher : 20000
-    Tvs motor company : 2000
-    Hero motocorp : 4000
-  Industry Auto -2&3( 33000 )
-    Tata motors : 3000
-  Industry Auto -lcv&hcv( 36000 )
-    Vst tillers tractors : 2000
-  Industry Auto -tractors( 38000 )
-    Mahindra & mahindra : 2000
-    Maruti : 5000
-  Industry Auto -cars( 45000 )
-Sector Automobiles( 45000 )
+Tube investments(2000) | Bajaj auto(5000) | Eicher(20000) | Tvs motor company(2000) | Hero motocorp(4000) | 
+** Industry Auto -2&3 (33000)
+Tata motors(3000) | 
+** Industry Auto -lcv&hcv (36000)
+Vst tillers tractors(2000) | 
+** Industry Auto -tractors (38000)
+Mahindra & mahindra(2000) | Maruti(5000) | 
+** Industry Auto -cars (45000)
+
+Sector Automobiles (45000)
 - - - - - - - - - - - - - - - - - - -
-    Basf : 3400
-    Pidilite : 2600
-    Tata chemicals : 2000
-  Industry Chemicals( 8000 )
-Sector Chemicals( 8000 )
+Basf(3400) | Pidilite(2600) | Tata chemicals(2000) | 
+** Industry Chemicals (8000)
+
+Sector Chemicals (8000)
 - - - - - - - - - - - - - - - - - - -
-    Jsw steel : 2000
-    Tata steel : 5000
-  Industry Steel - large( 7000 )
-Sector Steel( 7000 )
+Jsw steel(2000) | Tata steel(5000) | 
+** Industry Steel - large (7000)
+
+Sector Steel (7000)
 - - - - - - - - - - - - - - - - - - -
-    Britannia industries : 8500
-    Gsk consumer : 5000
-    Nestle : 6500
-    Venky's : 2000
-    Krbl : 1000
-    Future consumer ltd : 1000
-    Varun beverages : 2000
-  Industry Food processing( 26000 )
-    Godrej agrovet : 1000
-    Avanti feeds : 3000
-  Industry Aquaculture( 30000 )
-    Hindustan unilever : 6000
-    Marico : 2000
-    Emami : 2000
-    Procter & gamble : 7000
-    Godrej consumer : 1000
-    Colgate palmolive : 2000
-    Dabur : 2000
-    Gillette india : 2000
-  Industry Personal care( 54000 )
-    Eveready : 2000
-  Industry Dry cells( 56000 )
-Sector Fmcg( 56000 )
+Britannia industries(8500) | Gsk consumer(5000) | Nestle(6500) | Venky's(2000) | Krbl(1000) | Future consumer ltd(1000) | Varun beverages(2000) | 
+** Industry Food processing (26000)
+Godrej agrovet(1000) | Avanti feeds(3000) | 
+** Industry Aquaculture (30000)
+Hindustan unilever(6000) | Marico(2000) | Emami(2000) | Procter & gamble(7000) | Godrej consumer(1000) | Colgate palmolive(2000) | Dabur(2000) | Gillette india(2000) | 
+** Industry Personal care (54000)
+Eveready(2000) | 
+** Industry Dry cells (56000)
+
+Sector Fmcg (56000)
 - - - - - - - - - - - - - - - - - - -
-    Hsil ltd : 2000
-    Kajaria ceramics : 2000
-    Somany ceramics : 1000
-    Cera sanitaryware : 3000
-    Asian granito limited : 1000
-  Industry Ceramics & granite( 9000 )
-Sector Ceramics( 9000 )
+Hsil ltd(2000) | Kajaria ceramics(2000) | Somany ceramics(1000) | Cera sanitaryware(3000) | Asian granito limited(1000) | 
+** Industry Ceramics & granite (9000)
+
+Sector Ceramics (9000)
 - - - - - - - - - - - - - - - - - - -
-    Balkrishna industries : 2000
-    Mrf : 60000
-    Apollo tyres : 2000
-    Jk tyre : 2000
-    Ceat : 2000
-  Industry Tyres( 68000 )
-Sector Tyres( 68000 )
+Balkrishna industries(2000) | Mrf(60000) | Apollo tyres(2000) | Jk tyre(2000) | Ceat(2000) | 
+** Industry Tyres (68000)
+
+Sector Tyres (68000)
 - - - - - - - - - - - - - - - - - - -
-    Upl : 5000
-  Industry Chemicals( 5000 )
-    Rallis : 2000
-    Monsanto : 5000
-    Bayer : 5000
-    P i industries : 3000
-  Industry Pesticides & agro chemicals( 20000 )
-Sector Agro chemicals( 20000 )
+Upl(5000) | 
+** Industry Chemicals (5000)
+Rallis(2000) | Monsanto(5000) | Bayer(5000) | P i industries(3000) | 
+** Industry Pesticides & agro chemicals (20000)
+
+Sector Agro chemicals (20000)
 - - - - - - - - - - - - - - - - - - -
-    Tata global beverages : 2000
-    Tata coffee : 2000
-  Industry Plantations - tea & coffee( 4000 )
-Sector Plantations( 4000 )
+Tata global beverages(2000) | Tata coffee(2000) | 
+** Industry Plantations - tea & coffee (4000)
+
+Sector Plantations (4000)
 - - - - - - - - - - - - - - - - - - -
-    Itc : 10000
-  Industry Cigarettes( 10000 )
-Sector Tobacco( 10000 )
+Itc(10000) | 
+** Industry Cigarettes (10000)
+
+Sector Tobacco (10000)
 - - - - - - - - - - - - - - - - - - -
-    Bata : 2500
-    Relaxo : 2000
-  Industry Leather products( 4500 )
-Sector Leather( 4500 )
+Bata(2500) | Relaxo(2000) | 
+** Industry Leather products (4500)
+
+Sector Leather (4500)
 - - - - - - - - - - - - - - - - - - -
-    Berger paints : 2000
-    Asian paints : 8000
-    Akzo nobel : 2000
-    Kansai nerolac : 2000
-  Industry Paints & varnishes( 14000 )
-Sector Paints( 14000 )
+Berger paints(2000) | Asian paints(8000) | Akzo nobel(2000) | Kansai nerolac(2000) | 
+** Industry Paints & varnishes (14000)
+
+Sector Paints (14000)
 - - - - - - - - - - - - - - - - - - -
-    Greenlam : 2000
-    Century plyboard : 2000
-  Industry Z misc: woodwork( 4000 )
-    Dlf : 2000
-    Prestige estates : 10000
-    Brigade enterprises : 1500
-    Hudco : 5600
-    Puravankara : 2000
-    Godrej properties : 2000
-    Sobha : 5000
-  Industry Construction & contracting : real estate( 32100 )
-    Ncc : 2000
-  Industry Construction & contracting : civil( 34100 )
-Sector Real estate( 34100 )
+Greenlam(2000) | Century plyboard(2000) | 
+** Industry Z misc: woodwork (4000)
+Dlf(2000) | Prestige estates(10000) | Brigade enterprises(1500) | Hudco(5600) | Puravankara(2000) | Godrej properties(2000) | Sobha(5000) | 
+** Industry Construction & contracting : real estate (32100)
+Ncc(2000) | 
+** Industry Construction & contracting : civil (34100)
+
+Sector Real estate (34100)
 - - - - - - - - - - - - - - - - - - -
-    Avenue supermarket : 1000
-    Aditya birla fashion & retail : 2000
-    Future retail : 2000
-    Shoppers stop : 2000
-    Trent : 2000
-    Future lifestyle fashions : 2000
-  Industry Retail( 11000 )
-    Sheela foam : 1600
-  Industry Home furnishing - mattresses( 12600 )
-    Talwalkars better value fitness : 2000
-  Industry Z misc: fitness( 14600 )
-Sector Retail( 14600 )
+Avenue supermarket(1000) | Aditya birla fashion & retail(2000) | Future retail(2000) | Shoppers stop(2000) | Trent(2000) | Future lifestyle fashions(2000) | 
+** Industry Retail (11000)
+Sheela foam(1600) | 
+** Industry Home furnishing - mattresses (12600)
+Talwalkars better value fitness(2000) | 
+** Industry Z misc: fitness (14600)
+
+Sector Retail (14600)
 - - - - - - - - - - - - - - - - - - -
-    Rajesh exports : 2000
-    Titan : 4000
-    Pc jewellers : 1000
-  Industry Diamong cutting & jewellery & precious metals( 7000 )
-Sector Gems & jewellery( 7000 )
+Rajesh exports(2000) | Titan(4000) | Pc jewellers(1000) | 
+** Industry Diamong cutting & jewellery & precious metals (7000)
+
+Sector Gems & jewellery (7000)
 - - - - - - - - - - - - - - - - - - -
-    Blue dart : 4000
-  Industry Couriers( 4000 )
-    Allcargo logistics : 1000
-    Container corporation : 2000
-    Vrl logistics : 2000
-    Mahindra logistics : 1000
-    Future supply chain : 1000
-    Interglobe aviation : 2000
-    Aegis logistics : 1000
-  Industry Transport & logistics( 14000 )
-    Shipping corporation : 2000
-  Industry Shipping( 16000 )
-Sector Logistics( 16000 )
+Blue dart(4000) | 
+** Industry Couriers (4000)
+Allcargo logistics(1000) | Container corporation(2000) | Vrl logistics(2000) | Mahindra logistics(1000) | Future supply chain(1000) | Interglobe aviation(2000) | Aegis logistics(1000) | 
+** Industry Transport & logistics (14000)
+Shipping corporation(2000) | 
+** Industry Shipping (16000)
+
+Sector Logistics (16000)
 - - - - - - - - - - - - - - - - - - -
-    Bharti airtel : 10000
-    Idea : 1800
-  Industry Telecommunication - service( 11800 )
-    Honeywell automation : 20000
-    Bharati infratel : 1000
-  Industry Telecommunication - equipment( 32800 )
-Sector Telecom( 32800 )
+Bharti airtel(10000) | Idea(1800) | 
+** Industry Telecommunication - service (11800)
+Honeywell automation(20000) | Bharati infratel(1000) | 
+** Industry Telecommunication - equipment (32800)
+
+Sector Telecom (32800)
 - - - - - - - - - - - - - - - - - - -
-    Kaveri seeds : 3000
-  Industry Agriculture products( 3000 )
-Sector Agriculture( 3000 )
+Kaveri seeds(3000) | 
+** Industry Agriculture products (3000)
+
+Sector Agriculture (3000)
 - - - - - - - - - - - - - - - - - - -
-    Wipro : 5600
-    Infoedge : 2000
-    Tcs : 18000
-    Hcl tech : 5000
-    Infosys : 10000
-    Tech mahindra : 3000
-  Industry Computer software( 43600 )
-Sector It( 43600 )
+Wipro(5600) | Infoedge(2000) | Tcs(18000) | Hcl tech(5000) | Infosys(10000) | Tech mahindra(3000) | 
+** Industry Computer software (43600)
+
+Sector It (43600)
 - - - - - - - - - - - - - - - - - - -
-    Chambal fertilizers : 1000
-    Coromandel international : 2000
-  Industry Fertilizers( 3000 )
-Sector Fertilizers( 3000 )
+Chambal fertilizers(1000) | Coromandel international(2000) | 
+** Industry Fertilizers (3000)
+
+Sector Fertilizers (3000)
 - - - - - - - - - - - - - - - - - - -
-    Cummins : 2000
-  Industry Engines( 2000 )
-    Havells : 1500
-    V-guard industries : 1500
-  Industry Electric equipments( 5000 )
-    Carborundum universal : 1000
-    Grindwell norton : 1000
-  Industry Abrsavies( 7000 )
-    Quess corp : 1000
-  Industry Engineering( 8000 )
-    Ksb pumps : 2300
-  Industry Pumps( 10300 )
-    Crompton greaves consumer : 1000
-    Bharat electronics : 2000
-  Industry Electrical( 13300 )
-Sector Engineering( 13300 )
+Cummins(2000) | 
+** Industry Engines (2000)
+Havells(1500) | V-guard industries(1500) | 
+** Industry Electric equipments (5000)
+Carborundum universal(1000) | Grindwell norton(1000) | 
+** Industry Abrsavies (7000)
+Quess corp(1000) | 
+** Industry Engineering (8000)
+Ksb pumps(2300) | 
+** Industry Pumps (10300)
+Crompton greaves consumer(1000) | Bharat electronics(2000) | 
+** Industry Electrical (13300)
+
+Sector Engineering (13300)
 - - - - - - - - - - - - - - - - - - -
-    Adani enterprises : 2000
-  Industry Trading( 2000 )
-Sector Trading( 2000 )
+Adani enterprises(2000) | 
+** Industry Trading (2000)
+
+Sector Trading (2000)
 - - - - - - - - - - - - - - - - - - -
-    Jk paper : 2000
-  Industry Paper( 2000 )
-Sector Pulp & paper( 2000 )
+Jk paper(2000) | 
+** Industry Paper (2000)
+
+Sector Pulp & paper (2000)
 - - - - - - - - - - - - - - - - - - -
-    Nilkamal : 2000
-    Supreme industries : 2000
-    Vip industries : 2000
-    Jain irrigation systems : 1000
-  Industry Plastics( 7000 )
-Sector Plastic & rubber( 7000 )
+Nilkamal(2000) | Supreme industries(2000) | Vip industries(2000) | Jain irrigation systems(1000) | 
+** Industry Plastics (7000)
+
+Sector Plastic & rubber (7000)
 - - - - - - - - - - - - - - - - - - -
-    Zee learn : 2000
-  Industry Computer education( 2000 )
-Sector Education( 2000 )
+Zee learn(2000) | 
+** Industry Computer education (2000)
+
+Sector Education (2000)
 - - - - - - - - - - - - - - - - - - -
-    Exide : 1000
-    Motherson sumi : 2000
-    Bosch : 20000
-    Amara raja : 1000
-  Industry Auto ancilliary( 24000 )
-    Skf : 1600
-  Industry Bearings( 25600 )
-    Asahi india glass : 2000
-  Industry Glass & glass products( 27600 )
-Sector Auto components( 27600 )
+Exide(1000) | Motherson sumi(2000) | Bosch(20000) | Amara raja(1000) | 
+** Industry Auto ancilliary (24000)
+Skf(1600) | 
+** Industry Bearings (25600)
+Asahi india glass(2000) | 
+** Industry Glass & glass products (27600)
+
+Sector Auto components (27600)
 - - - - - - - - - - - - - - - - - - -
-    Page industries : 20000
-  Industry Textiles - readymade apparels( 20000 )
-    Arvind limited : 1000
-  Industry Textiles - denim( 21000 )
-Sector Textiles( 21000 )
+Page industries(20000) | 
+** Industry Textiles - readymade apparels (20000)
+Arvind limited(1000) | 
+** Industry Textiles - denim (21000)
+
+Sector Textiles (21000)
 - - - - - - - - - - - - - - - - - - -
+
 Portfolio Value :  826500
