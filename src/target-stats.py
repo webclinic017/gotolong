@@ -32,41 +32,81 @@ company_aliases={}
 total_dividend = 0
 sect_indu_comp = {}
 
-def portfolio_value(d):
+sect_pv=0
+sect_cv=0
+sect_tbd=0
+
+def portfolio_value(d, index):
 	total = 0
 	for k, v in d.items():
 		if isinstance(v, dict):
-			total += portfolio_value(v)
+			total += portfolio_value(v, index)
 		else:
-			total = total + int(v)
+			if index == 0:
+				value = v.split(":")[0] 
+			elif index == 1:
+				value = v.split(":")[1] 
+			elif index == 2:
+				value = v.split(":")[2] 
+			total = total + int(value)
 	return total
+
 
 def myprint(d, stack_depth):
-	total = 0
+	global sect_pv
+	global sect_cv
+	global sect_tbd
+
+	pv_total = 0
+	cv_total = 0
+	tbd_total = 0
+
 	for k, v in d.items():
 		if isinstance(v, dict):
-			# to avoid new line
-			if stack_depth == 0:
-				# sector total 
-				total = 0
-                        
-			total += myprint(v, stack_depth + 1)
 
 			if stack_depth == 0:
-				print('Sector ' + k + ' (' + str(total) + ')' )
+				sect_pv = 0
+				sect_cv = 0
+				sect_tbd = 0
+
+			pv_total, cv_total, tbd_total = myprint(v, stack_depth + 1)
+
+			sect_pv += pv_total
+			sect_cv += cv_total
+			sect_tbd += tbd_total
+		
+			if stack_depth == 0:
+				print('Sector ' + k + ' (' + str(sect_pv) + ' : ' + str(sect_cv) + ' : ' + str(sect_tbd) + ')' )
 				print('- - - - - - - - - - - - - - - - - - -')
 			else:
-				print('** Industry ' + k + ' (' + str(total) + ')' )
+				print('** Industry ' + k + ' (' + str(pv_total) + ' : ' + str(cv_total) + ' : ' + str(tbd_total) + ')' )
 
-				
+			if stack_depth == 1:
+				# industry total 
+				pv_total = 0
+				cv_total = 0
+				tbd_total = 0
+
+			if stack_depth == 2:
+				# industry total 
+				pv_total = 0
+				cv_total = 0
+				tbd_total = 0
+
 		else:
-			total = total + int(v)
+			planned_value = v.split(":")[0] 
+			current_value = v.split(":")[1] 
+			tbd_value = v.split(":")[2] 
+			pv_total += int(float(planned_value))
+			cv_total += int(float(current_value))
+			tbd_total += int(float(tbd_value))
 			sys.stdout.write(k + '(' + v +')' + ' | ')
 	print('')		
-	return total
+	return pv_total, cv_total, tbd_total 
+			
 
 def load_row(row):
-	sector_name, industry_name, company_name, inv_multiplier, plan_units, plan_value, present_value, tbd_value, tbd_value, tbd_pct, last_date = row
+	sector_name, industry_name, company_name, inv_multiplier, plan_units, plan_value, present_value, tbd_value, tbd_units, tbd_pct, last_date = row
 	if re.match('Present Value', present_value):
 		if debug_level > 1:
 			print 'Bypassed header : ', row
@@ -85,7 +125,7 @@ def load_row(row):
 	if not sect_indu_comp[sector_name].has_key(industry_name):
 		sect_indu_comp[sector_name][industry_name]={}
 	if int(present_value) >= 0:
-		sect_indu_comp[sector_name][industry_name][company_name] = present_value
+		sect_indu_comp[sector_name][industry_name][company_name] = plan_value + ' : '+ present_value + ' : ' + tbd_value
 	
 def load_data():
 	for in_filename in in_filenames:
@@ -103,10 +143,10 @@ if sort_type == "sector_name_only":
 		print sname
 
 if sort_type == "sector_industry_company": 
-	print 'Portfolio Distribution : '
+	print 'Portfolio Distribution : (Target : Current : TBD )'
 	print('- - - - - - - - - - - - - - - - - - -')
 	myprint(sect_indu_comp, 0)
-	print 'Portfolio Value : ' , portfolio_value(sect_indu_comp)
+	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
 
 if sort_type == "industry_name_only": 
 	for iname in sorted(set(industries)):
