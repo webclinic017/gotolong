@@ -6,11 +6,12 @@ Invetor Check List : 20 rules
 
 1.1 Ratios
      1.1.1 Interest Coverage Ratio (ICR) = EBIT/Interest Expense : > 2 (ideal), < 2 (bad), < 1 (very bad)
+     Check whether annual Earnings are enough to pay interest of debt.
      1.1.2 Debt-to-Equity : < 1 (ideal), > 1.5 (bad), > 2 (very bad)
      1.1.3 Debt/EBITDA > 6 (very bad) : Cannot cover debt with 6 years of earning also.
      1.1.4 Debt/Market-Cap > 15 (very bad) : Debt is 15-times market cap of the company.
      
- 1.2 Check credit rating
+ 1.2 Check credit rating (available on screener also)
  1.3 Check Annual Report
      1.3.1 Search for 'delay in days'
      1.3.2 Search for 'Company has defaulted in repayment of loans and payment of interest to banks and financial institutions'
