@@ -58,6 +58,11 @@ def myprint(d, stack_depth):
 	global sect_tbd
         global sort_type
 
+	global leader_k
+        global leader_v
+        global leader_planned
+
+	leader_planned = 0
 	pv_total = 0
 	cv_total = 0
 	tbd_total = 0
@@ -81,6 +86,9 @@ def myprint(d, stack_depth):
 				print('Sector ' + k + ' (' + str(sect_pv) + ' : ' + str(sect_cv) + ' : ' + str(sect_tbd) + ')' )
 				print('- - - - - - - - - - - - - - - - - - -')
 			else:
+				if sort_type == "sect_indu_comp_leader":
+					print(leader_k + '(' + leader_v +')' + ' | ')
+
 				print('** Industry ' + k + ' (' + str(pv_total) + ' : ' + str(cv_total) + ' : ' + str(tbd_total) + ')' )
 
 			if stack_depth == 1:
@@ -102,11 +110,16 @@ def myprint(d, stack_depth):
 			pv_total += int(float(planned_value))
 			cv_total += int(float(current_value))
 			tbd_total += int(float(tbd_value))
+
+			if (planned_value > leader_planned):
+				leader_k = k
+				leader_v = v
+
 			process_it = False
 			if sort_type == "sector_industry_company_tbd":
 				if int(float(tbd_value)) > 0:
 					process_it = True
-			else:
+			elif sort_type != "sect_indu_comp_leader":
 				process_it = True
 			if process_it == True:
 				company_count += 1
@@ -165,6 +178,13 @@ if sort_type == "sector_industry_company_tbd":
 	print('- - - - - - - - - - - - - - - - - - -')
 	myprint(sect_indu_comp, 0)
 	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
+
+if sort_type == "sect_indu_comp_leader": 
+	print 'Portfolio Distribution : (Target : Current : TBD )'
+	print('- - - - - - - - - - - - - - - - - - -')
+	myprint(sect_indu_comp, 0)
+	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
+
 
 if sort_type == "industry_name_only": 
 	for iname in sorted(set(industries)):
