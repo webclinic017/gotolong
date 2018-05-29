@@ -61,6 +61,7 @@ def myprint(d, stack_depth):
 	cv_total = 0
 	tbd_total = 0
 
+        company_count = 0;
 	for k, v in d.items():
 		if isinstance(v, dict):
 
@@ -94,12 +95,15 @@ def myprint(d, stack_depth):
 				tbd_total = 0
 
 		else:
+			company_count += 1
 			planned_value = v.split(":")[0] 
 			current_value = v.split(":")[1] 
 			tbd_value = v.split(":")[2] 
 			pv_total += int(float(planned_value))
 			cv_total += int(float(current_value))
 			tbd_total += int(float(tbd_value))
+			if company_count == 5:
+				print('')
 			sys.stdout.write(k + '(' + v +')' + ' | ')
 	print('')		
 	return pv_total, cv_total, tbd_total 
