@@ -102,8 +102,10 @@ def myprint(d, stack_depth):
 			pv_total += int(float(planned_value))
 			cv_total += int(float(current_value))
 			tbd_total += int(float(tbd_value))
-			if company_count == 5:
+			if company_count == 4:
 				print('')
+			if (company_count == 1) or (company_count == 4):
+			 	sys.stdout.write('  ')	
 			sys.stdout.write(k + '(' + v +')' + ' | ')
 	print('')		
 	return pv_total, cv_total, tbd_total 
