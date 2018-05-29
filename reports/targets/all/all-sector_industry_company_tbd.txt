@@ -1,0 +1,292 @@
+Portfolio Distribution : (Target : Current : TBD )
+- - - - - - - - - - - - - - - - - - -
+Ifb industries(2000 : 1000 : 1000) | Blue star(2000 : 1000 : 1000) | 
+** Industry Consumer goods : white goods (8000 : 6000 : 2000)
+
+** Industry Domestic appliances (5000 : 6500 : -1500)
+
+** Industry Consumer goods : electronic (2000 : 2000 : 0)
+
+Sector Consumer durables (15000 : 14500 : 500)
+- - - - - - - - - - - - - - - - - - -
+Dish tv(5000 : 2000 : 3000) | Pvr(5000 : 3000 : 2000) | 
+** Industry Media & entertainment (15000 : 10000 : 5000)
+
+Sector Media (15000 : 10000 : 5000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Lubricant (2000 : 2000 : 0)
+Oil india(3000 : 2000 : 1000) | Petronet lng(4000 : 2000 : 2000) | Gail(4000 : 2000 : 2000) | 
+
+** Industry Oil drilling & exploration (16000 : 11000 : 5000)
+Reliance industries(10000 : 8000 : 2000) | Bharat petroleum(4000 : 2000 : 2000) | Indian oil(5000 : 2000 : 3000) | 
+Hindustan petroleum(3000 : 2000 : 1000) | 
+** Industry Refineries (22000 : 14000 : 8000)
+
+Sector Oil & gas (40000 : 27000 : 13000)
+- - - - - - - - - - - - - - - - - - -
+Balarampur chini mills(2000 : 1000 : 1000) | 
+** Industry Sugar (4000 : 3000 : 1000)
+
+Sector Sugar (4000 : 3000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+Bse(2000 : 1000 : 1000) | Cdsl(2000 : 1000 : 1000) | Ti financial holdings(2000 : 1000 : 1000) | 
+Muthoot finance(5000 : 2000 : 3000) | 
+** Industry Finance - investments (14000 : 10000 : 4000)
+Icra(5000 : 4000 : 1000) | 
+** Industry Z misc : credit rating (10000 : 10000 : 0)
+Power finance corp(5000 : 2000 : 3000) | Rural electrification(5000 : 2000 : 3000) | 
+** Industry Finance - term lending institutions (10000 : 4000 : 6000)
+Indiabulls housing finance(3000 : 1000 : 2000) | Lic housing finance(5000 : 2000 : 3000) | 
+** Industry Finance - housing (18000 : 14000 : 4000)
+New india assurance(5000 : 1000 : 4000) | Icici prudential(5000 : 2000 : 3000) | Sbi life(5000 : 1000 : 4000) | 
+Icici lombard(5000 : 1500 : 3500) | Hdfc standard life(5000 : 1000 : 4000) | Gic re(5000 : 1000 : 4000) | 
+
+** Industry Finance - insurance (30000 : 7500 : 22500)
+
+** Industry Banks-public (5000 : 5000 : 0)
+Icici bank(5000 : 4000 : 1000) | 
+** Industry Banks-private (19000 : 25000 : -6000)
+Mahindra & mahindra finance(3000 : 1000 : 2000) | Shriram transport finance(3000 : 1000 : 2000) | Manappuram finance(2000 : 1000 : 1000) | 
+
+** Industry Finance - leasing & hire purchase (8000 : 3000 : 5000)
+
+Sector Bfsi (114000 : 78500 : 35500)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Aluminium (4000 : 4000 : 0)
+Hindustan zinc(5000 : 2000 : 3000) | 
+** Industry Metals - non ferrous (5000 : 2000 : 3000)
+Nmdc(5000 : 2000 : 3000) | 
+** Industry Mining & minerals (20000 : 17000 : 3000)
+
+Sector Metals (29000 : 23000 : 6000)
+- - - - - - - - - - - - - - - - - - -
+United breweries(5000 : 2000 : 3000) | 
+** Industry Breweries & distillaries (15000 : 14000 : 1000)
+
+Sector Alcoholic beverages (15000 : 14000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+Abb(5000 : 3000 : 2000) | Engineers india(5000 : 1000 : 4000) | Bhel(5000 : 2000 : 3000) | 
+Siemens(5000 : 3000 : 2000) | Larsen & toubro ltd(10000 : 7000 : 3000) | Nbcc(5000 : 2000 : 3000) | 
+Adani ports(5000 : 1000 : 4000) | 
+** Industry Infrastructure - general (40000 : 19000 : 21000)
+
+Sector Infrastructure (40000 : 19000 : 21000)
+- - - - - - - - - - - - - - - - - - -
+Ntpc(10000 : 6000 : 4000) | Nlc(3000 : 1000 : 2000) | Nhpc(3000 : 1000 : 2000) | 
+
+** Industry Power - generation & distribution (23000 : 15000 : 8000)
+
+Sector Power (23000 : 15000 : 8000)
+- - - - - - - - - - - - - - - - - - -
+Pfizer(2000 : 1000 : 1000) | Cipla(5000 : 2000 : 3000) | Dr lal pathlabs(2000 : 1000 : 1000) | 
+Aurobindo pharma(5000 : 2000 : 3000) | Glenmark pharma(3000 : 1000 : 2000) | Cadila healthcare(3000 : 1000 : 2000) | 
+
+** Industry Pharmaceuticals (44000 : 47000 : -3000)
+Narayana hrudayalya(3000 : 2000 : 1000) | Apollo hospital(10000 : 7000 : 3000) | 
+** Industry Hospitals & medical services (15000 : 11000 : 4000)
+
+Sector Pharma & healthcare (59000 : 58000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Food processing (2000 : 2000 : 0)
+Wonderla(2000 : 1000 : 1000) | 
+** Industry Z misc : hospitality (8000 : 8000 : 0)
+Mahindra holidays(5000 : 2000 : 3000) | Eih(3000 : 2000 : 1000) | Indian hotels(10000 : 6000 : 4000) | 
+West life development(2000 : 1000 : 1000) | 
+** Industry Hotels (20000 : 11000 : 9000)
+
+Sector Tourism & hospitality (30000 : 21000 : 9000)
+- - - - - - - - - - - - - - - - - - -
+Godrej industries(3000 : 1000 : 2000) | Grasim(3000 : 1000 : 2000) | 
+** Industry Diversified (36000 : 32000 : 4000)
+
+Sector Diversified (36000 : 32000 : 4000)
+- - - - - - - - - - - - - - - - - - -
+Ambuja(3000 : 2000 : 1000) | 
+** Industry Cement : major (36000 : 37000 : -1000)
+
+Sector Cement (36000 : 37000 : -1000)
+- - - - - - - - - - - - - - - - - - -
+Tvs motor company(5000 : 2000 : 3000) | Hero motocorp(5000 : 4000 : 1000) | 
+** Industry Auto -2&3 (37000 : 33000 : 4000)
+Tata motors(5000 : 3000 : 2000) | 
+** Industry Auto -lcv&hcv (5000 : 3000 : 2000)
+
+** Industry Auto -tractors (2000 : 2000 : 0)
+Mahindra & mahindra(5000 : 2000 : 3000) | 
+** Industry Auto -cars (10000 : 7000 : 3000)
+
+Sector Automobiles (54000 : 45000 : 9000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Chemicals (6000 : 8000 : -2000)
+
+Sector Chemicals (6000 : 8000 : -2000)
+- - - - - - - - - - - - - - - - - - -
+Jsw steel(5000 : 2000 : 3000) | 
+** Industry Steel - large (10000 : 7000 : 3000)
+
+Sector Steel (10000 : 7000 : 3000)
+- - - - - - - - - - - - - - - - - - -
+Krbl(2000 : 1000 : 1000) | Future consumer ltd(2000 : 1000 : 1000) | Varun beverages(5000 : 2000 : 3000) | 
+
+** Industry Food processing (26000 : 26000 : 0)
+Godrej agrovet(2000 : 1000 : 1000) | 
+** Industry Aquaculture (4000 : 4000 : 0)
+Hindustan unilever(10000 : 6000 : 4000) | Marico(5000 : 2000 : 3000) | Emami(5000 : 2000 : 3000) | 
+Godrej consumer(5000 : 1000 : 4000) | Dabur(5000 : 2000 : 3000) | 
+** Industry Personal care (40000 : 24000 : 16000)
+
+** Industry Dry cells (2000 : 2000 : 0)
+
+Sector Fmcg (72000 : 56000 : 16000)
+- - - - - - - - - - - - - - - - - - -
+Somany ceramics(2000 : 1000 : 1000) | Asian granito limited(2000 : 1000 : 1000) | 
+** Industry Ceramics & granite (10000 : 9000 : 1000)
+
+Sector Ceramics (10000 : 9000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Tyres (68000 : 68000 : 0)
+
+Sector Tyres (68000 : 68000 : 0)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Chemicals (2000 : 5000 : -3000)
+P i industries(3000 : 3000 : 1000) | 
+** Industry Pesticides & agro chemicals (15000 : 15000 : 1000)
+
+Sector Agro chemicals (17000 : 20000 : -2000)
+- - - - - - - - - - - - - - - - - - -
+Tata global beverages(5000 : 2000 : 3000) | Tata coffee(5000 : 2000 : 3000) | 
+** Industry Plantations - tea & coffee (10000 : 4000 : 6000)
+
+Sector Plantations (10000 : 4000 : 6000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Cigarettes (10000 : 10000 : 0)
+
+Sector Tobacco (10000 : 10000 : 0)
+- - - - - - - - - - - - - - - - - - -
+Bata(5000 : 2500 : 2500) | Relaxo(5000 : 2000 : 3000) | 
+** Industry Leather products (10000 : 4500 : 5500)
+
+Sector Leather (10000 : 4500 : 5500)
+- - - - - - - - - - - - - - - - - - -
+Berger paints(3000 : 2000 : 1000) | Asian paints(10000 : 8000 : 2000) | Kansai nerolac(5000 : 2000 : 3000) | 
+
+** Industry Paints & varnishes (20000 : 14000 : 6000)
+
+Sector Paints (20000 : 14000 : 6000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Z misc: woodwork (4000 : 4000 : 0)
+Dlf(5000 : 2000 : 3000) | Brigade enterprises(2000 : 1500 : 500) | 
+** Industry Construction & contracting : real estate (20000 : 28100 : -8100)
+
+** Industry Construction & contracting : civil (2000 : 2000 : 0)
+
+Sector Real estate (26000 : 34100 : -8100)
+- - - - - - - - - - - - - - - - - - -
+Avenue supermarket(2000 : 1000 : 1000) | 
+** Industry Retail (12000 : 11000 : 1000)
+Sheela foam(2000 : 1600 : 400) | 
+** Industry Home furnishing - mattresses (2000 : 1600 : 400)
+
+** Industry Z misc: fitness (2000 : 2000 : 0)
+
+Sector Retail (16000 : 14600 : 1400)
+- - - - - - - - - - - - - - - - - - -
+Titan(5000 : 4000 : 1000) | Pc jewellers(2000 : 1000 : 1000) | 
+** Industry Diamong cutting & jewellery & precious metals (9000 : 7000 : 2000)
+
+Sector Gems & jewellery (9000 : 7000 : 2000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Couriers (4000 : 4000 : 0)
+Allcargo logistics(2000 : 1000 : 1000) | Container corporation(3000 : 2000 : 1000) | Mahindra logistics(2000 : 1000 : 1000) | 
+Future supply chain(2000 : 1000 : 1000) | Interglobe aviation(5000 : 2000 : 3000) | Aegis logistics(2000 : 1000 : 1000) | 
+
+** Industry Transport & logistics (18000 : 10000 : 8000)
+Shipping corporation(3000 : 2000 : 1000) | 
+** Industry Shipping (3000 : 2000 : 1000)
+
+Sector Logistics (25000 : 16000 : 9000)
+- - - - - - - - - - - - - - - - - - -
+Idea(5000 : 1800 : 3200) | 
+** Industry Telecommunication - service (15000 : 11800 : 3200)
+Bharati infratel(3000 : 1000 : 2000) | 
+** Industry Telecommunication - equipment (23000 : 21000 : 2000)
+
+Sector Telecom (38000 : 32800 : 5200)
+- - - - - - - - - - - - - - - - - - -
+Kaveri seeds(3000 : 3000 : 1000) | 
+** Industry Agriculture products (3000 : 3000 : 1000)
+
+Sector Agriculture (3000 : 3000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+Infoedge(5000 : 2000 : 3000) | Tech mahindra(5000 : 3000 : 2000) | 
+** Industry Computer software (40000 : 43600 : -3600)
+
+Sector It (40000 : 43600 : -3600)
+- - - - - - - - - - - - - - - - - - -
+Chambal fertilizers(2000 : 1000 : 1000) | 
+** Industry Fertilizers (4000 : 3000 : 1000)
+
+Sector Fertilizers (4000 : 3000 : 1000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Engines (2000 : 2000 : 0)
+Havells(2000 : 1500 : 500) | V-guard industries(2000 : 1500 : 500) | 
+** Industry Electric equipments (4000 : 3000 : 1000)
+Carborundum universal(2000 : 1000 : 1000) | Grindwell norton(2000 : 1000 : 1000) | 
+** Industry Abrsavies (4000 : 2000 : 2000)
+Quess corp(3000 : 1000 : 2000) | 
+** Industry Engineering (3000 : 1000 : 2000)
+
+** Industry Pumps (2000 : 2300 : -300)
+Crompton greaves consumer(2000 : 1000 : 1000) | Bharat electronics(5000 : 2000 : 3000) | 
+** Industry Electrical (7000 : 3000 : 4000)
+
+Sector Engineering (22000 : 13300 : 8700)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Trading (2000 : 2000 : 0)
+
+Sector Trading (2000 : 2000 : 0)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Paper (2000 : 2000 : 0)
+
+Sector Pulp & paper (2000 : 2000 : 0)
+- - - - - - - - - - - - - - - - - - -
+Vip industries(5000 : 2000 : 3000) | Jain irrigation systems(2000 : 1000 : 1000) | 
+** Industry Plastics (11000 : 7000 : 4000)
+
+Sector Plastic & rubber (11000 : 7000 : 4000)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Computer education (2000 : 2000 : 0)
+
+Sector Education (2000 : 2000 : 0)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Auto ancilliary (24000 : 24000 : 0)
+Skf(2000 : 1600 : 400) | 
+** Industry Bearings (2000 : 1600 : 400)
+
+** Industry Glass & glass products (2000 : 2000 : 0)
+
+Sector Auto components (28000 : 27600 : 400)
+- - - - - - - - - - - - - - - - - - -
+
+** Industry Textiles - readymade apparels (20000 : 20000 : 0)
+Arvind limited(3000 : 1000 : 2000) | 
+** Industry Textiles - denim (3000 : 1000 : 2000)
+
+Sector Textiles (23000 : 21000 : 2000)
+- - - - - - - - - - - - - - - - - - -
+
+Portfolio  ( 994000  :  826500  :  169500 )
