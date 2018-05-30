@@ -82,14 +82,15 @@ def myprint(d, stack_depth):
 			sect_cv += cv_total
 			sect_tbd += tbd_total
 		
-			if stack_depth == 0:
-				print('Sector ' + k + ' (' + str(sect_pv) + ' : ' + str(sect_cv) + ' : ' + str(sect_tbd) + ')' )
-				print('- - - - - - - - - - - - - - - - - - -')
-			else:
-				if sort_type == "sect_indu_comp_leader":
-					print(leader_k + '(' + leader_v +')' + ' | ')
+			if sort_type != "comp_tbd":
+				if stack_depth == 0:
+					print('Sector ' + k + ' (' + str(sect_pv) + ' : ' + str(sect_cv) + ' : ' + str(sect_tbd) + ')' )
+					print('- - - - - - - - - - - - - - - - - - -')
+				else:
+					if sort_type == "sect_indu_comp_leader":
+						print(leader_k + '(' + leader_v +')' + ' | ')
 
-				print('** Industry ' + k + ' (' + str(pv_total) + ' : ' + str(cv_total) + ' : ' + str(tbd_total) + ')' )
+					print('** Industry ' + k + ' (' + str(pv_total) + ' : ' + str(cv_total) + ' : ' + str(tbd_total) + ')' )
 
 			if stack_depth == 1:
 				# industry total 
@@ -119,14 +120,22 @@ def myprint(d, stack_depth):
 			if sort_type == "sector_industry_company_tbd":
 				if int(float(tbd_value)) > 0:
 					process_it = True
+			elif sort_type == "comp_tbd":
+				if int(float(tbd_value)) > 0:
+					process_it = True
 			elif sort_type != "sect_indu_comp_leader":
 				process_it = True
 			if process_it == True:
 				company_count += 1
-				sys.stdout.write(k + '(' + v +')' + ' | ')
-				if company_count%3 == 0:
+				sys.stdout.write(k + '(' + v +')' )
+				if sort_type == "comp_tbd":
 					print('')
-	print('')		
+				else:
+					sys.stdout.write(' | ')
+					if company_count%3 == 0:
+						print('')
+	if sort_type != "comp_tbd":
+		print('')
 	return pv_total, cv_total, tbd_total 
 			
 
@@ -168,6 +177,12 @@ if sort_type == "sector_name_only":
 		print sname
 
 if sort_type == "sector_industry_company": 
+	print 'Portfolio Distribution : (Target : Current : TBD )'
+	print('- - - - - - - - - - - - - - - - - - -')
+	myprint(sect_indu_comp, 0)
+	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
+
+if sort_type == "comp_tbd": 
 	print 'Portfolio Distribution : (Target : Current : TBD )'
 	print('- - - - - - - - - - - - - - - - - - -')
 	myprint(sect_indu_comp, 0)
