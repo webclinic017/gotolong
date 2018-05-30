@@ -1,117 +1,115 @@
-Portfolio Distribution : (Target : Current : TBD )
-- - - - - - - - - - - - - - - - - - -
-Ifb industries(2000 : 1000 : 1000)
-Blue star(2000 : 1000 : 1000)
-Dish tv(5000 : 2000 : 3000)
-Pvr(5000 : 3000 : 2000)
-Oil india(3000 : 2000 : 1000)
-Petronet lng(4000 : 2000 : 2000)
-Gail(4000 : 2000 : 2000)
-Reliance industries(10000 : 8000 : 2000)
-Bharat petroleum(4000 : 2000 : 2000)
-Indian oil(5000 : 2000 : 3000)
-Hindustan petroleum(3000 : 2000 : 1000)
-Balarampur chini mills(2000 : 1000 : 1000)
-Bse(2000 : 1000 : 1000)
-Cdsl(2000 : 1000 : 1000)
-Ti financial holdings(2000 : 1000 : 1000)
-Muthoot finance(5000 : 2000 : 3000)
-Icra(5000 : 4000 : 1000)
-Power finance corp(5000 : 2000 : 3000)
-Rural electrification(5000 : 2000 : 3000)
-Indiabulls housing finance(3000 : 1000 : 2000)
-Lic housing finance(5000 : 2000 : 3000)
-New india assurance(5000 : 1000 : 4000)
-Icici prudential(5000 : 2000 : 3000)
-Sbi life(5000 : 1000 : 4000)
-Icici lombard(5000 : 1500 : 3500)
-Hdfc standard life(5000 : 1000 : 4000)
-Gic re(5000 : 1000 : 4000)
-Icici bank(5000 : 4000 : 1000)
-Mahindra & mahindra finance(3000 : 1000 : 2000)
-Shriram transport finance(3000 : 1000 : 2000)
-Manappuram finance(2000 : 1000 : 1000)
-Hindustan zinc(5000 : 2000 : 3000)
-Nmdc(5000 : 2000 : 3000)
-United breweries(5000 : 2000 : 3000)
-Abb(5000 : 3000 : 2000)
-Engineers india(5000 : 1000 : 4000)
-Bhel(5000 : 2000 : 3000)
-Siemens(5000 : 3000 : 2000)
-Larsen & toubro ltd(10000 : 7000 : 3000)
-Nbcc(5000 : 2000 : 3000)
-Adani ports(5000 : 1000 : 4000)
-Ntpc(10000 : 6000 : 4000)
-Nlc(3000 : 1000 : 2000)
-Nhpc(3000 : 1000 : 2000)
-Pfizer(2000 : 1000 : 1000)
-Cipla(5000 : 2000 : 3000)
-Dr lal pathlabs(2000 : 1000 : 1000)
-Aurobindo pharma(5000 : 2000 : 3000)
-Glenmark pharma(3000 : 1000 : 2000)
-Cadila healthcare(3000 : 1000 : 2000)
-Narayana hrudayalya(3000 : 2000 : 1000)
-Apollo hospital(10000 : 7000 : 3000)
-Wonderla(2000 : 1000 : 1000)
-Mahindra holidays(5000 : 2000 : 3000)
-Eih(3000 : 2000 : 1000)
-Indian hotels(10000 : 6000 : 4000)
-West life development(2000 : 1000 : 1000)
-Godrej industries(3000 : 1000 : 2000)
-Grasim(3000 : 1000 : 2000)
-Ambuja(3000 : 2000 : 1000)
-Tvs motor company(5000 : 2000 : 3000)
-Hero motocorp(5000 : 4000 : 1000)
-Tata motors(5000 : 3000 : 2000)
-Mahindra & mahindra(5000 : 2000 : 3000)
-Jsw steel(5000 : 2000 : 3000)
-Krbl(2000 : 1000 : 1000)
-Future consumer ltd(2000 : 1000 : 1000)
-Varun beverages(5000 : 2000 : 3000)
-Godrej agrovet(2000 : 1000 : 1000)
-Hindustan unilever(10000 : 6000 : 4000)
-Marico(5000 : 2000 : 3000)
-Emami(5000 : 2000 : 3000)
-Godrej consumer(5000 : 1000 : 4000)
-Dabur(5000 : 2000 : 3000)
-Somany ceramics(2000 : 1000 : 1000)
-Asian granito limited(2000 : 1000 : 1000)
-P i industries(3000 : 3000 : 1000)
-Tata global beverages(5000 : 2000 : 3000)
-Tata coffee(5000 : 2000 : 3000)
-Bata(5000 : 2500 : 2500)
-Relaxo(5000 : 2000 : 3000)
-Berger paints(3000 : 2000 : 1000)
-Asian paints(10000 : 8000 : 2000)
-Kansai nerolac(5000 : 2000 : 3000)
-Dlf(5000 : 2000 : 3000)
-Brigade enterprises(2000 : 1500 : 500)
-Avenue supermarket(2000 : 1000 : 1000)
-Sheela foam(2000 : 1600 : 400)
-Titan(5000 : 4000 : 1000)
-Pc jewellers(2000 : 1000 : 1000)
-Allcargo logistics(2000 : 1000 : 1000)
-Container corporation(3000 : 2000 : 1000)
-Mahindra logistics(2000 : 1000 : 1000)
-Future supply chain(2000 : 1000 : 1000)
-Interglobe aviation(5000 : 2000 : 3000)
-Aegis logistics(2000 : 1000 : 1000)
-Shipping corporation(3000 : 2000 : 1000)
-Idea(5000 : 1800 : 3200)
-Bharati infratel(3000 : 1000 : 2000)
-Kaveri seeds(3000 : 3000 : 1000)
-Infoedge(5000 : 2000 : 3000)
-Tech mahindra(5000 : 3000 : 2000)
-Chambal fertilizers(2000 : 1000 : 1000)
-Havells(2000 : 1500 : 500)
-V-guard industries(2000 : 1500 : 500)
-Carborundum universal(2000 : 1000 : 1000)
-Grindwell norton(2000 : 1000 : 1000)
-Quess corp(3000 : 1000 : 2000)
-Crompton greaves consumer(2000 : 1000 : 1000)
-Bharat electronics(5000 : 2000 : 3000)
-Vip industries(5000 : 2000 : 3000)
-Jain irrigation systems(2000 : 1000 : 1000)
-Skf(2000 : 1600 : 400)
-Arvind limited(3000 : 1000 : 2000)
-Portfolio  ( 994000  :  826500  :  169500 )
+Company Name, Planned, Current, TBD
+Ifb industries, 2000 ,  1000 ,  1000
+Blue star, 2000 ,  1000 ,  1000
+Dish tv, 5000 ,  2000 ,  3000
+Pvr, 5000 ,  3000 ,  2000
+Oil india, 3000 ,  2000 ,  1000
+Petronet lng, 4000 ,  2000 ,  2000
+Gail, 4000 ,  2000 ,  2000
+Reliance industries, 10000 ,  8000 ,  2000
+Bharat petroleum, 4000 ,  2000 ,  2000
+Indian oil, 5000 ,  2000 ,  3000
+Hindustan petroleum, 3000 ,  2000 ,  1000
+Balarampur chini mills, 2000 ,  1000 ,  1000
+Bse, 2000 ,  1000 ,  1000
+Cdsl, 2000 ,  1000 ,  1000
+Ti financial holdings, 2000 ,  1000 ,  1000
+Muthoot finance, 5000 ,  2000 ,  3000
+Icra, 5000 ,  4000 ,  1000
+Power finance corp, 5000 ,  2000 ,  3000
+Rural electrification, 5000 ,  2000 ,  3000
+Indiabulls housing finance, 3000 ,  1000 ,  2000
+Lic housing finance, 5000 ,  2000 ,  3000
+New india assurance, 5000 ,  1000 ,  4000
+Icici prudential, 5000 ,  2000 ,  3000
+Sbi life, 5000 ,  1000 ,  4000
+Icici lombard, 5000 ,  1500 ,  3500
+Hdfc standard life, 5000 ,  1000 ,  4000
+Gic re, 5000 ,  1000 ,  4000
+Icici bank, 5000 ,  4000 ,  1000
+Mahindra & mahindra finance, 3000 ,  1000 ,  2000
+Shriram transport finance, 3000 ,  1000 ,  2000
+Manappuram finance, 2000 ,  1000 ,  1000
+Hindustan zinc, 5000 ,  2000 ,  3000
+Nmdc, 5000 ,  2000 ,  3000
+United breweries, 5000 ,  2000 ,  3000
+Abb, 5000 ,  3000 ,  2000
+Engineers india, 5000 ,  1000 ,  4000
+Bhel, 5000 ,  2000 ,  3000
+Siemens, 5000 ,  3000 ,  2000
+Larsen & toubro ltd, 10000 ,  7000 ,  3000
+Nbcc, 5000 ,  2000 ,  3000
+Adani ports, 5000 ,  1000 ,  4000
+Ntpc, 10000 ,  6000 ,  4000
+Nlc, 3000 ,  1000 ,  2000
+Nhpc, 3000 ,  1000 ,  2000
+Pfizer, 2000 ,  1000 ,  1000
+Cipla, 5000 ,  2000 ,  3000
+Dr lal pathlabs, 2000 ,  1000 ,  1000
+Aurobindo pharma, 5000 ,  2000 ,  3000
+Glenmark pharma, 3000 ,  1000 ,  2000
+Cadila healthcare, 3000 ,  1000 ,  2000
+Narayana hrudayalya, 3000 ,  2000 ,  1000
+Apollo hospital, 10000 ,  7000 ,  3000
+Wonderla, 2000 ,  1000 ,  1000
+Mahindra holidays, 5000 ,  2000 ,  3000
+Eih, 3000 ,  2000 ,  1000
+Indian hotels, 10000 ,  6000 ,  4000
+West life development, 2000 ,  1000 ,  1000
+Godrej industries, 3000 ,  1000 ,  2000
+Grasim, 3000 ,  1000 ,  2000
+Ambuja, 3000 ,  2000 ,  1000
+Tvs motor company, 5000 ,  2000 ,  3000
+Hero motocorp, 5000 ,  4000 ,  1000
+Tata motors, 5000 ,  3000 ,  2000
+Mahindra & mahindra, 5000 ,  2000 ,  3000
+Jsw steel, 5000 ,  2000 ,  3000
+Krbl, 2000 ,  1000 ,  1000
+Future consumer ltd, 2000 ,  1000 ,  1000
+Varun beverages, 5000 ,  2000 ,  3000
+Godrej agrovet, 2000 ,  1000 ,  1000
+Hindustan unilever, 10000 ,  6000 ,  4000
+Marico, 5000 ,  2000 ,  3000
+Emami, 5000 ,  2000 ,  3000
+Godrej consumer, 5000 ,  1000 ,  4000
+Dabur, 5000 ,  2000 ,  3000
+Somany ceramics, 2000 ,  1000 ,  1000
+Asian granito limited, 2000 ,  1000 ,  1000
+P i industries, 3000 ,  3000 ,  1000
+Tata global beverages, 5000 ,  2000 ,  3000
+Tata coffee, 5000 ,  2000 ,  3000
+Bata, 5000 ,  2500 ,  2500
+Relaxo, 5000 ,  2000 ,  3000
+Berger paints, 3000 ,  2000 ,  1000
+Asian paints, 10000 ,  8000 ,  2000
+Kansai nerolac, 5000 ,  2000 ,  3000
+Dlf, 5000 ,  2000 ,  3000
+Brigade enterprises, 2000 ,  1500 ,  500
+Avenue supermarket, 2000 ,  1000 ,  1000
+Sheela foam, 2000 ,  1600 ,  400
+Titan, 5000 ,  4000 ,  1000
+Pc jewellers, 2000 ,  1000 ,  1000
+Allcargo logistics, 2000 ,  1000 ,  1000
+Container corporation, 3000 ,  2000 ,  1000
+Mahindra logistics, 2000 ,  1000 ,  1000
+Future supply chain, 2000 ,  1000 ,  1000
+Interglobe aviation, 5000 ,  2000 ,  3000
+Aegis logistics, 2000 ,  1000 ,  1000
+Shipping corporation, 3000 ,  2000 ,  1000
+Idea, 5000 ,  1800 ,  3200
+Bharati infratel, 3000 ,  1000 ,  2000
+Kaveri seeds, 3000 ,  3000 ,  1000
+Infoedge, 5000 ,  2000 ,  3000
+Tech mahindra, 5000 ,  3000 ,  2000
+Chambal fertilizers, 2000 ,  1000 ,  1000
+Havells, 2000 ,  1500 ,  500
+V-guard industries, 2000 ,  1500 ,  500
+Carborundum universal, 2000 ,  1000 ,  1000
+Grindwell norton, 2000 ,  1000 ,  1000
+Quess corp, 3000 ,  1000 ,  2000
+Crompton greaves consumer, 2000 ,  1000 ,  1000
+Bharat electronics, 5000 ,  2000 ,  3000
+Vip industries, 5000 ,  2000 ,  3000
+Jain irrigation systems, 2000 ,  1000 ,  1000
+Skf, 2000 ,  1600 ,  400
+Arvind limited, 3000 ,  1000 ,  2000

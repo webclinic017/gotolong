@@ -127,10 +127,11 @@ def myprint(d, stack_depth):
 				process_it = True
 			if process_it == True:
 				company_count += 1
-				sys.stdout.write(k + '(' + v +')' )
 				if sort_type == "comp_tbd":
+					sys.stdout.write(k + ', ' + planned_value +', ' + current_value +', ' + tbd_value)
 					print('')
 				else:
+					sys.stdout.write(k + '(' + v +')' )
 					sys.stdout.write(' | ')
 					if company_count%3 == 0:
 						print('')
@@ -183,10 +184,8 @@ if sort_type == "sector_industry_company":
 	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
 
 if sort_type == "comp_tbd": 
-	print 'Portfolio Distribution : (Target : Current : TBD )'
-	print('- - - - - - - - - - - - - - - - - - -')
+	print 'Company Name, Planned, Current, TBD'
 	myprint(sect_indu_comp, 0)
-	print 'Portfolio ' , '(', portfolio_value(sect_indu_comp, 0), ' : ' , portfolio_value(sect_indu_comp, 1), ' : ', portfolio_value(sect_indu_comp, 2), ')'
 
 if sort_type == "sector_industry_company_tbd": 
 	print 'Portfolio Distribution : (Target : Current : TBD )'
