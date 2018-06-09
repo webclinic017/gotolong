@@ -128,11 +128,11 @@ Food Processing,Company,,Nestle,Britania,GSK Consumer,Varun Beverages
 ,Units,20,5,5,5,5
 Food Processing,Company,,Cafe Coffee Day,KRBL,Venkys India,Future Consumer Limited
 ,Units,8,2,2,2,2
-Glass & Glass Products,Company,,"Asahi Glass (Japanese major, Worlds largest, Mitsubishi company) Glass for car etc.",La Opala and Piramal Glass (medicine bottles) are other small player.,Saint Gobain (very small player : covered through its parent in abrasives : grindwel norton),
+Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Units,2,2,,,
 Hospitals & Medical Services,Company,,Apollo,Narayana Harudalya,Fortis Healthcare,HCG
 ,Units,15,10,3,2,
-Hospitals & Medical Services,Company,,"Aster DM Healthcare (startup by Dr Azad Moopen, started as one clinic : TBB) : Big player in Gulf Corporation Council (GCC) and other countries. Diversified MNC footprint.  : 11 hospitals & 4K Beds in India... Outside : 7 hospitals, 668 beds, 96 clinics and 202 pharmacies",,,
+Hospitals & Medical Services,Company,,Aster DM Healthcare,,,
 ,Units,5,5,,,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
 ,Units,20,10,3,5,2
@@ -154,7 +154,6 @@ Metals - Non Ferrous,Company,,Hindustan Zinc,,,
 ,Units,5,5,,,
 Mining & Minerals,Company,,Coal India ,Vedanta,NMDC,
 ,Units,20,10,5,5,
-Miscellaneous,,,All the misc companies are covered in December month as so many good companies are present,,,
 Oil Drilling And Exploration,Company,,ONGC,GAIL,Petronet LNG,Oil India
 ,Units,16,5,4,4,3
 Packaging,Company,,Uflex,Essel Propack,Huhtamaki PPL,
@@ -188,7 +187,6 @@ Power - Generation & Distribution,Company,,NLC India,,,
 Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 ,Units,,,,,
 Group 10,,,,,,
-Printing & Stationery,,,Navneet (Can it compete with ITC's Classmate),,,
 Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Units,2,2,,,
 Refineries,Company,,Reliance Industries,IOC,BPCL,HPCL
