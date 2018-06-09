@@ -75,7 +75,7 @@ Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilte
 Cigarettes,Company,,ITC,,,
 ,Details,,"ITC (ITC cigaratees, matchbox, mouth freshner - mint-o and candyman, ITC Hotels, ITC Infotech, FMCG : Classmate - Stationary, Aashirwad, Sunfeast, Bingo, Yipee: 1K Cr brands)",,,
 ,Units,10,10,,,
-Compressors,,Purpose ?,Ingersoll Rand (India),,,
+Compressors,Details,Not clear on usage of it.,Ingersoll Rand (India),,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
 ,Details,"Educational, Pre-School, School","ZEE LEARN (Kidzee, Mount Literra schools franchise)",NIIT - Training,Educomp  - Under heavy debt.,TreeHouse ? / Career Point ?
 ,Units,2,2,,,
@@ -347,11 +347,11 @@ Vanaspati & Oils,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
-MIsc : Credit Rating Agencies (Should be in finance group),Company,,ICRA,CRISIL,CARE,IndiaRatings
+MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE,IndiaRatings
 ,Details,No Asset. Only ratings. Only brand name matters. Limited competition.,ICRA (Moody's Rating Agencies) : Share Price : 4K,"CRISIL (Standard & Poor's : Credit Analysis, Research & Rating company) : Biggest but overvalued.","CARE (Indian : Credit Analysis, Research & Rating company)",IndiaRatings (Not yet listed)
 ,Units,10,5,3,2,
-"Misc: Hospitality (travels, food, amusement park)",Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
-,Details,Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?,"Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino’s Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
+Misc: Hospitality,Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
+,Details,"Covers travels, food & amusement park. Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?","Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino’s Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
 ,Units,8,2,2,2,2
 Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 ,Details,Good domestic brand for fitness. Tough competition from international franchise.,"Talwalkar Better Value Fitness (leader in fitness in India. Owner of Talwalkars, Hi-Fi and several other such chains etc. Acquired 50% in force fitness : master franchisee of Snap fitness in India. South Asea master franchise of Snap fitness in 6 countries like Sri lanka, Bangladesh etc). Tough competition from Cult.Fit, mind.fit and eat.fit etc.",,,
