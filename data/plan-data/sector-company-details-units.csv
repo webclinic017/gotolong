@@ -181,14 +181,14 @@ Food Processing,Company,,Nestle,Britania,GSK Consumer,Varun Beverages
 Food Processing,Company,,Cafe Coffee Day,KRBL,Venkys India,Future Consumer Limited
 ,Details,Food Processing - Set 2. FMCG Segment.,"Cafe Coffee Day (Indian cafe chain, Founder V G Siddharth is Son-in-Law of former CM S M Krishna (political risk). The company is diversifying into unrelated territory that has nothing to do with this business. No dividend for last 3 years. IT Raids in 2017 september. ",KRBL (KRB Limited : Worlds larges rice millers and basmati exporters). India Gate Basmati Rice is a flagship brand apart from several other brands.,Venkys India (Listed here from Misc. Poultry feed leader in India. Only listed player. Bought English Premeier league team on company's money. Not good. Others like Suguna food is not listed. IFB Agro and Godjrej AgroVet are other similar feed companies but in different segment.),Future Consumer Limited (FCL) : creating food and fmcg brands.
 ,Units,8,2,2,2,2
-Glass & Glass Products,Company,,"Asahi Glass (Japanese major, Worlds largest, Mitsubishi company) Glass for car etc.",La Opala and Piramal Glass (medicine bottles) are other small player.,Saint Gobain (very small player : covered through its parent in abrasives : grindwel norton),
-,Details,,,,,
+Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
+,Details,,"Asahi Glass (Japanese major, Worlds largest, Mitsubishi company) Glass for car etc.",La Opala is a small player.,Saint Gobain (very small player : covered through its parent in abrasives : grindwel norton),Piramal Glass (medicine bottles) is small player.
 ,Units,2,2,,,
 Hospitals & Medical Services,Company,,Apollo,Narayana Harudalya,Fortis Healthcare,HCG
 ,Details,Hospital & Pharma are in same category. Each multi-speciality hospital contributes revenue of approx 10 cr per month.,Apollo (India's largest chain of hospital). Includes pharmacy chain also. 10K beds in India.,"Narayana Harudalya (Devi Shetty, 10% margin, lot of goodwill.)",Fortis Healthcare (India's second largest chain of hospitals). SRL Diagnostic also. 5K beds in India,HCG (domain is very narrow). Manipal is not listed.
 ,Units,15,10,3,2,
-Hospitals & Medical Services,Company,,"Aster DM Healthcare (startup by Dr Azad Moopen, started as one clinic : TBB) : Big player in Gulf Corporation Council (GCC) and other countries. Diversified MNC footprint.  : 11 hospitals & 4K Beds in India... Outside : 7 hospitals, 668 beds, 96 clinics and 202 pharmacies",,,
-,Details,Set - 2,,,,
+Hospitals & Medical Services,Company,,Aster DM Healthcare,,,
+,Details,Set - 2,"Aster DM Healthcare (startup by Dr Azad Moopen, started as one clinic : TBB) : Big player in Gulf Corporation Council (GCC) and other countries. Diversified MNC footprint.  : 11 hospitals & 4K Beds in India... Outside : 7 hospitals, 668 beds, 96 clinics and 202 pharmacies",,,
 ,Units,5,5,,,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
 ,Details,"Hospitality : Cox and kings, thomas cook, Jubilant Food also (check Misc). Tough competition. 10% profit margin.","Indian Hotels (Taj group of hotels, struggling to make profit from 2009 onwards). The loss is small percentage of *reserves* (cash). Hotel Count : 137, Total Rooms : 16K.",EIH (East India Hotels : Oberoi group company),"Mahindra Holidays (Club mahindra for time share basis, resorts in India and other countries)","Lemon Tree Hotels (medium segment leader in India, 3rd largest domestic player after Taj and Oberoi. ) : TBB"
@@ -219,7 +219,7 @@ Metals - Non Ferrous,Company,,Hindustan Zinc,,,
 Mining & Minerals,Company,,Coal India ,Vedanta,NMDC,
 ,Details,,Coal India - Maharatna,"Vedanta (Cairn India (got unlisted) - Oil & Gas, Iron - Iron Ore, Zinc - Hindustan Zinc, Aluminium - BALCO, Copper, Power) etc)","NMDC (India's largest iron ore producer and exporter, Iron Ore : 30 mt : 3 fully machinsed mines : chattisgarh and karnataka, 1 fully machinised diamond mine : panna - MP) - CPSE NAVARATNA",
 ,Units,20,10,5,5,
-Miscellaneous,,,All the misc companies are covered in December month as so many good companies are present,,,
+Miscellaneous,Details,All the misc companies are covered in December month as so many good companies are present,,,,
 Oil Drilling And Exploration,Company,,ONGC,GAIL,Petronet LNG,Oil India
 ,Details,low margin,ONGC (65% stake in MRPL - mangalore refinery and petroleum limited :15mt capacity)  - CPSE Maharatna,GAIL - CPSE Maharatna,"Petronet LNG (Import of LNG : Liquid Natural Gas and LNG Terminals) . It is a JV of GAIL, ONGC, IOCL and BPCL.  Each has 12.5% totalling 50% in it. ENGIE (Gazde France : French : Electric Utility : MNC : strategic partner) owns 10% in it. Public holds 40%. - Stake owned by CPSE Maharatna & Navaratna.",Oil India - CPSE NAVARATNA
 ,Units,16,5,4,4,3
@@ -268,7 +268,7 @@ Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 ,Details,,"GE Power India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom India to GE Power India)","GE T&D India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom T&D in India to GE T&D)",,
 ,Units,,,,,
 Group 10,,,,,,
-Printing & Stationery,,,Navneet (Can it compete with ITC's Classmate),,,
+Printing & Stationery,Details,Navneet (Can it compete with ITC's Classmate),,,,
 Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Details,90% market share with 3 : Oligopoly. Small company (<1K Cr),"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)","Kirloskar Brothers (Domestic leader in pumps and valves, Kirloskar group company) Has international presence also. Kirloskar group is confused with too many listed companies without much differentiation. Don't invest without clear differentiation between them.",Shakti Pumps ,
 ,Units,2,2,,,
