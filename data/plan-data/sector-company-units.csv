@@ -1,4 +1,4 @@
-Sectors,,Sector (Units),Company (First),Company (Second),Company (Third),Company (Fourth)
+Sectors,,Sector (Summary & Units),Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Sector Units,Minimum Investment per Unit,Total Investment,,
 ,,862,1000,862000,,
 ,,,,,,
@@ -53,7 +53,6 @@ Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilte
 ,Units,8,2,2,2,2
 Cigarettes,Company,,ITC,,,
 ,Units,10,10,,,
-Compressors,,Purpose ?,Ingersoll Rand (India),,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
 ,Units,2,2,,,
 Computers - Hardware,,,,,,
@@ -247,9 +246,9 @@ Vanaspati & Oils,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
-MIsc : Credit Rating Agencies (Should be in finance group),Company,,ICRA,CRISIL,CARE,IndiaRatings
+MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE,IndiaRatings
 ,Units,10,5,3,2,
-"Misc: Hospitality (travels, food, amusement park)",Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
+Misc: Hospitality,Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
 ,Units,8,2,2,2,2
 Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 ,Units,2,2,,,
