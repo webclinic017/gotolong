@@ -1,8 +1,8 @@
 Sectors,,Sector (Summary & Units),Company (First),Company (Second),Company (Third),Company (Fourth)
-,,862,Minimum Investment / Unit,1000,,
-,,,Total Investment,862000,,
+,,Sector Units,Minimum Investment per Unit,Total Investment,,
+,,862,1000,862000,,
 ,,,,,,
-January,,,,,,
+Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
 ,Details,Biggest players are CUMI - Murugappa group and Grindwell Norton (GNO).,(CUMI : JV with Murugappa group India and Carborundum USA). Also known as CUMI - Carborundum Universal of Madras India. Brilliant Investory presentation.,Grindwell norton (Saint Gobain group company in india : GNO - Grindwell norton  and Saint Gobain India). Saint Gobain India is supposed to merged to Grindwell Norton but facing oppossition. Earlier Saint Gobain had acquired Norton USA.,,
 ,Units,4,2,2,,
@@ -33,7 +33,7 @@ Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Fede
 Auto Ancillaries,Company,,Sundaram Clayton,,,
 ,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).",,,
 ,Units,0,0,,,
-February,,,,,,
+Group 2,,,,,,
 Banks - Private Sector,Company,,HDFC Bank,ICICI,Axis Bank,Kotak Mahindra Bank
 ,Details,Net Interest Income should be compared with profit.,,,,Kotak Mahindra Bank : mcap to net interest income ratio is too high compared to peers but growth rate is good. PEG looks ok. The dividend paid is very less compared to peers.
 ,Units,19,10,5,2,2
@@ -62,7 +62,7 @@ Cement - Major,Company,,Heidelberg cement,,,
 ,Units,0,0,,,
 Cement - Mini,,,,,,
 Cement - Products & Building Materials,,,,,,
-March,,,,,,
+Group 3,,,,,,
 Ceramics & Granite,Company,,Kajaria Ceramics,Cera,HSIL,Somany Ceramics
 ,Details,Jaquar is not listed. Parryware (ROCA) is another name that can be recalled.,Kajaria Ceramics (Tiles),Cera (Sanitaryware) : Share Price 3K (Cera is a short form of Ceramics).,"Hindware (Hindustan Sanitaryware: HSIL). The founder is also a somany. What is the connection to Somany? Good recall value. HSIL earns 50% of its revenues from packaging products like glass, pet, plastic closures etc.",Somany Ceramics (founder of HSIL and Somany ceramics is same : Hira Somany)
 ,Units,8,2,2,2,2
@@ -90,7 +90,7 @@ Computers - Software - Training,,,,,,
 Computers - Software Medium & Small,Company,,L&T Technology Services,,,
 ,Details,,L&T Technology Services (LTTS is different from L&T IT ... LTTS is engineering services - embedded domain where as LTI is software services.,,,
 ,Units,2,2,,,
-April,,,,,,
+Group 4,,,,,,
 Construction & Contracting - Civil,Company,,NCC,Gammon,HCC,
 ,Details,Too much competition. Poor margins of 8%,NCC (Nagarjuna Construction Company),Gammon has long history in this space similar to L&T but doesn't seems to be in profit off late (from year 2012 to year 2017). Checked Screener.,"HCC (Hindustan construction company) : no dividend for last 5 years. Also, in losses for last 5 years.",
 ,Units,2,2,,,
@@ -116,7 +116,7 @@ Detergents,,,,,,
 Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C Jewellers,
 ,Details,Gems & Jewellery (a) Consumption : minimum 10 gm every year : 25K every year.,"Titan Industries, Titan Company (Lifestyle: Jewellery, Bag, Wallet, Belt, Helmets, SKINN perfume, ZOOP for kids watches, RAAGA watches for ladies etc) : Tanishq, Titan Eyeplus, Titan Store etc Other Brands : FASTRACK and SKINN. They have ventured into Sarees using Taneira stores (sarees from 22 states. very thoughtful collection). Listed in MISC category.","Rajesh Exports (Gold Value Chain : Refining & Retailing, Owner of World's largest gold refining, Valcambi, REL produces more than 35% of the world’s gold, Retail shops under Shubh )","P C Jewellers (good CAGR, aggressive, big player, focussed)",
 ,Units,9,5,2,2,
-May,,,,,,
+Group 5,,,,,,
 Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
 ,Details,Holding companies and Diversified companies,"3M (Global MNC, Science Applied to Life : 4000 products: Scotch Glue Stick, Scotch Tape, Scotch Brite : Kitchen items, Water Softener, Water Filteration system, Medical Supplies, Share price : 15K). Doesn't pay dividend (rumor). check AR. High Share Price : 15 K","Grasim (Aditya Birla Group holding company - partial). Manages Textile and Chemical. Two popular subsidiaries : UltraTech, Idea","Godrej Industries (holding company) - subsidiaries are godrej consumer products, godrej properties, godrej agrovet.","Pilani Investment & Industries (Investment vehicle, holding in many Birla companies)"
 ,Units,11,5,3,3,
@@ -142,7 +142,7 @@ Engineering,Company,,Quess Corp,,,
 ,Details,,Quess Corp (Business process company interest in Unskilled and skilled Human Resouce. Acquired several facility management companies like Avon and  Hr companies like Magna etc. Also acquired monster in Asia Pacific and HCL Care - service touch points). Prem Watsa Group and Fairfax holding company. The company is also owned by Thomas Cook group. Both the companies are owned by Fairfax holdings (Prem Watsa).,,,
 ,Units,3,3,,,
 Engineering - Heavy,,,ISGEC ?,,,
-June,,,,,,
+Group 6,,,,,,
 Engines,Company,,Cummins,,,
 ,Details,,"Cummins (Fortune 500 MNC) : Engines, Generators and Components. You can see large industrial diesel generators in green color box with cummins written over it. Everywhere right from airport to malls. Has tie up with Tata .. Tata cummins. Has tie up with Valvoline for engine / turbine oil.",,,
 ,Units,2,2,,,
@@ -174,7 +174,7 @@ Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finan
 Finance - Term Lending Institutions,Company,,Power Finance,REC,,
 ,Details,,Power Finance - CPSE Navaratna company,REC (Rural Electrification Corporation) - CPSE Navaratna company,,
 ,Units,10,5,5,,
-July,,,,,,
+Group 7,,,,,,
 Food Processing,Company,,Nestle,Britania,GSK Consumer,Varun Beverages
 ,Details,Food Processing - Set 1. FMCG Segment.,"Nestle (Fortune Global 500) : Maggi noodles and maggi sauce, Milk powder (Everyday dairy whitener), Baby Food leader (Cerelac, Nestum), Nestle Curd, Bru Coffee, NesCafe (Coffee) and NesTea (tea) and Chocolates like kitkat, milkybar, munch, barone, polo etc,  Share price: 5K","Britania (Biscuits, Bread, Rusk, Cake). India's number one biscuit maker. Parle leads in econmoy category but that is not listed. Birtania ia leader in all segment. it has a market share of 38%.) Brands: Britania, Tiger. Tagline : Have a Good Day. It is a part of Wadia group company that also owns ... go Air, bomay dyeing, Bomay Burmah trading etc.The group also owns fashin magazine Gladrags. Share Price : 3500 Rs","GSK Consumer : Glaxo Smith Kline Consumer : International biggie : leader in milk mix (Horlicks, Boost & Maltova), Crocin (Tablet, Syrup), Iodex, ENO, Otrivian (Nasal spray), OstoCalcium (Calcium, phosporus), Sensodyne (Toothpaste), Voltaren (like moov)","Varun Beverages (Ravi kant and Varun Jaipuria, Pepsi Franchise) : one of the largest franchisee for Pepsi. Brands include Pepsi, Diet Pepsi, Seven-Up, Mirinda Orange, Mirinda Lemon, Mountain Dew, Seven-Up Nimbooz Masala Soda, Seven-Up Revive, Evervess Soda. PepsiCo NCB brands produced and sold by us include Tropicana Slice, Tropicana Frutz (Lychee, Apple and Mango), Seven-Up Nimbooz as well as packaged drinking water under the brand Aquafina."
 ,Units,20,5,5,5,5
@@ -209,7 +209,7 @@ Lubricants,Company,,Castrol,Gulf Oil,Tide Water Oil,
 ,Details,Should be clubbed with Oil and Gas companies. They also have lubricants. Do not invest in company's with either revenue less than 1K cr or 100 cr profit.,"Castrol (Global brand for grease, oil, lubricant etc owned by BP - British Petroleum). BP & Reliance JVs should ideally benefit it depending on Fuel Retail etc. Other major leading players in this area are Chevron, ExxonMobil, Royal Dutch Shell and Valvoline (cummins)",Gulf Oil,Tide Water Oil ( Brand : Veedol ),
 ,Units,2,2,,,
 Machine Tools,,,,,,
-August,,,,,,
+Group 8,,,,,,
 Media & Entertainment,Company,,ZEE Entertainment,Dish TV,PVR,Sun TV Network
 ,Details,,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries.","Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years.","PVR (Best movie experience in India, largest number of screens). Go to forum anyday, to experience the scale and experience. INOX is close 2nd. Both have close to 500 screens each.","Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer."
 ,Units,15,5,5,5,
@@ -232,7 +232,7 @@ Paints & Varnishes,Company,,Asian Paints,Kansai Nerolac,Berger Paints,Akzo Nobel
 Paper,Company,,J K Paper,,,
 ,Details,,"J K Paper (Singhania group company. Includes J K Tyres, J K Lakshmi Cement etc) : everyday paper, books, binding, packaging, a4 sheet, cup, plate, bindi cover, pharma packaging, fmcg product : packaging and labelling, cigaratte pack, playing cards.",,,
 ,Units,2,2,,,
-September,,,,,,
+Group 9,,,,,,
 Personal Care,Company,,HUL,Colgate Palmolive India,P & G,Gillette India
 ,Details,Personal Care - Set 1.,"HUL - Hindustan Unilever Limited (Axe, Cif, Cornetto, Dove, Knor, Lifebuoy, Lipton, Lux, Magnum, Pepsodent, Ponds, Sunsilk, Tresamme, Vaseline, Wheel, Breeze, Bru, Close-up, Domex, Fair & Lovely, Lakme, Pears, Rin, Pure It, Surf Excel, Vim, Annapurna, Brooke bond, Brylcream, clinic plus, elle 18, Hamam, Indulekha, Kissan, Kwality Walls, Liril, Rexona)","Colgate Palmolive India (Bought Cibaca and renamed Colgate Cibaca, Colgate Toothpaste, Colgate Toothbrush, Palmolive Soap, Palmolive Liquid shop, Palmolive Shaving cream)","P & G (Procter & Gamble Health & Hygiene. Global FMCG Giant. Big Family similar to HUL: Ambi pur, Gillete, Head & Shoulders, DuraCell, Ariel, Tide+, Olay, Oal-B, Pampers, Pantene, Whisper) : Share Price 7K",Gillette India (Share price: 4K)
 ,Units,20,10,2,6,2
@@ -267,7 +267,7 @@ Power - Generation & Distribution,Company,,NLC India,,,
 Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 ,Details,,"GE Power India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom India to GE Power India)","GE T&D India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom T&D in India to GE T&D)",,
 ,Units,,,,,
-October,,,,,,
+Group 10,,,,,,
 Printing & Stationery,,,Navneet (Can it compete with ITC's Classmate),,,
 Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Details,90% market share with 3 : Oligopoly. Small company (<1K Cr),"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)","Kirloskar Brothers (Domestic leader in pumps and valves, Kirloskar group company) Has international presence also. Kirloskar group is confused with too many listed companies without much differentiation. Don't invest without clear differentiation between them.",Shakti Pumps ,
@@ -297,7 +297,7 @@ Steel - Pig Iron,,,,,,
 Steel - Rolling,,,,,,
 Steel - Sponge Iron,,,,,,
 Steel - Tubes & Pipes,,,,,,
-November,,,,,,
+Group 11,,,,,,
 Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugar,Bajaj Hindustan
 ,Details,"(a) Factor : Annual consumption : 1 kg (60Rs) for 12 months : 720 Rs, Lifetime consumption (average) : 30 years : 21600 Rs () (b) Sugar Mills Count, cane crushing capacity, alcohal distillation capactiy","EID Parry (East India Distilleries, a Subsidiary of Murugappa group). It has branded a commodity (Parry's Sugar)",Balrampur Chini Mills (Chini.com),Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil.,"Bajaj Hindustan (Bajaj group company, splited from bajaj holdings and investments that owns just bajaj auto and bajaj finance services) Sishir Bajaj group. Bajaj Hindusthan has 14 sugar mills with cane crushing capacity of 1.36 lakh tonnes per day and alcohol distillation capacity of 800 kilo litres per day."
 ,Units,4,2,2,,
@@ -345,7 +345,7 @@ Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Details,Tyre - Set 2,Balkrishna Industries focuses on off the road (BKT Tyres : leader in off-the-road tyres),Goodyear (USA),Cycle and two-wheeler tyres,"Unlisted players: Bridgestone, Pirelli etc"
 ,Units,2,2,,,
 Vanaspati & Oils,,,,,,
-December,,,,,,
+Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
 MIsc : Credit Rating Agencies (Should be in finance group),Company,,ICRA,CRISIL,CARE,IndiaRatings
@@ -360,6 +360,3 @@ Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,
 ,Details,,,Greenlam (Demerged from Greenply industries),,
 ,Units,4,2,2,,
-Misc: Rest,,,Justdial,"Sheela Foam (Sleepwell : only listed player in India ... others like kurl-on, springwel, peps and repose, Shobha Restoplus are not listed). Bought",V-Guard (Voltage Stabilizer company). Should be in appliances with Havells.,Venkys India (Moved to food. Poultry leader)
-Misc: Covered in other groups,,,"InfoEdge (Naukri.com, JeevanSaathi.com, 99acres.com, Shiksha.com) - Covered it in IT Software group.","Titan Company (Lifestyle: Jewellery, Bag, Wallet, Belt, Helmets, SKINN perfume, ZOOP for kids watches, RAAGA watches for ladies etc) : Tanishq, Titan Eyeplus, Titan Store etc Other Brands : FASTRACK and SKINN. They have ventured into Sarees using Taneira stores (sarees from 22 states. very thoughtful collection). Covered it in Jewelery group.","Tube Investments (Part of Muruguppa group - eid parry (sugar), coromandel fertilizers, cholamandalam investment & finance - NBFC, chola ms general insurance jv with MS sumitomo of Japan (worlds 5th largest in insurance) etc, Second largest cycle manufacturer in India : BSA/Hercules after unlisted Hero Cycles). Covered in auto : 2 & 3 wheeler. Demerger ... TI Financial holdings (TI FH) for financial stuff like MS Chola etc ... and TI India limited (TI IL) - manufacturing of bycycle, auto parts etc",BSE (covered in finance-investments with CDSL)
-Misc: Agriculture,,,"Kaveri Seeds Company (Other Agriculture products, clubbed with animal feed)",Matrimony.com (BharatMatrimony & CommunityMatrimony),,
