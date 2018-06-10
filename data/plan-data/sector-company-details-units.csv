@@ -8,10 +8,10 @@ Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
 ,Units,4,2,2,,
 Aluminium,Company,,Hindalco,NALCO,BALCO,
 ,Details,"Aluminium is used in food and beverages containers (cans, frames, foils etc) as it is corrosion resistant. Low-density metal. Light-weight.",Hindalco (Aditya Birla Group) ,"NALCO (Govt, Ministry of Mines)",Vedanata Resources (BALCO) : unlisted,
-,Units,4,2,2,,
+,Units,4,2,2,0,
 Aquaculture,Company,,Avanti Feeds,Godrej AgroVet,IFB Agro,Kaveri Seeds
 ,Details,Prawns Feed. IFB Agro and Godjrej AgroVet are its closest competitors but in varied feed. Included Agriculture seed also with animal feed.,"Avanti Feeds (Prawn, Fish, Shrimp feed, exporter)","Godrej AgroVet (Looks like a holding company of animal feed, palm oil, fertilizers, JV with tyson  etc).  Leader in Animal feeds. IFB Agro and Avanti feeds are its competitors. Difficult to arrive at right value.",IFB Agro (To be considered later ... Feed + Spirits),Kaveri Seeds (Hybrid seed for agriculture)
-,Units,7,2,2,,3
+,Units,7,2,2,0,3
 Auto - 2 & 3 Wheelers,Company,,Hero Motocorp,Bajaj Auto,TVS Motors,Tube Investments of India Limited
 ,Details,,Hero Motocorp : Hero had to break JV with Honda due to export control. Hero Honda could export only to Nepal and Sri lanka. Honda wanted a shared spares business for (Honda Motors Activa) to be shared with Hero Honda. (Share Price 4K),Bajaj Auto (Worlds largest three-wheeler manufacturer. Worlds sixth largest two-wheeler manufacturer) (Share Price : 2.8K),"TVS Motors (Flagship company of TVS group. TV Sundaram group. TVS-Suzuki alliance was over in 2001. The parent company is  Sundaram Clayton Ltd formed as a JV between Sundaram and Clayton group UK). In 1980, TVS 50, India's first two-seater moped was produced in Hosur.","Tube Investments of India Limited (Part of Muruguppa group - eid parry (sugar), coromandel fertilizers, cholamandalam investment & finance - NBFC, chola ms general insurance jv with MS sumitomo of Japan (worlds 5th largest in insurance) etc, Second largest cycle manufacturer in India : BSA/Hercules after unlisted Hero Cycles). Covered in auto : 2 & 3 wheeler. Demerger ... TI Financial holdings (TI FH) for financial stuff like MS Chola etc ... and TI India limited (TI IL) - manufacturing of bycycle, auto parts etc Covered in auto : 2 & 3 wheeler. Present in MISC Category."
 ,Units,17,5,5,5,2
@@ -20,7 +20,7 @@ Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 ,Details,"Light < 8 ton, Medium (8 to 14 ton),  Heavy > 15 ton",Tata Motors (World leader in automobile),"Eicher Motors (Royal Enfield Bikes, Joint collaboration with Volvo for trucks and buses, Sold tractor business to TAFE - Messey Ferguson assembler in India. TAFE is owned by Amalgmation group. Privately held.) High Share Price: 30K",Ashok Leyland (Hinduja Group Company),"SML ISUZU (Swaraj Mazda Limited & ISUZU Japan : Earlier  Sumitomo Corporation, Punjab Tractors, ISUZU and MAZDA of Japan collaboration etc... Sold Swaraj (Punjab Tractors) to Mahindra. Now it is known as SML ISUZU)."
-,Units,7,5,2,,
+,Units,7,5,2,0,0
 Auto - Tractors,Company,,VST tillers,,,
 ,Details,,"VST tillers (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity.",,,
 ,Units,2,2,,,
@@ -29,7 +29,7 @@ Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batte
 ,Units,6,2,2,1,1
 Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul
 ,Details,Set -2 (small companies with profit < 100 cr),WABCO India (Westinghouse Air Brake Company. US auto anciliiary giant : vehicle controls systems like braking etc. Power Brakes etc),Gabriel India - Shock absrober,Shriram Pistons & Rings,"Federal Mogul (auto parts, powertrain, piston etc)"
-,Units,0,0,,,
+,Units,0,0,0,0,0
 Auto Ancillaries,Company,,Sundaram Clayton,,,
 ,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).",,,
 ,Units,0,0,,,
@@ -45,15 +45,15 @@ Banks - Public Sector,Company,,SBI,,,
 ,Units,5,5,,,
 Bearings,Company,,SKF India,SCHAEFFLER India,,
 ,Details,,"SKF India (Svenska Kullager Fabriken, Worlds largest bearing manufacturer in World, Sweedish firm. Sweedish Ball Bearing. Fortune Global 2000. One of the largest company in sweden.)",SCHAEFFLER India (German auto giant) : Worlds 2nd largest bearing manufacture. Just after SKF. TBB,,
-,Units,2,2,,,
+,Units,2,2,0,,
 Breweries & Distilleries,Company,,United Spirits,United Breweries,Radico Khaitan,IFB Agro
 ,Details,Very low profit margin,"United Spirits : Owner Diageo is world leader in spirits. 14 Brands : Scotch (Johnie Walker - worlds largest selling), Whiskey (McDowell No. 1 - Worlds largest selling), Rum (Celebration Run - Worlds largest selling), Vodka (Smirnoff - worlds largest selling) . Other Brands : VAT 69, Black & White, Black Dog Scotch, McDowell Signature (whiskey), Royal challenge (whiskey), Director's special (whiskey), Bagpiper (whiskey), White mischief (vodka), romanv (vodka)","United Breweries (Owner Heinken) : Brands : Kingfisher, Kalyani Black label, flying horse,  Raj Cobra, Taj mahal, Bullet, Charger, Zingaro",Radico Khaitan (India's oldest and largest liquour manufacturer. Domestic player : 8 PM brands),IFB Agro also does IMIL(Indian Made Indian Liquor). Tilaknagar Industries has a IMFL portfolio.
-,Units,15,10,5,,
+,Units,15,10,5,0,0
 Cables - Power & Others,,,,,,
 Cables - Telephone,,,,,,
 Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
 ,Details,Part revenue from Auto Industry. Can be included in Auto Ancilliary also.,Bharat Forge - Forging company of Baba Kalyani group. Overall Baba Kalyani group structure looks confusing. Investor Presentation looks Good. Why did revenue go down drastically in between?. The revenue in 10 years has just doubled. Seems to be very slow.,Mahindra CIE Automotive (JV) ... Similar to Tata Autocomp etc (concern : no dividend for last 3 year),AIA ? (Vega Industries),
-,Units,4,2,2,,
+,Units,4,2,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Details,Top 3 players (Ambuja and ACC are owned by same owner : Lafarge Holchim). ,UltraTech (Aditya Birla group) : Capacity : 70 million tons per year,ACC is one of the first few producer of cements in India ... ACC had a trouble when it focused on non-core items. TATA also had a stake in it. TATA sold the stake to Ambuja cements. ACC and Ambuja have similar capacity. ACC is owned 50% by Ambuja. Lafarge Holchim owns Ambuja.,"Ambuja is owned by LafargeHolchim (An International biggie : Lafarge(French) and Holchim(Swiss) in cement, construction and concrete sector)  Annual Capacity : 370 million tons per year. ","Shree Cement (Brands: Shree Cements, Bangur Cement, RockStrong etc) Bangur business family from Rajasthan settled in Calcutta. High Share Price : 18K"
 ,Units,19,10,3,3,3
@@ -78,7 +78,7 @@ Cigarettes,Company,,ITC,,,
 Compressors,Details,Not clear on usage of it.,Ingersoll Rand (India),,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
 ,Details,"Educational, Pre-School, School","ZEE LEARN (Kidzee, Mount Literra schools franchise)",NIIT - Training,Educomp  - Under heavy debt.,TreeHouse ? / Career Point ?
-,Units,2,2,,,
+,Units,2,2,0,0,0
 Computers - Hardware,,,,,,
 Computers - Software,Company,,TCS,Infosys,Wipro ,Tech Mahindra
 ,Details,Set - 1 (Limit to 4 companies in 1 set).,TCS,Infosys,"Wipro (The listed company is Wipro Limited is a pure software, IT and BPO company. It doesn't include privately held Wipro Enterprise Privated Limited that has a subsidiary like Wipro consumer care and lighting - FMCG etc and wipro infrastructure engineering - several other sectors and business etc. Wipro Enterprise Pvt Ltd has JV with GE medical systems.)",Tech Mahindra (Satyam was merged into this)
@@ -93,7 +93,7 @@ Computers - Software Medium & Small,Company,,L&T Technology Services,,,
 Group 4,,,,,,
 Construction & Contracting - Civil,Company,,NCC,Gammon,HCC,
 ,Details,Too much competition. Poor margins of 8%,NCC (Nagarjuna Construction Company),Gammon has long history in this space similar to L&T but doesn't seems to be in profit off late (from year 2012 to year 2017). Checked Screener.,"HCC (Hindustan construction company) : no dividend for last 5 years. Also, in losses for last 5 years.",
-,Units,2,2,,,
+,Units,2,2,0,0,
 Construction & Contracting - Housing,Company,,Asiana Housing,,,
 ,Details,,,,,
 ,Units,,,,,
@@ -119,16 +119,16 @@ Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C 
 Group 5,,,,,,
 Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
 ,Details,Holding companies and Diversified companies,"3M (Global MNC, Science Applied to Life : 4000 products: Scotch Glue Stick, Scotch Tape, Scotch Brite : Kitchen items, Water Softener, Water Filteration system, Medical Supplies, Share price : 15K). Doesn't pay dividend (rumor). check AR. High Share Price : 15 K","Grasim (Aditya Birla Group holding company - partial). Manages Textile and Chemical. Two popular subsidiaries : UltraTech, Idea","Godrej Industries (holding company) - subsidiaries are godrej consumer products, godrej properties, godrej agrovet.","Pilani Investment & Industries (Investment vehicle, holding in many Birla companies)"
-,Units,11,5,3,3,
+,Units,11,5,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
 ,Details,Set -2 .Holding companies and Diversified companies. Avoid where ever possible. ,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,Bajaj Holdings & Investments (bajaj auto and bajaj finserv - parent),M&M is a holding company for Mahindra for so many subsidiary companies. (listed in auto),
-,Units,0,0,0,,
+,Units,0,0,0,0,
 Domestic Appliances,Company,,TTK Prestige,Bajaj Electric,Hawkins Cooker,
 ,Details,Bajaj electric profit margin was less,TTK Prestige (Share Price : 6500),Bajaj Electric (includes JV with Morphy Richards also for marketing and service),Hawkins Cooker ? (small and focussed player only on pressure cookers),
-,Units,5,5,0,,
+,Units,5,5,0,0,
 Dry Cells,Company,,Eveready ,Indo National,Panasonic Energy India,
 ,Details,,"Eveready (Khaitan Group, World's third largest producer of carbon-zinc batteries). Diversifying to be an appliance company.",Indo National (NIPPO Batteries),Panasonic Energy India,
-,Units,2,2,,,
+,Units,2,2,0,0,
 Dyes & Pigments,,,,,,
 Edible Oils & Solvent Extraction,,,,,,
 Electric Equipment,Company,,Havells,V-Guard,,
@@ -151,17 +151,17 @@ Fasteners,Company,,Sundaram Fasteners,,,
 ,Units,,0,,,
 Fertilisers,Company,,Coromandel International,Chambal Fertilisers & Chemicals Ltd ,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
 ,Details,"Crop nutrients - fertilizers, and crop protection - (chemicals, insectisides and pesticides) and seeds provider are all considered in same category. Check companies in other categories also. Requirement in Tons - Single State - Telangana : 13 lac Ton - Urea, 13 Lac Ton - DAP, NPK & other neutrients, 1.75 Lac ton - Potash","Coromandel International (in fertilizers, pesticides and nutrients .... organic fertilizers too ..part of Muruguppa group of Eid Parry, Cholamandalam etc) Was formed with chevron of USA.","Chambal Fertilisers & Chemicals Ltd (zuari group) : Uttam brand : lead supplier of Rajastan. Good coverage in North, East and West India. It was founded by KK Birla who gave ownership of Zuari Agro Chemicals now rebranded as adventz group (Saroj Poddar) and Chambal Fertizers to (both son-in-law, Saroj - Chairman and one more - VC). KM Birla has minimal holding in Zuari Agro throuh Pilani Investment.",Rashtriya Chemical and Fertilizer (RCF) - PSU,National Fertilizer Limited (NFL) - PSU
-,Units,4,2,2,,
+,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard General Insurance,New India Assurance,GIC RE,IIFL Holdings
 ,Details,"Set - 1 (General Insurance) : Smaller players - National Insurance, United India and Oriental Insurance","ICICI Lombard General Insurance (Only player, listed in Diversified. Canadian Warren Buffet (Prem Watsa's) Fairfax holdings also has a stake in it.)",New India Assurance(NIA) - Largest general insurance company in India.,"GIC RE (General Insurance corporation Reinsurance) : reinsurance services in key businesses such as fire (property), marine, motor, engineering, agriculture, aviation, health, liability, credit and financial liability and life insurance",IIFL Holdings (Prem Watsa Group : TBB)
-,Units,15,5,5,5,
+,Units,15,5,5,5,0
 Finance - Insurance,Company,,ICICI Prudential Life Insurance,SBI Life,HDFC Standard Life,
 ,Details,Set - 2 (Life Insurance),ICICI Prudential Life Insurance (JV with Prudential PLC of UK),SBI Life (JV with BNP Paribas Cardiff - French bank and financial services company) - IPO,HDFC Standard Life (JV with Standard Life of UK - provider of financial savings & investments) - IPO,
 ,Units,15,5,5,5,
 Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance Limited
 ,Details,Price to book value is a key criteria. HUDCO is listed in real estate.,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance Limited (DHFL. Wadhawan group company. Affordable segment.)
-,Units,18,10,5,3,
+,Units,18,10,5,3,0
 Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,CDSL,BSE
 ,Details,,Muthoot Finance (largest gold finance company in the world). Muthoot Papachchan group company. Top Gold loan provider. Mannapuram has to cover some more distance.,Bajaj FinServ (subsidiary of Bajaj Holdings & Investments). Bajaj Finance and its  JV with Allianz group. The standalone earming and profit may be less but consolidated revenue and profit is high because of Bajaj Finance and JV Bajaj Allianz.,CDSL (Depository participant ... duopoly of BSE - CDSL and NSE - NSDL),BSE (Bombay Stock Exchange). Competitor NSE and SX40.
 ,Units,12,5,3,2,2
@@ -183,10 +183,10 @@ Food Processing,Company,,Cafe Coffee Day,KRBL,Venkys India,Future Consumer Limit
 ,Units,8,2,2,2,2
 Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Details,,"Asahi Glass (Japanese major, Worlds largest, Mitsubishi company) Glass for car etc.",La Opala is a small player.,Saint Gobain (very small player : covered through its parent in abrasives : grindwel norton),Piramal Glass (medicine bottles) is small player.
-,Units,2,2,,,
+,Units,2,2,0,0,0
 Hospitals & Medical Services,Company,,Apollo,Narayana Harudalya,Fortis Healthcare,HCG
 ,Details,Hospital & Pharma are in same category. Each multi-speciality hospital contributes revenue of approx 10 cr per month.,Apollo (India's largest chain of hospital). Includes pharmacy chain also. 10K beds in India.,"Narayana Harudalya (Devi Shetty, 10% margin, lot of goodwill.)",Fortis Healthcare (India's second largest chain of hospitals). SRL Diagnostic also. 5K beds in India,HCG (domain is very narrow). Manipal is not listed.
-,Units,15,10,3,2,
+,Units,15,10,3,2,0
 Hospitals & Medical Services,Company,,Aster DM Healthcare,,,
 ,Details,Set - 2,"Aster DM Healthcare (startup by Dr Azad Moopen, started as one clinic : TBB) : Big player in Gulf Corporation Council (GCC) and other countries. Diversified MNC footprint.  : 11 hospitals & 4K Beds in India... Outside : 7 hospitals, 668 beds, 96 clinics and 202 pharmacies",,,
 ,Units,5,5,,,
@@ -195,24 +195,24 @@ Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
 ,Units,20,10,3,5,2
 Hotels,Company,,WestLife Development,ITDC,Barbeque Nation,Yum India
 ,Details,Hospitality : Set 2,WestLife Development (QSR - Quick Service Restaurant : McDonald Franchisor : South and West territory - Ajay Jatia. North and South is owned by Cannaught Place Restaurants - conflict with owner - Bakshi). Fight going on. No dividend for last 3 years. The parent company also looks confused with different business interest.,ITDC (India tourism development corporation) - Miniratna. The sale in ITDC has been stagnant for last 10 years - nearly same and it is loss making though it is giving reasonable dividend. Decided to drop it from Portfolio.  Sold everything on 27 Dec 2017.,"Barbeque Nation  (Buffet Dining Restaurant) : Upcoming IPO, Speciality Restaurant (Casual Dining Restaurant & Others)","Pizza Hut, KFC and Taco Bell : yum brands (Yum India .It is not listed in India). It is franchise of Ravi Jaipuria group that is also bottler for Pepsi (Varun Beverages). The company is RJ Corp. Promoter RJ Corp is a franchisee for Yum Restaurants-owned KFC and Pizza Hut, UK coffee chain Costa Coffee and Singapore-based tea salon firm TWG. It also owns the South Indian restaurant chain Vaango and ice-cream brand Cream Bell. Devyani International handles the brands. Varun Beverages is a bottler of RJ corp."
-,Units,4,2,2,,
+,Units,4,2,2,0,0
 Infrastructure - General,Company,,L&T,Adani Ports & Special Economic Zone,Siemens India,ABB India
 ,Details,Infrastructure - General - Set 1. Very competitive landscape. Long term contracts. Poor margin of 8%,L & T (Larsen & Toubro) - Includes govt stake also.,"Adani Ports & Special Economic Zone (India’s largest private multi-port operator.) Too many adani group listed companies. It is a cause of concern. Why 3 companies in power space? Adani enterprises, adani power, adani transmission, adani green energy. They are also planning to list adani gas etc.","Siemens India (German Major): Healthcare, Gas/Steam turbines, Wind Power, switchboards , Industrial Process Automation (Digital Factory), Rail business etc. Siemens competes with European rivals ABB (ABBN.S) and Schneider Electric (SCHN.PA) as well as Rockwell Automation (ROK.N) in the United States, which just rebuffed a takeover offer from Emerson Electric (EMR.N).",ABB India (Swedish Swiss MNC)
 ,Units,25,10,5,5,5
 Infrastructure - General,Company,,BHEL,NBCC,Engineers India,Schneider Electric Infrastructure
 ,Details,Infrastructure - General - Set 2,"BHEL (Bharat Heavy Electricals Limited, Leader in Power Plant Equipments) - Maharatna",NBCC - Navaratna,Engineers India - Navaratna,Schneider Electric Infrastructure  (It is struggling in India with no dividend for last 5 years and same sale numbers and net profit is also not positive and trend is also not positive. Very irregular numbers.) Looks like it has not been run well.
-,Units,15,5,5,5,
+,Units,15,5,5,5,0
 Leather Products,Company,,Bata,Relaxo Footwear,Khadim,Liberty shoes
 ,Details,"Shoes ... dominated by bata, relaxo and mnc apart from regular retailers like Aditya Birla Fashion & Retail, Biyani's future lifestyle. Tata ? and Reliance Trends ?. Others like Mirza International (REDTAPE) - export oriented. ",Bata (MNC with a long history in shoes.),"Relaxo Footwear (Brands : Relaxo, FLITE, SPARX, BAHAMAS) decent footwear portfolio and great brand recall. Each brand endorsed by a different celebrity.","Khadim (TBB : review the performance, no dividend)","Liberty shoes (TBB : poor margins, poor ICR)"
-,Units,10,5,5,,
+,Units,10,5,5,0,0
 Lubricants,Company,,Castrol,Gulf Oil,Tide Water Oil,
 ,Details,Should be clubbed with Oil and Gas companies. They also have lubricants. Do not invest in company's with either revenue less than 1K cr or 100 cr profit.,"Castrol (Global brand for grease, oil, lubricant etc owned by BP - British Petroleum). BP & Reliance JVs should ideally benefit it depending on Fuel Retail etc. Other major leading players in this area are Chevron, ExxonMobil, Royal Dutch Shell and Valvoline (cummins)",Gulf Oil,Tide Water Oil ( Brand : Veedol ),
-,Units,2,2,,,
+,Units,2,2,0,0,
 Machine Tools,,,,,,
 Group 8,,,,,,
 Media & Entertainment,Company,,ZEE Entertainment,Dish TV,PVR,Sun TV Network
 ,Details,,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries.","Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years.","PVR (Best movie experience in India, largest number of screens). Go to forum anyday, to experience the scale and experience. INOX is close 2nd. Both have close to 500 screens each.","Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer."
-,Units,15,5,5,5,
+,Units,15,5,5,5,0
 Metals - Non Ferrous,Company,,Hindustan Zinc,,,
 ,Details,,Hindustan Zinc,,,
 ,Units,5,5,,,
@@ -266,12 +266,12 @@ Power - Generation & Distribution,Company,,NLC India,,,
 ,Units,3,3,,,
 Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 ,Details,,"GE Power India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom India to GE Power India)","GE T&D India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom T&D in India to GE T&D)",,
-,Units,,,,,
+,Units,,0,0,,
 Group 10,,,,,,
 Printing & Stationery,Details,Navneet (Can it compete with ITC's Classmate),,,,
 Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Details,90% market share with 3 : Oligopoly. Small company (<1K Cr),"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)","Kirloskar Brothers (Domestic leader in pumps and valves, Kirloskar group company) Has international presence also. Kirloskar group is confused with too many listed companies without much differentiation. Don't invest without clear differentiation between them.",Shakti Pumps ,
-,Units,2,2,,,
+,Units,2,2,0,0,
 Refineries,Company,,Reliance Industries,IOC,BPCL,HPCL
 ,Details,refineries and retail outlets. ,Reliance Industries (Refineries : 60 mmtpa in Jamnagar),"IOC (Indian Oil Corporation) : refining : 81 mmt (Dibhoi, Guwahati, Bongaigoan, Barauni, Gujrat, Haldia, Mathura, Panipat, Paradip) - CPSE Maharatna","BPCL (40 mt refinery capacity : Mumbai - 13mt, Kochi - 16mt, Bina - 6mt, Numaligarh - 3mt) - CPSE Navaratna","HPCL (45mt refineries capacity - mumbai - 6 mmt, visakhapatnam - 8mmt, mangalore - 10mmt, bhatinda - 9 mmt, barmer - 9mt. 15k petrol pumps. 15% stake in MRPL.) - CPSE NAVARATNA"
 ,Units,22,10,5,4,3
@@ -286,7 +286,7 @@ Rubber,Company,,Apar Industries,COSCO INDIA,,
 ,Units,0,0,0,,
 Shipping,Company,,Great Eastern Shipping,Shipping Corporation,Cochin Shipyard Ltd,
 ,Details,"Shipping, transport, logistics, courier is a same category.",Great Eastern Shipping,Shipping Corporation - CPSE Navaratna (Transporation on Vessel) : 80 ships & 5.9 Million Tons (Dead weight),Cochin Shipyard Ltd (Largest ship building company in India : Cochin Shipyard Limited is the largest shipbuilding and maintenance facility in India) : TBB,
-,Units,3,,3,,
+,Units,3,0,3,0,
 Steel - CR & HR Strips,,,,,,
 Steel - GP & GC Sheets,,,,,,
 Steel - Large,Company,,Tata Steel,JSW Steel,SAIL,
@@ -300,7 +300,7 @@ Steel - Tubes & Pipes,,,,,,
 Group 11,,,,,,
 Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugar,Bajaj Hindustan
 ,Details,"(a) Factor : Annual consumption : 1 kg (60Rs) for 12 months : 720 Rs, Lifetime consumption (average) : 30 years : 21600 Rs () (b) Sugar Mills Count, cane crushing capacity, alcohal distillation capactiy","EID Parry (East India Distilleries, a Subsidiary of Murugappa group). It has branded a commodity (Parry's Sugar)",Balrampur Chini Mills (Chini.com),Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil.,"Bajaj Hindustan (Bajaj group company, splited from bajaj holdings and investments that owns just bajaj auto and bajaj finance services) Sishir Bajaj group. Bajaj Hindusthan has 14 sugar mills with cane crushing capacity of 1.36 lakh tonnes per day and alcohol distillation capacity of 800 kilo litres per day."
-,Units,4,2,2,,
+,Units,4,2,2,0,0
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
 ,Details,Revisit its reveune... target price... like 5K,"Honeywell Automation (MNC, Honeywell Aerospace is a world leader in aviation. Supplies all components of aircraft. Its competitor is UTC-United Technologies corporation in aviation space. Both are US based companies. It is also into building automation, plant automation, hotel automation etc. It also has speciality paint for aircraft and textile for miliary. High Share Price : 12 K.","Bharti Infratel (Telecom tower company with 40K towers, It also has 45% stake in Indus tower - combined entity of Bharti, Vodafone and Idea. also - 1.2 Lac towers). Bharti Infratel is 10% owned by KKR - Kohlberg Kravis & Roberts group. Key metric is number of towers and tower tenancy ... tower tenancy of 2 to 3 is good.",,
 ,Units,8,5,3,,
@@ -342,14 +342,14 @@ Tyres,Company,,MRF,Apollo Tyres,CEAT ,J K Tyre
 ,Units,11,5,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Details,Tyre - Set 2,Balkrishna Industries focuses on off the road (BKT Tyres : leader in off-the-road tyres),Goodyear (USA),Cycle and two-wheeler tyres,"Unlisted players: Bridgestone, Pirelli etc"
-,Units,2,2,,,
+,Units,2,2,0,0,0
 Vanaspati & Oils,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
 MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE,IndiaRatings
 ,Details,No Asset. Only ratings. Only brand name matters. Limited competition.,ICRA (Moody's Rating Agencies) : Share Price : 4K,"CRISIL (Standard & Poor's : Credit Analysis, Research & Rating company) : Biggest but overvalued.","CARE (Indian : Credit Analysis, Research & Rating company)",IndiaRatings (Not yet listed)
-,Units,10,5,3,2,
+,Units,10,5,3,2,0
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
 ,Details,"Covers travels, food & amusement park. Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?","Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino’s Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
 ,Units,8,2,2,2,2
@@ -358,4 +358,4 @@ Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 ,Units,2,2,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,
 ,Details,,,Greenlam (Demerged from Greenply industries),,
-,Units,4,2,2,,
+,Units,4,2,2,0,
