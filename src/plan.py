@@ -3,6 +3,7 @@
 import sys
 import re
 import csv
+import traceback
 from collections import Counter
 from operator import itemgetter
 
@@ -19,7 +20,7 @@ class Plan:
 			row_list = row
 
 			if row_list[1] == "Company":
-				print 'stored last', row
+				# print 'stored last', row
 				self.last_row = row
 				return
 
@@ -34,10 +35,19 @@ class Plan:
 			comp_name_list = self.last_row
 			comp_name_items_count = len(comp_name_list)
 
-			print 'count name & units ', comp_name_items_count, ' ', comp_units_items_count, "\n"
+			if self.debug_level > 1:
+				print 'count name : ', comp_name_items_count, "\n"
+				print 'count units : ', comp_units_items_count, "\n"
 
-			for iter in (3, int(comp_name_items_count)): 
+			for iter in range(3, int(comp_name_items_count)): 
 				company_name = comp_name_list[iter]
+				if company_name == "":
+					if self.debug_level > 1:
+						print 'found an empty listing', row 
+					break
+				else:
+					if self.debug_level > 2:
+						print 'iter ', iter, row, "\n"
 				company_name = company_name.capitalize()
 				company_name = company_name.strip()
 				self.comp_units[company_name] = comp_units_list[iter]
@@ -46,6 +56,7 @@ class Plan:
 			print 'except : TypeError : ' , row  , "\n"
 		except IndexError:
 			print 'except : IndexError : ' , row , "\n"
+			traceback.print_exc()
 
 	def load_data(self):
 		for in_filename in self.filenames:
@@ -59,6 +70,9 @@ class Plan:
 
 	def print_data(self):
 		print self.comp_units
+
+	def size_data(self):
+		print len(self.comp_units)
 
 
 # Main caller
@@ -76,3 +90,5 @@ plan = Plan(debug_level, in_filenames)
 plan.load_data()
 
 plan.print_data()
+
+plan.size_data()
