@@ -9,9 +9,10 @@ from operator import itemgetter
 
 class Plan:
 
-	def __init__(self, debug_level, filenames):
+	def __init__(self, debug_level, filename):
 		self.comp_units	= {}
-		self.filenames = filenames 
+		self.indu_units	= {}
+		self.filename = filename
 		self.debug_level = debug_level 
 		self.last_row = "" 
 
@@ -38,7 +39,13 @@ class Plan:
 			if self.debug_level > 1:
 				print 'count name : ', comp_name_items_count, "\n"
 				print 'count units : ', comp_units_items_count, "\n"
+			indu_name = comp_name_list[0]
+			# industry units
+			indu_units = comp_units_list[2]
+			self.indu_units[indu_name] = indu_units 
 
+			if self.debug_level> 1:
+				print 'stored industry ', indu_name, ' : ', indu_units
 			for iter in range(3, int(comp_name_items_count)): 
 				company_name = comp_name_list[iter]
 				if company_name == "":
@@ -59,36 +66,32 @@ class Plan:
 			traceback.print_exc()
 
 	def load_data(self):
-		for in_filename in self.filenames:
-			with open(in_filename, 'r') as csvfile:
-				reader = csv.reader(csvfile)
-				for row in reader:
-					self.load_row(row)
+		with open(self.filename, 'r') as csvfile:
+			reader = csv.reader(csvfile)
+			for row in reader:
+				self.load_row(row)
 
-	def get_units(self, name):
-		return self.comp_units[name]	
+	def get_comp_units(self, name):
+		if name in self.comp_units:
+			return self.comp_units[name]	
+		else:
+			print 'invalid key :', name
 
-	def print_data(self):
+	def print_comp_data(self):
 		print self.comp_units
 
-	def size_data(self):
+	def size_comp_data(self):
 		print len(self.comp_units)
 
+	def get_indu_units(self, name):
+		if name in self.indu_units:
+			return self.indu_units[name]	
+		else:
+			print 'invalid key :', name
 
-# Main caller
-program_name = sys.argv[0]
+	def print_indu_data(self):
+		print self.indu_units
 
-if len(sys.argv) < 3 :
-   print "usage: " + program_name + " <debug_level : 1-4> <plan.csv> ... "
-   sys.exit(1) 
+	def size_indu_data(self):
+		print len(self.indu_units)
 
-debug_level= int(sys.argv[1])
-in_filenames= sys.argv[2:]
-
-plan = Plan(debug_level, in_filenames)
-
-plan.load_data()
-
-plan.print_data()
-
-plan.size_data()
