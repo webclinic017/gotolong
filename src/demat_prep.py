@@ -131,7 +131,7 @@ class Demat_Prep:
 			fh = open(self.out_file4,"w") 
 		else:
 			fh = open(self.out_file3,"w") 
-		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units, last_txn_type, last_txn_date\n')
+		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date\n')
 		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
 				continue

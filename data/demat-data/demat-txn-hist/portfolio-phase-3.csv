@@ -1,4 +1,4 @@
-comp_id, comp_name, hold_qty, hold_price, hold_units, last_txn_type, last_txn_date
+comp_id, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date
 3MIND,3M INDIA LIMITED,0,0,0,Sell,08-Nov-2017
 ABB,ABB INDIA LIMITED,2,3062,3,Buy,02-Jan-2018
 ABBIND,ABBOTT INDIA LIMITED,1,4088,4,Buy,19-Sep-2017
