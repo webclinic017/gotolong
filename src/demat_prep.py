@@ -58,17 +58,17 @@ class Demat_Prep:
 			self.company_name[comp_id] = comp_name 
 			if txn_type == "Buy":
 				if comp_id in self.buy_quantity:
-                        		self.buy_quantity[comp_id] += txn_quantity 
+                        		self.buy_quantity[comp_id] += int(txn_quantity)
                         		self.buy_price[comp_id]    += int(float(txn_price)) * int(txn_quantity)
 				else:
-                        		self.buy_quantity[comp_id] = txn_quantity 
+                        		self.buy_quantity[comp_id] = int(txn_quantity) 
                         		self.buy_price[comp_id]    = int(float(txn_price)) * int(txn_quantity)
 			else:
 				if comp_id in self.sale_quantity:
-                        		self.sale_quantity[comp_id] += txn_quantity
+                        		self.sale_quantity[comp_id] += int(txn_quantity)
                         		self.sale_price[comp_id]    += int(float(txn_price)) * int(txn_quantity)
 				else:
-                        		self.sale_quantity[comp_id] = txn_quantity
+                        		self.sale_quantity[comp_id] = int(txn_quantity)
                         		self.sale_price[comp_id]    = int(float(txn_price)) * int(txn_quantity)
 		
 			# skip updating bonus entries	
@@ -104,10 +104,10 @@ class Demat_Prep:
 			p_str += ','
 			p_str += self.company_name[comp_id] 
 			p_str += ','
-			p_str += self.buy_quantity[comp_id] 
+			p_str += str(self.buy_quantity[comp_id])
 			p_str += ','
 			if comp_id in self.sale_quantity:
-				p_str += self.sale_quantity[comp_id] 
+				p_str += str(self.sale_quantity[comp_id])
 			else:
 				p_str += '0' 
 			p_str += ','
@@ -138,7 +138,7 @@ class Demat_Prep:
 			if comp_id in self.sale_quantity:
 				p_str += str(int(self.buy_quantity[comp_id]) - int(self.sale_quantity[comp_id]))
 			else:
-				p_str += self.buy_quantity[comp_id]
+				p_str += str(self.buy_quantity[comp_id])
 			p_str += ','
 			if comp_id in self.sale_price:
 				p_str += str(self.buy_price[comp_id] - self.sale_price[comp_id])
