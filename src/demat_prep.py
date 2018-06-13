@@ -10,7 +10,7 @@ from operator import itemgetter
 
 class Demat_Prep:
 
-	def __init__(self, debug_level, in_file, out_file1, out_file2, out_file3):
+	def __init__(self, debug_level, in_file, out_file1, out_file2, out_file3, out_file4):
 		self.company_name = {}
 		self.last_txn_type = {}
 		self.buy_quantity = {}
@@ -23,6 +23,7 @@ class Demat_Prep:
 		self.out_file1 = out_file1 
 		self.out_file2 = out_file2
 		self.out_file3 = out_file3 
+		self.out_file4 = out_file4 
 		self.debug_level = debug_level 
 
 	def load_row(self, row):
@@ -125,8 +126,11 @@ class Demat_Prep:
 			fh.write(p_str)
 		fh.close()
 
-	def print_phase3(self):
-		fh = open(self.out_file3,"w") 
+	def print_phase3(self, positive_holdings = None):
+		if positive_holdings:
+			fh = open(self.out_file4,"w") 
+		else:
+			fh = open(self.out_file3,"w") 
 		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units, last_txn_type, last_txn_date\n')
 		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
@@ -136,23 +140,37 @@ class Demat_Prep:
 			p_str += self.company_name[comp_id] 
 			p_str += ','
 			if comp_id in self.sale_quantity:
-				p_str += str(int(self.buy_quantity[comp_id]) - int(self.sale_quantity[comp_id]))
+				hold_qty = self.buy_quantity[comp_id] - self.sale_quantity[comp_id]
 			else:
-				p_str += str(self.buy_quantity[comp_id])
+				hold_qty = self.buy_quantity[comp_id]
+			p_str += str(hold_qty)
 			p_str += ','
-			if comp_id in self.sale_price:
-				p_str += str(self.buy_price[comp_id] - self.sale_price[comp_id])
+			if hold_qty > 0:
+				if comp_id in self.sale_price:
+					hold_price = self.buy_price[comp_id] - self.sale_price[comp_id]
+				else:
+					hold_price = self.buy_price[comp_id]
 			else:
-				p_str += str(self.buy_price[comp_id])
+				hold_price = 0
+
+			p_str += str(hold_price)
 			p_str += ','
-			if comp_id in self.sale_price:
-				p_str += str((self.buy_price[comp_id] - self.sale_price[comp_id])/1000)
+			if hold_qty > 0:
+				hold_units = hold_price/1000
 			else:
-				p_str += str((self.buy_price[comp_id])/1000)
+				hold_units = 0
+			p_str += str(hold_units)
 			p_str += ','
 			p_str += self.last_txn_type[comp_id] 
 			p_str += ','
 			p_str += self.last_txn_date[comp_id] 
 			p_str += '\n'
-			fh.write(p_str)
+			if positive_holdings:
+				if hold_qty > 0:
+					fh.write(p_str)
+			else:
+				fh.write(p_str)
 		fh.close()
+
+	def print_phase4(self):
+		self.print_phase3(True)
