@@ -4,6 +4,7 @@ import sys
 import re
 import csv
 import traceback
+import operator
 from collections import Counter
 from operator import itemgetter
 
@@ -79,18 +80,20 @@ class Demat_Prep:
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_row(row)
+		# sorted(self.phase1_data, key=lambda dct: dct['comp_id'])	
+		# sorted(self.phase1_data, key=operator.itemgetter('comp_id'))	
 
 	def print_phase1(self):
 		fh = open(self.out_file1, "w") 
 		fh.write('comp_id, comp_name, action, qty, price, txn_date\n')
-		for comp_id in self.phase1_data:
+		for comp_id in sorted(self.phase1_data):
 			fh.write(self.phase1_data[comp_id])
 		fh.close()
 
 	def print_phase2(self):
 		fh = open(self.out_file2, "w") 
 		fh.write('comp_id, comp_name, buy_qty, sale_qty, buy_price, sale_price, last_txn_type, last_txn_date\n')
-		for comp_id in self.phase1_data:
+		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
 				continue
 			p_str = comp_id
@@ -121,7 +124,7 @@ class Demat_Prep:
 	def print_phase3(self):
 		fh = open(self.out_file3,"w") 
 		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units, last_txn_type, last_txn_date\n')
-		for comp_id in self.phase1_data:
+		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
 				continue
 			p_str = comp_id
