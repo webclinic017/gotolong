@@ -13,9 +13,9 @@ class Demat_Prep:
 	def __init__(self, debug_level, in_file, out_file1, out_file2, out_file3, out_file4):
 		self.company_name = {}
 		self.last_txn_type = {}
-		self.buy_quantity = {}
+		self.buy_qty = {}
 		self.buy_price	= {}
-		self.sale_quantity = {}
+		self.sale_qty = {}
 		self.sale_price	= {}
 		self.last_txn_date = {}
 		self.phase1_data = {}
@@ -24,6 +24,9 @@ class Demat_Prep:
 		self.out_file2 = out_file2
 		self.out_file3 = out_file3 
 		self.out_file4 = out_file4 
+		self.hold_qty = {}
+		self.hold_price	= {}
+		self.hold_units	= {}
 		self.debug_level = debug_level 
 
 	def load_row(self, row):
@@ -32,7 +35,7 @@ class Demat_Prep:
 			comp_id   = row_list[0]
 			comp_name = row_list[1]
 			txn_type = row_list[3]
-			txn_quantity = row_list[4]
+			txn_qty = row_list[4]
 			txn_price = str(int(float(row_list[5])))
 			txn_date = row_list[12]
 
@@ -43,7 +46,7 @@ class Demat_Prep:
 			p_str += ','
 			p_str += txn_type
 			p_str += ','
-			p_str += txn_quantity
+			p_str += txn_qty
 			p_str += ','
 			p_str += txn_price
 			p_str += ','
@@ -58,19 +61,19 @@ class Demat_Prep:
 
 			self.company_name[comp_id] = comp_name 
 			if txn_type == "Buy":
-				if comp_id in self.buy_quantity:
-                        		self.buy_quantity[comp_id] += int(txn_quantity)
-                        		self.buy_price[comp_id]    += int(float(txn_price)) * int(txn_quantity)
+				if comp_id in self.buy_qty:
+                        		self.buy_qty[comp_id] += int(txn_qty)
+                        		self.buy_price[comp_id]    += int(float(txn_price)) * int(txn_qty)
 				else:
-                        		self.buy_quantity[comp_id] = int(txn_quantity) 
-                        		self.buy_price[comp_id]    = int(float(txn_price)) * int(txn_quantity)
+                        		self.buy_qty[comp_id] = int(txn_qty) 
+                        		self.buy_price[comp_id]    = int(float(txn_price)) * int(txn_qty)
 			else:
-				if comp_id in self.sale_quantity:
-                        		self.sale_quantity[comp_id] += int(txn_quantity)
-                        		self.sale_price[comp_id]    += int(float(txn_price)) * int(txn_quantity)
+				if comp_id in self.sale_qty:
+                        		self.sale_qty[comp_id] += int(txn_qty)
+                        		self.sale_price[comp_id]    += int(float(txn_price)) * int(txn_qty)
 				else:
-                        		self.sale_quantity[comp_id] = int(txn_quantity)
-                        		self.sale_price[comp_id]    = int(float(txn_price)) * int(txn_quantity)
+                        		self.sale_qty[comp_id] = int(txn_qty)
+                        		self.sale_price[comp_id]    = int(float(txn_price)) * int(txn_qty)
 		
 			# skip updating bonus entries	
 			if txn_price != 0:	
@@ -85,8 +88,41 @@ class Demat_Prep:
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_row(row)
+		self.prepare_data()
 		# sorted(self.phase1_data, key=lambda dct: dct['comp_id'])	
 		# sorted(self.phase1_data, key=operator.itemgetter('comp_id'))	
+
+	def prepare_data(self):
+		for comp_id in sorted(self.phase1_data):
+			if comp_id == 'Stock Symbol':
+				continue
+			
+			if comp_id in self.sale_qty:
+				hold_qty = self.buy_qty[comp_id] - self.sale_qty[comp_id]
+			else:
+				hold_qty = self.buy_qty[comp_id]
+			
+			# store 
+			self.hold_qty[comp_id] = hold_qty
+			
+			if hold_qty > 0:
+				if comp_id in self.sale_price:
+					hold_price = self.buy_price[comp_id] - self.sale_price[comp_id]
+				else:
+					hold_price = self.buy_price[comp_id]
+			else:
+				hold_price = 0
+			
+			# store 
+			self.hold_price[comp_id] = hold_price
+			
+			if hold_qty > 0:
+				hold_units = hold_price/1000
+			else:
+				hold_units = 0
+			# store 
+			self.hold_units[comp_id] = hold_units
+
 
 	def print_phase1(self):
 		fh = open(self.out_file1, "w") 
@@ -105,10 +141,10 @@ class Demat_Prep:
 			p_str += ','
 			p_str += self.company_name[comp_id] 
 			p_str += ','
-			p_str += str(self.buy_quantity[comp_id])
+			p_str += str(self.buy_qty[comp_id])
 			p_str += ','
-			if comp_id in self.sale_quantity:
-				p_str += str(self.sale_quantity[comp_id])
+			if comp_id in self.sale_qty:
+				p_str += str(self.sale_qty[comp_id])
 			else:
 				p_str += '0' 
 			p_str += ','
@@ -139,34 +175,18 @@ class Demat_Prep:
 			p_str += ','
 			p_str += self.company_name[comp_id] 
 			p_str += ','
-			if comp_id in self.sale_quantity:
-				hold_qty = self.buy_quantity[comp_id] - self.sale_quantity[comp_id]
-			else:
-				hold_qty = self.buy_quantity[comp_id]
-			p_str += str(hold_qty)
+			p_str += str(self.hold_qty[comp_id])
 			p_str += ','
-			if hold_qty > 0:
-				if comp_id in self.sale_price:
-					hold_price = self.buy_price[comp_id] - self.sale_price[comp_id]
-				else:
-					hold_price = self.buy_price[comp_id]
-			else:
-				hold_price = 0
-
-			p_str += str(hold_price)
+			p_str += str(self.hold_price[comp_id])
 			p_str += ','
-			if hold_qty > 0:
-				hold_units = hold_price/1000
-			else:
-				hold_units = 0
-			p_str += str(hold_units)
+			p_str += str(self.hold_units[comp_id])
 			p_str += ','
 			p_str += self.last_txn_type[comp_id] 
 			p_str += ','
 			p_str += self.last_txn_date[comp_id] 
 			p_str += '\n'
 			if positive_holdings:
-				if hold_qty > 0:
+				if self.hold_qty[comp_id] > 0:
 					fh.write(p_str)
 			else:
 				fh.write(p_str)
@@ -174,3 +194,7 @@ class Demat_Prep:
 
 	def print_phase4(self):
 		self.print_phase3(True)
+
+	def get_units(self, comp_id):
+		# convert company name to company id	
+		return self.hold_units[comp_id]
