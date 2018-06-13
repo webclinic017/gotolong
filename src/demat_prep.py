@@ -48,8 +48,12 @@ class Demat_Prep:
 			p_str += ','
 			p_str += txn_date
 			p_str += '\n'
-		
-			self.phase1_data[comp_id] = p_str	
+	
+			if comp_id in self.phase1_data:	
+				self.phase1_data[comp_id] += p_str	
+			else:
+				self.phase1_data[comp_id] = p_str	
+				
 
 			self.company_name[comp_id] = comp_name 
 			if txn_type == "Buy":
