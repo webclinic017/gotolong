@@ -4,21 +4,23 @@ import sys
 import re
 import csv
 import traceback
-from collections import Counter
-from operator import itemgetter
 
 class Plan:
 
-	def __init__(self, debug_level, filename):
+	def __init__(self, debug_level):
 		self.comp_units	= {}
 		self.indu_units	= {}
-		self.filename = filename
 		self.debug_level = debug_level 
 		self.last_row = "" 
 
 	def load_row(self, row):
 		try:
 			row_list = row
+
+			if row_list[1] == "Details":
+				if self.debug_level > 1 :
+					print 'skipped ', row
+				return
 
 			if row_list[1] == "Company":
 				# print 'stored last', row
@@ -65,12 +67,23 @@ class Plan:
 			print 'except : IndexError : ' , row , "\n"
 			traceback.print_exc()
 
-	def load_data(self):
-		with open(self.filename, 'r') as csvfile:
+	def load_data(self, in_filename):
+		with open(in_filename, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_row(row)
 
+	def print_phase2(self, out_filename):
+		fh = open(out_filename, "w") 
+		fh.write('comp_name, plan_units_1k\n')
+		for comp_name in sorted(self.comp_units):
+			p_str = comp_name
+			p_str += ', ' 
+			p_str += self.comp_units[comp_name] 
+			p_str += '\n' 
+			fh.write(p_str);	
+		fh.close()
+		
 	def get_comp_units(self, name):
 		if name in self.comp_units:
 			return self.comp_units[name]	

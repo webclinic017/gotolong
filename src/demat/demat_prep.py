@@ -10,7 +10,7 @@ from operator import itemgetter
 
 class Demat_Prep:
 
-	def __init__(self, debug_level, in_file, out_file1, out_file2, out_file3, out_file4):
+	def __init__(self, debug_level, in_file):
 		self.company_name = {}
 		self.last_txn_type = {}
 		self.buy_qty = {}
@@ -20,10 +20,6 @@ class Demat_Prep:
 		self.last_txn_date = {}
 		self.phase1_data = {}
 		self.filename = in_file 
-		self.out_file1 = out_file1 
-		self.out_file2 = out_file2
-		self.out_file3 = out_file3 
-		self.out_file4 = out_file4 
 		self.hold_qty = {}
 		self.hold_price	= {}
 		self.hold_units	= {}
@@ -124,15 +120,15 @@ class Demat_Prep:
 			self.hold_units[comp_id] = hold_units
 
 
-	def print_phase1(self):
-		fh = open(self.out_file1, "w") 
+	def print_phase1(self, out_filename):
+		fh = open(out_filename, "w") 
 		fh.write('comp_id, comp_name, action, qty, price, txn_date\n')
 		for comp_id in sorted(self.phase1_data):
 			fh.write(self.phase1_data[comp_id])
 		fh.close()
 
-	def print_phase2(self):
-		fh = open(self.out_file2, "w") 
+	def print_phase2(self, out_filename):
+		fh = open(out_filename, "w") 
 		fh.write('comp_id, comp_name, buy_qty, sale_qty, buy_price, sale_price, last_txn_type, last_txn_date\n')
 		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
@@ -162,11 +158,8 @@ class Demat_Prep:
 			fh.write(p_str)
 		fh.close()
 
-	def print_phase3(self, positive_holdings = None):
-		if positive_holdings:
-			fh = open(self.out_file4,"w") 
-		else:
-			fh = open(self.out_file3,"w") 
+	def print_phase3(self, out_filename, positive_holdings = None):
+		fh = open(out_filename,"w") 
 		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date\n')
 		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
@@ -192,8 +185,8 @@ class Demat_Prep:
 				fh.write(p_str)
 		fh.close()
 
-	def print_phase4(self):
-		self.print_phase3(True)
+	def print_phase4(self, out_filename):
+		self.print_phase3(out_filename, True)
 
 	def get_units(self, comp_id):
 		# convert company name to company id	
