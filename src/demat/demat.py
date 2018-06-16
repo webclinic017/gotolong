@@ -39,7 +39,7 @@ class Demat(object):
         	comp_name = re.sub(' +', ' ', comp_name)
 		return comp_name
 	
-	def load_row(self, row):
+	def load_demat_row(self, row):
 		try:
 			row_list = row
 			comp_id   = row_list[0]
@@ -97,12 +97,12 @@ class Demat(object):
 		with open(in_file, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
-				self.load_row(row)
-		self.prepare_data()
+				self.load_demat_row(row)
+		self.prepare_demat_data()
 		# sorted(self.phase1_data, key=lambda dct: dct['comp_id'])	
 		# sorted(self.phase1_data, key=operator.itemgetter('comp_id'))	
 
-	def prepare_data(self):
+	def prepare_demat_data(self):
 		for comp_id in sorted(self.phase1_data):
 			if comp_id == 'Stock Symbol':
 				continue
@@ -202,10 +202,14 @@ class Demat(object):
 	def print_phase4(self, out_filename):
 		self.print_phase3(out_filename, True)
 
-	def get_units_by_name(self, req_name):
+	def get_demat_units_by_name(self, req_name):
+		req_name = re.sub('\s+', ' ', req_name).strip()
+		print 'req_name :',req_name,':'
 		for comp_id in sorted(self.phase1_data):
 			# try to find a matching company
 			comp_name = self.company_name[comp_id]
-			if comp_name.startswith(req_name):
+			comp_name = comp_name.strip()
+			if re.match(req_name, comp_name):
+				print 'found match'
 				return self.hold_units[comp_id]
 		return 0

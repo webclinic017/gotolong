@@ -9,7 +9,7 @@ class Plan(object):
 
 	def __init__(self):
 		super(Plan, self).__init__()
-		self.comp_units	= {}
+		self.plan_comp_units	= {}
 		self.indu_units	= {}
 		self.debug_level = 0 
 		self.last_row = "" 
@@ -32,10 +32,10 @@ class Plan(object):
 				self.last_row = row
 				return
 
-			comp_units_list = row
-			comp_units_items_count = len(comp_units_list)
+			plan_comp_units_list = row
+			plan_comp_units_items_count = len(plan_comp_units_list)
 
-			if comp_units_list[1] != "Units":
+			if plan_comp_units_list[1] != "Units":
 				if self.debug_level > 1:
 					print 'Bypassed units: ', row
 				return
@@ -45,10 +45,10 @@ class Plan(object):
 
 			if self.debug_level > 1:
 				print 'count name : ', comp_name_items_count, "\n"
-				print 'count units : ', comp_units_items_count, "\n"
+				print 'count units : ', plan_comp_units_items_count, "\n"
 			indu_name = comp_name_list[0]
 			# industry units
-			indu_units = comp_units_list[2]
+			indu_units = plan_comp_units_list[2]
 			self.indu_units[indu_name] = indu_units 
 
 			if self.debug_level> 1:
@@ -64,7 +64,7 @@ class Plan(object):
 						print 'iter ', iter, row, "\n"
 				company_name = company_name.capitalize()
 				company_name = company_name.strip()
-				self.comp_units[company_name] = comp_units_list[iter]
+				self.plan_comp_units[company_name] = plan_comp_units_list[iter]
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
@@ -85,16 +85,16 @@ class Plan(object):
 	def print_phase2(self, out_filename, positive_holdings = None):
 		fh = open(out_filename, "w") 
 		fh.write('comp_name, plan_units_1k\n')
-		for comp_name in sorted(self.comp_units):
+		for comp_name in sorted(self.plan_comp_units):
 			try:
-				units_1k = int(self.comp_units[comp_name])
+				units_1k = int(self.plan_comp_units[comp_name])
 			except ValueError:
 				print 'except : ValueError :', comp_name
 			if positive_holdings and units_1k <= 0 :
 				continue
 			p_str = comp_name
 			p_str += ', ' 
-			p_str += self.comp_units[comp_name] 
+			p_str += self.plan_comp_units[comp_name] 
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
@@ -102,17 +102,17 @@ class Plan(object):
 	def print_phase3(self, out_filename):
 		self.print_phase2(out_filename, True)
 		
-	def get_comp_units(self, name):
-		if name in self.comp_units:
-			return self.comp_units[name]	
+	def get_plan_comp_units(self, name):
+		if name in self.plan_comp_units:
+			return self.plan_comp_units[name]	
 		else:
 			print 'invalid key :', name
 
 	def print_comp_data(self):
-		print self.comp_units
+		print self.plan_comp_units
 
 	def size_comp_data(self):
-		print len(self.comp_units)
+		print len(self.plan_comp_units)
 
 	def get_indu_units(self, name):
 		if name in self.indu_units:
