@@ -67,7 +67,7 @@ Group 4,,,,,,
 Construction & Contracting - Civil,Company,,NCC,Gammon,HCC,
 ,Units,2,2,0,0,
 Construction & Contracting - Housing,Company,,Asiana Housing,,,
-,Units,,,,,
+,Units,,0,,,
 Construction & Contracting - Real Estate,Company,,DLF,Prestige,HUDCO,Brigade
 ,Units,14,5,5,2,2
 Construction & Contracting - Real Estate,Company,,Sobha,Godrej Properties,Puravankara Projects,
@@ -77,7 +77,7 @@ Consumer Goods - Electronic,Company,,Voltas,,,
 Consumer Goods - White Goods,Company,,Whirlpool,Johnson Control,Blue Star,IFB Industries
 ,Units,8,2,2,2,2
 Couriers,Company,,BlueDart Express,DTDC,,
-,Units,4,4,,,
+,Units,4,4,0,,
 Detergents,,,,,,
 Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C Jewellers,
 ,Units,9,5,2,2,

@@ -73,16 +73,29 @@ class Plan:
 			for row in reader:
 				self.load_row(row)
 
-	def print_phase2(self, out_filename):
+	def print_phase1(self, out_filename):
+		# it is covered through shell script
+		return
+
+	def print_phase2(self, out_filename, positive_holdings = None):
 		fh = open(out_filename, "w") 
 		fh.write('comp_name, plan_units_1k\n')
 		for comp_name in sorted(self.comp_units):
+			try:
+				units_1k = int(self.comp_units[comp_name])
+			except ValueError:
+				print 'except : ValueError :', comp_name
+			if positive_holdings and units_1k <= 0 :
+				continue
 			p_str = comp_name
 			p_str += ', ' 
 			p_str += self.comp_units[comp_name] 
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
+
+	def print_phase3(self, out_filename):
+		self.print_phase2(out_filename, True)
 		
 	def get_comp_units(self, name):
 		if name in self.comp_units:

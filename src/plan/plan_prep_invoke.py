@@ -18,7 +18,8 @@ if len(sys.argv) < 3 :
 
 debug_level = int(sys.argv[1])
 in_filename = sys.argv[2]
-out_filename = sys.argv[3]
+out_filename_phase2 = sys.argv[3]
+out_filename_phase3 = sys.argv[4]
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -26,18 +27,19 @@ if debug_level > 1 :
 indu_comp = 'comp'
 ic_name = 'all'
 
-if len(sys.argv) == 6 :
-	indu_comp = sys.argv[4]
-	ic_name = sys.argv[5]
+if len(sys.argv) == 7 :
+	indu_comp = sys.argv[5]
+	ic_name = sys.argv[6]
 	ic_name = ic_name.capitalize()
 
 plan = plan.Plan(debug_level)
 
 plan.load_data(in_filename)
 
-plan.print_phase2(out_filename)
+plan.print_phase2(out_filename_phase2)
+plan.print_phase3(out_filename_phase3)
 
-if len(sys.argv) == 6 :
+if len(sys.argv) == 7 :
 	if indu_comp.lower() == "comp":
 		print 'companies count : ', plan.size_comp_data()
 		if ic_name == "All":
