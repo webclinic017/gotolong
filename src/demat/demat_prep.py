@@ -5,8 +5,6 @@ import re
 import csv
 import traceback
 import operator
-from collections import Counter
-from operator import itemgetter
 
 class Demat_Prep:
 
@@ -25,6 +23,18 @@ class Demat_Prep:
 		self.hold_units	= {}
 		self.debug_level = debug_level 
 
+	def clean_comp_name(self, comp_name):
+		comp_name = comp_name.capitalize()
+	        comp_name = re.sub('limited','', comp_name)
+	        comp_name = re.sub('ltd','', comp_name)
+	        comp_name = re.sub('india','', comp_name)
+                # remove any characters after (  :
+                # TRENT LTD (LAKME LTD)  
+                comp_name = re.sub('\(.*','', comp_name)
+		# convert multiple space to single space
+        	comp_name = re.sub(' +', ' ', comp_name)
+		return comp_name
+	
 	def load_row(self, row):
 		try:
 			row_list = row
@@ -55,7 +65,7 @@ class Demat_Prep:
 				self.phase1_data[comp_id] = p_str	
 				
 
-			self.company_name[comp_id] = comp_name 
+			self.company_name[comp_id] = self.clean_comp_name(comp_name)
 			if txn_type == "Buy":
 				if comp_id in self.buy_qty:
                         		self.buy_qty[comp_id] += int(txn_qty)
@@ -188,6 +198,9 @@ class Demat_Prep:
 	def print_phase4(self, out_filename):
 		self.print_phase3(out_filename, True)
 
-	def get_units(self, comp_id):
-		# convert company name to company id	
-		return self.hold_units[comp_id]
+	def get_units_by_name(self, req_name):
+		for comp_id in sorted(self.phase1_data):
+			# try to find a matching company
+			comp_name = self.company_name[comp_id]
+			if comp_name.startswith(req_name):
+				return self.hold_units[comp_id]

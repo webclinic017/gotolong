@@ -4,8 +4,6 @@ import sys
 import re
 import csv
 import traceback
-from collections import Counter
-from operator import itemgetter
 
 import demat_prep
 
