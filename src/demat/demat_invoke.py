@@ -5,7 +5,7 @@ import re
 import csv
 import traceback
 
-import demat_prep
+import demat
 
 # Main caller
 program_name = sys.argv[0]
@@ -24,10 +24,11 @@ out_file_4 = sys.argv[6]
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
 
-demat_prep = demat_prep.Demat_Prep(debug_level, in_file);
+demat = demat.Demat()
 
-demat_prep.load_data()
-demat_prep.print_phase1(out_file_1)
-demat_prep.print_phase2(out_file_2)
-demat_prep.print_phase3(out_file_3)
-demat_prep.print_phase4(out_file_4)
+demat.set_debug_level(debug_level)
+demat.load_demat_data(in_file)
+demat.print_phase1(out_file_1)
+demat.print_phase2(out_file_2)
+demat.print_phase3(out_file_3)
+demat.print_phase4(out_file_4)

@@ -32,9 +32,11 @@ if len(sys.argv) == 7 :
 	ic_name = sys.argv[6]
 	ic_name = ic_name.capitalize()
 
-plan = plan.Plan(debug_level)
+plan = plan.Plan()
 
-plan.load_data(in_filename)
+plan.set_debug_level(debug_level)
+
+plan.load_plan_data(in_filename)
 
 plan.print_phase2(out_filename_phase2)
 plan.print_phase3(out_filename_phase3)

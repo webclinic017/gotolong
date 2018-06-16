@@ -11,4 +11,4 @@ OUT_FILE_3=$PROJ_DATA_LOC/plan-data/plan-data-phase-3.csv
 grep -v -e ',Details'  ${IN_FILE} > ${OUT_FILE_1}
 
 # phase 2
-plan_prep_invoke.py ${DEBUG_LEVEL} ${IN_FILE} ${OUT_FILE_2} ${OUT_FILE_3}
+plan_invoke.py ${DEBUG_LEVEL} ${IN_FILE} ${OUT_FILE_2} ${OUT_FILE_3}

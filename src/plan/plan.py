@@ -5,13 +5,18 @@ import re
 import csv
 import traceback
 
-class Plan:
+class Plan(object):
 
-	def __init__(self, debug_level):
+	def __init__(self):
+		super(Plan, self).__init__()
 		self.comp_units	= {}
 		self.indu_units	= {}
-		self.debug_level = debug_level 
+		self.debug_level = 0 
 		self.last_row = "" 
+		print 'init : Plan'
+
+	def set_debug_level(self, debug_level):
+ 		self.debug_level = debug_level
 
 	def load_row(self, row):
 		try:
@@ -67,7 +72,7 @@ class Plan:
 			print 'except : IndexError : ' , row , "\n"
 			traceback.print_exc()
 
-	def load_data(self, in_filename):
+	def load_plan_data(self, in_filename):
 		with open(in_filename, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
