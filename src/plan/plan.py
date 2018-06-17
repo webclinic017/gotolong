@@ -22,6 +22,10 @@ class Plan(object):
 		comp_name = comp_name.capitalize()
 		# remove hyphen (V-guard) 
         	comp_name = re.sub('-',' ', comp_name)
+		# remove . in Dr. lal pathlabs
+        	comp_name = re.sub('\.','', comp_name)
+		# remove ' in Dr Reddy's Laboratories 
+        	comp_name = re.sub('\'','', comp_name)
 	        comp_name = re.sub('limited','', comp_name)
 	        comp_name = re.sub('ltd','', comp_name)
 	        comp_name = re.sub('india','', comp_name)

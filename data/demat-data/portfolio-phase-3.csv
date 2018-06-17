@@ -1,263 +1,273 @@
 comp_id, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date
-3MIND,3m ,0,0,0,Sell,08-Nov-2017
-ABB,Abb ,2,3062,3,Buy,02-Jan-2018
-ABBIND,Abbott ,1,4088,4,Buy,19-Sep-2017
-ACC,Acc ,2,3923,3,Buy,01-Nov-2017
-ADAENT,Adani enterprises ,17,2181,2,Buy,06-Dec-2017
-ADAPOR,Adani port special econo,3,1128,1,Buy,29-Sep-2017
-ADIBIR,Aditya birla nuvo ,0,0,0,Sell,14-Nov-2008
-ADIFAS,Aditya birla fashion rtl ,13,2081,2,Buy,04-Apr-2018
-AEGLOG,Aegis logistics ,4,1072,1,Buy,02-Feb-2018
-AKZNOB,Akzo nobel ,1,1810,1,Buy,17-Jul-2017
-ALLBAN,Allahabad bank,0,0,0,Sell,11-Nov-2008
-ALLLOG,Allcargo logistics ,5,945,0,Buy,02-Feb-2018
-AMARAJ,Amara raja batteries ,1,879,0,Buy,05-Jun-2017
-AMBCE,Ambuja cements ,9,1977,1,Buy,02-Jan-2018
-ANDBAN,Andhra bank,0,0,0,Sell,11-Nov-2008
-ANSPRO,Ansal properties infrastruct,0,0,0,Sell,11-Nov-2008
-APOHOS,Apollo hospitals enterprises l,6,7209,7,Buy,06-Dec-2017
-APOTYR,Apollo tyres ,9,2255,2,Buy,01-Feb-2018
-ARVLIM,Arvind ,3,1233,1,Buy,18-Sep-2017
-ASAIND,Asahi glass ,7,3306,3,Buy,06-Dec-2017
-ASIGRA,Asian granito ,2,1064,1,Buy,02-Feb-2018
-ASIPAI,Asian paints ,8,8215,8,Buy,06-Dec-2017
-AURPHA,Aurobindo pharma ,3,2145,2,Buy,02-Jan-2018
-AVAFEE,Avanti feeds ,2,4049,4,Buy,06-Dec-2017
-AVESUP,Avenue supermarts dmart,1,1231,1,Buy,16-Oct-2017
-AXIBAN,Axis bank ,4,2010,2,Buy,04-Apr-2018
-BAAUTO,Bajaj auto ,2,5594,5,Buy,04-Apr-2018
-BAFINS,Bajaj finserv ,1,5618,5,Buy,19-Sep-2017
-BALCHI,Balrampur chini mills ,8,1272,1,Buy,13-Nov-2017
-BALIND,Balkrishna industries ,2,1702,1,Buy,02-Jan-2018
-BANBAR,Bank of baroda,0,0,0,Sell,11-Nov-2008
-BASF,Basf ,2,3376,3,Buy,04-Apr-2018
-BATIND,Bata ,4,2560,2,Buy,06-Dec-2017
-BAYIND,Bayer cropscience ,1,4716,4,Buy,09-Jun-2017
-BERPAI,Berger paints ,8,2032,2,Buy,01-Feb-2018
-BHA22,Icici prud mf bharat 22 etf,278,9730,9,Buy,27-Nov-2017
-BHAAIR,Bharti airtel ,27,9349,9,Buy,27-Nov-2017
-BHAELE,Bharat electronics ,13,7336,7,Buy,04-Apr-2018
-BHAINF,Bharti infratel ,3,1227,1,Buy,03-Oct-2017
-BHAPET,Bharat petroleum corpn ,5,1542,1,Buy,02-Jan-2018
-BHEL,Bharat heavy electricals ,27,2743,2,Buy,04-Apr-2018
-BLUDAR,Blue dart express ,1,4426,4,Buy,30-May-2017
-BLUSTA,Blue star ,1,731,0,Buy,28-Nov-2017
-BOSLIM,Bosch ,0,0,0,Sell,08-Nov-2017
-BRIENT,Brigade enterprises ,4,1072,1,Buy,08-Jun-2017
-BRIIND,Britannia industries ,2,8708,8,Buy,04-Apr-2018
-BSE,Bse ,1,982,0,Buy,28-Sep-2017
-CADHEA,Cadila healthcare ,2,970,0,Buy,19-Sep-2017
-CAIIND,Cairn ,0,0,0,Sell,11-Feb-2013
-CANBAN,Canara bank,0,0,0,Sell,11-Nov-2008
-CARE,Care ratings ,2,2841,2,Buy,01-Feb-2018
-CARUNI,Carborundum universal ,4,1312,1,Buy,17-Oct-2017
-CASIND,Castrol ,12,2424,2,Buy,04-Jan-2018
-CDSL,Central depository ser ind ,3,1020,1,Buy,28-Sep-2017
-CEAT,Ceat ,1,1891,1,Buy,11-Jul-2017
-CENBAN,Central bank of ,0,0,0,Sell,11-Nov-2008
-CENPLY,Century plyboards ,7,2063,2,Buy,01-Feb-2018
-CERSAN,Cera sanitaryware ,1,3037,3,Buy,14-Jun-2017
-CHAFER,Chambal fertilisers chemical,7,1008,1,Buy,16-Oct-2017
-CIPLA,Cipla ,4,811,0,Buy,02-Jan-2018
-CNKLIM,Cox kings ,8,2060,2,Buy,01-Feb-2018
-COALIN,Coal ,31,10064,10,Buy,27-Nov-2017
-COFDAY,Coffee day enterprises ,8,2208,2,Buy,04-Apr-2018
-COLPAL,Colgate palmolive ,2,2164,2,Buy,04-Apr-2018
-CONCOR,Container corporation of ,2,4474,4,Buy,04-Apr-2018
-CORINT,Coromandel international limit,5,2275,2,Buy,01-Nov-2017
-CPSETF,Cpse etf,680,11638,11,Buy,09-Oct-2017
-CRISIL,Crisil ,2,3725,3,Buy,04-Apr-2018
-CROGR,Crompton greaves cons elec ,4,1024,1,Buy,28-Nov-2017
-CUMIND,Cummins ,3,2678,2,Buy,06-Dec-2017
-DABIND,Dabur ,7,2179,2,Buy,02-Jan-2018
-DISHTV,Dish tv ,28,2111,2,Buy,01-Feb-2018
-DLFLIM,Dlf ,10,8597,8,Buy,02-Jan-2018
-DRLAL,Dr. lal pathlabs ,1,805,0,Buy,19-Sep-2017
-DRREDD,Dr reddy's laboratories ,2,4120,4,Buy,04-Apr-2018
-EICMOT,Eicher motors ,0,0,0,Sell,08-Nov-2017
-EIDPAR,Eid parry ,6,1977,1,Buy,01-Feb-2018
-EIHLIM,Eih ,15,2086,2,Buy,02-Jan-2018
-EMALIM,Emami ,2,2412,2,Buy,02-Jan-2018
-ENGIND,Engineers ,7,1113,1,Buy,08-Sep-2017
-EVEIND,Eveready industries ,6,1959,1,Buy,01-Nov-2017
-EXIIND,Exide industries ,5,1105,1,Buy,16-Jun-2017
-FORHEA,Fortis healthcare ,13,2040,2,Buy,04-Apr-2018
-FUTLIF,Future lifestyle fashions ,6,2160,2,Buy,01-Feb-2018
-FUTRE,Future retail ,5,2286,2,Buy,01-Feb-2018
-FUTRET,Future enterprises ,0,0,0,Sell,11-Nov-2008
-FUTSUP,Future supply chain sol ,2,1344,1,Buy,02-Feb-2018
-FUTVEN,Future consumer ,20,1140,1,Buy,02-Feb-2018
-GAIL,Gail ,6,2312,2,Buy,10-Apr-2018
-GIC,General insurance corp ,2,1598,1,Buy,25-Oct-2017
-GILIND,Gillette ,1,4863,4,Buy,12-Jun-2017
-GLACON,Glaxosmithkline consumer healt,1,5069,5,Buy,19-Sep-2017
-GLEPHA,Glenmark pharmaceuticals ,2,1228,1,Buy,19-Sep-2017
-GODAGR,Godrej agrovet ,2,1180,1,Buy,16-Oct-2017
-GODCON,Godrej consumer products ,1,935,0,Buy,25-Sep-2017
-GODIND,Godrej industries ,2,1218,1,Buy,16-Oct-2017
-GODPRO,Godrej properties ,2,1040,1,Buy,08-Jun-2017
-GOLDEX,Reliance etf gold bees,60,154724,154,Buy,17-Oct-2017
-GRASIM,Grasim industries ,1,1746,1,Buy,16-Oct-2017
-GREEIN,Greenlam industries ,2,2221,2,Buy,01-Feb-2018
-GRINOR,Grindwell norton ,3,1290,1,Buy,17-Oct-2017
-HAVIND,Havells ,3,1431,1,Buy,31-Jul-2017
-HCLTEC,Hcl technologies ,6,1432,1,Buy,27-Feb-2017
-HDFBAN,Hdfc bank ,18,15451,15,Buy,14-Mar-2017
-HDFC,Housing development finance co,8,10973,10,Buy,06-Dec-2017
-HDFGOL,Hdfc gold etf,32,87941,87,Buy,15-Dec-2017
-HDFSTA,Hdfc standard life ins co ,3,1035,1,Buy,17-Nov-2017
-HERHON,Hero motocorp ,1,3916,3,Buy,09-Jun-2017
-HINDAL,Hindalco industries ,9,1705,1,Buy,01-Sep-2017
-HINLEV,Hindustan unilever ,7,2393,2,Buy,04-Apr-2018
-HINPET,Hindustan petroleum corp,6,3140,3,Buy,02-Jan-2018
-HINZIN,Hindustan zinc ,8,2090,2,Buy,02-Jan-2018
-HITHOM,Johnson controls hitachi air i,1,2064,2,Buy,17-Oct-2017
-HONAUT,Honeywell automation ,0,0,0,Sell,08-Nov-2017
-HOTLEE,Hotel leela venture ,0,0,0,Sell,11-Nov-2008
-HSILIM,Hsil ,6,2379,2,Buy,04-Apr-2018
-HUDCO,Housing urban dev co hudco,12,1056,1,Buy,19-Sep-2017
-ICI100,Icici prudential nifty 100 etf,50,5645,5,Buy,21-Mar-2018
-ICIBAN,Icici bank ,16,5251,5,Buy,06-Dec-2017
-ICILOM,Icici lombard gen insurance co,2,1354,1,Buy,27-Sep-2017
-ICIMID,Icici pru midcap select etf,66,4805,4,Buy,07-Mar-2018
-ICIPRU,Icici prudential life ins co,6,2436,2,Buy,01-Nov-2017
-ICRLIM,Icra ,1,4139,4,Buy,22-Jun-2017
-IDBI,Idbi bank ,0,0,0,Sell,05-Aug-2008
-IDECEL,Idea cellular ,21,2368,2,Buy,01-Nov-2017
-IFBIND,Ifb industries ,1,1359,1,Buy,28-Nov-2017
-INDCEM,India cements ,0,0,0,Sell,11-Nov-2008
-INDHO,Indiabulls housing finance ,1,1242,1,Buy,03-Oct-2017
-INDHOT,Indian hotels co ,56,9869,9,Buy,06-Dec-2017
-INDIBA,Indian bank,0,0,0,Sell,11-Nov-2008
-INDOIL,Indian oil corporation ,12,2037,2,Buy,23-Mar-2018
-INDTOU,India tourism development corp,0,0,0,Sell,27-Dec-2017
-INFEDG,Info edge ,2,2190,2,Buy,18-Sep-2017
-INFTEC,Infosys ,11,9275,9,Buy,17-Mar-2017
-INTAVI,Interglobe aviation ,2,2308,2,Buy,01-Nov-2017
-ITC,Itc ,40,5611,5,Buy,02-Nov-2017
-IVRPRI,Ivrcl assets holdings limite,0,0,0,Sell,20-Nov-2008
-JAIASS,Jaiprakash associates ,0,0,0,Sell,11-Feb-2013
-JAIIRR,Jain irrigation systems ,10,1140,1,Buy,29-Nov-2017
-JINSP,Jindal steel power ,0,0,0,Sell,11-Feb-2013
-JKPAP,Jk paper ,10,1050,1,Buy,02-Jun-2017
-JKTYRE,Jk tyre industries ,14,2387,2,Buy,01-Feb-2018
-JSWSTE,Jsw steel ,10,2200,2,Buy,06-Dec-2017
-JUBFOO,Jubilant foodworks ,2,3017,3,Buy,01-Feb-2018
-KAJCER,Kajaria ceramics ,3,2089,2,Buy,01-Nov-2017
-KANNER,Kansai nerolac paints,5,2353,2,Buy,02-Jan-2018
-KAVSEE,Kaveri seed company ,2,998,0,Buy,02-Feb-2018
-KOTGOL,Kotak gold etf,330,80172,80,Buy,20-Dec-2017
-KOTMAH,Kotak mahindra bank ,2,2049,2,Buy,04-Apr-2018
-KOTNIF,Kotak mahindra mf nifty etf,104,10488,10,Buy,15-Mar-2018
-KRBL,Krbl ,2,970,0,Buy,22-Sep-2017
-KSBPUM,Ksb pumps ,3,2194,2,Buy,04-Apr-2018
-LARTOU,Larsen toubro ,7,6892,6,Buy,04-Apr-2018
-LICHF,Lic housing finance ,3,2060,2,Buy,01-Nov-2017
-LUPIN,Lupin ,6,8943,8,Buy,28-Feb-2017
-MAHFIN,Mahindra mahindra financial,3,1272,1,Buy,03-Oct-2017
-MAHHOL,Mahindra holidays resorts in,6,2184,2,Buy,02-Jan-2018
-MAHLO,Mahindra logistics ,2,950,0,Buy,02-Feb-2018
-MAHMAH,Mahindra mahindra ,4,4502,4,Buy,28-Dec-2017
-MARLIM,Marico ,7,2229,2,Buy,02-Jan-2018
-MARUTI,Maruti suzuki ,1,11300,11,Buy,09-Jun-2017
-MONSIN,Monsanto ,2,5498,5,Buy,04-Apr-2018
-MOTSUM,Motherson sumi systems ,6,2082,2,Buy,06-Dec-2017
-MRFTYR,Mrf ,0,0,0,Sell,08-Nov-2017
-MTNL,Mahanagar telephone nigam ,0,0,0,Sell,11-Nov-2008
-MUTFIN,Muthoot finance ,4,1737,1,Buy,01-Nov-2017
-NAGCON,Ncc ,21,2232,2,Buy,04-Apr-2018
-NARHRU,Narayana hrudayalaya ,7,2198,2,Buy,02-Jan-2018
-NATALU,National aluminium co ,34,2916,2,Buy,01-Sep-2017
-NATMIN,Nmdc ,17,2247,2,Buy,01-Feb-2018
-NBCC,Nbcc ,10,2055,2,Buy,04-Apr-2018
-NESIND,Nestle ,1,6634,6,Buy,09-Jun-2017
-NEWIN,The new assurance co ,2,1478,1,Buy,13-Nov-2017
-NEYLIG,Nlc ,12,1116,1,Buy,03-Oct-2017
-NHPC,Nhpc ,40,1080,1,Buy,03-Oct-2017
-NILLIM,Nilkamal ,1,1968,1,Buy,14-Jun-2017
-NTPC,Ntpc ,42,7043,7,Buy,06-Dec-2017
-OILIND,Oil ,10,2192,2,Buy,06-Apr-2018
-OMALIM,Omaxe ,0,0,0,Sell,11-Nov-2008
-ONGC,Oil natural gas corporatio,25,3130,3,Buy,06-Dec-2017
-ORIBAN,Oriental bank of commerce,0,0,0,Sell,11-Nov-2008
-PAGIND,Page industries ,0,0,0,Sell,08-Nov-2017
-PARDE,Parsvnath developers ,0,0,0,Sell,11-Nov-2008
-PCJEW,Pc jeweller ,4,1020,1,Buy,02-Aug-2017
-PETLNG,Petronet lng ,9,2038,2,Buy,01-Feb-2018
-PFIZER,Pfizer ,1,2506,2,Buy,19-Sep-2017
-PIDIND,Pidilite industries ,3,2528,2,Buy,04-Apr-2018
-PIIND,P i industries ,1,883,0,Buy,02-Feb-2018
-PIRENT,Piramal enterprises ,2,5399,5,Buy,04-Apr-2018
-POWFIN,Power finance corporation ,17,2211,2,Buy,01-Nov-2017
-POWGRI,Power grid corporation of indi,29,5092,5,Buy,27-Feb-2017
-PREEST,Prestige estates projects limi,4,1008,1,Buy,08-Jun-2017
-PROGAM,Procter gamble hygiene hea,1,7950,7,Buy,09-Jun-2017
-PUNBAN,Punjab national bank,0,0,0,Sell,11-Feb-2013
-PURPRO,Puravankara ,23,4659,4,Buy,04-Apr-2018
-PVRLIM,Pvr ,2,2848,2,Buy,02-Jan-2018
-QUECOR,Quess corp ,1,1006,1,Buy,01-Feb-2018
-RAJEXP,Rajesh exports ,4,3638,3,Buy,04-Apr-2018
-RALIND,Rallis ,10,2405,2,Buy,04-Apr-2018
-RELCOM,Reliance communications limite,0,0,0,Sell,01-Jan-2013
-RELFOO,Relaxo footwears ,4,2298,2,Buy,02-Jan-2018
-RELGOL,Reliance shares gold etf,0,0,0,Sell,04-Nov-2016
-RELIND,Reliance industries,15,6869,6,Buy,27-Nov-2017
-RELINF,Reliance infrastructure ,0,0,0,Sell,11-Nov-2008
-RELPOW,Reliance power ,0,0,0,Sell,11-Nov-2008
-RURELE,Rural electrification corporat,12,4612,4,Buy,01-Nov-2017
-SAIL,Steel authority of ,0,0,0,Sell,29-Dec-2017
-SANOFI,Sanofi ,1,4052,4,Buy,19-Sep-2017
-SATCOM,Satyam computer services ,0,0,0,Sell,01-Jan-2013
-SBIGOL,Sbi etf gold,41,112076,112,Buy,09-Apr-2018
-SBILIF,Sbi life insurance company ,2,1436,1,Buy,03-Oct-2017
-SCI,Shipping corp of lt,27,2133,2,Buy,04-Apr-2018
-SHEFOA,Sheela foam ,1,1608,1,Buy,02-Feb-2018
-SHOSTO,Shoppers stop ,5,2055,2,Buy,01-Feb-2018
-SHRCEM,Shree cements ,0,0,0,Sell,08-Nov-2017
-SHRTRA,Shriram transport finance co,1,1062,1,Buy,03-Oct-2017
-SIEMEN,Siemens ,2,2789,2,Buy,02-Jan-2018
-SKFIND,Skf ,1,1814,1,Buy,02-Jun-2017
-SOBDEV,Sobha ,3,1161,1,Buy,08-Jun-2017
-SOMCER,Somany ceramics ,1,857,0,Buy,13-Nov-2017
-STABAN,State bank of ,20,2112,2,Buy,05-May-2017
-STEIND,Sterlite industries ,0,0,0,Sell,11-Feb-2013
-SUNPHA,Sun pharmaceutical industries,15,10790,10,Buy,10-Mar-2017
-SUPIND,Supreme industries ,2,2343,2,Buy,04-Apr-2018
-SUZENE,Suzlon energy ,0,0,0,Sell,01-Jan-2013
-TALWAL,Talwalkars better value fitnes,8,2348,2,Buy,01-Feb-2018
-TATCHE,Tata chemicals ,4,2762,2,Buy,04-Apr-2018
-TATCO,Tata coffee ,15,2206,2,Buy,01-Nov-2017
-TATELX,Tata elxsi ,0,0,0,Sell,11-Nov-2008
-TATGLO,Tata global beverages ,12,2372,2,Buy,01-Nov-2017
-TATMOT,Tata motors ,8,-2231,-3,Buy,08-Sep-2017
-TATPOW,Tata power co ,25,2127,2,Buy,04-Apr-2018
-TATSTE,Tata steel ,11,4464,4,Buy,25-Jan-2017
-TCS,Tata consultancy services ,8,16987,16,Buy,20-Mar-2017
-TECMAH,Tech mahindra ,6,2764,2,Buy,01-Feb-2018
-THOCOO,Thomas cook ,10,2275,2,Buy,01-Feb-2018
-TITIND,Titan company ,6,3771,3,Buy,04-Apr-2018
-TRENT,Trent ,7,2035,2,Buy,04-Apr-2018
-TTKPRE,Ttk prestige ,1,6364,6,Buy,18-Jul-2017
-TUBIN,Tube investments of ,5,1195,1,Buy,04-Apr-2018
-TUBINV,Ti financial holdings ,2,1366,1,Buy,02-Jun-2017
-TVSMOT,Tvs motor company ,4,2318,2,Buy,01-Sep-2017
-ULTCEM,Ultratech cement ,3,12123,12,Buy,25-Jan-2017
-UNIBAN,Union bank of ,0,0,0,Sell,05-Aug-2008
-UNIBR,United breweries ,2,1856,1,Buy,01-Nov-2017
-UNIP,Upl ,7,5152,5,Buy,25-Jan-2017
-UNISPI,United spirits ,5,12586,12,Buy,06-Dec-2017
-UNITEC,Unitech ,0,0,0,Sell,01-Jan-2013
-UTGOLD,Uti gold etf,43,108370,108,Buy,10-Apr-2018
-VARBEV,Varun beverages ,4,2466,2,Buy,02-Jan-2018
-VEDLIM,Vedanta ,20,5100,5,Buy,25-Jan-2017
-VENIND,Venkys ,1,2089,2,Buy,22-Sep-2017
-VIJBAN,Vijaya bank,0,0,0,Sell,11-Nov-2008
-VIPIND,Vip industries ,9,2231,2,Buy,02-Jan-2018
-VOLTAS,Voltas ,4,2126,2,Buy,01-Nov-2017
-VRLLOG,Vrl logistics ,6,2298,2,Buy,01-Feb-2018
-VSTTIL,Vsttillers tractors ,1,2034,2,Buy,12-Jun-2017
-WESDEV,Westlife development ,4,952,0,Buy,08-Sep-2017
-WHIIND,Whirlpool of ,2,2696,2,Buy,04-Apr-2018
-WIPRO,Wipro ,22,6380,6,Buy,21-Jun-2017
-ZEEENT,Zee entertainment enterprises,10,6052,6,Buy,06-Dec-2017
-ZEELEA,Zee learn ,47,2065,2,Buy,01-Nov-2017
+3mind,3m ,0,0,0,Sell,08-Nov-2017
+Abb,Abb ,2,3062,3,Buy,02-Jan-2018
+Abbind,Abbott ,1,4088,4,Buy,19-Sep-2017
+Acc,Acc ,2,3923,3,Buy,01-Nov-2017
+Adaent,Adani enterprises ,17,2181,2,Buy,06-Dec-2017
+Adapor,Adani port special econo,3,1128,1,Buy,29-Sep-2017
+Adibir,Aditya birla nuvo ,0,0,0,Sell,14-Nov-2008
+Adifas,Aditya birla fashion rtl ,13,2081,2,Buy,04-Apr-2018
+Aeglog,Aegis logistics ,4,1072,1,Buy,02-Feb-2018
+Akznob,Akzo nobel ,1,1810,1,Buy,17-Jul-2017
+Allban,Allahabad bank,0,0,0,Sell,11-Nov-2008
+Alllog,Allcargo logistics ,5,945,0,Buy,02-Feb-2018
+Amaraj,Amara raja batteries ,1,879,0,Buy,05-Jun-2017
+Ambce,Ambuja cements ,9,1977,1,Buy,02-Jan-2018
+Andban,Andhra bank,0,0,0,Sell,11-Nov-2008
+Anspro,Ansal properties infrastruct,0,0,0,Sell,11-Nov-2008
+Apohos,Apollo hospitals enterprises l,6,7209,7,Buy,06-Dec-2017
+Apotyr,Apollo tyres ,9,2255,2,Buy,01-Feb-2018
+Arvlim,Arvind ,3,1233,1,Buy,18-Sep-2017
+Asaind,Asahi glass ,7,3306,3,Buy,06-Dec-2017
+Asigra,Asian granito ,2,1064,1,Buy,02-Feb-2018
+Asipai,Asian paints ,8,8215,8,Buy,06-Dec-2017
+Aurpha,Aurobindo pharma ,3,2145,2,Buy,02-Jan-2018
+Avafee,Avanti feeds ,2,4049,4,Buy,06-Dec-2017
+Avesup,Avenue supermarts dmart,1,1231,1,Buy,16-Oct-2017
+Axiban,Axis bank ,4,2010,2,Buy,04-Apr-2018
+Baauto,Bajaj auto ,2,5594,5,Buy,04-Apr-2018
+Bafins,Bajaj finserv ,1,5618,5,Buy,19-Sep-2017
+Balchi,Balrampur chini mills ,8,1272,1,Buy,13-Nov-2017
+Balind,Balkrishna industries ,2,1702,1,Buy,02-Jan-2018
+Banbar,Bank of baroda,0,0,0,Sell,11-Nov-2008
+Basf,Basf ,2,3376,3,Buy,04-Apr-2018
+Batind,Bata ,4,2560,2,Buy,06-Dec-2017
+Bayind,Bayer cropscience ,1,4716,4,Buy,09-Jun-2017
+Berpai,Berger paints ,8,2032,2,Buy,01-Feb-2018
+Bha22,Icici prud mf bharat 22 etf,278,9730,9,Buy,27-Nov-2017
+Bhaair,Bharti airtel ,27,9349,9,Buy,27-Nov-2017
+Bhaele,Bharat electronics ,13,7336,7,Buy,04-Apr-2018
+Bhainf,Bharti infratel ,3,1227,1,Buy,03-Oct-2017
+Bhapet,Bharat petroleum corpn ,5,1542,1,Buy,02-Jan-2018
+Bhel,Bharat heavy electricals ,27,2743,2,Buy,04-Apr-2018
+Bludar,Blue dart express ,1,4426,4,Buy,30-May-2017
+Blusta,Blue star ,1,731,0,Buy,28-Nov-2017
+Boslim,Bosch ,0,0,0,Sell,08-Nov-2017
+Brient,Brigade enterprises ,4,1072,1,Buy,08-Jun-2017
+Briind,Britannia industries ,2,8708,8,Buy,04-Apr-2018
+Bse,Bse ,1,982,0,Buy,28-Sep-2017
+Cadhea,Cadila healthcare ,2,970,0,Buy,19-Sep-2017
+Caiind,Cairn ,0,0,0,Sell,11-Feb-2013
+Canban,Canara bank,0,0,0,Sell,11-Nov-2008
+Care,Care ratings ,2,2841,2,Buy,01-Feb-2018
+Caruni,Carborundum universal ,4,1312,1,Buy,17-Oct-2017
+Casind,Castrol ,12,2424,2,Buy,04-Jan-2018
+Cdsl,Central depository ser ind ,3,1020,1,Buy,28-Sep-2017
+Ceat,Ceat ,1,1891,1,Buy,11-Jul-2017
+Cenban,Central bank of ,0,0,0,Sell,11-Nov-2008
+Cenply,Century plyboards ,7,2063,2,Buy,01-Feb-2018
+Cersan,Cera sanitaryware ,1,3037,3,Buy,14-Jun-2017
+Chafer,Chambal fertilisers chemical,7,1008,1,Buy,16-Oct-2017
+Cipla,Cipla ,4,811,0,Buy,02-Jan-2018
+Cnklim,Cox kings ,8,2060,2,Buy,01-Feb-2018
+Coalin,Coal ,31,10064,10,Buy,27-Nov-2017
+Cofday,Coffee day enterprises ,8,2208,2,Buy,04-Apr-2018
+Colpal,Colgate palmolive ,2,2164,2,Buy,04-Apr-2018
+Concor,Container corporation of ,2,4474,4,Buy,04-Apr-2018
+Corint,Coromandel international limit,5,2275,2,Buy,01-Nov-2017
+Cpsetf,Cpse etf,680,11638,11,Buy,09-Oct-2017
+Crisil,Crisil ,2,3725,3,Buy,04-Apr-2018
+Crogr,Crompton greaves cons elec ,4,1024,1,Buy,28-Nov-2017
+Cumind,Cummins ,3,2678,2,Buy,06-Dec-2017
+Dabind,Dabur ,7,2179,2,Buy,02-Jan-2018
+Dishtv,Dish tv ,28,2111,2,Buy,01-Feb-2018
+Dlflim,Dlf ,10,8597,8,Buy,02-Jan-2018
+Drlal,Dr lal pathlabs ,1,805,0,Buy,19-Sep-2017
+Drredd,Dr reddys laboratories ,2,4120,4,Buy,04-Apr-2018
+Eicmot,Eicher motors ,0,0,0,Sell,08-Nov-2017
+Eidpar,Eid parry ,6,1977,1,Buy,01-Feb-2018
+Eihlim,Eih ,15,2086,2,Buy,02-Jan-2018
+Emalim,Emami ,2,2412,2,Buy,02-Jan-2018
+Engind,Engineers ,7,1113,1,Buy,08-Sep-2017
+Esspro,Essel propack ,4,1051,1,Buy,28-May-2018
+Eveind,Eveready industries ,6,1959,1,Buy,01-Nov-2017
+Exiind,Exide industries ,5,1105,1,Buy,16-Jun-2017
+Forhea,Fortis healthcare ,13,2040,2,Buy,04-Apr-2018
+Futlif,Future lifestyle fashions ,6,2160,2,Buy,01-Feb-2018
+Futre,Future retail ,5,2286,2,Buy,01-Feb-2018
+Futret,Future enterprises ,0,0,0,Sell,11-Nov-2008
+Futsup,Future supply chain sol ,2,1344,1,Buy,02-Feb-2018
+Futven,Future consumer ,20,1140,1,Buy,02-Feb-2018
+Gail,Gail ,6,2312,2,Buy,10-Apr-2018
+Gic,General insurance corp ,2,1598,1,Buy,25-Oct-2017
+Gilind,Gillette ,1,4863,4,Buy,12-Jun-2017
+Glacon,Glaxosmithkline consumer healt,1,5069,5,Buy,19-Sep-2017
+Glepha,Glenmark pharmaceuticals ,2,1228,1,Buy,19-Sep-2017
+Godagr,Godrej agrovet ,2,1180,1,Buy,16-Oct-2017
+Godcon,Godrej consumer products ,1,935,0,Buy,25-Sep-2017
+Godind,Godrej industries ,2,1218,1,Buy,16-Oct-2017
+Godpro,Godrej properties ,2,1040,1,Buy,08-Jun-2017
+Goldex,Reliance etf gold bees,60,154724,154,Buy,17-Oct-2017
+Grasim,Grasim industries ,1,1746,1,Buy,16-Oct-2017
+Greein,Greenlam industries ,2,2221,2,Buy,01-Feb-2018
+Grinor,Grindwell norton ,3,1290,1,Buy,17-Oct-2017
+Havind,Havells ,3,1431,1,Buy,31-Jul-2017
+Hcltec,Hcl technologies ,6,1432,1,Buy,27-Feb-2017
+Hdfban,Hdfc bank ,18,15451,15,Buy,14-Mar-2017
+Hdfc,Housing development finance co,8,10973,10,Buy,06-Dec-2017
+Hdfgol,Hdfc gold etf,50,139773,139,Buy,19-Apr-2018
+Hdfsta,Hdfc standard life ins co ,3,1035,1,Buy,17-Nov-2017
+Herhon,Hero motocorp ,1,3916,3,Buy,09-Jun-2017
+Hindal,Hindalco industries ,9,1705,1,Buy,01-Sep-2017
+Hinlev,Hindustan unilever ,7,2393,2,Buy,04-Apr-2018
+Hinpet,Hindustan petroleum corp,6,3140,3,Buy,02-Jan-2018
+Hinzin,Hindustan zinc ,8,2090,2,Buy,02-Jan-2018
+Hithom,Johnson controls hitachi air i,1,2064,2,Buy,17-Oct-2017
+Honaut,Honeywell automation ,0,0,0,Sell,08-Nov-2017
+Hotlee,Hotel leela venture ,0,0,0,Sell,11-Nov-2008
+Hsilim,Hsil ,6,2379,2,Buy,04-Apr-2018
+Hudco,Housing urban dev co hudco,12,1056,1,Buy,19-Sep-2017
+Huhppl,Huhtamaki ppl ,3,945,0,Buy,28-May-2018
+Ici100,Icici prudential nifty 100 etf,50,5645,5,Buy,21-Mar-2018
+Iciban,Icici bank ,16,5251,5,Buy,06-Dec-2017
+Icilom,Icici lombard gen insurance co,2,1354,1,Buy,27-Sep-2017
+Icimid,Icici pru midcap select etf,66,4805,4,Buy,07-Mar-2018
+Icipru,Icici prudential life ins co,6,2436,2,Buy,01-Nov-2017
+Icrlim,Icra ,1,4139,4,Buy,22-Jun-2017
+Idbi,Idbi bank ,0,0,0,Sell,05-Aug-2008
+Idecel,Idea cellular ,21,2368,2,Buy,01-Nov-2017
+Ifbind,Ifb industries ,1,1359,1,Buy,28-Nov-2017
+Indcem,India cements ,0,0,0,Sell,11-Nov-2008
+Indho,Indiabulls housing finance ,1,1242,1,Buy,03-Oct-2017
+Indhot,Indian hotels co ,56,9869,9,Buy,06-Dec-2017
+Indiba,Indian bank,0,0,0,Sell,11-Nov-2008
+Indoil,Indian oil corporation ,12,2037,2,Buy,23-Mar-2018
+Indtou,India tourism development corp,0,0,0,Sell,27-Dec-2017
+Infedg,Info edge ,2,2190,2,Buy,18-Sep-2017
+Inftec,Infosys ,11,9275,9,Buy,17-Mar-2017
+Intavi,Interglobe aviation ,2,2308,2,Buy,01-Nov-2017
+Itc,Itc ,40,5611,5,Buy,02-Nov-2017
+Ivrpri,Ivrcl assets holdings limite,0,0,0,Sell,20-Nov-2008
+Jaiass,Jaiprakash associates ,0,0,0,Sell,11-Feb-2013
+Jaiirr,Jain irrigation systems ,10,1140,1,Buy,29-Nov-2017
+Jinsp,Jindal steel power ,0,0,0,Sell,11-Feb-2013
+Jkpap,Jk paper ,10,1050,1,Buy,02-Jun-2017
+Jktyre,Jk tyre industries ,14,2387,2,Buy,01-Feb-2018
+Jswste,Jsw steel ,10,2200,2,Buy,06-Dec-2017
+Jubfoo,Jubilant foodworks ,2,3017,3,Buy,01-Feb-2018
+Kajcer,Kajaria ceramics ,3,2089,2,Buy,01-Nov-2017
+Kanner,Kansai nerolac paints,5,2353,2,Buy,02-Jan-2018
+Kavsee,Kaveri seed company ,2,998,0,Buy,02-Feb-2018
+Kotgol,Kotak gold etf,330,80172,80,Buy,20-Dec-2017
+Kotmah,Kotak mahindra bank ,2,2049,2,Buy,04-Apr-2018
+Kotnif,Kotak mahindra mf nifty etf,104,10488,10,Buy,15-Mar-2018
+Krbl,Krbl ,2,970,0,Buy,22-Sep-2017
+Ksbpum,Ksb pumps ,3,2194,2,Buy,04-Apr-2018
+Lartou,Larsen toubro ,7,6892,6,Buy,04-Apr-2018
+Lichf,Lic housing finance ,3,2060,2,Buy,01-Nov-2017
+Ltfina,Lt finance holdings ,6,1026,1,Buy,28-May-2018
+Ltinfo,Larsen toubro infotech ,1,1657,1,Buy,28-May-2018
+Lttec,L&t technologies ,1,1304,1,Buy,28-May-2018
+Lupin,Lupin ,6,8943,8,Buy,28-Feb-2017
+Mahcie,Mahindra cie automotive ,4,944,0,Buy,28-May-2018
+Mahfin,Mahindra mahindra financial,3,1272,1,Buy,03-Oct-2017
+Mahhol,Mahindra holidays resorts in,6,2184,2,Buy,02-Jan-2018
+Mahlo,Mahindra logistics ,2,950,0,Buy,02-Feb-2018
+Mahmah,Mahindra mahindra ,4,4502,4,Buy,28-Dec-2017
+Manafi,Manappuram finance ,10,1210,1,Buy,18-Apr-2018
+Marlim,Marico ,7,2229,2,Buy,02-Jan-2018
+Maruti,Maruti suzuki ,1,11300,11,Buy,09-Jun-2017
+Monsin,Monsanto ,2,5498,5,Buy,04-Apr-2018
+Motsum,Motherson sumi systems ,6,2082,2,Buy,06-Dec-2017
+Mrftyr,Mrf ,0,0,0,Sell,08-Nov-2017
+Mtnl,Mahanagar telephone nigam ,0,0,0,Sell,11-Nov-2008
+Mutfin,Muthoot finance ,4,1737,1,Buy,01-Nov-2017
+Nagcon,Ncc ,21,2232,2,Buy,04-Apr-2018
+Narhru,Narayana hrudayalaya ,7,2198,2,Buy,02-Jan-2018
+Natalu,National aluminium co ,34,2916,2,Buy,01-Sep-2017
+Natmin,Nmdc ,17,2247,2,Buy,01-Feb-2018
+Nbcc,Nbcc ,20,2050,2,Buy,04-Apr-2018
+Nesind,Nestle ,1,6634,6,Buy,09-Jun-2017
+Newin,The new assurance co ,2,1478,1,Buy,13-Nov-2017
+Neylig,Nlc ,12,1116,1,Buy,03-Oct-2017
+Nhpc,Nhpc ,40,1080,1,Buy,03-Oct-2017
+Nillim,Nilkamal ,1,1968,1,Buy,14-Jun-2017
+Ntpc,Ntpc ,42,7043,7,Buy,06-Dec-2017
+Oilind,Oil ,10,2192,2,Buy,06-Apr-2018
+Omalim,Omaxe ,0,0,0,Sell,11-Nov-2008
+Ongc,Oil natural gas corporatio,25,3130,3,Buy,06-Dec-2017
+Oriban,Oriental bank of commerce,0,0,0,Sell,11-Nov-2008
+Pagind,Page industries ,0,0,0,Sell,08-Nov-2017
+Parde,Parsvnath developers ,0,0,0,Sell,11-Nov-2008
+Pcjew,Pc jeweller ,4,1020,1,Buy,02-Aug-2017
+Petlng,Petronet lng ,9,2038,2,Buy,01-Feb-2018
+Pfizer,Pfizer ,1,2506,2,Buy,19-Sep-2017
+Pidind,Pidilite industries ,3,2528,2,Buy,04-Apr-2018
+Piind,P i industries ,1,883,0,Buy,02-Feb-2018
+Pirent,Piramal enterprises ,2,5399,5,Buy,04-Apr-2018
+Powfin,Power finance corporation ,17,2211,2,Buy,01-Nov-2017
+Powgri,Power grid corporation of indi,29,5092,5,Buy,27-Feb-2017
+Preest,Prestige estates projects limi,4,1008,1,Buy,08-Jun-2017
+Progam,Procter gamble hygiene hea,1,7950,7,Buy,09-Jun-2017
+Punban,Punjab national bank,0,0,0,Sell,11-Feb-2013
+Purpro,Puravankara ,23,4659,4,Buy,04-Apr-2018
+Pvrlim,Pvr ,2,2848,2,Buy,02-Jan-2018
+Quecor,Quess corp ,1,1006,1,Buy,01-Feb-2018
+Rajexp,Rajesh exports ,4,3638,3,Buy,04-Apr-2018
+Ralind,Rallis ,10,2405,2,Buy,04-Apr-2018
+Relcom,Reliance communications limite,0,0,0,Sell,01-Jan-2013
+Relfoo,Relaxo footwears ,4,2298,2,Buy,02-Jan-2018
+Relgol,Reliance shares gold etf,0,0,0,Sell,04-Nov-2016
+Relind,Reliance industries,15,6869,6,Buy,27-Nov-2017
+Relinf,Reliance infrastructure ,0,0,0,Sell,11-Nov-2008
+Relpow,Reliance power ,0,0,0,Sell,11-Nov-2008
+Rurele,Rural electrification corporat,12,4612,4,Buy,01-Nov-2017
+Sail,Steel authority of ,0,0,0,Sell,29-Dec-2017
+Sanofi,Sanofi ,1,4052,4,Buy,19-Sep-2017
+Satcom,Satyam computer services ,0,0,0,Sell,01-Jan-2013
+Sbigol,Sbi etf gold,43,117714,117,Buy,07-Jun-2018
+Sbilif,Sbi life insurance company ,2,1436,1,Buy,03-Oct-2017
+Sci,Shipping corp of lt,27,2133,2,Buy,04-Apr-2018
+Shefoa,Sheela foam ,1,1608,1,Buy,02-Feb-2018
+Shosto,Shoppers stop ,5,2055,2,Buy,01-Feb-2018
+Shrcem,Shree cements ,0,0,0,Sell,08-Nov-2017
+Shrtra,Shriram transport finance co,1,1062,1,Buy,03-Oct-2017
+Siemen,Siemens ,2,2789,2,Buy,02-Jan-2018
+Skfind,Skf ,1,1814,1,Buy,02-Jun-2017
+Sobdev,Sobha ,3,1161,1,Buy,08-Jun-2017
+Somcer,Somany ceramics ,1,857,0,Buy,13-Nov-2017
+Staban,State bank of ,20,2112,2,Buy,05-May-2017
+Steind,Sterlite industries ,0,0,0,Sell,11-Feb-2013
+Sunpha,Sun pharmaceutical industries,15,10790,10,Buy,10-Mar-2017
+Supind,Supreme industries ,2,2343,2,Buy,04-Apr-2018
+Suzene,Suzlon energy ,0,0,0,Sell,01-Jan-2013
+Talwal,Talwalkars better value fitnes,8,2348,2,Buy,01-Feb-2018
+Tatche,Tata chemicals ,4,2762,2,Buy,04-Apr-2018
+Tatco,Tata coffee ,15,2206,2,Buy,01-Nov-2017
+Tatelx,Tata elxsi ,0,0,0,Sell,11-Nov-2008
+Tatglo,Tata global beverages ,12,2372,2,Buy,01-Nov-2017
+Tatmot,Tata motors ,8,-2231,-3,Buy,08-Sep-2017
+Tatpow,Tata power co ,25,2127,2,Buy,04-Apr-2018
+Tatste,Tata steel ,11,4464,4,Buy,25-Jan-2017
+Tcs,Tata consultancy services ,16,16987,16,Buy,05-Jun-2018
+Tecmah,Tech mahindra ,6,2764,2,Buy,01-Feb-2018
+Thocoo,Thomas cook ,10,2275,2,Buy,01-Feb-2018
+Titind,Titan company ,6,3771,3,Buy,04-Apr-2018
+Trent,Trent ,7,2035,2,Buy,04-Apr-2018
+Ttkpre,Ttk prestige ,1,6364,6,Buy,18-Jul-2017
+Tubin,Tube investments of ,5,1195,1,Buy,04-Apr-2018
+Tubinv,Ti financial holdings ,2,1366,1,Buy,02-Jun-2017
+Tvsmot,Tvs motor company ,4,2318,2,Buy,01-Sep-2017
+Ufllim,Uflex ,4,1136,1,Buy,28-May-2018
+Ultcem,Ultratech cement ,3,12123,12,Buy,25-Jan-2017
+Uniban,Union bank of ,0,0,0,Sell,05-Aug-2008
+Unibr,United breweries ,2,1856,1,Buy,01-Nov-2017
+Unip,Upl ,7,5152,5,Buy,25-Jan-2017
+Unispi,United spirits ,25,12580,12,Buy,06-Dec-2017
+Unitec,Unitech ,0,0,0,Sell,01-Jan-2013
+Utgold,Uti gold etf,45,113994,113,Buy,11-Jun-2018
+Varbev,Varun beverages ,4,2466,2,Buy,02-Jan-2018
+Vedlim,Vedanta ,20,5100,5,Buy,25-Jan-2017
+Venind,Venkys ,1,2089,2,Buy,22-Sep-2017
+Vguard,V guard industries ,4,984,0,Buy,19-Apr-2018
+Vijban,Vijaya bank,0,0,0,Sell,11-Nov-2008
+Vipind,Vip industries ,9,2231,2,Buy,02-Jan-2018
+Voltas,Voltas ,4,2126,2,Buy,01-Nov-2017
+Vrllog,Vrl logistics ,6,2298,2,Buy,01-Feb-2018
+Vsttil,Vsttillers tractors ,1,2034,2,Buy,12-Jun-2017
+Wesdev,Westlife development ,4,952,0,Buy,08-Sep-2017
+Whiind,Whirlpool of ,2,2696,2,Buy,04-Apr-2018
+Wipro,Wipro ,22,6380,6,Buy,21-Jun-2017
+Wonhol,Wonderla holidays ,3,1095,1,Buy,18-Apr-2018
+Zeeent,Zee entertainment enterprises,10,6052,6,Buy,06-Dec-2017
+Zeelea,Zee learn ,47,2065,2,Buy,01-Nov-2017

@@ -5,11 +5,11 @@ Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
 ,Units,4,2,2,,
-Aluminium,Company,,Hindalco,NALCO,BALCO,
+Aluminium,Company,,Hindalco,National aluminium,BALCO,
 ,Units,4,2,2,0,
 Aquaculture,Company,,Avanti Feeds,Godrej AgroVet,IFB Agro,Kaveri Seeds
 ,Units,7,2,2,0,3
-Auto - 2 & 3 Wheelers,Company,,Hero Motocorp,Bajaj Auto,TVS Motors,Tube Investments of India Limited
+Auto - 2 & 3 Wheelers,Company,,Hero Motocorp,Bajaj Auto,TVS Motor,Tube Investments of India Limited
 ,Units,17,5,5,5,2
 Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
@@ -47,16 +47,16 @@ Cement - Products & Building Materials,,,,,,
 Group 3,,,,,,
 Ceramics & Granite,Company,,Kajaria Ceramics,Cera,HSIL,Somany Ceramics
 ,Units,8,2,2,2,2
-Ceramics & Granite,Company,,AGL,Sheela foam,,
+Ceramics & Granite,Company,,Asian Granito,Sheela foam,,
 ,Units,4,2,2,,
-Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilte
+Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilite
 ,Units,8,2,2,2,2
 Cigarettes,Company,,ITC,,,
 ,Units,10,10,,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
 ,Units,2,2,0,0,0
 Computers - Hardware,,,,,,
-Computers - Software,Company,,TCS,Infosys,Wipro ,Tech Mahindra
+Computers - Software,Company,,Tata Consultancy,Infosys,Wipro ,Tech Mahindra
 ,Units,30,10,10,5,5
 Computers - Software,Company,,HCL Tech,Info Edge,L&T Infotech,
 ,Units,12,5,5,2,
@@ -70,16 +70,16 @@ Construction & Contracting - Housing,Company,,Asiana Housing,,,
 ,Units,,0,,,
 Construction & Contracting - Real Estate,Company,,DLF,Prestige,HUDCO,Brigade
 ,Units,14,5,5,2,2
-Construction & Contracting - Real Estate,Company,,Sobha,Godrej Properties,Puravankara Projects,
+Construction & Contracting - Real Estate,Company,,Sobha,Godrej Properties,Puravankara,
 ,Units,6,2,2,2,
 Consumer Goods - Electronic,Company,,Voltas,,,
 ,Units,2,2,,,
-Consumer Goods - White Goods,Company,,Whirlpool,Johnson Control,Blue Star,IFB Industries
+Consumer Goods - White Goods,Company,,Whirlpool,Johnson Controls Hitachi,Blue Star,IFB Industries
 ,Units,8,2,2,2,2
 Couriers,Company,,BlueDart Express,DTDC,,
 ,Units,4,4,0,,
 Detergents,,,,,,
-Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C Jewellers,
+Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C Jeweller,
 ,Units,9,5,2,2,
 Group 5,,,,,,
 Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
@@ -94,7 +94,7 @@ Dyes & Pigments,,,,,,
 Edible Oils & Solvent Extraction,,,,,,
 Electric Equipment,Company,,Havells,V-Guard,,
 ,Units,4,2,2,,
-Electricals,Company,,Bharat Electronics,Crompton Greaves Consumer,,
+Electricals,Company,,Bharat Electronics,Crompton Greaves,,
 ,Units,7,5,2,,
 Electrodes & Graphite,,,Graphite India,,,
 Engineering,Company,,Quess Corp,,,
@@ -105,39 +105,39 @@ Engines,Company,,Cummins,,,
 ,Units,2,2,,,
 Fasteners,Company,,Sundaram Fasteners,,,
 ,Units,,0,,,
-Fertilisers,Company,,Coromandel International,Chambal Fertilisers & Chemicals Ltd ,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
+Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
-Finance - Insurance,Company,,ICICI Lombard General Insurance,New India Assurance,GIC RE,IIFL Holdings
+Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
 ,Units,15,5,5,5,0
-Finance - Insurance,Company,,ICICI Prudential Life Insurance,SBI Life,HDFC Standard Life,
+Finance - Insurance,Company,,ICICI Prudential,SBI Life,HDFC Standard Life,
 ,Units,15,5,5,5,
-Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance Limited
+Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance
 ,Units,18,10,5,3,0
-Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,CDSL,BSE
+Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,Central Depository,BSE
 ,Units,12,5,3,2,2
 Finance - Investments,Company,,TI financial holding,L&T Finance Holdings,Aditya Birla Capital,Tata Investment Corp
 ,Units,8,2,2,2,2
-Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance Corp,Mahindra & Mahindra Finance,Manappuram Finance
+Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Finance,Manappuram Finance
 ,Units,8,0,3,3,2
 Finance - Term Lending Institutions,Company,,Power Finance,REC,,
 ,Units,10,5,5,,
 Group 7,,,,,,
-Food Processing,Company,,Nestle,Britania,GSK Consumer,Varun Beverages
+Food Processing,Company,,Nestle,Britannia,GlaxoSmithKline Consumer,Varun Beverages
 ,Units,20,5,5,5,5
-Food Processing,Company,,Cafe Coffee Day,KRBL,Venkys India,Future Consumer Limited
+Food Processing,Company,,Coffee Day,KRBL,Venkys India,Future Consumer Limited
 ,Units,8,2,2,2,2
 Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Units,2,2,0,0,0
-Hospitals & Medical Services,Company,,Apollo,Narayana Harudalya,Fortis Healthcare,HCG
+Hospitals & Medical Services,Company,,Apollo Hospitals,Narayana Hrudayalaya,Fortis Healthcare,HCG
 ,Units,15,10,3,2,0
-Hospitals & Medical Services,Company,,Aster DM Healthcare,,,
+Hospitals & Medical Services,Company,,Aster DM,,,
 ,Units,5,5,,,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
 ,Units,20,10,3,5,2
 Hotels,Company,,WestLife Development,ITDC,Barbeque Nation,Yum India
 ,Units,4,2,2,0,0
-Infrastructure - General,Company,,L&T,Adani Ports & Special Economic Zone,Siemens India,ABB India
+Infrastructure - General,Company,,Larsen & Toubro ,Adani Ports,Siemens India,ABB India
 ,Units,25,10,5,5,5
 Infrastructure - General,Company,,BHEL,NBCC,Engineers India,Schneider Electric Infrastructure
 ,Units,15,5,5,5,0
@@ -159,10 +159,10 @@ Packaging,Company,,Uflex,Essel Propack,Huhtamaki PPL,
 ,Units,6,2,2,2,
 Paints & Varnishes,Company,,Asian Paints,Kansai Nerolac,Berger Paints,Akzo Nobel
 ,Units,20,10,5,3,2
-Paper,Company,,J K Paper,,,
+Paper,Company,,JK Paper,,,
 ,Units,2,2,,,
 Group 9,,,,,,
-Personal Care,Company,,HUL,Colgate Palmolive India,P & G,Gillette India
+Personal Care,Company,,Hindustan Unilever,Colgate Palmolive India,Procter & Gamble,Gillette India
 ,Units,20,10,2,6,2
 Personal Care,Company,,Dabur,Marico,Emami,Godrej Consumer Products
 ,Units,20,5,5,5,5
@@ -171,13 +171,13 @@ Pesticides & Agro Chemicals,Company,,Bayer Cropscience,P I Industries,Rallis Ind
 Petrochemicals,,,,,,
 Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 ,Units,20,5,5,5,5
-Pharmaceuticals,Company,,Dr. Reddy Labs,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
+Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abott India,Pfizer,Dr Lalpath labs
+Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Pathlabs
 ,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,,
 ,Units,10,5,5,,
-Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrrigation Systems
+Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrigation
 ,Units,11,2,2,5,2
 Power - Generation & Distribution,Company,,NTPC ,Power Grid Corp ,NHPC ,Tata Power
 ,Units,20,10,5,3,2
@@ -192,7 +192,7 @@ Refineries,Company,,Reliance Industries,IOC,BPCL,HPCL
 ,Units,22,10,5,4,3
 Retail,Company,,Aditya Birla Fashion & Retail,Trent,Shoppers Stop,Future Retail 
 ,Units,8,2,2,2,2
-Retail,Company,,Future Lifestyle Fashion,Avenue Supermarket,,
+Retail,Company,,Future Lifestyle Fashion,Avenue Supermarts,,
 ,Units,4,2,2,,
 Rubber,Company,,Apar Industries,COSCO INDIA,,
 ,Units,0,0,0,,
@@ -238,7 +238,7 @@ Transport & Logistics,Company,,Interglobe Aviation,Container Corporation,VRL Log
 ,Units,12,5,3,2,2
 Transport & Logistics,Company,,Aegis logistics,Mahindra Logistics,Future Supply Chain,
 ,Units,6,2,2,2,
-Tyres,Company,,MRF,Apollo Tyres,CEAT ,J K Tyre 
+Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre 
 ,Units,11,5,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Units,2,2,0,0,0
@@ -248,7 +248,7 @@ Group 12,,,,,,
 Miscellaneous,,,,,,
 MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE,IndiaRatings
 ,Units,10,5,3,2,0
-Misc: Hospitality,Company,,Thomas Cook,Cox & Kings : Travels,Jubilant Food ,Wonderla Holidays Limited
+Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Units,8,2,2,2,2
 Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 ,Units,2,2,,,

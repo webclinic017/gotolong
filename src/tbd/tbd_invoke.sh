@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=0
+DEBUG_LEVEL=1
 
 PLAN_FILE=$PROJ_DATA_LOC/plan-data/plan-data.csv
 DEMAT_FILE=$PROJ_DATA_LOC/demat-data/demat-data.csv

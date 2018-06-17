@@ -1,38 +1,38 @@
 comp_name, plan_units_1k
 3m, 5
 Abb , 5
-Abott , 2
+Abbott , 2
 Acc, 3
 Adani enterprises , 2
-Adani ports & special economic zone, 5
+Adani ports, 5
 Aditya birla capital, 2
-Aditya birla fashion & retail, 2
+Aditya birla fashion retail, 2
 Aegis logistics, 2
-Agl, 2
 Aia, 0
 Akzo nobel, 2
 Allcargo logistics, 2
 Amara raja batteries, 1
 Ambuja, 3
 Apar industries, 0
-Apollo, 10
+Apollo hospitals, 10
 Apollo tyres, 2
 Arvind , 3
 Asahi glass, 2
 Ashok leyland, 0
+Asian granito, 2
 Asian paints, 10
 Asiana housing, 0
-Aster dm healthcare, 5
+Aster dm, 5
 Aurobindo pharma, 5
 Avanti feeds, 2
-Avenue supermarket, 2
+Avenue supermarts, 2
 Axis bank, 2
 Bajaj auto, 5
 Bajaj electric, 0
 Bajaj finance, 0
 Bajaj finserv, 3
 Bajaj hindustan, 0
-Bajaj holdings & investments, 0
+Bajaj holdings investments, 0
 Balco, 0
 Balkrishna industries, 2
 Balrampur chini mills, 2
@@ -52,35 +52,35 @@ Bluedart express, 4
 Bosch, 2
 Bpcl, 4
 Brigade, 2
-Britania, 5
+Britannia, 5
 Bse, 2
 Cadila healthcare, 3
-Cafe coffee day, 2
 Carborundum universal , 2
 Care, 2
 Castrol, 2
-Cdsl, 2
 Ceat , 2
+Central depository, 2
 Century plyboard, 2
 Cera, 2
-Chambal fertilisers & chemicals , 2
+Chambal fertilisers, 2
 Cipla, 5
 Coal , 10
 Cochin shipyard , 0
+Coffee day, 2
 Colgate palmolive , 2
 Container corporation, 3
 Coromandel international, 2
 Cosco , 0
-Cox & kings : travels, 2
+Cox kings, 2
 Crisil, 3
-Crompton greaves consumer, 2
+Crompton greaves, 2
 Cummins, 2
 Dabur, 5
-Dewan housing finance , 0
+Dewan housing finance, 0
 Dish tv, 5
 Dlf, 5
-Dr lalpath labs, 2
-Dr. reddy labs, 5
+Dr lal pathlabs, 2
+Dr reddys laboratories, 5
 Dtdc, 0
 Educomp, 0
 Eicher motors, 2
@@ -102,8 +102,9 @@ Gail, 4
 Gammon, 0
 Ge power , 0
 Ge t&d , 0
-Gic re, 5
+General insurance, 5
 Gillette , 2
+Glaxosmithkline consumer, 5
 Glenmark pharma, 3
 Godrej agrovet, 2
 Godrej consumer products, 5
@@ -115,7 +116,6 @@ Great eastern shipping, 0
 Greenlam, 2
 Greenply, 0
 Grindwell norton, 2
-Gsk consumer, 5
 Gulf oil, 0
 Havells, 2
 Hawkins cooker, 0
@@ -128,16 +128,16 @@ Hdfc standard life, 5
 Heidelberg cement, 0
 Hero motocorp, 5
 Hindalco, 2
+Hindustan unilever, 10
 Hindustan zinc, 5
 Honeywell automation , 5
 Hpcl, 3
 Hsil, 2
 Hudco, 2
 Huhtamaki ppl, 2
-Hul, 10
 Icici, 5
-Icici lombard general insurance, 5
-Icici prudential life insurance, 5
+Icici lombard, 5
+Icici prudential, 5
 Icra, 5
 Idea, 5
 Ifb agro, 0
@@ -154,10 +154,10 @@ Interglobe aviation, 5
 Ioc, 5
 Itc, 10
 Itdc, 2
-J k paper, 2
-J k tyre , 2
-Jain irrrigation systems, 2
-Johnson control, 2
+Jain irrigation, 2
+Jk paper, 2
+Jk tyre , 2
+Johnson controls hitachi, 2
 Jsw steel, 5
 Jubilant food , 2
 Kajaria ceramics, 2
@@ -168,21 +168,21 @@ Kirloskar brothers , 0
 Kotak mahindra bank, 2
 Krbl, 2
 Ksb pumps, 2
-L&t, 10
 L&t finance holdings, 2
 L&t infotech, 2
 L&t technology services, 2
 La opala, 0
+Larsen toubro , 10
 Lemon tree hotels, 2
 Liberty shoes, 0
 Lic housing finance, 5
 Lupin, 5
 M&m , 0
-Mahindra & mahindra, 5
-Mahindra & mahindra finance, 3
 Mahindra cie, 2
 Mahindra holidays, 5
 Mahindra logistics, 2
+Mahindra mahindra, 5
+Mahindra mahindra finance, 3
 Manappuram finance, 2
 Marico, 5
 Maruti suzuki, 5
@@ -190,13 +190,12 @@ Monsanto , 5
 Motherson sumi, 2
 Mrf, 5
 Muthoot finance, 5
-Nalco, 2
-Narayana harudalya, 3
+Narayana hrudayalaya, 3
+National aluminium, 2
 National fertilizer , 0
 Nbcc, 5
 Ncc, 2
 Nestle, 5
-New assurance, 5
 Nhpc , 3
 Niit, 0
 Nilkamal, 2
@@ -205,27 +204,27 @@ Nmdc, 5
 Ntpc , 10
 Oil , 3
 Ongc, 5
-P & g, 6
-P c jewellers, 2
+P c jeweller, 2
 P i industries, 3
 Page industries , 3
 Panasonic energy , 0
 Petronet lng, 4
 Pfizer, 2
-Pidilte, 2
-Pilani investment & industries, 0
+Pidilite, 2
+Pilani investment industries, 0
 Piramal enterprises, 5
 Piramal glass, 0
 Power finance, 5
 Power grid corp , 5
 Prestige, 5
-Puravankara projects, 2
+Procter gamble, 6
+Puravankara, 2
 Pvr, 5
 Quess corp, 3
 Radico khaitan, 0
 Rajesh exports, 2
 Rallis , 2
-Rashtriya chemical and fertilizer, 0
+Rashtriya chemical fertilizer, 0
 Raymond , 0
 Rec, 5
 Relaxo footwear, 5
@@ -243,8 +242,8 @@ Shipping corporation, 3
 Shoppers stop, 2
 Shree cement, 3
 Shree renuka sugar, 0
-Shriram pistons & rings, 0
-Shriram transport finance corp, 3
+Shriram pistons rings, 0
+Shriram transport finance, 3
 Siemens , 5
 Skf , 2
 Sml isuzu, 0
@@ -258,13 +257,14 @@ Supreme industries, 2
 Talwalkar better value fitness, 2
 Tata chemicals, 2
 Tata coffee, 5
+Tata consultancy, 10
 Tata global beverages, 5
 Tata investment corp, 2
 Tata motors, 5
 Tata power, 2
 Tata steel, 5
-Tcs, 10
 Tech mahindra, 5
+The new assurance, 5
 Thomas cook, 2
 Ti financial holding, 2
 Tide water oil, 0
@@ -273,7 +273,7 @@ Tree house / career point, 0
 Trent, 2
 Ttk prestige, 5
 Tube investments of , 2
-Tvs motors, 5
+Tvs motor, 5
 Tvs srichakra, 0
 Uflex, 2
 Ultratech , 10
@@ -281,7 +281,7 @@ United breweries, 5
 United spirits, 10
 Unlisted players, 0
 Upl, 2
-V-guard, 2
+V guard, 2
 Varun beverages, 5
 Vedanta, 5
 Venkys , 2
