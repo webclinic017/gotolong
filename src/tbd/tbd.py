@@ -25,19 +25,21 @@ class Tbd(Plan, Demat):
 
 	def print_tbd_phase1(self, out_filename, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, demat_last_txn_date, demat_last_txn_type\n')
+		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type\n')
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
 
 				if plan_units <= 0:
-					print 'no planned units : ', comp_name
+					if self.debug_level > 1:
+						print 'no planned units : ', comp_name
 					continue	
 
 				demat_comp_id = self.get_demat_comp_id_by_name(comp_name)
 
 				if demat_comp_id == '':
-					print 'no demat company found for plan company', comp_name
+					if self.debug_level > 0:
+						print 'no demat company found for plan company', comp_name
 					continue	
 
 				demat_units = int(self.get_demat_units_by_comp_id(demat_comp_id)) 
@@ -50,6 +52,8 @@ class Tbd(Plan, Demat):
 					my_delta = 0	
 				demat_last_txn_type = self.get_demat_last_txn_type_by_comp_id(demat_comp_id)
 				tbd_units = plan_units - demat_units
+				tbd_pct = float((100.0*tbd_units)/plan_units)
+				tbd_pct = format(tbd_pct, '.2f')
 				p_str = comp_name
 				p_str += ',' 
 				p_str += str(plan_units)
@@ -57,6 +61,8 @@ class Tbd(Plan, Demat):
 				p_str += str(demat_units)
 				p_str += ',' 
 				p_str += str(tbd_units) 
+				p_str += ',' 
+				p_str += str(tbd_pct) 
 				p_str += ',' 
 				p_str += demat_last_txn_date 
 				p_str += ',' 
