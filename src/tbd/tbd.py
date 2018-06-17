@@ -23,11 +23,14 @@ class Tbd(Plan, Demat):
 
 	def print_tbd_phase1(self, out_filename, tbd = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units\n')
+		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, demat_last_txn_date, demat_last_txn_type\n')
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
-				demat_units = int(self.get_demat_units_by_name(comp_name)) 
+				demat_comp_id = self.get_demat_comp_id_by_name(comp_name)
+				demat_units = int(self.get_demat_units_by_comp_id(demat_comp_id)) 
+				demat_last_txn_date = self.get_demat_last_txn_date_by_comp_id(demat_comp_id)
+				demat_last_txn_type = self.get_demat_last_txn_type_by_comp_id(demat_comp_id)
 				tbd_units = plan_units - demat_units
 				p_str = comp_name
 				p_str += ',' 
@@ -36,6 +39,10 @@ class Tbd(Plan, Demat):
 				p_str += str(demat_units)
 				p_str += ',' 
 				p_str += str(tbd_units) 
+				p_str += ',' 
+				p_str += demat_last_txn_date 
+				p_str += ',' 
+				p_str += demat_last_txn_type
 				p_str += '\n' 
 				if tbd:
 					if tbd_units > 0:

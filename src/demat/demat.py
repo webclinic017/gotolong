@@ -202,7 +202,7 @@ class Demat(object):
 	def print_phase4(self, out_filename):
 		self.print_phase3(out_filename, True)
 
-	def get_demat_units_by_name(self, req_name):
+	def get_demat_comp_id_by_name(self, req_name):
 		req_name = re.sub('\s+', ' ', req_name).strip()
 		print 'req_name :',req_name,':'
 		for comp_id in sorted(self.phase1_data):
@@ -211,5 +211,19 @@ class Demat(object):
 			comp_name = comp_name.strip()
 			if re.match(req_name, comp_name):
 				print 'found match'
-				return self.hold_units[comp_id]
+				return comp_id
+		return '' 
+
+	def get_demat_units_by_comp_id(self, comp_id):
+		if comp_id:
+			return self.hold_units[comp_id]
 		return 0
+
+	def get_demat_last_txn_date_by_comp_id(self, comp_id):
+		if comp_id:
+			return self.last_txn_date[comp_id]
+		return '' 
+	def get_demat_last_txn_type_by_comp_id(self, comp_id):
+		if comp_id:
+			return self.last_txn_type[comp_id]
+		return '' 
