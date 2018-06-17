@@ -18,7 +18,19 @@ class Plan(object):
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
 
-	def load_row(self, row):
+	def normalize_comp_name(self, comp_name):
+		comp_name = comp_name.capitalize()
+	        comp_name = re.sub('limited','', comp_name)
+	        comp_name = re.sub('ltd','', comp_name)
+	        comp_name = re.sub('india','', comp_name)
+                # remove any characters after (  :
+                # TRENT LTD (LAKME LTD)  
+                comp_name = re.sub('\(.*','', comp_name)
+		# convert multiple space to single space
+        	comp_name = re.sub(' +', ' ', comp_name)
+		return comp_name
+	
+	def load_plan_row(self, row):
 		try:
 			row_list = row
 
@@ -62,8 +74,7 @@ class Plan(object):
 				else:
 					if self.debug_level > 2:
 						print 'iter ', iter, row, "\n"
-				company_name = company_name.capitalize()
-				company_name = company_name.strip()
+				company_name = self.normalize_comp_name(company_name)
 				self.plan_comp_units[company_name] = plan_comp_units_list[iter]
 			return
 		except TypeError:
@@ -76,7 +87,7 @@ class Plan(object):
 		with open(in_filename, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
-				self.load_row(row)
+				self.load_plan_row(row)
 
 	def print_phase1(self, out_filename):
 		# it is covered through shell script

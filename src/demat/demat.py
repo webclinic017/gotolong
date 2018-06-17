@@ -27,7 +27,7 @@ class Demat(object):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level 
 		
-	def clean_comp_name(self, comp_name):
+	def normalize_comp_name(self, comp_name):
 		comp_name = comp_name.capitalize()
 	        comp_name = re.sub('limited','', comp_name)
 	        comp_name = re.sub('ltd','', comp_name)
@@ -69,7 +69,7 @@ class Demat(object):
 				self.phase1_data[comp_id] = p_str	
 				
 
-			self.company_name[comp_id] = self.clean_comp_name(comp_name)
+			self.company_name[comp_id] = self.normalize_comp_name(comp_name)
 			if txn_type == "Buy":
 				if comp_id in self.buy_qty:
                         		self.buy_qty[comp_id] += int(txn_qty)
