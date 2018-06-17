@@ -47,7 +47,7 @@ class Demat(object):
 	def load_demat_row(self, row):
 		try:
 			row_list = row
-			comp_id   = row_list[0]
+			comp_id   = (row_list[0]).capitalize().strip()
 			comp_name = row_list[1]
 			txn_type = row_list[3]
 			txn_qty = row_list[4]
@@ -213,7 +213,7 @@ class Demat(object):
 			# try to find a matching company
 			comp_name = self.company_name[comp_id]
 			comp_name = comp_name.strip()
-			if re.match(req_name, comp_name):
+			if re.match(req_name, comp_name) or req_name == comp_id:
 				if self.debug_level > 1:
 					print 'found match : ', req_name
 				return comp_id

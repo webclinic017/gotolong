@@ -1,23 +1,15 @@
 comp_name, plan_units_1k, demat_units_1k, tbd_units, demat_last_txn_date, demat_last_txn_type
 3m,5,0,5,08-Nov-2017,Sell
-Abb ,5,3,2,02-Jan-2018,Buy
-Aegis logistics,2,1,1,02-Feb-2018,Buy
 Akzo nobel,2,1,1,17-Jul-2017,Buy
-Allcargo logistics,2,0,2,02-Feb-2018,Buy
 Amara raja batteries,1,0,1,05-Jun-2017,Buy
-Ambuja,3,1,2,02-Jan-2018,Buy
 Apollo,10,7,3,06-Dec-2017,Buy
 Arvind ,3,1,2,18-Sep-2017,Buy
 Asian paints,10,8,2,06-Dec-2017,Buy
-Aurobindo pharma,5,2,3,02-Jan-2018,Buy
-Balkrishna industries,2,1,1,02-Jan-2018,Buy
 Balrampur chini mills,2,1,1,13-Nov-2017,Buy
 Bata,5,2,3,06-Dec-2017,Buy
 Bayer cropscience,5,4,1,09-Jun-2017,Buy
-Berger paints,3,2,1,01-Feb-2018,Buy
 Bharti airtel,10,9,1,27-Nov-2017,Buy
 Bharti infratel ,3,1,2,03-Oct-2017,Buy
-Bhel,5,2,3,04-Apr-2018,Buy
 Blue star,2,0,2,28-Nov-2017,Buy
 Bosch,2,0,2,08-Nov-2017,Sell
 Brigade,2,1,1,08-Jun-2017,Buy
@@ -26,18 +18,9 @@ Cadila healthcare,3,0,3,19-Sep-2017,Buy
 Carborundum universal ,2,1,1,17-Oct-2017,Buy
 Cdsl,2,1,1,28-Sep-2017,Buy
 Ceat ,2,1,1,11-Jul-2017,Buy
-Cipla,5,0,5,02-Jan-2018,Buy
-Dabur,5,2,3,02-Jan-2018,Buy
-Dish tv,5,2,3,01-Feb-2018,Buy
 Eicher motors,2,0,2,08-Nov-2017,Sell
-Eid parry,2,1,1,01-Feb-2018,Buy
-Eih,3,2,1,02-Jan-2018,Buy
-Emami,5,2,3,02-Jan-2018,Buy
 Engineers ,5,1,4,08-Sep-2017,Buy
 Eveready ,2,1,1,01-Nov-2017,Buy
-Future consumer ,2,1,1,02-Feb-2018,Buy
-Future supply chain,2,1,1,02-Feb-2018,Buy
-Gail,4,2,2,10-Apr-2018,Buy
 Glenmark pharma,3,1,2,19-Sep-2017,Buy
 Godrej agrovet,2,1,1,16-Oct-2017,Buy
 Godrej consumer products,5,0,5,25-Sep-2017,Buy
@@ -50,7 +33,6 @@ Hcl tech,5,1,4,27-Feb-2017,Buy
 Hdfc standard life,5,1,4,17-Nov-2017,Buy
 Hero motocorp,5,3,2,09-Jun-2017,Buy
 Hindalco,2,1,1,01-Sep-2017,Buy
-Hindustan zinc,5,2,3,02-Jan-2018,Buy
 Honeywell automation ,5,0,5,08-Nov-2017,Sell
 Hudco,2,1,1,19-Sep-2017,Buy
 Icra,5,4,1,22-Jun-2017,Buy
@@ -63,36 +45,22 @@ Infosys,10,9,1,17-Mar-2017,Buy
 Interglobe aviation,5,2,3,01-Nov-2017,Buy
 Itc,10,5,5,02-Nov-2017,Buy
 Jsw steel,5,2,3,06-Dec-2017,Buy
-Kansai nerolac,5,2,3,02-Jan-2018,Buy
 Krbl,2,0,2,22-Sep-2017,Buy
 Lic housing finance,5,2,3,01-Nov-2017,Buy
-Mahindra holidays,5,2,3,02-Jan-2018,Buy
-Mahindra logistics,2,0,2,02-Feb-2018,Buy
 Mahindra mahindra,5,1,4,03-Oct-2017,Buy
-Marico,5,2,3,02-Jan-2018,Buy
 Mrf,5,0,5,08-Nov-2017,Sell
 Muthoot finance,5,1,4,01-Nov-2017,Buy
-Nbcc,5,2,3,04-Apr-2018,Buy
 Nhpc ,3,1,2,03-Oct-2017,Buy
 Nilkamal,2,1,1,14-Jun-2017,Buy
 Nlc ,3,1,2,03-Oct-2017,Buy
-Nmdc,5,2,3,01-Feb-2018,Buy
 Ntpc ,10,7,3,06-Dec-2017,Buy
-Oil ,3,2,1,06-Apr-2018,Buy
 Ongc,5,3,2,06-Dec-2017,Buy
-P i industries,3,0,3,02-Feb-2018,Buy
 Page industries ,3,0,3,08-Nov-2017,Sell
-Petronet lng,4,2,2,01-Feb-2018,Buy
 Power finance,5,2,3,01-Nov-2017,Buy
 Prestige,5,1,4,08-Jun-2017,Buy
-Pvr,5,2,3,02-Jan-2018,Buy
-Quess corp,3,1,2,01-Feb-2018,Buy
-Relaxo footwear,5,2,3,02-Jan-2018,Buy
 Reliance industries,10,6,4,27-Nov-2017,Buy
 Sbi life,5,1,4,03-Oct-2017,Buy
-Sheela foam,2,1,1,02-Feb-2018,Buy
 Shree cement,3,0,3,08-Nov-2017,Sell
-Siemens ,5,2,3,02-Jan-2018,Buy
 Skf ,2,1,1,02-Jun-2017,Buy
 Sobha,2,1,1,08-Jun-2017,Buy
 Somany ceramics,2,0,2,13-Nov-2017,Buy
@@ -100,11 +68,6 @@ Tata coffee,5,2,3,01-Nov-2017,Buy
 Tata global beverages,5,2,3,01-Nov-2017,Buy
 Tata motors,5,-3,8,08-Sep-2017,Buy
 Tata steel,5,4,1,25-Jan-2017,Buy
-Tech mahindra,5,2,3,01-Feb-2018,Buy
 Ti financial holding,2,1,1,02-Jun-2017,Buy
-Titan,5,3,2,04-Apr-2018,Buy
-Tube investments of ,2,1,1,04-Apr-2018,Buy
 United breweries,5,1,4,01-Nov-2017,Buy
-Varun beverages,5,2,3,02-Jan-2018,Buy
-Vip industries,5,2,3,02-Jan-2018,Buy
 Westlife development,2,0,2,08-Sep-2017,Buy
