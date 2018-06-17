@@ -29,9 +29,14 @@ class Demat(object):
 		
 	def normalize_comp_name(self, comp_name):
 		comp_name = comp_name.capitalize()
+		# remove hyphen (V-guard) 
+        	comp_name = re.sub('-',' ', comp_name)
 	        comp_name = re.sub('limited','', comp_name)
 	        comp_name = re.sub('ltd','', comp_name)
 	        comp_name = re.sub('india','', comp_name)
+                # replace and and &
+	        comp_name = re.sub(' and ',' ', comp_name)
+	        comp_name = re.sub(' & ',' ', comp_name)
                 # remove any characters after (  :
                 # TRENT LTD (LAKME LTD)  
                 comp_name = re.sub('\(.*','', comp_name)
@@ -204,15 +209,17 @@ class Demat(object):
 
 	def get_demat_comp_id_by_name(self, req_name):
 		req_name = re.sub('\s+', ' ', req_name).strip()
-		print 'req_name :',req_name,':'
 		for comp_id in sorted(self.phase1_data):
 			# try to find a matching company
 			comp_name = self.company_name[comp_id]
 			comp_name = comp_name.strip()
 			if re.match(req_name, comp_name):
-				print 'found match'
+				if self.debug_level > 1:
+					print 'found match : ', req_name
 				return comp_id
-		return '' 
+		if self.debug_level > 1:
+			print 'demat not found : req_name :',req_name,':'
+		return ''
 
 	def get_demat_units_by_comp_id(self, comp_id):
 		if comp_id:

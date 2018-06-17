@@ -20,9 +20,14 @@ class Plan(object):
 
 	def normalize_comp_name(self, comp_name):
 		comp_name = comp_name.capitalize()
+		# remove hyphen (V-guard) 
+        	comp_name = re.sub('-',' ', comp_name)
 	        comp_name = re.sub('limited','', comp_name)
 	        comp_name = re.sub('ltd','', comp_name)
 	        comp_name = re.sub('india','', comp_name)
+                # replace and and &
+	        comp_name = re.sub(' and ',' ', comp_name)
+	        comp_name = re.sub(' & ',' ', comp_name)
                 # remove any characters after (  :
                 # TRENT LTD (LAKME LTD)  
                 comp_name = re.sub('\(.*','', comp_name)
