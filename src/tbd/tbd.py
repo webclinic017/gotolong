@@ -9,8 +9,9 @@ import datetime
 
 from plan.plan import * 
 from demat.demat import * 
+from isin.isin import * 
 
-class Tbd(Plan, Demat):
+class Tbd(Isin, Plan, Demat):
 	def __init__(self):
 		super(Tbd, self).__init__()
 		# Plan.__init__(debug_level)
@@ -19,7 +20,9 @@ class Tbd(Plan, Demat):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
 
-	def load_tbd_data(self, plan_filename, demat_filename):
+	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, plan_filename, demat_filename):
+		self.load_isin_bse_data(isin_bse_filename)
+		self.load_isin_nse_data(isin_nse_filename)
 		self.load_demat_data(demat_filename)
 		self.load_plan_data(plan_filename)
 
@@ -35,22 +38,23 @@ class Tbd(Plan, Demat):
 						print 'no planned units : ', comp_name
 					continue	
 
-				demat_comp_id = self.get_demat_comp_id_by_name(comp_name)
+				isin_code = self.get_isin_code_by_name(comp_name)
 
-				if demat_comp_id == '':
+				if isin_code == '':
 					if self.debug_level > 0:
-						print 'no demat company found for plan company', comp_name
-					continue	
+						print 'not in nse 500 ', comp_name
+					continue
 
-				demat_units = int(self.get_demat_units_by_comp_id(demat_comp_id)) 
-				demat_last_txn_date = self.get_demat_last_txn_date_by_comp_id(demat_comp_id)
+				demat_units = int(self.get_demat_units_by_isin_code(isin_code)) 
+				demat_last_txn_date = self.get_demat_last_txn_date_by_isin_code(isin_code)
 				if demat_last_txn_date != '':
 					last_datetime = datetime.datetime.strptime(demat_last_txn_date, '%d-%b-%Y').date()
 					my_delta = datetime.datetime.now().date() - last_datetime
 					last_txn_days = my_delta.days
 				else:
-					my_delta = 0	
-				demat_last_txn_type = self.get_demat_last_txn_type_by_comp_id(demat_comp_id)
+					last_txn_days = 0
+
+				demat_last_txn_type = self.get_demat_last_txn_type_by_isin_code(isin_code)
 				tbd_units = plan_units - demat_units
 				tbd_pct = float((100.0*tbd_units)/plan_units)
 				tbd_pct = format(tbd_pct, '.2f')

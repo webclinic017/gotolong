@@ -51,7 +51,7 @@ class Demat(object):
 	def load_demat_row(self, row):
 		try:
 			row_list = row
-			comp_id   = (row_list[0]).capitalize().strip()
+			isin_code   = (row_list[2]).upper().strip()
 			comp_name = row_list[1]
 			txn_type = row_list[3]
 			txn_qty = row_list[4]
@@ -59,7 +59,7 @@ class Demat(object):
 			txn_date = row_list[12]
 
 
-			p_str = comp_id 
+			p_str = isin_code 
 			p_str += ','
 			p_str += comp_name 
 			p_str += ','
@@ -72,32 +72,32 @@ class Demat(object):
 			p_str += txn_date
 			p_str += '\n'
 	
-			if comp_id in self.phase1_data:	
-				self.phase1_data[comp_id] += p_str	
+			if isin_code in self.phase1_data:	
+				self.phase1_data[isin_code] += p_str	
 			else:
-				self.phase1_data[comp_id] = p_str	
+				self.phase1_data[isin_code] = p_str	
 				
 
-			self.company_name[comp_id] = self.normalize_comp_name(comp_name)
+			self.company_name[isin_code] = self.normalize_comp_name(comp_name)
 			if txn_type == "Buy":
-				if comp_id in self.buy_qty:
-                        		self.buy_qty[comp_id] += int(txn_qty)
-                        		self.buy_price[comp_id]    += int(float(txn_price)) * int(txn_qty)
+				if isin_code in self.buy_qty:
+                        		self.buy_qty[isin_code] += int(txn_qty)
+                        		self.buy_price[isin_code]    += int(float(txn_price)) * int(txn_qty)
 				else:
-                        		self.buy_qty[comp_id] = int(txn_qty) 
-                        		self.buy_price[comp_id]    = int(float(txn_price)) * int(txn_qty)
+                        		self.buy_qty[isin_code] = int(txn_qty) 
+                        		self.buy_price[isin_code]    = int(float(txn_price)) * int(txn_qty)
 			else:
-				if comp_id in self.sale_qty:
-                        		self.sale_qty[comp_id] += int(txn_qty)
-                        		self.sale_price[comp_id]    += int(float(txn_price)) * int(txn_qty)
+				if isin_code in self.sale_qty:
+                        		self.sale_qty[isin_code] += int(txn_qty)
+                        		self.sale_price[isin_code]    += int(float(txn_price)) * int(txn_qty)
 				else:
-                        		self.sale_qty[comp_id] = int(txn_qty)
-                        		self.sale_price[comp_id]    = int(float(txn_price)) * int(txn_qty)
+                        		self.sale_qty[isin_code] = int(txn_qty)
+                        		self.sale_price[isin_code]    = int(float(txn_price)) * int(txn_qty)
 		
 			# skip updating bonus entries	
 			if txn_price != 0:	
-				self.last_txn_type[comp_id]  = txn_type 
-                        	self.last_txn_date[comp_id]  = txn_date 
+				self.last_txn_type[isin_code]  = txn_type 
+                        	self.last_txn_date[isin_code]  = txn_date 
 
 		except:
 			print "Unexpected error:", sys.exc_info()
@@ -108,101 +108,101 @@ class Demat(object):
 			for row in reader:
 				self.load_demat_row(row)
 		self.prepare_demat_data()
-		# sorted(self.phase1_data, key=lambda dct: dct['comp_id'])	
-		# sorted(self.phase1_data, key=operator.itemgetter('comp_id'))	
+		# sorted(self.phase1_data, key=lambda dct: dct['isin_code'])	
+		# sorted(self.phase1_data, key=operator.itemgetter('isin_code'))	
 
 	def prepare_demat_data(self):
-		for comp_id in sorted(self.phase1_data):
-			if comp_id == 'Stock Symbol':
+		for isin_code in sorted(self.phase1_data):
+			if isin_code == 'Stock Symbol':
 				continue
 			
-			if comp_id in self.sale_qty:
-				hold_qty = self.buy_qty[comp_id] - self.sale_qty[comp_id]
+			if isin_code in self.sale_qty:
+				hold_qty = self.buy_qty[isin_code] - self.sale_qty[isin_code]
 			else:
-				hold_qty = self.buy_qty[comp_id]
+				hold_qty = self.buy_qty[isin_code]
 			
 			# store 
-			self.hold_qty[comp_id] = hold_qty
+			self.hold_qty[isin_code] = hold_qty
 			
 			if hold_qty > 0:
-				if comp_id in self.sale_price:
-					hold_price = self.buy_price[comp_id] - self.sale_price[comp_id]
+				if isin_code in self.sale_price:
+					hold_price = self.buy_price[isin_code] - self.sale_price[isin_code]
 				else:
-					hold_price = self.buy_price[comp_id]
+					hold_price = self.buy_price[isin_code]
 			else:
 				hold_price = 0
 			
 			# store 
-			self.hold_price[comp_id] = hold_price
+			self.hold_price[isin_code] = hold_price
 			
 			if hold_qty > 0:
 				hold_units = hold_price/1000
 			else:
 				hold_units = 0
 			# store 
-			self.hold_units[comp_id] = hold_units
+			self.hold_units[isin_code] = hold_units
 
 
 	def print_phase1(self, out_filename):
 		fh = open(out_filename, "w") 
-		fh.write('comp_id, comp_name, action, qty, price, txn_date\n')
-		for comp_id in sorted(self.phase1_data):
-			fh.write(self.phase1_data[comp_id])
+		fh.write('isin_code, comp_name, action, qty, price, txn_date\n')
+		for isin_code in sorted(self.phase1_data):
+			fh.write(self.phase1_data[isin_code])
 		fh.close()
 
 	def print_phase2(self, out_filename):
 		fh = open(out_filename, "w") 
-		fh.write('comp_id, comp_name, buy_qty, sale_qty, buy_price, sale_price, last_txn_type, last_txn_date\n')
-		for comp_id in sorted(self.phase1_data):
-			if comp_id == 'Stock Symbol':
+		fh.write('isin_code, comp_name, buy_qty, sale_qty, buy_price, sale_price, last_txn_type, last_txn_date\n')
+		for isin_code in sorted(self.phase1_data):
+			if isin_code == 'Stock Symbol':
 				continue
-			p_str = comp_id
+			p_str = isin_code
 			p_str += ','
-			p_str += self.company_name[comp_id] 
+			p_str += self.company_name[isin_code] 
 			p_str += ','
-			p_str += str(self.buy_qty[comp_id])
+			p_str += str(self.buy_qty[isin_code])
 			p_str += ','
-			if comp_id in self.sale_qty:
-				p_str += str(self.sale_qty[comp_id])
+			if isin_code in self.sale_qty:
+				p_str += str(self.sale_qty[isin_code])
 			else:
 				p_str += '0' 
 			p_str += ','
-			p_str += str(self.buy_price[comp_id])
+			p_str += str(self.buy_price[isin_code])
 			p_str += ','
-			if comp_id in self.sale_price:
-				p_str += str(self.sale_price[comp_id])
+			if isin_code in self.sale_price:
+				p_str += str(self.sale_price[isin_code])
 			else:
 				p_str += '0' 
 			p_str += ','
-			p_str += self.last_txn_type[comp_id] 
+			p_str += self.last_txn_type[isin_code] 
 			p_str += ','
-			p_str += self.last_txn_date[comp_id] 
+			p_str += self.last_txn_date[isin_code] 
 			p_str += '\n'
 			fh.write(p_str)
 		fh.close()
 
 	def print_phase3(self, out_filename, positive_holdings = None):
 		fh = open(out_filename,"w") 
-		fh.write('comp_id, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date\n')
-		for comp_id in sorted(self.phase1_data):
-			if comp_id == 'Stock Symbol':
+		fh.write('isin_code, comp_name, hold_qty, hold_price, hold_units_1k, last_txn_type, last_txn_date\n')
+		for isin_code in sorted(self.phase1_data):
+			if isin_code == 'Stock Symbol':
 				continue
-			p_str = comp_id
+			p_str = isin_code
 			p_str += ','
-			p_str += self.company_name[comp_id] 
+			p_str += self.company_name[isin_code] 
 			p_str += ','
-			p_str += str(self.hold_qty[comp_id])
+			p_str += str(self.hold_qty[isin_code])
 			p_str += ','
-			p_str += str(self.hold_price[comp_id])
+			p_str += str(self.hold_price[isin_code])
 			p_str += ','
-			p_str += str(self.hold_units[comp_id])
+			p_str += str(self.hold_units[isin_code])
 			p_str += ','
-			p_str += self.last_txn_type[comp_id] 
+			p_str += self.last_txn_type[isin_code] 
 			p_str += ','
-			p_str += self.last_txn_date[comp_id] 
+			p_str += self.last_txn_date[isin_code] 
 			p_str += '\n'
 			if positive_holdings:
-				if self.hold_qty[comp_id] > 0:
+				if self.hold_qty[isin_code] > 0:
 					fh.write(p_str)
 			else:
 				fh.write(p_str)
@@ -211,30 +211,17 @@ class Demat(object):
 	def print_phase4(self, out_filename):
 		self.print_phase3(out_filename, True)
 
-	def get_demat_comp_id_by_name(self, req_name):
-		req_name = re.sub('\s+', ' ', req_name).strip()
-		for comp_id in sorted(self.phase1_data):
-			# try to find a matching company
-			comp_name = self.company_name[comp_id]
-			comp_name = comp_name.strip()
-			if re.match(req_name, comp_name) or req_name == comp_id:
-				if self.debug_level > 1:
-					print 'found match : ', req_name
-				return comp_id
-		if self.debug_level > 1:
-			print 'demat not found : req_name :',req_name,':'
-		return ''
-
-	def get_demat_units_by_comp_id(self, comp_id):
-		if comp_id:
-			return self.hold_units[comp_id]
+	def get_demat_units_by_isin_code(self, isin_code):
+		if isin_code in self.hold_units:
+			return self.hold_units[isin_code]
 		return 0
 
-	def get_demat_last_txn_date_by_comp_id(self, comp_id):
-		if comp_id:
-			return self.last_txn_date[comp_id]
+	def get_demat_last_txn_date_by_isin_code(self, isin_code):
+		if isin_code in self.last_txn_date:
+			return self.last_txn_date[isin_code]
 		return '' 
-	def get_demat_last_txn_type_by_comp_id(self, comp_id):
-		if comp_id:
-			return self.last_txn_type[comp_id]
+
+	def get_demat_last_txn_type_by_isin_code(self, isin_code):
+		if isin_code in self.last_txn_type:
+			return self.last_txn_type[isin_code]
 		return '' 

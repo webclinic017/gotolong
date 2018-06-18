@@ -3,7 +3,9 @@ comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_dat
 Abb ,5,3,2,40.00,02-Jan-2018,Buy
 Abbott ,2,4,-2,-100.00,19-Sep-2017,Buy
 Acc,3,3,0,0.00,01-Nov-2017,Buy
-Adani enterprises ,2,2,0,0.00,06-Dec-2017,Buy
+Adani ports,5,1,4,80.00,29-Sep-2017,Buy
+Aditya birla capital,2,0,2,100.00,,
+Aditya birla fashion retail,2,2,0,0.00,04-Apr-2018,Buy
 Aegis logistics,2,1,1,50.00,02-Feb-2018,Buy
 Akzo nobel,2,1,1,50.00,17-Jul-2017,Buy
 Allcargo logistics,2,0,2,100.00,02-Feb-2018,Buy
@@ -13,7 +15,6 @@ Apollo hospitals,10,7,3,30.00,06-Dec-2017,Buy
 Apollo tyres,2,2,0,0.00,01-Feb-2018,Buy
 Arvind ,3,1,2,66.67,18-Sep-2017,Buy
 Asahi glass,2,3,-1,-50.00,06-Dec-2017,Buy
-Asian granito,2,1,1,50.00,02-Feb-2018,Buy
 Asian paints,10,8,2,20.00,06-Dec-2017,Buy
 Aurobindo pharma,5,2,3,60.00,02-Jan-2018,Buy
 Avanti feeds,2,4,-2,-100.00,06-Dec-2017,Buy
@@ -28,9 +29,9 @@ Bata,5,2,3,60.00,06-Dec-2017,Buy
 Bayer cropscience,5,4,1,20.00,09-Jun-2017,Buy
 Berger paints,3,2,1,33.33,01-Feb-2018,Buy
 Bharat electronics,5,7,-2,-40.00,04-Apr-2018,Buy
+Bharat forge,2,0,2,100.00,,
 Bharti airtel,10,9,1,10.00,27-Nov-2017,Buy
 Bharti infratel ,3,1,2,66.67,03-Oct-2017,Buy
-Bhel,5,2,3,60.00,04-Apr-2018,Buy
 Blue star,2,0,2,100.00,28-Nov-2017,Buy
 Bosch,2,0,2,100.00,08-Nov-2017,Sell
 Brigade,2,1,1,50.00,08-Jun-2017,Buy
@@ -44,7 +45,6 @@ Ceat ,2,1,1,50.00,11-Jul-2017,Buy
 Central depository,2,1,1,50.00,28-Sep-2017,Buy
 Century plyboard,2,2,0,0.00,01-Feb-2018,Buy
 Cera,2,3,-1,-50.00,14-Jun-2017,Buy
-Chambal fertilisers,2,1,1,50.00,16-Oct-2017,Buy
 Cipla,5,0,5,100.00,02-Jan-2018,Buy
 Coal ,10,10,0,0.00,27-Nov-2017,Buy
 Coffee day,2,2,0,0.00,04-Apr-2018,Buy
@@ -58,7 +58,6 @@ Cummins,2,2,0,0.00,06-Dec-2017,Buy
 Dabur,5,2,3,60.00,02-Jan-2018,Buy
 Dish tv,5,2,3,60.00,01-Feb-2018,Buy
 Dlf,5,8,-3,-60.00,02-Jan-2018,Buy
-Dr lal pathlabs,2,0,2,100.00,19-Sep-2017,Buy
 Dr reddys laboratories,5,4,1,20.00,04-Apr-2018,Buy
 Eicher motors,2,0,2,100.00,08-Nov-2017,Sell
 Eid parry,2,1,1,50.00,01-Feb-2018,Buy
@@ -72,7 +71,6 @@ Fortis healthcare,2,2,0,0.00,04-Apr-2018,Buy
 Future consumer ,2,1,1,50.00,02-Feb-2018,Buy
 Future lifestyle fashion,2,2,0,0.00,01-Feb-2018,Buy
 Future retail ,2,2,0,0.00,01-Feb-2018,Buy
-Future supply chain,2,1,1,50.00,02-Feb-2018,Buy
 Gail,4,2,2,50.00,10-Apr-2018,Buy
 General insurance,5,1,4,80.00,25-Oct-2017,Buy
 Gillette ,2,4,-2,-100.00,12-Jun-2017,Buy
@@ -83,35 +81,30 @@ Godrej consumer products,5,0,5,100.00,25-Sep-2017,Buy
 Godrej industries,3,1,2,66.67,16-Oct-2017,Buy
 Godrej properties,2,1,1,50.00,08-Jun-2017,Buy
 Grasim,3,1,2,66.67,16-Oct-2017,Buy
-Greenlam,2,2,0,0.00,01-Feb-2018,Buy
 Grindwell norton,2,1,1,50.00,17-Oct-2017,Buy
 Havells,2,1,1,50.00,31-Jul-2017,Buy
 Hcl tech,5,1,4,80.00,27-Feb-2017,Buy
 Hdfc,10,15,-5,-50.00,14-Mar-2017,Buy
 Hdfc bank,10,15,-5,-50.00,14-Mar-2017,Buy
-Hdfc standard life,5,1,4,80.00,17-Nov-2017,Buy
 Hero motocorp,5,3,2,40.00,09-Jun-2017,Buy
 Hindalco,2,1,1,50.00,01-Sep-2017,Buy
 Hindustan unilever,10,2,8,80.00,04-Apr-2018,Buy
 Hindustan zinc,5,2,3,60.00,02-Jan-2018,Buy
 Honeywell automation ,5,0,5,100.00,08-Nov-2017,Sell
 Hsil,2,2,0,0.00,04-Apr-2018,Buy
-Hudco,2,1,1,50.00,19-Sep-2017,Buy
-Huhtamaki ppl,2,0,2,100.00,28-May-2018,Buy
-Icici,5,9,-4,-80.00,27-Nov-2017,Buy
+Icici,5,5,0,0.00,06-Dec-2017,Buy
 Icici lombard,5,1,4,80.00,27-Sep-2017,Buy
-Icici prudential,5,5,0,0.00,21-Mar-2018,Buy
+Icici prudential,5,2,3,60.00,01-Nov-2017,Buy
 Icra,5,4,1,20.00,22-Jun-2017,Buy
 Idea,5,2,3,60.00,01-Nov-2017,Buy
 Ifb industries,2,1,1,50.00,28-Nov-2017,Buy
 Indiabulls housing finance,3,1,2,66.67,03-Oct-2017,Buy
 Indian hotels,10,9,1,10.00,06-Dec-2017,Buy
+Indusind bank,2,0,2,100.00,,
 Info edge,5,2,3,60.00,18-Sep-2017,Buy
 Infosys,10,9,1,10.00,17-Mar-2017,Buy
 Interglobe aviation,5,2,3,60.00,01-Nov-2017,Buy
-Itc,10,5,5,50.00,02-Nov-2017,Buy
 Jain irrigation,2,1,1,50.00,29-Nov-2017,Buy
-Jk paper,2,1,1,50.00,02-Jun-2017,Buy
 Jk tyre ,2,2,0,0.00,01-Feb-2018,Buy
 Johnson controls hitachi,2,2,0,0.00,17-Oct-2017,Buy
 Jsw steel,5,2,3,60.00,06-Dec-2017,Buy
@@ -120,14 +113,14 @@ Kajaria ceramics,2,2,0,0.00,01-Nov-2017,Buy
 Kansai nerolac,5,2,3,60.00,02-Jan-2018,Buy
 Kotak mahindra bank,2,2,0,0.00,04-Apr-2018,Buy
 Krbl,2,0,2,100.00,22-Sep-2017,Buy
-Ksb pumps,2,2,0,0.00,04-Apr-2018,Buy
+L&t finance holdings,2,1,1,50.00,28-May-2018,Buy
+L&t technology services,2,1,1,50.00,28-May-2018,Buy
 Larsen toubro ,10,6,4,40.00,04-Apr-2018,Buy
 Lic housing finance,5,2,3,60.00,01-Nov-2017,Buy
 Lupin,5,8,-3,-60.00,28-Feb-2017,Buy
 Mahindra cie,2,0,2,100.00,28-May-2018,Buy
 Mahindra holidays,5,2,3,60.00,02-Jan-2018,Buy
-Mahindra logistics,2,0,2,100.00,02-Feb-2018,Buy
-Mahindra mahindra,5,1,4,80.00,03-Oct-2017,Buy
+Mahindra mahindra,5,4,1,20.00,28-Dec-2017,Buy
 Manappuram finance,2,1,1,50.00,18-Apr-2018,Buy
 Marico,5,2,3,60.00,02-Jan-2018,Buy
 Maruti suzuki,5,11,-6,-120.00,09-Jun-2017,Buy
@@ -145,9 +138,7 @@ Nilkamal,2,1,1,50.00,14-Jun-2017,Buy
 Nlc ,3,1,2,66.67,03-Oct-2017,Buy
 Nmdc,5,2,3,60.00,01-Feb-2018,Buy
 Ntpc ,10,7,3,30.00,06-Dec-2017,Buy
-Oil ,3,2,1,33.33,06-Apr-2018,Buy
-Ongc,5,3,2,40.00,06-Dec-2017,Buy
-P i industries,3,0,3,100.00,02-Feb-2018,Buy
+Oil ,3,3,0,0.00,06-Dec-2017,Buy
 Page industries ,3,0,3,100.00,08-Nov-2017,Sell
 Petronet lng,4,2,2,50.00,01-Feb-2018,Buy
 Pfizer,2,2,0,0.00,19-Sep-2017,Buy
@@ -157,7 +148,6 @@ Power finance,5,2,3,60.00,01-Nov-2017,Buy
 Power grid corp ,5,5,0,0.00,27-Feb-2017,Buy
 Prestige,5,1,4,80.00,08-Jun-2017,Buy
 Procter gamble,6,7,-1,-16.67,09-Jun-2017,Buy
-Puravankara,2,4,-2,-100.00,04-Apr-2018,Buy
 Pvr,5,2,3,60.00,02-Jan-2018,Buy
 Quess corp,3,1,2,66.67,01-Feb-2018,Buy
 Rajesh exports,2,3,-1,-50.00,04-Apr-2018,Buy
@@ -165,9 +155,10 @@ Rallis ,2,2,0,0.00,04-Apr-2018,Buy
 Relaxo footwear,5,2,3,60.00,02-Jan-2018,Buy
 Reliance industries,10,6,4,40.00,27-Nov-2017,Buy
 Sanofi ,2,4,-2,-100.00,19-Sep-2017,Buy
-Sbi,5,117,-112,-2240.00,07-Jun-2018,Buy
+Sbi,5,1,4,80.00,03-Oct-2017,Buy
 Sbi life,5,1,4,80.00,03-Oct-2017,Buy
 Sheela foam,2,1,1,50.00,02-Feb-2018,Buy
+Shipping corporation,3,2,1,33.33,04-Apr-2018,Buy
 Shoppers stop,2,2,0,0.00,01-Feb-2018,Buy
 Shree cement,3,0,3,100.00,08-Nov-2017,Sell
 Shriram transport finance,3,1,2,66.67,03-Oct-2017,Buy
@@ -181,17 +172,16 @@ Tata chemicals,2,2,0,0.00,04-Apr-2018,Buy
 Tata coffee,5,2,3,60.00,01-Nov-2017,Buy
 Tata consultancy,10,16,-6,-60.00,05-Jun-2018,Buy
 Tata global beverages,5,2,3,60.00,01-Nov-2017,Buy
-Tata motors,5,-3,8,160.00,08-Sep-2017,Buy
+Tata investment corp,2,0,2,100.00,,
+Tata motors,5,0,5,100.00,,
 Tata power,2,2,0,0.00,04-Apr-2018,Buy
 Tata steel,5,4,1,20.00,25-Jan-2017,Buy
 Tech mahindra,5,2,3,60.00,01-Feb-2018,Buy
-The new assurance,5,1,4,80.00,13-Nov-2017,Buy
 Thomas cook,2,2,0,0.00,01-Feb-2018,Buy
 Ti financial holding,2,1,1,50.00,02-Jun-2017,Buy
 Titan,5,3,2,40.00,04-Apr-2018,Buy
 Trent,2,2,0,0.00,04-Apr-2018,Buy
 Ttk prestige,5,6,-1,-20.00,18-Jul-2017,Buy
-Tube investments of ,2,1,1,50.00,04-Apr-2018,Buy
 Tvs motor,5,2,3,60.00,01-Sep-2017,Buy
 Uflex,2,1,1,50.00,28-May-2018,Buy
 Ultratech ,10,12,-2,-20.00,25-Jan-2017,Buy
@@ -205,9 +195,8 @@ Venkys ,2,2,0,0.00,22-Sep-2017,Buy
 Vip industries,5,2,3,60.00,02-Jan-2018,Buy
 Voltas,2,2,0,0.00,01-Nov-2017,Buy
 Vrl logistics,2,2,0,0.00,01-Feb-2018,Buy
-Westlife development,2,0,2,100.00,08-Sep-2017,Buy
 Whirlpool,2,2,0,0.00,04-Apr-2018,Buy
 Wipro ,5,6,-1,-20.00,21-Jun-2017,Buy
-Wonderla holidays ,2,1,1,50.00,18-Apr-2018,Buy
+Yes bank,2,0,2,100.00,,
 Zee entertainment,5,6,-1,-20.00,06-Dec-2017,Buy
 Zee learn,2,2,0,0.00,01-Nov-2017,Buy

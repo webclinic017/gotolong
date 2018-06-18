@@ -6,8 +6,9 @@ import csv
 import traceback
 import operator
 
-class Isin:
+class Isin(object):
 	def __init__(self):
+		super(Isin, self).__init__()
 		self.isin_name = {}
  		self.debug_level = 0 
 
@@ -72,6 +73,12 @@ class Isin:
 			for row in reader:
 				self.load_isin_row(row, bse_nse)
 
+	def load_isin_bse_data(self, in_filename):
+		self.load_isin_data(in_filename, 'bse')
+
+	def load_isin_nse_data(self, in_filename):
+		self.load_isin_data(in_filename, 'nse')
+
 	def print_phase1(self, out_filename):
 		if self.debug_level > 1:
 			print self.isin_name
@@ -85,4 +92,18 @@ class Isin:
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
+
+	def get_isin_code_by_name(self, req_name):
+		req_name = re.sub('\s+', ' ', req_name).strip()
+		for isin_code in sorted(self.isin_name):
+			# try to find a matching company
+			comp_name = self.isin_name[isin_code]
+			comp_name = comp_name.strip()
+			if re.match(req_name, comp_name) or req_name == isin_code:
+				if self.debug_level > 1:
+					print 'found match : ', req_name
+				return isin_code
+		if self.debug_level > 1:
+			print 'demat not found : req_name :',req_name,':'
+		return ''
 
