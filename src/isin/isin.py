@@ -10,6 +10,7 @@ class Isin(object):
 	def __init__(self):
 		super(Isin, self).__init__()
 		self.isin_name = {}
+		self.isin_symbol = {}
  		self.debug_level = 0 
 
 	def set_debug_level(self, debug_level):
@@ -49,6 +50,7 @@ class Isin(object):
 			else:
 				comp_name = row_list[0]
 				isin_code = row_list[4]
+				isin_symbol = row_list[2]
 
 			if isin_code == 'ISIN Code' or isin_code == 'ISIN No.':
 				print 'skipped header line', row_list
@@ -56,6 +58,10 @@ class Isin(object):
 
 			comp_name = self.normalize_comp_name(comp_name)
 			self.isin_name[isin_code] = comp_name
+
+			if bse_nse == "nse":
+				self.isin_symbol[isin_code] = isin_symbol.upper().strip()
+				
 
 			if self.debug_level > 1:
 				print 'comp_name : ', comp_name , '\n'
@@ -99,10 +105,16 @@ class Isin(object):
 			# try to find a matching company
 			comp_name = self.isin_name[isin_code]
 			comp_name = comp_name.strip()
-			if re.match(req_name, comp_name) or req_name == isin_code:
+			if re.match(req_name, comp_name):
 				if self.debug_level > 1:
-					print 'found match : ', req_name
+					print 'found match : name : ', req_name
 				return isin_code
+			if isin_code in  self.isin_symbol:
+				ticker_symbol = self.isin_symbol[isin_code]
+				if req_name.upper() == ticker_symbol :
+					if self.debug_level > 1:
+						print 'found ticker : ', req_name
+					return isin_code	
 		if self.debug_level > 1:
 			print 'demat not found : req_name :',req_name,':'
 		return ''

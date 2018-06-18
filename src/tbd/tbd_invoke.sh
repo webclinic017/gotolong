@@ -9,6 +9,7 @@ DEMAT_FILE=$PROJ_DATA_LOC/demat-data/demat-data.csv
 OUT_FILE_1=$PROJ_DATA_LOC/tbd-data/tbd-data-phase-1.csv
 OUT_FILE_2=$PROJ_DATA_LOC/tbd-data/tbd-data-phase-2.csv
 OUT_FILE_3=$PROJ_DATA_LOC/tbd-data/tbd-data-phase-3.csv
+OUT_FILE_4=$PROJ_DATA_LOC/tbd-data/tbd-data-phase-4.csv
 
 # phase 2
-tbd_invoke.py ${DEBUG_LEVEL} ${ISIN_BSE_FILE} ${ISIN_NSE_FILE} ${PLAN_FILE} ${DEMAT_FILE} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3}
+tbd_invoke.py ${DEBUG_LEVEL} ${ISIN_BSE_FILE} ${ISIN_NSE_FILE} ${PLAN_FILE} ${DEMAT_FILE} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}

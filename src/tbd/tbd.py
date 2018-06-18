@@ -26,14 +26,14 @@ class Tbd(Isin, Plan, Demat):
 		self.load_demat_data(demat_filename)
 		self.load_plan_data(plan_filename)
 
-	def print_tbd_phase1(self, out_filename, tbd_only = None, days_filter = None):
+	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type\n')
+		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type, top_500\n')
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
 
-				if plan_units <= 0:
+				if plan_only and plan_units <= 0:
 					if self.debug_level > 1:
 						print 'no planned units : ', comp_name
 					continue	
@@ -41,9 +41,11 @@ class Tbd(Isin, Plan, Demat):
 				isin_code = self.get_isin_code_by_name(comp_name)
 
 				if isin_code == '':
-					if self.debug_level > 0:
+					top_500 = 'NO'
+					if self.debug_level > 1:
 						print 'not in nse 500 ', comp_name
-					continue
+				else:
+					top_500 = 'yes'
 
 				demat_units = int(self.get_demat_units_by_isin_code(isin_code)) 
 				demat_last_txn_date = self.get_demat_last_txn_date_by_isin_code(isin_code)
@@ -56,7 +58,10 @@ class Tbd(Isin, Plan, Demat):
 
 				demat_last_txn_type = self.get_demat_last_txn_type_by_isin_code(isin_code)
 				tbd_units = plan_units - demat_units
-				tbd_pct = float((100.0*tbd_units)/plan_units)
+				if plan_units <= 0:
+					tbd_pct = 0
+				else:
+					tbd_pct = float((100.0*tbd_units)/plan_units)
 				tbd_pct = format(tbd_pct, '.2f')
 				p_str = comp_name
 				p_str += ',' 
@@ -71,6 +76,8 @@ class Tbd(Isin, Plan, Demat):
 				p_str += demat_last_txn_date 
 				p_str += ',' 
 				p_str += demat_last_txn_type
+				p_str += ',' 
+				p_str += top_500 
 				p_str += '\n' 
 				if tbd_only:
 					if tbd_units > 0:
@@ -88,5 +95,8 @@ class Tbd(Isin, Plan, Demat):
 	def print_tbd_phase2(self, out_filename):
 		self.print_tbd_phase1(out_filename, True)
 
-	def print_tbd_phase3(self, out_filename, days_filter):
-		self.print_tbd_phase1(out_filename, True, days_filter)
+	def print_tbd_phase3(self, out_filename):
+		self.print_tbd_phase1(out_filename, True, True)
+
+	def print_tbd_phase4(self, out_filename, days_filter):
+		self.print_tbd_phase1(out_filename, True, True, days_filter)
