@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,862,1000,862000,,
+,,837,1000,837000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -20,13 +20,13 @@ Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 ,Details,"Light < 8 ton, Medium (8 to 14 ton),  Heavy > 15 ton",Tata Motors (World leader in automobile),"Eicher Motors (Royal Enfield Bikes, Joint collaboration with Volvo for trucks and buses, Sold tractor business to TAFE - Messey Ferguson assembler in India. TAFE is owned by Amalgmation group. Privately held.) High Share Price: 30K",Ashok Leyland (Hinduja Group Company),"SML ISUZU (Swaraj Mazda Limited & ISUZU Japan : Earlier  Sumitomo Corporation, Punjab Tractors, ISUZU and MAZDA of Japan collaboration etc... Sold Swaraj (Punjab Tractors) to Mahindra. Now it is known as SML ISUZU)."
-,Units,7,5,2,0,0
+,Units,5,5,0,0,0
 Auto - Tractors,Company,,VST tillers,,,
 ,Details,,"VST tillers (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity.",,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 ,Details,Set -1,Bosch (German Giant. World's largest supplier of automative parts.) : High Share price 23K ,"Motherson Sumi (Flagship company of Samvardhan group. JV with Sumitomo Wiring of Japan, very big auto component company) : 4 major products: wiring harnesses, rear view mirrors, polymers and elastomers. Internal and external auto components. wiring and mirrors. rear view mirror. largest manufacturer and supplier of rear view mirrors.",Exide Industries (UK Based Chloride Eastern Ltd : 45% share) : India moves on Exide. The gap between net sales of Exide and Amaron is negligible. Competitors : Amaron (Amara Raja Batteries & Johnson Controls) and Tata Green (Tata Autocomp tie up with GS Yuasa of Japan).,"Amara Raja Batteries ( automative battery brand : AMARON ) : Lasts long, Really long. 25% Ownership by Johnson controls, USA (world leader in batteries) ."
-,Units,6,2,2,1,1
+,Units,4,0,2,1,1
 Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul
 ,Details,Set -2 (small companies with profit < 100 cr),WABCO India (Westinghouse Air Brake Company. US auto anciliiary giant : vehicle controls systems like braking etc. Power Brakes etc),Gabriel India - Shock absrober,Shriram Pistons & Rings,"Federal Mogul (auto parts, powertrain, piston etc)"
 ,Units,0,0,0,0,0
@@ -56,7 +56,7 @@ Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
 ,Units,4,2,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Details,Top 3 players (Ambuja and ACC are owned by same owner : Lafarge Holchim). ,UltraTech (Aditya Birla group) : Capacity : 70 million tons per year,ACC is one of the first few producer of cements in India ... ACC had a trouble when it focused on non-core items. TATA also had a stake in it. TATA sold the stake to Ambuja cements. ACC and Ambuja have similar capacity. ACC is owned 50% by Ambuja. Lafarge Holchim owns Ambuja.,"Ambuja is owned by LafargeHolchim (An International biggie : Lafarge(French) and Holchim(Swiss) in cement, construction and concrete sector)  Annual Capacity : 370 million tons per year. ","Shree Cement (Brands: Shree Cements, Bangur Cement, RockStrong etc) Bangur business family from Rajasthan settled in Calcutta. High Share Price : 18K"
-,Units,19,10,3,3,3
+,Units,16,10,3,3,0
 Cement - Major,Company,,Heidelberg cement,,,
 ,Details,Set -2,Heidelberg cement (Germany) is also among world's top cement companies. It has acquired ItaliCementi (Zuari cement is owned by Italicementi in India) also. Access mycem.com. It is still a small player.  Put only in top 3 companies for no differntiation.,,,
 ,Units,0,0,,,
@@ -119,7 +119,7 @@ Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,PC J
 Group 5,,,,,,
 Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
 ,Details,Holding companies and Diversified companies,"3M (Global MNC, Science Applied to Life : 4000 products: Scotch Glue Stick, Scotch Tape, Scotch Brite : Kitchen items, Water Softener, Water Filteration system, Medical Supplies, Share price : 15K). Doesn't pay dividend (rumor). check AR. High Share Price : 15 K","Grasim (Aditya Birla Group holding company - partial). Manages Textile and Chemical. Two popular subsidiaries : UltraTech, Idea","Godrej Industries (holding company) - subsidiaries are godrej consumer products, godrej properties, godrej agrovet.","Pilani Investment & Industries (Investment vehicle, holding in many Birla companies)"
-,Units,11,5,3,3,0
+,Units,6,0,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
 ,Details,Set -2 .Holding companies and Diversified companies. Avoid where ever possible. ,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,Bajaj Holdings & Investments (bajaj auto and bajaj finserv - parent),M&M is a holding company for Mahindra for so many subsidiary companies. (listed in auto),
 ,Units,0,0,0,0,
@@ -303,7 +303,7 @@ Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugar,Bajaj Hindusta
 ,Units,4,2,2,0,0
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
 ,Details,Revisit its reveune... target price... like 5K,"Honeywell Automation (MNC, Honeywell Aerospace is a world leader in aviation. Supplies all components of aircraft. Its competitor is UTC-United Technologies corporation in aviation space. Both are US based companies. It is also into building automation, plant automation, hotel automation etc. It also has speciality paint for aircraft and textile for miliary. High Share Price : 12 K.","Bharti Infratel (Telecom tower company with 40K towers, It also has 45% stake in Indus tower - combined entity of Bharti, Vodafone and Idea. also - 1.2 Lac towers). Bharti Infratel is 10% owned by KKR - Kohlberg Kravis & Roberts group. Key metric is number of towers and tower tenancy ... tower tenancy of 2 to 3 is good.",,
-,Units,8,5,3,,
+,Units,3,0,3,,
 Telecommunications - Service,Company,,Bharti Airtel,Idea,Bharti Infratel,
 ,Details,,Bharti Airtel,Idea (part owner Vodafone is one of worlds largest Telecomm company),Bharti Infratel is covered in Telecom Equipment,
 ,Units,15,10,5,0,
@@ -319,7 +319,7 @@ Textiles - Manmade,,,,,,
 Textiles - Processing,,,,,,
 Textiles - Readymade Apparels,Company,,Page Industries ,,,
 ,Details,,"Page Industries (Jockey, Speedo) : High Share Price : 15K",,,
-,Units,3,3,,,
+,Units,0,0,,,
 Textiles - Spinning - Cotton Blended,,,,,,
 Textiles - Spinning - Synthetic Blended,,,,,,
 Textiles - Synthetic & Silk,,,,,,
@@ -339,7 +339,7 @@ Transport & Logistics,Company,,Aegis logistics,Mahindra Logistics,Future Supply 
 ,Units,6,2,2,2,
 Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre 
 ,Details,Tyre - Set 1. Oligopoly : few players. These control 90% of the market. Dependent on raw *rubber* price. Margins improves in case *rubber* prices are low.,"MRF (Tyres - Leader in India, FunSkool - toys, preschool stuff, tie-up with all tops brands like HASBRO, LEGO, Disney etc, In toys space - Piaramal Enterprises's Little is a listed competitor, Mahindra's FirstCry is another competitor) High Share price : 60K","Apollo Tyres (Go the Distance, Second biggest versatile player)",CEAT (flagship company of RPG : R P Goenka : Group company),J K Tyre (Lala Jugilal Singhania and Lala Kamalpat Singhania). The same group has other companies like J K Paper and J K Lakshmi Cement etc.
-,Units,11,5,2,2,2
+,Units,6,0,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Details,Tyre - Set 2,Balkrishna Industries focuses on off the road (BKT Tyres : leader in off-the-road tyres),Goodyear (USA),Cycle and two-wheeler tyres,"Unlisted players: Bridgestone, Pirelli etc"
 ,Units,2,2,0,0,0

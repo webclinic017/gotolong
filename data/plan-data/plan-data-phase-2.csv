@@ -1,5 +1,5 @@
 comp_name, plan_units_1k
-3m, 5
+3m, 0
 Abb , 5
 Abbott , 2
 Acc, 3
@@ -47,9 +47,9 @@ Bharti airtel, 10
 Bharti infratel, 0
 Bharti infratel , 3
 Bhel, 5
+Blue dart express, 4
 Blue star, 2
-Bluedart express, 4
-Bosch, 2
+Bosch, 0
 Bpcl, 4
 Brigade, 2
 Britannia, 5
@@ -62,7 +62,7 @@ Ceat , 2
 Central depository, 2
 Century plyboard, 2
 Cera, 2
-Chambal fertilisers, 2
+Chambal fertilizers, 2
 Cipla, 5
 Coal , 10
 Cochin shipyard , 0
@@ -79,11 +79,11 @@ Dabur, 5
 Dewan housing finance, 0
 Dish tv, 5
 Dlf, 5
-Dr lal pathlabs, 2
+Dr lal path labs, 2
 Dr reddys laboratories, 5
 Dtdc, 0
 Educomp, 0
-Eicher motors, 2
+Eicher motors, 0
 Eid parry, 2
 Eih, 3
 Emami, 5
@@ -128,10 +128,10 @@ Hdfc standard life, 5
 Heidelberg cement, 0
 Hero motocorp, 5
 Hindalco, 2
+Hindustan petroleum, 3
 Hindustan unilever, 10
 Hindustan zinc, 5
-Honeywell automation , 5
-Hpcl, 3
+Honeywell automation , 0
 Hsil, 2
 Hudco, 2
 Huhtamaki ppl, 2
@@ -162,17 +162,17 @@ Jsw steel, 5
 Jubilant food , 2
 Kajaria ceramics, 2
 Kansai nerolac, 5
-Kaveri seeds, 3
+Kaveri seed, 3
 Khadim, 0
 Kirloskar brothers , 0
 Kotak mahindra bank, 2
 Krbl, 2
 Ksb pumps, 2
 L&t finance holdings, 2
-L&t infotech, 2
 L&t technology services, 2
 La opala, 0
 Larsen toubro , 10
+Larsen toubro infotech, 2
 Lemon tree hotels, 2
 Liberty shoes, 0
 Lic housing finance, 5
@@ -182,13 +182,13 @@ Mahindra cie, 2
 Mahindra holidays, 5
 Mahindra logistics, 2
 Mahindra mahindra, 5
-Mahindra mahindra finance, 3
+Mahindra mahindra financial, 3
 Manappuram finance, 2
 Marico, 5
 Maruti suzuki, 5
 Monsanto , 5
 Motherson sumi, 2
-Mrf, 5
+Mrf, 0
 Muthoot finance, 5
 Narayana hrudayalaya, 3
 National aluminium, 2
@@ -204,12 +204,12 @@ Nmdc, 5
 Ntpc , 10
 Oil , 3
 Ongc, 5
-P c jeweller, 2
-P i industries, 3
-Page industries , 3
+Page industries , 0
 Panasonic energy , 0
+Pc jeweller, 2
 Petronet lng, 4
 Pfizer, 2
+Pi industries, 3
 Pidilite, 2
 Pilani investment industries, 0
 Piramal enterprises, 5
@@ -226,9 +226,9 @@ Rajesh exports, 2
 Rallis , 2
 Rashtriya chemical fertilizer, 0
 Raymond , 0
-Rec, 5
 Relaxo footwear, 5
 Reliance industries, 10
+Rural electrification corporation, 5
 Sail, 0
 Saint gobain, 0
 Sanofi , 2
@@ -240,7 +240,7 @@ Shakti pumps , 0
 Sheela foam, 2
 Shipping corporation, 3
 Shoppers stop, 2
-Shree cement, 3
+Shree cement, 0
 Shree renuka sugar, 0
 Shriram pistons rings, 0
 Shriram transport finance, 3

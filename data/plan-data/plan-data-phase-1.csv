@@ -1,24 +1,24 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,862,1000,862000,,
+,,837,1000,837000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
 ,Units,4,2,2,,
 Aluminium,Company,,Hindalco,National aluminium,BALCO,
 ,Units,4,2,2,0,
-Aquaculture,Company,,Avanti Feeds,Godrej AgroVet,IFB Agro,Kaveri Seeds
+Aquaculture,Company,,Avanti Feeds,Godrej AgroVet,IFB Agro,Kaveri Seed
 ,Units,7,2,2,0,3
 Auto - 2 & 3 Wheelers,Company,,Hero Motocorp,Bajaj Auto,TVS Motor,Tube Investments of India Limited
 ,Units,17,5,5,5,2
 Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
-,Units,7,5,2,0,0
+,Units,5,5,0,0,0
 Auto - Tractors,Company,,VST tillers,,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
-,Units,6,2,2,1,1
+,Units,4,0,2,1,1
 Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul
 ,Units,0,0,0,0,0
 Auto Ancillaries,Company,,Sundaram Clayton,,,
@@ -39,7 +39,7 @@ Cables - Telephone,,,,,,
 Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
 ,Units,4,2,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
-,Units,19,10,3,3,3
+,Units,16,10,3,3,0
 Cement - Major,Company,,Heidelberg cement,,,
 ,Units,0,0,,,
 Cement - Mini,,,,,,
@@ -58,7 +58,7 @@ Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career P
 Computers - Hardware,,,,,,
 Computers - Software,Company,,Tata Consultancy,Infosys,Wipro ,Tech Mahindra
 ,Units,30,10,10,5,5
-Computers - Software,Company,,HCL Tech,Info Edge,L&T Infotech,
+Computers - Software,Company,,HCL Tech,Info Edge,Larsen & Toubro Infotech,
 ,Units,12,5,5,2,
 Computers - Software - Training,,,,,,
 Computers - Software Medium & Small,Company,,L&T Technology Services,,,
@@ -76,14 +76,14 @@ Consumer Goods - Electronic,Company,,Voltas,,,
 ,Units,2,2,,,
 Consumer Goods - White Goods,Company,,Whirlpool,Johnson Controls Hitachi,Blue Star,IFB Industries
 ,Units,8,2,2,2,2
-Couriers,Company,,BlueDart Express,DTDC,,
+Couriers,Company,,Blue Dart Express,DTDC,,
 ,Units,4,4,0,,
 Detergents,,,,,,
-Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,P C Jeweller,
+Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,PC Jeweller,
 ,Units,9,5,2,2,
 Group 5,,,,,,
 Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
-,Units,11,5,3,3,0
+,Units,6,0,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
 ,Units,0,0,0,0,
 Domestic Appliances,Company,,TTK Prestige,Bajaj Electric,Hawkins Cooker,
@@ -105,7 +105,7 @@ Engines,Company,,Cummins,,,
 ,Units,2,2,,,
 Fasteners,Company,,Sundaram Fasteners,,,
 ,Units,,0,,,
-Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
+Fertilisers,Company,,Coromandel International,Chambal Fertilizers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
@@ -118,9 +118,9 @@ Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,Central Depository,
 ,Units,12,5,3,2,2
 Finance - Investments,Company,,TI financial holding,L&T Finance Holdings,Aditya Birla Capital,Tata Investment Corp
 ,Units,8,2,2,2,2
-Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Finance,Manappuram Finance
+Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Financial,Manappuram Finance
 ,Units,8,0,3,3,2
-Finance - Term Lending Institutions,Company,,Power Finance,REC,,
+Finance - Term Lending Institutions,Company,,Power Finance,Rural Electrification Corporation,,
 ,Units,10,5,5,,
 Group 7,,,,,,
 Food Processing,Company,,Nestle,Britannia,GlaxoSmithKline Consumer,Varun Beverages
@@ -166,14 +166,14 @@ Personal Care,Company,,Hindustan Unilever,Colgate Palmolive India,Procter & Gamb
 ,Units,20,10,2,6,2
 Personal Care,Company,,Dabur,Marico,Emami,Godrej Consumer Products
 ,Units,20,5,5,5,5
-Pesticides & Agro Chemicals,Company,,Bayer Cropscience,P I Industries,Rallis India,Monsanto India
+Pesticides & Agro Chemicals,Company,,Bayer Cropscience,PI Industries,Rallis India,Monsanto India
 ,Units,15,5,3,2,5
 Petrochemicals,,,,,,
 Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 ,Units,20,5,5,5,5
 Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Pathlabs
+Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Path Labs
 ,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,,
 ,Units,10,5,5,,
@@ -188,7 +188,7 @@ Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 Group 10,,,,,,
 Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Units,2,2,0,0,
-Refineries,Company,,Reliance Industries,IOC,BPCL,HPCL
+Refineries,Company,,Reliance Industries,IOC,BPCL,Hindustan Petroleum
 ,Units,22,10,5,4,3
 Retail,Company,,Aditya Birla Fashion & Retail,Trent,Shoppers Stop,Future Retail 
 ,Units,8,2,2,2,2
@@ -211,7 +211,7 @@ Group 11,,,,,,
 Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugar,Bajaj Hindustan
 ,Units,4,2,2,0,0
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
-,Units,8,5,3,,
+,Units,3,0,3,,
 Telecommunications - Service,Company,,Bharti Airtel,Idea,Bharti Infratel,
 ,Units,15,10,5,0,
 Textiles - Composite Mills,,,,,,
@@ -224,7 +224,7 @@ Textiles - Machinery,,,,,,
 Textiles - Manmade,,,,,,
 Textiles - Processing,,,,,,
 Textiles - Readymade Apparels,Company,,Page Industries ,,,
-,Units,3,3,,,
+,Units,0,0,,,
 Textiles - Spinning - Cotton Blended,,,,,,
 Textiles - Spinning - Synthetic Blended,,,,,,
 Textiles - Synthetic & Silk,,,,,,
@@ -239,7 +239,7 @@ Transport & Logistics,Company,,Interglobe Aviation,Container Corporation,VRL Log
 Transport & Logistics,Company,,Aegis logistics,Mahindra Logistics,Future Supply Chain,
 ,Units,6,2,2,2,
 Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre 
-,Units,11,5,2,2,2
+,Units,6,0,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Units,2,2,0,0,0
 Vanaspati & Oils,,,,,,
