@@ -41,8 +41,8 @@ class Tbd(Isin, Plan, Demat):
 				isin_code = self.get_isin_code_by_name(comp_name)
 
 				if isin_code == '':
-					top_500 = 'NO'
-					if self.debug_level > 1:
+					top_500 = '-'
+					if days_filter and self.debug_level > 0:
 						print 'not in nse 500 ', comp_name
 				else:
 					top_500 = 'yes'
