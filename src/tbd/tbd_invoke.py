@@ -23,7 +23,7 @@ out_filename_phase1 = sys.argv[6]
 out_filename_phase2 = sys.argv[7]
 out_filename_phase3 = sys.argv[8]
 out_filename_phase4 = sys.argv[9]
-filter_days = sys.argv[10]
+filter_days = int(sys.argv[10])
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
