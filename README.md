@@ -8,7 +8,9 @@ Downloaded directly from the websites.
 Fix discrepancy
 
   $ cd src/isin
+  
   $ ./isin_invoke.sh
+  
   
 2. Prepare data/plan-data/plan-data.csv file
 
@@ -27,13 +29,16 @@ NOTE: Try to use just first two words for the company name if that will make it 
 Fix any discrepancy by running following
 
  $ cd src/plan
+ 
  $ ./plan_invoke.sh
+ 
  
 3. Download demat/demat-data/demat-data.csv from ICICI Direct (all holdings, all txns in csv format)
 
 Fix any discrepancy by running following
 
  $ cd src/demat
+ 
  $ ./demat_invoke.sh
 
  
@@ -42,4 +47,5 @@ Fix any discrepancy by running following
    Execute following
 
    $ cd src/tbd
+   
    $ ./tbd-invoke.sh
