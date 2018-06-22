@@ -107,6 +107,7 @@ class Screener(object):
 				p_str += str(self.sc_iv[sc_name])
 			else:
 				p_str += '-'
+			p_str += ', ' 
 			if sc_name in self.sc_mos:
 				p_str += str(self.sc_mos[sc_name])
 			else:
