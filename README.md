@@ -1,59 +1,45 @@
-# stock-market
+# indian-stock-market
 
-GIT Setup for Github
+The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
 
-1> Clone 
-git clone https://github.com/surinder432/stock-market.git
+1. isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+Downloaded directly from the websites.
 
-1.2> If already present (rebase)
-git pull
+Fix discrepancy
 
-2> 
+  $ cd src/isin
+  $ ./isin_invoke.sh
+  
+2. Prepare data/plan-data/plan-data.csv file
 
-cd stock-market
+Include weight for each company and cummulative weight for industry.
 
-3.1> configuration
+1 Unit can be represented by 1000 Rs.
+0 Unit : stock is under watch but there is no plan to acquire it right now.
 
-git config --global user.email 'surinder.kumar.432@gmail.com'
-
-git config --global user.name 'surinder kumar'
-
-git config --global --edit
-
-git commit --amend --reset-author
-
-git config --global push.default simple
-
-3.2> credential helper and cache expiry
-
-Avoid asking git username (e-mail) and password for every push. Set cache expiry of 24 hours = 24*60*60 = 86400 
+Industry name,  Company, Space, Company name (First), Company name (Second), Company name (Third)
+Space,          Details, Industry Details,
+Space,          Units, <cummuulative units>, Unit (First), Unit (Second), Unit (Third)
 
 
-git config credential.helper store
+NOTE: Try to use just first two words for the company name if that will make it unique in BSE 500.
 
-git config --global credential.helper 'cache --timeout 86400'
+Fix any discrepancy by running following
 
+ $ cd src/plan
+ $ ./plan_invoke.sh
+ 
+3. Download demat/demat-data/demat-data.csv from ICICI Direct (all holdings, all txns in csv format)
 
-3.3> Add a file (or Let git know that file must be commited again)
+Fix any discrepancy by running following
 
-git add
+ $ cd src/demat
+ $ ./demat_invoke.sh
 
-4> Commit changes
+ 
+  
+4. To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
+   Execute following
 
-git commit
-
-(Uncomment modification to be committed)
-
-5> Push changs to Remote
-
-git push
-(short for git push origin master)
-
-Username : emailid
-Password: Secret pass
-
-5.2> Remote location : Check output of these
-git remove -v
-
-
-6> 
+   $ cd src/tbd
+   $ ./tbd-invoke.sh
