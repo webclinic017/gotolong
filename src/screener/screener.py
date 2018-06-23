@@ -118,5 +118,5 @@ class Screener(object):
 				return self.sc_mos[sc_name] 
 		if self.debug_level > 1:
 			print 'demat not found : req_name :',req_name,':'
-		return ''
+		return 0 
 

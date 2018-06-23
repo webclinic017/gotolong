@@ -1,77 +1,77 @@
-comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type, top_500
-Adani ports,5,1,4,80.00,29-Sep-2017,Buy,yes
-Akzo nobel,2,1,1,50.00,17-Jul-2017,Buy,yes
-Amara raja batteries,1,0,1,100.00,05-Jun-2017,Buy,yes
-Apollo hospitals,10,7,3,30.00,06-Dec-2017,Buy,yes
-Arvind ,3,1,2,66.67,18-Sep-2017,Buy,yes
-Asian paints,10,8,2,20.00,06-Dec-2017,Buy,yes
-Avenue supermarts,2,1,1,50.00,16-Oct-2017,Buy,yes
-Balrampur chini mills,2,1,1,50.00,13-Nov-2017,Buy,yes
-Bata,5,2,3,60.00,06-Dec-2017,Buy,yes
-Bayer cropscience,5,4,1,20.00,09-Jun-2017,Buy,yes
-Bharti airtel,10,9,1,10.00,27-Nov-2017,Buy,yes
-Bharti infratel ,3,1,2,66.67,03-Oct-2017,Buy,yes
-Blue star,2,0,2,100.00,28-Nov-2017,Buy,yes
-Brigade,2,1,1,50.00,08-Jun-2017,Buy,yes
-Bse,2,0,2,100.00,28-Sep-2017,Buy,yes
-Cadila healthcare,3,0,3,100.00,19-Sep-2017,Buy,yes
-Carborundum universal ,2,1,1,50.00,17-Oct-2017,Buy,yes
-Ceat ,2,1,1,50.00,11-Jul-2017,Buy,yes
-Central depository,2,1,1,50.00,28-Sep-2017,Buy,yes
-Chambal fertilizers,2,1,1,50.00,16-Oct-2017,Buy,yes
-Crompton greaves,2,1,1,50.00,28-Nov-2017,Buy,yes
-Dr lal path labs,2,0,2,100.00,19-Sep-2017,Buy,yes
-Engineers ,5,1,4,80.00,08-Sep-2017,Buy,yes
-Eveready ,2,1,1,50.00,01-Nov-2017,Buy,yes
-General insurance,5,1,4,80.00,25-Oct-2017,Buy,yes
-Glenmark pharma,3,1,2,66.67,19-Sep-2017,Buy,yes
-Godrej agrovet,2,1,1,50.00,16-Oct-2017,Buy,yes
-Godrej consumer products,5,0,5,100.00,25-Sep-2017,Buy,yes
-Godrej industries,3,1,2,66.67,16-Oct-2017,Buy,yes
-Godrej properties,2,1,1,50.00,08-Jun-2017,Buy,yes
-Grasim,3,1,2,66.67,16-Oct-2017,Buy,yes
-Grindwell norton,2,1,1,50.00,17-Oct-2017,Buy,yes
-Havells,2,1,1,50.00,31-Jul-2017,Buy,yes
-Hcl tech,5,1,4,80.00,27-Feb-2017,Buy,yes
-Hero motocorp,5,3,2,40.00,09-Jun-2017,Buy,yes
-Hindalco,2,1,1,50.00,01-Sep-2017,Buy,yes
-Hudco,2,1,1,50.00,19-Sep-2017,Buy,yes
-Icici lombard,5,1,4,80.00,27-Sep-2017,Buy,yes
-Icici prudential,5,2,3,60.00,01-Nov-2017,Buy,yes
-Icra,5,4,1,20.00,22-Jun-2017,Buy,yes
-Idea,5,2,3,60.00,01-Nov-2017,Buy,yes
-Ifb industries,2,1,1,50.00,28-Nov-2017,Buy,yes
-Indiabulls housing finance,3,1,2,66.67,03-Oct-2017,Buy,yes
-Indian hotels,10,9,1,10.00,06-Dec-2017,Buy,yes
-Info edge,5,2,3,60.00,18-Sep-2017,Buy,yes
-Infosys,10,9,1,10.00,17-Mar-2017,Buy,yes
-Interglobe aviation,5,2,3,60.00,01-Nov-2017,Buy,yes
-Itc,10,5,5,50.00,02-Nov-2017,Buy,yes
-Jain irrigation,2,1,1,50.00,29-Nov-2017,Buy,yes
-Jsw steel,5,2,3,60.00,06-Dec-2017,Buy,yes
-Krbl,2,0,2,100.00,22-Sep-2017,Buy,yes
-Lic housing finance,5,2,3,60.00,01-Nov-2017,Buy,yes
-Mahindra mahindra financial,3,1,2,66.67,03-Oct-2017,Buy,yes
-Muthoot finance,5,1,4,80.00,01-Nov-2017,Buy,yes
-Nhpc ,3,1,2,66.67,03-Oct-2017,Buy,yes
-Nilkamal,2,1,1,50.00,14-Jun-2017,Buy,yes
-Nlc ,3,1,2,66.67,03-Oct-2017,Buy,yes
-Ntpc ,10,7,3,30.00,06-Dec-2017,Buy,yes
-Ongc,5,3,2,40.00,06-Dec-2017,Buy,yes
-Pc jeweller,2,1,1,50.00,02-Aug-2017,Buy,yes
-Power finance,5,2,3,60.00,01-Nov-2017,Buy,yes
-Prestige,5,1,4,80.00,08-Jun-2017,Buy,yes
-Reliance industries,10,6,4,40.00,27-Nov-2017,Buy,yes
-Rural electrification corporation,5,4,1,20.00,01-Nov-2017,Buy,yes
-Sbi,5,1,4,80.00,03-Oct-2017,Buy,yes
-Sbi life,5,1,4,80.00,03-Oct-2017,Buy,yes
-Shriram transport finance,3,1,2,66.67,03-Oct-2017,Buy,yes
-Skf ,2,1,1,50.00,02-Jun-2017,Buy,yes
-Sobha,2,1,1,50.00,08-Jun-2017,Buy,yes
-Somany ceramics,2,0,2,100.00,13-Nov-2017,Buy,yes
-Tata coffee,5,2,3,60.00,01-Nov-2017,Buy,yes
-Tata global beverages,5,2,3,60.00,01-Nov-2017,Buy,yes
-Tata steel,5,4,1,20.00,25-Jan-2017,Buy,yes
-Ti financial holding,2,1,1,50.00,02-Jun-2017,Buy,yes
-Tvs motor,5,2,3,60.00,01-Sep-2017,Buy,yes
-United breweries,5,1,4,80.00,01-Nov-2017,Buy,yes
+comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type, top_500, sc_mos
+Adani ports,5,1,4,80.00,29-Sep-2017,Buy,yes,0
+Akzo nobel,2,1,1,50.00,17-Jul-2017,Buy,yes,39
+Amara raja batteries,1,0,1,100.00,05-Jun-2017,Buy,yes,0
+Apollo hospitals,10,7,3,30.00,06-Dec-2017,Buy,yes,0
+Arvind ,3,1,2,66.67,18-Sep-2017,Buy,yes,87
+Asian paints,10,8,2,20.00,06-Dec-2017,Buy,yes,79
+Avenue supermarts,2,1,1,50.00,16-Oct-2017,Buy,yes,0
+Balrampur chini mills,2,1,1,50.00,13-Nov-2017,Buy,yes,0
+Bata,5,2,3,60.00,06-Dec-2017,Buy,yes,20
+Bayer cropscience,5,4,1,20.00,09-Jun-2017,Buy,yes,0
+Bharti airtel,10,9,1,10.00,27-Nov-2017,Buy,yes,12
+Bharti infratel ,3,1,2,66.67,03-Oct-2017,Buy,yes,0
+Blue star,2,0,2,100.00,28-Nov-2017,Buy,yes,0
+Brigade,2,1,1,50.00,08-Jun-2017,Buy,yes,0
+Bse,2,0,2,100.00,28-Sep-2017,Buy,yes,6
+Cadila healthcare,3,0,3,100.00,19-Sep-2017,Buy,yes,0
+Carborundum universal ,2,1,1,50.00,17-Oct-2017,Buy,yes,0
+Ceat ,2,1,1,50.00,11-Jul-2017,Buy,yes,537
+Central depository,2,1,1,50.00,28-Sep-2017,Buy,yes,0
+Chambal fertilizers,2,1,1,50.00,16-Oct-2017,Buy,yes,0
+Crompton greaves,2,1,1,50.00,28-Nov-2017,Buy,yes,0
+Dr lal path labs,2,0,2,100.00,19-Sep-2017,Buy,yes,0
+Engineers ,5,1,4,80.00,08-Sep-2017,Buy,yes,-73
+Eveready ,2,1,1,50.00,01-Nov-2017,Buy,yes,0
+General insurance,5,1,4,80.00,25-Oct-2017,Buy,yes,0
+Glenmark pharma,3,1,2,66.67,19-Sep-2017,Buy,yes,0
+Godrej agrovet,2,1,1,50.00,16-Oct-2017,Buy,yes,98
+Godrej consumer products,5,0,5,100.00,25-Sep-2017,Buy,yes,0
+Godrej industries,3,1,2,66.67,16-Oct-2017,Buy,yes,0
+Godrej properties,2,1,1,50.00,08-Jun-2017,Buy,yes,0
+Grasim,3,1,2,66.67,16-Oct-2017,Buy,yes,0
+Grindwell norton,2,1,1,50.00,17-Oct-2017,Buy,yes,13
+Havells,2,1,1,50.00,31-Jul-2017,Buy,yes,80
+Hcl tech,5,1,4,80.00,27-Feb-2017,Buy,yes,179
+Hero motocorp,5,3,2,40.00,09-Jun-2017,Buy,yes,54
+Hindalco,2,1,1,50.00,01-Sep-2017,Buy,yes,0
+Hudco,2,1,1,50.00,19-Sep-2017,Buy,yes,0
+Icici lombard,5,1,4,80.00,27-Sep-2017,Buy,yes,0
+Icici prudential,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Icra,5,4,1,20.00,22-Jun-2017,Buy,yes,63
+Idea,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Ifb industries,2,1,1,50.00,28-Nov-2017,Buy,yes,0
+Indiabulls housing finance,3,1,2,66.67,03-Oct-2017,Buy,yes,0
+Indian hotels,10,9,1,10.00,06-Dec-2017,Buy,yes,0
+Info edge,5,2,3,60.00,18-Sep-2017,Buy,yes,0
+Infosys,10,9,1,10.00,17-Mar-2017,Buy,yes,67
+Interglobe aviation,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Itc,10,5,5,50.00,02-Nov-2017,Buy,yes,0
+Jain irrigation,2,1,1,50.00,29-Nov-2017,Buy,yes,0
+Jsw steel,5,2,3,60.00,06-Dec-2017,Buy,yes,170
+Krbl,2,0,2,100.00,22-Sep-2017,Buy,yes,209
+Lic housing finance,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Mahindra mahindra financial,3,1,2,66.67,03-Oct-2017,Buy,yes,0
+Muthoot finance,5,1,4,80.00,01-Nov-2017,Buy,yes,35
+Nhpc ,3,1,2,66.67,03-Oct-2017,Buy,yes,-35
+Nilkamal,2,1,1,50.00,14-Jun-2017,Buy,yes,161
+Nlc ,3,1,2,66.67,03-Oct-2017,Buy,yes,121
+Ntpc ,10,7,3,30.00,06-Dec-2017,Buy,yes,9
+Ongc,5,3,2,40.00,06-Dec-2017,Buy,yes,0
+Pc jeweller,2,1,1,50.00,02-Aug-2017,Buy,yes,82
+Power finance,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Prestige,5,1,4,80.00,08-Jun-2017,Buy,yes,0
+Reliance industries,10,6,4,40.00,27-Nov-2017,Buy,yes,0
+Rural electrification corporation,5,4,1,20.00,01-Nov-2017,Buy,yes,0
+Sbi,5,1,4,80.00,03-Oct-2017,Buy,yes,0
+Sbi life,5,1,4,80.00,03-Oct-2017,Buy,yes,0
+Shriram transport finance,3,1,2,66.67,03-Oct-2017,Buy,yes,0
+Skf ,2,1,1,50.00,02-Jun-2017,Buy,yes,19
+Sobha,2,1,1,50.00,08-Jun-2017,Buy,yes,-30
+Somany ceramics,2,0,2,100.00,13-Nov-2017,Buy,yes,184
+Tata coffee,5,2,3,60.00,01-Nov-2017,Buy,yes,62
+Tata global beverages,5,2,3,60.00,01-Nov-2017,Buy,yes,0
+Tata steel,5,4,1,20.00,25-Jan-2017,Buy,yes,-61
+Ti financial holding,2,1,1,50.00,02-Jun-2017,Buy,yes,0
+Tvs motor,5,2,3,60.00,01-Sep-2017,Buy,yes,0
+United breweries,5,1,4,80.00,01-Nov-2017,Buy,yes,66

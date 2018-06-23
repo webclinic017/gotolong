@@ -21,4 +21,6 @@ def normalize_comp_name(comp_name):
         comp_name = re.sub('\(.*','', comp_name)
         # convert multiple space to single space
         comp_name = re.sub(' +', ' ', comp_name)
+	# strip space
+        comp_name = comp_name.strip()
         return comp_name

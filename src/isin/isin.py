@@ -140,3 +140,9 @@ class Isin(object):
 			print 'demat not found : req_name :',req_name,':'
 		return ''
 
+	def get_isin_name_by_code(self, isin_code):
+		if isin_code in self.isin_name_nse:
+			return self.isin_name_nse[isin_code]
+		if isin_code in self.isin_name_bse:
+			return self.isin_name_bse[isin_code]
+		return '-'
