@@ -110,11 +110,10 @@ class Screener(object):
 	def get_sc_mos_by_name(self, req_name):
 		for sc_name  in sorted(self.sc_name):
 			# try to find a matching company
-			if re.match(req_name, sc_name):
+			if re.match(sc_name.strip(), req_name.strip()):
 				if self.debug_level > 1:
-					print 'found match : name : ', req_name
+					print 'sc: screener found match : ', req_name, ', sc_mos : ', str(self.sc_mos[sc_name])
 				return self.sc_mos[sc_name] 
 		if self.debug_level > 1:
-			print 'demat not found : req_name :',req_name,':'
+			print 'sc: screener not found :',req_name,':'
 		return 0 
-
