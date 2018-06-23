@@ -7,5 +7,6 @@ DEBUG_LEVEL=0
 
 IN_FILE=$PROJ_DATA_LOC/screener-data/screener-data.csv
 OUT_FILE_1=$PROJ_REPORTS_LOC/screener-reports/screener-reports-phase-1.csv
+OUT_FILE_2=$PROJ_REPORTS_LOC/screener-reports/screener-reports-phase-2.csv
 
-screener_invoke.py ${DEBUG_LEVEL} ${IN_FILE} ${OUT_FILE_1}
+screener_invoke.py ${DEBUG_LEVEL} ${IN_FILE} ${OUT_FILE_1} ${OUT_FILE_2}

@@ -5,6 +5,7 @@ import re
 import csv
 import traceback
 import operator
+import cutil.cutil
 
 class Screener(object):
 	def __init__(self):
@@ -18,26 +19,6 @@ class Screener(object):
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
 
-        def normalize_comp_name(self, comp_name):
-                comp_name = comp_name.capitalize()
-                # remove hyphen (V-guard)
-                comp_name = re.sub('-',' ', comp_name)
-                # remove . in Dr. lal pathlabs
-                comp_name = re.sub('\.','', comp_name)
-                # remove ' in Dr Reddy's Laboratories
-                comp_name = re.sub('\'','', comp_name)
-                comp_name = re.sub('limited','', comp_name)
-                comp_name = re.sub('ltd','', comp_name)
-                comp_name = re.sub('india','', comp_name)
-                # replace and and &
-                comp_name = re.sub(' and ',' ', comp_name)
-                comp_name = re.sub(' & ',' ', comp_name)
-                # remove any characters after (  :
-                # TRENT LTD (LAKME LTD)
-                comp_name = re.sub('\(.*','', comp_name)
-                # convert multiple space to single space
-                comp_name = re.sub(' +', ' ', comp_name)
-                return comp_name
 
 	def load_screener_row(self, row):
 		try:
@@ -55,6 +36,7 @@ class Screener(object):
 
 			sc_name = row_list[1]
 			sc_cmp = row_list[2]
+			sc_cmp = int(float(sc_cmp))
 
 			sc_iv = row_list[15]
 			if sc_iv == 'NaN':
@@ -68,7 +50,7 @@ class Screener(object):
 			else:
 				sc_mos = int(float(sc_mos))
 
-			sc_name = self.normalize_comp_name(sc_name)
+			sc_name = cutil.cutil.normalize_comp_name(sc_name)
 
 			self.sc_cmp[sc_name] = sc_cmp
 			self.sc_iv[sc_name]   = sc_iv
@@ -92,14 +74,20 @@ class Screener(object):
 			for row in reader:
 				self.load_screener_row(row)
 
-	def print_phase1(self, out_filename):
+	def print_phase1(self, out_filename, sort_mos = None):
 		fh = open(out_filename, "w") 
 		fh.write('sc_name, sc_cmp, sc_iv, sc_mos\n')
-		for sc_name in sorted(set(self.sc_name)):
+
+		if sort_mos:
+			sorted_input = sorted(self.sc_mos, key=self.sc_mos.__getitem__, reverse=True)
+		else:
+			sorted_input = sorted(self.sc_name)
+
+		for sc_name in sorted_input:
 			p_str = sc_name 
 			p_str += ', ' 
 			if sc_name in self.sc_cmp:
-				p_str += self.sc_cmp[sc_name] 
+				p_str += str(self.sc_cmp[sc_name])
 			else:
 				p_str += '-'
 			p_str += ', ' 
@@ -115,6 +103,9 @@ class Screener(object):
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
+
+	def print_phase2(self, out_filename):
+		self.print_phase1(out_filename, True)
 
 	def get_sc_mos_by_name(self, req_name):
 		req_name = re.sub('\s+', ' ', req_name).strip()
