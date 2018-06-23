@@ -6,6 +6,8 @@ import csv
 import traceback
 import operator
 
+import cutil.cutil
+
 class Isin(object):
 	def __init__(self):
 		super(Isin, self).__init__()
@@ -17,27 +19,6 @@ class Isin(object):
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
-
-        def normalize_comp_name(self, comp_name):
-                comp_name = comp_name.capitalize()
-                # remove hyphen (V-guard)
-                comp_name = re.sub('-',' ', comp_name)
-                # remove . in Dr. lal pathlabs
-                comp_name = re.sub('\.','', comp_name)
-                # remove ' in Dr Reddy's Laboratories
-                comp_name = re.sub('\'','', comp_name)
-                comp_name = re.sub('limited','', comp_name)
-                comp_name = re.sub('ltd','', comp_name)
-                comp_name = re.sub('india','', comp_name)
-                # replace and and &
-                comp_name = re.sub(' and ',' ', comp_name)
-                comp_name = re.sub(' & ',' ', comp_name)
-                # remove any characters after (  :
-                # TRENT LTD (LAKME LTD)
-                comp_name = re.sub('\(.*','', comp_name)
-                # convert multiple space to single space
-                comp_name = re.sub(' +', ' ', comp_name)
-                return comp_name
 
 	def load_isin_row(self, row, bse_nse):
 		try:
@@ -58,7 +39,7 @@ class Isin(object):
 				print 'skipped header line', row_list
 				return
 
-			comp_name = self.normalize_comp_name(comp_name)
+			comp_name = cutil.cutil.normalize_comp_name(comp_name)
 
 			if bse_nse == "nse":
 				self.isin_symbol[isin_code] = isin_symbol.upper().strip()

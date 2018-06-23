@@ -108,10 +108,8 @@ class Screener(object):
 		self.print_phase1(out_filename, True)
 
 	def get_sc_mos_by_name(self, req_name):
-		req_name = re.sub('\s+', ' ', req_name).strip()
 		for sc_name  in sorted(self.sc_name):
 			# try to find a matching company
-			sc_name = sc_name.strip()
 			if re.match(req_name, sc_name):
 				if self.debug_level > 1:
 					print 'found match : name : ', req_name

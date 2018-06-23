@@ -1,7 +1,7 @@
 sc_name, sc_cmp, sc_iv, sc_mos
-3m , 19829, 10586, 187
+3m, 19829, 10586, 187
 A b b, 1205, 756, 159
-Abbott , 7303, 6445, 113
+Abbott, 7303, 6445, 113
 Acc, 1270, -3674, -34
 Adani enterp, 129, -144, -89
 Adani ports, 366, 201, 182
@@ -13,7 +13,7 @@ Amara raja batt, 760, 718, 105
 Ambuja cem, 197, -4095, -4
 Apollo hospitals, 1023, 4680, 21
 Apollo tyres, 274, 212, 129
-Arvind , 410, 469, 87
+Arvind, 410, 469, 87
 Asahi glas, 333, 0, 0
 Asian granito, 335, 1095, 30
 Asian paints, 1253, 1568, 79
@@ -27,8 +27,8 @@ Bajaj auto, 2830, 8219, 34
 Bajaj finserv, 5991, 8651, 69
 Balkrishna inds, 1107, 828, 133
 Balrampur chini, 67, 7, 902
-Basf , 1957, 0, 0
-Bata , 834, 4094, 20
+Basf, 1957, 0, 0
+Bata, 834, 4094, 20
 Bayer crop sci, 4600, 7153, 64
 Berger paints, 283, 241, 117
 Bharat electron, 109, 131, 83
@@ -43,14 +43,14 @@ Bse, 854, 12399, 6
 Cadila health, 412, 365, 112
 Carborundum uni, 325, -1201, -27
 Care ratings, 1323, 2686, 49
-Castrol , 170, 321, 52
+Castrol, 170, 321, 52
 Ceat, 1313, 244, 537
 Central dep ser, 286, 551, 52
 Century ply, 272, 204, 133
 Cera sanitary, 2842, 1767, 160
 Chambal fert, 159, 254, 62
 Cipla, 603, -1849, -32
-Coal , 267, -480, -55
+Coal, 267, -480, -55
 Coffee day enter, 285, 459, 62
 Colgate palm, 1177, 3519, 33
 Container corpn, 1256, -41023, -3
@@ -58,8 +58,8 @@ Coromandel inter, 405, -873, -46
 Cox kings, 211, 135, 155
 Crisil, 1766, 4626, 38
 Crompton gr con, 222, 0, 0
-Cummins , 679, 1815, 37
-Dabur , 385, 437, 88
+Cummins, 679, 1815, 37
+Dabur, 385, 437, 88
 Dish tv, 71, 0, 0
 Dlf, 198, -31028, 0
 Dr lal pathlabs, 902, 514, 175
@@ -68,7 +68,7 @@ Eicher motors, 29424, 11219, 262
 Eid parry, 217, 345, 62
 Eih, 162, -13003, -1
 Emami, 530, 997, 53
-Engineers , 127, -172, -73
+Engineers, 127, -172, -73
 Essel propack, 120, 108, 111
 Eveready inds, 240, 0, 0
 Exide inds, 252, 454, 55
@@ -77,9 +77,9 @@ Future consumer, 51, 0, 0
 Future lifestyle, 433, 0, 0
 Future retail, 550, 0, 0
 Future supply, 711, 0, 0
-Gail , 339, 22705, 1
+Gail, 339, 22705, 1
 General insuranc, 723, 0, 0
-Gillette , 6533, 3819, 171
+Gillette, 6533, 3819, 171
 Glaxosmith c h l, 6048, 7397, 81
 Glenmark pharma, 602, 477, 126
 Godrej agrovet, 643, 655, 98
@@ -92,7 +92,7 @@ Grindwell norton, 511, 3917, 13
 H d f c, 1858, 2390, 77
 H p c l, 315, 113, 278
 H u d c o, 58, 172, 33
-Havells , 532, 664, 80
+Havells, 532, 664, 80
 Hcl technologies, 902, 502, 179
 Hdfc bank, 2057, 1501, 137
 Hdfc stand life, 472, 0, 0
@@ -142,7 +142,7 @@ Mahindra logis, 612, 0, 0
 Manappuram fin, 101, 15, 650
 Marico, 335, 280, 119
 Maruti suzuki, 8863, 4492, 197
-Monsanto , 2859, 1794, 159
+Monsanto, 2859, 1794, 159
 Motherson sumi, 306, 106, 286
 Mrf, 74771, 36181, 206
 Muthoot finance, 379, 1056, 35
@@ -150,15 +150,15 @@ Narayana hrudaya, 229, 140, 163
 Natl aluminium, 65, -640, -10
 Nbcc, 82, 96, 86
 Ncc, 99, -186, -53
-Nestle , 9850, 56490, 17
+Nestle, 9850, 56490, 17
 New assura, 641, 0, 0
-Nhpc , 25, -71, -35
-Nilkamal , 1672, 1032, 161
-Nlc , 81, 67, 121
+Nhpc, 25, -71, -35
+Nilkamal, 1672, 1032, 161
+Nlc, 81, 67, 121
 Nmdc, 107, -94, -114
 Ntpc, 155, 1572, 9
 O n g c, 159, -520, -30
-Oil , 209, -504, -41
+Oil, 209, -504, -41
 P g hygiene, 9944, 8239, 120
 P i inds, 798, 305, 261
 Page industries, 26438, 17480, 151
@@ -174,22 +174,22 @@ Puravankara, 115, -872, -13
 Pvr, 1361, 648, 209
 Quess corp, 1101, 223, 492
 Rajesh exports, 602, 0, 0
-Rallis , 200, 402, 49
+Rallis, 200, 402, 49
 Relaxo footwear, 719, 459, 156
 Reliance inds, 1031, 1291, 79
 Rural eleccorp, 110, 102, 107
 S c i, 61, 0, 0
-Sanofi , 5192, 6345, 81
+Sanofi, 5192, 6345, 81
 Sbi life insuran, 675, 0, 0
 Sheela foam, 1498, 322, 464
 Shoppers st, 553, 0, 0
 Shree cement, 15306, 15072, 101
 Shriram trans, 1483, 0, 0
 Siemens, 991, 2009, 49
-Skf , 1756, 8979, 19
+Skf, 1756, 8979, 19
 Sobha, 492, -1633, -30
 Somany ceramics, 527, 285, 184
-St bk of , 268, 0, 0
+St bk of, 268, 0, 0
 Sun pharmainds, 554, 295, 187
 Supreme inds, 1226, 2404, 51
 Talwalbetter, 48, 31, 156
@@ -201,7 +201,7 @@ Tata power co, 74, 0, 0
 Tata steel, 557, -906, -61
 Tcs, 1819, 2228, 81
 Tech mahindra, 685, 560, 122
-Thomas cook , 276, -8919, -3
+Thomas cook, 276, -8919, -3
 Ti financial, 632, 790, 80
 Titan company, 868, 2499, 34
 Trent, 318, 312, 101
@@ -217,12 +217,12 @@ V guard inds, 207, 137, 150
 V i p inds, 453, 1686, 26
 Varun beverages, 750, 226, 331
 Vedanta, 229, 264, 86
-Venkys , 2508, 1392, 180
+Venkys, 2508, 1392, 180
 Voltas, 517, 570, 90
 Vrl logistics, 340, -3495, -9
 Vst till tract, 2367, 5653, 41
 Westlife develop, 344, 0, 0
-Whirlpool , 1547, 1246, 124
+Whirlpool, 1547, 1246, 124
 Wipro, 258, 514, 50
 Wonderla holiday, 335, 2411, 13
 Zee entertainmen, 563, 578, 97

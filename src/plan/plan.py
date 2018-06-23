@@ -5,6 +5,8 @@ import re
 import csv
 import traceback
 
+import cutil.cutil
+
 class Plan(object):
 
 	def __init__(self):
@@ -18,27 +20,6 @@ class Plan(object):
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
 
-	def normalize_comp_name(self, comp_name):
-		comp_name = comp_name.capitalize()
-		# remove hyphen (V-guard) 
-        	comp_name = re.sub('-',' ', comp_name)
-		# remove . in Dr. lal pathlabs
-        	comp_name = re.sub('\.','', comp_name)
-		# remove ' in Dr Reddy's Laboratories 
-        	comp_name = re.sub('\'','', comp_name)
-	        comp_name = re.sub('limited','', comp_name)
-	        comp_name = re.sub('ltd','', comp_name)
-	        comp_name = re.sub('india','', comp_name)
-                # replace and and &
-	        comp_name = re.sub(' and ',' ', comp_name)
-	        comp_name = re.sub(' & ',' ', comp_name)
-                # remove any characters after (  :
-                # TRENT LTD (LAKME LTD)  
-                comp_name = re.sub('\(.*','', comp_name)
-		# convert multiple space to single space
-        	comp_name = re.sub(' +', ' ', comp_name)
-		return comp_name
-	
 	def load_plan_row(self, row):
 		try:
 			row_list = row
@@ -83,7 +64,7 @@ class Plan(object):
 				else:
 					if self.debug_level > 2:
 						print 'iter ', iter, row, "\n"
-				company_name = self.normalize_comp_name(company_name)
+				company_name = cutil.cutil.normalize_comp_name(company_name)
 				self.plan_comp_units[company_name] = plan_comp_units_list[iter]
 			return
 		except TypeError:

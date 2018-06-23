@@ -67,7 +67,10 @@ class Tbd(Isin, Plan, Demat, Screener):
 				tbd_pct = format(tbd_pct, '.2f')
 				isin_name = self.get_isin_name_by_code(isin_code)
 				sc_mos = self.get_sc_mos_by_name(isin_name)
-				p_str = comp_name
+				if isin_name == '':
+					p_str = comp_name
+				else:
+					p_str = isin_name
 				p_str += ',' 
 				p_str += str(plan_units)
 				p_str += ',' 
