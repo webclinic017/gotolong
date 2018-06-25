@@ -153,6 +153,9 @@ What are entry barriers for other companies from others sectors or in same secto
     Enterprise Value = market capitalization plus debt, minority interest and preferred shares, minus total cash and cash equivalents
                      = mcap + debt - cash
                      
+    EV < Mcap : More Cash (Good)
+    EV > Mcap : More Debt (Bad)
+   
     18.1 EV - MCAP - Debt + Cash > 0
               Company has cash & cash equivalents > debt (GOOD)
     18.2 EV - MCAP - Debt + Cash < 0
