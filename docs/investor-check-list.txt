@@ -86,7 +86,7 @@ https://nifty-pe-ratio.com/
    
    10.2 Intrinsic Value
    
-   I.V = (8.5 + 2 * EPS growth)
+   I.V = EPS * (8.5 + 2 * EPS growth)
    
    Any share at a price of 2/3 of IV valus is great (provides decent margin of safety)
    +25% : bull
