@@ -148,3 +148,11 @@ Advantage of this company over other companies in the same sector.
 What are entry barriers for other companies from others sectors or in same sector?
 
 17. Advantage over other investors in the same company
+
+18. Enterprise Value 
+    Enterprise Value = market capitalization plus debt, minority interest and preferred shares, minus total cash and cash equivalents
+    
+    18.1 EV - MCAP > 0, Company has cash & cash equivalents > debt (GOOD)
+    18.2 EV - MCAP < 0, Company has debt > cash & cash equivalents (OK)
+    
+19.  
