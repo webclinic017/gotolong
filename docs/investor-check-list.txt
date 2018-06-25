@@ -78,9 +78,30 @@ https://nifty-pe-ratio.com/
 9. Good CSR
    9.1 Perfer Good CSR companies
    https://www.futurescape.in/india-top-companies-for-sustainability-and-csr-2017/
-   
+
+
 10. Ideal Value (Intrinsic Value of the company)
+
    10.1 check history of share price (3 year and 5 year) and compare it IV value
+   
+   10.2 Intrinsic Value
+   
+   I.V = (8.5 + 2 * EPS growth)
+   
+   Any share at a price of 2/3 of IV valus is great (provides decent margin of safety)
+   +25% : bull
+   +/-10% : correction (price adjustment)
+   -25% : bear
+   
+   10.3 Graham Number
+
+The formula is as follows:
+The Graham Number = Square Root of [ (22.5) x (EPS) x (Book Value per Share) ]
+
+The 22.5 is included in the formula as a rule of thumb to account for Graham's assumption that the price-to-earnings ratio should not be over 15 and the price to book ratio should not be over 1.5 for an undervalued stock. So, the number is generated as: (P/E of 15) x (P/B of 1.5) = 22.5.
+
+Theoretically, any stock trading below its Graham Number is considered undervalued.
+
 
 11. Brand recall
 
@@ -116,6 +137,7 @@ Price to Book Value	< 1 (under-valued, steal)
 Price to Book Value	 1 (ideal)
 Price to Book Value	 > 1 (bad)
 Price to Book Value	> 2	 (over-valued)
+
 
 15. Gold Price : Check gold returns
 
