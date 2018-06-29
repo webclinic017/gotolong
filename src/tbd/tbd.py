@@ -30,7 +30,7 @@ class Tbd(Isin, Plan, Demat, Screener):
 
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type, top_500, sc_mos\n')
+		fh.write('comp_name, plan_units_1k, demat_units_1k, tbd_units, tbd_pct, demat_last_txn_date, demat_last_txn_type, top_500, sc_score\n')
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
@@ -66,7 +66,12 @@ class Tbd(Isin, Plan, Demat, Screener):
 					tbd_pct = float((100.0*tbd_units)/plan_units)
 				tbd_pct = format(tbd_pct, '.2f')
 				isin_name = self.get_isin_name_by_code(isin_code)
-				sc_mos = self.get_sc_mos_by_name(isin_name)
+				sc_sno = self.get_sc_sno_by_name(isin_name)
+				if sc_sno == 0:
+					sc_score = 0
+				else:
+					sc_score = self.get_sc_score_by_sno(sc_sno)
+				
 				if isin_name == '':
 					p_str = comp_name
 				else:
@@ -86,7 +91,7 @@ class Tbd(Isin, Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += top_500 
 				p_str += ',' 
-				p_str += str(sc_mos)
+				p_str += str(sc_score)
 				p_str += '\n' 
 				if tbd_only:
 					if tbd_units > 0:

@@ -8,6 +8,8 @@ setenv PROJ_REPORTS_LOC $PROJECT_ROOT/reports
 setenv PATH ${PROJ_SOURCE_LOC}:${PATH}
 
 setenv PYTHONPATH ${PROJ_SOURCE_LOC}
+setenv QUANDL_KEY `cat $HOME/quandl.key`
+
 # if test "${PYTHONPATH}"  == ""
 # then
 # else

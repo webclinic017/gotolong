@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=2
+DEBUG_LEVEL=1
 
 ISIN_BSE_FILE=$PROJ_DATA_LOC/isin-data/isin-bse-500.csv
 ISIN_NSE_FILE=$PROJ_DATA_LOC/isin-data/isin-nse-500.csv

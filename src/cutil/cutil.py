@@ -35,3 +35,14 @@ def normalize_comp_name(comp_name):
 	comp_name = comp_name.strip()
 	
 	return comp_name
+
+def get_number(num_str):
+	# strip space
+	num_str = num_str.strip()
+	if num_str == 'NaN':
+		num_str = '0'
+	
+	# remove comma	
+	num_str = num_str.replace(',', '')
+
+	return int(float(num_str))
