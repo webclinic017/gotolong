@@ -66,15 +66,16 @@ class Tbd(Plan, Demat, Screener):
 					tbd_pct = float((100.0*tbd_units)/plan_units)
 				tbd_pct = format(tbd_pct, '.2f')
 				isin_name = self.get_isin_name_by_code(isin_code)
-				sc_sno = self.get_sc_sno_by_name(isin_name)
-				if sc_sno == 0:
+				if isin_code == '':
 					sc_score = 0
+					sc_cmp = 0
+					sc_iv = 0
+					sc_graham = 0
 				else:
-					sc_score = self.get_sc_score_by_sno(sc_sno)
-					sc_cmp = self.get_sc_cmp_by_sno(sc_sno)
-					sc_iv = self.get_sc_iv_by_sno(sc_sno)
-					sc_graham = self.get_sc_graham_by_sno(sc_sno)
-				
+					sc_score = self.get_sc_score_by_sno(isin_code)
+					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
+					sc_iv = self.get_sc_iv_by_sno(isin_code)
+					sc_graham = self.get_sc_graham_by_sno(isin_code)
 				
 				if isin_name == '':
 					p_str = comp_name
