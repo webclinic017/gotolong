@@ -1,4 +1,4 @@
-comp_name, isin, plan_1k, demat_1k, tbd_units, tbd_pct, last_txn_date, last_txn_type, top_500, sc_score, sc_cmp, sc_iv, sc_graham
+comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, type, t500, sc_score, sc_cmp, sc_iv, sc_graham
 Adani ports special economic zone,INE742F01042,5,1,4,80.00,29-Sep-2017,Buy,yes,15,361,198,201
 Akzo nobel,INE133A01011,2,1,1,50.00,17-Jul-2017,Buy,yes,18,1840,4695,763
 Amara raja batteries,INE885A01032,1,0,1,100.00,05-Jun-2017,Buy,yes,14,728,688,333

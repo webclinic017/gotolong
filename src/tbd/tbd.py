@@ -30,7 +30,7 @@ class Tbd(Plan, Demat, Screener):
 
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_units, tbd_pct, last_txn_date, last_txn_type, top_500, sc_score, sc_cmp, sc_iv, sc_graham\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, type, t500, sc_score, sc_cmp, sc_iv, sc_graham\n')
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])

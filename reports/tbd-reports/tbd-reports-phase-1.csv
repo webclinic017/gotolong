@@ -1,4 +1,4 @@
-comp_name, isin, plan_1k, demat_1k, tbd_units, tbd_pct, last_txn_date, last_txn_type, top_500, sc_score, sc_cmp, sc_iv, sc_graham
+comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, type, t500, sc_score, sc_cmp, sc_iv, sc_graham
 3m,INE470A01017,0,0,0,0.00,08-Nov-2017,Sell,yes,10,19258,10282,2907
 Abb,INE117A01022,5,3,2,40.00,02-Jan-2018,Buy,yes,16,1157,726,283
 Abbott,INE358A01014,2,4,-2,-100.00,19-Sep-2017,Buy,yes,18,7305,6447,1890

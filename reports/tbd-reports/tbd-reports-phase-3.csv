@@ -1,4 +1,4 @@
-comp_name, isin, plan_1k, demat_1k, tbd_units, tbd_pct, last_txn_date, last_txn_type, top_500, sc_score, sc_cmp, sc_iv, sc_graham
+comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, type, t500, sc_score, sc_cmp, sc_iv, sc_graham
 Abb,INE117A01022,5,3,2,40.00,02-Jan-2018,Buy,yes,16,1157,726,283
 -,,2,0,2,100.00,,,-,0,0,0,0
 Adani ports special economic zone,INE742F01042,5,1,4,80.00,29-Sep-2017,Buy,yes,15,361,198,201
