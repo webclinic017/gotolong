@@ -260,3 +260,15 @@ class Screener(Isin):
 		if sc_sno in self.sc_score:
 			return self.sc_score[sc_sno]
 		return 0
+	def get_sc_cmp_by_sno(self, sc_sno):
+		if sc_sno in self.sc_cmp:
+			return self.sc_cmp[sc_sno]
+		return 0
+	def get_sc_iv_by_sno(self, sc_sno):
+		if sc_sno in self.sc_iv:
+			return self.sc_iv[sc_sno]
+		return 0
+	def get_sc_graham_by_sno(self, sc_sno):
+		if sc_sno in self.sc_graham:
+			return self.sc_graham[sc_sno]
+		return 0
