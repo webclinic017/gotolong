@@ -39,7 +39,8 @@ def normalize_comp_name(comp_name):
 	even_char = comp_name_list[0::2]
 	odd_char = comp_name_list[1::2]
 	if len(set(odd_char)) == 1:
-		 comp_name = str(even_char)
+		if odd_char[0] == ' ':
+		 	comp_name = ''.join(even_char)
 	
 	# strip space
 	comp_name = comp_name.strip()
