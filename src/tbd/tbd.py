@@ -12,7 +12,7 @@ from demat.demat import *
 from isin.isin import * 
 from screener.screener import * 
 
-class Tbd(Isin, Plan, Demat, Screener):
+class Tbd(Plan, Demat, Screener):
 	def __init__(self):
 		super(Tbd, self).__init__()
 		# Plan.__init__(debug_level)

@@ -7,11 +7,12 @@ import traceback
 import operator
 import cutil.cutil
 import cutil.ratio
+from isin.isin import *
 
 # S.No.,Name,CMP,Sales,NP 12M,P/E,OPM,EPS 12M,Dividend Payout,Debt / Eq,Int Coverage,Div Yld,PEG,CMP / BV,Avg Div Payout 3Yrs,IV,EV,Mar Cap,Altman Z Scr,Current ratio,ROE 3Yr,Graham Price,Sales Var 5Yrs,Profit Var 5Yrs,EV / EBIT
 
 
-class Screener(object):
+class Screener(Isin):
 	def __init__(self):
 		super(Screener, self).__init__()
 		self.sc_sno = [] 
@@ -63,6 +64,12 @@ class Screener(object):
 			sc_sno = cutil.cutil.get_number(row_list[0])
 			sc_name = row_list[1]
 			sc_name = cutil.cutil.normalize_comp_name(sc_name)
+			isin_code = self.get_isin_code_by_name(sc_name)
+			if isin_code == '':
+				print 'unable to get isin_code : ', sc_name
+			else:
+				sc_sno = isin_code
+
 			sc_cmp = cutil.cutil.get_number(row_list[2])
 			sc_sales = cutil.cutil.get_number(row_list[3])
 			sc_np = cutil.cutil.get_number(row_list[4])
@@ -159,15 +166,19 @@ class Screener(object):
 			print 'except ', row
 			traceback.print_exc()
 		
-	def load_screener_data(self, in_filename):
-		with open(in_filename, 'r') as csvfile:
+	def load_isin_data_both(self, isin_bse_filename, isin_nse_filename):
+		self.load_isin_bse_data(isin_bse_filename)
+		self.load_isin_nse_data(isin_nse_filename)
+
+	def load_screener_data(self, sc_filename):
+		with open(sc_filename, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_screener_row(row)
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_sno, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altman, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_score\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altman, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_score\n')
 		if sort_score:
 			sorted_input = sorted(self.sc_score, key=self.sc_score.__getitem__, reverse=True)
 		else:

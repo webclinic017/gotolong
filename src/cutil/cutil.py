@@ -24,12 +24,22 @@ def normalize_comp_name(comp_name):
 	comp_name = re.sub(' and ',' ', comp_name)
 	comp_name = re.sub(' & ',' ', comp_name)
 	
+	# replace inds (for screener) 
+	comp_name = re.sub('inds','', comp_name)
+	
 	# remove any characters after (  :
 	# TRENT LTD (LAKME LTD)
 	comp_name = re.sub('\(.*','', comp_name)
 	
 	# convert multiple space to single space
 	comp_name = re.sub(' +', ' ', comp_name)
+	
+	# combine H D F C into HDFC
+	comp_name_list = list(comp_name)
+	even_char = comp_name_list[0::2]
+	odd_char = comp_name_list[1::2]
+	if len(set(odd_char)) == 1:
+		 comp_name = str(even_char)
 	
 	# strip space
 	comp_name = comp_name.strip()
