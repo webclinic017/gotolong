@@ -69,6 +69,7 @@ class Screener(Isin):
 				print 'unable to get isin_code : ', sc_name
 			else:
 				sc_sno = isin_code
+				print 'Found isin_code : ', sc_sno, ' for ', sc_name
 
 			sc_cmp = cutil.cutil.get_number(row_list[2])
 			sc_sales = cutil.cutil.get_number(row_list[3])

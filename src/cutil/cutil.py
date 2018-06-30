@@ -40,7 +40,9 @@ def normalize_comp_name(comp_name):
 	odd_char = comp_name_list[1::2]
 	if len(set(odd_char)) == 1:
 		if odd_char[0] == ' ':
-		 	comp_name = ''.join(even_char)
+		 	new_comp_name = ''.join(even_char)
+			print 'converted : ', comp_name, ' to ', new_comp_name
+			comp_name = new_comp_name
 	
 	# strip space
 	comp_name = comp_name.strip()
