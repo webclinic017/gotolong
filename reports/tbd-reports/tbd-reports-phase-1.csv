@@ -1,299 +1,299 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, t500, sc_score, sc_cmp, sc_iv, sc_graham
-3m,INE470A01017,0,0,0,0,08-Nov-2017,237,Sell,yes,10,19258,10282,2907
-Abb,INE117A01022,5,3,2,40,02-Jan-2018,182,Buy,yes,16,1157,726,283
-Abbott,INE358A01014,2,4,-2,-100,19-Sep-2017,287,Buy,yes,18,7305,6447,1890
-Acc,INE012A01025,3,3,0,0,01-Nov-2017,244,Buy,yes,18,1291,-3735,768
--,,2,0,2,100,,0,,-,0,0,0,0
-Adani ports special economic zone,INE742F01042,5,1,4,80,29-Sep-2017,277,Buy,yes,15,361,198,201
-Aditya birla capital,INE674K01013,2,0,2,100,,0,,yes,0,0,0,0
-Aditya birla fashion retail,INE647O01011,2,2,0,0,04-Apr-2018,90,Buy,yes,0,0,0,0
-Aegis logistics,INE208C01025,2,1,1,50,02-Feb-2018,151,Buy,yes,16,207,76,57
-Aia engineering,INE212H01026,0,0,0,0,,0,,yes,0,0,0,0
-Akzo nobel,INE133A01011,2,1,1,50,17-Jul-2017,351,Buy,yes,18,1840,4695,763
-Allcargo logistics,INE418H01029,2,0,2,100,02-Feb-2018,151,Buy,yes,20,101,-400,112
-Amara raja batteries,INE885A01032,1,0,1,100,05-Jun-2017,393,Buy,yes,14,728,688,333
-Ambuja cements,INE079A01024,3,1,2,66,02-Jan-2018,182,Buy,yes,21,200,-4175,157
-Apar industries,INE372A01015,0,0,0,0,,0,,yes,0,0,0,0
-Apollo hospitals enterprise,INE437A01024,10,7,3,30,06-Dec-2017,209,Buy,yes,17,1012,4627,321
-Apollo tyres,INE438A01022,2,2,0,0,01-Feb-2018,152,Buy,yes,17,254,197,199
-Arvind,INE034A01011,3,1,2,66,18-Sep-2017,288,Buy,yes,14,386,442,203
-Asahi glass,INE439A01020,2,3,-1,-50,06-Dec-2017,209,Buy,yes,15,330,0,65
-Ashok leyland,INE208A01029,0,0,0,0,,0,,yes,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0
-Asian paints,INE021A01026,10,8,2,20,06-Dec-2017,209,Buy,yes,19,1268,1588,207
--,,0,0,0,0,,0,,-,0,0,0,0
--,,5,0,5,100,,0,,-,0,0,0,0
-Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,182,Buy,yes,17,600,147,432
-Avanti feeds,INE871C01020,2,4,-2,-100,06-Dec-2017,209,Buy,yes,21,548,176,250
-Avenue supermarts,INE192R01011,2,1,1,50,16-Oct-2017,260,Buy,yes,8,1435,442,144
-Axis bank,INE238A01034,2,2,0,0,04-Apr-2018,90,Buy,yes,11,504,-223,100
-Bajaj auto,INE917I01010,5,5,0,0,04-Apr-2018,90,Buy,yes,22,2716,6669,1521
-Bajaj electricals,INE193E01025,0,0,0,0,,0,,yes,0,0,0,0
-Bajaj finance,INE296A01024,0,0,0,0,,0,,yes,0,0,0,0
-Bajaj finserv,INE918I01018,3,5,-2,-66,19-Sep-2017,287,Buy,yes,10,5848,8445,2125
--,,0,0,0,0,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Balkrishna industries,INE787D01026,2,1,1,50,02-Jan-2018,182,Buy,yes,19,1018,1161,425
-Balrampur chini mills,INE119A01028,2,1,1,50,13-Nov-2017,232,Buy,yes,19,65,7,129
--,,0,0,0,0,,0,,-,0,0,0,0
-Basf,INE373A01013,2,3,-1,-50,04-Apr-2018,90,Buy,yes,11,1869,0,631
-Bata,INE176A01028,5,2,3,60,06-Dec-2017,209,Buy,yes,18,828,2440,212
-Bayer cropscience /,INE462A01022,5,4,1,20,09-Jun-2017,389,Buy,yes,0,0,0,0
-Berger paints,INE463A01038,3,2,1,33,01-Feb-2018,152,Buy,yes,18,281,239,50
-Bharat electronics,INE263A01024,5,7,-2,-40,04-Apr-2018,90,Buy,yes,23,103,124,68
-Bharat forge,INE465A01025,2,0,2,100,,0,,yes,0,0,0,0
-Bharti airtel,INE397D01024,10,9,1,10,27-Nov-2017,218,Buy,yes,12,377,3077,146
-Bharti infratel,INE121J01017,0,1,-1,0,03-Oct-2017,273,Buy,yes,19,297,255,171
-Bharat heavy electricals,INE257A01026,5,2,3,60,04-Apr-2018,90,Buy,yes,17,69,-27,66
+Tata steel,INE081A01012,5,4,1,20,25-Jan-2017,524,Buy,yes,19,548,-891,1295
+Upl,INE628A01036,2,5,-3,-150,25-Jan-2017,524,Buy,yes,21,606,363,406
+Vedanta,INE205A01025,5,5,0,0,25-Jan-2017,524,Buy,yes,26,230,265,410
+Ultratech cement,INE481G01011,10,12,-2,-20,25-Jan-2017,524,Buy,yes,16,3721,-50736,1322
+Power grid corporation of,INE752E01010,5,5,0,0,27-Feb-2017,491,Buy,yes,0,0,0,0
+Hcl technologies,INE860A01027,5,1,4,80,27-Feb-2017,491,Buy,yes,23,909,506,649
+Lupin,INE326A01037,5,8,-3,-60,28-Feb-2017,490,Buy,yes,16,897,97,197
+Sun pharmaceutical industries,INE044A01036,5,10,-5,-100,10-Mar-2017,480,Buy,yes,15,567,302,200
+Hdfc bank,INE040A01026,10,15,-5,-50,14-Mar-2017,476,Buy,yes,15,2130,1555,820
+Infosys,INE009A01021,10,9,1,10,17-Mar-2017,473,Buy,yes,20,1289,1907,700
 Blue dart express,INE233B01017,4,4,0,0,30-May-2017,399,Buy,yes,17,3555,21307,613
-Blue star,INE472A01039,2,0,2,100,28-Nov-2017,217,Buy,yes,17,637,0,181
-Bosch,INE323A01026,0,0,0,0,08-Nov-2017,237,Sell,yes,20,17267,67171,5802
-Bharat petroleum corporation,INE029A01011,4,1,3,75,02-Jan-2018,182,Buy,yes,23,366,136,377
+Skf,INE640A01023,2,1,1,50,02-Jun-2017,396,Buy,yes,19,1721,8799,729
+Ti financial holdings,INE149A01033,2,1,1,50,02-Jun-2017,396,Buy,yes,14,609,761,358
+Amara raja batteries,INE885A01032,1,0,1,100,05-Jun-2017,393,Buy,yes,14,728,688,333
 Brigade enterprises,INE791I01019,2,1,1,50,08-Jun-2017,390,Buy,yes,16,211,151,172
-Britannia industries,INE216A01022,5,8,-3,-60,04-Apr-2018,90,Buy,yes,19,6129,2619,761
-Bse,INE118H01025,2,0,2,100,28-Sep-2017,278,Buy,yes,25,837,12144,1381
-Cadila healthcare,INE010B01027,3,0,3,100,19-Sep-2017,287,Buy,yes,20,378,335,182
-Carborundum universal,INE120A01034,2,1,1,50,17-Oct-2017,259,Buy,yes,17,319,-1179,147
-Care ratings,INE752H01013,2,2,0,0,01-Feb-2018,152,Buy,yes,18,1254,2548,524
-Castrol,INE172A01027,2,2,0,0,04-Jan-2018,180,Buy,yes,22,165,312,43
-Ceat,INE482A01020,2,1,1,50,11-Jul-2017,357,Buy,yes,16,1249,232,920
-Central depository services,INE736A01011,2,1,1,50,28-Sep-2017,278,Buy,yes,0,0,0,0
-Century plyboards,INE348B01021,2,2,0,0,01-Feb-2018,152,Buy,yes,15,252,189,78
-Cera sanitaryware,INE739E01017,2,3,-1,-50,14-Jun-2017,384,Buy,yes,14,2786,1732,911
-Chambal fertilizers chemicals,INE085A01013,2,1,1,50,16-Oct-2017,260,Buy,yes,20,157,250,137
-Cipla,INE059A01026,5,0,5,100,02-Jan-2018,182,Buy,yes,16,600,-1841,261
-Coal,INE522F01014,10,10,0,0,27-Nov-2017,218,Buy,yes,21,260,-468,113
-Cochin shipyard,INE704P01017,0,0,0,0,,0,,yes,0,0,0,0
-Coffee day enterprises,INE335K01011,2,2,0,0,04-Apr-2018,90,Buy,yes,7,273,440,133
-Colgate palmolive,INE259A01022,2,2,0,0,04-Apr-2018,90,Buy,yes,17,1155,3453,199
-Container corporation of,INE111A01017,3,4,-1,-33,04-Apr-2018,90,Buy,yes,0,0,0,0
-Coromandel international,INE169A01031,2,2,0,0,01-Nov-2017,244,Buy,yes,20,386,-834,249
--,,0,0,0,0,,0,,-,0,0,0,0
-Cox kings,INE008I01026,2,2,0,0,01-Feb-2018,152,Buy,yes,20,205,131,311
-Crisil,INE007A01025,3,3,0,0,04-Apr-2018,90,Buy,yes,20,1789,4685,393
-Crompton greaves consumer electricals,INE299U01018,2,1,1,50,28-Nov-2017,217,Buy,yes,0,0,0,0
-Cummins,INE298A01020,2,2,0,0,06-Dec-2017,209,Buy,yes,19,647,1730,303
-Dabur,INE016A01026,5,2,3,60,02-Jan-2018,182,Buy,yes,20,387,439,77
-Dewan housing finance corporation,INE202B01012,0,0,0,0,,0,,yes,0,0,0,0
-Dish tv,INE836F01026,5,2,3,60,01-Feb-2018,152,Buy,yes,5,70,0,0
-Dlf,INE271C01023,5,8,-3,-60,02-Jan-2018,182,Buy,yes,20,185,-28890,303
-Dr lal path labs,INE600L01024,2,0,2,100,19-Sep-2017,287,Buy,yes,17,934,532,215
-Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,90,Buy,yes,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Eicher motors,INE066A01013,0,0,0,0,08-Nov-2017,237,Sell,yes,18,28425,10839,6573
-Eid parry,INE126A01031,2,1,1,50,01-Feb-2018,152,Buy,yes,21,214,340,348
-Eih,INE230A01023,3,2,1,33,02-Jan-2018,182,Buy,yes,19,156,-12525,45
-Emami,INE548C01032,5,2,3,60,02-Jan-2018,182,Buy,yes,20,501,943,83
-Engineers,INE510A01028,5,1,4,80,08-Sep-2017,298,Buy,yes,22,120,-163,81
-Essel propack,INE255A01020,2,1,1,50,28-May-2018,36,Buy,yes,19,118,105,70
-Eveready industries,INE128A01029,2,1,1,50,01-Nov-2017,244,Buy,yes,10,229,0,89
-Exide industries,INE302A01020,1,1,0,0,16-Jun-2017,382,Buy,yes,18,248,448,108
--,,0,0,0,0,,0,,-,0,0,0,0
-Fortis healthcare,INE061F01013,2,2,0,0,04-Apr-2018,90,Buy,yes,6,134,-110,0
-Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,151,Buy,yes,6,48,0,0
-Future lifestyle fashions,INE452O01016,2,2,0,0,01-Feb-2018,152,Buy,yes,15,406,0,108
-Future retail,INE752P01024,2,2,0,0,01-Feb-2018,152,Buy,yes,4,556,0,21
--,,2,0,2,100,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Gail,INE129A01019,4,2,2,50,10-Apr-2018,84,Buy,yes,23,319,21381,295
--,,0,0,0,0,,0,,-,0,0,0,0
-Ge power,INE878A01011,0,0,0,0,,0,,yes,0,0,0,0
-Ge t&d,INE200A01026,0,0,0,0,,0,,yes,0,0,0,0
-General insurance corporation of,INE481Y01014,5,1,4,80,25-Oct-2017,251,Buy,yes,15,718,0,699
-Gillette,INE322A01010,2,4,-2,-100,12-Jun-2017,386,Buy,yes,19,6404,3744,584
-Glaxosmithkline consumer healthcare,INE264A01014,5,5,0,0,19-Sep-2017,287,Buy,yes,0,0,0,0
-Glenmark pharmaceuticals,INE935A01035,3,1,2,66,19-Sep-2017,287,Buy,yes,13,572,453,346
-Godrej agrovet,INE850D01014,2,1,1,50,16-Oct-2017,260,Buy,yes,17,612,624,112
-Godrej consumer products,INE102D01028,5,0,5,100,25-Sep-2017,281,Buy,yes,19,1217,1200,234
-Godrej industries,INE233A01035,3,1,2,66,16-Oct-2017,260,Buy,yes,0,0,0,0
+Sobha,INE671H01015,2,1,1,50,08-Jun-2017,390,Buy,yes,17,445,-1476,394
+Prestige estates projects,INE811K01011,5,1,4,80,08-Jun-2017,390,Buy,yes,16,269,159,176
 Godrej properties,INE484J01027,2,1,1,50,08-Jun-2017,390,Buy,yes,11,711,533,150
--,,0,0,0,0,,0,,-,0,0,0,0
-Grasim industries,INE047A01021,3,1,2,66,16-Oct-2017,260,Buy,yes,15,1003,4699,822
-Great eastern shipping co,INE017A01032,0,0,0,0,,0,,yes,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0
-Greenply industries,INE461C01038,0,0,0,0,,0,,yes,14,230,183,136
-Grindwell norton,INE536A01023,2,1,1,50,17-Oct-2017,259,Buy,yes,19,505,3869,169
-Gulf oil lubricants,INE635Q01029,0,0,0,0,,0,,yes,0,0,0,0
+Hero motocorp,INE158A01026,5,3,2,40,09-Jun-2017,389,Buy,yes,21,3516,6465,1697
+Bayer cropscience /,INE462A01022,5,4,1,20,09-Jun-2017,389,Buy,yes,0,0,0,0
+Nestle,INE239A01016,5,6,-1,-20,09-Jun-2017,389,Buy,yes,20,9772,56043,1117
+Maruti suzuki,INE585B01010,5,11,-6,-120,09-Jun-2017,389,Buy,yes,19,8771,4446,2890
+Procter gamble hygiene health care,INE179A01014,6,7,-1,-16,09-Jun-2017,389,Buy,yes,0,0,0,0
+Gillette,INE322A01010,2,4,-2,-100,12-Jun-2017,386,Buy,yes,19,6404,3744,584
+Cera sanitaryware,INE739E01017,2,3,-1,-50,14-Jun-2017,384,Buy,yes,14,2786,1732,911
+Nilkamal,INE310A01015,2,1,1,50,14-Jun-2017,384,Buy,yes,16,1608,993,1027
+Exide industries,INE302A01020,1,1,0,0,16-Jun-2017,382,Buy,yes,18,248,448,108
+Wipro,INE075A01022,5,6,-1,-20,21-Jun-2017,377,Buy,yes,20,257,511,229
+Icra,INE725G01011,5,4,1,20,22-Jun-2017,376,Buy,yes,20,3248,5094,1180
+Ceat,INE482A01020,2,1,1,50,11-Jul-2017,357,Buy,yes,16,1249,232,920
+Akzo nobel,INE133A01011,2,1,1,50,17-Jul-2017,351,Buy,yes,18,1840,4695,763
+Ttk prestige,INE690A01010,5,6,-1,-20,18-Jul-2017,350,Buy,yes,18,5846,33759,2194
 Havells,INE176B01034,2,1,1,50,31-Jul-2017,337,Buy,yes,18,522,763,119
+Pc jeweller,INE785M01013,2,1,1,50,02-Aug-2017,335,Buy,yes,19,135,164,179
+National aluminium co,INE139A01034,2,2,0,0,01-Sep-2017,305,Buy,yes,0,0,0,0
+Hindalco industries,INE038A01020,2,1,1,50,01-Sep-2017,305,Buy,yes,15,221,-270,176
+Tvs motor company,INE494B01023,5,2,3,60,01-Sep-2017,305,Buy,yes,17,557,601,142
+Engineers,INE510A01028,5,1,4,80,08-Sep-2017,298,Buy,yes,22,120,-163,81
+Info edge,INE663F01024,5,2,3,60,18-Sep-2017,288,Buy,yes,15,1147,0,0
+Arvind,INE034A01011,3,1,2,66,18-Sep-2017,288,Buy,yes,14,386,442,203
+Abbott,INE358A01014,2,4,-2,-100,19-Sep-2017,287,Buy,yes,18,7305,6447,1890
+Cadila healthcare,INE010B01027,3,0,3,100,19-Sep-2017,287,Buy,yes,20,378,335,182
+Pfizer,INE182A01018,2,2,0,0,19-Sep-2017,287,Buy,yes,20,2580,6323,1037
+Bajaj finserv,INE918I01018,3,5,-2,-66,19-Sep-2017,287,Buy,yes,10,5848,8445,2125
+Glenmark pharmaceuticals,INE935A01035,3,1,2,66,19-Sep-2017,287,Buy,yes,13,572,453,346
+Dr lal path labs,INE600L01024,2,0,2,100,19-Sep-2017,287,Buy,yes,17,934,532,215
+Housing urban development corporation,INE031A01017,2,1,1,50,19-Sep-2017,287,Buy,yes,18,55,164,66
+Glaxosmithkline consumer healthcare,INE264A01014,5,5,0,0,19-Sep-2017,287,Buy,yes,0,0,0,0
+Sanofi,INE058A01010,2,4,-2,-100,19-Sep-2017,287,Buy,yes,20,5138,6281,1765
+Krbl,INE001B01026,2,0,2,100,22-Sep-2017,284,Buy,yes,18,323,154,203
+Venkys,INE398A01010,2,2,0,0,22-Sep-2017,284,Buy,yes,14,2343,1301,1286
+Godrej consumer products,INE102D01028,5,0,5,100,25-Sep-2017,281,Buy,yes,19,1217,1200,234
+Icici lombard general insurance company,INE765G01017,5,1,4,80,27-Sep-2017,279,Buy,yes,15,696,0,207
+Central depository services,INE736A01011,2,1,1,50,28-Sep-2017,278,Buy,yes,0,0,0,0
+Bse,INE118H01025,2,0,2,100,28-Sep-2017,278,Buy,yes,25,837,12144,1381
+Adani ports special economic zone,INE742F01042,5,1,4,80,29-Sep-2017,277,Buy,yes,15,361,198,201
+Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,273,Buy,yes,9,666,0,131
+Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,273,Buy,yes,9,666,0,131
+Mahindra mahindra financial services,INE774D01024,3,1,2,66,03-Oct-2017,273,Buy,yes,0,0,0,0
+Shriram transport finance co,INE721A01013,3,1,2,66,03-Oct-2017,273,Buy,yes,17,1303,0,939
+Nlc,INE589A01014,3,1,2,66,03-Oct-2017,273,Buy,yes,27,81,67,132
+Nhpc,INE848E01016,3,1,2,66,03-Oct-2017,273,Buy,yes,26,22,-64,41
+Bharti infratel,INE121J01017,0,1,-1,0,03-Oct-2017,273,Buy,yes,19,297,255,171
+Indiabulls housing finance,INE148I01020,3,1,2,66,03-Oct-2017,273,Buy,yes,20,1136,290,824
+Avenue supermarts,INE192R01011,2,1,1,50,16-Oct-2017,260,Buy,yes,8,1435,442,144
+Godrej industries,INE233A01035,3,1,2,66,16-Oct-2017,260,Buy,yes,0,0,0,0
+Chambal fertilizers chemicals,INE085A01013,2,1,1,50,16-Oct-2017,260,Buy,yes,20,157,250,137
+Grasim industries,INE047A01021,3,1,2,66,16-Oct-2017,260,Buy,yes,15,1003,4699,822
+Godrej agrovet,INE850D01014,2,1,1,50,16-Oct-2017,260,Buy,yes,17,612,624,112
+Carborundum universal,INE120A01034,2,1,1,50,17-Oct-2017,259,Buy,yes,17,319,-1179,147
+Johnson controls hitachi air conditioning,INE782A01015,2,2,0,0,17-Oct-2017,259,Buy,yes,0,0,0,0
+Grindwell norton,INE536A01023,2,1,1,50,17-Oct-2017,259,Buy,yes,19,505,3869,169
+General insurance corporation of,INE481Y01014,5,1,4,80,25-Oct-2017,251,Buy,yes,15,718,0,699
+Eveready industries,INE128A01029,2,1,1,50,01-Nov-2017,244,Buy,yes,10,229,0,89
+Voltas,INE226A01021,2,2,0,0,01-Nov-2017,244,Buy,yes,18,511,563,214
+Icici prudential life insurance company,INE726G01019,5,2,3,60,01-Nov-2017,244,Buy,yes,0,0,0,0
+Rural electrification corporation,INE020B01018,5,4,1,20,01-Nov-2017,244,Buy,yes,0,0,0,0
+Tata coffee,INE493A01027,5,2,3,60,01-Nov-2017,244,Buy,yes,26,112,180,122
+Power finance corporation,INE134E01011,5,2,3,60,01-Nov-2017,244,Buy,yes,0,0,0,0
+Lic housing finance,INE115A01026,5,2,3,60,01-Nov-2017,244,Buy,yes,21,470,466,479
+Coromandel international,INE169A01031,2,2,0,0,01-Nov-2017,244,Buy,yes,20,386,-834,249
+Interglobe aviation,INE646L01027,5,2,3,60,01-Nov-2017,244,Buy,yes,21,1100,261,453
+Acc,INE012A01025,3,3,0,0,01-Nov-2017,244,Buy,yes,18,1291,-3735,768
+Tata global beverages,INE192A01025,5,2,3,60,01-Nov-2017,244,Buy,yes,17,263,879,148
+Zee learn,INE565L01011,2,2,0,0,01-Nov-2017,244,Buy,yes,13,33,0,18
+Muthoot finance,INE414G01012,5,1,4,80,01-Nov-2017,244,Buy,yes,24,374,1042,446
+Kajaria ceramics,INE217B01036,2,2,0,0,01-Nov-2017,244,Buy,yes,17,483,303,172
+Idea cellular,INE669E01016,5,2,3,60,01-Nov-2017,244,Buy,yes,11,56,0,0
+United breweries,INE686F01025,5,1,4,80,01-Nov-2017,244,Buy,yes,15,1123,1701,185
+Itc,INE154A01025,10,5,5,50,02-Nov-2017,243,Buy,yes,20,260,394,97
+3m,INE470A01017,0,0,0,0,08-Nov-2017,237,Sell,yes,10,19258,10282,2907
+Page industries,INE761H01022,0,0,0,0,08-Nov-2017,237,Sell,yes,19,27137,17943,2521
+Shree cement,INE070A01015,0,0,0,0,08-Nov-2017,237,Sell,yes,19,15499,15260,4827
+Bosch,INE323A01026,0,0,0,0,08-Nov-2017,237,Sell,yes,20,17267,67171,5802
+Eicher motors,INE066A01013,0,0,0,0,08-Nov-2017,237,Sell,yes,18,28425,10839,6573
+Mrf,INE883A01011,0,0,0,0,08-Nov-2017,237,Sell,yes,11,72933,35295,36295
+Honeywell automation,INE671A01010,0,0,0,0,08-Nov-2017,237,Sell,yes,11,18240,30181,3206
+Somany ceramics,INE355A01028,2,0,2,100,13-Nov-2017,232,Buy,yes,13,499,270,215
+Balrampur chini mills,INE119A01028,2,1,1,50,13-Nov-2017,232,Buy,yes,19,65,7,129
+Coal,INE522F01014,10,10,0,0,27-Nov-2017,218,Buy,yes,21,260,-468,113
+Bharti airtel,INE397D01024,10,9,1,10,27-Nov-2017,218,Buy,yes,12,377,3077,146
+Reliance industries,INE002A01018,10,6,4,40,27-Nov-2017,218,Buy,yes,16,944,1183,770
+Crompton greaves consumer electricals,INE299U01018,2,1,1,50,28-Nov-2017,217,Buy,yes,0,0,0,0
+Blue star,INE472A01039,2,0,2,100,28-Nov-2017,217,Buy,yes,17,637,0,181
+Ifb industries,INE559A01017,2,1,1,50,28-Nov-2017,217,Buy,yes,9,1217,1981,250
+Jain irrigation systems,INE175A01038,2,1,1,50,29-Nov-2017,216,Buy,yes,19,79,-385,91
+Asahi glass,INE439A01020,2,3,-1,-50,06-Dec-2017,209,Buy,yes,15,330,0,65
+Ntpc,INE733E01010,10,7,3,30,06-Dec-2017,209,Buy,yes,25,156,1583,190
+Housing development finance corporation,INE001A01036,10,10,0,0,06-Dec-2017,209,Buy,yes,19,1878,2415,991
+Motherson sumi systems,INE775A01035,2,2,0,0,06-Dec-2017,209,Buy,yes,16,281,98,109
+Asian paints,INE021A01026,10,8,2,20,06-Dec-2017,209,Buy,yes,19,1268,1588,207
+Indian hotels co,INE053A01029,10,9,1,10,06-Dec-2017,209,Buy,yes,7,128,0,20
+Apollo hospitals enterprise,INE437A01024,10,7,3,30,06-Dec-2017,209,Buy,yes,17,1012,4627,321
+Zee entertainment enterprises,INE256A01028,5,6,-1,-20,06-Dec-2017,209,Buy,yes,16,539,553,169
+Oil natural gas corporation,INE213A01029,5,3,2,40,06-Dec-2017,209,Buy,yes,27,153,-500,236
+Jsw steel,INE019A01038,5,2,3,60,06-Dec-2017,209,Buy,yes,20,322,189,260
+Bata,INE176A01028,5,2,3,60,06-Dec-2017,209,Buy,yes,18,828,2440,212
+United spirits,INE854D01016,10,12,-2,-20,06-Dec-2017,209,Buy,yes,8,657,-4278,77
+Cummins,INE298A01020,2,2,0,0,06-Dec-2017,209,Buy,yes,19,647,1730,303
+Icici bank,INE090A01021,5,5,0,0,06-Dec-2017,209,Buy,yes,17,271,734,209
+Avanti feeds,INE871C01020,2,4,-2,-100,06-Dec-2017,209,Buy,yes,21,548,176,250
+Oil natural gas corporation,INE213A01029,3,3,0,0,06-Dec-2017,209,Buy,yes,27,153,-500,236
+India tourism development corporation,INE353K01014,2,0,2,100,27-Dec-2017,188,Sell,yes,0,0,0,0
+Mahindra mahindra,INE101A01026,5,4,1,20,28-Dec-2017,187,Buy,yes,0,0,0,0
+Mahindra mahindra,INE101A01026,0,4,-4,0,28-Dec-2017,187,Buy,yes,0,0,0,0
+Steel authority of,INE114A01011,0,0,0,0,29-Dec-2017,186,Sell,yes,0,0,0,0
+Siemens,INE003A01024,5,2,3,60,02-Jan-2018,182,Buy,yes,18,955,1936,415
+Pvr,INE191H01014,5,2,3,60,02-Jan-2018,182,Buy,yes,14,1392,663,374
+Eih,INE230A01023,3,2,1,33,02-Jan-2018,182,Buy,yes,19,156,-12525,45
+Dabur,INE016A01026,5,2,3,60,02-Jan-2018,182,Buy,yes,20,387,439,77
+Dlf,INE271C01023,5,8,-3,-60,02-Jan-2018,182,Buy,yes,20,185,-28890,303
+Cipla,INE059A01026,5,0,5,100,02-Jan-2018,182,Buy,yes,16,600,-1841,261
+Balkrishna industries,INE787D01026,2,1,1,50,02-Jan-2018,182,Buy,yes,19,1018,1161,425
+Kansai nerolac paints,INE531A01024,5,2,3,60,02-Jan-2018,182,Buy,yes,15,443,373,111
+Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,182,Buy,yes,17,600,147,432
+Ambuja cements,INE079A01024,3,1,2,66,02-Jan-2018,182,Buy,yes,21,200,-4175,157
+Vip industries,INE054A01027,5,2,3,60,02-Jan-2018,182,Buy,yes,18,430,1603,87
+Hindustan zinc,INE267A01025,5,2,3,60,02-Jan-2018,182,Buy,yes,25,272,740,215
+Hindustan petroleum corporation,INE094A01015,3,3,0,0,02-Jan-2018,182,Buy,yes,0,0,0,0
+Marico,INE196A01026,5,2,3,60,02-Jan-2018,182,Buy,yes,18,332,278,59
+Bharat petroleum corporation,INE029A01011,4,1,3,75,02-Jan-2018,182,Buy,yes,23,366,136,377
+Narayana hrudayalaya,INE410P01011,3,2,1,33,02-Jan-2018,182,Buy,yes,6,231,141,53
+Abb,INE117A01022,5,3,2,40,02-Jan-2018,182,Buy,yes,16,1157,726,283
+Emami,INE548C01032,5,2,3,60,02-Jan-2018,182,Buy,yes,20,501,943,83
+Varun beverages,INE200M01013,5,2,3,60,02-Jan-2018,182,Buy,yes,15,763,230,165
+Mahindra holidays resorts,INE998I01010,5,2,3,60,02-Jan-2018,182,Buy,yes,20,293,1023,117
+Relaxo footwears,INE131B01039,5,2,3,60,02-Jan-2018,182,Buy,yes,11,689,440,138
+Castrol,INE172A01027,2,2,0,0,04-Jan-2018,180,Buy,yes,22,165,312,43
+Future lifestyle fashions,INE452O01016,2,2,0,0,01-Feb-2018,152,Buy,yes,15,406,0,108
+Thomas cook,INE332A01027,2,2,0,0,01-Feb-2018,152,Buy,yes,16,277,-8965,876
+Nmdc,INE584A01023,5,2,3,60,01-Feb-2018,152,Buy,yes,27,103,-90,150
+Future retail,INE752P01024,2,2,0,0,01-Feb-2018,152,Buy,yes,4,556,0,21
+Petronet lng,INE347G01014,4,2,2,50,01-Feb-2018,152,Buy,yes,21,206,351,145
+Jubilant foodworks,INE797F01012,2,3,-1,-50,01-Feb-2018,152,Buy,yes,14,1364,-3214,168
+Dish tv,INE836F01026,5,2,3,60,01-Feb-2018,152,Buy,yes,5,70,0,0
+Shoppers stop,INE498B01024,2,2,0,0,01-Feb-2018,152,Buy,yes,9,533,0,0
+Tech mahindra,INE669C01036,5,2,3,60,01-Feb-2018,152,Buy,yes,21,664,543,423
+Cox kings,INE008I01026,2,2,0,0,01-Feb-2018,152,Buy,yes,20,205,131,311
+Care ratings,INE752H01013,2,2,0,0,01-Feb-2018,152,Buy,yes,18,1254,2548,524
+Eid parry,INE126A01031,2,1,1,50,01-Feb-2018,152,Buy,yes,21,214,340,348
+Century plyboards,INE348B01021,2,2,0,0,01-Feb-2018,152,Buy,yes,15,252,189,78
+Jk tyre industries,INE573A01042,2,2,0,0,01-Feb-2018,152,Buy,yes,11,121,0,74
+Vrl logistics,INE366I01010,2,2,0,0,01-Feb-2018,152,Buy,yes,18,320,-3286,127
+Berger paints,INE463A01038,3,2,1,33,01-Feb-2018,152,Buy,yes,18,281,239,50
+Quess corp,INE615P01015,3,1,2,66,01-Feb-2018,152,Buy,yes,9,1080,219,197
+Apollo tyres,INE438A01022,2,2,0,0,01-Feb-2018,152,Buy,yes,17,254,197,199
+Allcargo logistics,INE418H01029,2,0,2,100,02-Feb-2018,151,Buy,yes,20,101,-400,112
+Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,151,Buy,yes,6,48,0,0
+Sheela foam,INE916U01025,2,1,1,50,02-Feb-2018,151,Buy,yes,10,1498,685,274
+Pi industries,INE603J01030,3,0,3,100,02-Feb-2018,151,Buy,yes,0,0,0,0
+Aegis logistics,INE208C01025,2,1,1,50,02-Feb-2018,151,Buy,yes,16,207,76,57
+Kaveri seed company,INE455I01029,3,0,3,100,02-Feb-2018,151,Buy,yes,17,537,556,365
+Indian oil corporation,INE242A01010,5,2,3,60,23-Mar-2018,102,Buy,yes,0,0,0,0
+Coffee day enterprises,INE335K01011,2,2,0,0,04-Apr-2018,90,Buy,yes,7,273,440,133
+Bajaj auto,INE917I01010,5,5,0,0,04-Apr-2018,90,Buy,yes,22,2716,6669,1521
+Container corporation of,INE111A01017,3,4,-1,-33,04-Apr-2018,90,Buy,yes,0,0,0,0
+Aditya birla fashion retail,INE647O01011,2,2,0,0,04-Apr-2018,90,Buy,yes,0,0,0,0
+Basf,INE373A01013,2,3,-1,-50,04-Apr-2018,90,Buy,yes,11,1869,0,631
+Supreme industries,INE195A01028,2,2,0,0,04-Apr-2018,90,Buy,yes,18,1131,2217,337
+Hindustan unilever,INE030A01027,10,2,8,80,04-Apr-2018,90,Buy,yes,0,0,0,0
+Axis bank,INE238A01034,2,2,0,0,04-Apr-2018,90,Buy,yes,11,504,-223,100
+Pidilite industries,INE318A01026,2,2,0,0,04-Apr-2018,90,Buy,yes,19,1028,737,193
+Rajesh exports,INE343B01030,2,3,-1,-50,04-Apr-2018,90,Buy,yes,11,601,0,474
+Shipping corporation of,INE109A01011,3,2,1,33,04-Apr-2018,90,Buy,yes,15,56,0,136
+Tata power co,INE245A01021,2,2,0,0,04-Apr-2018,90,Buy,yes,22,71,0,109
+Piramal enterprises,INE140A01024,5,5,0,0,04-Apr-2018,90,Buy,yes,16,759,290,292
+Titan company,INE280A01028,5,3,2,40,04-Apr-2018,90,Buy,yes,17,836,2407,129
+Britannia industries,INE216A01022,5,8,-3,-60,04-Apr-2018,90,Buy,yes,19,6129,2619,761
+Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,90,Buy,yes,0,0,0,0
+Rallis,INE613A01020,2,2,0,0,04-Apr-2018,90,Buy,yes,19,188,377,108
+Trent,INE849A01020,2,2,0,0,04-Apr-2018,90,Buy,yes,16,300,295,62
+Ncc,INE868B01028,2,2,0,0,04-Apr-2018,90,Buy,yes,14,90,-169,26
+Nbcc,INE095N01031,5,2,3,60,04-Apr-2018,90,Buy,yes,17,72,83,21
+Crisil,INE007A01025,3,3,0,0,04-Apr-2018,90,Buy,yes,20,1789,4685,393
+Larsen toubro,INE018A01030,10,6,4,40,04-Apr-2018,90,Buy,yes,18,1234,4014,730
+Bharat heavy electricals,INE257A01026,5,2,3,60,04-Apr-2018,90,Buy,yes,17,69,-27,66
+Colgate palmolive,INE259A01022,2,2,0,0,04-Apr-2018,90,Buy,yes,17,1155,3453,199
+Fortis healthcare,INE061F01013,2,2,0,0,04-Apr-2018,90,Buy,yes,6,134,-110,0
+Hsil,INE415A01038,2,2,0,0,04-Apr-2018,90,Buy,yes,17,329,-6550,221
+Whirlpool of,INE716A01013,2,2,0,0,04-Apr-2018,90,Buy,yes,11,1498,1206,299
+Kotak mahindra bank,INE237A01028,2,2,0,0,04-Apr-2018,90,Buy,yes,0,0,0,0
+Tata chemicals,INE092A01019,2,2,0,0,04-Apr-2018,90,Buy,yes,26,689,-12081,996
+Monsanto,INE274B01011,5,5,0,0,04-Apr-2018,90,Buy,yes,20,2857,1793,928
+Bharat electronics,INE263A01024,5,7,-2,-40,04-Apr-2018,90,Buy,yes,23,103,124,68
+Gail,INE129A01019,4,2,2,50,10-Apr-2018,84,Buy,yes,23,319,21381,295
+Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,76,Buy,yes,20,96,14,92
+V guard industries,INE951I01027,2,0,2,100,19-Apr-2018,75,Buy,yes,14,195,129,35
+Uflex,INE516A01017,2,1,1,50,28-May-2018,36,Buy,yes,18,249,649,726
+Essel propack,INE255A01020,2,1,1,50,28-May-2018,36,Buy,yes,19,118,105,70
+Mahindra cie automotive,INE536H01010,2,0,2,100,28-May-2018,36,Buy,yes,10,245,0,144
+L&t finance holdings,INE498L01015,2,1,1,50,28-May-2018,36,Buy,yes,0,0,0,0
+Larsen toubro infotech,INE214T01019,2,1,1,50,28-May-2018,36,Buy,yes,0,0,0,0
+L&t technology services,INE010V01017,2,1,1,50,28-May-2018,36,Buy,yes,18,1176,0,464
+Tata consultancy services,INE467B01029,10,16,-6,-60,05-Jun-2018,28,Buy,yes,20,1842,2257,581
+Sun tv network,INE424H01027,0,0,0,0,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Iifl holdings,INE530B01024,0,0,0,0,,0,,yes,0,0,0,0
+La opala rg,INE059D01020,0,0,0,0,,0,,yes,0,0,0,0
+Ge power,INE878A01011,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+Sundaram clayton,INE105A01035,0,0,0,0,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Ashok leyland,INE208A01029,0,0,0,0,,0,,yes,0,0,0,0
+Aia engineering,INE212H01026,0,0,0,0,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Cochin shipyard,INE704P01017,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Schneider electric infrastructure,INE839M01018,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0
 Hindustan construction co,INE549A01026,0,0,0,0,,0,,yes,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0
-Hcl technologies,INE860A01027,5,1,4,80,27-Feb-2017,491,Buy,yes,23,909,506,649
-Housing development finance corporation,INE001A01036,10,10,0,0,06-Dec-2017,209,Buy,yes,19,1878,2415,991
-Hdfc bank,INE040A01026,10,15,-5,-50,14-Mar-2017,476,Buy,yes,15,2130,1555,820
--,,5,0,5,100,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Hero motocorp,INE158A01026,5,3,2,40,09-Jun-2017,389,Buy,yes,21,3516,6465,1697
-Hindalco industries,INE038A01020,2,1,1,50,01-Sep-2017,305,Buy,yes,15,221,-270,176
-Hindustan petroleum corporation,INE094A01015,3,3,0,0,02-Jan-2018,182,Buy,yes,0,0,0,0
-Hindustan unilever,INE030A01027,10,2,8,80,04-Apr-2018,90,Buy,yes,0,0,0,0
-Hindustan zinc,INE267A01025,5,2,3,60,02-Jan-2018,182,Buy,yes,25,272,740,215
-Honeywell automation,INE671A01010,0,0,0,0,08-Nov-2017,237,Sell,yes,11,18240,30181,3206
-Hsil,INE415A01038,2,2,0,0,04-Apr-2018,90,Buy,yes,17,329,-6550,221
-Housing urban development corporation,INE031A01017,2,1,1,50,19-Sep-2017,287,Buy,yes,18,55,164,66
--,,2,0,2,100,,0,,-,0,0,0,0
-Icici bank,INE090A01021,5,5,0,0,06-Dec-2017,209,Buy,yes,17,271,734,209
-Icici lombard general insurance company,INE765G01017,5,1,4,80,27-Sep-2017,279,Buy,yes,15,696,0,207
-Icici prudential life insurance company,INE726G01019,5,2,3,60,01-Nov-2017,244,Buy,yes,0,0,0,0
-Icra,INE725G01011,5,4,1,20,22-Jun-2017,376,Buy,yes,20,3248,5094,1180
-Idea cellular,INE669E01016,5,2,3,60,01-Nov-2017,244,Buy,yes,11,56,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Ifb industries,INE559A01017,2,1,1,50,28-Nov-2017,217,Buy,yes,9,1217,1981,250
-Iifl holdings,INE530B01024,0,0,0,0,,0,,yes,0,0,0,0
-Indiabulls housing finance,INE148I01020,3,1,2,66,03-Oct-2017,273,Buy,yes,20,1136,290,824
-Indian hotels co,INE053A01029,10,9,1,10,06-Dec-2017,209,Buy,yes,7,128,0,20
--,,0,0,0,0,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Indusind bank,INE095A01012,2,0,2,100,,0,,yes,0,0,0,0
-Info edge,INE663F01024,5,2,3,60,18-Sep-2017,288,Buy,yes,15,1147,0,0
-Infosys,INE009A01021,10,9,1,10,17-Mar-2017,473,Buy,yes,20,1289,1907,700
-Interglobe aviation,INE646L01027,5,2,3,60,01-Nov-2017,244,Buy,yes,21,1100,261,453
-Indian oil corporation,INE242A01010,5,2,3,60,23-Mar-2018,102,Buy,yes,0,0,0,0
-Itc,INE154A01025,10,5,5,50,02-Nov-2017,243,Buy,yes,20,260,394,97
-India tourism development corporation,INE353K01014,2,0,2,100,27-Dec-2017,188,Sell,yes,0,0,0,0
-Jain irrigation systems,INE175A01038,2,1,1,50,29-Nov-2017,216,Buy,yes,19,79,-385,91
--,,2,0,2,100,,0,,-,0,0,0,0
-Jk tyre industries,INE573A01042,2,2,0,0,01-Feb-2018,152,Buy,yes,11,121,0,74
-Johnson controls hitachi air conditioning,INE782A01015,2,2,0,0,17-Oct-2017,259,Buy,yes,0,0,0,0
-Jsw steel,INE019A01038,5,2,3,60,06-Dec-2017,209,Buy,yes,20,322,189,260
-Jubilant foodworks,INE797F01012,2,3,-1,-50,01-Feb-2018,152,Buy,yes,14,1364,-3214,168
-Kajaria ceramics,INE217B01036,2,2,0,0,01-Nov-2017,244,Buy,yes,17,483,303,172
-Kansai nerolac paints,INE531A01024,5,2,3,60,02-Jan-2018,182,Buy,yes,15,443,373,111
-Kaveri seed company,INE455I01029,3,0,3,100,02-Feb-2018,151,Buy,yes,17,537,556,365
--,,0,0,0,0,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Kotak mahindra bank,INE237A01028,2,2,0,0,04-Apr-2018,90,Buy,yes,0,0,0,0
-Krbl,INE001B01026,2,0,2,100,22-Sep-2017,284,Buy,yes,18,323,154,203
--,,2,0,2,100,,0,,-,0,0,0,0
-L&t finance holdings,INE498L01015,2,1,1,50,28-May-2018,36,Buy,yes,0,0,0,0
-L&t technology services,INE010V01017,2,1,1,50,28-May-2018,36,Buy,yes,18,1176,0,464
-La opala rg,INE059D01020,0,0,0,0,,0,,yes,0,0,0,0
-Larsen toubro,INE018A01030,10,6,4,40,04-Apr-2018,90,Buy,yes,18,1234,4014,730
-Larsen toubro infotech,INE214T01019,2,1,1,50,28-May-2018,36,Buy,yes,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Lic housing finance,INE115A01026,5,2,3,60,01-Nov-2017,244,Buy,yes,21,470,466,479
-Lupin,INE326A01037,5,8,-3,-60,28-Feb-2017,490,Buy,yes,16,897,97,197
-Mahindra mahindra,INE101A01026,0,4,-4,0,28-Dec-2017,187,Buy,yes,0,0,0,0
-Mahindra cie automotive,INE536H01010,2,0,2,100,28-May-2018,36,Buy,yes,10,245,0,144
-Mahindra holidays resorts,INE998I01010,5,2,3,60,02-Jan-2018,182,Buy,yes,20,293,1023,117
--,,2,0,2,100,,0,,-,0,0,0,0
-Mahindra mahindra,INE101A01026,5,4,1,20,28-Dec-2017,187,Buy,yes,0,0,0,0
-Mahindra mahindra financial services,INE774D01024,3,1,2,66,03-Oct-2017,273,Buy,yes,0,0,0,0
-Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,76,Buy,yes,20,96,14,92
-Marico,INE196A01026,5,2,3,60,02-Jan-2018,182,Buy,yes,18,332,278,59
-Maruti suzuki,INE585B01010,5,11,-6,-120,09-Jun-2017,389,Buy,yes,19,8771,4446,2890
-Monsanto,INE274B01011,5,5,0,0,04-Apr-2018,90,Buy,yes,20,2857,1793,928
-Motherson sumi systems,INE775A01035,2,2,0,0,06-Dec-2017,209,Buy,yes,16,281,98,109
-Mrf,INE883A01011,0,0,0,0,08-Nov-2017,237,Sell,yes,11,72933,35295,36295
-Muthoot finance,INE414G01012,5,1,4,80,01-Nov-2017,244,Buy,yes,24,374,1042,446
-Narayana hrudayalaya,INE410P01011,3,2,1,33,02-Jan-2018,182,Buy,yes,6,231,141,53
-National aluminium co,INE139A01034,2,2,0,0,01-Sep-2017,305,Buy,yes,0,0,0,0
-National fertilizers,INE870D01012,0,0,0,0,,0,,yes,0,0,0,0
-Nbcc,INE095N01031,5,2,3,60,04-Apr-2018,90,Buy,yes,17,72,83,21
-Ncc,INE868B01028,2,2,0,0,04-Apr-2018,90,Buy,yes,14,90,-169,26
-Nestle,INE239A01016,5,6,-1,-20,09-Jun-2017,389,Buy,yes,20,9772,56043,1117
-Nhpc,INE848E01016,3,1,2,66,03-Oct-2017,273,Buy,yes,26,22,-64,41
-Niit technologies,INE591G01017,0,0,0,0,,0,,yes,0,0,0,0
-Nilkamal,INE310A01015,2,1,1,50,14-Jun-2017,384,Buy,yes,16,1608,993,1027
-Nlc,INE589A01014,3,1,2,66,03-Oct-2017,273,Buy,yes,27,81,67,132
-Nmdc,INE584A01023,5,2,3,60,01-Feb-2018,152,Buy,yes,27,103,-90,150
-Ntpc,INE733E01010,10,7,3,30,06-Dec-2017,209,Buy,yes,25,156,1583,190
-Oil natural gas corporation,INE213A01029,3,3,0,0,06-Dec-2017,209,Buy,yes,27,153,-500,236
-Oil natural gas corporation,INE213A01029,5,3,2,40,06-Dec-2017,209,Buy,yes,27,153,-500,236
-Page industries,INE761H01022,0,0,0,0,08-Nov-2017,237,Sell,yes,19,27137,17943,2521
--,,0,0,0,0,,0,,-,0,0,0,0
-Pc jeweller,INE785M01013,2,1,1,50,02-Aug-2017,335,Buy,yes,19,135,164,179
-Petronet lng,INE347G01014,4,2,2,50,01-Feb-2018,152,Buy,yes,21,206,351,145
-Pfizer,INE182A01018,2,2,0,0,19-Sep-2017,287,Buy,yes,20,2580,6323,1037
-Pi industries,INE603J01030,3,0,3,100,02-Feb-2018,151,Buy,yes,0,0,0,0
-Pidilite industries,INE318A01026,2,2,0,0,04-Apr-2018,90,Buy,yes,19,1028,737,193
--,,0,0,0,0,,0,,-,0,0,0,0
-Piramal enterprises,INE140A01024,5,5,0,0,04-Apr-2018,90,Buy,yes,16,759,290,292
--,,0,0,0,0,,0,,-,0,0,0,0
-Power finance corporation,INE134E01011,5,2,3,60,01-Nov-2017,244,Buy,yes,0,0,0,0
-Power grid corporation of,INE752E01010,5,5,0,0,27-Feb-2017,491,Buy,yes,0,0,0,0
-Prestige estates projects,INE811K01011,5,1,4,80,08-Jun-2017,390,Buy,yes,16,269,159,176
-Procter gamble hygiene health care,INE179A01014,6,7,-1,-16,09-Jun-2017,389,Buy,yes,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0
-Pvr,INE191H01014,5,2,3,60,02-Jan-2018,182,Buy,yes,14,1392,663,374
-Quess corp,INE615P01015,3,1,2,66,01-Feb-2018,152,Buy,yes,9,1080,219,197
-Radico khaitan,INE944F01028,0,0,0,0,,0,,yes,0,0,0,0
-Rajesh exports,INE343B01030,2,3,-1,-50,04-Apr-2018,90,Buy,yes,11,601,0,474
-Rallis,INE613A01020,2,2,0,0,04-Apr-2018,90,Buy,yes,19,188,377,108
--,,0,0,0,0,,0,,-,0,0,0,0
-Raymond,INE301A01014,0,0,0,0,,0,,yes,0,0,0,0
-Relaxo footwears,INE131B01039,5,2,3,60,02-Jan-2018,182,Buy,yes,11,689,440,138
-Reliance industries,INE002A01018,10,6,4,40,27-Nov-2017,218,Buy,yes,16,944,1183,770
-Rural electrification corporation,INE020B01018,5,4,1,20,01-Nov-2017,244,Buy,yes,0,0,0,0
-Steel authority of,INE114A01011,0,0,0,0,29-Dec-2017,186,Sell,yes,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Sanofi,INE058A01010,2,4,-2,-100,19-Sep-2017,287,Buy,yes,20,5138,6281,1765
-Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,273,Buy,yes,9,666,0,131
-Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,273,Buy,yes,9,666,0,131
-Schaeffler,INE513A01014,0,0,0,0,,0,,yes,0,0,0,0
-Schneider electric infrastructure,INE839M01018,0,0,0,0,,0,,yes,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Sheela foam,INE916U01025,2,1,1,50,02-Feb-2018,151,Buy,yes,10,1498,685,274
-Shipping corporation of,INE109A01011,3,2,1,33,04-Apr-2018,90,Buy,yes,15,56,0,136
-Shoppers stop,INE498B01024,2,2,0,0,01-Feb-2018,152,Buy,yes,9,533,0,0
-Shree cement,INE070A01015,0,0,0,0,08-Nov-2017,237,Sell,yes,19,15499,15260,4827
-Shree renuka sugars,INE087H01022,0,0,0,0,,0,,yes,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Shriram transport finance co,INE721A01013,3,1,2,66,03-Oct-2017,273,Buy,yes,17,1303,0,939
-Siemens,INE003A01024,5,2,3,60,02-Jan-2018,182,Buy,yes,18,955,1936,415
-Skf,INE640A01023,2,1,1,50,02-Jun-2017,396,Buy,yes,19,1721,8799,729
-Sml isuzu,INE294B01019,0,0,0,0,,0,,yes,0,0,0,0
-Sobha,INE671H01015,2,1,1,50,08-Jun-2017,390,Buy,yes,17,445,-1476,394
-Somany ceramics,INE355A01028,2,0,2,100,13-Nov-2017,232,Buy,yes,13,499,270,215
-Sun pharmaceutical industries,INE044A01036,5,10,-5,-100,10-Mar-2017,480,Buy,yes,15,567,302,200
-Sun tv network,INE424H01027,0,0,0,0,,0,,yes,0,0,0,0
-Sundaram clayton,INE105A01035,0,0,0,0,,0,,yes,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0
-Supreme industries,INE195A01028,2,2,0,0,04-Apr-2018,90,Buy,yes,18,1131,2217,337
--,,2,0,2,100,,0,,-,0,0,0,0
-Tata chemicals,INE092A01019,2,2,0,0,04-Apr-2018,90,Buy,yes,26,689,-12081,996
-Tata coffee,INE493A01027,5,2,3,60,01-Nov-2017,244,Buy,yes,26,112,180,122
-Tata consultancy services,INE467B01029,10,16,-6,-60,05-Jun-2018,28,Buy,yes,20,1842,2257,581
-Tata global beverages,INE192A01025,5,2,3,60,01-Nov-2017,244,Buy,yes,17,263,879,148
-Tata investment corporation,INE672A01018,2,0,2,100,,0,,yes,0,0,0,0
 Tata motors dvr,IN9155A01020,5,0,5,100,,0,,yes,15,263,-358,367
-Tata power co,INE245A01021,2,2,0,0,04-Apr-2018,90,Buy,yes,22,71,0,109
-Tata steel,INE081A01012,5,4,1,20,25-Jan-2017,524,Buy,yes,19,548,-891,1295
-Tech mahindra,INE669C01036,5,2,3,60,01-Feb-2018,152,Buy,yes,21,664,543,423
--,,5,0,5,100,,0,,-,0,0,0,0
-Thomas cook,INE332A01027,2,2,0,0,01-Feb-2018,152,Buy,yes,16,277,-8965,876
-Ti financial holdings,INE149A01033,2,1,1,50,02-Jun-2017,396,Buy,yes,14,609,761,358
 -,,0,0,0,0,,0,,-,0,0,0,0
-Titan company,INE280A01028,5,3,2,40,04-Apr-2018,90,Buy,yes,17,836,2407,129
--,,0,0,0,0,,0,,-,0,0,0,0
-Trent,INE849A01020,2,2,0,0,04-Apr-2018,90,Buy,yes,16,300,295,62
-Ttk prestige,INE690A01010,5,6,-1,-20,18-Jul-2017,350,Buy,yes,18,5846,33759,2194
--,,2,0,2,100,,0,,-,0,0,0,0
-Tvs motor company,INE494B01023,5,2,3,60,01-Sep-2017,305,Buy,yes,17,557,601,142
-Tvs srichakra,INE421C01016,0,0,0,0,,0,,yes,0,0,0,0
-Uflex,INE516A01017,2,1,1,50,28-May-2018,36,Buy,yes,18,249,649,726
-Ultratech cement,INE481G01011,10,12,-2,-20,25-Jan-2017,524,Buy,yes,16,3721,-50736,1322
-United breweries,INE686F01025,5,1,4,80,01-Nov-2017,244,Buy,yes,15,1123,1701,185
-United spirits,INE854D01016,10,12,-2,-20,06-Dec-2017,209,Buy,yes,8,657,-4278,77
--,,0,0,0,0,,0,,-,0,0,0,0
-Upl,INE628A01036,2,5,-3,-150,25-Jan-2017,524,Buy,yes,21,606,363,406
-V guard industries,INE951I01027,2,0,2,100,19-Apr-2018,75,Buy,yes,14,195,129,35
-Varun beverages,INE200M01013,5,2,3,60,02-Jan-2018,182,Buy,yes,15,763,230,165
-Vedanta,INE205A01025,5,5,0,0,25-Jan-2017,524,Buy,yes,26,230,265,410
-Venkys,INE398A01010,2,2,0,0,22-Sep-2017,284,Buy,yes,14,2343,1301,1286
-Vip industries,INE054A01027,5,2,3,60,02-Jan-2018,182,Buy,yes,18,430,1603,87
-Voltas,INE226A01021,2,2,0,0,01-Nov-2017,244,Buy,yes,18,511,563,214
-Vrl logistics,INE366I01010,2,2,0,0,01-Feb-2018,152,Buy,yes,18,320,-3286,127
--,,2,0,2,100,,0,,-,0,0,0,0
-Wabco,INE342J01019,0,0,0,0,,0,,yes,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0
-Whirlpool of,INE716A01013,2,2,0,0,04-Apr-2018,90,Buy,yes,11,1498,1206,299
-Wipro,INE075A01022,5,6,-1,-20,21-Jun-2017,377,Buy,yes,20,257,511,229
--,,2,0,2,100,,0,,-,0,0,0,0
+Bajaj finance,INE296A01024,0,0,0,0,,0,,yes,0,0,0,0
+Gulf oil lubricants,INE635Q01029,0,0,0,0,,0,,yes,0,0,0,0
 Yes bank,INE528G01027,2,0,2,100,,0,,yes,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0
-Zee entertainment enterprises,INE256A01028,5,6,-1,-20,06-Dec-2017,209,Buy,yes,16,539,553,169
-Zee learn,INE565L01011,2,2,0,0,01-Nov-2017,244,Buy,yes,13,33,0,18
+-,,0,0,0,0,,0,,-,0,0,0,0
+Bajaj electricals,INE193E01025,0,0,0,0,,0,,yes,0,0,0,0
+-,,5,0,5,100,,0,,-,0,0,0,0
+Bharat forge,INE465A01025,2,0,2,100,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Radico khaitan,INE944F01028,0,0,0,0,,0,,yes,0,0,0,0
+Wabco,INE342J01019,0,0,0,0,,0,,yes,0,0,0,0
+-,,5,0,5,100,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Shree renuka sugars,INE087H01022,0,0,0,0,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Greenply industries,INE461C01038,0,0,0,0,,0,,yes,14,230,183,136
+Apar industries,INE372A01015,0,0,0,0,,0,,yes,0,0,0,0
+Indusind bank,INE095A01012,2,0,2,100,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Great eastern shipping co,INE017A01032,0,0,0,0,,0,,yes,0,0,0,0
+Tvs srichakra,INE421C01016,0,0,0,0,,0,,yes,0,0,0,0
+Niit technologies,INE591G01017,0,0,0,0,,0,,yes,0,0,0,0
+Ge t&d,INE200A01026,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+Dewan housing finance corporation,INE202B01012,0,0,0,0,,0,,yes,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Aditya birla capital,INE674K01013,2,0,2,100,,0,,yes,0,0,0,0
+Schaeffler,INE513A01014,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+Tata investment corporation,INE672A01018,2,0,2,100,,0,,yes,0,0,0,0
+Raymond,INE301A01014,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+Sml isuzu,INE294B01019,0,0,0,0,,0,,yes,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0
+National fertilizers,INE870D01012,0,0,0,0,,0,,yes,0,0,0,0
+-,,5,0,5,100,,0,,-,0,0,0,0
