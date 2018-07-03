@@ -12,6 +12,7 @@ class Plan(object):
 	def __init__(self):
 		super(Plan, self).__init__()
 		self.plan_comp_units	= {}
+		self.plan_comp_days	= {}
 		self.indu_units	= {}
 		self.debug_level = 0 
 		self.last_row = "" 

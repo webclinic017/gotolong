@@ -17,6 +17,16 @@ class Tbd(Plan, Demat, Screener):
 		super(Tbd, self).__init__()
 		# Plan.__init__(debug_level)
 		# Demat.__init__(debug_level)
+		self.tbd_last_txn_days = {}
+		self.tbd_demat_units = {}
+		self.tbd_units = {}
+		self.tbd_pct = {}
+		self.tbd_isin_name = {}
+		self.tbd_isin_code = {}
+		self.tbd_t500 = {}
+		self.tbd_demat_last_txn_date = {}
+		self.tbd_demat_last_txn_type = {}
+
 	
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
@@ -27,45 +37,68 @@ class Tbd(Plan, Demat, Screener):
 		self.load_demat_data(demat_filename)
 		self.load_plan_data(plan_filename)
 		self.load_screener_data(screener_filename)
-
-	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
-		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, type, t500, sc_score, sc_cmp, sc_iv, sc_graham\n')
+		self.process_tbd_data()
+	
+	def process_tbd_data(self):
 		for comp_name in sorted(self.plan_comp_units):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
-
-				if plan_only and plan_units <= 0:
-					if self.debug_level > 1:
-						print 'no planned units : ', comp_name
-					continue	
-
 				isin_code = self.get_isin_code_by_name(comp_name)
-
+				self.tbd_isin_code[comp_name] = isin_code	
 				if isin_code == '':
-					top_500 = '-'
-					if days_filter and self.debug_level > 0:
+					self.tbd_t500[comp_name] =   '-'
+					if self.debug_level > 0:
 						print 'not in nse 500 ', comp_name
 				else:
-					top_500 = 'yes'
-
+					self.tbd_t500[comp_name] =   'yes'
+				
 				demat_units = int(self.get_demat_units_by_isin_code(isin_code)) 
+				self.tbd_demat_units[comp_name] = demat_units 
 				demat_last_txn_date = self.get_demat_last_txn_date_by_isin_code(isin_code)
+				self.tbd_demat_last_txn_date[comp_name] = demat_last_txn_date 
 				if demat_last_txn_date != '':
 					last_datetime = datetime.datetime.strptime(demat_last_txn_date, '%d-%b-%Y').date()
 					my_delta = datetime.datetime.now().date() - last_datetime
 					last_txn_days = my_delta.days
 				else:
 					last_txn_days = 0
-
-				demat_last_txn_type = self.get_demat_last_txn_type_by_isin_code(isin_code)
+				
+				self.tbd_last_txn_days[comp_name] = last_txn_days
+				
+				self.tbd_demat_last_txn_type[comp_name] = self.get_demat_last_txn_type_by_isin_code(isin_code)
 				tbd_units = plan_units - demat_units
 				if plan_units <= 0:
 					tbd_pct = 0
 				else:
 					tbd_pct = float((100.0*tbd_units)/plan_units)
 				tbd_pct = format(tbd_pct, '.2f')
-				isin_name = self.get_isin_name_by_code(isin_code)
+				self.tbd_units[comp_name] = tbd_units
+				self.tbd_pct[comp_name] = tbd_pct
+			        isin_name = self.get_isin_name_by_code(isin_code)
+				if isin_name == '':
+					self.tbd_isin_name[comp_name] = comp_name
+				else:
+					self.tbd_isin_name[comp_name] = isin_name 
+			except ValueError:
+				print 'except : process: ValueError :', comp_name
+	
+	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
+		fh = open(out_filename, "w")
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, t500, sc_score, sc_cmp, sc_iv, sc_graham\n')
+		for comp_name in sorted(self.tbd_last_txn_days):
+			try:
+				plan_units = int(self.plan_comp_units[comp_name])
+				if plan_only and plan_units <= 0:
+					if self.debug_level > 1:
+						print 'no planned units : ', comp_name
+					continue	
+				
+				isin_code = self.tbd_isin_code[comp_name]
+				
+				if comp_name in self.tbd_demat_units:
+					demat_units = int(self.tbd_demat_units[comp_name])
+				tbd_units = int(self.tbd_units[comp_name])
+				tbd_pct = int(float(self.tbd_pct[comp_name]))
 				if isin_code == '':
 					sc_score = 0
 					sc_cmp = 0
@@ -77,10 +110,8 @@ class Tbd(Plan, Demat, Screener):
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
 					sc_graham = self.get_sc_graham_by_sno(isin_code)
 				
-				if isin_name == '':
-					p_str = comp_name
-				else:
-					p_str = isin_name
+				last_txn_days = self.tbd_last_txn_days[comp_name]
+				p_str = self.tbd_isin_name[comp_name]
 				p_str += ','
 				p_str += isin_code
 				p_str += ',' 
@@ -92,11 +123,13 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += str(tbd_pct) 
 				p_str += ',' 
-				p_str += demat_last_txn_date 
+				p_str += self.tbd_demat_last_txn_date[comp_name]
 				p_str += ',' 
-				p_str += demat_last_txn_type
+				p_str += str(last_txn_days)
 				p_str += ',' 
-				p_str += top_500 
+				p_str += self.tbd_demat_last_txn_type[comp_name]
+				p_str += ',' 
+				p_str += self.tbd_t500[comp_name]
 				p_str += ',' 
 				p_str += str(sc_score)
 				p_str += ',' 
@@ -116,7 +149,8 @@ class Tbd(Plan, Demat, Screener):
 				else:
 					fh.write(p_str)
 			except ValueError:
-				print 'except : ValueError :', comp_name
+				print 'except : print : ValueError :', comp_name
+				traceback.print_exc()
 		fh.close()
 
 	def print_tbd_phase2(self, out_filename):
