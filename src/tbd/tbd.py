@@ -98,7 +98,7 @@ class Tbd(Plan, Demat, Screener):
 				if comp_name in self.tbd_demat_units:
 					demat_units = int(self.tbd_demat_units[comp_name])
 				tbd_units = int(self.tbd_units[comp_name])
-				tbd_pct = int(float(self.tbd_pct[comp_name]))
+				tbd_pct = round(float(self.tbd_pct[comp_name]))
 				if isin_code == '':
 					sc_score = 0
 					sc_cmp = 0

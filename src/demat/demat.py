@@ -55,7 +55,7 @@ class Demat(object):
 			comp_name = row_list[1]
 			txn_type = row_list[3]
 			txn_qty = row_list[4]
-			txn_price = str(int(float(row_list[5])))
+			txn_price = str(round(float(row_list[5])))
 			txn_date = row_list[12]
 
 
@@ -82,17 +82,17 @@ class Demat(object):
 			if txn_type == "Buy":
 				if isin_code in self.buy_qty:
                         		self.buy_qty[isin_code] += int(txn_qty)
-                        		self.buy_price[isin_code]    += int(float(txn_price)) * int(txn_qty)
+                        		self.buy_price[isin_code]    += round(float(txn_price)) * int(txn_qty)
 				else:
                         		self.buy_qty[isin_code] = int(txn_qty) 
-                        		self.buy_price[isin_code]    = int(float(txn_price)) * int(txn_qty)
+                        		self.buy_price[isin_code]    = round(float(txn_price)) * int(txn_qty)
 			else:
 				if isin_code in self.sale_qty:
                         		self.sale_qty[isin_code] += int(txn_qty)
-                        		self.sale_price[isin_code]    += int(float(txn_price)) * int(txn_qty)
+                        		self.sale_price[isin_code]    += round(float(txn_price)) * int(txn_qty)
 				else:
                         		self.sale_qty[isin_code] = int(txn_qty)
-                        		self.sale_price[isin_code]    = int(float(txn_price)) * int(txn_qty)
+                        		self.sale_price[isin_code]    = round(float(txn_price)) * int(txn_qty)
 		
 			# skip updating bonus entries	
 			if txn_price != 0:	
@@ -136,7 +136,7 @@ class Demat(object):
 			self.hold_price[isin_code] = hold_price
 			
 			if hold_qty > 0:
-				hold_units = hold_price/1000
+				hold_units = round(float(hold_price)/1000)
 			else:
 				hold_units = 0
 			# store 
