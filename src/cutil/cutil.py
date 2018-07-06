@@ -58,4 +58,7 @@ def get_number(num_str):
 	# remove comma	
 	num_str = num_str.replace(',', '')
 
+	if num_str == '':
+		num_str = '0'
+	
 	return int(float(num_str))

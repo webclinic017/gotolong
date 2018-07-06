@@ -66,6 +66,25 @@ def get_score_ic(ratio):
 		score = 0 
 	return score
 
+def get_score_d2e(ratio):
+	# For Bank and NBFC : debt to equity can be high.
+	if ratio == 0:
+		# best 
+		score = 3
+	elif ratio >= 0 and ratio <=1 :
+		# good 
+		score = 2 
+	elif ratio > 1 and ratio <=2 :
+		# poor 
+		score = 1
+	elif ratio > 2:
+		# waste 
+		score = 0
+	elif ratio < 0:
+		# waste  (negative : renuka sugars)
+		score = 0
+	return score
+
 def get_score_peg(ratio):
 	if ratio <= 1:
 		# less than fair price
@@ -73,5 +92,23 @@ def get_score_peg(ratio):
 	elif ratio > 1:
 		# expansive
 		score = 0 
+	return score
+
+def get_score_pledge(ratio):
+	if ratio >= 50 :
+		# worst 
+		score = 0
+	elif ratio >= 25 :
+		# poor 
+		score = 1
+	elif ratio >= 10 :
+		#  averge
+		score = 2
+	elif ratio > 1 and ratio < 10 :
+		#  good 
+		score = 3
+	elif ratio == 0 :
+		#  best 
+		score = 4
 	return score
 
