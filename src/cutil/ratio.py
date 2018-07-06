@@ -94,6 +94,39 @@ def get_score_peg(ratio):
 		score = 0 
 	return score
 
+def get_score_current_ratio(ratio):
+	if ratio > 3: 
+		# better 
+		score = 3
+	elif ratio >= 1.5 and ratio <= 3:
+		# ideal
+		score = 2
+	elif ratio >= 1 and ratio < 1.5 :
+		# less than ideal 
+		score = 1
+	elif ratio < 1 :
+		# not enough cash
+		score = 0
+	return score
+
+def get_score_pb(ratio):
+	if ratio > 3:
+		# less than fair price
+		score = 0
+	elif ratio > 2 and ratio <= 3:
+		# ok  
+		score = 1
+	elif ratio > 1 and ratio <= 2:
+		# good 
+		score = 2
+	elif ratio > 0 and ratio <= 1:
+		# best 
+		score = 3
+	elif ratio == 0:
+		# best 
+		score = 4
+	return score
+
 def get_score_pledge(ratio):
 	if ratio >= 50 :
 		# worst 

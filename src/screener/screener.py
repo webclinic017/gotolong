@@ -125,47 +125,41 @@ class Screener(Isin):
 			self.sc_profit_var5[sc_sno] = sc_profit_var5 
 			self.sc_ev2ebit[sc_sno] =  sc_ev2ebit
 			self.sc_pledge[sc_sno] =  sc_pledge
-
+			
 			sc_score = 0
-			sc_value = 0
+			
+			sc_score += cutil.ratio.get_score_opm(sc_opm)
+			sc_score += cutil.ratio.get_score_dp(sc_dp)
+			sc_score += cutil.ratio.get_score_d2e(sc_d2e)
+			sc_score += cutil.ratio.get_score_ic(sc_ic)
+			sc_score += cutil.ratio.get_score_dp(sc_dp3)
+			sc_score += cutil.ratio.get_score_current_ratio(sc_cr)
 			if sc_np > 0:
 				sc_score += 1
-			sc_value += cutil.ratio.get_score_pe(sc_pe)
-			sc_score += cutil.ratio.get_score_opm(sc_opm)
 			if sc_eps > 0:
 				sc_score += 1
-
-			sc_score += cutil.ratio.get_score_dp(sc_dp)
-
-			sc_score += cutil.ratio.get_score_d2e(sc_d2e)
-
-			sc_score += cutil.ratio.get_score_ic(sc_ic)
-
-			if sc_dy > 3:
-				sc_score += 1
-
-			sc_value += cutil.ratio.get_score_peg(sc_peg)
-
-			if sc_cmp2bv <= 1:
-				sc_score += 1
-
-			sc_score += cutil.ratio.get_score_dp(sc_dp3)
-
 			if sc_roe3 > 8:
 				sc_score += 1 
 			
+			sc_value = 0
+			sc_value += cutil.ratio.get_score_pe(sc_pe)
+			sc_value += cutil.ratio.get_score_peg(sc_peg)
+			sc_value += cutil.ratio.get_score_pb(sc_cmp2bv)
+			if sc_dy > 3:
+				sc_value += 1
+			
 			if sc_cmp < sc_iv:
 				sc_value += 1 
-
+			
 			if sc_cmp < sc_graham:
 				sc_value += 1 
-
+			
 			self.sc_score[sc_sno] = sc_score
 			self.sc_value[sc_sno] = sc_value
-
+			
 			if self.debug_level > 1:
 				print 'score : ', str(sc_sno) , ', ', sc_name , str(sc_score) , '\n'
-
+			
 		except IndexError:
 			print 'except ', row
 		except:
