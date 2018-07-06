@@ -2,8 +2,10 @@
 
 The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
 
-1. isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
-Downloaded directly from the websites.
+# ISIN Data
+
+The file isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+These were downloaded directly from the NSE and BSE websites.
 
 Fix discrepancy
 
@@ -11,8 +13,11 @@ Fix discrepancy
   
   $ ./isin_invoke.sh
   
-  
-2. Prepare data/plan-data/plan-data.csv file
+Review the generated reports/isin-reports/*.csv
+
+# PLAN DATA
+
+Prepare data/plan-data/plan-data.csv file
 
 Include weight for each company and cummulative weight for industry.
 
@@ -31,21 +36,49 @@ Fix any discrepancy by running following
  $ cd src/plan
  
  $ ./plan_invoke.sh
- 
- 
-3. Download demat/demat-data/demat-data.csv from ICICI Direct (all holdings, all txns in csv format)
+
+Review the generated reports/plan-reports/*.csv
+
+# DEMAT DATA
+
+Download demat data from ICICI Direct (all holdings, all txns in csv format) in data/demat-data/demat-data.csv 
 
 Fix any discrepancy by running following
 
  $ cd src/demat
  
  $ ./demat_invoke.sh
-
  
+ Review the generated reports/demat-reports/*.csv files
+ 
+ # SCREENER Data
+ 
+ Create a watchlist of companies (from plan data) with interesting columns.
+ 
+ Download the screener data in data/screener-data/*.csv
+ 
+ Generate screener reports using
+ 
+ $ cd src/screener
+ 
+ $ ./screener_invoke.sh
+ 
+ Review the generated reports/screener-reports/*.csv files
+ 
+ NOTE: To be switched to Quandl or something similar.
+
+ # BONUS share Data (To be modified for new framework)
+ # SPLITS share data (to be coded)
+ # DIVIDEND Data (To be modified)
+
+ # TBD Data (To Be Done)
   
-4. To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
-   Execute following
+To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
+
+Execute following
 
    $ cd src/tbd
    
    $ ./tbd-invoke.sh
+
+Review the generated files reports/tbd-reports/*.csv
