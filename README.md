@@ -67,7 +67,10 @@ Fix any discrepancy by running following
  
  NOTE: To be switched to Quandl or something similar.
 
- 
+ # BONUS share Data (To be modified for new framework)
+ # SPLITS share data (to be coded)
+ # DIVIDEND Data (To be modified)
+
  # TBD Data (To Be Done)
   
 To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
