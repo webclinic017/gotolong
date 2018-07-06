@@ -51,6 +51,23 @@ Fix any discrepancy by running following
  
  Review the generated reports/demat-reports/*.csv files
  
+ # SCREENER Data
+ 
+ Create a watchlist of companies (from plan data) with interesting columns.
+ 
+ Download the screener data in data/screener-data/*.csv
+ 
+ Generate screener reports using
+ 
+ $ cd src/screener
+ 
+ $ ./screener_invoke.sh
+ 
+ Review the generated reports/screener-reports/*.csv files
+ 
+ NOTE: To be switched to Quandl or something similar.
+
+ 
  # TBD Data (To Be Done)
   
 To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
