@@ -1,4 +1,4 @@
-Sr. No.,Company name,ISIN,BSE Symbol,BSE avg,NSE Symbol,NSE avg,MSE Symbol,MSE,Avg,"Categorization",,
+Sr. No.,Company name,ISIN,BSE Symbol,BSE 6 month Avg Total Market Cap in (Rs. Crs.),NSE Symbol,NSE 6 month Avg Total Market Cap (Rs. Crs.),MSE Symbol,MSE 6 month Avg Total Market Cap in (Rs Crs.),Average of All Exchanges (Rs. Cr.),"Categorization as per SEBI Circular dated Oct 6, 2017",,
 1,TATA CONSULTANCY SERVICES LTD.,INE467B01029,TCS," 609,958.72 ",TCS," 609,940.04 ",,," 609,949.38 ", Large Cap ,,
 2,RELIANCE INDUSTRIES LTD,INE002A01018,RELIANCE," 595,735.64 ",RELIANCE," 612,025.23 ",,," 603,880.43 ", Large Cap ,,
 3,HDFC BANK LTD.,INE040A01026,HDFCBANK," 505,304.99 ",HDFCBANK," 504,394.51 ",,," 504,849.75 ", Large Cap ,,
