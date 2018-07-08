@@ -87,7 +87,7 @@ class Plan(object):
 	def print_phase2(self, out_filename, positive_holdings = None):
 		fh = open(out_filename, "w") 
 		fh.write('comp_name, plan_units_1k\n')
-		for comp_name in sorted(self.plan_comp_units):
+		for comp_name in sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True):
 			try:
 				units_1k = int(self.plan_comp_units[comp_name])
 			except ValueError:
