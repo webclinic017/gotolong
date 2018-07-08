@@ -120,6 +120,7 @@ class Plan(Amfi):
 			p_str += str(mcap)
 			p_str += '\n'
 			fh.write(p_str)
+		# Current portfolio distribution 
 		p_str = 'Summary'
 		p_str += ', '
 		p_str += '-' 
@@ -131,6 +132,22 @@ class Plan(Amfi):
 		p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
 		p_str += ', '
 		p_str += 'small '  + str(int(round(float((cap_units['Small Cap']*100.0)/total_units)))) + ' %'
+		p_str += '\n'
+		fh.write(p_str)
+		
+		# Ideal portfolio distribution 
+		p_str = 'Ideal'
+		p_str += ', '
+		p_str += '-' 
+		p_str += ', '
+		p_str += '100'
+		p_str += ', '
+		p_str += 'large '  + '65-70' +' %'
+		p_str += ', '
+		p_str += 'mid '  + '20' + ' %'
+		p_str += ', '
+		p_str += 'small '  + '10-15' + ' %'
+		p_str += '\n'
 		fh.write(p_str)
 		fh.close()
 
