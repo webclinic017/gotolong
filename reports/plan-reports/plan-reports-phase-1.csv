@@ -15,7 +15,7 @@ Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 ,Units,35,5,30,0,0
-Auto - Tractors,Company,,VST tillers,,,
+Auto - Tractors,Company,,VSTTILLERS,,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 ,Units,24,20,2,1,1
@@ -64,7 +64,7 @@ Computers - Software - Training,,,,,,
 Computers - Software Medium & Small,Company,,L&T Technology Services,,,
 ,Units,2,2,,,
 Group 4,,,,,,
-Construction & Contracting - Civil,Company,,NCC,Gammon,HCC,
+Construction & Contracting - Civil,Company,,NAGARCON,Gammon,HCC,
 ,Units,2,2,0,0,
 Construction & Contracting - Housing,Company,,Asiana Housing,,,
 ,Units,,0,,,
@@ -105,7 +105,7 @@ Engines,Company,,Cummins,,,
 ,Units,2,2,,,
 Fasteners,Company,,Sundaram Fasteners,,,
 ,Units,,0,,,
-Fertilisers,Company,,Coromandel International,Chambal Fertilizers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
+Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
@@ -173,7 +173,7 @@ Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 ,Units,20,5,5,5,5
 Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Path Labs
+Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,LALPATHLAB
 ,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Units,10,5,5,0,
@@ -212,7 +212,7 @@ Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugars,Bajaj Hindust
 ,Units,7,3,2,2,0
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
 ,Units,13,10,3,,
-Telecommunications - Service,Company,,Bharti Airtel,Vodafone Idea,Bharti Infratel,
+Telecommunications - Service,Company,,Bharti Airtel,Idea,Bharti Infratel,
 ,Units,15,10,5,0,
 Textiles - Composite Mills,,,,,,
 Textiles - Cotton Blended,,,,,,
@@ -250,7 +250,7 @@ MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE Ratings,IndiaRatings
 ,Units,10,5,3,2,0
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Units,8,2,2,2,2
-Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
+Misc: Fitness,Company,,Talwalkars Better Value Fitness,,,
 ,Units,2,2,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,
 ,Units,7,3,2,2,

@@ -21,8 +21,8 @@ Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 ,Details,"Light < 8 ton, Medium (8 to 14 ton),  Heavy > 15 ton",Tata Motors (World leader in automobile),"Eicher Motors (Royal Enfield Bikes, Joint collaboration with Volvo for trucks and buses, Sold tractor business to TAFE - Messey Ferguson assembler in India. TAFE is owned by Amalgmation group. Privately held.) High Share Price: 30K",Ashok Leyland (Hinduja Group Company),"SML ISUZU (Swaraj Mazda Limited & ISUZU Japan : Earlier  Sumitomo Corporation, Punjab Tractors, ISUZU and MAZDA of Japan collaboration etc... Sold Swaraj (Punjab Tractors) to Mahindra. Now it is known as SML ISUZU)."
 ,Units,35,5,30,0,0
-Auto - Tractors,Company,,VST tillers,,,
-,Details,,"VST tillers (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity.",,,
+Auto - Tractors,Company,,VSTTILLERS,,,
+,Details,,"VST Tillers & Tractors (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity. Used Ticker to avoid confusion.",,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 ,Details,Set -1,Bosch (German Giant. World's largest supplier of automative parts.) : High Share price 23K ,"Motherson Sumi (Flagship company of Samvardhan group. JV with Sumitomo Wiring of Japan, very big auto component company) : 4 major products: wiring harnesses, rear view mirrors, polymers and elastomers. Internal and external auto components. wiring and mirrors. rear view mirror. largest manufacturer and supplier of rear view mirrors.",Exide Industries (UK Based Chloride Eastern Ltd : 45% share) : India moves on Exide. The gap between net sales of Exide and Amaron is negligible. Competitors : Amaron (Amara Raja Batteries & Johnson Controls) and Tata Green (Tata Autocomp tie up with GS Yuasa of Japan).,"Amara Raja Batteries ( automative battery brand : AMARON ) : Lasts long, Really long. 25% Ownership by Johnson controls, USA (world leader in batteries) ."
@@ -91,8 +91,8 @@ Computers - Software Medium & Small,Company,,L&T Technology Services,,,
 ,Details,,L&T Technology Services (LTTS is different from L&T IT ... LTTS is engineering services - embedded domain where as LTI is software services.,,,
 ,Units,2,2,,,
 Group 4,,,,,,
-Construction & Contracting - Civil,Company,,NCC,Gammon,HCC,
-,Details,Too much competition. Poor margins of 8%,NCC (Nagarjuna Construction Company),Gammon has long history in this space similar to L&T but doesn't seems to be in profit off late (from year 2012 to year 2017). Checked Screener.,"HCC (Hindustan construction company) : no dividend for last 5 years. Also, in losses for last 5 years.",
+Construction & Contracting - Civil,Company,,NAGARCON,Gammon,HCC,
+,Details,Too much competition. Poor margins of 8%,NCC (Nagarjuna Construction Company). Used Ticker name to avoid confusion with other NCC companies.,Gammon has long history in this space similar to L&T but doesn't seems to be in profit off late (from year 2012 to year 2017). Checked Screener.,"HCC (Hindustan construction company) : no dividend for last 5 years. Also, in losses for last 5 years.",
 ,Units,2,2,0,0,
 Construction & Contracting - Housing,Company,,Asiana Housing,,,
 ,Details,,,,,
@@ -149,8 +149,8 @@ Engines,Company,,Cummins,,,
 Fasteners,Company,,Sundaram Fasteners,,,
 ,Details,Too much narrow domain.,Sundaram Fasteners (TV Sundaram Group : TVS motors) : auto components manufacturer,,,
 ,Units,,0,,,
-Fertilisers,Company,,Coromandel International,Chambal Fertilizers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
-,Details,"Crop nutrients - fertilizers, and crop protection - (chemicals, insectisides and pesticides) and seeds provider are all considered in same category. Check companies in other categories also. Requirement in Tons - Single State - Telangana : 13 lac Ton - Urea, 13 Lac Ton - DAP, NPK & other neutrients, 1.75 Lac ton - Potash","Coromandel International (in fertilizers, pesticides and nutrients .... organic fertilizers too ..part of Muruguppa group of Eid Parry, Cholamandalam etc) Was formed with chevron of USA.","Chambal Fertilizers & Chemicals Ltd (zuari group) : Uttam brand : lead supplier of Rajastan. Good coverage in North, East and West India. It was founded by KK Birla who gave ownership of Zuari Agro Chemicals now rebranded as adventz group (Saroj Poddar) and Chambal Fertizers to (both son-in-law, Saroj - Chairman and one more - VC). KM Birla has minimal holding in Zuari Agro throuh Pilani Investment.","Rashtriya Chemical and Fertilizer (RCF) - PSU, Several fragemented PSUs like RCF (Rashtriya Chemical & Fertilizer), NFL (National Fertilizer), GSFC (Gujrat State Fertilizer Corp), GNFC (Gujrat Narmada Fertilizer corp)",National Fertilizer Limited (NFL) - PSU
+Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
+,Details,"Crop nutrients - fertilizers, and crop protection - (chemicals, insectisides and pesticides) and seeds provider are all considered in same category. Check companies in other categories also. Requirement in Tons - Single State - Telangana : 13 lac Ton - Urea, 13 Lac Ton - DAP, NPK & other neutrients, 1.75 Lac ton - Potash","Coromandel International (in fertilizers, pesticides and nutrients .... organic fertilizers too ..part of Muruguppa group of Eid Parry, Cholamandalam etc) Was formed with chevron of USA.","Chambal Fertilisers & Chemicals Ltd (zuari group) : Uttam brand : lead supplier of Rajastan. Good coverage in North, East and West India. It was founded by KK Birla who gave ownership of Zuari Agro Chemicals now rebranded as adventz group (Saroj Poddar) and Chambal Fertizers to (both son-in-law, Saroj - Chairman and one more - VC). KM Birla has minimal holding in Zuari Agro throuh Pilani Investment.","Rashtriya Chemical and Fertilizer (RCF) - PSU, Several fragemented PSUs like RCF (Rashtriya Chemical & Fertilizer), NFL (National Fertilizer), GSFC (Gujrat State Fertilizer Corp), GNFC (Gujrat Narmada Fertilizer corp)",National Fertilizer Limited (NFL) - PSU
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
@@ -249,8 +249,8 @@ Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Details,Pharma - Set 2.,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Path Labs
-,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint),Dr Lal Pathlabs (Only recognisable player in this segment)
+Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,LALPATHLAB
+,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint),"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc."
 ,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Details,,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)","Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)",Largest tea plantation company with estates spread in Assam and WB. Acquired tea estates in other countries also. Both McLeod Russel (Williamson Magor Group) and Eveready group are owned by B M Khaitan group. Eveready has a tie up with McLeod Russel for Tej brand (packet tea).,
@@ -304,7 +304,7 @@ Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugars,Bajaj Hindust
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
 ,Details,Revisit its reveune... target price... like 5K,"Honeywell Automation (MNC, Honeywell Aerospace is a world leader in aviation. Supplies all components of aircraft. Its competitor is UTC-United Technologies corporation in aviation space. Both are US based companies. It is also into building automation, plant automation, hotel automation etc. It also has speciality paint for aircraft and textile for miliary. High Share Price : 12 K.","Bharti Infratel (Telecom tower company with 40K towers, It also has 45% stake in Indus tower - combined entity of Bharti, Vodafone and Idea. also - 1.2 Lac towers). Bharti Infratel is 10% owned by KKR - Kohlberg Kravis & Roberts group. Key metric is number of towers and tower tenancy ... tower tenancy of 2 to 3 is good.",,
 ,Units,13,10,3,,
-Telecommunications - Service,Company,,Bharti Airtel,Vodafone Idea,Bharti Infratel,
+Telecommunications - Service,Company,,Bharti Airtel,Idea,Bharti Infratel,
 ,Details,,Bharti Airtel,Vodafone Idea (part owner Vodafone is one of worlds largest Telecomm company).,Bharti Infratel is covered in Telecom Equipment,
 ,Units,15,10,5,0,
 Textiles - Composite Mills,,,,,,
@@ -353,8 +353,8 @@ MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE Ratings,IndiaRatings
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Details,"Covers travels, food & amusement park. Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?","Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino's Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
 ,Units,8,2,2,2,2
-Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
-,Details,Good domestic brand for fitness. Tough competition from international franchise.,"Talwalkar Better Value Fitness (leader in fitness in India. Owner of Talwalkars, Hi-Fi and several other such chains etc. Acquired 50% in force fitness : master franchisee of Snap fitness in India. South Asea master franchise of Snap fitness in 6 countries like Sri lanka, Bangladesh etc). Tough competition from Cult.Fit, mind.fit and eat.fit etc.",,,
+Misc: Fitness,Company,,Talwalkars Better Value Fitness,,,
+,Details,Good domestic brand for fitness. Tough competition from international franchise.,"Talwalkars Better Value Fitness (leader in fitness in India. Owner of Talwalkars, Hi-Fi and several other such chains etc. Acquired 50% in force fitness : master franchisee of Snap fitness in India. South Asea master franchise of Snap fitness in 6 countries like Sri lanka, Bangladesh etc). Tough competition from Cult.Fit, mind.fit and eat.fit etc.",,,
 ,Units,2,2,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,
 ,Details,,,Greenlam (Demerged from Greenply industries in 2014),"Greenlam was demerged in 2014. So, don't just look at last 5 year revenue. In 2014 de-merger and revenue must have splited.",
