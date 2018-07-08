@@ -44,7 +44,7 @@ class Amfi(object):
 			if comp_ticker == '':
 				comp_ticker = row_list[5]
 			avg_mcap = cutil.cutil.get_number(row_list[9])
-			captype = row_list[10]
+			captype = row_list[10].strip()
 
 			comp_name = cutil.cutil.normalize_comp_name(comp_name)
 

@@ -87,6 +87,8 @@ class Plan(Amfi):
 		return
 
 	def print_phase2(self, out_filename, positive_holdings = None):
+		total_units = 0
+		cap_units = {}
 		fh = open(out_filename, "w") 
 		fh.write('comp_name, isin, plan_units_1k, rank, captype, mcap\n')
 		for comp_name in sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True):
@@ -96,6 +98,11 @@ class Plan(Amfi):
 				mcap = self.get_amfi_mcap_by_code(isin)
 				captype = self.get_amfi_captype_by_code(isin)
 				rank = self.get_amfi_rank_by_code(isin)
+				total_units += units_1k
+				if captype in cap_units:
+					cap_units[captype] += units_1k
+				else:
+					cap_units[captype] = units_1k
 			except ValueError:
 				print 'except : ValueError :', comp_name
 			if positive_holdings and units_1k <= 0 :
@@ -113,6 +120,18 @@ class Plan(Amfi):
 			p_str += str(mcap)
 			p_str += '\n'
 			fh.write(p_str)
+		p_str = 'Summary'
+		p_str += ', '
+		p_str += '-' 
+		p_str += ', '
+		p_str += str(total_units)
+		p_str += ', '
+		p_str += 'large '  + str(int(round(float((cap_units['Large Cap']*100.0)/total_units)))) +' %'
+		p_str += ', '
+		p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
+		p_str += ', '
+		p_str += 'small '  + str(int(round(float((cap_units['Small Cap']*100.0)/total_units)))) + ' %'
+		fh.write(p_str)
 		fh.close()
 
 	def print_phase3(self, out_filename):
