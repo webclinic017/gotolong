@@ -53,6 +53,10 @@ Fix any discrepancy by running following
 
 Review the generated reports/plan-reports/\*.csv
 
+The summary lines shows distribution of large cap, mid cap and small cap.
+TBD : Include line for micro cap and nano cap.
+
+
 # DEMAT DATA
 
 Download demat data from ICICI Direct (all holdings, all txns in csv format) in data/demat-data/demat-data.csv 
