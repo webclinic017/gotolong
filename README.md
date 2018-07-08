@@ -3,7 +3,7 @@
 The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
 
 # AMFI Data
-The file amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
+The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
 These are downloaded from the amfi website and processed further.
 
 Fix discrepancy
@@ -18,7 +18,7 @@ The report has important things like ISIN Number, Company name, Company Rank By 
 
 # ISIN Data
 
-The file isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
 These were downloaded directly from the NSE and BSE websites.
 
 Fix discrepancy
