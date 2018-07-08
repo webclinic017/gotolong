@@ -66,7 +66,7 @@ class Plan(object):
 					if self.debug_level > 2:
 						print 'iter ', iter, row, "\n"
 				company_name = cutil.cutil.normalize_comp_name(company_name)
-				self.plan_comp_units[company_name] = plan_comp_units_list[iter]
+				self.plan_comp_units[company_name] = cutil.cutil.get_number(plan_comp_units_list[iter])
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
@@ -96,7 +96,7 @@ class Plan(object):
 				continue
 			p_str = comp_name
 			p_str += ', ' 
-			p_str += self.plan_comp_units[comp_name] 
+			p_str += str(self.plan_comp_units[comp_name])
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
