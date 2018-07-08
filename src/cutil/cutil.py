@@ -23,6 +23,9 @@ def normalize_comp_name(comp_name):
 	# replace and and &
 	comp_name = re.sub(' and ',' ', comp_name)
 	comp_name = re.sub(' & ',' ', comp_name)
+
+	# replace , (amfi data) 
+	comp_name = re.sub(',','', comp_name)
 	
 	# replace inds (for screener) 
 	comp_name = re.sub('inds','', comp_name)
