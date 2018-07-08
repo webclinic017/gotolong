@@ -131,7 +131,7 @@ class Plan(Amfi):
 		p_str += ', '
 		p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
 		p_str += ', '
-		p_str += 'small '  + str(int(round(float((cap_units['Small Cap']*100.0)/total_units)))) + ' %'
+		p_str += 'small '  + str(int(round(float(((cap_units['Small Cap']+cap_units['Micro Cap']+cap_units['Nano Cap']+cap_units['Unknown Cap'])*100.0)/total_units)))) + ' %'
 		p_str += '\n'
 		fh.write(p_str)
 		
