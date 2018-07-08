@@ -45,15 +45,21 @@ class Amfi(object):
 				comp_ticker = row_list[5]
 			avg_mcap = cutil.cutil.get_number(row_list[9])
 			captype = row_list[10].strip()
-
+			if captype == 'Small Cap':
+				if serial_number > 500 and serial_number < 750:
+					captype = 'Micro Cap'
+				if serial_number > 750 and serial_number < 1000:
+					captype = 'Nano Cap'
+				if serial_number > 1000:
+					captype = 'Unknown Cap'
+			
 			comp_name = cutil.cutil.normalize_comp_name(comp_name)
-
+			
 			self.amfi_rank[isin_number] = serial_number
 			self.amfi_cname[isin_number] = comp_name 
 			self.amfi_ticker[isin_number] = comp_ticker 
 			self.amfi_mcap[isin_number] = avg_mcap 
 			self.amfi_captype[isin_number] = captype 
-
 			self.amfi_isin.append(isin_number)
 
 			if self.debug_level > 1:
