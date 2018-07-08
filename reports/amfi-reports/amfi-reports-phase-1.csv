@@ -1,4 +1,4 @@
-amfi_senu, amfi_cname, amfi_isnu, amfi_ticker, amfi_mcap, amfi_captype
+amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1, Tata consultancy services, INE467B01029, TCS, 609949,  Large Cap 
 2, Reliance industries, INE002A01018, RELIANCE, 603880,  Large Cap 
 3, Hdfc bank, INE040A01026, HDFCBANK, 504850,  Large Cap 

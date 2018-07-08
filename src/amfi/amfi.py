@@ -12,9 +12,9 @@ class Amfi(object):
 	def __init__(self):
 		super(Amfi, self).__init__()
 		# isin number
-		self.amfi_isnu = [] 
+		self.amfi_isin = [] 
 		# serial number
-		self.amfi_senu = {}
+		self.amfi_rank = {}
 		self.amfi_cname = {}
 		self.amfi_ticker = {}
 		self.amfi_mcap = {}
@@ -48,13 +48,13 @@ class Amfi(object):
 
 			comp_name = cutil.cutil.normalize_comp_name(comp_name)
 
-			self.amfi_senu[isin_number] = serial_number
+			self.amfi_rank[isin_number] = serial_number
 			self.amfi_cname[isin_number] = comp_name 
 			self.amfi_ticker[isin_number] = comp_ticker 
 			self.amfi_mcap[isin_number] = avg_mcap 
 			self.amfi_captype[isin_number] = captype 
 
-			self.amfi_isnu.append(isin_number)
+			self.amfi_isin.append(isin_number)
 
 			if self.debug_level > 1:
 				print 'comp_name : ', comp_name , '\n'
@@ -78,26 +78,54 @@ class Amfi(object):
 			print self.amfi_name_nse
 
 		fh = open(out_filename, "w") 
-		fh.write('amfi_senu, amfi_cname, amfi_isnu, amfi_ticker, amfi_mcap, amfi_captype\n')
-		for amfi_isnu in sorted(self.amfi_senu, key=self.amfi_senu.__getitem__):
-			p_str = str(self.amfi_senu[amfi_isnu])
+		fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
+		for amfi_isin in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
+			p_str = str(self.amfi_rank[amfi_isin])
 			p_str += ', ' 
-			p_str += self.amfi_cname[amfi_isnu]
+			p_str += self.amfi_cname[amfi_isin]
 			p_str += ', ' 
-			p_str += amfi_isnu
+			p_str += amfi_isin
 			p_str += ', ' 
-			p_str += self.amfi_ticker[amfi_isnu]
+			p_str += self.amfi_ticker[amfi_isin]
 			p_str += ', ' 
-			p_str += str(self.amfi_mcap[amfi_isnu])
+			p_str += str(self.amfi_mcap[amfi_isin])
 			p_str += ', ' 
-			p_str += self.amfi_captype[amfi_isnu]
+			p_str += self.amfi_captype[amfi_isin]
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
 
-	def get_amfi_captype_by_code(self, amfi_isnu):
-		if amfi_isnu in self.amfi_name_nse:
-			return self.amfi_name_nse[amfi_isnu]
-		if amfi_isnu in self.amfi_name_bse:
-			return self.amfi_name_bse[amfi_isnu]
+	def get_amfi_isin_by_name(self, req_name):
+		req_name = re.sub('\s+', ' ', req_name).strip()
+		for amfi_isin in sorted(self.amfi_cname):
+			# try to find a matching company
+			comp_name = self.amfi_cname[amfi_isin]
+			comp_name = comp_name.strip()
+			if re.match(req_name, comp_name):
+				if self.debug_level > 1:
+					print 'found match : name : ', req_name
+				return amfi_isin
+			if amfi_isin in  self.amfi_ticker:
+				ticker_symbol = self.amfi_ticker[amfi_isin]
+				if req_name.upper() == ticker_symbol :
+					if self.debug_level > 1:
+						print 'found ticker : ', req_name
+					return amfi_isin	
+		if self.debug_level > 1:
+			print 'amfi : comp not found : req_name :',req_name,':'
+		return ''
+
+	def get_amfi_captype_by_code(self, amfi_isin):
+		if amfi_isin in self.amfi_captype:
+			return self.amfi_captype[amfi_isin]
 		return '-'
+
+	def get_amfi_rank_by_code(self, amfi_isin):
+		if amfi_isin in self.amfi_rank:
+			return self.amfi_rank[amfi_isin]
+		return '0'
+
+	def get_amfi_mcap_by_code(self, amfi_isin):
+		if amfi_isin in self.amfi_mcap:
+			return self.amfi_mcap[amfi_isin]
+		return '0'

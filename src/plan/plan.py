@@ -7,7 +7,9 @@ import traceback
 
 import cutil.cutil
 
-class Plan(object):
+from amfi.amfi import * 
+
+class Plan(Amfi):
 
 	def __init__(self):
 		super(Plan, self).__init__()
@@ -86,19 +88,31 @@ class Plan(object):
 
 	def print_phase2(self, out_filename, positive_holdings = None):
 		fh = open(out_filename, "w") 
-		fh.write('comp_name, plan_units_1k\n')
+		fh.write('comp_name, isin, plan_units_1k, rank, captype, mcap\n')
 		for comp_name in sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True):
 			try:
 				units_1k = int(self.plan_comp_units[comp_name])
+				isin = self.get_amfi_isin_by_name(comp_name)
+				mcap = self.get_amfi_mcap_by_code(isin)
+				captype = self.get_amfi_captype_by_code(isin)
+				rank = self.get_amfi_rank_by_code(isin)
 			except ValueError:
 				print 'except : ValueError :', comp_name
 			if positive_holdings and units_1k <= 0 :
 				continue
 			p_str = comp_name
-			p_str += ', ' 
+			p_str += ', '
+			p_str += isin 
+			p_str += ', '
 			p_str += str(self.plan_comp_units[comp_name])
-			p_str += '\n' 
-			fh.write(p_str);	
+			p_str += ', '
+			p_str += str(rank)
+			p_str += ', '
+			p_str += captype 
+			p_str += ', '
+			p_str += str(mcap)
+			p_str += '\n'
+			fh.write(p_str)
 		fh.close()
 
 	def print_phase3(self, out_filename):
