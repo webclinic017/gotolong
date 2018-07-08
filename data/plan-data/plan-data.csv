@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,837,1000,837000,,
+,,1015,1000,1015000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -20,19 +20,19 @@ Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,10,5,5,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 ,Details,"Light < 8 ton, Medium (8 to 14 ton),  Heavy > 15 ton",Tata Motors (World leader in automobile),"Eicher Motors (Royal Enfield Bikes, Joint collaboration with Volvo for trucks and buses, Sold tractor business to TAFE - Messey Ferguson assembler in India. TAFE is owned by Amalgmation group. Privately held.) High Share Price: 30K",Ashok Leyland (Hinduja Group Company),"SML ISUZU (Swaraj Mazda Limited & ISUZU Japan : Earlier  Sumitomo Corporation, Punjab Tractors, ISUZU and MAZDA of Japan collaboration etc... Sold Swaraj (Punjab Tractors) to Mahindra. Now it is known as SML ISUZU)."
-,Units,5,5,0,0,0
+,Units,35,5,30,0,0
 Auto - Tractors,Company,,VST tillers,,,
 ,Details,,"VST tillers (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity.",,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 ,Details,Set -1,Bosch (German Giant. World's largest supplier of automative parts.) : High Share price 23K ,"Motherson Sumi (Flagship company of Samvardhan group. JV with Sumitomo Wiring of Japan, very big auto component company) : 4 major products: wiring harnesses, rear view mirrors, polymers and elastomers. Internal and external auto components. wiring and mirrors. rear view mirror. largest manufacturer and supplier of rear view mirrors.",Exide Industries (UK Based Chloride Eastern Ltd : 45% share) : India moves on Exide. The gap between net sales of Exide and Amaron is negligible. Competitors : Amaron (Amara Raja Batteries & Johnson Controls) and Tata Green (Tata Autocomp tie up with GS Yuasa of Japan).,"Amara Raja Batteries ( automative battery brand : AMARON ) : Lasts long, Really long. 25% Ownership by Johnson controls, USA (world leader in batteries) ."
-,Units,4,0,2,1,1
-Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul
+,Units,24,20,2,1,1
+Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul Goetze
 ,Details,Set -2 (small companies with profit < 100 cr),WABCO India (Westinghouse Air Brake Company. US auto anciliiary giant : vehicle controls systems like braking etc. Power Brakes etc),Gabriel India - Shock absrober,Shriram Pistons & Rings,"Federal Mogul (auto parts, powertrain, piston etc)"
 ,Units,0,0,0,0,0
-Auto Ancillaries,Company,,Sundaram Clayton,,,
-,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).",,,
-,Units,0,0,,,
+Auto Ancillaries,Company,,Sundaram Clayton,Endurance Technologies,Varroc,Minda
+,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).","aluminium casting, alloy wheel, brake, shock absorber, clutch",Vehicle lighting,Security system
+,Units,0,0,0,0,0
 Group 2,,,,,,
 Banks - Private Sector,Company,,HDFC Bank,ICICI,Axis Bank,Kotak Mahindra Bank
 ,Details,Net Interest Income should be compared with profit.,,,,Kotak Mahindra Bank : mcap to net interest income ratio is too high compared to peers but growth rate is good. PEG looks ok. The dividend paid is very less compared to peers.
@@ -56,7 +56,7 @@ Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
 ,Units,4,2,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Details,Top 3 players (Ambuja and ACC are owned by same owner : Lafarge Holchim). ,UltraTech (Aditya Birla group) : Capacity : 70 million tons per year,ACC is one of the first few producer of cements in India ... ACC had a trouble when it focused on non-core items. TATA also had a stake in it. TATA sold the stake to Ambuja cements. ACC and Ambuja have similar capacity. ACC is owned 50% by Ambuja. Lafarge Holchim owns Ambuja.,"Ambuja is owned by LafargeHolchim (An International biggie : Lafarge(French) and Holchim(Swiss) in cement, construction and concrete sector)  Annual Capacity : 370 million tons per year. ","Shree Cement (Brands: Shree Cements, Bangur Cement, RockStrong etc) Bangur business family from Rajasthan settled in Calcutta. High Share Price : 18K"
-,Units,16,10,3,3,0
+,Units,34,10,3,3,18
 Cement - Major,Company,,Heidelberg cement,,,
 ,Details,Set -2,Heidelberg cement (Germany) is also among world's top cement companies. It has acquired ItaliCementi (Zuari cement is owned by Italicementi in India) also. Access mycem.com. It is still a small player.  Put only in top 3 companies for no differntiation.,,,
 ,Units,0,0,,,
@@ -72,9 +72,9 @@ Ceramics & Granite,Company,,Asian Granito,Sheela foam,,
 Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilite
 ,Details,,"Tata Chemicals (Tata Salt, Tata Sampan Pulses & Spices, Tata Swach Water Purifier, Fertilizers etc,) : Focus on Living Essentials Products, It has Rallis (pesticides and agrochemicals) in its fold.",UPL (MNC. Crop protection. Present in 124 countries),"BASF (Global German Giant, largest producer of chemical. DuPont and Dow Chemicals are the other two competitors who merged together to form DowDuPont. )","PIDILITE (Fevicol, Fevistick, FeviQuick and Dr FixIt)"
 ,Units,8,2,2,2,2
-Cigarettes,Company,,ITC,,,
-,Details,,"ITC (ITC cigaratees, matchbox, mouth freshner - mint-o and candyman, ITC Hotels, ITC Infotech, FMCG : Classmate - Stationary, Aashirwad, Sunfeast, Bingo, Yipee: 1K Cr brands)",,,
-,Units,10,10,,,
+Cigarettes,Company,,ITC,VST Industries,Godfrey Phillips,
+,Details,Oligopoly market. Dominated by few players. Segments based on the size. Length  - 64mm and 69mm.,"ITC (ITC cigaratees, matchbox, mouth freshner - mint-o and candyman, ITC Hotels, ITC Infotech, FMCG : Classmate - Stationary, Aashirwad, Sunfeast, Bingo, Yipee: 1K Cr brands). TC's major cigarette brands include Wills Navy Cut, Gold Flake Kings, Gold Flake Premium lights, Gold Flake Super Star, Insignia, India Kings, Classic (Verve, Menthol, Menthol Rush, Regular, Citric Twist, Ice Burst, Mild & Ultra Mild), 555, Silk Cut, Scissors, Capstan, Berkeley, Bristol, Lucky Strike, Players, Flake and Duke & Royal.","VST Industries is largest leaf tobbaco(Bidi) maker in India. Partly owned by BAT (British American Tobbaco) group of UK Founder : Vazir Sultan. Brands : Charms, Charminar, Gold, Moments, Zaffran.","Godfrey Phillips, is a modi group company. One of the largest cigarette manufacturers. Part ownership of Morris International (Marlboro owner). Brands : Four Square, Red&White etc.   Pan Vilas Pan Masala(chewing product). Tea also.",
+,Units,14,10,2,2,
 Compressors,Details,Not clear on usage of it.,Ingersoll Rand (India),,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
 ,Details,"Educational, Pre-School, School","ZEE LEARN (Kidzee, Mount Literra schools franchise)",NIIT - Training,Educomp  - Under heavy debt.,TreeHouse ? / Career Point ?
@@ -113,13 +113,13 @@ Couriers,Company,,Blue Dart Express,DTDC,,
 ,Details,"(a) logistics delivery and couriers (every week) : 1 : 100 Rs each, month value : 400 Rs, annual value : 5K","BlueDart Express (DHL company, German Logistics company) : Share Price : 4K ",DTDC (DPD-Dynamic Parcel Distribution. 42% is held by Europe's second largest logistics firm GeoPost. They bought from Reliance Capital.) Not yet listed on the stock market. Waiting for IPO.,,
 ,Units,4,4,0,,
 Detergents,,,,,,
-Diamond Cutting & Jewellery & Precious Metals,Company,,Titan,Rajesh Exports,PC Jeweller,
-,Details,Gems & Jewellery (a) Consumption : minimum 10 gm every year : 25K every year.,"Titan Industries, Titan Company (Lifestyle: Jewellery, Bag, Wallet, Belt, Helmets, SKINN perfume, ZOOP for kids watches, RAAGA watches for ladies etc) : Tanishq, Titan Eyeplus, Titan Store etc Other Brands : FASTRACK and SKINN. They have ventured into Sarees using Taneira stores (sarees from 22 states. very thoughtful collection). Listed in MISC category.","Rajesh Exports (Gold Value Chain : Refining & Retailing, Owner of World's largest gold refining, Valcambi, REL produces more than 35% of the world's gold, Retail shops under Shubh )","PC Jeweller, P C Jeweller (good CAGR, aggressive, big player, focussed)",
+Diamond Cutting & Jewellery & Precious Metals,Company,,Titan Company,Rajesh Exports,PC Jeweller,
+,Details,Gems & Jewellery (a) Consumption : minimum 10 gm every year : 25K every year.,"Titan Company (Lifestyle: Jewellery, Bag, Wallet, Belt, Helmets, SKINN perfume, ZOOP for kids watches, RAAGA watches for ladies etc) : Tanishq, Titan Eyeplus, Titan Store etc Other Brands : FASTRACK and SKINN. They have ventured into Sarees using Taneira stores (sarees from 22 states. very thoughtful collection). Listed in MISC category.","Rajesh Exports (Gold Value Chain : Refining & Retailing, Owner of World's largest gold refining, Valcambi, REL produces more than 35% of the world's gold, Retail shops under Shubh )","PC Jeweller, P C Jeweller (good CAGR, aggressive, big player, focussed)",
 ,Units,9,5,2,2,
 Group 5,,,,,,
-Diversified,Company,,3M,Grasim,Godrej Industries,Pilani Investment & Industries
+Diversified,Company,,3M India,Grasim,Godrej Industries,Pilani Investment & Industries
 ,Details,Holding companies and Diversified companies,"3M (Global MNC, Science Applied to Life : 4000 products: Scotch Glue Stick, Scotch Tape, Scotch Brite : Kitchen items, Water Softener, Water Filteration system, Medical Supplies, Share price : 15K). Doesn't pay dividend (rumor). check AR. High Share Price : 15 K","Grasim (Aditya Birla Group holding company - partial). Manages Textile and Chemical. Two popular subsidiaries : UltraTech, Idea","Godrej Industries (holding company) - subsidiaries are godrej consumer products, godrej properties, godrej agrovet.","Pilani Investment & Industries (Investment vehicle, holding in many Birla companies)"
-,Units,6,0,3,3,0
+,Units,21,15,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
 ,Details,Set -2 .Holding companies and Diversified companies. Avoid where ever possible. ,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,Bajaj Holdings & Investments (bajaj auto and bajaj finserv - parent),M&M is a holding company for Mahindra for so many subsidiary companies. (listed in auto),
 ,Units,0,0,0,0,
@@ -150,7 +150,7 @@ Fasteners,Company,,Sundaram Fasteners,,,
 ,Details,Too much narrow domain.,Sundaram Fasteners (TV Sundaram Group : TVS motors) : auto components manufacturer,,,
 ,Units,,0,,,
 Fertilisers,Company,,Coromandel International,Chambal Fertilizers,Rashtriya Chemical and Fertilizer,National Fertilizer Limited 
-,Details,"Crop nutrients - fertilizers, and crop protection - (chemicals, insectisides and pesticides) and seeds provider are all considered in same category. Check companies in other categories also. Requirement in Tons - Single State - Telangana : 13 lac Ton - Urea, 13 Lac Ton - DAP, NPK & other neutrients, 1.75 Lac ton - Potash","Coromandel International (in fertilizers, pesticides and nutrients .... organic fertilizers too ..part of Muruguppa group of Eid Parry, Cholamandalam etc) Was formed with chevron of USA.","Chambal Fertilizers & Chemicals Ltd (zuari group) : Uttam brand : lead supplier of Rajastan. Good coverage in North, East and West India. It was founded by KK Birla who gave ownership of Zuari Agro Chemicals now rebranded as adventz group (Saroj Poddar) and Chambal Fertizers to (both son-in-law, Saroj - Chairman and one more - VC). KM Birla has minimal holding in Zuari Agro throuh Pilani Investment.",Rashtriya Chemical and Fertilizer (RCF) - PSU,National Fertilizer Limited (NFL) - PSU
+,Details,"Crop nutrients - fertilizers, and crop protection - (chemicals, insectisides and pesticides) and seeds provider are all considered in same category. Check companies in other categories also. Requirement in Tons - Single State - Telangana : 13 lac Ton - Urea, 13 Lac Ton - DAP, NPK & other neutrients, 1.75 Lac ton - Potash","Coromandel International (in fertilizers, pesticides and nutrients .... organic fertilizers too ..part of Muruguppa group of Eid Parry, Cholamandalam etc) Was formed with chevron of USA.","Chambal Fertilizers & Chemicals Ltd (zuari group) : Uttam brand : lead supplier of Rajastan. Good coverage in North, East and West India. It was founded by KK Birla who gave ownership of Zuari Agro Chemicals now rebranded as adventz group (Saroj Poddar) and Chambal Fertizers to (both son-in-law, Saroj - Chairman and one more - VC). KM Birla has minimal holding in Zuari Agro throuh Pilani Investment.","Rashtriya Chemical and Fertilizer (RCF) - PSU, Several fragemented PSUs like RCF (Rashtriya Chemical & Fertilizer), NFL (National Fertilizer), GSFC (Gujrat State Fertilizer Corp), GNFC (Gujrat Narmada Fertilizer corp)",National Fertilizer Limited (NFL) - PSU
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
@@ -239,7 +239,7 @@ Personal Care,Company,,Hindustan Unilever,Colgate Palmolive India,Procter & Gamb
 Personal Care,Company,,Dabur,Marico,Emami,Godrej Consumer Products
 ,Details,Personal Care - Set 2.,"Dabur (Honey, Chayvanprash, Odomos, Pudin Hara, Glucose D, Hajmola, Red paste, Meswak, Amla Hair Oil, Vatika Hair Oil, Odonil,  Real Active juice, HOMMADE ginger and garlic paste, )","Marico (Saffola, Parachute, hair &care, livon, set wet, revive, mediker) etc)","Emami (Boro Plus, Navaratna Oil, Himani Fast Relief, Fair & Handsome, Sonai Chandi Chavyanprash, Zandu portfolio : Zandu Balm, Kesh King )","Godrej Consumer Products (Brands : Godrej, Hit, Cinthol etc) Godrej Properties, Godrej Consumer Products and Godrej AgroVat, Natures Basket is a subsidiary of Godrej Industries a holding company. All the other companies of Godrej like locks, fridge, Interio etc are owned by unlisted company Godrej & Boyce.)"
 ,Units,20,5,5,5,5
-Pesticides & Agro Chemicals,Company,,Bayer Cropscience,PI Industries,Rallis India,Monsanto India
+Pesticides & Agro Chemicals,Company,,Bayer CropScience,PI Industries,Rallis India,Monsanto India
 ,Details,,Bayer Cropscience (International Chemical Conglomerate Bayer AG. Global leader in pesticides after acquiring Monsanto) : Monsanto is still listed though it has been acquired by Bayer. Share price: 5k,"P I Industries (PI Industries, earlier known as Mewar Oil and General Mills) : diversified into the contract research and manufacturing business:  Pesticides & Insectisides : Agrochemicals) : Agri Science : Udaipur based company. sells a wide range of insecticides, herbicides and weedicides through a network of over 9,000 distributors. New JV with Kumiai Chemicals (Japan)",Rallis India (Subsidiary of Tata chemicals),Monsanto India (Global company). Bayer to Acquire Monsanto to create global leader in agriculture. Share Price : 2700
 ,Units,15,5,3,2,5
 Petrochemicals,,,,,,
@@ -252,18 +252,18 @@ Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Phar
 Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,Dr Lal Path Labs
 ,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint),Dr Lal Pathlabs (Only recognisable player in this segment)
 ,Units,8,2,2,2,2
-Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,,
-,Details,,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)","Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)",,
-,Units,10,5,5,,
+Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
+,Details,,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)","Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)",Largest tea plantation company with estates spread in Assam and WB. Acquired tea estates in other countries also. Both McLeod Russel (Williamson Magor Group) and Eveready group are owned by B M Khaitan group. Eveready has a tie up with McLeod Russel for Tej brand (packet tea).,
+,Units,10,5,5,0,
 Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrigation
 ,Details,"Plastic player : Astral, Finolex Industries and Price plastic revenues are around 1K only. PVC, CPVC, UPVC, HDPE. Input : Crude oil. Competitor : cement, iron etc Included diversified player like Supreme Industries and Jain Irrigation systems only.",Supreme Industries (complete plastic portfolio),"Nilkamal (Home furniture of plastics, world's largest manufacturer of moulded furniture and Asia's largest processor of plastic moulded products) : Share Price 2K","VIP Industries (world's second largest luggage maker, VIP, Alfa, Aristocrat, SkyBags, Caprese, Carlton) : High Brand Recall, Strong Distribution network.","Jain Irrrigation Systems  (leader in agri input and pipes, diversified player)"
 ,Units,11,2,2,5,2
 Power - Generation & Distribution,Company,,NTPC ,Power Grid Corp ,NHPC ,Tata Power
 ,Details,Set -1,NTPC - CPSE Maharatna,Power Grid Corp - CPSE,NHPC (National Hydro power corporation ) - CPSE,Tata Power
 ,Units,20,10,5,3,2
-Power - Generation & Distribution,Company,,NLC India,,,
-,Details,Set - 2,NLC India (Neyveli Lignite corp) - CPSE Navaratna,,,
-,Units,3,3,,,
+Power - Generation & Distribution,Company,,NLC India,Adani Transmission ,,
+,Details,Set - 2,NLC India (Neyveli Lignite corp) - CPSE Navaratna,"Adani power, Adani green energy and adani transmission are 3 listed companies from same group. In power transmission sector, apart from Power Grid (PSU), other major players are KEC international (RPG group company), Adani transmission, Kalpatru power transmission, Sterlite power, Essel Infra etc. Not easy business but long leases are available for using. Power theft is another concern.",,
+,Units,3,3,0,,
 Power - Transmission & Equipment,Company,,GE Power India,GE T&D India,,
 ,Details,,"GE Power India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom India to GE Power India)","GE T&D India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom T&D in India to GE T&D)",,
 ,Units,,0,0,,
@@ -298,14 +298,14 @@ Steel - Rolling,,,,,,
 Steel - Sponge Iron,,,,,,
 Steel - Tubes & Pipes,,,,,,
 Group 11,,,,,,
-Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugar,Bajaj Hindustan
-,Details,"(a) Factor : Annual consumption : 1 kg (60Rs) for 12 months : 720 Rs, Lifetime consumption (average) : 30 years : 21600 Rs () (b) Sugar Mills Count, cane crushing capacity, alcohal distillation capactiy","EID Parry (East India Distilleries, a Subsidiary of Murugappa group). It has branded a commodity (Parry's Sugar)",Balrampur Chini Mills (Chini.com),Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil. Acquired by Wilmar International.,"Bajaj Hindustan (Bajaj group company, splited from bajaj holdings and investments that owns just bajaj auto and bajaj finance services) Sishir Bajaj group. Bajaj Hindusthan has 14 sugar mills with cane crushing capacity of 1.36 lakh tonnes per day and alcohol distillation capacity of 800 kilo litres per day."
-,Units,4,2,2,0,0
+Sugar,Company,,EID Parry,Balrampur Chini Mills,Shree Renuka Sugars,Bajaj Hindustan
+,Details,"(a) Factor : Annual consumption : 1 kg (60Rs) for 12 months : 720 Rs, Lifetime consumption (average) : 30 years : 21600 Rs () (b) Sugar Mills Count, cane crushing capacity, alcohal distillation capactiy","EID Parry (East India Distilleries, a Subsidiary of Murugappa group). It has branded a commodity (Parry's Sugar)",Balrampur Chini Mills (Chini.com),"Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil. Acquired by Wilmar International that has JV with Adani in other things like Oil (Fortune brand). Kanakashree Agro is India's largest sugar refiner and ethanol producer based in Mumbai, Maharashtra, with refining capacity of 4000 tonnes/day and distillery capacity of 600 kilolitre/day.","Bajaj Hindustan (Bajaj group company, splited from bajaj holdings and investments that owns just bajaj auto and bajaj finance services) Sishir Bajaj group. Bajaj Hindusthan has 14 sugar mills with cane crushing capacity of 1.36 lakh tonnes per day and alcohol distillation capacity of 800 kilo litres per day."
+,Units,7,3,2,2,0
 Telecommunications - Equipment,Company,,Honeywell Automation ,Bharti Infratel ,,
 ,Details,Revisit its reveune... target price... like 5K,"Honeywell Automation (MNC, Honeywell Aerospace is a world leader in aviation. Supplies all components of aircraft. Its competitor is UTC-United Technologies corporation in aviation space. Both are US based companies. It is also into building automation, plant automation, hotel automation etc. It also has speciality paint for aircraft and textile for miliary. High Share Price : 12 K.","Bharti Infratel (Telecom tower company with 40K towers, It also has 45% stake in Indus tower - combined entity of Bharti, Vodafone and Idea. also - 1.2 Lac towers). Bharti Infratel is 10% owned by KKR - Kohlberg Kravis & Roberts group. Key metric is number of towers and tower tenancy ... tower tenancy of 2 to 3 is good.",,
-,Units,3,0,3,,
-Telecommunications - Service,Company,,Bharti Airtel,Idea,Bharti Infratel,
-,Details,,Bharti Airtel,Idea (part owner Vodafone is one of worlds largest Telecomm company),Bharti Infratel is covered in Telecom Equipment,
+,Units,13,10,3,,
+Telecommunications - Service,Company,,Bharti Airtel,Vodafone Idea,Bharti Infratel,
+,Details,,Bharti Airtel,Vodafone Idea (part owner Vodafone is one of worlds largest Telecomm company).,Bharti Infratel is covered in Telecom Equipment,
 ,Units,15,10,5,0,
 Textiles - Composite Mills,,,,,,
 Textiles - Cotton Blended,,,,,,
@@ -319,7 +319,7 @@ Textiles - Manmade,,,,,,
 Textiles - Processing,,,,,,
 Textiles - Readymade Apparels,Company,,Page Industries ,,,
 ,Details,,"Page Industries (Jockey, Speedo) : High Share Price : 15K",,,
-,Units,0,0,,,
+,Units,15,15,,,
 Textiles - Spinning - Cotton Blended,,,,,,
 Textiles - Spinning - Synthetic Blended,,,,,,
 Textiles - Synthetic & Silk,,,,,,
@@ -339,7 +339,7 @@ Transport & Logistics,Company,,Aegis logistics,Mahindra Logistics,Future Supply 
 ,Units,6,2,2,2,
 Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre 
 ,Details,Tyre - Set 1. Oligopoly : few players. These control 90% of the market. Dependent on raw *rubber* price. Margins improves in case *rubber* prices are low.,"MRF (Tyres - Leader in India, FunSkool - toys, preschool stuff, tie-up with all tops brands like HASBRO, LEGO, Disney etc, In toys space - Piaramal Enterprises's Little is a listed competitor, Mahindra's FirstCry is another competitor) High Share price : 60K","Apollo Tyres (Go the Distance, Second biggest versatile player)",CEAT (flagship company of RPG : R P Goenka : Group company),J K Tyre (Lala Jugilal Singhania and Lala Kamalpat Singhania). The same group has other companies like J K Paper and J K Lakshmi Cement etc.
-,Units,6,0,2,2,2
+,Units,66,60,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
 ,Details,Tyre - Set 2,Balkrishna Industries focuses on off the road (BKT Tyres : leader in off-the-road tyres),Goodyear (USA),Cycle and two-wheeler tyres,"Unlisted players: Bridgestone, Pirelli etc"
 ,Units,2,2,0,0,0
@@ -347,8 +347,8 @@ Vanaspati & Oils,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
-MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE,IndiaRatings
-,Details,No Asset. Only ratings. Only brand name matters. Limited competition.,ICRA (Moody's Rating Agencies) : Share Price : 4K,"CRISIL (Standard & Poor's : Credit Analysis, Research & Rating company) : Biggest but overvalued.","CARE (Indian : Credit Analysis, Research & Rating company)",IndiaRatings (Not yet listed)
+MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE Ratings,IndiaRatings
+,Details,No Asset. Only ratings. Only brand name matters. Limited competition.,ICRA (Moody's Rating Agencies) : Share Price : 4K,"CRISIL (Standard & Poor's : Credit Analysis, Research & Rating company) : Biggest but overvalued.","CARE (Indian : Credit Analysis, Research & Rating company) Ratings",IndiaRatings (Not yet listed)
 ,Units,10,5,3,2,0
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Details,"Covers travels, food & amusement park. Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?","Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino's Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
@@ -357,5 +357,5 @@ Misc: Fitness,Company,,Talwalkar Better Value Fitness,,,
 ,Details,Good domestic brand for fitness. Tough competition from international franchise.,"Talwalkar Better Value Fitness (leader in fitness in India. Owner of Talwalkars, Hi-Fi and several other such chains etc. Acquired 50% in force fitness : master franchisee of Snap fitness in India. South Asea master franchise of Snap fitness in 6 countries like Sri lanka, Bangladesh etc). Tough competition from Cult.Fit, mind.fit and eat.fit etc.",,,
 ,Units,2,2,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,
-,Details,,,Greenlam (Demerged from Greenply industries),,
-,Units,4,2,2,0,
+,Details,,,Greenlam (Demerged from Greenply industries in 2014),"Greenlam was demerged in 2014. So, don't just look at last 5 year revenue. In 2014 de-merger and revenue must have splited.",
+,Units,7,3,2,2,
