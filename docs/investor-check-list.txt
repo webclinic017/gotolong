@@ -161,4 +161,9 @@ What are entry barriers for other companies from others sectors or in same secto
     18.2 EV - MCAP - Debt + Cash < 0
               Company has debt > cash & cash equivalents (OK)
     
-19.  
+19.  Ideal portfolio distribution should be (in Indian context)
+     65-70% large cap, 20% mid cap, 10-15% in small cap.
+     
+     It should be visible in summary of plan and demat data.
+      
+20. Revisit all the rules.
