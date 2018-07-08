@@ -2,6 +2,20 @@
 
 The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
 
+# AMFI Data
+The file amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
+These are downloaded from the amfi website and processed further.
+
+Fix discrepancy
+
+$ cd src/amfi
+
+$ ./amfi_invoke.sh
+
+Review the generated reports/amfi-reports/\*.csv
+
+The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months) and cap type (large, mid cap and small cap).
+
 # ISIN Data
 
 The file isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
@@ -13,7 +27,7 @@ Fix discrepancy
   
   $ ./isin_invoke.sh
   
-Review the generated reports/isin-reports/*.csv
+Review the generated reports/isin-reports/\*.csv
 
 # PLAN DATA
 
@@ -37,7 +51,7 @@ Fix any discrepancy by running following
  
  $ ./plan_invoke.sh
 
-Review the generated reports/plan-reports/*.csv
+Review the generated reports/plan-reports/\*.csv
 
 # DEMAT DATA
 
@@ -49,13 +63,13 @@ Fix any discrepancy by running following
  
  $ ./demat_invoke.sh
  
- Review the generated reports/demat-reports/*.csv files
+ Review the generated reports/demat-reports/\*.csv files
  
  # SCREENER Data
  
  Create a watchlist of companies (from plan data) with interesting columns.
  
- Download the screener data in data/screener-data/*.csv
+ Download the screener data in data/screener-data/\*.csv
  
  Generate screener reports using
  
@@ -63,7 +77,7 @@ Fix any discrepancy by running following
  
  $ ./screener_invoke.sh
  
- Review the generated reports/screener-reports/*.csv files
+ Review the generated reports/screener-reports/\*.csv files
  
  NOTE: To be switched to Quandl or something similar.
 
@@ -81,4 +95,4 @@ Execute following
    
    $ ./tbd-invoke.sh
 
-Review the generated files reports/tbd-reports/*.csv
+Review the generated files reports/tbd-reports/\*.csv
