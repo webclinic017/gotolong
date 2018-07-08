@@ -61,4 +61,4 @@ def get_number(num_str):
 	if num_str == '':
 		num_str = '0'
 	
-	return int(float(num_str))
+	return int(round(float(num_str)))
