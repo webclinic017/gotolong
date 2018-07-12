@@ -84,7 +84,7 @@ class Tbd(Plan, Demat, Screener):
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, t500, sc_score, sc_value, sc_cmp, sc_iv, sc_graham\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, t500, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
 		for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
@@ -100,14 +100,14 @@ class Tbd(Plan, Demat, Screener):
 				tbd_units = int(self.tbd_units[comp_name])
 				tbd_pct = int(round(float(self.tbd_pct[comp_name])))
 				if isin_code == '':
-					sc_score = 0
-					sc_value = 0
+					sc_crank = 0
+					sc_prank = 0
 					sc_cmp = 0
 					sc_iv = 0
 					sc_graham = 0
 				else:
-					sc_score = self.get_sc_score_by_sno(isin_code)
-					sc_value = self.get_sc_value_by_sno(isin_code)
+					sc_crank = self.get_sc_crank_by_sno(isin_code)
+					sc_prank = self.get_sc_prank_by_sno(isin_code)
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
 					sc_graham = self.get_sc_graham_by_sno(isin_code)
@@ -133,9 +133,9 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += self.tbd_t500[comp_name]
 				p_str += ',' 
-				p_str += str(sc_score)
+				p_str += str(sc_crank)
 				p_str += ',' 
-				p_str += str(sc_value)
+				p_str += str(sc_prank)
 				p_str += ',' 
 				p_str += str(sc_cmp)
 				p_str += ',' 

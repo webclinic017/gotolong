@@ -41,8 +41,8 @@ class Screener(Isin):
 		self.sc_profit_var5 = {}
 		self.sc_ev2ebit = {}
 		self.sc_pledge = {}
-		self.sc_score = {}
-		self.sc_value = {}
+		self.sc_crank = {}
+		self.sc_prank = {}
  		self.debug_level = 0 
 
 	def set_debug_level(self, debug_level):
@@ -126,39 +126,39 @@ class Screener(Isin):
 			self.sc_ev2ebit[sc_sno] =  sc_ev2ebit
 			self.sc_pledge[sc_sno] =  sc_pledge
 			
-			sc_score = 0
+			sc_crank = 0
 			
-			sc_score += cutil.ratio.get_score_opm(sc_opm)
-			sc_score += cutil.ratio.get_score_dp(sc_dp)
-			sc_score += cutil.ratio.get_score_d2e(sc_d2e)
-			sc_score += cutil.ratio.get_score_ic(sc_ic)
-			sc_score += cutil.ratio.get_score_dp(sc_dp3)
-			sc_score += cutil.ratio.get_score_current_ratio(sc_cr)
+			sc_crank += cutil.ratio.get_score_opm(sc_opm)
+			sc_crank += cutil.ratio.get_score_dp(sc_dp)
+			sc_crank += cutil.ratio.get_score_d2e(sc_d2e)
+			sc_crank += cutil.ratio.get_score_ic(sc_ic)
+			sc_crank += cutil.ratio.get_score_dp(sc_dp3)
+			sc_crank += cutil.ratio.get_score_current_ratio(sc_cr)
 			if sc_np > 0:
-				sc_score += 1
+				sc_crank += 1
 			if sc_eps > 0:
-				sc_score += 1
+				sc_crank += 1
 			if sc_roe3 > 8:
-				sc_score += 1 
+				sc_crank += 1 
 			
-			sc_value = 0
-			sc_value += cutil.ratio.get_score_pe(sc_pe)
-			sc_value += cutil.ratio.get_score_peg(sc_peg)
-			sc_value += cutil.ratio.get_score_pb(sc_cmp2bv)
+			sc_prank = 0
+			sc_prank += cutil.ratio.get_score_pe(sc_pe)
+			sc_prank += cutil.ratio.get_score_peg(sc_peg)
+			sc_prank += cutil.ratio.get_score_pb(sc_cmp2bv)
 			if sc_dy > 3:
-				sc_value += 1
+				sc_prank += 1
 			
 			if sc_cmp < sc_iv:
-				sc_value += 1 
+				sc_prank += 1 
 			
 			if sc_cmp < sc_graham:
-				sc_value += 1 
+				sc_prank += 1 
 			
-			self.sc_score[sc_sno] = sc_score
-			self.sc_value[sc_sno] = sc_value
+			self.sc_crank[sc_sno] = sc_crank
+			self.sc_prank[sc_sno] = sc_prank
 			
 			if self.debug_level > 1:
-				print 'score : ', str(sc_sno) , ', ', sc_name , str(sc_score) , '\n'
+				print 'score : ', str(sc_sno) , ', ', sc_name , str(sc_crank) , '\n'
 			
 		except IndexError:
 			print 'except ', row
@@ -178,9 +178,9 @@ class Screener(Isin):
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altman, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_pledge, sc_score, sc_value\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altman, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_pledge, sc_crank, sc_prank\n')
 		if sort_score:
-			sorted_input = sorted(self.sc_score, key=self.sc_score.__getitem__, reverse=True)
+			sorted_input = sorted(self.sc_crank, key=self.sc_crank.__getitem__, reverse=True)
 		else:
 			sorted_input = sorted(self.sc_sno)
 
@@ -240,9 +240,9 @@ class Screener(Isin):
 			p_str += ', ' 
 			p_str += str(self.sc_pledge[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_score[sc_sno])
+			p_str += str(self.sc_crank[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_value[sc_sno])
+			p_str += str(self.sc_prank[sc_sno])
 			p_str += '\n' 
 			fh.write(p_str);	
 		fh.close()
@@ -260,13 +260,13 @@ class Screener(Isin):
 				return sc_sno
 		return 0
 
-	def get_sc_score_by_sno(self, sc_sno):
-		if sc_sno in self.sc_score:
-			return self.sc_score[sc_sno]
+	def get_sc_crank_by_sno(self, sc_sno):
+		if sc_sno in self.sc_crank:
+			return self.sc_crank[sc_sno]
 		return 0
-	def get_sc_value_by_sno(self, sc_sno):
-		if sc_sno in self.sc_value:
-			return self.sc_value[sc_sno]
+	def get_sc_prank_by_sno(self, sc_sno):
+		if sc_sno in self.sc_prank:
+			return self.sc_prank[sc_sno]
 		return 0
 	def get_sc_cmp_by_sno(self, sc_sno):
 		if sc_sno in self.sc_cmp:
