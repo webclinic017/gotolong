@@ -23,7 +23,7 @@ class Tbd(Plan, Demat, Screener):
 		self.tbd_pct = {}
 		self.tbd_isin_name = {}
 		self.tbd_isin_code = {}
-		self.tbd_t500 = {}
+		self.tbd_captype = {}
 		self.tbd_demat_last_txn_date = {}
 		self.tbd_demat_last_txn_type = {}
 
@@ -31,10 +31,11 @@ class Tbd(Plan, Demat, Screener):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
 
-	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, plan_filename, demat_filename, screener_filename):
+	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, amfi_filename, plan_filename, demat_filename, screener_filename):
 		self.load_isin_bse_data(isin_bse_filename)
 		self.load_isin_nse_data(isin_nse_filename)
 		self.load_demat_data(demat_filename)
+		self.load_amfi_data(amfi_filename)
 		self.load_plan_data(plan_filename)
 		self.load_screener_data(screener_filename)
 		self.process_tbd_data()
@@ -46,11 +47,12 @@ class Tbd(Plan, Demat, Screener):
 				isin_code = self.get_isin_code_by_name(comp_name)
 				self.tbd_isin_code[comp_name] = isin_code	
 				if isin_code == '':
-					self.tbd_t500[comp_name] =   '-'
+					self.tbd_captype[comp_name] =   '-'
 					if self.debug_level > 0:
-						print 'not in nse 500 ', comp_name
+						print 'not found isin', comp_name
 				else:
-					self.tbd_t500[comp_name] =   'yes'
+					captype = self.get_amfi_captype_by_code(isin_code)
+					self.tbd_captype[comp_name] =  captype 
 				
 				demat_units = int(self.get_demat_units_by_isin_code(isin_code)) 
 				self.tbd_demat_units[comp_name] = demat_units 
@@ -84,7 +86,7 @@ class Tbd(Plan, Demat, Screener):
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, t500, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
 		for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
@@ -131,7 +133,7 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += self.tbd_demat_last_txn_type[comp_name]
 				p_str += ',' 
-				p_str += self.tbd_t500[comp_name]
+				p_str += self.tbd_captype[comp_name]
 				p_str += ',' 
 				p_str += str(sc_crank)
 				p_str += ',' 
