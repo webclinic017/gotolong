@@ -85,10 +85,21 @@ def get_cscore_d2e(ratio):
 		score = 0
 	return score
 
+def get_cscore_altmanz(ratio):
+	if ratio <= 2:
+		# chance of bankruptcy
+		score = -4 
+	elif ratio > 2 and ratio <= 3:
+		score = 0 
+	elif ratio > 3: 
+		# sound - healthy company 
+		score = 4 
+	return score
+
 def get_pscore_peg(ratio):
 	if ratio <= 1:
 		# less than fair price
-		score = 1
+		score = 4
 	elif ratio > 1:
 		# expansive
 		score = 0 

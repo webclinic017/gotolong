@@ -33,7 +33,7 @@ class Screener(Isin):
 		self.sc_iv = {}
 		self.sc_ev = {}
 		self.sc_mcap = {}
-		self.sc_altman = {}
+		self.sc_altmanz = {}
 		self.sc_cr = {}
 		self.sc_roe3 = {}
 		self.sc_graham = {}
@@ -89,7 +89,7 @@ class Screener(Isin):
 			sc_iv  = cutil.cutil.get_number(row_list[15])
 			sc_ev  = cutil.cutil.get_number(row_list[16])
 			sc_mcap  = cutil.cutil.get_number(row_list[17])
-			sc_altman = cutil.cutil.get_number(row_list[18])
+			sc_altmanz = cutil.cutil.get_number(row_list[18])
 			sc_cr = cutil.cutil.get_number(row_list[19])
 			sc_roe3 = cutil.cutil.get_number(row_list[20])
 			sc_graham = cutil.cutil.get_number(row_list[21])
@@ -117,7 +117,7 @@ class Screener(Isin):
 			self.sc_iv[sc_sno]  = sc_iv 
 			self.sc_ev[sc_sno]  = sc_ev 
 			self.sc_mcap[sc_sno]  = sc_mcap 
-			self.sc_altman[sc_sno] = sc_altman 
+			self.sc_altmanz[sc_sno] = sc_altmanz
 			self.sc_cr[sc_sno] = sc_cr 
 			self.sc_roe3[sc_sno] = sc_roe3 
 			self.sc_graham[sc_sno] = sc_graham 
@@ -135,6 +135,7 @@ class Screener(Isin):
 			sc_crank += cutil.ratio.get_cscore_dp(sc_dp3)
 			sc_crank += cutil.ratio.get_cscore_current_ratio(sc_cr)
 			sc_crank += cutil.ratio.get_cscore_pledge(sc_pledge)
+			sc_crank += cutil.ratio.get_cscore_altmanz(sc_altmanz)
 			if sc_np > 0:
 				sc_crank += 1
 			if sc_eps > 0:
@@ -174,7 +175,7 @@ class Screener(Isin):
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altman, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_pledge, sc_crank, sc_prank\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_pledge, sc_crank, sc_prank\n')
 		if sort_score:
 			sorted_input = sorted(self.sc_crank, key=self.sc_crank.__getitem__, reverse=True)
 		else:
@@ -220,7 +221,7 @@ class Screener(Isin):
 			p_str += ', ' 
 			p_str += str(self.sc_mcap[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_altman[sc_sno])
+			p_str += str(self.sc_altmanz[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_cr[sc_sno])
 			p_str += ', ' 
