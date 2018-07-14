@@ -92,7 +92,7 @@ class Tbd(Plan, Demat, Screener):
 			except ValueError:
 				print 'except : process: ValueError :', comp_name
 	
-	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, sort_sale = None):
+	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, demat_only = None, sort_sale = None):
 		fh = open(out_filename, "w")
 		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
@@ -112,6 +112,12 @@ class Tbd(Plan, Demat, Screener):
 				
 				if comp_name in self.tbd_demat_units:
 					demat_units = int(self.tbd_demat_units[comp_name])
+				else:
+					demat_units = 0
+
+				if demat_only and demat_units <= 0:
+					continue
+					
 				tbd_units = int(self.tbd_units[comp_name])
 				tbd_pct = int(round(float(self.tbd_pct[comp_name])))
 				sc_crank = self.tbd_crank[comp_name] 
@@ -180,4 +186,4 @@ class Tbd(Plan, Demat, Screener):
 		self.print_tbd_phase1(out_filename, True, True, days_filter)
 
 	def print_tbd_phase5(self, out_filename):
-		self.print_tbd_phase1(out_filename, True, False, None, True)
+		self.print_tbd_phase1(out_filename, True, False, None, True, True)
