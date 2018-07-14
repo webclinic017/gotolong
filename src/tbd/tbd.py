@@ -24,6 +24,8 @@ class Tbd(Plan, Demat, Screener):
 		self.tbd_isin_name = {}
 		self.tbd_isin_code = {}
 		self.tbd_captype = {}
+		self.tbd_crank = {}
+		self.tbd_prank = {}
 		self.tbd_demat_last_txn_date = {}
 		self.tbd_demat_last_txn_type = {}
 
@@ -79,15 +81,26 @@ class Tbd(Plan, Demat, Screener):
 			        isin_name = self.get_isin_name_by_code(isin_code)
 				if isin_name == '':
 					self.tbd_isin_name[comp_name] = comp_name
+					sc_crank = 0
+					sc_prank = 0
 				else:
-					self.tbd_isin_name[comp_name] = isin_name 
+					self.tbd_isin_name[comp_name] = isin_name
+					sc_crank = self.get_sc_crank_by_sno(isin_code)
+					sc_prank = self.get_sc_prank_by_sno(isin_code)
+				self.tbd_crank[comp_name] = sc_crank
+				self.tbd_prank[comp_name] = sc_prank
 			except ValueError:
 				print 'except : process: ValueError :', comp_name
 	
-	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None):
+	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, sort_sale = None):
 		fh = open(out_filename, "w")
 		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
-		for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
+		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
+		if sort_sale:
+			sorted_items = sorted(self.tbd_crank, key=self.tbd_crank.__getitem__)
+		else:
+			sorted_items = sorted(self.tbd_prank, key=self.tbd_prank.__getitem__, reverse=True)
+		for comp_name in sorted_items:
 			try:
 				plan_units = int(self.plan_comp_units[comp_name])
 				if plan_only and plan_units <= 0:
@@ -101,15 +114,13 @@ class Tbd(Plan, Demat, Screener):
 					demat_units = int(self.tbd_demat_units[comp_name])
 				tbd_units = int(self.tbd_units[comp_name])
 				tbd_pct = int(round(float(self.tbd_pct[comp_name])))
+				sc_crank = self.tbd_crank[comp_name] 
+				sc_prank = self.tbd_prank[comp_name] 
 				if isin_code == '':
-					sc_crank = 0
-					sc_prank = 0
 					sc_cmp = 0
 					sc_iv = 0
 					sc_graham = 0
 				else:
-					sc_crank = self.get_sc_crank_by_sno(isin_code)
-					sc_prank = self.get_sc_prank_by_sno(isin_code)
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
 					sc_graham = self.get_sc_graham_by_sno(isin_code)
@@ -167,3 +178,6 @@ class Tbd(Plan, Demat, Screener):
 
 	def print_tbd_phase4(self, out_filename, days_filter):
 		self.print_tbd_phase1(out_filename, True, True, days_filter)
+
+	def print_tbd_phase5(self, out_filename):
+		self.print_tbd_phase1(out_filename, True, False, None, True)

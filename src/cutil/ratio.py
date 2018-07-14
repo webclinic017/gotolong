@@ -86,6 +86,7 @@ def get_cscore_d2e(ratio):
 	return score
 
 def get_cscore_altmanz(ratio):
+	# Is the number different for bank & nbfc - finance?
 	if ratio <= 2:
 		# chance of bankruptcy
 		score = -4 
