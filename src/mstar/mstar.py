@@ -94,7 +94,8 @@ class Mstar:
 	def print_phase1(self, file):
 		df = self.mdf
 		fname = file
-		df.to_csv(fname, header=None, index=False, encoding='utf-8')
+		df.to_csv(fname, index=False, encoding='utf-8')
+		# df.to_csv(fname, header=None, index=False, encoding='utf-8')
 
 	def filter_data_phase2(self):
 		df = self.mdf
@@ -111,7 +112,8 @@ class Mstar:
 	def print_phase2(self, file):
 		df = self.mdf
 		fname = file
-		df.to_csv(fname, header=None, index=False, encoding='utf-8')
+		df.to_csv(fname, index=False, encoding='utf-8')
+		# df.to_csv(fname, header=None, index=False, encoding='utf-8')
 
 # column
 # print df[:2]
