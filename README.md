@@ -85,6 +85,17 @@ Fix any discrepancy by running following
  
  NOTE: To be switched to Quandl or something similar.
 
+ # Morning Star Data
+
+ $ cd src/mstar
+ 
+ $ ./mstar_invoke.sh
+
+Review the generated reports/mstar-reports/\*.csv
+
+Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
+and financial strength (Strong, Moderate etc)
+
  # BONUS share Data (To be modified for new framework)
  # SPLITS share data (to be coded)
  # DIVIDEND Data (To be modified)
