@@ -1,14 +1,66 @@
-Name,Rating As on,MoatRating,ValuationRating,UncertaintyRating,FinancialHealthRating,ISIN,Symbol,U:17
-ACC Ltd,19/07/2018,Narrow,Undervalued,High,Strong,INE012A01025,500410.0,
-Adani Transmission Ltd,19/07/2018,Narrow,Undervalued,High,Moderate,INE931S01010,539254.0,
-ABB India Ltd,19/07/2018,Narrow,Fairly Valued,High,Strong,INE117A01022,500002.0,
-Accelya Kale Solutions Ltd,19/07/2018,Narrow,Fairly Valued,High,Strong,INE793A01012,532268.0,
-Adani Ports &#38; Special Economic Zone Ltd,19/07/2018,Narrow,Fairly Valued,Medium,Moderate,INE742F01042,532921.0,
-Aditya Birla Fashion and Retail Ltd,19/07/2018,Narrow,Fairly Valued,High,Moderate,INE647O01011,535755.0,
-Aegis Logistics Ltd,19/07/2018,Narrow,Fairly Valued,High,Moderate,INE208C01025,500003.0,
-Alembic Pharmaceuticals Ltd,19/07/2018,Narrow,Fairly Valued,High,Moderate,INE901L01018,533573.0,
-Amrutanjan Health Care Ltd,19/07/2018,Narrow,Fairly Valued,High,Strong,INE098F01031,590006.0,
-Atul Auto Ltd,19/07/2018,Narrow,Fairly Valued,High,Strong,INE951D01028,531795.0,
-Axis Bank Ltd,19/07/2018,Narrow,Fairly Valued,High,Strong,INE238A01034,532215.0,
-Cummins India Ltd,19/07/2018,Wide,Undervalued,High,Strong,INE298A01020,500480.0,
-Ajanta Pharma Ltd,19/07/2018,Narrow,Undervalued,High,Moderate,INE031B01049,532331.0,
+Name,Rating As on,MoatRating,ValuationRating,UncertaintyRating,FinancialHealthRating,ISIN
+ACC Ltd,20/07/2018,Narrow,Undervalued,High,Strong,INE012A01025
+Adani Transmission Ltd,20/07/2018,Narrow,Undervalued,High,Moderate,INE931S01010
+ABB India Ltd,20/07/2018,Narrow,Fairly Valued,High,Strong,INE117A01022
+Accelya Kale Solutions Ltd,20/07/2018,Narrow,Fairly Valued,High,Strong,INE793A01012
+Adani Ports &#38; Special Economic Zone Ltd,20/07/2018,Narrow,Fairly Valued,Medium,Moderate,INE742F01042
+Aditya Birla Fashion and Retail Ltd,20/07/2018,Narrow,Fairly Valued,High,Moderate,INE647O01011
+Aegis Logistics Ltd,20/07/2018,Narrow,Fairly Valued,High,Moderate,INE208C01025
+Alembic Pharmaceuticals Ltd,20/07/2018,Narrow,Fairly Valued,High,Moderate,INE901L01018
+Amrutanjan Health Care Ltd,20/07/2018,Narrow,Fairly Valued,High,Strong,INE098F01031
+Atul Auto Ltd,20/07/2018,Narrow,Fairly Valued,High,Strong,INE951D01028
+Axis Bank Ltd,20/07/2018,Narrow,Fairly Valued,High,Strong,INE238A01034
+3M India Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE470A01017
+Aarti Industries Ltd,20/07/2018,Narrow,Overvalued,High,Moderate,INE769A01020
+Abbott India Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE358A01014
+Adi Rasayan Ltd,20/07/2018,Narrow,Overvalued,High,Moderate,INE861N01028
+AIA Engineering Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE212H01026
+Akzo Nobel India Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE133A01011
+Alkem Laboratories Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE540L01014
+Amara Raja Batteries Ltd,20/07/2018,Narrow,Overvalued,High,Moderate,INE885A01032
+Asahi India Glass Ltd,20/07/2018,Narrow,Overvalued,High,Moderate,INE439A01020
+Asian Paints Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE021A01026
+Astral Poly Technik Ltd,20/07/2018,Wide,Overvalued,High,Moderate,INE006I01046
+AstraZeneca Pharma India Ltd,20/07/2018,Narrow,Overvalued,High,Moderate,INE203A01020
+Atul Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE100A01010
+AU Small Finance Bank Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE949L01017
+Avenue Supermarts Ltd,20/07/2018,Wide,Overvalued,Medium,Moderate,INE192R01011
+Bajaj Auto Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE917I01010
+Bajaj Corp Ltd,20/07/2018,Narrow,Overvalued,High,Strong,INE933K01021
+Bajaj Finance Ltd,20/07/2018,Wide,Overvalued,High,Moderate,INE296A01024
+Bata India Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE176A01028
+Berger Paints India Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE463A01038
+Bosch Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE323A01026
+Britannia Industries Ltd,20/07/2018,Wide,Overvalued,Medium,Strong,INE216A01022
+Colgate-Palmolive (India) Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE259A01022
+CRISIL Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE007A01025
+Crompton Greaves Consumer Electricals Lt...,20/07/2018,Wide,Overvalued,High,Moderate,INE299U01018
+Cummins India Ltd,20/07/2018,Wide,Undervalued,High,Strong,INE298A01020
+Dabur India Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE016A01026
+Dr. Lal PathLabs Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE600L01024
+Eicher Motors Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE066A01013
+Emami Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE548C01032
+Gillette India Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE322A01010
+Godrej Consumer Products Ltd,20/07/2018,Wide,Overvalued,Medium,Strong,INE102D01028
+Havells India Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE176B01034
+HDFC Bank Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE040A01026
+Hindustan Unilever Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE030A01027
+Housing Development Finance Corp Ltd,20/07/2018,Wide,Overvalued,Medium,Moderate,INE001A01036
+IndusInd Bank Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE095A01012
+Infosys Ltd,20/07/2018,Wide,Overvalued,Low,Strong,INE009A01021
+ITC Ltd,20/07/2018,Wide,Overvalued,Medium,Strong,INE154A01025
+Jubilant Foodworks Ltd,20/07/2018,Wide,Overvalued,High,Moderate,INE797F01012
+Kansai Nerolac Paints Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE531A01024
+Kotak Mahindra Bank Ltd,20/07/2018,Wide,Overvalued,High,Strong,INE237A01028
+Marico Ltd,20/07/2018,Wide,Overvalued,Medium,Strong,INE196A01026
+Ajanta Pharma Ltd,20/07/2018,Narrow,Undervalued,High,Moderate,INE031B01049
+Bharat Financial Inclusion Ltd,20/07/2018,Narrow,Overvalued,Medium,Moderate,INE180K01011
+Bharti Airtel Ltd,20/07/2018,Narrow,Undervalued,Medium,Moderate,INE397D01024
+Exide Industries Ltd,20/07/2018,Narrow,Overvalued,Medium,Strong,INE302A01020
+Godrej Industries Ltd,20/07/2018,Narrow,Overvalued,Medium,Moderate,INE233A01035
+HCL Technologies Ltd,20/07/2018,Narrow,Fairly Valued,Medium,Strong,INE860A01027
+Indiabulls Housing Finance Ltd,20/07/2018,Narrow,Fairly Valued,Medium,Moderate,INE148I01020
+Maruti Suzuki India Ltd,20/07/2018,Narrow,Overvalued,Medium,Strong,INE585B01010
+SBI Life Insurance Co Ltd,20/07/2018,Narrow,Overvalued,Medium,Strong,INE123W01016
+Tata Consultancy Services Ltd,20/07/2018,Wide,Overvalued,Medium,Strong,INE467B01029
+Wipro Ltd,20/07/2018,Narrow,Undervalued,Medium,Strong,INE075A01022

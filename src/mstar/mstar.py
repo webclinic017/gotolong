@@ -8,7 +8,6 @@ import pandas as pd
 # sys.setdefaultencoding('utf8')
 
 
-
 class Mstar:
 	mdf= []
 	debug_level = 0
@@ -36,7 +35,13 @@ class Mstar:
 				df.to_csv(fname, header=None, index=False, encoding='utf-8')
 
 		# last table is interesting
-		df = dfs[2]
+		if len(dfs) == 3:
+			df = dfs[2]
+		else:
+			print 'check page again', len(dfs)
+			# create an empty dataframe
+			df_empty = pd.DataFrame({'Name' : []})
+			return df_empty 
 
 		# remove line starting with 0,1,2,3,4 etc
 		# df.drop(0)
@@ -50,23 +55,25 @@ class Mstar:
 		df.columns = ['Name', 'Rating As on', 'U:2', 'MoatRating', 'Moat Value', 'U:5', 'ValuationRating', 'Valuation Value', 'U:8', 'UncertaintyRating', 'Uncertainty Value', 'U:11', 'FinancialHealthRating', 'Financial Health Value', 'U:14', 'ISIN', 'Symbol', 'U:17']
 
 		# drop columns column
-		cols = [2,4,5,7,8,10,11,13,14]
+		cols = [2,4,5,7,8,10,11,13,14,16,17]
 		df.drop(df.columns[cols],axis=1,inplace=True)
 
 		return df
 
 	def load_mstar_data(self):
 		df = self.mdf
-		stock_types = ['undervalued-stocks', 'fairly-valued-stocks', 'wide-moat-stocks', 'narrow-moat-stocks', 'stocks-with-strong-financial-health', 'stocks-with-moderate-financial-health']
+		stock_types = ['undervalued-stocks', 'fairly-valued-stocks', 'overvalued-stocks', 'wide-moat-stocks', 'narrow-moat-stocks', 'no-moat-stocks', 'stocks-with-strong-financial-health', 'stocks-with-moderate-financial-health', 'stocks-with-weak-financial-health', 'stocks-with-high-uncertainty', 'stocks-with-medium-uncertainty', 'stocks-with-low-uncertainty', 'stocks-with-extreme-uncertainty' ]
 
 		for index in range(0, len(stock_types)):
-			df.append(self.get_df(stock_types[index]))
+			local_df = self.get_df(stock_types[index])
+			if local_df.empty == False:
+				df.append(local_df)
 
 		# concetante row wise
 		# df_all = df[0]
 
 
-		df_all = pd.concat([df[0], df[1], df[2], df[3], df[4], df[5]], ignore_index=True)
+		df_all = pd.concat([df[0], df[1], df[2], df[3], df[4], df[5], df[6], df[7], df[8], df[9], df[10], df[11]], ignore_index=True)
 
 		df = df_all
 
@@ -80,6 +87,10 @@ class Mstar:
 
 	def filter_data_phase1(self):
 		df = self.mdf
+		self.mdf = df
+
+	def filter_data_phase2(self):
+		df = self.mdf
 		df = df[ df['MoatRating'].isin(['Wide','Narrow']) ]
 		print 'MoatRating', len(df)
 		df = df[ df['FinancialHealthRating'].isin(['Strong','Moderate','Weak']) ]
@@ -91,13 +102,7 @@ class Mstar:
 		print 'ValuationRating', len(df)
 		self.mdf = df	
 
-	def print_phase1(self, file):
-		df = self.mdf
-		fname = file
-		df.to_csv(fname, index=False, encoding='utf-8')
-		# df.to_csv(fname, header=None, index=False, encoding='utf-8')
-
-	def filter_data_phase2(self):
+	def filter_data_phase3(self):
 		df = self.mdf
 		df = df[ df['MoatRating'].isin(['Wide','Narrow']) ]
 		print 'phase 2 : MoatRating', len(df)
@@ -109,11 +114,18 @@ class Mstar:
 		df = df[ df['ValuationRating'].isin(['Undervalued', 'Fairly Valued']) ]
 		print 'phase 2 : ValuationRating', len(df)
 		self.mdf = df	
-	def print_phase2(self, file):
+
+	def print_phase1(self, file):
 		df = self.mdf
 		fname = file
 		df.to_csv(fname, index=False, encoding='utf-8')
 		# df.to_csv(fname, header=None, index=False, encoding='utf-8')
+
+	def print_phase2(self, file):
+		self.print_phase1(file)
+
+	def print_phase3(self, file):
+		self.print_phase2(file)
 
 # column
 # print df[:2]
