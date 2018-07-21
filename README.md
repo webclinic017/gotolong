@@ -1,4 +1,4 @@
-# Indian-stock-market (Dividend, Bonus, Plan, Demat)
+# Indian-stock-market
 
 The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
 
