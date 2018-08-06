@@ -1,192 +1,194 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham
-Uflex,INE516A01017,2,1,1,50,28-May-2018,47,Buy,Micro Cap,14,21,255,662,727
-Vedanta,INE205A01025,5,5,0,0,25-Jan-2017,535,Buy,Large Cap,20,21,221,256,410
-Nmdc,INE584A01023,5,2,3,60,01-Feb-2018,163,Buy,Large Cap,31,19,103,-90,150
-Nhpc,INE848E01016,3,1,2,67,03-Oct-2017,284,Buy,Mid Cap,20,19,23,-66,42
-Oil natural gas corporation,INE213A01029,5,3,2,40,06-Dec-2017,220,Buy,Large Cap,23,19,206,-495,385
-Eid parry,INE126A01031,3,2,1,33,01-Feb-2018,163,Buy,Small Cap,17,19,217,345,348
-Oil natural gas corporation,INE213A01029,3,3,0,0,06-Dec-2017,220,Buy,Large Cap,23,19,206,-495,385
-Tata steel,INE081A01012,5,6,-1,-20,03-Jul-2018,11,Buy,Large Cap,13,17,553,0,1357
-Nlc,INE589A01014,3,1,2,67,03-Oct-2017,284,Buy,Mid Cap,21,17,75,62,132
-Bse,INE118H01025,2,3,-1,-50,03-Jul-2018,11,Buy,Small Cap,21,17,861,12478,1381
-Pc jeweller,INE785M01013,2,2,0,0,03-Jul-2018,11,Buy,Mid Cap,19,16,126,153,180
-Ntpc,INE733E01010,10,7,3,30,06-Dec-2017,220,Buy,Large Cap,21,16,152,1540,191
-Shipping corporation of,INE109A01011,3,2,1,33,04-Apr-2018,101,Buy,Small Cap,10,16,60,0,137
-Balrampur chini mills,INE119A01028,2,1,1,50,13-Nov-2017,243,Buy,Micro Cap,16,16,63,7,130
-Tata power co,INE245A01021,2,2,0,0,04-Apr-2018,101,Buy,Mid Cap,16,15,71,0,109
-Tata coffee,INE493A01027,5,2,3,60,01-Nov-2017,255,Buy,Micro Cap,20,15,118,190,122
+Uflex,INE516A01017,2,1,1,50,28-May-2018,69,Buy,Micro Cap,14,21,255,662,727
+Vedanta,INE205A01025,5,5,0,0,25-Jan-2017,557,Buy,Large Cap,20,21,221,256,410
+Nmdc,INE584A01023,5,2,3,60,01-Feb-2018,185,Buy,Large Cap,31,19,103,-90,150
+Nhpc,INE848E01016,3,1,2,67,03-Oct-2017,306,Buy,Mid Cap,20,19,23,-66,42
+Oil natural gas corporation,INE213A01029,5,3,2,40,06-Dec-2017,242,Buy,Large Cap,23,19,206,-495,385
+Eid parry,INE126A01031,3,2,1,33,01-Feb-2018,185,Buy,Small Cap,17,19,217,345,348
+Oil natural gas corporation,INE213A01029,3,3,0,0,06-Dec-2017,242,Buy,Large Cap,23,19,206,-495,385
+Tata steel,INE081A01012,5,6,-1,-20,03-Jul-2018,33,Buy,Large Cap,13,17,553,0,1357
+Nlc,INE589A01014,3,1,2,67,03-Oct-2017,306,Buy,Mid Cap,21,17,75,62,132
+Bse,INE118H01025,2,3,-1,-50,03-Jul-2018,33,Buy,Small Cap,21,17,861,12478,1381
+Pc jeweller,INE785M01013,2,2,0,0,03-Jul-2018,33,Buy,Mid Cap,19,16,126,153,180
+Ntpc,INE733E01010,10,7,3,30,06-Dec-2017,242,Buy,Large Cap,21,16,152,1540,191
+Shipping corporation of,INE109A01011,3,2,1,33,04-Apr-2018,123,Buy,Small Cap,10,16,60,0,137
+Balrampur chini mills,INE119A01028,2,1,1,50,13-Nov-2017,265,Buy,Micro Cap,16,16,63,7,130
+Tata power co,INE245A01021,2,2,0,0,04-Apr-2018,123,Buy,Mid Cap,16,15,71,0,109
+Tata coffee,INE493A01027,5,2,3,60,01-Nov-2017,277,Buy,Micro Cap,20,15,118,190,122
 Tata motors dvr,IN9155A01020,5,0,5,100,,0,,-,10,14,262,-356,368
-Tata chemicals,INE092A01019,2,3,-1,-50,04-Apr-2018,101,Buy,Mid Cap,22,14,693,564,1020
-Housing urban development corporation,INE031A01017,2,2,0,0,03-Jul-2018,11,Buy,Mid Cap,14,13,55,161,67
-Jain irrigation systems,INE175A01038,2,1,1,50,29-Nov-2017,227,Buy,Small Cap,16,12,76,-370,92
-Bharat petroleum corporation,INE029A01011,4,2,2,50,02-Jan-2018,193,Buy,Large Cap,22,12,372,139,377
-Muthoot finance,INE414G01012,5,2,3,60,01-Nov-2017,255,Buy,Mid Cap,19,12,409,1139,446
-Dlf,INE271C01023,5,9,-4,-80,02-Jan-2018,193,Buy,Large Cap,22,11,181,-28275,303
-Thomas cook,INE332A01027,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,23,11,279,-8999,876
-Lic housing finance,INE115A01026,5,2,3,60,01-Nov-2017,255,Buy,Mid Cap,15,11,476,472,479
-Hindustan zinc,INE267A01025,5,2,3,60,02-Jan-2018,193,Buy,Large Cap,30,11,274,746,216
-Cox kings,INE008I01026,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,14,11,208,134,312
-Idea cellular,INE669E01016,5,3,2,40,28-Jun-2018,16,Buy,Large Cap,6,11,55,0,0
-Allcargo logistics,INE418H01029,2,1,1,50,02-Feb-2018,162,Buy,Small Cap,26,10,117,-461,112
-Reliance industries,INE002A01018,10,7,3,30,27-Nov-2017,229,Buy,Large Cap,14,9,965,1208,770
-Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,162,Buy,Mid Cap,13,8,49,0,0
-Gail,INE129A01019,4,2,2,50,10-Apr-2018,95,Buy,Large Cap,29,8,346,23156,296
-Info edge,INE663F01024,5,3,2,40,03-Jul-2018,11,Buy,Mid Cap,22,8,1230,0,0
-Engineers,INE510A01028,5,2,3,60,03-Jul-2018,11,Buy,Mid Cap,31,8,123,-166,82
-Shoppers stop,INE498B01024,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,12,8,547,0,0
-Ambuja cements,INE079A01024,3,2,1,33,02-Jan-2018,193,Buy,Large Cap,28,8,207,-4311,158
-Wipro,INE075A01022,5,6,-1,-20,21-Jun-2017,388,Buy,Large Cap,27,8,264,701,205
-Bharat heavy electricals,INE257A01026,5,3,2,40,04-Apr-2018,101,Buy,Large Cap,19,8,68,-26,67
-Fortis healthcare,INE061F01013,2,2,0,0,04-Apr-2018,101,Buy,Small Cap,1,8,139,-114,0
-Bharat electronics,INE263A01024,5,7,-2,-40,04-Apr-2018,101,Buy,Large Cap,27,8,102,123,69
-General insurance corporation of,INE481Y01014,5,2,3,60,25-Oct-2017,262,Buy,Large Cap,15,8,760,0,700
-Hero motocorp,INE158A01026,5,7,-2,-40,03-Jul-2018,11,Buy,Large Cap,29,7,3506,4181,1567
-Rajesh exports,INE343B01030,2,4,-2,-100,04-Apr-2018,101,Buy,Mid Cap,18,7,575,0,475
-Ceat,INE482A01020,2,3,-1,-50,03-Jul-2018,11,Buy,Small Cap,21,7,1269,1315,913
-Shriram transport finance co,INE721A01013,3,1,2,67,03-Oct-2017,284,Buy,Large Cap,17,7,1152,84289,925
-Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,87,Buy,Small Cap,18,7,99,15,93
-Coal,INE522F01014,10,10,0,0,27-Nov-2017,229,Buy,Large Cap,30,6,270,-485,114
-Sobha,INE671H01015,2,2,0,0,03-Jul-2018,11,Buy,Small Cap,16,6,477,-1580,394
-Bharti infratel,INE121J01017,0,1,-1,0,03-Oct-2017,284,Buy,Large Cap,27,6,303,260,172
-Hindalco industries,INE038A01020,2,3,-1,-50,03-Jul-2018,11,Buy,Large Cap,17,6,220,-269,177
-Icici bank,INE090A01021,5,5,0,0,06-Dec-2017,220,Buy,Large Cap,16,6,272,735,210
-Jk tyre industries,INE573A01042,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,12,6,122,0,75
-Grasim industries,INE047A01021,3,2,1,33,16-Oct-2017,271,Buy,Large Cap,14,6,969,4535,822
-Bajaj auto,INE917I01010,5,6,-1,-20,04-Apr-2018,101,Buy,Large Cap,30,5,2967,7289,1522
-Godfrey phillips,INE260B01028,2,1,1,50,29-Jun-2018,15,Buy,Small Cap,29,5,719,-1580,484
-Infosys,INE009A01021,10,11,-1,-10,03-Jul-2018,11,Buy,Large Cap,28,5,1284,1900,701
-Piramal enterprises,INE140A01024,5,5,0,0,04-Apr-2018,101,Buy,Large Cap,19,5,2453,1759,2658
-Jsw steel,INE019A01038,5,2,3,60,06-Dec-2017,220,Buy,Large Cap,17,5,310,183,260
-Hcl technologies,INE860A01027,5,2,3,60,03-Jul-2018,11,Buy,Large Cap,31,5,931,518,649
-Kaveri seed company,INE455I01029,3,1,2,67,02-Feb-2018,162,Buy,Small Cap,24,5,552,571,366
-Apollo tyres,INE438A01022,2,2,0,0,01-Feb-2018,163,Buy,Mid Cap,18,5,252,195,200
-Petronet lng,INE347G01014,4,2,2,50,01-Feb-2018,163,Buy,Large Cap,27,4,219,374,145
-Dish tv,INE836F01026,5,2,3,60,01-Feb-2018,163,Buy,Mid Cap,6,4,72,0,0
-Rallis,INE613A01020,2,2,0,0,04-Apr-2018,101,Buy,Small Cap,30,4,185,372,109
-Castrol,INE172A01027,2,2,0,0,04-Jan-2018,191,Buy,Mid Cap,31,4,161,304,44
-Coromandel international,INE169A01031,2,2,0,0,01-Nov-2017,255,Buy,Mid Cap,24,4,433,-933,249
-Larsen toubro,INE018A01030,10,7,3,30,04-Apr-2018,101,Buy,Large Cap,20,4,1254,4079,731
-Hsil,INE415A01038,2,2,0,0,04-Apr-2018,101,Buy,Micro Cap,19,4,329,-6537,222
-Vst industries,INE710A01016,2,3,-1,-50,29-Jun-2018,15,Buy,Small Cap,28,4,2890,37286,1109
-Acc,INE012A01025,3,4,-1,-33,01-Nov-2017,255,Buy,Mid Cap,29,4,1390,-4021,769
-Tata global beverages,INE192A01025,5,2,3,60,01-Nov-2017,255,Buy,Mid Cap,27,4,271,904,148
-Brigade enterprises,INE791I01019,2,2,0,0,03-Jul-2018,11,Buy,Small Cap,18,3,205,147,173
-Essel propack,INE255A01020,2,1,1,50,26-Jun-2018,18,Buy,Small Cap,29,3,109,97,70
-Care ratings,INE752H01013,2,3,-1,-50,01-Feb-2018,163,Buy,Small Cap,27,3,1241,2520,525
-Tech mahindra,INE669C01036,5,3,2,40,01-Feb-2018,163,Buy,Large Cap,30,3,647,529,423
-Indiabulls housing finance,INE148I01020,3,1,2,67,03-Oct-2017,284,Buy,Large Cap,17,3,1132,289,825
-Upl,INE628A01036,2,5,-3,-150,25-Jan-2017,535,Buy,Large Cap,26,3,623,373,406
-Zee learn,INE565L01011,2,2,0,0,01-Nov-2017,255,Buy,Nano Cap,13,3,35,0,19
-Coffee day enterprises,INE335K01011,2,2,0,0,04-Apr-2018,101,Buy,Small Cap,8,2,259,416,134
-Eih,INE230A01023,3,2,1,33,02-Jan-2018,193,Buy,Mid Cap,29,2,163,-13024,45
-Bharti airtel,INE397D01024,10,9,1,10,27-Nov-2017,229,Buy,Large Cap,14,2,363,2959,146
-Axis bank,INE238A01034,2,2,0,0,04-Apr-2018,101,Buy,Large Cap,12,2,511,-226,100
-Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,11,Buy,Mid Cap,18,2,583,462,347
-Greenply industries,INE461C01038,2,1,1,50,28-Jun-2018,16,Buy,Small Cap,23,2,222,177,137
-Crisil,INE007A01025,3,4,-1,-33,04-Apr-2018,101,Buy,Mid Cap,30,2,1793,4695,394
-Colgate palmolive,INE259A01022,2,2,0,0,04-Apr-2018,101,Buy,Large Cap,27,2,1149,2813,177
-Cummins,INE298A01020,2,3,-1,-50,06-Dec-2017,220,Buy,Mid Cap,30,2,656,1754,304
-Mahindra cie automotive,INE536H01010,2,1,1,50,28-May-2018,47,Buy,Small Cap,15,2,261,0,145
-L&t technology services,INE010V01017,2,1,1,50,28-May-2018,47,Buy,Mid Cap,29,2,1222,0,465
-Skf,INE640A01023,2,4,-2,-100,03-Jul-2018,11,Buy,Small Cap,31,1,1712,8752,730
-Akzo nobel,INE133A01011,2,4,-2,-100,03-Jul-2018,11,Buy,Small Cap,28,1,1875,4784,763
-Siemens,INE003A01024,5,3,2,40,02-Jan-2018,193,Buy,Large Cap,29,1,972,1970,415
-Pfizer,INE182A01018,2,3,-1,-50,19-Sep-2017,298,Buy,Mid Cap,31,1,2565,6285,1037
-Krbl,INE001B01026,2,2,0,0,03-Jul-2018,11,Buy,Mid Cap,27,1,311,148,203
-Housing development finance corporation,INE001A01036,10,11,-1,-10,06-Dec-2017,220,Buy,Large Cap,18,1,1931,2484,991
-Carborundum universal,INE120A01034,2,1,1,50,17-Oct-2017,270,Buy,Small Cap,28,1,319,-1176,148
-Nilkamal,INE310A01015,2,4,-2,-100,03-Jul-2018,11,Buy,Micro Cap,26,1,1618,897,971
-Blue star,INE472A01039,2,1,1,50,28-Nov-2017,228,Buy,Small Cap,27,1,646,0,181
-Arvind,INE034A01011,3,2,1,33,03-Jul-2018,11,Buy,Mid Cap,20,1,389,445,203
-Apollo hospitals enterprise,INE437A01024,10,7,3,30,06-Dec-2017,220,Buy,Mid Cap,22,1,1048,4791,321
-Nestle,INE239A01016,5,7,-2,-40,09-Jun-2017,400,Buy,Large Cap,31,1,9957,57097,1118
-Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,193,Buy,Large Cap,21,1,616,151,433
-Vip industries,INE054A01027,5,2,3,60,02-Jan-2018,193,Buy,Small Cap,29,1,413,1538,87
-Bosch,INE323A01026,20,0,20,100,08-Nov-2017,248,Sell,Large Cap,31,1,18084,70345,5803
-Grindwell norton,INE536A01023,2,1,1,50,17-Oct-2017,270,Buy,Small Cap,30,1,525,4019,170
-Interglobe aviation,INE646L01027,5,2,3,60,01-Nov-2017,255,Buy,Large Cap,28,1,1076,256,453
-Itc,INE154A01025,10,6,4,40,02-Nov-2017,254,Buy,Large Cap,30,1,273,518,93
+Tata chemicals,INE092A01019,2,3,-1,-50,04-Apr-2018,123,Buy,Mid Cap,22,14,693,564,1020
+Housing urban development corporation,INE031A01017,2,2,0,0,03-Jul-2018,33,Buy,Mid Cap,14,13,55,161,67
+Jain irrigation systems,INE175A01038,2,1,1,50,29-Nov-2017,249,Buy,Small Cap,16,12,76,-370,92
+Bharat petroleum corporation,INE029A01011,4,2,2,50,02-Jan-2018,215,Buy,Large Cap,22,12,372,139,377
+Muthoot finance,INE414G01012,5,2,3,60,01-Nov-2017,277,Buy,Mid Cap,19,12,409,1139,446
+Lic housing finance,INE115A01026,5,2,3,60,01-Nov-2017,277,Buy,Mid Cap,15,11,476,472,479
+Dlf,INE271C01023,5,9,-4,-80,02-Jan-2018,215,Buy,Large Cap,22,11,181,-28275,303
+Thomas cook,INE332A01027,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,23,11,279,-8999,876
+Hindustan zinc,INE267A01025,5,2,3,60,02-Jan-2018,215,Buy,Large Cap,30,11,274,746,216
+Cox kings,INE008I01026,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,14,11,208,134,312
+Idea cellular,INE669E01016,5,3,2,40,28-Jun-2018,38,Buy,Large Cap,6,11,55,0,0
+Allcargo logistics,INE418H01029,2,1,1,50,02-Feb-2018,184,Buy,Small Cap,26,10,117,-461,112
+Reliance industries,INE002A01018,20,7,13,65,27-Nov-2017,251,Buy,Large Cap,14,9,965,1208,770
+Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,184,Buy,Mid Cap,13,8,49,0,0
+Gail,INE129A01019,4,2,2,50,10-Apr-2018,117,Buy,Large Cap,29,8,346,23156,296
+Info edge,INE663F01024,5,3,2,40,03-Jul-2018,33,Buy,Mid Cap,22,8,1230,0,0
+Engineers,INE510A01028,5,2,3,60,03-Jul-2018,33,Buy,Mid Cap,31,8,123,-166,82
+Shoppers stop,INE498B01024,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,12,8,547,0,0
+Ambuja cements,INE079A01024,3,2,1,33,02-Jan-2018,215,Buy,Large Cap,28,8,207,-4311,158
+Wipro,INE075A01022,5,6,-1,-20,21-Jun-2017,410,Buy,Large Cap,27,8,264,701,205
+Bharat heavy electricals,INE257A01026,5,3,2,40,04-Apr-2018,123,Buy,Large Cap,19,8,68,-26,67
+Fortis healthcare,INE061F01013,2,2,0,0,04-Apr-2018,123,Buy,Small Cap,1,8,139,-114,0
+Bharat electronics,INE263A01024,5,7,-2,-40,04-Apr-2018,123,Buy,Large Cap,27,8,102,123,69
+General insurance corporation of,INE481Y01014,10,2,8,80,25-Oct-2017,284,Buy,Large Cap,15,8,760,0,700
+Hero motocorp,INE158A01026,5,7,-2,-40,03-Jul-2018,33,Buy,Large Cap,29,7,3506,4181,1567
+Rajesh exports,INE343B01030,2,4,-2,-100,04-Apr-2018,123,Buy,Mid Cap,18,7,575,0,475
+Ceat,INE482A01020,2,3,-1,-50,03-Jul-2018,33,Buy,Small Cap,21,7,1269,1315,913
+Shriram transport finance co,INE721A01013,3,1,2,67,03-Oct-2017,306,Buy,Large Cap,17,7,1152,84289,925
+Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,109,Buy,Small Cap,18,7,99,15,93
+Coal,INE522F01014,5,10,-5,-100,27-Nov-2017,251,Buy,Large Cap,30,6,270,-485,114
+Sobha,INE671H01015,2,2,0,0,03-Jul-2018,33,Buy,Small Cap,16,6,477,-1580,394
+Bharti infratel,INE121J01017,0,1,-1,0,03-Oct-2017,306,Buy,Large Cap,27,6,303,260,172
+Hindalco industries,INE038A01020,5,3,2,40,03-Jul-2018,33,Buy,Large Cap,17,6,220,-269,177
+Icici bank,INE090A01021,5,5,0,0,06-Dec-2017,242,Buy,Large Cap,16,6,272,735,210
+Jk tyre industries,INE573A01042,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,12,6,122,0,75
+Grasim industries,INE047A01021,3,2,1,33,16-Oct-2017,293,Buy,Large Cap,14,6,969,4535,822
+Bajaj auto,INE917I01010,5,6,-1,-20,04-Apr-2018,123,Buy,Large Cap,30,5,2967,7289,1522
+Godfrey phillips,INE260B01028,2,1,1,50,29-Jun-2018,37,Buy,Small Cap,29,5,719,-1580,484
+Infosys,INE009A01021,10,11,-1,-10,03-Jul-2018,33,Buy,Large Cap,28,5,1284,1900,701
+Piramal enterprises,INE140A01024,5,5,0,0,04-Apr-2018,123,Buy,Large Cap,19,5,2453,1759,2658
+Jsw steel,INE019A01038,5,2,3,60,06-Dec-2017,242,Buy,Large Cap,17,5,310,183,260
+Hcl technologies,INE860A01027,5,2,3,60,03-Jul-2018,33,Buy,Large Cap,31,5,931,518,649
+Kaveri seed company,INE455I01029,3,1,2,67,02-Feb-2018,184,Buy,Small Cap,24,5,552,571,366
+Apollo tyres,INE438A01022,2,2,0,0,01-Feb-2018,185,Buy,Mid Cap,18,5,252,195,200
+Petronet lng,INE347G01014,4,2,2,50,01-Feb-2018,185,Buy,Large Cap,27,4,219,374,145
+Dish tv,INE836F01026,5,2,3,60,01-Feb-2018,185,Buy,Mid Cap,6,4,72,0,0
+Rallis,INE613A01020,2,2,0,0,04-Apr-2018,123,Buy,Small Cap,30,4,185,372,109
+Castrol,INE172A01027,2,2,0,0,04-Jan-2018,213,Buy,Mid Cap,31,4,161,304,44
+Coromandel international,INE169A01031,2,2,0,0,01-Nov-2017,277,Buy,Mid Cap,24,4,433,-933,249
+Larsen toubro,INE018A01030,20,7,13,65,04-Apr-2018,123,Buy,Large Cap,20,4,1254,4079,731
+Hsil,INE415A01038,2,2,0,0,04-Apr-2018,123,Buy,Micro Cap,19,4,329,-6537,222
+Vst industries,INE710A01016,2,3,-1,-50,29-Jun-2018,37,Buy,Small Cap,28,4,2890,37286,1109
+Acc,INE012A01025,3,4,-1,-33,01-Nov-2017,277,Buy,Mid Cap,29,4,1390,-4021,769
+Tata global beverages,INE192A01025,5,2,3,60,01-Nov-2017,277,Buy,Mid Cap,27,4,271,904,148
+Brigade enterprises,INE791I01019,2,2,0,0,03-Jul-2018,33,Buy,Small Cap,18,3,205,147,173
+Essel propack,INE255A01020,2,1,1,50,26-Jun-2018,40,Buy,Small Cap,29,3,109,97,70
+Care ratings,INE752H01013,2,3,-1,-50,01-Feb-2018,185,Buy,Small Cap,27,3,1241,2520,525
+Tech mahindra,INE669C01036,5,3,2,40,01-Feb-2018,185,Buy,Large Cap,30,3,647,529,423
+Indiabulls housing finance,INE148I01020,3,1,2,67,03-Oct-2017,306,Buy,Large Cap,17,3,1132,289,825
+Upl,INE628A01036,2,5,-3,-150,25-Jan-2017,557,Buy,Large Cap,26,3,623,373,406
+Zee learn,INE565L01011,2,2,0,0,01-Nov-2017,277,Buy,Nano Cap,13,3,35,0,19
+Coffee day enterprises,INE335K01011,2,2,0,0,04-Apr-2018,123,Buy,Small Cap,8,2,259,416,134
+Eih,INE230A01023,3,2,1,33,02-Jan-2018,215,Buy,Mid Cap,29,2,163,-13024,45
+Bharti airtel,INE397D01024,10,9,1,10,27-Nov-2017,251,Buy,Large Cap,14,2,363,2959,146
+Axis bank,INE238A01034,2,2,0,0,04-Apr-2018,123,Buy,Large Cap,12,2,511,-226,100
+Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,33,Buy,Mid Cap,18,2,583,462,347
+Greenply industries,INE461C01038,2,1,1,50,28-Jun-2018,38,Buy,Small Cap,23,2,222,177,137
+Crisil,INE007A01025,3,4,-1,-33,04-Apr-2018,123,Buy,Mid Cap,30,2,1793,4695,394
+Colgate palmolive,INE259A01022,2,2,0,0,04-Apr-2018,123,Buy,Large Cap,27,2,1149,2813,177
+Cummins,INE298A01020,2,3,-1,-50,06-Dec-2017,242,Buy,Mid Cap,30,2,656,1754,304
+Mahindra cie automotive,INE536H01010,2,1,1,50,28-May-2018,69,Buy,Small Cap,15,2,261,0,145
+L&t technology services,INE010V01017,2,1,1,50,28-May-2018,69,Buy,Mid Cap,29,2,1222,0,465
+Skf,INE640A01023,2,4,-2,-100,03-Jul-2018,33,Buy,Small Cap,31,1,1712,8752,730
+Akzo nobel,INE133A01011,2,4,-2,-100,03-Jul-2018,33,Buy,Small Cap,28,1,1875,4784,763
+Siemens,INE003A01024,5,3,2,40,02-Jan-2018,215,Buy,Large Cap,29,1,972,1970,415
+Pfizer,INE182A01018,2,3,-1,-50,19-Sep-2017,320,Buy,Mid Cap,31,1,2565,6285,1037
+Krbl,INE001B01026,2,2,0,0,03-Jul-2018,33,Buy,Mid Cap,27,1,311,148,203
+Housing development finance corporation,INE001A01036,10,11,-1,-10,06-Dec-2017,242,Buy,Large Cap,18,1,1931,2484,991
+Carborundum universal,INE120A01034,2,1,1,50,17-Oct-2017,292,Buy,Small Cap,28,1,319,-1176,148
+Nilkamal,INE310A01015,2,4,-2,-100,03-Jul-2018,33,Buy,Micro Cap,26,1,1618,897,971
+Blue star,INE472A01039,2,1,1,50,28-Nov-2017,250,Buy,Small Cap,27,1,646,0,181
+Arvind,INE034A01011,3,2,1,33,03-Jul-2018,33,Buy,Mid Cap,20,1,389,445,203
+Vip industries,INE054A01027,5,2,3,60,02-Jan-2018,215,Buy,Small Cap,29,1,413,1538,87
+Apollo hospitals enterprise,INE437A01024,10,7,3,30,06-Dec-2017,242,Buy,Mid Cap,22,1,1048,4791,321
+Nestle,INE239A01016,5,7,-2,-40,09-Jun-2017,422,Buy,Large Cap,31,1,9957,57097,1118
+Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,215,Buy,Large Cap,21,1,616,151,433
+Bosch,INE323A01026,20,0,20,100,08-Nov-2017,270,Sell,Large Cap,31,1,18084,70345,5803
+Grindwell norton,INE536A01023,2,1,1,50,17-Oct-2017,292,Buy,Small Cap,30,1,525,4019,170
+Interglobe aviation,INE646L01027,5,2,3,60,01-Nov-2017,277,Buy,Large Cap,28,1,1076,256,453
+Itc,INE154A01025,20,6,14,70,02-Nov-2017,276,Buy,Large Cap,30,1,273,518,93
 Avanti feeds,INE871C01020,2,0,2,100,,0,,-,29,1,494,159,250
-Ti financial holdings,INE149A01033,2,3,-1,-50,03-Jul-2018,11,Buy,Mid Cap,20,1,636,795,359
-Vrl logistics,INE366I01010,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,28,1,339,-3477,127
-Mahindra holidays resorts,INE998I01010,5,2,3,60,02-Jan-2018,193,Buy,Small Cap,31,1,312,1087,117
-Mahindra mahindra,INE101A01026,5,4,1,20,28-Dec-2017,198,Buy,Large Cap,0,0,0,0,0
-Future lifestyle fashions,INE452O01016,2,2,0,0,01-Feb-2018,163,Buy,Small Cap,24,0,413,0,108
+Ti financial holdings,INE149A01033,2,3,-1,-50,03-Jul-2018,33,Buy,Mid Cap,20,1,636,795,359
+Vrl logistics,INE366I01010,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,28,1,339,-3477,127
+Mahindra holidays resorts,INE998I01010,5,2,3,60,02-Jan-2018,215,Buy,Small Cap,31,1,312,1087,117
+Mahindra mahindra,INE101A01026,10,4,6,60,28-Dec-2017,220,Buy,Large Cap,0,0,0,0,0
+Future lifestyle fashions,INE452O01016,2,2,0,0,01-Feb-2018,185,Buy,Small Cap,24,0,413,0,108
 Sun tv network,INE424H01027,0,0,0,0,,0,,Large Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Mahindra mahindra,INE101A01026,0,4,-4,0,28-Dec-2017,198,Buy,Large Cap,0,0,0,0,0
+Mahindra mahindra,INE101A01026,0,4,-4,0,28-Dec-2017,220,Buy,Large Cap,0,0,0,0,0
 Container corporation of,INE111A01017,3,0,3,100,,0,,-,0,0,0,0,0
-Asahi glass,INE439A01020,2,3,-1,-50,06-Dec-2017,220,Buy,Small Cap,23,0,336,0,65
--,,2,0,2,100,,0,,-,0,0,0,0,0
-Shree renuka sugars,INE087H01022,2,1,1,50,28-Jun-2018,16,Buy,Micro Cap,0,0,0,0,0
-Aditya birla fashion retail,INE647O01011,2,2,0,0,04-Apr-2018,101,Buy,Mid Cap,0,0,0,0,0
+Asahi glass,INE439A01020,2,3,-1,-50,06-Dec-2017,242,Buy,Small Cap,23,0,336,0,65
+-,,0,0,0,0,,0,,-,0,0,0,0,0
+Shree renuka sugars,INE087H01022,2,1,1,50,28-Jun-2018,38,Buy,Micro Cap,0,0,0,0,0
+Aditya birla fashion retail,INE647O01011,2,2,0,0,04-Apr-2018,123,Buy,Mid Cap,0,0,0,0,0
 Iifl holdings,INE530B01024,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
 Mcleod russel,INE942G01012,0,0,0,0,,0,,Micro Cap,0,0,0,0,0
-Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,284,Buy,Large Cap,21,0,665,0,132
+Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,306,Buy,Large Cap,21,0,665,0,132
 La opala rg,INE059D01020,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Indian oil corporation,INE242A01010,5,2,3,60,23-Mar-2018,113,Buy,Large Cap,0,0,0,0,0
-Basf,INE373A01013,2,3,-1,-50,04-Apr-2018,101,Buy,Small Cap,22,0,1904,0,632
-Eveready industries,INE128A01029,2,2,0,0,01-Nov-2017,255,Buy,Micro Cap,16,0,224,0,90
+Indian oil corporation,INE242A01010,5,2,3,60,23-Mar-2018,135,Buy,Large Cap,0,0,0,0,0
+Basf,INE373A01013,2,3,-1,-50,04-Apr-2018,123,Buy,Small Cap,22,0,1904,0,632
+Eveready industries,INE128A01029,2,2,0,0,01-Nov-2017,277,Buy,Micro Cap,16,0,224,0,90
 Ge power,INE878A01011,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,11,Buy,Large Cap,29,0,387,344,183
-Godrej consumer products,INE102D01028,5,2,3,60,03-Jul-2018,11,Buy,Large Cap,18,0,606,2774,219
-Sundaram clayton,INE105A01035,0,0,0,0,,0,,Small Cap,0,0,0,0,0
+Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,33,Buy,Large Cap,29,0,387,344,183
+Godrej consumer products,INE102D01028,5,2,3,60,03-Jul-2018,33,Buy,Large Cap,18,0,606,2774,219
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Supreme industries,INE195A01028,2,2,0,0,04-Apr-2018,101,Buy,Mid Cap,30,0,1102,2160,338
+-,,0,0,0,0,,0,,-,0,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Ashok leyland,INE208A01029,0,0,0,0,,0,,Large Cap,0,0,0,0,0
 Aia engineering,INE212H01026,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
-Hindustan unilever,INE030A01027,10,2,8,80,04-Apr-2018,101,Buy,Large Cap,0,0,0,0,0
-Icici prudential life insurance company,INE726G01019,5,2,3,60,01-Nov-2017,255,Buy,Large Cap,0,0,0,0,0
-Crompton greaves consumer electricals,INE299U01018,2,1,1,50,28-Nov-2017,228,Buy,Mid Cap,0,0,0,0,0
+Finolex industries,INE183A01016,0,0,0,0,,0,,Small Cap,0,0,0,0,0
+Hindustan unilever,INE030A01027,20,2,18,90,04-Apr-2018,123,Buy,Large Cap,0,0,0,0,0
+Icici prudential life insurance company,INE726G01019,5,2,3,60,01-Nov-2017,277,Buy,Large Cap,0,0,0,0,0
+Crompton greaves consumer electricals,INE299U01018,2,1,1,50,28-Nov-2017,250,Buy,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Cochin shipyard,INE704P01017,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Dabur,INE016A01026,5,2,3,60,02-Jan-2018,193,Buy,Large Cap,30,0,377,476,75
+Dabur,INE016A01026,5,2,3,60,02-Jan-2018,215,Buy,Large Cap,30,0,377,476,75
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Rural electrification corporation,INE020B01018,5,5,0,0,01-Nov-2017,255,Buy,Mid Cap,0,0,0,0,0
+Rural electrification corporation,INE020B01018,5,5,0,0,01-Nov-2017,277,Buy,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Schneider electric infrastructure,INE839M01018,0,0,0,0,,0,,Micro Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Hindustan construction co,INE549A01026,0,0,0,0,,0,,Micro Cap,0,0,0,0,0
-Future retail,INE752P01024,2,2,0,0,01-Feb-2018,163,Buy,Mid Cap,12,0,558,0,22
+Future retail,INE752P01024,2,2,0,0,01-Feb-2018,185,Buy,Mid Cap,12,0,558,0,22
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Steel authority of,INE114A01011,0,0,0,0,29-Dec-2017,197,Sell,Large Cap,0,0,0,0,0
+Steel authority of,INE114A01011,0,0,0,0,29-Dec-2017,219,Sell,Large Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Bajaj finance,INE296A01024,0,0,0,0,,0,,Large Cap,0,0,0,0,0
 Gulf oil lubricants,INE635Q01029,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Yes bank,INE528G01027,2,0,2,100,,0,,Large Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Godrej industries,INE233A01035,3,1,2,67,16-Oct-2017,271,Buy,Mid Cap,0,0,0,0,0
-Icici lombard general insurance company,INE765G01017,5,3,2,40,03-Jul-2018,11,Buy,Large Cap,16,0,703,0,208
+Godrej industries,INE233A01035,3,1,2,67,16-Oct-2017,293,Buy,Mid Cap,0,0,0,0,0
+Icici lombard general insurance company,INE765G01017,5,3,2,40,03-Jul-2018,33,Buy,Large Cap,16,0,703,0,208
 Bajaj electricals,INE193E01025,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Cipla,INE059A01026,5,1,4,80,02-Jan-2018,193,Buy,Large Cap,28,0,627,-1920,262
+Cipla,INE059A01026,5,1,4,80,02-Jan-2018,215,Buy,Large Cap,28,0,627,-1920,262
+Sundaram clayton,INE105A01035,0,0,0,0,,0,,Small Cap,0,0,0,0,0
 -,,5,0,5,100,,0,,-,0,0,0,0,0
 Bharat forge,INE465A01025,2,0,2,100,,0,,Large Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Blue dart express,INE233B01017,4,4,0,0,30-May-2017,410,Buy,Small Cap,27,0,3609,21623,614
-Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,284,Buy,Large Cap,21,0,665,0,132
-Jubilant foodworks,INE797F01012,2,3,-1,-50,03-Jul-2018,11,Buy,Mid Cap,22,0,1417,-3338,168
+Blue dart express,INE233B01017,4,4,0,0,30-May-2017,432,Buy,Small Cap,27,0,3609,21623,614
+Sbi life insurance company,INE123W01016,5,1,4,80,03-Oct-2017,306,Buy,Large Cap,21,0,665,0,132
+Jubilant foodworks,INE797F01012,2,3,-1,-50,03-Jul-2018,33,Buy,Mid Cap,22,0,1417,-3338,168
+-,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
-Power grid corporation of,INE752E01010,5,5,0,0,27-Feb-2017,502,Buy,Large Cap,0,0,0,0,0
-Mahindra mahindra financial services,INE774D01024,3,1,2,67,03-Oct-2017,284,Buy,Mid Cap,0,0,0,0,0
-Indian hotels co,INE053A01029,10,10,0,0,06-Dec-2017,220,Buy,Mid Cap,22,0,127,0,26
-Venkys,INE398A01010,2,2,0,0,22-Sep-2017,295,Buy,Small Cap,23,0,2327,1292,1286
+Power grid corporation of,INE752E01010,5,5,0,0,27-Feb-2017,524,Buy,Large Cap,0,0,0,0,0
+Mahindra mahindra financial services,INE774D01024,3,1,2,67,03-Oct-2017,306,Buy,Mid Cap,0,0,0,0,0
+Indian hotels co,INE053A01029,10,10,0,0,06-Dec-2017,242,Buy,Mid Cap,22,0,127,0,26
 -,,2,0,2,100,,0,,-,0,0,0,0,0
-Bayer cropscience /,INE462A01022,5,5,0,0,09-Jun-2017,400,Buy,Mid Cap,0,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0,0
+Bayer cropscience /,INE462A01022,5,5,0,0,09-Jun-2017,422,Buy,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Radico khaitan,INE944F01028,0,0,0,0,,0,,Small Cap,0,0,0,0,0
 Wabco,INE342J01019,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
-Johnson controls hitachi air conditioning,INE782A01015,2,2,0,0,17-Oct-2017,270,Buy,Small Cap,0,0,0,0,0
+Johnson controls hitachi air conditioning,INE782A01015,2,2,0,0,17-Oct-2017,292,Buy,Small Cap,0,0,0,0,0
 Endurance technologies,INE913H01037,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
 -,,5,0,5,100,,0,,-,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
@@ -194,113 +196,120 @@ Endurance technologies,INE913H01037,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
+-,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
-Power finance corporation,INE134E01011,5,2,3,60,01-Nov-2017,255,Buy,Mid Cap,0,0,0,0,0
+Power finance corporation,INE134E01011,5,2,3,60,01-Nov-2017,277,Buy,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Pi industries,INE603J01030,3,1,2,67,02-Feb-2018,162,Buy,Mid Cap,0,0,0,0,0
+Pi industries,INE603J01030,3,1,2,67,02-Feb-2018,184,Buy,Mid Cap,0,0,0,0,0
 United spirits,INE854D01016,10,0,10,100,,0,,-,17,0,629,-4093,77
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Ultratech cement,INE481G01011,10,12,-2,-20,25-Jan-2017,535,Buy,Large Cap,21,0,3936,-53665,1323
-Titan company,INE280A01028,5,4,1,20,04-Apr-2018,101,Buy,Large Cap,29,0,838,2412,130
+Minda industries,INE405E01023,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
+Ultratech cement,INE481G01011,10,12,-2,-20,25-Jan-2017,557,Buy,Large Cap,21,0,3936,-53665,1323
+Titan company,INE280A01028,5,4,1,20,04-Apr-2018,123,Buy,Large Cap,29,0,838,2412,130
+Astral poly technik,INE006I01046,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
 Apar industries,INE372A01015,0,0,0,0,,0,,Small Cap,0,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0,0
 Indusind bank,INE095A01012,2,0,2,100,,0,,Large Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,101,Buy,Large Cap,0,0,0,0,0
-Icra,INE725G01011,5,4,1,20,22-Jun-2017,387,Buy,Small Cap,31,0,3421,5366,1181
+Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,123,Buy,Large Cap,0,0,0,0,0
+Icra,INE725G01011,5,4,1,20,22-Jun-2017,409,Buy,Small Cap,31,0,3421,5366,1181
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
-Prestige estates projects,INE811K01011,5,2,3,60,03-Jul-2018,11,Buy,Mid Cap,18,0,275,163,176
-Hindustan petroleum corporation,INE094A01015,3,3,0,0,02-Jan-2018,193,Buy,Large Cap,0,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0,0
+Prestige estates projects,INE811K01011,5,2,3,60,03-Jul-2018,33,Buy,Mid Cap,18,0,275,163,176
+Hindustan petroleum corporation,INE094A01015,3,3,0,0,02-Jan-2018,215,Buy,Large Cap,0,0,0,0,0
 Dewan housing finance corporation,INE202B01012,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
-Exide industries,INE302A01020,1,1,0,0,16-Jun-2017,393,Buy,Mid Cap,28,0,261,471,108
-Adani transmission,INE931S01010,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
+Exide industries,INE302A01020,1,1,0,0,16-Jun-2017,415,Buy,Mid Cap,28,0,261,471,108
+Adani transmission,INE931S01010,2,0,2,100,,0,,Mid Cap,0,0,0,0,0
 Great eastern shipping co,INE017A01032,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Adani ports special economic zone,INE742F01042,5,2,3,60,03-Jul-2018,11,Buy,Large Cap,18,0,362,198,202
+Adani ports special economic zone,INE742F01042,5,2,3,60,03-Jul-2018,33,Buy,Large Cap,18,0,362,198,202
 Tvs srichakra,INE421C01016,0,0,0,0,,0,,Micro Cap,0,0,0,0,0
 Niit technologies,INE591G01017,0,0,0,0,,0,,Small Cap,0,0,0,0,0
-Bata,INE176A01028,5,3,2,40,06-Dec-2017,220,Buy,Small Cap,29,0,835,2461,212
+Bata,INE176A01028,5,3,2,40,06-Dec-2017,242,Buy,Small Cap,29,0,835,2461,212
 Ge t&d,INE200A01026,0,0,0,0,,0,,Small Cap,0,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0,0
-Emami,INE548C01032,5,2,3,60,29-Jun-2018,15,Buy,Mid Cap,27,0,521,981,83
+Emami,INE548C01032,5,2,3,60,29-Jun-2018,37,Buy,Mid Cap,27,0,521,981,83
 Aditya birla capital,INE674K01013,2,0,2,100,,0,,Large Cap,0,0,0,0,0
 Schaeffler,INE513A01014,0,0,0,0,,0,,Small Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 Tata investment corporation,INE672A01018,2,0,2,100,,0,,Small Cap,0,0,0,0,0
-India tourism development corporation,INE353K01014,2,0,2,100,27-Dec-2017,199,Sell,Small Cap,0,0,0,0,0
+India tourism development corporation,INE353K01014,2,0,2,100,27-Dec-2017,221,Sell,Small Cap,0,0,0,0,0
 Raymond,INE301A01014,0,0,0,0,,0,,Small Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Central depository services,INE736A01011,2,2,0,0,03-Jul-2018,11,Buy,Small Cap,0,0,0,0,0
+Supreme industries,INE195A01028,2,2,0,0,04-Apr-2018,123,Buy,Mid Cap,30,0,1102,2160,338
+Central depository services,INE736A01011,2,2,0,0,03-Jul-2018,33,Buy,Small Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
 Sml isuzu,INE294B01019,0,0,0,0,,0,,Nano Cap,0,0,0,0,0
-Kotak mahindra bank,INE237A01028,2,2,0,0,04-Apr-2018,101,Buy,Large Cap,0,0,0,0,0
+Kotak mahindra bank,INE237A01028,2,2,0,0,04-Apr-2018,123,Buy,Large Cap,0,0,0,0,0
+-,,2,0,2,100,,0,,-,0,0,0,0,0
+Yes bank,INE528G01027,2,0,2,100,,0,,Large Cap,0,0,0,0,0
+Venkys,INE398A01010,2,2,0,0,22-Sep-2017,317,Buy,Small Cap,23,0,2327,1292,1286
+-,,0,0,0,0,,0,,-,0,0,0,0,0
+L&t finance holdings,INE498L01015,2,1,1,50,28-May-2018,69,Buy,Large Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-L&t finance holdings,INE498L01015,2,1,1,50,28-May-2018,47,Buy,Large Cap,0,0,0,0,0
--,,2,0,2,100,,0,,-,0,0,0,0,0
+Larsen toubro infotech,INE214T01019,2,2,0,0,28-May-2018,69,Buy,Mid Cap,0,0,0,0,0
 -,,0,0,0,0,,0,,-,0,0,0,0,0
-Larsen toubro infotech,INE214T01019,2,2,0,0,28-May-2018,47,Buy,Mid Cap,0,0,0,0,0
-Minda industries,INE405E01023,0,0,0,0,,0,,Mid Cap,0,0,0,0,0
--,,0,0,0,0,,0,,-,0,0,0,0,0
-National aluminium co,INE139A01034,2,3,-1,-50,01-Sep-2017,316,Buy,Mid Cap,0,0,0,0,0
-Procter gamble hygiene health care,INE179A01014,6,8,-2,-33,09-Jun-2017,400,Buy,Large Cap,0,0,0,0,0
-Glaxosmithkline consumer healthcare,INE264A01014,5,5,0,0,19-Sep-2017,298,Buy,Mid Cap,0,0,0,0,0
+National aluminium co,INE139A01034,2,3,-1,-50,01-Sep-2017,338,Buy,Mid Cap,0,0,0,0,0
+Procter gamble hygiene health care,INE179A01014,6,8,-2,-33,09-Jun-2017,422,Buy,Large Cap,0,0,0,0,0
+Glaxosmithkline consumer healthcare,INE264A01014,5,5,0,0,19-Sep-2017,320,Buy,Mid Cap,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
 -,,2,0,2,100,,0,,-,0,0,0,0,0
-Ttk prestige,INE690A01010,5,6,-1,-20,18-Jul-2017,361,Buy,Small Cap,26,0,5845,0,2117
+Ttk prestige,INE690A01010,5,6,-1,-20,18-Jul-2017,383,Buy,Small Cap,26,0,5845,0,2117
 National fertilizers,INE870D01012,0,0,0,0,,0,,Micro Cap,0,0,0,0,0
 -,,5,0,5,100,,0,,-,0,0,0,0,0
-Havells,INE176B01034,2,3,-1,-50,03-Jul-2018,11,Buy,Large Cap,28,-1,546,674,124
-Asian paints,INE021A01026,10,8,2,20,06-Dec-2017,220,Buy,Large Cap,28,-1,1321,1655,208
-Bajaj finserv,INE918I01018,3,6,-3,-100,19-Sep-2017,298,Buy,Large Cap,10,-1,6069,8764,2126
-Ifb industries,INE559A01017,2,1,1,50,28-Nov-2017,228,Buy,Small Cap,19,-1,1191,1939,251
-Nbcc,INE095N01031,5,2,3,60,04-Apr-2018,101,Buy,Mid Cap,23,-1,69,80,22
-Tata consultancy services,INE467B01029,10,17,-7,-70,05-Jun-2018,39,Buy,Large Cap,30,-1,1880,2304,582
-Zee entertainment enterprises,INE256A01028,5,6,-1,-20,06-Dec-2017,220,Buy,Large Cap,26,-1,552,647,163
-Honeywell automation,INE671A01010,10,0,10,100,08-Nov-2017,248,Sell,Mid Cap,22,-1,18358,30373,3207
-United breweries,INE686F01025,5,2,3,60,01-Nov-2017,255,Buy,Mid Cap,24,-1,1144,1733,186
-Sanofi,INE058A01010,2,4,-2,-100,19-Sep-2017,298,Buy,Mid Cap,31,-1,5209,6366,1766
-Lupin,INE326A01037,5,9,-4,-80,28-Feb-2017,501,Buy,Large Cap,22,-2,923,101,198
-Voltas,INE226A01021,2,2,0,0,01-Nov-2017,255,Buy,Mid Cap,28,-2,517,570,215
-Balkrishna industries,INE787D01026,2,2,0,0,02-Jan-2018,193,Buy,Mid Cap,29,-2,1149,1266,427
-Somany ceramics,INE355A01028,2,1,1,50,13-Nov-2017,243,Buy,Micro Cap,24,-2,475,257,216
-Maruti suzuki,INE585B01010,5,11,-6,-120,09-Jun-2017,400,Buy,Large Cap,29,-2,9347,4739,2891
-Godrej agrovet,INE850D01014,2,1,1,50,16-Oct-2017,271,Buy,Mid Cap,26,-2,609,621,113
-Monsanto,INE274B01011,5,5,0,0,04-Apr-2018,101,Buy,Small Cap,30,-2,2863,1797,929
-Kajaria ceramics,INE217B01036,2,2,0,0,01-Nov-2017,255,Buy,Small Cap,27,-2,460,289,173
-Cera sanitaryware,INE739E01017,2,3,-1,-50,14-Jun-2017,395,Buy,Small Cap,25,-3,2722,1692,911
-Mrf,INE883A01011,60,0,60,100,08-Nov-2017,248,Sell,Large Cap,21,-3,75477,36530,36296
-Tvs motor company,INE494B01023,5,3,2,40,03-Jul-2018,11,Buy,Large Cap,27,-3,571,616,142
-Motherson sumi systems,INE775A01035,2,2,0,0,06-Dec-2017,220,Buy,Large Cap,25,-4,294,102,110
-Amara raja batteries,INE885A01032,1,2,-1,-100,03-Jul-2018,11,Buy,Mid Cap,27,-4,773,731,334
-Shree cement,INE070A01015,18,0,18,100,08-Nov-2017,248,Sell,Large Cap,31,-4,16434,16180,4827
-Eicher motors,INE066A01013,30,0,30,100,08-Nov-2017,248,Sell,Large Cap,27,-4,27888,10634,6574
-Gillette,INE322A01010,2,5,-3,-150,12-Jun-2017,397,Buy,Mid Cap,30,-4,6544,3825,585
-Aegis logistics,INE208C01025,2,1,1,50,02-Feb-2018,162,Buy,Small Cap,27,-4,214,78,58
-Varun beverages,INE200M01013,5,2,3,60,02-Jan-2018,193,Buy,Mid Cap,25,-4,753,227,166
-Quess corp,INE615P01015,3,1,2,67,01-Feb-2018,163,Buy,Mid Cap,19,-4,1106,225,197
-Kansai nerolac paints,INE531A01024,5,2,3,60,02-Jan-2018,193,Buy,Mid Cap,27,-5,473,399,112
-Hdfc bank,INE040A01026,10,15,-5,-50,14-Mar-2017,487,Buy,Large Cap,17,-5,2124,1614,785
-Sun pharmaceutical industries,INE044A01036,5,11,-6,-120,10-Mar-2017,491,Buy,Large Cap,26,-5,567,303,200
-Trent,INE849A01020,2,2,0,0,04-Apr-2018,101,Buy,Mid Cap,28,-5,310,305,63
-Marico,INE196A01026,5,2,3,60,02-Jan-2018,193,Buy,Large Cap,30,-5,346,290,59
-Berger paints,INE463A01038,3,2,1,33,01-Feb-2018,163,Buy,Mid Cap,30,-5,290,247,51
-Abbott,INE358A01014,2,4,-2,-100,19-Sep-2017,298,Buy,Mid Cap,30,-6,7169,4808,1840
-Whirlpool of,INE716A01013,2,3,-1,-50,04-Apr-2018,101,Buy,Mid Cap,23,-6,1500,1208,300
-Pidilite industries,INE318A01026,2,3,-1,-50,04-Apr-2018,101,Buy,Large Cap,31,-7,1063,763,193
-3m,INE470A01017,15,0,15,100,08-Nov-2017,248,Sell,Mid Cap,22,-7,19667,10500,2908
-Page industries,INE761H01022,15,0,15,100,08-Nov-2017,248,Sell,Mid Cap,31,-7,28007,18517,2522
-Dr lal path labs,INE600L01024,2,2,0,0,03-Jul-2018,11,Buy,Small Cap,29,-7,920,524,215
-Century plyboards,INE348B01021,3,2,1,33,01-Feb-2018,163,Buy,Small Cap,27,-7,244,183,79
-Narayana hrudayalaya,INE410P01011,3,2,1,33,02-Jan-2018,193,Buy,Small Cap,18,-7,236,144,53
-Abb,INE117A01022,5,3,2,40,02-Jan-2018,193,Buy,Mid Cap,27,-7,1182,742,284
-V guard industries,INE951I01027,2,1,1,50,19-Apr-2018,86,Buy,Small Cap,26,-7,189,125,36
-Relaxo footwears,INE131B01039,5,2,3,60,02-Jan-2018,193,Buy,Small Cap,24,-7,704,449,138
-Godrej properties,INE484J01027,2,2,0,0,03-Jul-2018,11,Buy,Mid Cap,20,-7,706,529,150
-Avenue supermarts,INE192R01011,2,1,1,50,16-Oct-2017,271,Buy,Large Cap,21,-8,1546,477,145
-Pvr,INE191H01014,5,3,2,40,02-Jan-2018,193,Buy,Small Cap,23,-8,1377,656,374
-Sheela foam,INE916U01025,2,2,0,0,02-Feb-2018,162,Buy,Small Cap,21,-8,1493,683,275
-Britannia industries,INE216A01022,5,9,-4,-80,04-Apr-2018,101,Buy,Large Cap,30,-8,6307,2695,761
+Havells,INE176B01034,2,3,-1,-50,03-Jul-2018,33,Buy,Large Cap,28,-1,546,674,124
+Asian paints,INE021A01026,10,8,2,20,06-Dec-2017,242,Buy,Large Cap,28,-1,1321,1655,208
+Bajaj finserv,INE918I01018,3,6,-3,-100,19-Sep-2017,320,Buy,Large Cap,10,-1,6069,8764,2126
+Ifb industries,INE559A01017,2,1,1,50,28-Nov-2017,250,Buy,Small Cap,19,-1,1191,1939,251
+Nbcc,INE095N01031,5,2,3,60,04-Apr-2018,123,Buy,Mid Cap,23,-1,69,80,22
+Tata consultancy services,INE467B01029,20,17,3,15,05-Jun-2018,61,Buy,Large Cap,30,-1,1880,2304,582
+Zee entertainment enterprises,INE256A01028,5,6,-1,-20,06-Dec-2017,242,Buy,Large Cap,26,-1,552,647,163
+Honeywell automation,INE671A01010,10,0,10,100,08-Nov-2017,270,Sell,Mid Cap,22,-1,18358,30373,3207
+United breweries,INE686F01025,5,2,3,60,01-Nov-2017,277,Buy,Mid Cap,24,-1,1144,1733,186
+Sanofi,INE058A01010,2,4,-2,-100,19-Sep-2017,320,Buy,Mid Cap,31,-1,5209,6366,1766
+Lupin,INE326A01037,5,9,-4,-80,28-Feb-2017,523,Buy,Large Cap,22,-2,923,101,198
+Voltas,INE226A01021,2,2,0,0,01-Nov-2017,277,Buy,Mid Cap,28,-2,517,570,215
+Balkrishna industries,INE787D01026,2,2,0,0,02-Jan-2018,215,Buy,Mid Cap,29,-2,1149,1266,427
+Somany ceramics,INE355A01028,2,1,1,50,13-Nov-2017,265,Buy,Micro Cap,24,-2,475,257,216
+Maruti suzuki,INE585B01010,20,11,9,45,09-Jun-2017,422,Buy,Large Cap,29,-2,9347,4739,2891
+Godrej agrovet,INE850D01014,2,1,1,50,16-Oct-2017,293,Buy,Mid Cap,26,-2,609,621,113
+Monsanto,INE274B01011,5,5,0,0,04-Apr-2018,123,Buy,Small Cap,30,-2,2863,1797,929
+Kajaria ceramics,INE217B01036,2,2,0,0,01-Nov-2017,277,Buy,Small Cap,27,-2,460,289,173
+Cera sanitaryware,INE739E01017,2,3,-1,-50,14-Jun-2017,417,Buy,Small Cap,25,-3,2722,1692,911
+Mrf,INE883A01011,60,0,60,100,08-Nov-2017,270,Sell,Large Cap,21,-3,75477,36530,36296
+Tvs motor company,INE494B01023,5,3,2,40,03-Jul-2018,33,Buy,Large Cap,27,-3,571,616,142
+Motherson sumi systems,INE775A01035,2,2,0,0,06-Dec-2017,242,Buy,Large Cap,25,-4,294,102,110
+Amara raja batteries,INE885A01032,1,2,-1,-100,03-Jul-2018,33,Buy,Mid Cap,27,-4,773,731,334
+Shree cement,INE070A01015,18,0,18,100,08-Nov-2017,270,Sell,Large Cap,31,-4,16434,16180,4827
+Eicher motors,INE066A01013,30,0,30,100,08-Nov-2017,270,Sell,Large Cap,27,-4,27888,10634,6574
+Gillette,INE322A01010,2,5,-3,-150,12-Jun-2017,419,Buy,Mid Cap,30,-4,6544,3825,585
+Aegis logistics,INE208C01025,2,1,1,50,02-Feb-2018,184,Buy,Small Cap,27,-4,214,78,58
+Varun beverages,INE200M01013,5,2,3,60,02-Jan-2018,215,Buy,Mid Cap,25,-4,753,227,166
+Quess corp,INE615P01015,3,1,2,67,01-Feb-2018,185,Buy,Mid Cap,19,-4,1106,225,197
+Kansai nerolac paints,INE531A01024,5,2,3,60,02-Jan-2018,215,Buy,Mid Cap,27,-5,473,399,112
+Hdfc bank,INE040A01026,20,15,5,25,14-Mar-2017,509,Buy,Large Cap,17,-5,2124,1614,785
+Sun pharmaceutical industries,INE044A01036,10,11,-1,-10,10-Mar-2017,513,Buy,Large Cap,26,-5,567,303,200
+Trent,INE849A01020,2,2,0,0,04-Apr-2018,123,Buy,Mid Cap,28,-5,310,305,63
+Marico,INE196A01026,5,2,3,60,02-Jan-2018,215,Buy,Large Cap,30,-5,346,290,59
+Berger paints,INE463A01038,3,2,1,33,01-Feb-2018,185,Buy,Mid Cap,30,-5,290,247,51
+Abbott,INE358A01014,2,4,-2,-100,19-Sep-2017,320,Buy,Mid Cap,30,-6,7169,4808,1840
+Whirlpool of,INE716A01013,2,3,-1,-50,04-Apr-2018,123,Buy,Mid Cap,23,-6,1500,1208,300
+Pidilite industries,INE318A01026,2,3,-1,-50,04-Apr-2018,123,Buy,Large Cap,31,-7,1063,763,193
+3m,INE470A01017,15,0,15,100,08-Nov-2017,270,Sell,Mid Cap,22,-7,19667,10500,2908
+Page industries,INE761H01022,15,0,15,100,08-Nov-2017,270,Sell,Mid Cap,31,-7,28007,18517,2522
+Dr lal path labs,INE600L01024,2,2,0,0,03-Jul-2018,33,Buy,Small Cap,29,-7,920,524,215
+Century plyboards,INE348B01021,3,2,1,33,01-Feb-2018,185,Buy,Small Cap,27,-7,244,183,79
+Narayana hrudayalaya,INE410P01011,3,2,1,33,02-Jan-2018,215,Buy,Small Cap,18,-7,236,144,53
+Abb,INE117A01022,5,3,2,40,02-Jan-2018,215,Buy,Mid Cap,27,-7,1182,742,284
+V guard industries,INE951I01027,2,1,1,50,19-Apr-2018,108,Buy,Small Cap,26,-7,189,125,36
+Relaxo footwears,INE131B01039,5,2,3,60,02-Jan-2018,215,Buy,Small Cap,24,-7,704,449,138
+Godrej properties,INE484J01027,2,2,0,0,03-Jul-2018,33,Buy,Mid Cap,20,-7,706,529,150
+Avenue supermarts,INE192R01011,2,1,1,50,16-Oct-2017,293,Buy,Large Cap,21,-8,1546,477,145
+Pvr,INE191H01014,5,3,2,40,02-Jan-2018,215,Buy,Small Cap,23,-8,1377,656,374
+Sheela foam,INE916U01025,2,2,0,0,02-Feb-2018,184,Buy,Small Cap,21,-8,1493,683,275
+Britannia industries,INE216A01022,5,9,-4,-80,04-Apr-2018,123,Buy,Large Cap,30,-8,6307,2695,761
