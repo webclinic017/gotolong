@@ -71,7 +71,7 @@ Media & Entertainment,1,Movies (Theater Screens),,,,PVR LIMITED,
 ,1,DTH,,,,DISH TV,
 ,1,TV (General Entertainment),,,,ZEE ENTERTAINMENT,
 ,0,TV (News & Business),,,,,
-Information Technology,4,IT Services  - 1,TATA CONSULTANCY SERVICES,INFOSYS,,HCL TECHNOLOGIES,WIPRO
+Information Technology,4,IT Services  - 1,TCS,INFOSYS,,HCL TECHNOLOGIES,WIPRO
 ,2,IT Services - 2,,,,TECH MAHINDRA,LTI
 ,2,IT Products,,,,INFO EDGE,LTTS
 Metals,2,Aluminium,,,HINDALCO,,NATIONAL ALUMINIUM
@@ -80,7 +80,7 @@ Metals,2,Aluminium,,,HINDALCO,,NATIONAL ALUMINIUM
 ,1,Iron,,,,NMDC,
 ,1,Diversified,,VEDANTA,,,
 ,1,Coal,,,,COAL INDIA,
-Fitness,1,Gym,,,,TALWALKARS BETTER VALUE FITNES,
+Fitness,1,Gym,,,,TALWALKARS BETTER VALUE,
 Retail,4,Large format,,Avenue Supermarts,TRENT LTD,SHOPPERS STOP,FUTURE RETAIL
 Textile -1 ,3,Brand Ownership,,,ADITYA BIRLA FASHION & Retail,FUTURE LIFESTYLE FASHIONS,ARVIND Limited
 Textile - 2,1,,,,,,PAGE INDUSTRIES
@@ -92,7 +92,7 @@ Plastic & Packaging Products,3,"home, retail, agri",,,SUPREME INDUSTRIES,NILKAMA
 Batteries (Dry cell),1,Toy battery,,,,,EVEREADY INDUSTRIES
 Pump,1,water pump,,,,,KSB PUMPS
 Hospitals,3,Multi-city players,,,APOLLO HOSPITALS,FORTIS HEALTHCARE,NARAYANA HRUDAYALAYA
-Pharma,4,Domestic - 1,,SUN PHARMACEUTICAL,DR REDDY'S LABORATORIES,CIPLA,GLENMARK PHARMACEUTICALS
+Pharma,4,Domestic - 1,,SUN PHARMACEUTICAL,DR REDDY'S LAB,CIPLA,GLENMARK PHARMACEUTICALS
 ,3,Domestic -2,,,LUPIN LIMITED,CADILA HEALTHCARE,AUROBINDO PHARMA
 ,3,International,,,ABBOTT INDIA,SANOFI INDIA,PFIZER
 ,1,Diagnostic,,,,DR. LAL PATHLABS,
@@ -108,7 +108,7 @@ Logistics,1,Bus,,,,,VRL LOGISTICS
 ,1,Courier,,,,BLUE DART EXPRESS,
 ,1,Railway (cargo),,,,CONTAINER CORPORATION,
 ,2,Ship (Vessels),,,,SHIPPING CORP OF INDIA,AllCargo Logistics
-,1,Ports,,,,ADANI PORT AND SPECIAL ECONO,
+,1,Ports,,,,ADANI PORT AND SEZ,
 ,1,Liquid Transportation,,,,,Aegis Logistics
 ,1,Automobile Transportation,,,,,Mahindra Logistics
 ,1,Retail transportation,,,,,Future Supply Chain Solution
@@ -117,13 +117,13 @@ Telecom,2,Telcom,BHARTI AIRTEL,Vodafone Idea,,,
 Diversified,3,Multiple sectors,,,PIRAMAL ENTERPRISES,ADANI ENTERPRISES,3M INDIA LIMITED
 ,2,Holding companies,,,,GRASIM,GODREJ INDUSTRIES
 Defense,0,Aerospace,,,,,
-,1,"Defense Arms & Equipments",,,,BHARAT ELECTRONICS LTD,
+,1,Defense Arms & Equipments,,,,BHARAT ELECTRONICS,
 Abrasives,2,Abrasives and related,,,,Carborundum Universal,Grindwell Norton
 Sugar,3,Sugar Mills,,,EID PARRY,Balrampur Chinni Mills,Shree Renuka Sugars
 Rice,1,Rice mills etc (FMCG),,,,,KRBL
 Feed,3,Animal feed and meat (FMCG),,,AVANTI FEEDS,Godrej AgroVet,VENKYS INDIA
 FMCG Companies (cover all),3,MNC,HINDUSTAN UNILEVER,,NESTLE INDIA,,GLAXOSMITHKLINE CONSUMER HEALT
-,3,Domestic - 1,,PROCTER & GAMBLE HYGIENE & HEALTH,COLGATE-PALMOLIVE ,GILLETTE INDIA,
+,3,Domestic - 1,,PROCTER & GAMBLE,COLGATE-PALMOLIVE ,GILLETTE INDIA,
 ,3,Domestic - 2,,,DABUR INDIA LTD,GODREJ CONSUMER PRODUCTS,Future Consumer
 ,3,Domestic - 3,,BRITANNIA INDUSTRIES,,MARICO,EMAMI
 ,3,Domestic - 4,,,TATA GLOBAL BEVERAGES,TATA COFFEE,VARUN BEVERAGES
