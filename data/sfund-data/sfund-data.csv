@@ -109,7 +109,7 @@ Logistics,1,Bus,,,,,VRL LOGISTICS
 ,1,Railway (cargo),,,,CONTAINER CORPORATION,
 ,2,Ship (Vessels),,,,SHIPPING CORP OF INDIA,AllCargo Logistics
 ,1,Ports,,,,ADANI PORT AND SPECIAL ECONO,
-,1,Liquid (Petroleum & Gas) Transportation,,,,,Aegis Logistics
+,1,Liquid Transportation,,,,,Aegis Logistics
 ,1,Automobile Transportation,,,,,Mahindra Logistics
 ,1,Retail transportation,,,,,Future Supply Chain Solution
 Telecom,2,Telcom,BHARTI AIRTEL,Vodafone Idea,,,
@@ -117,7 +117,7 @@ Telecom,2,Telcom,BHARTI AIRTEL,Vodafone Idea,,,
 Diversified,3,Multiple sectors,,,PIRAMAL ENTERPRISES,ADANI ENTERPRISES,3M INDIA LIMITED
 ,2,Holding companies,,,,GRASIM,GODREJ INDUSTRIES
 Defense,0,Aerospace,,,,,
-,1,"Defense Arms & Equipments (missile, radar etc)",,,,BHARAT ELECTRONICS LTD,
+,1,"Defense Arms & Equipments",,,,BHARAT ELECTRONICS LTD,
 Abrasives,2,Abrasives and related,,,,Carborundum Universal,Grindwell Norton
 Sugar,3,Sugar Mills,,,EID PARRY,Balrampur Chinni Mills,Shree Renuka Sugars
 Rice,1,Rice mills etc (FMCG),,,,,KRBL
