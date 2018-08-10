@@ -3,10 +3,10 @@
 DEBUG_LEVEL=0
 
 IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
-IN_FILE_PLAN=$PROJ_DATA_LOC/plan-data/plan-data.csv
-OUT_FILE_1=$PROJ_REPORTS_LOC/plan-reports/plan-reports-phase-1.csv
-OUT_FILE_2=$PROJ_REPORTS_LOC/plan-reports/plan-reports-phase-2.csv
-OUT_FILE_3=$PROJ_REPORTS_LOC/plan-reports/plan-reports-phase-3.csv
+IN_FILE_PLAN=$PROJ_PROFILE_DATA_LOC/plan-data/plan-data.csv
+OUT_FILE_1=$PROJ_PROFILE_REPORTS_LOC/plan-reports/plan-reports-phase-1.csv
+OUT_FILE_2=$PROJ_PROFILE_REPORTS_LOC/plan-reports/plan-reports-phase-2.csv
+OUT_FILE_3=$PROJ_PROFILE_REPORTS_LOC/plan-reports/plan-reports-phase-3.csv
 
 # phase 1
 grep -v -e ',Details'  ${IN_FILE_PLAN} > ${OUT_FILE_1}
