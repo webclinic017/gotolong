@@ -1,6 +1,8 @@
 To Do Items
-* Generate target companies list
-* Include Zerodha target data also apart from icici
+* Generate different target companies list for buy and sale.
+* Include Zerodha demat data also apart from icicidirect
+* Identify companies which have missing data or unable to fetch using ISIN, screener or mstar.
+* Add support for top 100 companies with maximum mutual funds holdings
 * Generate dividend paying companies list for last 3 years from moneycontrol
 * Identify stressed sectors (struggling with profits)
 * Identify companies to be dropped
