@@ -1,6 +1,20 @@
-# Indian-stock-market
+# In-Stock-Screener
 
-The tool uses plan data (stocks to be acquired) and existing holding (stocks already acquired) to generate Quarterly reports on stocks to be acquired in the quarter with 6-month delay (can be customized).
+An Indian Stock Screener can be used to identify stocks for buy and sale.
+
+The tool is depdendant on things like AMFI data to figure out cap (small, mid, large etc). To be automated for refresh every 6 month.
+The tool is also dependent on ISIN data from BSE/NSE. Already loaded. To be automated for refresh.
+The tool is also dependent on screener data for some interesting ratios. Trying to figure out how to load it at one shot for BSE/NSE 500 companies.
+The tool is also dependent on mstar (morning star) data. Yet to be integrated.
+
+The user has to provide following information.
+
+Currently, user has to prepare a plan-data sheet under profile/ directory : create .xls file and save it as .csv file.
+
+The default user-profile is surinder.
+
+The user also has to provide icidirect demat data (portfolio detailed summary).
+
 
 # AMFI Data
 The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
@@ -28,6 +42,34 @@ Fix discrepancy
   $ ./isin_invoke.sh
   
 Review the generated reports/isin-reports/\*.csv
+
+
+ # SCREENER Data
+ 
+ Create a watchlist of companies (from plan data) with interesting columns.
+ 
+ Download the screener data in data/screener-data/\*.csv
+ 
+ Generate screener reports using
+ 
+ $ cd src/screener
+ 
+ $ ./screener_invoke.sh
+ 
+ Review the generated reports/screener-reports/\*.csv files
+ 
+ NOTE: To be switched to Quandl or something similar.
+
+ # Morning Star Data
+
+ $ cd src/mstar
+ 
+ $ ./mstar_invoke.sh
+
+Review the generated reports/mstar-reports/\*.csv
+
+Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
+and financial strength (Strong, Moderate etc)
 
 # PLAN DATA
 
@@ -69,36 +111,7 @@ Fix any discrepancy by running following
  
  Review the generated reports/demat-reports/\*.csv files
  
- # SCREENER Data
- 
- Create a watchlist of companies (from plan data) with interesting columns.
- 
- Download the screener data in data/screener-data/\*.csv
- 
- Generate screener reports using
- 
- $ cd src/screener
- 
- $ ./screener_invoke.sh
- 
- Review the generated reports/screener-reports/\*.csv files
- 
- NOTE: To be switched to Quandl or something similar.
 
- # Morning Star Data
-
- $ cd src/mstar
- 
- $ ./mstar_invoke.sh
-
-Review the generated reports/mstar-reports/\*.csv
-
-Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
-and financial strength (Strong, Moderate etc)
-
- # BONUS share Data (To be modified for new framework)
- # SPLITS share data (to be coded)
- # DIVIDEND Data (To be modified)
 
  # TBD Data (To Be Done)
   
@@ -111,3 +124,8 @@ Execute following
    $ ./tbd-invoke.sh
 
 Review the generated files reports/tbd-reports/\*.csv
+
+
+# BONUS share Data (To be modified for new framework)
+# SPLITS share data (to be coded)
+# DIVIDEND Data (To be modified)
