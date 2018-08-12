@@ -96,7 +96,7 @@ Fix any discrepancy by running following
  
  $ ./plan_invoke.sh
 
-Review the generated profile/<default>/reports/plan-reports/\*.csv
+Review the generated profile/default/reports/plan-reports/\*.csv
 
 The summary lines shows distribution of large cap, mid cap and small cap.
 TBD : Include line for micro cap and nano cap.
@@ -112,7 +112,7 @@ Fix any discrepancy by running following
  
  $ ./demat_invoke.sh
  
- Review the generated profile/<default>/reports/demat-reports/\*.csv files
+ Review the generated profile/default/reports/demat-reports/\*.csv files
  
 
 
@@ -126,7 +126,7 @@ Execute following
    
    $ ./tbd-invoke.sh
 
-Review the generated files profile/<default>/reports/tbd-reports/\*.csv
+Review the generated files profile/default/reports/tbd-reports/\*.csv
 
 
 # BONUS share Data (To be modified for new framework)
