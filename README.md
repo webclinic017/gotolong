@@ -3,8 +3,11 @@
 An Indian Stock Screener can be used to identify stocks for buy and sale.
 
 The tool is depdendant on things like AMFI data to figure out cap (small, mid, large etc). To be automated for refresh every 6 month.
+
 The tool is also dependent on ISIN data from BSE/NSE. Already loaded. To be automated for refresh.
+
 The tool is also dependent on screener data for some interesting ratios. Trying to figure out how to load it at one shot for BSE/NSE 500 companies.
+
 The tool is also dependent on mstar (morning star) data. Yet to be integrated.
 
 The user has to provide following information.
