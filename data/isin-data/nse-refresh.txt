@@ -1,0 +1,13 @@
+
+https://www.nseindia.com/corporates/datafiles/LDE_EQUITIES_MORE_THAN_5_YEARS.csv
+
+Steps
+
+https://www.nseindia.com/corporates/corporateHome.html?id=equity
+
+Listing Period: more than 5 years
+
+Search
+
+Export to CSV
+
