@@ -43,10 +43,30 @@ class Screener(Isin):
 		self.sc_pledge = {}
 		self.sc_crank = {}
 		self.sc_prank = {}
+                self.sc_name_aliases = {}
  		self.debug_level = 0 
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
+
+	def load_screener_name_aliases(self, sc_aliases_filename):
+		with open(sc_aliases_filename, 'r') as csvfile:
+			reader = csv.reader(csvfile)
+			for row in reader:
+				sc_name, isin_name = row
+				sc_name = sc_name.strip().capitalize()
+				isin_name = isin_name.strip().capitalize()
+				if self.debug_level > 1: 
+					print 'alias ', sc_name
+					print 'real ',isin_name 
+				self.sc_name_aliases[sc_name] = isin_name 
+		print self.sc_name_aliases
+
+	def resolve_screener_name_alias(self, company_name):
+		sc_name = company_name.strip().capitalize()
+		if sc_name in self.sc_name_aliases.keys():
+			company_name = self.sc_name_aliases[sc_name]
+		return company_name
 
 	def load_screener_row(self, row):
 		try:
@@ -65,13 +85,15 @@ class Screener(Isin):
 			# S.No.,Name,CMP,Sales,NP 12M,P/E,OPM,EPS 12M,Dividend Payout,Debt / Eq,Int Coverage,Div Yld,PEG,CMP / BV,Avg Div Payout 3Yrs,IV,EV,Mar Cap,Altman Z Scr,Current ratio,ROE 3Yr,Graham Price,Sales Var 5Yrs,Profit Var 5Yrs,EV / EBIT
 			sc_sno = cutil.cutil.get_number(row_list[0])
 			sc_name = row_list[1]
+			sc_name = self.resolve_screener_name_alias(sc_name)
 			sc_name = cutil.cutil.normalize_comp_name(sc_name)
 			isin_code = self.get_isin_code_by_name(sc_name)
 			if isin_code == '':
 				print 'unable to get isin_code : ', sc_name
 			else:
 				sc_sno = isin_code
-				print 'Found isin_code : ', sc_sno, ' for ', sc_name
+				if self.debug_level > 1:
+					print 'Found isin_code : ', sc_sno, ' for ', sc_name
 
 			sc_cmp = cutil.cutil.get_number(row_list[2])
 			sc_sales = cutil.cutil.get_number(row_list[3])

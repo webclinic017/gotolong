@@ -47,6 +47,9 @@ def normalize_comp_name(comp_name):
 			print 'converted : ', comp_name, ' to ', new_comp_name
 			comp_name = new_comp_name
 	
+	# remove corpn in screener
+	comp_name = re.sub('corpn','', comp_name)
+	
 	# strip space
 	comp_name = comp_name.strip()
 	

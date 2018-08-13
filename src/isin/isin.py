@@ -76,7 +76,7 @@ class Isin(object):
 			print self.isin_name_nse
 
 		fh = open(out_filename, "w") 
-		fh.write('isin_code, isin_name_bse, isin_name_nse\n')
+		fh.write('isin_code, isin_name_bse, isin_name_nse, isin_symbol\n')
 		for isin_code in sorted(set(self.isin_code_both)):
 			p_str = str(isin_code)
 			p_str += ', ' 
@@ -86,8 +86,12 @@ class Isin(object):
 				p_str += '-'
 			p_str += ', ' 
 			if isin_code in self.isin_name_nse:
-				p_str += self.isin_name_nse[isin_code] 
+				p_str += self.isin_name_nse[isin_code]
+				p_str += ', ' 
+				p_str += self.isin_symbol[isin_code]
 			else:
+				p_str += '-'
+				p_str += ', ' 
 				p_str += '-'
 			p_str += '\n' 
 			fh.write(p_str);	
