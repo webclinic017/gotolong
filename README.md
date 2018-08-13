@@ -14,7 +14,7 @@ The user has to provide following information.
 
 Currently, user has to prepare a plan-data sheet under profile/ directory : create .xls file and save it as .csv file.
 
-The default user-profile is surinder.
+The default user-profile is default.
 
 The user also has to provide icidirect demat data (portfolio detailed summary).
 
