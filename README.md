@@ -146,7 +146,7 @@ Fix any discrepancy by running following
 
  # TBD Data (To Be Done)
   
-To know units/companies to buy/sale ranked by company score / price score in this quarter (with 6 month delay : 2 Quarter delay)
+To know companies (units) to buy/sale ranked by company score (price score).
 
 Execute following
 
@@ -154,9 +154,11 @@ Execute following
    
    $ ./tbd-invoke.sh
 
-Review the generated reports file
-* For buy (ordered by company price score) : profile/default/reports/tbd-reports/\*buy\*.csv
-* For sale (ordered by company performance score) : profile/default/reports/tbd-reports/\*sale\*.csv
+Review the generated reports file for buy (ordered by company price score)
+* profile/default/reports/tbd-reports/\*buy\*.csv
+
+Review the generated reports file for sale (ordered by company performance score)
+* profile/default/reports/tbd-reports/\*sale\*.csv
 
 
 # BONUS share Data (To be modified for new framework)
