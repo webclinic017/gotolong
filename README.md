@@ -68,19 +68,18 @@ Review the generated report file
 
  # SCREENER Data
  
- * Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
+ Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
  
- * Download the screener data in data/screener-data/\*.csv
+ Download the screener data in data/screener-data/\*.csv
  
- * Generate screener reports using
+ Generate screener reports using
  
  $ cd src/screener
  
  $ ./screener_invoke.sh
  
- * Review the generated report file
- 
- ** reports/screener-reports/\*.csv files
+ Review the generated report file
+ * reports/screener-reports/\*.csv files
  
  NOTE: To be switched to Quandl or something similar.
 
