@@ -9,7 +9,7 @@ INE003A01024, Siemens, Siemens, SIEMENS
 INE006I01046, Astral polytechnik, Astral poly technik, ASTRAL
 INE007A01025, Crisil, Crisil, CRISIL
 INE008A01015, Idbi bank, Idbi bank, IDBI
-INE008I01026, Cox kings, Cox kings, COX&KINGS
+INE008I01026, Cox kings, -, -
 INE009A01021, Infosys, Infosys, INFY
 INE010A01011, Prism johnson, Prism johnson, PRSMJOHNSN
 INE010B01027, Cadila healthcare, Cadila healthcare, CADILAHC
@@ -25,7 +25,7 @@ INE019A01038, Jsw steel, Jsw steel, JSWSTEEL
 INE019C01026, Himadri speciality chemical, Himadri speciality chemical, HSCL
 INE020B01018, Rural electrification corp, Rural electrification corporation, RECLTD
 INE021A01026, Asian paints, Asian paints, ASIANPAINT
-INE022Q01012, -, Indian energy exchange, IEX
+INE022Q01012, Indian energy exchange, Indian energy exchange, IEX
 INE026A01025, Gujarat state fertilisers chemicals, Gujarat state fertilizers chemicals, GSFC
 INE027A01015, Rashtriya chemicals fertilizers, Rashtriya chemicals fertilizers, RCF
 INE028A01039, Bank of baroda, Bank of baroda, BANKBARODA
@@ -34,7 +34,7 @@ INE030A01027, Hindustan unilever, Hindustan unilever, HINDUNILVR
 INE031A01017, Housing urban development corporation, Housing urban development corporation, HUDCO
 INE031B01049, Ajanta pharma, Ajanta pharmaceuticals, AJANTPHARM
 INE032A01023, Bombay dyeing manufacturing co, Bombay dyeing manufacturing co, BOMDYEING
-INE034A01011, Arvind, Arvind, ARVIND
+INE034A01011, Arvind, -, -
 INE036A01016, Reliance infrastructure, Reliance infrastructure, RELINFRA
 INE036D01028, -, Karur vysya bank, KARURVYSYA
 INE038A01020, Hindalco industries, Hindalco industries, HINDALCO
@@ -51,7 +51,7 @@ INE048G01026, Navin fluorine international, Navin fluorine international, NAVINF
 INE049A01027, Himatsingka seide, Himatsingka seide, HIMATSEIDE
 INE049B01025, Wockhardt, Wockhardt, WOCKPHARMA
 INE050A01025, Bombay burmah trading corp, Bombay burmah trading corporation, BBTC
-INE051B01021, Vakrangee, Vakrangee, VAKRANGEE
+INE051B01021, -, Vakrangee, VAKRANGEE
 INE053A01029, Indian hotels co, Indian hotels co, INDHOTEL
 INE054A01027, Vip industries, Vip industries, VIPIND
 INE055A01016, Century textile industries, Century textile industries, CENTURYTEX
@@ -69,15 +69,15 @@ INE067A01029, Cg power industrial solutions, Cg power industrial solutions, CGPO
 INE069I01010, Indiabulls real estate, Indiabulls real estate, IBREALEST
 INE070A01015, Shree cement, Shree cement, SHREECEM
 INE070D01027, Jai corp, Jai corp, JAICORPLTD
-INE074A01025, Praj industries, Praj industries, PRAJIND
+INE074A01025, -, Praj industries, PRAJIND
 INE075A01022, Wipro, Wipro, WIPRO
 INE077A01010, Dena bank, Dena bank, DENABANK
 INE079A01024, Ambuja cements, Ambuja cements, AMBUJACEM
 INE081A01012, Tata steel, Tata steel, TATASTEEL
 INE084A01016, Bank of, Bank of, BANKINDIA
 INE085A01013, Chambal fertilizers chemicals, Chambal fertilizers chemicals, CHAMBLFERT
-INE087A01019, Kesoram industries, Kesoram industries, KESORAMIND
-INE087H01022, Shree renuka sugars, Shree renuka sugars, RENUKA
+INE087A01019, -, Kesoram industries, KESORAMIND
+INE087H01022, -, Shree renuka sugars, RENUKA
 INE089A01023, Dr reddys laboratories, Dr reddys laboratories, DRREDDY
 INE089C01029, Sterlite technologies, Sterlite technologies, STRTECH
 INE090A01021, Icici bank, Icici bank, ICICIBANK
@@ -97,7 +97,7 @@ INE103A01014, Mangalore refinery petrochemicals, Mangalore refinery petrochemica
 INE105A01035, Sundaram clayton, -, -
 INE107A01015, Tamilnadu newsprint papers, Tamil nadu newsprint papers, TNPL
 INE109A01011, Shipping corp of, Shipping corporation of, SCI
-INE111A01017, Container corp of, Container corporation of, CONCOR
+INE111A01025, Container corp of, Container corporation of, CONCOR
 INE112A01023, Corp bank, -, -
 INE113A01013, Gujarat narmada valley fertilizers chemicals, Gujarat narmada valley fertilizers chemicals, GNFC
 INE114A01011, Steel authority of, Steel authority of, SAIL
@@ -112,7 +112,7 @@ INE121E01018, Jsw energy, Jsw energy, JSWENERGY
 INE121J01017, Bharti infratel, Bharti infratel, INFRATEL
 INE122R01018, Manpasand beverages, Manpasand beverages, MANPASAND
 INE123F01029, Mmtc, Mmtc, MMTC
-INE123W01016, -, Sbi life insurance company, SBILIFE
+INE123W01016, Sbi life insurance company, Sbi life insurance company, SBILIFE
 INE124G01033, Delta corp, Delta corp, DELTACORP
 INE126A01031, Eid parry, Eid parry, EIDPARRY
 INE128A01029, Eveready industries, Eveready industries, EVEREADY
@@ -128,10 +128,11 @@ INE141A01014, Oriental bank of commerce, Oriental bank of commerce, ORIENTBANK
 INE142I01023, Take solutions, Take solutions, TAKE
 INE146L01010, Kirloskar oil engines, -, -
 INE148I01020, Indiabulls housing finance, Indiabulls housing finance, IBULHSGFIN
-INE149A01033, -, Ti financial holdings, TIFIN
-INE151A01013, Tata communications, Tata communications, TATACOMM
+INE149A01033, Ti financial holdings, Ti financial holdings, TIFIN
+INE150G01020, Lux industries, -, -
+INE151A01013, Tata communications, -, -
 INE152A01029, Thermax, Thermax, THERMAX
-INE152B01027, Gati, Gati, GATI
+INE152B01027, -, Gati, GATI
 INE152M01016, Triveni turbine, -, -
 INE153A01019, -, Mahanagar telephone nigam, MTNL
 INE153U01017, Max, Max, MAXINDIA
@@ -140,12 +141,12 @@ INE155A01022, Tata motors, Tata motors, TATAMOTORS
 INE158A01026, Hero motocorp, Hero motocorp, HEROMOTOCO
 INE159A01016, Glaxosmithkline pharmaceuticals, Glaxosmithkline pharmaceuticals, GLAXO
 INE160A01022, Punjab national bank, Punjab national bank, PNB
-INE161A01038, Niit, -, -
 INE163A01018, Nocil, -, -
 INE164A01016, Balmer lawrie co, Balmer lawrie co, BALMLAWRIE
 INE168A01041, Jammu kashmir bank, Jammu kashmir bank, J&KBANK
 INE169A01031, Coromandel international, Coromandel international, COROMANDEL
 INE171A01029, Federal bank, Federal bank, FEDERALBNK
+INE171Z01018, -, Bharat dynamics, BDL
 INE172A01027, Castrol, Castrol, CASTROLIND
 INE175A01038, Jain irrigation systems, Jain irrigation systems, JISLJALEQS
 INE176A01028, Bata ltimited, Bata, BATAINDIA
@@ -157,7 +158,7 @@ INE180K01011, Bharat financial inclusion, Bharat financial inclusion, BHARATFIN
 INE182A01018, Pfizer, Pfizer, PFIZER
 INE183A01016, Finolex industries, Finolex industries, FINPIPE
 INE186A01019, Gujarat alkalies chemicals, Gujarat alkalies chemicals, GUJALKALI
-INE187A01017, Jbf industries, Jbf industries, JBFIND
+INE187A01017, -, Jbf industries, JBFIND
 INE191B01025, Welspun corp, Welspun corp, WELCORP
 INE191H01014, Pvr, Pvr, PVR
 INE191I01012, Housing development infrastructure, Housing development infrastructure, HDIL
@@ -203,11 +204,11 @@ INE237A01028, Kotak mahindra bank, Kotak mahindra bank, KOTAKBANK
 INE238A01034, Axis bank, Axis bank, AXISBANK
 INE239A01016, Nestle, -, -
 INE242A01010, Indian oil corp, Indian oil corporation, IOC
-INE243D01012, Bf utilities, Bf utilities, BFUTILITIE
+INE243D01012, -, Bf utilities, BFUTILITIE
 INE245A01021, Tata power co, Tata power co, TATAPOWER
 INE246B01019, -, Ramco systems, RAMCOSYS
 INE246F01010, Gujarat state petronet, Gujarat state petronet, GSPL
-INE248A01017, -, Iti, ITI
+INE248A01017, Iti, Iti, ITI
 INE251H01024, -, Gvk power infrastructures, GVKPIL
 INE255A01020, Essel propack, -, -
 INE256A01028, Zee entertainment enterprises, Zee entertainment enterprises, ZEEL
@@ -232,18 +233,18 @@ INE278M01019, Navkar corporation, Navkar corporation, NAVKARCORP
 INE280A01028, Titan co, Titan company, TITAN
 INE285A01027, Elgi equipments, -, -
 INE285B01017, Spicejet, -, -
-INE285J01010, -, Security intelligence services, SIS
-INE286K01024, Techno electric engineering co, Techno elt eng co, TECHNO
+INE285J01010, Security intelligence services, Security intelligence services, SIS
 INE288B01029, Deepak nitrite, -, -
 INE289B01019, Gic housing finance, -, -
 INE294A01037, -, Ballarpur industries, BALLARPUR
 INE294B01019, -, Sml isuzu, SMLISUZU
 INE296A01024, Bajaj finance, Bajaj finance, BAJFINANCE
 INE298A01020, Cummins, Cummins, CUMMINSIND
+INE298J01013, Reliance nippon life asset management, -, -
 INE299U01018, Crompton greaves consumer electricals, Crompton greaves consumer electricals, CROMPTON
 INE301A01014, Raymond, Raymond, RAYMOND
 INE302A01020, Exide industries, Exide industries, EXIDEIND
-INE306A01021, Bajaj hindusthan sugar, Bajaj hindusthan sugar, BAJAJHIND
+INE306A01021, -, Bajaj hindusthan sugar, BAJAJHIND
 INE306R01017, Intellect design arena, Intellect design arena, INTELLECT
 INE310A01015, Nilkamal, Nilkamal, NILKAMAL
 INE312H01016, Inox leisure, Inox leisure, INOXLEISUR
@@ -269,7 +270,7 @@ INE348B01021, Century plyboards, Century plyboards, CENTURYPLY
 INE348L01012, -, Mas financial services, MASFIN
 INE351A01035, Unichem laboratories, Unichem laboratories, UNICHEMLAB
 INE351F01018, -, Jaiprakash power ventures, JPPOWER
-INE353K01014, -, India tourism development corporation, ITDC
+INE353K01014, India tourism development corp, India tourism development corporation, ITDC
 INE355A01028, Somany ceramics, -, -
 INE356A01018, Mphasis, Mphasis, MPHASIS
 INE358A01014, Abbott, -, -
@@ -281,7 +282,6 @@ INE373A01013, Basf, Basf, BASF
 INE376G01013, Biocon, Biocon, BIOCON
 INE383A01012, India cements, India cements, INDIACEM
 INE385W01011, -, Dishman carbogen amcis, DCAL
-INE386C01029, Astra microwave products, -, -
 INE387A01021, Sundaram fastners, Sundram fasteners, SUNDRMFAST
 INE389H01022, Kec international /, Kec international, KEC
 INE397D01024, Bharti airtel, Bharti airtel, BHARTIARTL
@@ -298,14 +298,13 @@ INE410P01011, Narayana hrudayalaya, Narayana hrudayalaya, NH
 INE414G01012, Muthoot finance, Muthoot finance, MUTHOOTFIN
 INE415A01038, Hsil, Hsil, HSIL
 INE416D01022, Bliss gvs pharma, Bliss gvs pharma, BLISSGVS
-INE416L01017, Eros international media, Eros intl media, EROSMEDIA
+INE416L01017, -, Eros intl media, EROSMEDIA
 INE418H01029, Allcargo logistics, Allcargo logistics, ALLCARGO
-INE421A01028, Aban offshore, Aban offshore, ABAN
+INE421A01028, -, Aban offshore, ABAN
 INE421C01016, Tvs srichakra, Tvs srichakra, TVSSRICHAK
 INE421D01022, Ccl products, Ccl products, CCL
 INE424H01027, Sun tv network, Sun tv network, SUNTV
 INE428A01015, Allahabad bank, Allahabad bank, ALBK
-INE429C01035, Sintex industries, -, -
 INE434A01013, Andhra bank, Andhra bank, ANDHRABANK
 INE435G01025, Dhanuka agritech, -, -
 INE437A01024, Apollo hospitals enterprise, Apollo hospitals enterprise, APOLLOHOSP
@@ -319,13 +318,14 @@ INE455F01025, Jaiprakash associates, Jaiprakash associates, JPASSOCIAT
 INE455I01029, Kaveri seed co, Kaveri seed company, KSCL
 INE455T01018, Jindal stainless, Jindal stainless, JSLHISAR
 INE457A01014, Bank of maharashtra, -, -
-INE460H01021, -, Star cement, STARCEMENT
+INE460H01021, Star cement, Star cement, STARCEMENT
 INE461C01038, Greenply industries, Greenply industries, GREENPLY
 INE462A01022, Bayer cropscience /, -, -
 INE463A01038, Berger paints, Berger paints, BERGEPAINT
 INE465A01025, Bharat forge, Bharat forge, BHARATFORG
 INE467B01029, Tata consultancy services, Tata consultancy services, TCS
 INE470A01017, 3m, 3m, 3MINDIA
+INE470Y01017, The new assurance company, -, -
 INE472A01039, Blue star, Blue star, BLUESTARCO
 INE473A01011, Linde, -, -
 INE473B01035, Hatsun agro products, Hatsun agro product, HATSUN
@@ -333,11 +333,11 @@ INE475E01026, Caplin point laboratories, Caplin point laboratories, CAPLIPOINT
 INE476A01014, Canara bank, Canara bank, CANBK
 INE477A01020, Can fin homes, Can fin homes, CANFINHOME
 INE481G01011, Ultratech cement, Ultratech cement, ULTRACEMCO
-INE481Y01014, -, General insurance corporation of, GICRE
+INE481Y01014, General insurance corporation of, General insurance corporation of, GICRE
 INE482A01020, Ceat, Ceat, CEATLTD
 INE483A01010, Central bank of, Central bank of, CENTRALBK
 INE483B01026, Indo count industries, Indo count industries, ICIL
-INE483S01020, Infibeam incorporation, Infibeam incorporation, INFIBEAM
+INE483S01020, Infibeam avenues, Infibeam avenues, INFIBEAM
 INE484J01027, Godrej properties, Godrej properties, GODREJPROP
 INE486A01013, Cesc, -, -
 INE490G01020, Moil, Moil, MOIL
@@ -350,7 +350,6 @@ INE498L01015, L&t finance holdings, L&t finance holdings, L&TFH
 INE499A01024, Dcm shriram, Dcm shriram, DCMSHRIRAM
 INE500L01026, S h kelkar company, S h kelkar company, SHK
 INE501A01019, Deepak fertilisers petrochemicals corp, Deepak fertilisers petrochemicals corp, DEEPAKFERT
-INE501G01024, -, Ht media, HTMEDIA
 INE501W01021, -, Sintex plastics technology, SPTL
 INE503A01015, Dcb bank, Dcb bank, DCBBANK
 INE506A01018, -, Dredging corporation of, DREDGECORP
@@ -360,6 +359,7 @@ INE511C01022, Magma fincorp, Magma fincorp, MAGMA
 INE513A01014, Schaeffler, Schaeffler, SCHAEFFLER
 INE516A01017, Uflex, Uflex, UFLEX
 INE517F01014, Gujarat pipavav port, Gujarat pipavav port, GPPL
+INE518A01013, Forbes company, -, -
 INE520A01019, Zensar technologies, -, -
 INE522D01027, Manappuram finance, Manappuram finance, MANAPPURAM
 INE522F01014, Coal, Coal, COALINDIA
@@ -378,7 +378,7 @@ INE545A01016, Heg, Heg, HEG
 INE548A01028, Himachal futuristic communications, Himachal fut com, HFCL
 INE548C01032, Emami, Emami, EMAMILTD
 INE549A01026, Hindustan construction co, Hindustan construction co, HCC
-INE559A01017, -, Ifb industries, IFBIND
+INE559A01017, Ifb industries, Ifb industries, IFBIND
 INE560K01014, Ptc financial services, Ptc fin serv, PFS
 INE562A01011, Indian bank, Indian bank, INDIANB
 INE565A01014, Indian overseas bank, Indian overseas bank, IOB
@@ -405,12 +405,11 @@ INE612J01015, Repco home finance, Repco home finance, REPCOHOME
 INE613A01020, Rallis, Rallis, RALLIS
 INE614B01018, Karnataka bank, Karnataka bank, KTKBANK
 INE614G01033, Reliance power, Reliance power, RPOWER
-INE615H01020, Titagarh wagons, -, -
 INE615P01015, Quess corp, Quess corp, QUESS
 INE621H01010, -, Religare enterprises, RELIGARE
 INE621L01012, Texmaco rail engineering, Texmaco rail eng, TEXRAIL
 INE628A01036, Upl, Upl, UPL
-INE634I01029, -, Knr constructions, KNRCON
+INE634I01029, Knr constructions, Knr constructions, KNRCON
 INE635Q01029, Gulf oil lubricants, Gulf oil lubricants, GULFOILLUB
 INE640A01023, Skf, Skf, SKFINDIA
 INE646L01027, Interglobe aviation, Interglobe aviation, INDIGO
@@ -432,7 +431,7 @@ INE670A01012, Tata elxsi, Tata elxsi, TATAELXSI
 INE671A01010, -, Honeywell automation, HONAUT
 INE671H01015, Sobha, Sobha, SOBHA
 INE672A01018, Tata investment corp, Tata investment corporation, TATAINVEST
-INE674A01014, Tata sponge iron, Tata sponge iron, TATASPONGE
+INE674A01014, -, Tata sponge iron, TATASPONGE
 INE674K01013, -, Aditya birla capital, ABCAPITAL
 INE683A01023, South n bank, South n bank, SOUTHBANK
 INE684F01012, Firstsource solutions, Firstsource solutions, FSL
@@ -443,12 +442,12 @@ INE688I01017, Capital first, Capital first, CAPF
 INE690A01010, Ttk prestige, Ttk prestige, TTKPRESTIG
 INE691A01018, Uco bank, Uco bank, UCOBANK
 INE692A01016, Union bank of, Union bank of, UNIONBANK
-INE694A01020, Unitech, Unitech, UNITECH
+INE694A01020, -, Unitech, UNITECH
 INE694C01018, Lakshmi vilas bank, Lakshmi vilas bank, LAKSHVILAS
 INE700A01033, Jubilant life sciences, Jubilant life sciences, JUBILANT
 INE702C01019, Apl apollo tubes, Apl apollo tubes, APLAPOLLO
 INE703B01027, Ratnamani metals tubes, -, -
-INE704P01017, -, Cochin shipyard, COCHINSHIP
+INE704P01017, Cochin shipyard, Cochin shipyard, COCHINSHIP
 INE705A01016, Vijaya bank, Vijaya bank, VIJAYABANK
 INE710A01016, Vst industries, -, -
 INE716A01013, Whirlpool of, Whirlpool of, WHIRLPOOL
@@ -464,13 +463,14 @@ INE739E01017, Cera sanitaryware, Cera sanitaryware, CERA
 INE742F01042, Adani ports special economic zone, Adani ports special economic zone, ADANIPORTS
 INE745G01035, Multi commodity exchange of, -, -
 INE749A01030, Jindal steel power, Jindal steel power, JINDALSTEL
-INE750C01026, Marksans pharma, Marksans pharma, MARKSANS
+INE750C01026, -, Marksans pharma, MARKSANS
 INE752E01010, Power grid corp of, Power grid corporation of, POWERGRID
 INE752H01013, Care ratings, Care ratings, CARERATING
-INE752P01024, Future retail, -, -
+INE752P01024, Future retail, Future retail, FRETAIL
 INE761H01022, Page industries, Page industries, PAGEIND
 INE764L01010, -, Sadbhav infrastructure project, SADBHIN
-INE765G01017, -, Icici lombard general insurance company, ICICIGI
+INE765G01017, Icici lombard general insurance company, Icici lombard general insurance company, ICICIGI
+INE768C01010, Zydus wellness, -, -
 INE769A01020, Aarti industries, Aarti industries, AARTIIND
 INE774D01024, Mahindra mahindra financial services, Mahindra mahindra financial services, M&MFIN
 INE775A01035, Motherson sumi systems, Motherson sumi systems, MOTHERSUMI
@@ -483,6 +483,7 @@ INE786A01032, Jk lakshmi cement, Jk lakshmi cement, JKLAKSHMI
 INE787D01026, Balkrishna industries, Balkrishna industries, BALKRISIND
 INE790G01031, Shilpa medicare, -, -
 INE791I01019, -, Brigade enterprises, BRIGADE
+INE795G01014, Hdfc standard life insurance company, -, -
 INE797F01012, Jubilant foodworks, Jubilant foodworks, JUBLFOOD
 INE800H01010, Omaxe, Omaxe, OMAXE
 INE802G01018, Jet airways, Jet airways, JETAIRWAYS
@@ -503,16 +504,16 @@ INE842C01021, Minda corporation, Minda corporation, MINDACORP
 INE844O01022, Gujarat gas, Gujarat gas, GUJGASLTD
 INE848E01016, Nhpc, Nhpc, NHPC
 INE849A01020, Trent, Trent, TRENT
-INE850D01014, -, Godrej agrovet, GODREJAGRO
+INE850D01014, Godrej agrovet, Godrej agrovet, GODREJAGRO
 INE852F01015, Gateway distriparks, Gateway distriparks, GDL
-INE854D01016, -, United spirits, MCDOWELL-N
+INE854D01024, -, United spirits, MCDOWELL-N
 INE855B01025, Rain industries, Rain industries, RAIN
 INE858B01011, Isgec heavy engineering, -, -
 INE860A01027, Hcl technologies, Hcl technologies, HCLTECH
 INE868B01028, Ncc /, Ncc, NCC
 INE870D01012, -, National fertilizers, NFL
 INE870H01013, Network 18 media investments, Network18 media investments, NETWORK18
-INE871C01020, Avanti feeds, Avanti feeds, AVANTIFEED
+INE871C01038, Avanti feeds, Avanti feeds, AVANTIFEED
 INE872A01014, Srei infrastructure finance, Srei infrastructure finance, SREINFRA
 INE873D01024, -, Indoco remedies, INDOCO
 INE876N01018, Orient cement, Orient cement, ORIENTCEM
@@ -520,6 +521,7 @@ INE877F01012, Ptc, Ptc, PTC
 INE878A01011, Ge power, Ge power, GEPIL
 INE878B01027, Kei industries, -, -
 INE879I01012, -, D b realty, DBREALTY
+INE880L01014, -, Kiocl, KIOCL
 INE881D01027, Oracle financial services software, Oracle financial services software, OFSS
 INE883A01011, Mrf, Mrf, MRF
 INE883N01014, Parag milk foods, Parag milk foods, PARAGMILK
@@ -529,6 +531,7 @@ INE891D01026, Redington, Redington, REDINGTON
 INE895B01021, -, Rupa company, RUPA
 INE901L01018, Alembic pharmaceuticals, Alembic pharmaceuticals, APLLTD
 INE913H01037, Endurance technologies, Endurance technologies, ENDURANCE
+INE914M01019, -, Aster dm healthcare, ASTERDM
 INE916U01025, Sheela foam, Sheela foam, SFL
 INE917I01010, Bajaj auto, Bajaj auto, BAJAJ-AUTO
 INE917M01012, Dilip buildcon, Dilip buildcon, DBL
@@ -538,7 +541,7 @@ INE931S01010, Adani transmission, Adani transmission, ADANITRANS
 INE933K01021, Bajaj corp, Bajaj corp, BAJAJCORP
 INE935A01035, Glenmark pharmaceuticals, Glenmark pharmaceuticals, GLENMARK
 INE935N01012, -, Dixon technologies, DIXON
-INE942G01012, Mcleod russel, Mcleod russel, MCLEODRUSS
+INE942G01012, -, Mcleod russel, MCLEODRUSS
 INE944F01028, Radico khaitan, Radico khaitan, RADICO
 INE947J01015, -, Den networks, DEN
 INE947Q01010, Laurus labs, Laurus labs, LAURUSLABS
@@ -546,12 +549,13 @@ INE949L01017, Au small finance bank, Au small finance bank, AUBANK
 INE950I01011, Db corp, Dbcorp, DBCORP
 INE951I01027, V guard industries, V guard industries, VGUARD
 INE956G01038, Va tech wabag, Va tech wabag, WABAG
-INE965H01011, Siti networks, -, -
 INE974H01013, Meghmani organics, -, -
+INE974X01010, -, Tube investments of, TIINDIA
 INE975G01012, Il&fs transportation networks, Il&fs transportation networks, IL&FSTRANS
 INE976G01028, Rbl bank, Rbl bank, RBLBANK
 INE978A01027, Heritage foods, Heritage foods, HERITGFOOD
 INE982F01036, -, Hathway cable datacom, HATHWAY
+INE985S01024, Teamlease services, -, -
 INE987B01026, Natco pharma, Natco pharma, NATCOPHARM
 INE988K01017, Equitas holdings, Equitas holdings, EQUITAS
 INE998I01010, Mahindra holidays resorts, Mahindra holidays resorts, MHRIL
