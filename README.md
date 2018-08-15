@@ -130,7 +130,7 @@ Fix any discrepancy by running following
 
  # TBD Data (To Be Done)
   
-To know units to be acquired in this quarter (with 6 month delay : 2 Quarter delay)
+To know units/companies to buy/sale ranked by company score / price score in this quarter (with 6 month delay : 2 Quarter delay)
 
 Execute following
 
@@ -138,7 +138,8 @@ Execute following
    
    $ ./tbd-invoke.sh
 
-Review the generated files profile/default/reports/tbd-reports/\*.csv
+For buy, review the generated file (ordered by company price score) : profile/default/reports/tbd-reports/\*buy\*.csv
+For sale, review the generated file (ordered by company performance score) : profile/default/reports/tbd-reports/\*sale\*.csv
 
 
 # BONUS share Data (To be modified for new framework)
