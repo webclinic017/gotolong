@@ -32,7 +32,9 @@ For sh/bash
 * $ . ./project-env.sh
 
 # AMFI Data
+
 The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
+
 These are downloaded from the amfi website and processed further.
 
 Fix discrepancy
@@ -41,7 +43,8 @@ $ cd src/amfi
 
 $ ./amfi_invoke.sh
 
-Review the generated reports/amfi-reports/\*.csv
+Review the generated report file
+* reports/amfi-reports/\*.csv
 
 The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
 and cap type (large, mid cap and small cap).
@@ -49,6 +52,7 @@ and cap type (large, mid cap and small cap).
 # ISIN Data
 
 The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+
 These were downloaded directly from the NSE and BSE websites.
 
 Fix discrepancy
@@ -57,22 +61,26 @@ Fix discrepancy
   
   $ ./isin_invoke.sh
   
-Review the generated reports/isin-reports/\*.csv
+Review the generated report file
+
+* reports/isin-reports/\*.csv
 
 
  # SCREENER Data
  
- Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
+ * Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
  
- Download the screener data in data/screener-data/\*.csv
+ * Download the screener data in data/screener-data/\*.csv
  
- Generate screener reports using
+ * Generate screener reports using
  
  $ cd src/screener
  
  $ ./screener_invoke.sh
  
- Review the generated reports/screener-reports/\*.csv files
+ * Review the generated report file
+ 
+ ** reports/screener-reports/\*.csv files
  
  NOTE: To be switched to Quandl or something similar.
 
