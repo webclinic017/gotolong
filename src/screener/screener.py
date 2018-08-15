@@ -6,7 +6,8 @@ import csv
 import traceback
 import operator
 import cutil.cutil
-import cutil.ratio
+import cutil.finratio_comp_perf
+import cutil.finratio_comp_price
 from isin.isin import *
 
 # S.No.,Name,CMP,Sales,NP 12M,P/E,OPM,EPS 12M,Dividend Payout,Debt / Eq,Int Coverage,Div Yld,PEG,CMP / BV,Avg Div Payout 3Yrs,IV,EV,Mar Cap,Altman Z Scr,Current ratio,ROE 3Yr,Graham Price,Sales Var 5Yrs,Profit Var 5Yrs,EV / EBIT
@@ -150,14 +151,14 @@ class Screener(Isin):
 			
 			sc_crank = 0
 			
-			sc_crank += cutil.ratio.get_cscore_opm(sc_opm)
-			sc_crank += cutil.ratio.get_cscore_dp(sc_dp)
-			sc_crank += cutil.ratio.get_cscore_d2e(sc_d2e)
-			sc_crank += cutil.ratio.get_cscore_ic(sc_ic)
-			sc_crank += cutil.ratio.get_cscore_dp(sc_dp3)
-			sc_crank += cutil.ratio.get_cscore_current_ratio(sc_cr)
-			sc_crank += cutil.ratio.get_cscore_pledge(sc_pledge)
-			sc_crank += cutil.ratio.get_cscore_altmanz(sc_altmanz)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_opm(sc_opm)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_dp(sc_dp)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_d2e(sc_d2e)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_ic(sc_ic)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_dp(sc_dp3)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_current_ratio(sc_cr)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_pledge(sc_pledge)
+			sc_crank += cutil.finratio_comp_perf.get_cscore_altmanz(sc_altmanz)
 			if sc_np > 0:
 				sc_crank += 1
 			if sc_eps > 0:
@@ -166,12 +167,12 @@ class Screener(Isin):
 				sc_crank += 1 
 			
 			sc_prank = 0
-			sc_prank += cutil.ratio.get_pscore_pe(sc_pe)
-			sc_prank += cutil.ratio.get_pscore_peg(sc_peg)
-			sc_prank += cutil.ratio.get_pscore_pb(sc_cmp2bv)
-			sc_prank += cutil.ratio.get_pscore_dy(sc_dy)
-			sc_prank += cutil.ratio.get_pscore_iv(sc_cmp, sc_iv)
-			sc_prank += cutil.ratio.get_pscore_graham(sc_cmp, sc_graham)
+			sc_prank += cutil.finratio_comp_price.get_pscore_pe(sc_pe)
+			sc_prank += cutil.finratio_comp_price.get_pscore_peg(sc_peg)
+			sc_prank += cutil.finratio_comp_price.get_pscore_pb(sc_cmp2bv)
+			sc_prank += cutil.finratio_comp_price.get_pscore_dy(sc_dy)
+			sc_prank += cutil.finratio_comp_price.get_pscore_iv(sc_cmp, sc_iv)
+			sc_prank += cutil.finratio_comp_price.get_pscore_graham(sc_cmp, sc_graham)
 		
 			self.sc_crank[sc_sno] = sc_crank
 			self.sc_prank[sc_sno] = sc_prank
