@@ -37,13 +37,18 @@ The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and 
 
 These are downloaded from the amfi website and processed further.
 
-Fix discrepancy
+Input Data
+* data/amfi-data/amfi-\*.csv 
+
+Generate Report
 
 $ cd src/amfi
 
 $ ./amfi_invoke.sh
 
 Review the generated report file
+
+Output Data
 * reports/amfi-reports/\*.csv
 
 The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
@@ -55,7 +60,11 @@ The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500
 
 These were downloaded directly from the NSE and BSE websites.
 
-Fix discrepancy
+Input Data
+* data/isin-data/isin-(bse|nse)-500.csv
+
+
+Generate Report
 
   $ cd src/isin
   
@@ -63,6 +72,7 @@ Fix discrepancy
   
 Review the generated report file
 
+Output Data
 * reports/isin-reports/\*.csv
 
 
@@ -72,24 +82,37 @@ Review the generated report file
  
  Download the screener data in data/screener-data/\*.csv
  
+ Input Data
+ * data/screener-data/\*.csv
+ 
  Generate screener reports using
  
  $ cd src/screener
  
  $ ./screener_invoke.sh
  
- Review the generated report file
+ Review the generated report file.
+ 
+ Output Data
  * reports/screener-reports/\*.csv files
  
  NOTE: To be switched to Quandl or something similar.
 
  # Morning Star Data
 
+Input Data
+* data/mstar-data/\*.csv
+
+Generate Report
+
  $ cd src/mstar
  
  $ ./mstar_invoke.sh
 
-Review the generated reports/mstar-reports/\*.csv
+Review the generated report
+
+Output Data:
+* reports/mstar-reports/\*.csv
 
 Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
 and financial strength (Strong, Moderate etc)
@@ -98,6 +121,7 @@ and financial strength (Strong, Moderate etc)
 
 Prepare plan file
 
+Input Data
 * profile/default/data/plan-data/plan-data.csv
 
 Include weight for each company and cummulative weight for industry.
@@ -114,7 +138,7 @@ Format of the data
 
 NOTE: Try to use just first two words for the company name if that will make it unique in BSE 500.
 
-Fix any discrepancy by running following
+Generate Report
 
  $ cd src/plan
  
@@ -122,6 +146,7 @@ Fix any discrepancy by running following
 
 Review the generated report file
 
+Output Data
 * profile/default/reports/plan-reports/\*.csv
 
 The summary lines shows distribution of large cap, mid cap and small cap.
@@ -131,16 +156,19 @@ TBD : Include line for micro cap and nano cap.
 
 Download demat data from ICICI Direct (all holdings, all txns in csv format) in 
 
+Input Data
 * profile/default/data/demat-data/icicidirect/demat-data.csv 
 * profile/default/data/demat-data/zerodha/demat-data.csv 
 
-Fix any discrepancy by running following
+Generate Report.
 
  $ cd src/demat
  
  $ ./demat_invoke.sh
  
- Review the generated report files 
+ Review the generated report files.
+ 
+ Output Data
  * profile/default/reports/demat-reports/\*.csv 
  
 
@@ -148,7 +176,14 @@ Fix any discrepancy by running following
   
 To know companies (units) to buy/sale ranked by company score (price score).
 
-Execute following
+Input Data
+* isin data
+* amfi data
+* screener data
+* plan data
+* demat data
+
+Generate Buy and Sale Report.
 
    $ cd src/tbd
    
@@ -164,13 +199,17 @@ Review the generated reports file for sale (ordered by company performance score
 # DIVIDEND Data
 Shows dividend receieved through bank account statement.
 
+Input data
+* profile/default/data/bank-txn-data/fy1718/\*OpTransactionHistory-fy1718.csv
+* profile/default/data/bank-txn-data/fy1617/\*OpTransactionHistory-fy1617.csv
+
+Generate report
+
 $ cd src/dividend
 
 $ ./dividend-reports.sh
 
-Input data
-* profile/default/data/bank-txn-data/fy1718/\*OpTransactionHistory-fy1718.csv
-* profile/default/data/bank-txn-data/fy1617/\*OpTransactionHistory-fy1617.csv
+Review report.
 
 Output data
 * profile/default/reports/dividend-reports/
@@ -182,15 +221,20 @@ Shows dividend recieved and bonus recevied in last few years through BSE/NSE dir
 * Restrict it to only BSE 500 & NSE 500
 * Incorporate Share splits data also
 
-$ cd src/bse-dividend-bonus
-
-$ ./bse-dividend-bonus.sh
-
 Input data (For last 3 years)
 * data/bse-data/dividend/fy\*/bse-corp-action-dividend-fy\*.csv
 * data/bse-data/bonus/fy\*/bse-corp-action-bonus-fy\*.csv
 
+Generate Report
+
+$ cd src/bse-dividend-bonus
+
+$ ./bse-dividend-bonus.sh
+
+Review the generated report.
+
 Output data
+
 * reports/dividends-bonus/
 
 
