@@ -23,13 +23,13 @@ The default user-profile is default.
 
 The user also has to provide icidirect demat data (portfolio detailed summary).
 
-# Source Environment
+# Project Environment
 
 For csh
-$ source project-env.csh
+* $ source project-env.csh
 
 For sh/bash
-$ . ./project-env.sh
+* $ . ./project-env.sh
 
 # AMFI Data
 The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
