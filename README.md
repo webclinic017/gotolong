@@ -2,11 +2,16 @@
 
 An Indian Stock Screener can be used to identify stocks for buy and sale.
 
-The tool is depdendant on things like AMFI data to figure out cap (small, mid, large etc). To be automated for refresh every 6 month.
+The tool is depdendant on things like AMFI data to figure out cap (small, mid, large etc). 
+* currently loaded manually. 
+* To be automated for refresh every 6 month.
 
-The tool is also dependent on ISIN data from BSE/NSE. Already loaded. To be automated for refresh.
+The tool is also dependent on BSE 500 and NSE 500 ISIN data.
+* currently loaded manually
+* Needs to be automated for refresh.
 
-The tool is also dependent on screener data for some interesting ratios. Trying to figure out how to load it at one shot for BSE/NSE 500 companies.
+The tool is also dependent on screener data for some interesting ratios. Trying to figure out how to load it at one
+shot for BSE/NSE 500 companies.
 
 The tool is also dependent on mstar (morning star) data. Yet to be integrated.
 
@@ -18,6 +23,13 @@ The default user-profile is default.
 
 The user also has to provide icidirect demat data (portfolio detailed summary).
 
+# Source Environment
+
+For csh
+$ source project-env.csh
+
+For sh/bash
+$ . ./project-env.sh
 
 # AMFI Data
 The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
@@ -31,7 +43,8 @@ $ ./amfi_invoke.sh
 
 Review the generated reports/amfi-reports/\*.csv
 
-The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months) and cap type (large, mid cap and small cap).
+The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
+and cap type (large, mid cap and small cap).
 
 # ISIN Data
 
@@ -114,7 +127,6 @@ Fix any discrepancy by running following
  
  Review the generated profile/default/reports/demat-reports/\*.csv files
  
-
 
  # TBD Data (To Be Done)
   
