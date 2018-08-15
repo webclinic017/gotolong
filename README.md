@@ -62,7 +62,7 @@ Review the generated reports/isin-reports/\*.csv
 
  # SCREENER Data
  
- Create a watchlist of companies (from plan data) with interesting columns.
+ Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
  
  Download the screener data in data/screener-data/\*.csv
  
@@ -89,16 +89,20 @@ and financial strength (Strong, Moderate etc)
 
 # PLAN DATA
 
-Prepare data/plan-data/plan-data.csv file
+Prepare plan file
+
+* profile/default/data/plan-data/plan-data.csv
 
 Include weight for each company and cummulative weight for industry.
 
 1 Unit can be represented by 1000 Rs.
 0 Unit : stock is under watch but there is no plan to acquire it right now.
 
-Industry name,  Company, Space, Company name (First), Company name (Second), Company name (Third)
-Space,          Details, Industry Details,
-Space,          Units, <cummuulative units>, Unit (First), Unit (Second), Unit (Third)
+Format of the data
+
+* Industry name,  Company, Space, Company name (First), Company name (Second), Company name (Third)
+* Space,          Details, Industry Details,
+* Space,          Units, <cummuulative units>, Unit (First), Unit (Second), Unit (Third)
 
 
 NOTE: Try to use just first two words for the company name if that will make it unique in BSE 500.
@@ -109,15 +113,19 @@ Fix any discrepancy by running following
  
  $ ./plan_invoke.sh
 
-Review the generated profile/default/reports/plan-reports/\*.csv
+Review the generated report file
+
+* profile/default/reports/plan-reports/\*.csv
 
 The summary lines shows distribution of large cap, mid cap and small cap.
 TBD : Include line for micro cap and nano cap.
 
-
 # DEMAT DATA
 
-Download demat data from ICICI Direct (all holdings, all txns in csv format) in data/demat-data/demat-data.csv 
+Download demat data from ICICI Direct (all holdings, all txns in csv format) in 
+
+* profile/default/data/demat-data/icicidirect/demat-data.csv 
+* profile/default/data/demat-data/zerodha/demat-data.csv 
 
 Fix any discrepancy by running following
 
@@ -125,7 +133,8 @@ Fix any discrepancy by running following
  
  $ ./demat_invoke.sh
  
- Review the generated profile/default/reports/demat-reports/\*.csv files
+ Review the generated report files 
+ * profile/default/reports/demat-reports/\*.csv 
  
 
  # TBD Data (To Be Done)
@@ -138,8 +147,9 @@ Execute following
    
    $ ./tbd-invoke.sh
 
-For buy, review the generated file (ordered by company price score) : profile/default/reports/tbd-reports/\*buy\*.csv
-For sale, review the generated file (ordered by company performance score) : profile/default/reports/tbd-reports/\*sale\*.csv
+Review the generated reports file
+* For buy (ordered by company price score) : profile/default/reports/tbd-reports/\*buy\*.csv
+* For sale (ordered by company performance score) : profile/default/reports/tbd-reports/\*sale\*.csv
 
 
 # BONUS share Data (To be modified for new framework)
