@@ -161,6 +161,36 @@ Review the generated reports file for sale (ordered by company performance score
 * profile/default/reports/tbd-reports/\*sale\*.csv
 
 
-# BONUS share Data (To be modified for new framework)
-# SPLITS share data (to be coded)
-# DIVIDEND Data (To be modified)
+# DIVIDEND Data
+Shows dividend receieved through bank account statement.
+
+$ cd src/dividend
+
+$ ./dividend-reports.sh
+
+Input data
+* profile/default/data/bank-txn-data/fy1718/\*OpTransactionHistory-fy1718.csv
+* profile/default/data/bank-txn-data/fy1617/\*OpTransactionHistory-fy1617.csv
+
+Output data
+* profile/default/reports/dividend-reports/
+
+# BSE Dividend BONUS share Data
+
+Shows dividend recieved and bonus recevied in last few years through BSE/NSE directly.
+
+* Restrict it to only BSE 500 & NSE 500
+* Incorporate Share splits data also
+
+$ cd src/bse-dividend-bonus
+
+$ ./bse-dividend-bonus.sh
+
+Input data (For last 3 years)
+* data/bse-data/dividend/fy\*/bse-corp-action-dividend-fy\*.csv
+* data/bse-data/bonus/fy\*/bse-corp-action-bonus-fy\*.csv
+
+Output data
+* reports/dividends-bonus/
+
+
