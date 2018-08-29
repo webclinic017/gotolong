@@ -19,6 +19,7 @@ def normalize_comp_name(comp_name):
 	comp_name = re.sub('limited','', comp_name)
 	comp_name = re.sub('ltd','', comp_name)
 	comp_name = re.sub('india','', comp_name)
+	comp_name = re.sub(' of ','', comp_name)
 	
 	# replace and and &
 	comp_name = re.sub(' and ',' ', comp_name)

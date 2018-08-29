@@ -69,6 +69,8 @@ class Plan(Amfi):
 						print 'iter ', iter, row, "\n"
 				company_name = cutil.cutil.normalize_comp_name(company_name)
 				isin = self.get_amfi_isin_by_name(company_name)
+				if self.debug_level > 0:
+					print isin, company_name
 				self.plan_comp_units[isin] = cutil.cutil.get_number(plan_comp_units_list[iter])
 			return
 		except TypeError:
@@ -100,10 +102,15 @@ class Plan(Amfi):
 		for isin in sorted_items: 
 			try:
 				# isin = self.get_amfi_isin_by_name(comp_name)
+			        comp_name = self.get_amfi_cname_by_code(isin)
+				if self.debug_level >= 2:
+					print comp_name
 				if isin in self.plan_comp_units:
 					units_1k = int(self.plan_comp_units[isin])
 				else:
 					units_1k = 0
+				if self.debug_level >= 2:
+					print units_1k 
 				mcap = self.get_amfi_mcap_by_code(isin)
 				captype = self.get_amfi_captype_by_code(isin)
 				rank = self.get_amfi_rank_by_code(isin)
@@ -123,7 +130,6 @@ class Plan(Amfi):
 				if  rank > 500 and units_1k <= 0:
 					continue
 
-			comp_name = self.get_amfi_cname_by_code(isin)
 			p_str = comp_name
 			p_str += ', '
 			p_str += ticker 
@@ -133,7 +139,7 @@ class Plan(Amfi):
 			if isin in self.plan_comp_units:
 				p_str += str(self.plan_comp_units[isin])
 			else:
-				p_str = '0'
+				p_str += '0'
 			p_str += ', '
 			p_str += str(rank)
 			p_str += ', '
