@@ -135,3 +135,13 @@ class Amfi(object):
 		if amfi_isin in self.amfi_mcap:
 			return self.amfi_mcap[amfi_isin]
 		return '0'
+
+	def get_amfi_cname_by_code(self, amfi_isin):
+		if amfi_isin in self.amfi_cname:
+			return self.amfi_cname[amfi_isin]
+		return '0'
+
+	def get_amfi_ticker_by_code(self, amfi_isin):
+		if amfi_isin in self.amfi_ticker:
+			return self.amfi_ticker[amfi_isin]
+		return '0'

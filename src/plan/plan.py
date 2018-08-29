@@ -68,7 +68,8 @@ class Plan(Amfi):
 					if self.debug_level > 2:
 						print 'iter ', iter, row, "\n"
 				company_name = cutil.cutil.normalize_comp_name(company_name)
-				self.plan_comp_units[company_name] = cutil.cutil.get_number(plan_comp_units_list[iter])
+				isin = self.get_amfi_isin_by_name(company_name)
+				self.plan_comp_units[isin] = cutil.cutil.get_number(plan_comp_units_list[iter])
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
@@ -86,18 +87,27 @@ class Plan(Amfi):
 		# it is covered through shell script
 		return
 
-	def print_phase2(self, out_filename, positive_holdings = None):
+	def print_phase2(self, out_filename, sort_type_rank = None, positive_holdings = None):
 		total_units = 0
 		cap_units = {}
 		fh = open(out_filename, "w") 
-		fh.write('comp_name, isin, plan_units_1k, rank, captype, mcap\n')
-		for comp_name in sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True):
+		fh.write('comp_name, ticker, isin, plan_units_1k, rank, captype, mcap\n')
+		if sort_type_rank:
+			sorted_items = sorted(self.amfi_rank, key=self.amfi_rank.__getitem__)
+		else:
+			sorted_items = sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True)
+
+		for isin in sorted_items: 
 			try:
-				units_1k = int(self.plan_comp_units[comp_name])
-				isin = self.get_amfi_isin_by_name(comp_name)
+				# isin = self.get_amfi_isin_by_name(comp_name)
+				if isin in self.plan_comp_units:
+					units_1k = int(self.plan_comp_units[isin])
+				else:
+					units_1k = 0
 				mcap = self.get_amfi_mcap_by_code(isin)
 				captype = self.get_amfi_captype_by_code(isin)
 				rank = self.get_amfi_rank_by_code(isin)
+				ticker = self.get_amfi_ticker_by_code(isin)
 				total_units += units_1k
 				if captype in cap_units:
 					cap_units[captype] += units_1k
@@ -107,11 +117,17 @@ class Plan(Amfi):
 				print 'except : ValueError :', comp_name
 			if positive_holdings and units_1k <= 0 :
 				continue
+			comp_name = self.get_amfi_cname_by_code(isin)
 			p_str = comp_name
+			p_str += ', '
+			p_str += ticker 
 			p_str += ', '
 			p_str += isin 
 			p_str += ', '
-			p_str += str(self.plan_comp_units[comp_name])
+			if isin in self.plan_comp_units:
+				p_str += str(self.plan_comp_units[isin])
+			else:
+				p_str = '0'
 			p_str += ', '
 			p_str += str(rank)
 			p_str += ', '
@@ -152,8 +168,11 @@ class Plan(Amfi):
 		fh.close()
 
 	def print_phase3(self, out_filename):
-		self.print_phase2(out_filename, True)
-		
+		self.print_phase2(out_filename, True, False)
+
+	def print_phase4(self, out_filename):
+		self.print_phase2(out_filename, True, True)
+
 	def get_plan_comp_units(self, name):
 		if name in self.plan_comp_units:
 			return self.plan_comp_units[name]	
