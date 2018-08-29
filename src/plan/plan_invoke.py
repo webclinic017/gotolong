@@ -22,6 +22,7 @@ in_plan_filename = sys.argv[3]
 out_filename_phase2 = sys.argv[4]
 out_filename_phase3 = sys.argv[5]
 out_filename_phase4 = sys.argv[6]
+out_filename_phase5 = sys.argv[7]
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -44,6 +45,7 @@ plan.load_plan_data(in_plan_filename)
 plan.print_phase2(out_filename_phase2)
 plan.print_phase3(out_filename_phase3)
 plan.print_phase4(out_filename_phase4)
+plan.print_phase5(out_filename_phase5)
 
 if len(sys.argv) == 7 :
 	if indu_comp.lower() == "comp":

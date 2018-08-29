@@ -89,7 +89,7 @@ class Plan(Amfi):
 		# it is covered through shell script
 		return
 
-	def print_phase2(self, out_filename, sort_type_rank = None, positive_holdings = None):
+	def print_phase2(self, out_filename, sort_type_rank = None, plus_holdings_only = None, zero_holdings_only = None):
 		total_units = 0
 		cap_units = {}
 		fh = open(out_filename, "w") 
@@ -123,8 +123,13 @@ class Plan(Amfi):
 			except ValueError:
 				print 'except : ValueError :', comp_name
 
-			if positive_holdings and units_1k <= 0 :
-				continue
+			if plus_holdings_only:
+				if units_1k <= 0 :
+					continue
+
+			if zero_holdings_only:
+				if units_1k > 0 :
+					continue
 
 			if sort_type_rank:
 				if  rank > 500 and units_1k <= 0:
@@ -183,11 +188,17 @@ class Plan(Amfi):
 		fh.write(p_str)
 		fh.close()
 
+	# print all holdings : plus and zero 
 	def print_phase3(self, out_filename):
-		self.print_phase2(out_filename, True, False)
+		self.print_phase2(out_filename, True)
 
+	# print plus holdings only
 	def print_phase4(self, out_filename):
-		self.print_phase2(out_filename, True, True)
+		self.print_phase2(out_filename, True, True, False)
+
+	# print zero holdings only
+	def print_phase5(self, out_filename):
+		self.print_phase2(out_filename, True, False, True)
 
 	def get_plan_comp_units(self, name):
 		if name in self.plan_comp_units:
