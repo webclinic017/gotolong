@@ -141,6 +141,8 @@ class Plan(Amfi):
 		p_str += ', '
 		p_str += '-' 
 		p_str += ', '
+		p_str += '-' 
+		p_str += ', '
 		p_str += str(total_units)
 		p_str += ', '
 		p_str += 'large '  + str(int(round(float((cap_units['Large Cap']*100.0)/total_units)))) +' %'
@@ -153,6 +155,8 @@ class Plan(Amfi):
 		
 		# Ideal portfolio distribution 
 		p_str = 'Ideal'
+		p_str += ', '
+		p_str += '-' 
 		p_str += ', '
 		p_str += '-' 
 		p_str += ', '
