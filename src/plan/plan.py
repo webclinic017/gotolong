@@ -115,8 +115,14 @@ class Plan(Amfi):
 					cap_units[captype] = units_1k
 			except ValueError:
 				print 'except : ValueError :', comp_name
+
 			if positive_holdings and units_1k <= 0 :
 				continue
+
+			if sort_type_rank:
+				if  rank > 500 and units_1k <= 0:
+					continue
+
 			comp_name = self.get_amfi_cname_by_code(isin)
 			p_str = comp_name
 			p_str += ', '

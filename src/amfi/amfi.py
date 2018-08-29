@@ -139,9 +139,9 @@ class Amfi(object):
 	def get_amfi_cname_by_code(self, amfi_isin):
 		if amfi_isin in self.amfi_cname:
 			return self.amfi_cname[amfi_isin]
-		return '0'
+		return 'UNK_COMP'
 
 	def get_amfi_ticker_by_code(self, amfi_isin):
 		if amfi_isin in self.amfi_ticker:
 			return self.amfi_ticker[amfi_isin]
-		return '0'
+		return 'UNK_TICKER'
