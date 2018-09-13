@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,1108,1000,1108000,,
+,,1147,1000,1147000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -20,19 +20,19 @@ Auto - Tractors,Company,,VSTTILLERS,,,
 Auto Ancillaries,Company,Auto,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 ,PEP,,,,,Jaya Galla (TDP MP)
 ,Units,24,20,2,1,1
-Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul Goetze
-,Units,0,0,0,0,0
-Auto Ancillaries,Company,,Sundaram Clayton,Endurance Technologies,Varroc,Minda Industries
-,Units,0,0,0,0,0
+Auto Ancillaries,Company,,WABCO,Gabriel India,Shriram Pistons & Rings,Federal Mogul Goetze
+,Units,2,2,0,0,0
+Auto Ancillaries,Company,,Sundaram Clayton,Endurance ,Varroc,Minda Industries
+,Units,2,0,2,0,0
 Group 2,,,,,,
 Banks - Private Sector,Company,,HDFC Bank,ICICI,Axis Bank,Kotak Mahindra Bank
 ,Units,29,20,5,2,2
-Banks - Private Sector,Company,,YES Bank,IndusInd Bank,,
-,Units,4,2,2,,
+Banks - Private Sector,Company,,Bandhan Bank,IndusInd Bank,YES Bank,
+,Units,6,2,2,2,
 Banks - Public Sector,Company,,SBI,,,
 ,Units,5,5,,,
 Bearings,Company,,SKF India,SCHAEFFLER India,,
-,Units,2,2,0,,
+,Units,4,2,2,,
 Breweries & Distilleries,Company,,United Spirits,United Breweries,Radico Khaitan,IFB Agro
 ,Units,15,10,5,0,0
 Cables - Power & Others,,,,,,
@@ -87,7 +87,7 @@ Group 5,,,,,,
 Diversified,Company,,3M India,Grasim,Godrej Industries,Pilani Investment & Industries
 ,Units,21,15,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
-,Units,0,0,0,0,
+,Units,5,2,3,0,
 Domestic Appliances,Company,,TTK Prestige,Bajaj Electric,Hawkins Cooker,
 ,Units,5,5,0,0,
 Dry Cells,Company,,Eveready ,Indo National,Panasonic Energy India,
@@ -111,17 +111,19 @@ Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chem
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
-,Units,20,5,5,10,0
+,Units,23,5,5,10,3
 Finance - Insurance,Company,,ICICI Prudential,SBI Life,HDFC Standard Life,
 ,Units,15,5,5,5,
 Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance
-,Units,18,10,5,3,0
+,Units,20,10,5,3,2
 Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,Tata Investment Corp,
 ,Units,10,5,3,2,
 Finance - Investments,Company,,TI financial holding,L&T Finance Holdings,Aditya Birla Capital,
 ,Units,6,2,2,2,
 Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Financial,Manappuram Finance
-,Units,8,0,3,3,2
+,Units,11,3,3,3,2
+Finance - Leasing & Hire Purchase,Company,,Cholamandalam Investment & Finance,Sundaram Finance,Shriram City Union,
+,Units,5,2,3,,
 Finance - Term Lending Institutions,Company,,Power Finance,Rural Electrification Corporation,,
 ,Units,10,5,5,,
 Group 7,,,,,,
@@ -129,6 +131,8 @@ Food Processing,Company,,Nestle,Britannia,GlaxoSmithKline Consumer,Varun Beverag
 ,Units,20,5,5,5,5
 Food Processing,Company,,Coffee Day,KRBL,Venkys India,Future Consumer Limited
 ,Units,8,2,2,2,2
+Food Processing,Company,,Hatsun,,,
+,Units,2,2,,,
 Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Units,2,2,0,0,0
 Hospitals & Medical Services,Company,,Apollo Hospitals,Fortis Healthcare,Narayana Hrudayalaya,Aster DM
@@ -143,6 +147,9 @@ Infrastructure - General,Company,,Larsen & Toubro ,Adani Ports,Siemens India,ABB
 ,Units,35,20,5,5,5
 Infrastructure - General,Company,,BHEL,NBCC,Engineers India,Schneider Electric Infrastructure
 ,Units,15,5,5,5,0
+Infrastructure - General,Company,,BEML,,,
+,Units,2,2,,,
+,,,,,,
 Leather Products,Company,,Bata,Relaxo Footwear,Khadim,Liberty shoes
 ,Units,10,5,5,0,0
 Lubricants,Company,,Castrol,Gulf Oil,Tide Water Oil,
@@ -158,6 +165,8 @@ Mining & Minerals,Company,,Coal India ,Vedanta,NMDC,
 ,Units,15,5,5,5,
 Oil Drilling And Exploration,Company,,ONGC,GAIL,Petronet LNG,Oil India
 ,Units,16,5,4,4,3
+Oil Drilling And Exploration,Company,,Indraprasath Gas,,,
+,Units,5,5,,,
 Packaging,Company,,Uflex,Essel Propack,Huhtamaki PPL,
 ,Units,6,2,2,2,
 Paints & Varnishes,Company,,Asian Paints,Kansai Nerolac,Berger Paints,Akzo Nobel
@@ -176,13 +185,15 @@ Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 ,Units,25,5,5,10,5
 Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,LALPATHLAB
-,Units,8,2,2,2,2
+Pharmaceuticals,Company,,Glaxosmithkline Pharma,Sanofi India,Abbott India,Pfizer
+,Units,6,2,2,2,2
+Pharmaceuticals,Company,,Biocon,LALPATHLAB,,
+,Units,4,2,2,,
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Units,10,5,5,0,
 Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrigation
 ,Units,11,2,2,5,2
-Plastics,Company,,Astral,Finolex,Prince Plastics,
+Plastics,Company,,Astral,Finolex Industries,Prince Plastics,
 ,Units,0,0,0,0,0
 Power - Generation & Distribution,Company,,NTPC ,NHPC ,NLC India,Tata Power
 ,Units,18,10,3,3,2
@@ -263,5 +274,7 @@ Misc: Trading,Company,,BSE,MCX,Central Depository,ICICI Securities
 ,Units,8,2,2,2,2
 Misc: Asset Management,Company,,HDFC AMC,,,
 ,Units,2,2,,,
-Mic: Unknown,Company,,Sheela foam,,,
+Misc: Unknown,Company,,Sheela foam,,,
 ,Units,2,2,,,
+Misc: Defense,Company,,HAL,Bharat Dynamics,,
+,Units,2,2,0,,

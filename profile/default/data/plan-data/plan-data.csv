@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,1108,1000,1108000,,
+,,1147,1000,1147000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -28,25 +28,25 @@ Auto Ancillaries,Company,Auto,Bosch,Motherson Sumi,Exide Industries,Amara Raja B
 Auto,Details,Set -1,Bosch (German Giant. World's largest supplier of automative parts.) : High Share price 23K ,"Motherson Sumi (Flagship company of Samvardhan group. JV with Sumitomo Wiring of Japan, very big auto component company) : 4 major products: wiring harnesses, rear view mirrors, polymers and elastomers. Internal and external auto components. wiring and mirrors. rear view mirror. largest manufacturer and supplier of rear view mirrors.",Exide Industries (UK Based Chloride Eastern Ltd : 45% share) : India moves on Exide. The gap between net sales of Exide and Amaron is negligible. Competitors : Amaron (Amara Raja Batteries & Johnson Controls) and Tata Green (Tata Autocomp tie up with GS Yuasa of Japan).,"Amara Raja Batteries ( automative battery brand : AMARON ) : Lasts long, Really long. 25% Ownership by Johnson controls, USA (world leader in batteries) ."
 ,PEP,,,,,Jaya Galla (TDP MP)
 ,Units,24,20,2,1,1
-Auto Ancillaries,Company,,WABCO India,Gabriel India,Shriram Pistons & Rings,Federal Mogul Goetze
-Auto,Details,Set -2 (small companies with profit < 100 cr),WABCO India (Westinghouse Air Brake Company. US auto anciliiary giant : vehicle controls systems like braking etc. Power Brakes etc),"Gabriel India - Shock absrober, closest competitor is Munjal Showa (Japanese major in shock absrober)",Shriram Pistons & Rings,"Federal Mogul (auto parts, powertrain, piston etc)"
-,Units,0,0,0,0,0
-Auto Ancillaries,Company,,Sundaram Clayton,Endurance Technologies,Varroc,Minda Industries
-Auto,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).","aluminium casting, alloy wheel, brake, shock absorber, clutch",Vehicle lighting,"UnoMinda, Security system"
-,Units,0,0,0,0,0
+Auto Ancillaries,Company,,WABCO,Gabriel India,Shriram Pistons & Rings,Federal Mogul Goetze
+Auto,Details,Set -2 (small companies with profit < 100 cr),Wabco India. WABCO India (Westinghouse Air Brake Company. US auto anciliiary giant : vehicle controls systems like braking etc. Power Brakes etc),"Gabriel India - Shock absrober, closest competitor is Munjal Showa (Japanese major in shock absrober)",Shriram Pistons & Rings,"Federal Mogul (auto parts, powertrain, piston etc)"
+,Units,2,2,0,0,0
+Auto Ancillaries,Company,,Sundaram Clayton,Endurance ,Varroc,Minda Industries
+Auto,Details,Set -3 (small companies with profit < 100 cr),"Sundaram Clayton (Casting for auto industry, parent of TVS group).","Endurance Technologies. aluminium casting, alloy wheel, brake, shock absorber, clutch",Vehicle lighting,"UnoMinda, Security system"
+,Units,2,0,2,0,0
 Group 2,,,,,,
 Banks - Private Sector,Company,,HDFC Bank,ICICI,Axis Bank,Kotak Mahindra Bank
 BFSI,Details,Net Interest Income should be compared with profit.,,,,Kotak Mahindra Bank : mcap to net interest income ratio is too high compared to peers but growth rate is good. PEG looks ok. The dividend paid is very less compared to peers.
 ,Units,29,20,5,2,2
-Banks - Private Sector,Company,,YES Bank,IndusInd Bank,,
-BFSI,Details,Set -2 ,YES Bank (TBB),IndusInd Bank (TBB),,
-,Units,4,2,2,,
+Banks - Private Sector,Company,,Bandhan Bank,IndusInd Bank,YES Bank,
+BFSI,Details,Set -2 ,Bandhan Bank - very cost oriented and focus on micro finance.,IndusInd Bank : Started by Hinduja family.,YES Bank (TBB),
+,Units,6,2,2,2,
 Banks - Public Sector,Company,,SBI,,,
 BFSI,Details,"Key factors : Deposits, Advances, Net Interest Margin, PAT, NPA (% of revenue and % of profit)",SBI -  Largest PSB,,,
 ,Units,5,5,,,
 Bearings,Company,,SKF India,SCHAEFFLER India,,
-Auto,Details,,"SKF India (Svenska Kullager Fabriken, Worlds largest bearing manufacturer in World, Sweedish firm. Sweedish Ball Bearing. Fortune Global 2000. One of the largest company in sweden.)",SCHAEFFLER India (German auto giant) : Worlds 2nd largest bearing manufacture. Just after SKF. TBB,,
-,Units,2,2,0,,
+Auto,Details,,"SKF India (Svenska Kullager Fabriken, Worlds largest bearing manufacturer in World, Sweedish firm. Sweedish Ball Bearing. Fortune Global 2000. One of the largest company in sweden.)",SCHAEFFLER India (German auto giant) : Worlds 2nd largest bearing manufacture. Just after SKF.,,
+,Units,4,2,2,,
 Breweries & Distilleries,Company,,United Spirits,United Breweries,Radico Khaitan,IFB Agro
 Alcohol,Details,Very low profit margin,"United Spirits : Owner Diageo is world leader in spirits. 14 Brands : Scotch (Johnie Walker - worlds largest selling), Whiskey (McDowell No. 1 - Worlds largest selling), Rum (Celebration Run - Worlds largest selling), Vodka (Smirnoff - worlds largest selling) . Other Brands : VAT 69, Black & White, Black Dog Scotch, McDowell Signature (whiskey), Royal challenge (whiskey), Director's special (whiskey), Bagpiper (whiskey), White mischief (vodka), romanv (vodka)","United Breweries (Owner Heinken) : Brands : Kingfisher, Kalyani Black label, flying horse,  Raj Cobra, Taj mahal, Bullet, Charger, Zingaro",Radico Khaitan (India's oldest and largest liquour manufacturer. Domestic player : 8 PM brands),IFB Agro also does IMIL(Indian Made Indian Liquor). Tilaknagar Industries has a IMFL portfolio.
 ,Units,15,10,5,0,0
@@ -123,8 +123,8 @@ Diversified,Company,,3M India,Grasim,Godrej Industries,Pilani Investment & Indus
 ,Details,Holding companies and Diversified companies,"3M (Global MNC, Science Applied to Life : 4000 products: Scotch Glue Stick, Scotch Tape, Scotch Brite : Kitchen items, Water Softener, Water Filteration system, Medical Supplies, Share price : 15K). Doesn't pay dividend (rumor). check AR. High Share Price : 15 K","Grasim (Aditya Birla Group holding company - partial). Manages Textile and Chemical. Two popular subsidiaries : UltraTech, Idea","Godrej Industries (holding company) - subsidiaries are godrej consumer products, godrej properties, godrej agrovet.","Pilani Investment & Industries (Investment vehicle, holding in many Birla companies)"
 ,Units,21,15,3,3,0
 Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
-,Details,Set -2 .Holding companies and Diversified companies. Avoid where ever possible. ,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,Bajaj Holdings & Investments (bajaj auto and bajaj finserv - parent),M&M is a holding company for Mahindra for so many subsidiary companies. (listed in auto),
-,Units,0,0,0,0,
+,Details,Set -2 .Holding companies and Diversified companies. Good for getting consistent dividends.,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,Bajaj Holdings & Investments (bajaj auto and bajaj finserv - parent),M&M is a holding company for Mahindra for so many subsidiary companies. (listed in auto),
+,Units,5,2,3,0,
 Domestic Appliances,Company,,TTK Prestige,Bajaj Electric,Hawkins Cooker,
 ,Details,Bajaj electric profit margin was less,TTK Prestige (Share Price : 6500),Bajaj Electric (includes JV with Morphy Richards also for marketing and service),Hawkins Cooker ? (small and focussed player only on pressure cookers),
 ,Units,5,5,0,0,
@@ -156,14 +156,14 @@ Fertilisers,Company,,Coromandel International,Chambal Fertilisers,Rashtriya Chem
 ,Units,4,2,2,0,0
 Finance - General,,,,,,
 Finance - Insurance,Company,,ICICI Lombard,The New India Assurance,General Insurance,IIFL Holdings
-,Details,"Set - 1 (General Insurance) : Smaller players - National Insurance, United India and Oriental Insurance","ICICI Lombard General Insurance (Only player, listed in Diversified. Canadian Warren Buffet (Prem Watsa's) Fairfax holdings also has a stake in it.)",The New India Assurance(NIA) - Largest general insurance company in India.,"GIC RE (General Insurance corporation of India - Reinsurance) : reinsurance services in key businesses such as fire (property), General Insurance Corporation of Indiamarine, motor, engineering, agriculture, aviation, health, liability, credit and financial liability and life insurance",IIFL Holdings (Prem Watsa Group : TBB)
-,Units,20,5,5,10,0
+,Details,"Set - 1 (General Insurance) : Smaller players - National Insurance, United India and Oriental Insurance","ICICI Lombard General Insurance (Only player, listed in Diversified. Canadian Warren Buffet (Prem Watsa's) Fairfax holdings also has a stake in it.)",The New India Assurance(NIA) - Largest general insurance company in India.,"GIC RE (General Insurance corporation of India - Reinsurance) : reinsurance services in key businesses such as fire (property), General Insurance Corporation of Indiamarine, motor, engineering, agriculture, aviation, health, liability, credit and financial liability and life insurance",IIFL Holdings (Prem Watsa Group)
+,Units,23,5,5,10,3
 Finance - Insurance,Company,,ICICI Prudential,SBI Life,HDFC Standard Life,
 ,Details,Set - 2 (Life Insurance),ICICI Prudential Life Insurance (JV with Prudential PLC of UK),SBI Life (JV with BNP Paribas Cardiff - French bank and financial services company) - IPO,HDFC Standard Life (JV with Standard Life of UK - provider of financial savings & investments) - IPO,
 ,Units,15,5,5,5,
 Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance
-,Details,Price to book value is a key criteria. HUDCO is listed in real estate.,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance Limited (DHFL. Wadhawan group company. Affordable segment.)
-,Units,18,10,5,3,0
+,Details,Price to book value is a key criteria. HUDCO is listed in real estate.,HDFC,LIC housing finance,Indiabulls housing finance,Dewan Housing Finance Limited (DHFL. Wadhawan group company. Affordable segment). LIC & Rakesh Jwala are also investors.
+,Units,20,10,5,3,2
 Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,Tata Investment Corp,
 ,Details,,Muthoot Finance (largest gold finance company in the world). Muthoot Papachchan group company. Top Gold loan provider. Mannapuram has to cover some more distance.,Bajaj FinServ (subsidiary of Bajaj Holdings & Investments). Bajaj Finance and its  JV with Allianz group. The standalone earming and profit may be less but consolidated revenue and profit is high because of Bajaj Finance and JV Bajaj Allianz.,Tata Investment Corp (holding company of tata companies similar to Tata Sons). Mostly dividend income. They should share dividend income with owners or invest in new businesses. OPM should be very high as not much expense. ,
 ,Units,10,5,3,2,
@@ -171,8 +171,11 @@ Finance - Investments,Company,,TI financial holding,L&T Finance Holdings,Aditya 
 ,Details,,"TI financial holding (parent of Cholamandalm finance and ms chola insurance, part of murugappa group)",L&T Finance Holdings (LTFS : L&T Financial Servies) ,"Aditya Birla Capital (Financing, Investing, Insurance etc) : TBB",
 ,Units,6,2,2,2,
 Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Financial,Manappuram Finance
-,Details,"Other smaller players are : Sundaram Finance, Cholamandalam Finance, Shriram City Union. Included only top 5 as per screener.",Bajaj Finance (covered as subsidiary of Bajaj FinServ above) : mostly for two and three wheelers but covers other categories also.,Shriram Transport Finance Corp - STFC (focus on auto finance),"Mahindra & Mahindra Financial Services Limited (all verticals) : car, tractor, farm equipment, rural housing etc and other verticals also now",Manappuram Finance (Gold loan) : Muthoot finance is a bigger player and that is enough. Manapuuram has gold brand value with tie up to all top celebrities by region wise.
-,Units,8,0,3,3,2
+,Details,Big players,Bajaj Finance (covered as subsidiary of Bajaj FinServ above) : mostly for two and three wheelers but covers other categories also.,Shriram Transport Finance Corp - STFC (focus on auto finance),"Mahindra & Mahindra Financial Services Limited (all verticals) : car, tractor, farm equipment, rural housing etc and other verticals also now",Manappuram Finance (Gold loan) : Muthoot finance is a bigger player and that is enough. Manapuuram has gold brand value with tie up to all top celebrities by region wise.
+,Units,11,3,3,3,2
+Finance - Leasing & Hire Purchase,Company,,Cholamandalam Investment & Finance,Sundaram Finance,Shriram City Union,
+,Details,Small players,Cholamandalam Investment & Finance Company Ltd (Murugappa group). Subsidiary of TI Financial Holdings.,"Sundaram Finance is a parent of Sundaram Finance holdings. Also, it includes Sundaram Mutual, Sundram BNP Paribas Home Finance, Royal Sundram General Insurance, Sundram BNP Paribas Fund Services.",,
+,Units,5,2,3,,
 Finance - Term Lending Institutions,Company,,Power Finance,Rural Electrification Corporation,,
 ,Details,,Power Finance Corporation - CPSE Navaratna company,REC (Rural Electrification Corporation) - CPSE Navaratna company,,
 ,Units,10,5,5,,
@@ -183,6 +186,9 @@ Food Processing,Company,,Nestle,Britannia,GlaxoSmithKline Consumer,Varun Beverag
 Food Processing,Company,,Coffee Day,KRBL,Venkys India,Future Consumer Limited
 ,Details,Food Processing - Set 2. FMCG Segment.,"Coffee Day Enterpises has a subsidiary Coffee Day Global limited that owns Cafe Cofee Day. Cafe Coffee Day (Indian cafe chain, Founder V G Siddharth is Son-in-Law of former CM S M Krishna (political risk). The company is diversifying into unrelated territory that has nothing to do with this business. No dividend for last 3 years. IT Raids in 2017 september. ",KRBL (KRB Limited : Worlds larges rice millers and basmati exporters). India Gate Basmati Rice is a flagship brand apart from several other brands.,Venkys India (Listed here from Misc. Poultry feed leader in India. Only listed player. Bought English Premeier league team on company's money. Not good. Others like Suguna food is not listed. IFB Agro and Godjrej AgroVet are other similar feed companies but in different segment.),Future Consumer Limited (FCL) : creating food and fmcg brands.
 ,Units,8,2,2,2,2
+Food Processing,Company,,Hatsun,,,
+,Details,Food Processing - Set 3. FMCG Segment.,"Hatsun Agro Products. Private milk & dairy giant of south india (Asia). Direct sourcing from farmers. Aroyka full cream Milk range. Now, Arun Ice cream and Ibaco Ice cream parlour. Santosa cattle feed also. Now, Oyalo pizza chain also.",,,
+,Units,2,2,,,
 Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Details,,"Asahi Glass (Japanese major, Worlds largest, Mitsubishi company) Glass for car etc.",La Opala is a small player.,Saint Gobain (very small player : covered through its parent in abrasives : grindwel norton),Piramal Glass (medicine bottles) is small player.
 ,Units,2,2,0,0,0
@@ -204,6 +210,10 @@ Infrastructure - General,Company,,Larsen & Toubro ,Adani Ports,Siemens India,ABB
 Infrastructure - General,Company,,BHEL,NBCC,Engineers India,Schneider Electric Infrastructure
 ,Details,Infrastructure - General - Set 2,"BHEL (Bharat Heavy Electricals Limited, Leader in Power Plant Equipments) - Maharatna",NBCC - Navaratna,Engineers India - Navaratna,Schneider Electric Infrastructure  (It is struggling in India with no dividend for last 5 years and same sale numbers and net profit is also not positive and trend is also not positive. Very irregular numbers.) Looks like it has not been run well.
 ,Units,15,5,5,5,0
+Infrastructure - General,Company,,BEML,,,
+,Details,Infrastructure - General - Set 3,BEML (Bharat Earth movers limited) : rack and coach for metro. Tatra truck for defense.,,,
+,Units,2,2,,,
+,,,,,,
 Leather Products,Company,,Bata,Relaxo Footwear,Khadim,Liberty shoes
 ,Details,"Shoes ... dominated by bata, relaxo and mnc apart from regular retailers like Aditya Birla Fashion & Retail, Biyani's future lifestyle. Tata ? and Reliance Trends ?. Others like Mirza International (REDTAPE) - export oriented. ",Bata (MNC with a long history in shoes.),"Relaxo Footwear (Brands : Relaxo, FLITE, SPARX, BAHAMAS) decent footwear portfolio and great brand recall. Each brand endorsed by a different celebrity.","Khadim (TBB : review the performance, no dividend)","Liberty shoes (TBB : poor margins, poor ICR)"
 ,Units,10,5,5,0,0
@@ -213,7 +223,7 @@ Lubricants,Company,,Castrol,Gulf Oil,Tide Water Oil,
 Machine Tools,,,,,,
 Group 8,,,,,,
 Media & Entertainment,Company,,ZEE Entertainment,Dish TV,PVR,Sun TV Network
-,Details,,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries.","Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years.","PVR (Best movie experience in India, largest number of screens). Go to forum anyday, to experience the scale and experience. INOX is close 2nd. Both have close to 500 screens each.","Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer."
+,Details,,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries.","Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years.","PVR (Best movie experience in India, largest number of screens : 700 screens, 160 properties, 60 cities). PVR became 7th largest cinema exhibitor in the world by number of admissions (100 millon) in a year after acquring Satyam Cinemas of South. Future plan : 1000 screens by 2020. Go to forum anyday, to experience the scale and experience. INOX is 2nd. It has close to 500 screens. ","Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer."
 ,PEP,,,,,Maran Family (DMK)
 ,Units,15,5,5,5,0
 Metals - Non Ferrous,Company,,Hindustan Zinc,,,
@@ -226,6 +236,9 @@ Miscellaneous,Details,All the misc companies are covered in December month as so
 Oil Drilling And Exploration,Company,,ONGC,GAIL,Petronet LNG,Oil India
 ,Details,low margin,ONGC (65% stake in MRPL - mangalore refinery and petroleum limited :15mt capacity)  - CPSE Maharatna,GAIL - CPSE Maharatna,"Petronet LNG (Import of LNG : Liquid Natural Gas and LNG Terminals) . It is a JV of GAIL, ONGC, IOCL and BPCL.  Each has 12.5% totalling 50% in it. ENGIE (Gazde France : French : Electric Utility : MNC : strategic partner) owns 10% in it. Public holds 40%. - Stake owned by CPSE Maharatna & Navaratna.",Oil India - CPSE NAVARATNA
 ,Units,16,5,4,4,3
+Oil Drilling And Exploration,Company,,Indraprasath Gas,,,
+,Details,low margin,"Indraprasath Gas Ltd. Jointly owned by GAIL and BPCL. 45%. CGD in Delhi, NCR, Noida, Kanpur, Pune etc",,,
+,Units,5,5,,,
 Packaging,Company,,Uflex,Essel Propack,Huhtamaki PPL,
 ,Details,,"Uflex (Flexible Packaging : global clients P&G, PepsiCo; Tata Global; Mondelez, L' Oreal, Britannia, Haldiram, Amul, Kimberly Clark, Ferro Rocher, Perfetti, GSK, Nestle, Agrotech Foods, Coca Cola, Wrigley, Johnson & Johnson among other) : Concern: low dividend","Essel Propack : Leader in tube packaging. oral (colgate, P&G, dabur, Vicco, Unilever - ?) and non-oral (emami, Shehnaz Hussain) : Concern : Looks good.","Huhtamaki PPL (Impressive client list that includes Britannia, Coca Cola, Ferrero, Glaxo Smithkline, Marico, Mondelez, Nestle, Pepsico, P&G, Unilever, etc) : Concern : less than 100 cr net profit.",
 ,Units,6,2,2,2,
@@ -250,19 +263,22 @@ Pharmaceuticals,Company,,Cipla,Lupin,Sun Pharma ,Piramal Enterprises
 ,Details,"Pharma - Set 1. Hospital and Pharma is a same category. Competitive market, covered companies with approx 10 K Cr sales and good profit margin.",Cipla,Lupin,Sun Pharma (Acquired Ranbaxy also) Dilip Singhvi,"Piramal Enterprises (Pharma like i-can, i-know etc, Toy brand - acquired company Little - MRF's funskool is a closest listed competitor, Real Estate through Piramal Capital, Finance like Shriram Capital, Shriram City Union Finance and Shriram Transport Finance etc) : Ajay Piramal : Growth Oriented. Finace to overtake Pharma this year. 3K."
 ,Units,25,5,5,10,5
 Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
-,Details,Pharma - Set 2.,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,Cadila Healthcare
+,Details,Pharma - Set 2.,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Pharma,"Cadila Healthcare, Zydus Cadilla, Zydus wellness (Subsidiary) : Sugarfree etc"
 ,Units,16,5,5,3,3
-Pharmaceuticals,Company,,Sanofi India,Abbott India,Pfizer,LALPATHLAB
-,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint),"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc."
-,Units,8,2,2,2,2
+Pharmaceuticals,Company,,Glaxosmithkline Pharma,Sanofi India,Abbott India,Pfizer
+,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),GSK Pharma - acquired consumer healthcare JV of Novartis. GSK is a global MNC.,Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint)
+,Units,6,2,2,2,2
+Pharmaceuticals,Company,,Biocon,LALPATHLAB,,
+,Details,Pharma - Set 4,Biocon - leader in Biosimilars In India.,"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc.",,
+,Units,4,2,2,,
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Details,,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)","Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)",Largest tea plantation company with estates spread in Assam and WB. Acquired tea estates in other countries also. Both McLeod Russel (Williamson Magor Group) and Eveready group are owned by B M Khaitan group. Eveready has a tie up with McLeod Russel for Tej brand (packet tea).,
 ,Units,10,5,5,0,
 Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrigation
 ,Details,"Plastic player : Astral, Finolex Industries and Price plastic revenues are around 1K only. PVC, CPVC, UPVC, HDPE. Input : Crude oil. Competitor : cement, iron etc Included diversified player like Supreme Industries and Jain Irrigation systems only.",Supreme Industries (complete plastic portfolio),"Nilkamal (Home furniture of plastics, world's largest manufacturer of moulded furniture and Asia's largest processor of plastic moulded products) : Share Price 2K","VIP Industries (world's second largest luggage maker, VIP, Alfa, Aristocrat, SkyBags, Caprese, Carlton) : High Brand Recall, Strong Distribution network.","Jain Irrrigation Systems  (leader in agri input and pipes, diversified player)"
 ,Units,11,2,2,5,2
-Plastics,Company,,Astral,Finolex,Prince Plastics,
-,Details,"Plastic player : Astral, Finolex Industries and Price plastic revenues are around 1K only. PVC, CPVC, UPVC, HDPE. Input : Crude oil. Competitor : cement, iron etc Included diversified player like Supreme Industries and Jain Irrigation systems only.",,,,
+Plastics,Company,,Astral,Finolex Industries,Prince Plastics,
+,Details,"Plastic player : Astral, Finolex Industries and Price plastic revenues are around 1K only. PVC, CPVC, UPVC, HDPE. Input : Crude oil. Competitor : cement, iron etc Included diversified player like Supreme Industries and Jain Irrigation systems only.","Astral pipes, Astral Poly technik",Finolex Industries deals with pipes. Finolex pipes.,Small player right now.,
 ,Units,0,0,0,0,0
 Power - Generation & Distribution,Company,,NTPC ,NHPC ,NLC India,Tata Power
 ,Details,Set -1,NTPC - CPSE Maharatna,NHPC (National Hydro power corporation ) - CPSE,NLC India (Neyveli Lignite corp) - CPSE Navaratna,Tata Power - Integrated power player. In different types of power generation.
@@ -371,6 +387,9 @@ Misc: Trading,Company,,BSE,MCX,Central Depository,ICICI Securities
 Misc: Asset Management,Company,,HDFC AMC,,,
 ,Details,,HDFC AMC (HDFC MF). Competitor is Nippon Reliance AMC and ICICI AMC.,,,
 ,Units,2,2,,,
-Mic: Unknown,Company,,Sheela foam,,,
+Misc: Unknown,Company,,Sheela foam,,,
 ,Details,,Sheela foam (Mattress player included here. Can also be considered with things like Paint or Nilkamal in home furnishing also),,,
 ,Units,2,2,,,
+Misc: Defense,Company,,HAL,Bharat Dynamics,,
+,Details,,"HAL - Hindustan Aeronautics Limited. Company into aerospace and defense. Mainly into aircraft, helicopter and jet engines.",BDL - Bharat Dynamics,,
+,Units,2,2,0,,
