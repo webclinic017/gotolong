@@ -114,7 +114,12 @@ Investor is not familiar with brand	General public and investor are not familiar
 
 Parameter	Great	Ideal	Good	Bad	Very Bad
 Dividend Payout Ratio	> 30%	20 % (approx)	> 10 %	< 10 %	0 %
-Dividend yield 	> 4% is briiliant (more than 3.5% interest in regular savings account)				
+Dividend yield 	> 4% is briiliant (more than 3.5% interest in regular savings account)	
+
+Top Dividend yield of BSE 500 and BSE 200 stocks.
+https://trendlyne.com/stock-screeners/top-dividend-stocks/index/BSE500/bse-500/
+https://trendlyne.com/stock-screeners/top-dividend-stocks/index/BSE200/bse-200/
+
 
 13. PEG vs PE
 PEG also and not just PE : Check PEG (Price to Earnings to Growth) Ratio:  (P/E/G : Growth rate) in case companies have similar growth.
