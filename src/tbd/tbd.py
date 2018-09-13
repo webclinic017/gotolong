@@ -43,11 +43,13 @@ class Tbd(Plan, Demat, Screener):
 		self.process_tbd_data()
 	
 	def process_tbd_data(self):
-		for comp_name in sorted(self.plan_comp_units):
+		for isin_code in sorted(self.plan_comp_units):
 			try:
-				plan_units = int(self.plan_comp_units[comp_name])
-				isin_code = self.get_isin_code_by_name(comp_name)
+				plan_units = int(self.plan_comp_units[isin_code])
+			        isin_name = self.get_isin_name_by_code(isin_code)
+				comp_name = isin_name
 				self.tbd_isin_code[comp_name] = isin_code	
+
 				if isin_code == '':
 					self.tbd_captype[comp_name] =   '-'
 					if self.debug_level > 0:
@@ -102,7 +104,11 @@ class Tbd(Plan, Demat, Screener):
 			sorted_items = sorted(self.tbd_prank, key=self.tbd_prank.__getitem__, reverse=True)
 		for comp_name in sorted_items:
 			try:
-				plan_units = int(self.plan_comp_units[comp_name])
+			        isin_code = self.get_isin_code_by_name(comp_name)
+				if isin_code in self.plan_comp_units:
+					plan_units = int(self.plan_comp_units[isin_code])
+				else:
+					plan_units = 0
 				if plan_only and plan_units <= 0:
 					if self.debug_level > 1:
 						print 'no planned units : ', comp_name
