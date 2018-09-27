@@ -1,10 +1,10 @@
-,Comp #,EQ Collection ,SURI 310,Prepared By : @surinder432,Weight Multiplier,1000,Last Updated : 31-Jul-2018
-,228,Company Category,Platinum,Diamond,Golden,Ruby,Silver
+,Comp #,EQ Collection ,SURI 250,Prepared By : @surinder432,Weight Multiplier,1000,Last Updated : 31-Jul-2018
+,252,Company Category,Platinum,Diamond,Golden,Ruby,Silver
 ,Weight,,20,10,5,2,1
-,Exp Value,920000,200000,200000,200000,160000,160000
-,Ideal #,310,10,20,40,80,160
-,Actual #,233,13,23,41,77,79
-,Cur Value,928000,260000,230000,205000,154000,79000
+,Exp Value,860000,200000,200000,200000,160000,100000
+,Ideal #,250,10,20,40,80,100
+,Actual #,252,12,28,47,81,84
+,Cur Value,1001000,240000,280000,235000,162000,84000
 ,,,,,,,
 Category,Orgs #,Sub Category,Platinum,Diamond,Golden,Ruby,Silver
 Alochol,1,Beer,,,UNITED BREWERIES,,
@@ -13,28 +13,31 @@ Auto,2,Batteries,,,,EXIDE INDUSTRIES,AMARA RAJA BATTERIES
 ,4,Tyres - 1,,MRF,APOLLO TYRES,CEAT LIMITED,JK TYRE
 ,1,Tyres - 2 (off road),,,,,BALKRISHNA INDUSTRIES
 ,1,Glass,,,,,ASAHI INDIA GLASS
-,4,"2 W (Scooter, Motorcycle) & 3W",,HERO MOTOCORP,BAJAJ AUTO LIMITED,TVS MOTOR COMPANY,EICHER MOTORS
-,2,Auto Ancilliary,,,,BOSCH,MOTHERSON SUMI
+,4,2 W (Scooter & Motorcycle) & 3W,,HERO MOTOCORP,BAJAJ AUTO LIMITED,TVS MOTOR COMPANY,EICHER MOTORS
+,4,Auto Ancilliary,,BOSCH,MOTHERSON SUMI,Endurance,WABCO
 ,1,4 W,MARUTI SUZUKI,,,,
-,1,Bearing,,,,,SKF INDIA
+,2,Bearing,,,,SKF INDIA,Schaffler
 ,1,Truck,,,TATA MOTORS,,
 ,1,Bicycle,,,,Tube investment of India,
-,1,Tractor Equipment,,,,,VSTTILLERS TRACTORS
+,1,Tractor Equipment,,,,,VST TILLERS TRACTORS
 ,1,Tractor,MAHINDRA & MAHINDRA,,,,
-"Casting, Forging & Fasteners",1,Casting & Forging,,,,,Mahindra CIE Automotive
+Casting & Forging & Fasteners,1,Casting & Forging,,,,,Mahindra CIE Automotive
 Travel,1,Aviation,,,,INTERGLOBE AVIATION,
-"Bank, Finance, Insurance, Trading & Rating",5,Bank -Private,HDFC BANK,STATE BANK OF INDIA,ICICI BANK,AXIS BANK LIMITED,KOTAK MAHINDRA BANK
-,1,Finance - auto,,,,,SHRIRAM TRANSPORT FINANCE
-,4,Finance - Housing,HDFC,LIC HOUSING FINANCE,,HUDCO,INDIABULLS HOUSING FINANCE
+Bank & Finance & Insurance & Trading & Rating,5,Banks -1,HDFC BANK,STATE BANK OF INDIA,ICICI BANK,KOTAK MAHINDRA BANK,Bank of Baroda
+,3,Banks-2,,,AXIS BANK LIMITED,IndusInd Bank,Bandhan Bank
+,2,Finance - auto,,,Bajaj Finance,,SHRIRAM TRANSPORT FINANCE
+,5,Finance - Housing,HDFC,LIC HOUSING FINANCE,INDIABULLS HOUSING FINANCE,HUDCO,Dewan Housing Finance
 ,2,Finance - Power,,,,PFC,REC
-,2,Finance - mix of all finance types,,,,L&T Finance Holdings,MAHINDRA & MAHINDRA FINANCE
+,4,Finance - mix of all finance types,,L&T Finance Holdings,MAHINDRA & MAHINDRA FINANCE,Cholamandalam Investment & Finance,IIFL Holdings
 ,2,Finance - Gold,,,,MUTHOOT FINANCE LIMITED,Mannapuram Finance
-,2,Finance & Insurance - Both,,,,Tube Investment Financial Holdings,BAJAJ FINSERV
+,3,Finance & Insurance - Both,,,BAJAJ FINSERV,Tube Investment Financial Holdings,Sundaram Finance
 ,2,Insurance - General,,,ICICI LOMBARD GEN,NEW INDIA ASSURANCE,
 ,3,Insurance - Life,,,SBI LIFE,HDFC LIFE,ICICI PRUDENTIAL LIFE
 ,1,Re-Insurance (Insurance of Insurance),,GIC Re,,,
-,1,Trading - Stock Exchange,,,,,BSE
-,1,Depository Service,,,,,CDSL
+,2,Stock Exchange,,,,BSE,MCX
+,1,Stock Broker & Brokerage,,,,,ICICI Securities
+,1,Asset Management,,,,,HDFC AMC
+,1,Depository Service,,,,CDSL,
 ,3,Rating agencies (Credit),,,CRISIL,CARE RATINGS,ICRA
 Real Estate,4,Cements,ULTRATECH CEMENT,,ACC,AMBUJA CEMENTS,SHREE CEMENTS
 ,3,Developers - Pvt,,,DLF,PRESTIGE ESTATES,GODREJ PROPERTIES
@@ -45,7 +48,7 @@ Real Estate,4,Cements,ULTRATECH CEMENT,,ACC,AMBUJA CEMENTS,SHREE CEMENTS
 ,1,Plyboard,,,,,CENTURY PLYBOARDS
 ,1,Laminate,,,,,GREENLAM INDUSTRIES
 ,1,Home furnishing (mattress),,,,SHEELA FOAM,
-"Chemicals, Agro-chemicals",4,Agro Chemicals - Domestic,,COROMANDEL INTERNATIONAL,CHAMBAL FERTILIZERS,RALLIS INDIA,PI INDUSTRIES
+Chemicals & Agro-chemicals,4,Agro Chemicals - Domestic,,COROMANDEL INTERNATIONAL,CHAMBAL FERTILIZERS,RALLIS INDIA,PI INDUSTRIES
 ,4,Agro Chemicals - MNC,,UPL LIMITED,BAYER CROPSCIENCE,BASF INDIA,MONSANTO INDIA
 ,1,Salt,,,,,TATA CHEMICALS
 ,1,Fevicol (Adhesive),,PIDILITE INDUSTRIES,,,
@@ -80,28 +83,28 @@ Metals,2,Aluminium,,,HINDALCO,,NATIONAL ALUMINIUM
 ,1,Iron,,,,NMDC,
 ,1,Diversified,,VEDANTA,,,
 ,1,Coal,,,,COAL INDIA,
-Fitness,1,Gym,,,,TALWALKARS BETTER VALUE,
+Fitness,2,Gym,,,,TALWALKARS BETTER VALUE,TALWALKARS Lifestyle
 Retail,4,Large format,,Avenue Supermarts,TRENT LTD,SHOPPERS STOP,FUTURE RETAIL
 Textile -1 ,3,Brand Ownership,,,ADITYA BIRLA FASHION & Retail,FUTURE LIFESTYLE FASHIONS,ARVIND Limited
 Textile - 2,1,,,,,,PAGE INDUSTRIES
 Footwear,2,Focussed groups only,,,,BATA INDIA,RELAXO FOOTWEARS
 Bags / Luggage,1,Luggage & Bags,,,,VIP INDUSTRIES,
 Paper,0,paper packaging,,,,,
-Plastic & Packaging Products,3,"home, retail, agri",,,SUPREME INDUSTRIES,NILKAMAL,JAIN IRRIGATION SYSTEMS
+Plastic & Packaging Products,3,home & retail & agri,,,SUPREME INDUSTRIES,NILKAMAL,JAIN IRRIGATION SYSTEMS
 ,3,packaging : fmcg,,,ESSEL PROPACK,Huhtamaki PPL,UFLEX
 Batteries (Dry cell),1,Toy battery,,,,,EVEREADY INDUSTRIES
 Pump,1,water pump,,,,,KSB PUMPS
 Hospitals,3,Multi-city players,,,APOLLO HOSPITALS,FORTIS HEALTHCARE,NARAYANA HRUDAYALAYA
 Pharma,4,Domestic - 1,,SUN PHARMACEUTICAL,DR REDDY'S LAB,CIPLA,GLENMARK PHARMACEUTICALS
-,3,Domestic -2,,,LUPIN LIMITED,CADILA HEALTHCARE,AUROBINDO PHARMA
-,3,International,,,ABBOTT INDIA,SANOFI INDIA,PFIZER
+,4,Domestic -2,,LUPIN LIMITED,CADILA HEALTHCARE,AUROBINDO PHARMA,BIOCON
+,4,International,,ABBOTT INDIA,SANOFI INDIA,PFIZER,GSK Pharma
 ,1,Diagnostic,,,,DR. LAL PATHLABS,
 POWER,4,Power Generation,,NTPC LIMITED,TATA POWER CO,NLC,NHPC
 ,1,Power Plant (Equipments),,,,BHARAT HEAVY ELECTRICALS,
-,1,Transmission & Distribution,,,,POWER GRID CORPORATION,
+,2,Transmission & Distribution,,,,POWER GRID CORPORATION,Adani Transmission
 Oil & Gas,3,Explorers and Refineries,RELIANCE INDUSTRIES,ONGC,,OIL INDIA,
 ,1,Gas Terminals,,,,PETRONET LNG,
-,1,Piping gas etc,,,,GAIL,
+,2,Piped gas & city gas,,,,GAIL,Indraprasath Gas
 ,3,Oil & gas marketing companies,,,BPCL,HPCL,IOCL
 ,1,Lubricant,,,,CASTROL INDIA,
 Logistics,1,Bus,,,,,VRL LOGISTICS
@@ -115,9 +118,9 @@ Logistics,1,Bus,,,,,VRL LOGISTICS
 Telecom,2,Telcom,BHARTI AIRTEL,Vodafone Idea,,,
 ,1,Tower Infrastructure,,,,BHARTI INFRATEL,
 Diversified,3,Multiple sectors,,,PIRAMAL ENTERPRISES,ADANI ENTERPRISES,3M INDIA LIMITED
-,2,Holding companies,,,,GRASIM,GODREJ INDUSTRIES
-Defense,0,Aerospace,,,,,
-,1,Defense Arms & Equipments,,,,BHARAT ELECTRONICS,
+,4,Holding companies,,Tata Investment,Bajaj Holdings & Investment,GRASIM,GODREJ INDUSTRIES
+Defense,1,Aerospace,,,,HAL,
+,2,Defense Arms & Equipments,,,,BHARAT ELECTRONICS,Bharat Dynamics
 Abrasives,2,Abrasives and related,,,,Carborundum Universal,Grindwell Norton
 Sugar,3,Sugar Mills,,,EID PARRY,Balrampur Chinni Mills,Shree Renuka Sugars
 Rice,1,Rice mills etc (FMCG),,,,,KRBL
@@ -126,4 +129,4 @@ FMCG Companies (cover all),3,MNC,HINDUSTAN UNILEVER,,NESTLE INDIA,,GLAXOSMITHKLI
 ,3,Domestic - 1,,PROCTER & GAMBLE,COLGATE-PALMOLIVE ,GILLETTE INDIA,
 ,3,Domestic - 2,,,DABUR INDIA LTD,GODREJ CONSUMER PRODUCTS,Future Consumer
 ,3,Domestic - 3,,BRITANNIA INDUSTRIES,,MARICO,EMAMI
-,3,Domestic - 4,,,TATA GLOBAL BEVERAGES,TATA COFFEE,VARUN BEVERAGES
+,4,Domestic - 4,,TATA GLOBAL BEVERAGES,TATA COFFEE,VARUN BEVERAGES,Hatsun Agro
