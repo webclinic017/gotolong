@@ -1,10 +1,10 @@
 ,Comp #,EQ Collection ,SURI 250,Prepared By : @surinder432,Weight Multiplier,1000,Last Updated : 31-Jul-2018
-,254,Company Category,Platinum,Diamond,Golden,Ruby,Silver
+,256,Company Category,Platinum,Diamond,Golden,Ruby,Silver
 ,Weight,,20,10,5,2,1
 ,Exp Value,860000,200000,200000,200000,160000,100000
 ,Ideal #,250,10,20,40,80,100
-,Actual #,254,12,28,47,82,85
-,Cur Value,1004000,240000,280000,235000,164000,85000
+,Actual #,256,12,28,47,84,85
+,Cur Value,1008000,240000,280000,235000,168000,85000
 ,,,,,,,
 Category,Orgs #,Sub Category,Platinum,Diamond,Golden,Ruby,Silver
 Alochol,1,Beer,,,UNITED BREWERIES,,
@@ -45,13 +45,14 @@ Real Estate,4,Cements,ULTRATECH CEMENT,,ACC,AMBUJA CEMENTS,SHREE CEMENTS
 ,3,Ceramics (Tiles) & Granite,,,KAJARIA CERAMICS,SOMANY CERAMICS,Asian Granito
 ,2,Sanitaryware,,,,CERA SANITARYWARE,HSIL LIMITED
 ,4,Paints,,ASIAN PAINTS INDIA LTD,KANSAI NEROLAC,BERGER PAINTS,AKZO NOBEL INDIA
-,1,Plyboard,,,,,CENTURY PLYBOARDS
+,2,Plyboard,,,,CENTURY PLYBOARDS,GREENPLY INDUSTRIES
 ,1,Laminate,,,,,GREENLAM INDUSTRIES
 ,1,Home furnishing (mattress),,,,SHEELA FOAM,
 Chemicals & Agro-chemicals,4,Agro Chemicals - Domestic,,COROMANDEL INTERNATIONAL,CHAMBAL FERTILIZERS,RALLIS INDIA,PI INDUSTRIES
 ,4,Agro Chemicals - MNC,,UPL LIMITED,BAYER CROPSCIENCE,BASF INDIA,MONSANTO INDIA
 ,1,Salt,,,,,TATA CHEMICALS
 ,1,Fevicol (Adhesive),,PIDILITE INDUSTRIES,,,
+,1,Seed ,,,,KAVERI SEED,
 Infrastructure,4,General - Domestic,LARSEN AND TOUBRO,,NBCC,NCC,ENGINEERS INDIA
 ,4,General - MNC,,ABB INDIA,HONEYWELL AUTOMATION,SIEMENS,CUMMINS INDIA
 Consumer Goods,1,Refrigerator,#,,,,
@@ -75,8 +76,8 @@ Media & Entertainment,1,Movies (Theater Screens),,,,PVR LIMITED,
 ,1,TV (General Entertainment),,,,ZEE ENTERTAINMENT,
 ,0,TV (News & Business),,,,,
 Information Technology,4,IT Services  - 1,TCS,INFOSYS,,HCL TECHNOLOGIES,WIPRO
-,2,IT Services - 2,,,,TECH MAHINDRA,LTI
-,2,IT Products,,,,INFO EDGE,LTTS
+,2,IT Services - 2,,,,TECH MAHINDRA,Larsen & Toubro Infotech
+,2,IT Products,,,,INFO EDGE,L&T Technologies
 Metals,2,Aluminium,,,HINDALCO,,NATIONAL ALUMINIUM
 ,1,Zinc,,,HINDUSTAN ZINC,,
 ,2,Steel,,JSW STEEL,TATA STEEL,,
