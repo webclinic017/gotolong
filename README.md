@@ -199,11 +199,10 @@ Review the generated reports file for sale (ordered by company performance score
 
 To ensure that the plan data is in sync with SURI 250 EQUITY FUND.
 
-Input data
-* SURI 250 Fund data
+Input data : SURI 250 Fund data
 * profile/default/data/sfund/sfund-data.csv
    
-Demat Summary data
+Input data : Demat Summary data
 * profile/default/data/demat/icicidirect/demat-summary-data.csv
 * profile/default/data/demat/zerodha/demat-data.csv
 
