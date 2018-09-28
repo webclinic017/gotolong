@@ -195,6 +195,27 @@ Review the generated reports file for buy (ordered by company price score)
 Review the generated reports file for sale (ordered by company performance score)
 * profile/default/reports/tbd-reports/\*sale\*.csv
 
+# SFUND Demat Sync (SURI 250 Equity Fund)
+
+To ensure that the plan data is in sync with SURI 250 EQUITY FUND.
+
+Input data
+* SURI 250 Fund data
+** profile/default/data/sfund/sfund-data.csv
+   
+* Demat Summary data
+** profile/default/data/demat/icicidirect/demat-summary-data.csv
+** profile/default/data/demat/zerodha/demat-data.csv
+
+Generate required reports
+
+$ cd src/sfund-demat/
+$ ./one.sh
+
+Review the generated reports
+** profile/default/reports/sfund-demat-reports/sfund-demat-dumb-join.csv
+** profile/default/reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
+
 
 # DIVIDEND Data
 Shows dividend receieved through bank account statement.
@@ -236,5 +257,4 @@ Review the generated report.
 Output data
 
 * reports/dividends-bonus/
-
 
