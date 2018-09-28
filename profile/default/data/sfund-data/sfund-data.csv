@@ -26,15 +26,15 @@ Travel,1,Aviation,,,,INTERGLOBE AVIATION,
 Bank & Finance & Insurance & Trading & Rating,5,Banks -1,HDFC BANK,STATE BANK OF INDIA,ICICI BANK,KOTAK MAHINDRA BANK,Bank of Baroda
 ,3,Banks-2,,,AXIS BANK LIMITED,IndusInd Bank,Bandhan Bank
 ,2,Finance - auto,,,Bajaj Finance,,SHRIRAM TRANSPORT FINANCE
-,5,Finance - Housing,HDFC,LIC HOUSING FINANCE,INDIABULLS HOUSING FINANCE,HUDCO,Dewan Housing Finance
-,2,Finance - Power,,,,PFC,REC
+,5,Finance - Housing,HOUSING DEVELOPMENT FINANCE,LIC HOUSING FINANCE,INDIABULLS HOUSING FINANCE,HOUSING URBAN DEV,Dewan Housing Finance
+,2,Finance - Power,,,,Power Finance,RURAL ELECTRIFICATION
 ,4,Finance - mix of all finance types,,L&T Finance Holdings,MAHINDRA & MAHINDRA FINANCE,Cholamandalam Investment & Finance,IIFL Holdings
 ,2,Finance - Gold,,,,MUTHOOT FINANCE LIMITED,Mannapuram Finance
-,3,Finance & Insurance - Both,,,BAJAJ FINSERV,Tube Investment Financial Holdings,Sundaram Finance
+,3,Finance & Insurance - Both,,,BAJAJ FINSERV,TI Financial Holdings,Sundaram Finance
 ,2,Insurance - General,,,ICICI LOMBARD GEN,NEW INDIA ASSURANCE,
 ,3,Insurance - Life,,,SBI LIFE,HDFC LIFE,ICICI PRUDENTIAL LIFE
 ,1,Re-Insurance (Insurance of Insurance),,GIC Re,,,
-,2,Stock Exchange,,,,BSE,MCX
+,2,Stock Exchange,,,,BSE,MULTI COMMODITY EXCHANGE
 ,1,Stock Broker & Brokerage,,,,,ICICI Securities
 ,1,Asset Management,,,,,HDFC AMC
 ,1,Depository Service,,,,Central Depository,
@@ -102,7 +102,7 @@ Pharma,4,Domestic - 1,,SUN PHARMACEUTICAL,DR REDDY'S LAB,CIPLA,GLENMARK PHARMACE
 POWER,4,Power Generation,,NTPC LIMITED,TATA POWER CO,NLC,NHPC
 ,1,Power Plant (Equipments),,,,BHARAT HEAVY ELECTRICALS,
 ,2,Transmission & Distribution,,,,POWER GRID CORPORATION,Adani Transmission
-Oil & Gas,3,Explorers and Refineries,RELIANCE INDUSTRIES,ONGC,,OIL INDIA,
+Oil & Gas,3,Explorers and Refineries,RELIANCE INDUSTRIES,OIL & NATURAL GAS ,,OIL INDIA,
 ,1,Gas Terminals,,,,PETRONET LNG,
 ,2,Piped gas & city gas,,,,GAIL,Indraprasath Gas
 ,3,Oil & gas marketing companies,,,Bharat Petroleum,HINDUSTAN PETROLEUM,IOCL
