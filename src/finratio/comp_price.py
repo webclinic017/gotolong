@@ -1,29 +1,40 @@
 
+# Analyst : recover investment in number of years
+# remaining investment years = retirement age - current age = 60-38=22
+# do not investment in companies that have pe > 22 : sure ?
+# best are companies that will return money in half of 22 : 11 years
 def get_pscore_pe(ratio):
 	if ratio <= 12:
 		# excellent : under-valued : steal 
-		score = 4
+		score = 100
 	elif ratio > 12 and ratio <= 15:
 		# good :   looks ok
 		score = 3
 	elif ratio > 15 and ratio <= 20:
 		# average
 		score = 2
-	elif ratio > 20 and ratio <= 25:
-		# poor : slightly over-valued 
-		score = 1
-	elif ratio > 25:
-		# very poor : over-valued
-		score = 0 
+	elif ratio > 20:
+		# poor : over-valued 
+		score = -100
+		score = score - ratio
 	return score
 
+# Analyst : best : growth is double of pe ratio
+# Analysis : worst : pe ratio is double of growth
 def get_pscore_peg(ratio):
-	if ratio <= 1:
+	if ratio <= 0.50 :
 		# less than fair price
-		score = 4
-	elif ratio > 1:
+		score = 100 + 3
+	if ratio > 0.50 and ratio <= 1:
+		# less than fair price
+		score = 2
+	elif ratio > 1 and ratio < 2:
 		# expansive
-		score = 0 
+		score = 1
+	elif ratio >= 2 :
+		# expansive
+		score = -100
+		score =  score - ratio 
 	return score
 
 def get_pscore_pb(ratio):

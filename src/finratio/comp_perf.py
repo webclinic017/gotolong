@@ -37,32 +37,48 @@ def get_cscore_dp(ratio):
 		score = 0 
 	return score
 
+# Analyst prefer interest coverage ratio above 3
 def get_cscore_ic(ratio):
 	if ratio >= 3:
-		score = 3
+		# good : preferred by analyst
+		score = 100 + ratio
 	elif ratio >= 2:
+		# minimum acceptable value
 		score = 2
 	elif ratio >= 1:
 		score = 1
 	elif ratio < 1:
-		score = 0 
+		score = -100 
 	return score
 
+# debt to equity
+# Analysst prefer : 25% debt and 75% equity
+# difficult for bank and nbfc
+# we should check if equity is also increasing in line with debt through balance
+# sheet
 def get_cscore_d2e(ratio):
 	# For Bank and NBFC : debt to equity can be high.
 	if ratio == 0:
-		# best 
-		score = 3
-	elif ratio >= 0 and ratio <=1 :
+		# best
+		score = 100 
+	elif ratio > 0 and ratio <= 0.25 :
+		# wonderful
+		score = 50 
+	elif ratio > 0.25 and ratio <= 1 :
 		# good 
-		score = 2 
+		score = 25
 	elif ratio > 1 and ratio <=2 :
 		# poor 
 		score = 1
-	elif ratio > 2:
+	elif ratio > 2 and ratio < 5:
 		# waste 
-		score = 0
+		score = -ratio 
+	elif ratio >= 5:
+		# waste 
+		score = 0 - ratio
+		score = score - 100
 	elif ratio < 0:
+		# Raise an alert for this.
 		# waste  (negative : renuka sugars)
 		score = 0
 	return score

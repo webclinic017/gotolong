@@ -6,6 +6,8 @@ import csv
 import traceback
 import operator
 
+import cutil.cutil
+
 class Demat(object):
 
 	def __init__(self):
@@ -27,27 +29,6 @@ class Demat(object):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level 
 		
-	def normalize_comp_name(self, comp_name):
-		comp_name = comp_name.capitalize()
-		# remove hyphen (V-guard) 
-        	comp_name = re.sub('-',' ', comp_name)
-		# remove . (Dr. lal pathlabs | Dr. redddy) 
-        	comp_name = re.sub('\.','', comp_name)
-		# remove ' in Dr Reddy's Laboratories 
-        	comp_name = re.sub('\'','', comp_name)
-	        comp_name = re.sub('limited','', comp_name)
-	        comp_name = re.sub('ltd','', comp_name)
-	        comp_name = re.sub('india','', comp_name)
-                # replace and and &
-	        comp_name = re.sub(' and ',' ', comp_name)
-	        comp_name = re.sub(' & ',' ', comp_name)
-                # remove any characters after (  :
-                # TRENT LTD (LAKME LTD)  
-                comp_name = re.sub('\(.*','', comp_name)
-		# convert multiple space to single space
-        	comp_name = re.sub(' +', ' ', comp_name)
-		return comp_name
-	
 	def load_demat_row(self, row):
 		try:
 			row_list = row
@@ -78,7 +59,7 @@ class Demat(object):
 				self.phase1_data[isin_code] = p_str	
 				
 
-			self.company_name[isin_code] = self.normalize_comp_name(comp_name)
+			self.company_name[isin_code] = cutil.cutil.normalize_comp_name(comp_name)
 			if txn_type == "Buy":
 				if isin_code in self.buy_qty:
                         		self.buy_qty[isin_code] += int(txn_qty)
