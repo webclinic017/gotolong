@@ -201,20 +201,20 @@ To ensure that the plan data is in sync with SURI 250 EQUITY FUND.
 
 Input data
 * SURI 250 Fund data
-** profile/default/data/sfund/sfund-data.csv
+* profile/default/data/sfund/sfund-data.csv
    
-* Demat Summary data
-** profile/default/data/demat/icicidirect/demat-summary-data.csv
-** profile/default/data/demat/zerodha/demat-data.csv
+Demat Summary data
+* profile/default/data/demat/icicidirect/demat-summary-data.csv
+* profile/default/data/demat/zerodha/demat-data.csv
 
 Generate required reports
 
-$ cd src/sfund-demat/
-$ ./one.sh
+* $ cd src/sfund-demat/
+* $ ./one.sh
 
 Review the generated reports
-** profile/default/reports/sfund-demat-reports/sfund-demat-dumb-join.csv
-** profile/default/reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
+* profile/default/reports/sfund-demat-reports/sfund-demat-dumb-join.csv
+* profile/default/reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
 
 
 # DIVIDEND Data
