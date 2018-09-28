@@ -24,19 +24,33 @@ class DemSum(object):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level 
 		
-	def load_demsum_row(self, row):
+	def load_demsum_row(self, row, broker_name):
 		try:
 			row_list = row
 
 			if self.debug_level > 1:
 				print 'processing record ', row_list
 
-			isin_code   = (row_list[2]).upper().strip()
+			if broker_name == 'icicidirect':
+				isin_code   = (row_list[2]).upper().strip()
+				comp_name = row_list[1]
+				hold_qty = row_list[3]
+				hold_acp = row_list[4]
+				hold_cmp = row_list[5]
+			else:
+				# zerodha : both isin_code and comp_name
+                                # are same as isin code is not included
+				isin_code   = row_list[0]
+				comp_name = row_list[0]
+				hold_qty = row_list[1]
+				hold_acp = row_list[2]
+				hold_cmp = row_list[3]
 
-			if isin_code == 'ISIN Code':
+			if isin_code == 'ISIN Code': 
+				return	
+			if isin_code == 'Instrument': 
 				return	
 
-			comp_name = row_list[1]
 			comp_name = cutil.cutil.normalize_comp_name(comp_name)
 			comp_name = comp_name.upper()
 			if re.search('ETF', comp_name):
@@ -44,14 +58,12 @@ class DemSum(object):
 					print 'skipped etf ', row
 				return	
 
-			# hold qty
-			hold_qty = row_list[3]
 
 			# total : avergae cost price
-			hold_acp = str(int(round(float(row_list[4]))))
+			hold_acp = str(int(round(float(hold_acp))))
 
 			# total : current market price
-			hold_cmp = str(int(round(float(row_list[4]))))
+			hold_cmp = str(int(round(float(hold_cmp))))
 
 			hold_units = int(round(float(hold_acp)/1000))
 
@@ -83,11 +95,11 @@ class DemSum(object):
 		except:
 			print "Unexpected error:", sys.exc_info()
 
-	def load_demsum_data(self, in_file):
+	def load_demsum_data(self, in_file, broker_name):
 		with open(in_file, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
-				self.load_demsum_row(row)
+				self.load_demsum_row(row, broker_name)
 
 	def print_phase1(self, out_filename, comp_name_only = False):
 		fh = open(out_filename,"w") 
