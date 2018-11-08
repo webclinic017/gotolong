@@ -14,7 +14,7 @@ Auto - 2 & 3 Wheelers,Company,,Hero Motocorp,Bajaj Auto,TVS Motor,Tube Investmen
 Auto - Cars & Jeeps,Company,,Maruti Suzuki,Mahindra & Mahindra,,
 ,Units,30,20,10,,
 Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
-,Units,35,5,30,0,0
+,Units,37,5,30,2,0
 Auto - Tractors,Company,,VSTTILLERS,,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,Auto,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
@@ -28,9 +28,9 @@ Group 2,,,,,,
 Banks - Private Sector,Company,,HDFC Bank,ICICI,Axis Bank,Kotak Mahindra Bank
 ,Units,29,20,5,2,2
 Banks - Private Sector,Company,,Bandhan Bank,IndusInd Bank,YES Bank,
-,Units,6,2,2,2,
-Banks - Public Sector,Company,,SBI,,,
-,Units,5,5,,,
+,Units,4,2,2,0,
+Banks - Public Sector,Company,,SBI,Bank of Baroda,,
+,Units,7,5,2,,
 Bearings,Company,,SKF India,SCHAEFFLER India,,
 ,Units,4,2,2,,
 Breweries & Distilleries,Company,,United Spirits,United Breweries,Radico Khaitan,IFB Agro
@@ -38,11 +38,11 @@ Breweries & Distilleries,Company,,United Spirits,United Breweries,Radico Khaitan
 Cables - Power & Others,,,,,,
 Cables - Telephone,,,,,,
 Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
-,Units,4,2,2,0,
+,Units,2,0,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Units,34,10,3,3,18
 Cement - Major,Company,,Heidelberg cement,,,
-,Units,0,0,,,
+,Units,2,2,,,
 Cement - Mini,,,,,,
 Cement - Products & Building Materials,,,,,,
 Group 3,,,,,,
@@ -62,8 +62,8 @@ Computers - Software,Company,,Tata Consultancy,Infosys,Wipro ,Tech Mahindra
 Computers - Software,Company,,HCL Tech,Info Edge,Larsen & Toubro Infotech,
 ,Units,12,5,5,2,
 Computers - Software - Training,,,,,,
-Computers - Software Medium & Small,Company,,L&T Technology Services,,,
-,Units,2,2,,,
+Computers - Software Medium & Small,Company,,L&T Technology Services,Tata Elxsi,,
+,Units,4,2,2,,
 Group 4,,,,,,
 Construction & Contracting - Civil,Company,,NAGARCON,Gammon,HCC,
 ,Units,2,2,0,0,
@@ -84,10 +84,10 @@ Detergents,,,,,,
 Diamond Cutting & Jewellery & Precious Metals,Company,,Titan Company,Rajesh Exports,PC Jeweller,
 ,Units,9,5,2,2,
 Group 5,,,,,,
-Diversified,Company,,3M India,Grasim,Godrej Industries,Pilani Investment & Industries
-,Units,21,15,3,3,0
-Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,
-,Units,5,2,3,0,
+Diversified,Company,,3M India,Grasim,Godrej Industries,DCM Shriram
+,Units,24,15,3,3,3
+Diversified,Company,,Tata Investment Corp,Bajaj Holdings & Investments,M&M ,Pilani Investment & Industries
+,Units,5,2,3,0,0
 Domestic Appliances,Company,,TTK Prestige,Bajaj Electric,Hawkins Cooker,
 ,Units,5,5,0,0,
 Dry Cells,Company,,Eveready ,Indo National,Panasonic Energy India,
@@ -119,7 +119,7 @@ Finance - Housing,Company,,HDFC,LIC housing finance,Indiabulls housing finance,D
 Finance - Investments,Company,,Muthoot Finance,Bajaj FinServ,Tata Investment Corp,
 ,Units,10,5,3,2,
 Finance - Investments,Company,,TI financial holding,L&T Finance Holdings,Aditya Birla Capital,
-,Units,6,2,2,2,
+,Units,4,2,2,0,
 Finance - Leasing & Hire Purchase,Company,,Bajaj Finance,Shriram Transport Finance,Mahindra & Mahindra Financial,Manappuram Finance
 ,Units,11,3,3,3,2
 Finance - Leasing & Hire Purchase,Company,,Cholamandalam Investment & Finance,Sundaram Finance,Shriram City Union,
@@ -136,19 +136,19 @@ Food Processing,Company,,Hatsun,,,
 Glass & Glass Products,Company,,Asahi Glass,La Opala,Saint Gobain,Piramal Glass
 ,Units,2,2,0,0,0
 Hospitals & Medical Services,Company,,Apollo Hospitals,Fortis Healthcare,Narayana Hrudayalaya,Aster DM
-,Units,20,10,2,3,5
+,Units,15,10,2,3,0
 Hospitals & Medical Services,Company,,HCG,Columbia Asia,Manipal Hospital,
 ,Units,0,0,0,0,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
-,Units,20,10,3,5,2
+,Units,18,10,3,5,0
 Hotels,Company,,WestLife Development,ITDC,Barbeque Nation,Yum India
-,Units,4,2,2,0,0
+,Units,2,2,0,0,0
 Infrastructure - General,Company,,Larsen & Toubro ,Adani Ports,Siemens India,ABB India
 ,Units,35,20,5,5,5
 Infrastructure - General,Company,,BHEL,NBCC,Engineers India,Schneider Electric Infrastructure
 ,Units,15,5,5,5,0
 Infrastructure - General,Company,,BEML,,,
-,Units,2,2,,,
+,Units,0,0,,,
 ,,,,,,
 Leather Products,Company,,Bata,Relaxo Footwear,Khadim,Liberty shoes
 ,Units,10,5,5,0,0
@@ -256,8 +256,8 @@ Transport & Logistics,Company,,Aegis logistics,Mahindra Logistics,Future Supply 
 ,Units,6,2,2,2,
 Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre 
 ,Units,66,60,2,2,2
-Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players
-,Units,2,2,0,0,0
+Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players : World View
+,Units,6,2,2,2,0
 Vanaspati & Oils,,,,,,
 Group 12,,,,,,
 ,,,,,,
@@ -277,4 +277,4 @@ Misc: Asset Management,Company,,HDFC AMC,,,
 Misc: Unknown,Company,,Sheela foam,,,
 ,Units,2,2,,,
 Misc: Defense,Company,,HAL,Bharat Dynamics,,
-,Units,2,2,0,,
+,Units,4,2,2,,
