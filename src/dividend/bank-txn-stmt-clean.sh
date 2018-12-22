@@ -1,8 +1,9 @@
 #!/bin/sh
 
-if test $# -lt 2
+if test $# -lt 1
 then
    echo "usage: $0 bank-stmt.csv"
+   echo $* 
    exit 1
 fi
 
