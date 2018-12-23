@@ -10,7 +10,8 @@ fi
 for BANK_TXN_STMT_FILE in $*
 do
 
-cat $BANK_TXN_STMT_FILE | grep -v -e 'NEFT-' -e ':Int.Pd:' -e 'MMT/' -e 'RTGS-' -e 'BY CASH' -e ',,,,,,,,,' > ${BANK_TXN_STMT_FILE}.new
+# Skip Legends  like MMT, RTGS, NEFT using grep
+cat $BANK_TXN_STMT_FILE | grep -v -f icici-bank-legends.txt | grep -v -e ':Int.Pd:' -e 'BY CASH' -e ',,,,,,,,,' > ${BANK_TXN_STMT_FILE}.new
 
 mv ${BANK_TXN_STMT_FILE}.new ${BANK_TXN_STMT_FILE}
 

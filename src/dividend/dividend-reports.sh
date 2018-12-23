@@ -6,8 +6,10 @@ SUMMARY_TYPE=summary_yes
 IN_DIR=$PROJ_PROFILE_DATA_LOC/bank-txn-data
 BANK=icici-bank
 OUT_DIR=$PROJ_PROFILE_REPORTS_LOC/dividend-reports
-for FY in fy1617 fy1718 all
+for FY in fy1617 fy1718 fy1819 all
 do
+  # create directory if doesn't exist
+  mkdir -p ${OUT_DIR}/${FY}
   for SORT_TYPE in name_only sort_name sort_amount sort_frequency 
   do
       if [[ "${FY}" == "all" ]]; then

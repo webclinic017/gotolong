@@ -170,7 +170,7 @@ def parse_line(line):
 	line = re.sub(r'Ltd,','Ltd',line)
 	
 	try:
-	  empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2 = line.split(",")
+	  empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2  = line.split(",")
 	except ValueError:
           print 'ValueError ', line
 
