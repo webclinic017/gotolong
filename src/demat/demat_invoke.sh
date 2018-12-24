@@ -18,7 +18,9 @@ OUT_FILE_QTR=$PROJ_PROFILE_REPORTS_LOC/demat-reports/stats_qtr_output.csv
 ./demat_stats/icici_direct_stats.sh ${IN_FILE} year_company all all quarter > ${OUT_FILE_QTR}
 
 
-OUT_FILE_YEAR=$PROJ_PROFILE_REPORTS_LOC/demat-reports/stats_year_output.png
+OUT_FILE_PLOT=$PROJ_PROFILE_REPORTS_LOC/demat-reports/stats_year_output.png
 # draw plots
-demat_plot.py online ${OUT_FILE_YEAR} ${OUT_FILE_PLOT}
-# demat_plot.py offline ${OUT_FILE_YEAR} ${OUT_FILE_PLOT}
+
+demat_plot.py online ${OUT_FILE_YEAR}
+
+#demat_plot.py offline ${OUT_FILE_YEAR} ${OUT_FILE_PLOT}

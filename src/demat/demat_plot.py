@@ -21,7 +21,9 @@ import traceback
 
 mode   = sys.argv[1]
 in_file = sys.argv[2]
-out_file = sys.argv[3]
+
+if mode == 'offline':
+	out_file = sys.argv[3]
 
 plotly_api_key = os.environ.get('PLOTLY_API_KEY').rstrip()
 
