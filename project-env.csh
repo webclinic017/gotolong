@@ -14,6 +14,7 @@ setenv PATH ${PROJ_SOURCE_LOC}:.:${PATH}
 
 setenv PYTHONPATH ${PROJ_SOURCE_LOC}
 setenv QUANDL_KEY `cat $HOME/quandl.key`
+setenv PLOTLY_API_KEY `cat $HOME/plotly.key`
 
 
 # if test "${PYTHONPATH}"  == ""
