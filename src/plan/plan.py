@@ -96,6 +96,8 @@ class Plan(Amfi):
 		fh.write('comp_name, ticker, isin, plan_units_1k, rank, captype, mcap\n')
 		if sort_type_rank:
 			sorted_items = sorted(self.amfi_rank, key=self.amfi_rank.__getitem__)
+			if self.debug_level > 2:
+				print sorted_items
 		else:
 			sorted_items = sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True)
 
@@ -113,6 +115,8 @@ class Plan(Amfi):
 					print units_1k 
 				mcap = self.get_amfi_mcap_by_code(isin)
 				captype = self.get_amfi_captype_by_code(isin)
+				if self.debug_level > 0:
+					print isin, captype 
 				rank = self.get_amfi_rank_by_code(isin)
 				ticker = self.get_amfi_ticker_by_code(isin)
 				total_units += units_1k
@@ -153,6 +157,8 @@ class Plan(Amfi):
 			p_str += str(mcap)
 			p_str += '\n'
 			fh.write(p_str)
+		if self.debug_level > 0 :
+			print cap_units 
 		# Current portfolio distribution 
 		p_str = 'Summary'
 		p_str += ', '
@@ -162,12 +168,17 @@ class Plan(Amfi):
 		p_str += ', '
 		p_str += str(total_units)
 		p_str += ', '
-		p_str += 'large '  + str(int(round(float((cap_units['Large Cap']*100.0)/total_units)))) +' %'
-		p_str += ', '
-		p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
-		p_str += ', '
-		p_str += 'small '  + str(int(round(float(((cap_units['Small Cap']+cap_units['Micro Cap']+cap_units['Nano Cap']+cap_units['Unknown Cap'])*100.0)/total_units)))) + ' %'
-		p_str += '\n'
+		try:
+			p_str += 'large '  + str(int(round(float((cap_units['Large Cap']*100.0)/total_units)))) +' %'
+			p_str += ', '
+			p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
+			p_str += ', '
+			p_str += 'small '  + str(int(round(float(((cap_units['Small Cap']+cap_units['Micro Cap']+cap_units['Nano Cap']+cap_units['Unknown Cap'])*100.0)/total_units)))) + ' %'
+			p_str += '\n'
+		except KeyError:
+			print 'except KeyError'
+			traceback.print_exc()
+				
 		fh.write(p_str)
 		
 		# Ideal portfolio distribution 
