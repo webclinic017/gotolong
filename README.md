@@ -31,93 +31,8 @@ For csh
 For sh/bash
 * $ . ./project-env.sh
 
-# AMFI Data
 
-The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
-
-These are downloaded from the amfi website and processed further.
-
-Input Data
-* data/amfi-data/amfi-\*.csv 
-
-Generate Report
-
-$ cd src/amfi
-
-$ ./amfi_invoke.sh
-
-Review the generated report file
-
-Output Data
-* reports/amfi-reports/\*.csv
-
-The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
-and cap type (large, mid cap and small cap).
-
-# ISIN Data
-
-The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
-
-These were downloaded directly from the NSE and BSE websites.
-
-Input Data
-* data/isin-data/isin-(bse|nse)-500.csv
-
-
-Generate Report
-
-  $ cd src/isin
-  
-  $ ./isin_invoke.sh
-  
-Review the generated report file
-
-Output Data
-* reports/isin-reports/\*.csv
-
-
- # SCREENER Data
- 
- Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
- 
- Download the screener data in data/screener-data/\*.csv
- 
- Input Data
- * data/screener-data/\*.csv
- 
- Generate screener reports using
- 
- $ cd src/screener
- 
- $ ./screener_invoke.sh
- 
- Review the generated report file.
- 
- Output Data
- * reports/screener-reports/\*.csv files
- 
- NOTE: To be switched to Quandl or something similar.
-
- # Morning Star Data
-
-Input Data
-* data/mstar-data/\*.csv
-
-Generate Report
-
- $ cd src/mstar
- 
- $ ./mstar_invoke.sh
-
-Review the generated report
-
-Output Data:
-* reports/mstar-reports/\*.csv
-
-Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
-and financial strength (Strong, Moderate etc)
-
-# PLAN DATA
+# User : PLAN DATA
 
 Prepare plan file
 
@@ -152,7 +67,7 @@ Output Data
 The summary lines shows distribution of large cap, mid cap and small cap.
 TBD : Include line for micro cap and nano cap.
 
-# DEMAT DATA
+# User : DEMAT DATA
 
 Download demat data from ICICI Direct (all holdings, all txns in csv format) in 
 
@@ -172,7 +87,7 @@ Generate Report.
  * profile/default/reports/demat-reports/\*.csv 
  
 
- # TBD Data (To Be Done)
+ # User : TBD Data (To Be Done)
   
 To know companies (units) to buy/sale ranked by company score (price score).
 
@@ -195,7 +110,7 @@ Review the generated reports file for buy (ordered by company price score)
 Review the generated reports file for sale (ordered by company performance score)
 * profile/default/reports/tbd-reports/\*sale\*.csv
 
-# SFUND Demat Sync (SURI 250 Equity Fund)
+# User : SFUND Demat Sync (SURI 250 Equity Fund)
 
 To ensure that the plan data is in sync with SURI 250 EQUITY FUND.
 
@@ -216,7 +131,7 @@ Review the generated reports
 * profile/default/reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
 
 
-# DIVIDEND Data
+# User : DIVIDEND Data
 Shows dividend receieved through bank account statement.
 
 Input data
@@ -234,7 +149,93 @@ Review report.
 Output data
 * profile/default/reports/dividend-reports/
 
-# BSE Dividend BONUS share Data
+# Global : AMFI Data
+
+The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and cap type released every 6 months (In July for Jan-Jun).
+
+These are downloaded from the amfi website and processed further.
+
+Input Data
+* data/amfi-data/amfi-\*.csv 
+
+Generate Report
+
+$ cd src/amfi
+
+$ ./amfi_invoke.sh
+
+Review the generated report file
+
+Output Data
+* reports/amfi-reports/\*.csv
+
+The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
+and cap type (large, mid cap and small cap).
+
+# Global : ISIN Data
+
+The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+
+These were downloaded directly from the NSE and BSE websites.
+
+Input Data
+* data/isin-data/isin-(bse|nse)-500.csv
+
+
+Generate Report
+
+  $ cd src/isin
+  
+  $ ./isin_invoke.sh
+  
+Review the generated report file
+
+Output Data
+* reports/isin-reports/\*.csv
+
+
+ # Global : SCREENER Data
+ 
+ Create a watchlist of BSE 500 & NSE 500 companies and any other companies from plan data with interesting columns.
+ 
+ Download the screener data in data/screener-data/\*.csv
+ 
+ Input Data
+ * data/screener-data/\*.csv
+ 
+ Generate screener reports using
+ 
+ $ cd src/screener
+ 
+ $ ./screener_invoke.sh
+ 
+ Review the generated report file.
+ 
+ Output Data
+ * reports/screener-reports/\*.csv files
+ 
+ NOTE: To be switched to Quandl or something similar.
+
+ # Global : Morning Star Data
+
+Input Data
+* data/mstar-data/\*.csv
+
+Generate Report
+
+ $ cd src/mstar
+ 
+ $ ./mstar_invoke.sh
+
+Review the generated report
+
+Output Data:
+* reports/mstar-reports/\*.csv
+
+Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
+and financial strength (Strong, Moderate etc)
+
+# Global : BSE Dividend BONUS share Data
 
 Shows dividend recieved and bonus recevied in last few years through BSE/NSE directly.
 
