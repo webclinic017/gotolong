@@ -191,5 +191,8 @@ class Tbd(Plan, Demat, Screener):
 	def print_tbd_phase4(self, out_filename, days_filter):
 		self.print_tbd_phase1(out_filename, True, True, days_filter)
 
-	def print_tbd_phase5(self, out_filename):
+	def print_tbd_phase5(self, out_filename, days_filter):
+		self.print_tbd_phase1(out_filename, True, True, days_filter)
+
+	def print_tbd_phase6(self, out_filename):
 		self.print_tbd_phase1(out_filename, True, False, None, True, True)

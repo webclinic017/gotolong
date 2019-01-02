@@ -9,7 +9,7 @@ import tbd
 # Main caller
 program_name = sys.argv[0]
 
-if len(sys.argv) < 13 :
+if len(sys.argv) < 15 :
    print "usage: " + program_name + " <debug_level : 1-4> <isin-bse.csv> <isin-nse.csv> <amfi.csv> <plan.csv> <demat.csv>... "
    sys.exit(1) 
 
@@ -26,7 +26,9 @@ out_filename_phase2 = sys.argv[9]
 out_filename_phase3 = sys.argv[10]
 out_filename_phase4 = sys.argv[11]
 out_filename_phase5 = sys.argv[12]
-filter_days = int(sys.argv[13])
+out_filename_phase6 = sys.argv[13]
+filter_days_1 = int(sys.argv[14])
+filter_days_2 = int(sys.argv[15])
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -39,5 +41,6 @@ tbd.load_tbd_data(isin_bse_filename, isin_nse_filename, amfi_filename, plan_file
 tbd.print_tbd_phase1(out_filename_phase1)
 tbd.print_tbd_phase2(out_filename_phase2)
 tbd.print_tbd_phase3(out_filename_phase3)
-tbd.print_tbd_phase4(out_filename_phase4, filter_days)
-tbd.print_tbd_phase5(out_filename_phase5)
+tbd.print_tbd_phase4(out_filename_phase4, filter_days_1)
+tbd.print_tbd_phase5(out_filename_phase5, filter_days_2)
+tbd.print_tbd_phase6(out_filename_phase6)
