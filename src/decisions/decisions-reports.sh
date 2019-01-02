@@ -1,5 +1,6 @@
 #!/bin/sh
 
-holdings_plus_dividend_zero.sh > $PROJ_REPORTS_LOC/decisions/all/holdings_plus_dividend_zero.txt
+comm -13 ${PROJ_REPORTS_LOC}/dividends/all/all-name_only.csv ${PROJ_REPORTS_LOC}/targets/all/all-company_name_only.txt > $PROJ_REPORTS_LOC/decisions/all/decision_holdings_plus_dividend_zero.txt
 
-dividend_plus_holdings_zero.sh > $PROJ_REPORTS_LOC/decisions/all/dividend_plus_holdings_zero.txt
+comm -23 ${PROJ_REPORTS_LOC}/dividends/all/all-name_only.csv ${PROJ_REPORTS_LOC}/targets/all/all-company_name_only.txt > $PROJ_REPORTS_LOC/decisions/all/decision_dividend_plus_holdings_zero.txt
+
