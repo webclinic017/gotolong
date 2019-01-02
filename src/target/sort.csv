@@ -1,0 +1,9 @@
+
+
+		OUT_EXT=csv
+		OUT_EXT=txt
+	else
+	fi
+	if test ${SORT_TYPE} == "comp_tbd"; then
+	target-stats.py ${OUT_TYPE} ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${PROJ_DATA_LOC}/sample-data/target-hist/*/*-targets.csv  > ${PROJ_REPORTS_LOC}/targets/${FY}/${FY}-${SORT_TYPE}.${OUT_EXT}
+done
