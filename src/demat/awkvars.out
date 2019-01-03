@@ -6,29 +6,29 @@ CONVFMT: "%.6g"
 ERRNO: ""
 FIELDWIDTHS: ""
 FILENAME: "-"
-FNR: 0
+FNR: 37
 FPAT: "[^[:space:]]+"
 FS: ","
 IGNORECASE: 0
 LINT: 0
-NF: 0
-NR: 0
+NF: 15
+NR: 37
 OFMT: "%.6g"
 OFS: " "
 ORS: "\n"
 RLENGTH: 0
 RS: "\n"
 RSTART: 0
-RT: ""
+RT: "\n"
 SUBSEP: "\034"
 TEXTDOMAIN: "messages"
-buysale: untyped variable
-company: ""
+buysale: "Buy"
+company: " ABB AEGLOG ALLLOG AMBCE ASIGRA BALCHI BERPAI BHAPET BHEL CENPLY CIPLA DABIND DABIND DISHTV EIDPAR EIHLIM HINZIN INDOIL KANNER KAVSEE MAHHOL MAHHOL MARLIM NARHRU NATMIN NBCC PETLNG PIIND PVRLIM QUECOR RELFOO SIEMEN TECMAH TITIND TUBIN VARBEV VIPIND"
 month: "all"
 portfolio: "1571455"
 qtr: "4"
-tbuy: 0
-tdate: untyped variable
-tnet: 0
+tbuy: 36503.5
+tdate: "02-Jan-2019"
+tnet: 36503.5
 tsale: 0
-year: untyped variable
+year: "2019"
