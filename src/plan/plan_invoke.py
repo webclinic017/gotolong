@@ -12,17 +12,18 @@ from operator import itemgetter
 # Main caller
 program_name = sys.argv[0]
 
-if len(sys.argv) < 5 :
+if len(sys.argv) < 6 :
    print "usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <plan.csv> ... "
    sys.exit(1) 
 
 debug_level = int(sys.argv[1])
 in_amfi_filename = sys.argv[2]
 in_plan_filename = sys.argv[3]
-out_filename_phase2 = sys.argv[4]
-out_filename_phase3 = sys.argv[5]
-out_filename_phase4 = sys.argv[6]
-out_filename_phase5 = sys.argv[7]
+out_filename_phase1 = sys.argv[4]
+out_filename_phase2 = sys.argv[5]
+out_filename_phase3 = sys.argv[6]
+out_filename_phase4 = sys.argv[7]
+out_filename_phase5 = sys.argv[8]
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -30,7 +31,7 @@ if debug_level > 1 :
 indu_comp = 'comp'
 ic_name = 'all'
 
-if len(sys.argv) == 8 :
+if len(sys.argv) == 9 :
 	indu_comp = sys.argv[5]
 	ic_name = sys.argv[6]
 	ic_name = ic_name.capitalize()
@@ -42,12 +43,13 @@ plan.set_debug_level(debug_level)
 plan.load_amfi_data(in_amfi_filename)
 plan.load_plan_data(in_plan_filename)
 
+plan.print_phase1(out_filename_phase1)
 plan.print_phase2(out_filename_phase2)
 plan.print_phase3(out_filename_phase3)
 plan.print_phase4(out_filename_phase4)
 plan.print_phase5(out_filename_phase5)
 
-if len(sys.argv) == 7 :
+if len(sys.argv) == 8 :
 	if indu_comp.lower() == "comp":
 		print 'companies count : ', plan.size_comp_data()
 		if ic_name == "All":

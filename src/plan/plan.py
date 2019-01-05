@@ -86,7 +86,27 @@ class Plan(Amfi):
 				self.load_plan_row(row)
 
 	def print_phase1(self, out_filename):
-		# it is covered through shell script
+		lines = []
+		fh = open(out_filename, "w") 
+		sorted_items = sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True)
+
+		for isin in sorted_items: 
+			try:
+			        comp_name = self.get_amfi_cname_by_code(isin)
+				if self.debug_level >= 2:
+					print comp_name
+				if isin in self.plan_comp_units:
+					units_1k = int(self.plan_comp_units[isin])
+				else:
+					units_1k = 0
+				if units_1k > 0: 
+					p_str = comp_name
+					p_str += '\n'
+					lines.append(p_str)
+			except ValueError:
+				print 'except : ValueError :', comp_name
+		lines.sort()
+		fh.writelines(lines)
 		return
 
 	def print_phase2(self, out_filename, sort_type_rank = None, plus_holdings_only = None, zero_holdings_only = None):
