@@ -1,4 +1,6 @@
 To Do Items
+* Fix the dividend report from bank txn stmt
+** Include AMFI as a dependency and convert name to ISIN name
 * Generate different target companies list for buy and sale.
 * Include Zerodha demat data also apart from icicidirect
 * Identify companies which have missing data or unable to fetch using ISIN, screener or mstar.
