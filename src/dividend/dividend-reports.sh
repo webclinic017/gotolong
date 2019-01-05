@@ -13,11 +13,11 @@ do
   for SORT_TYPE in name_only sort_name sort_amount sort_frequency 
   do
       if [[ "${FY}" == "all" ]]; then
-        bank-txn-stmt-clean.sh ${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv
+        stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv
 
      	dividend-stats.py out_csv ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv > ${OUT_DIR}/${FY}/${FY}-${SORT_TYPE}.csv
       else
-        bank-txn-stmt-clean.sh ${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv
+        stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv
      	dividend-stats.py out_csv ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv > ${OUT_DIR}/${FY}/${FY}-${SORT_TYPE}.csv
       fi
   done # SORT_TYPE

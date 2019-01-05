@@ -5,6 +5,9 @@ setenv PROJ_SOURCE_LOC $PROJECT_ROOT/src
 setenv PROJ_DATA_LOC  $PROJECT_ROOT/resources/global/data
 setenv PROJ_REPORTS_LOC $PROJECT_ROOT/resources/global/reports
 
+setenv PROJ_LOCAL_DATA_LOC  $PROJECT_ROOT/resources/local/data
+setenv PROJ_LOCAL_REPORTS_LOC $PROJECT_ROOT/resources/local/reports
+
 setenv PROJ_PROFILE default 
 
 setenv PROJ_PROFILE_DATA_LOC  $PROJECT_ROOT/resources/profile/$PROJ_PROFILE/data

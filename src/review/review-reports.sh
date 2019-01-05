@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DIV_NAME=${PROJ_PROFILE_REPORTS_LOC}/dividend-reports/all/all-name_only.csv
-PLAN_NAME=${PROJ_PROFILE_REPORTS_LOC}/plan-reports/plan-reports-sort-name.csv
+PLAN_NAME=${PROJ_PROFILE_REPORTS_LOC}/plan-reports/plan-reports-name-only.csv
 
 mkdir -p ${PROJ_PROFILE_REPORTS_LOC}/review-reports
 

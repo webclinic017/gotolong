@@ -48,11 +48,11 @@ company_aliases={}
 total_dividend = 0
 # conglomerate name db
 cong_name_db=[]
-PROJ_DATA_LOC=os.getenv('PROJ_DATA_LOC')
-PROJ_REPORTS_LOC=os.getenv('PROJ_REPORTS_LOC')
-company_aliases_filename = PROJ_DATA_LOC + '/other-data/company-name-aliases.csv'
-cong_filename = PROJ_DATA_LOC + '/other-data/conglomerate-name.txt'
-comp_filename = PROJ_REPORTS_LOC + '/targets/all/all-company_name_only.txt'
+PROJ_LOCAL_DATA_LOC=os.getenv('PROJ_LOCAL_DATA_LOC')
+PROJ_PROFILE_REPORTS_LOC=os.getenv('PROJ_PROFILE_REPORTS_LOC')
+company_aliases_filename = PROJ_LOCAL_DATA_LOC + '/other-data/company-name-aliases.csv'
+cong_filename = PROJ_LOCAL_DATA_LOC + '/other-data/conglomerate-name.txt'
+comp_filename = PROJ_PROFILE_REPORTS_LOC + '/plan-reports/plan-reports-sort-name.csv'
 
 def ignore_txn(line, txn_remarks):
         # match for search at begining
