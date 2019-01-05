@@ -9,7 +9,7 @@ do
 
 DIV_NAME=${PROJ_PROFILE_REPORTS_LOC}/dividend-reports/${DIV_YEAR}/${DIV_YEAR}-name_only.csv
 
-comm -13 ${DIV_NAME} ${PLAN_NAME} > ${PROJ_PROFILE_REPORTS_LOC}/review-reports/pln_plus_divid_none-${DIV_YEAR}.txt
+comm -13 ${DIV_NAME} ${PLAN_NAME} > ${PROJ_PROFILE_REPORTS_LOC}/review-reports/plan_plus_divid_none-${DIV_YEAR}.txt
 done
 
 # should be done later
