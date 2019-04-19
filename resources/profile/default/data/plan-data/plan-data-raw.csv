@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,1147,1000,1147000,,
+,,1165,1000,1165000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -22,7 +22,7 @@ Auto - LCVs & HCVs,Company,,Tata Motors,Eicher Motors,Ashok Leyland,SML ISUZU
 Auto,Details,"Light < 8 ton, Medium (8 to 14 ton),  Heavy > 15 ton",Tata Motors (World leader in automobile),"Eicher Motors (Royal Enfield Bikes, Joint collaboration with Volvo for trucks and buses, Sold tractor business to TAFE - Messey Ferguson assembler in India. TAFE is owned by Amalgmation group. Privately held.) High Share Price: 30K",Ashok Leyland (Hinduja Group Company): 2nd largest Commercial Vehicle manufacturer in India. Largest bus manufacturer in the world. Presence in the defense also.,"SML ISUZU (Swaraj Mazda Limited & ISUZU Japan : Earlier  Sumitomo Corporation, Punjab Tractors, ISUZU and MAZDA of Japan collaboration etc... Sold Swaraj (Punjab Tractors) to Mahindra. Now it is known as SML ISUZU)."
 ,Units,37,5,30,2,0
 Auto - Tractors,Company,,VSTTILLERS,,,
-Auto,Details,,"VST Tillers & Tractors (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity. Used Ticker to avoid confusion.",,,
+Auto,Details,,"VST Tillers & Tractors (Collaboration with Mitsubishi) : India's largest (45% market share) in power tillers. Capcacity : 60,000 tillers per annum. 55 % revenue from tillers. 30% from sale of tractors. Factory operating @ 30% utilization. It has idle capacity. Used Ticker to avoid confusion. Technology transfer tie-up (one time cost) and 6 years royalty to Kukje machinary (Branson brand), South Korea for 47 HP tractor.",,,
 ,Units,2,2,,,
 Auto Ancillaries,Company,Auto,Bosch,Motherson Sumi,Exide Industries,Amara Raja Batteries
 Auto,Details,Set -1,Bosch (German Giant. World's largest supplier of automative parts.) : High Share price 23K ,"Motherson Sumi (Flagship company of Samvardhan group. JV with Sumitomo Wiring of Japan, very big auto component company) : 4 major products: wiring harnesses, rear view mirrors, polymers and elastomers. Internal and external auto components. wiring and mirrors. rear view mirror. largest manufacturer and supplier of rear view mirrors.",Exide Industries (UK Based Chloride Eastern Ltd : 45% share) : India moves on Exide. The gap between net sales of Exide and Amaron is negligible. Competitors : Amaron (Amara Raja Batteries & Johnson Controls) and Tata Green (Tata Autocomp tie up with GS Yuasa of Japan).,"Amara Raja Batteries ( automative battery brand : AMARON ) : Lasts long, Really long. 25% Ownership by Johnson controls, USA (world leader in batteries) ."
@@ -58,9 +58,9 @@ Auto,Details,Part revenue from Auto Industry. Can be included in Auto Ancilliary
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Details,Top 3 players (Ambuja and ACC are owned by same owner : Lafarge Holchim). ,UltraTech (Aditya Birla group) : Capacity : 70 million tons per year. It is among Worlds' top 15 cement companies.,ACC is one of the first few producer of cements in India ... ACC had a trouble when it focused on non-core items. TATA also had a stake in it. TATA sold the stake to Ambuja cements. ACC and Ambuja have similar capacity. ACC is owned 50% by Ambuja. Lafarge Holchim owns Ambuja.,"Ambuja is owned by LafargeHolchim (An International biggie : Lafarge(French) and Holchim(Swiss) in cement, construction and concrete sector)  Annual Capacity : 370 million tons per year. ","Shree Cement (Brands: Shree Cements, Bangur Cement, RockStrong etc) Bangur business family from Rajasthan settled in Calcutta. High Share Price : 18K"
 ,Units,34,10,3,3,18
-Cement - Major,Company,,Heidelberg cement,,,
-,Details,Set -2,"Heidelberg Italicement group after merger of : Heidelberg (Germany) & Italicement(Italy) is 2nd biggest cement company after merger of LafargeHolcim (Lafarge:French, Holchim:Swiss). It has acquired ItaliCementi (Zuari cement is owned by Italicementi in India) also. Access mycem.com. It is still a small player in India.  Put only in top 3 companies for no differntiation.",,,
-,Units,2,2,,,
+Cement - Major,Company,,Dalmia Bharat Cement,Heidelberg cement,,
+,Details,Set -2,Dalmia Bharat Cement after merger with OCL (orissa cement limited) became 4th largest Indian cement manufacturer. Capacity : 35 mt per annum,"Heidelberg Italicement group after merger of : Heidelberg (Germany) & Italicement(Italy) is 2nd biggest cement company after merger of LafargeHolcim (Lafarge:French, Holchim:Swiss). It has acquired ItaliCementi (Zuari cement is owned by Italicementi in India) also. Access mycem.com. It is still a small player in India.  Put only in top 3 companies for no differntiation.",,
+,Units,4,2,2,,
 Cement - Mini,,,,,,
 Cement - Products & Building Materials,,,,,,
 Group 3,,,,,,
@@ -74,7 +74,7 @@ Chemicals,Company,,Tata Chemicals,UPL,BASF,Pidilite
 Chemicals,Details,,"Tata Chemicals (Tata Salt, Tata Sampan Pulses & Spices, Tata Swach Water Purifier, Fertilizers etc,) : Focus on Living Essentials Products, It has Rallis (pesticides and agrochemicals) in its fold.",UPL (MNC. Crop protection. Present in 124 countries),"BASF (Global German Giant, largest producer of chemical. DuPont and Dow Chemicals are the other two competitors who merged together to form DowDuPont. )","PIDILITE (Fevicol, Fevistick, FeviQuick and Dr FixIt)"
 ,Units,8,2,2,2,2
 Cigarettes,Company,,ITC,VST Industries,Godfrey Phillips,
-Tobacco,Details,Oligopoly market. Dominated by few players. Segments based on the size. Length  - 64mm and 69mm.,"ITC (ITC cigaratees, matchbox, mouth freshner - mint-o and candyman, ITC Hotels, ITC Infotech, FMCG : Classmate - Stationary, Aashirwad, Sunfeast, Bingo, Yipee: 1K Cr brands). TC's major cigarette brands include Wills Navy Cut, Gold Flake Kings, Gold Flake Premium lights, Gold Flake Super Star, Insignia, India Kings, Classic (Verve, Menthol, Menthol Rush, Regular, Citric Twist, Ice Burst, Mild & Ultra Mild), 555, Silk Cut, Scissors, Capstan, Berkeley, Bristol, Lucky Strike, Players, Flake and Duke & Royal.","VST Industries is largest leaf tobbaco(Bidi) maker in India. Partly owned by BAT (British American Tobbaco) group of UK Founder : Vazir Sultan. Brands : Charms, Charminar, Gold, Moments, Zaffran.","Godfrey Phillips, is a modi group company. One of the largest cigarette manufacturers. Part ownership of Morris International (Marlboro owner). Brands : Four Square, Red&White etc.   Pan Vilas Pan Masala(chewing product). Tea also.",
+Tobacco,Details,Oligopoly market. Dominated by few players. Segments based on the size. Length  - 64mm and 69mm.,"ITC (ITC cigaratees, matchbox, mouth freshner - mint-o and candyman, ITC Hotels, ITC Infotech, FMCG : Classmate - Stationary, Aashirwad, Sunfeast, Bingo, Yipee: 1K Cr brands).  ITC lifestyle (WLS - Wills lifestyle store for cloths, Sold John Players to Reliance). ITC's major cigarette brands include Wills Navy Cut, Gold Flake Kings, Gold Flake Premium lights, Gold Flake Super Star, Insignia, India Kings, Classic (Verve, Menthol, Menthol Rush, Regular, Citric Twist, Ice Burst, Mild & Ultra Mild), 555, Silk Cut, Scissors, Capstan, Berkeley, Bristol, Lucky Strike, Players, Flake and Duke & Royal.","VST Industries is largest leaf tobbaco(Bidi) maker in India. Partly owned by BAT (British American Tobbaco) group of UK Founder : Vazir Sultan. Brands : Charms, Charminar, Gold, Moments, Zaffran.","Godfrey Phillips, is a modi group company. One of the largest cigarette manufacturers. Part ownership of Morris International (Marlboro owner). Brands : Four Square, Red&White etc.   Pan Vilas Pan Masala(chewing product). Tea also.",
 ,Units,24,20,2,2,
 Compressors,Details,Not clear on usage of it.,Ingersoll Rand (India),,,
 Computer Software Training,Company,,ZEE LEARN,NIIT,Educomp,Tree house / Career Point
@@ -199,8 +199,8 @@ Hospitals & Medical Services,Company,,HCG,Columbia Asia,Manipal Hospital,
 ,Details,Set - 2,HCG (domain is very narrow). Manipal is not listed.,small player. not listed.,small player. not listed.,
 ,Units,0,0,0,0,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
-,Details,"Hospitality : Cox and kings, thomas cook, Jubilant Food also (check Misc). Tough competition. 10% profit margin.","Indian Hotels (Taj group of hotels, struggling to make profit from 2009 onwards). The loss is small percentage of *reserves* (cash). Hotel Count : 137, Total Rooms : 16K.",EIH (East India Hotels : Oberoi group company),"Mahindra Holidays (Club mahindra for time share basis, resorts in India and other countries)","Lemon Tree Hotels (medium segment leader in India, 3rd largest domestic player after Taj and Oberoi. ) : TBB"
-,Units,18,10,3,5,0
+,Details,"Hospitality : Cox and kings, thomas cook, Jubilant Food also (check Misc). Tough competition. 10% profit margin.","Indian Hotels (Taj group of hotels, struggling to make profit from 2009 onwards). The loss is small percentage of *reserves* (cash). Hotel Count : 137, Total Rooms : 16K.",EIH (East India Hotels : Oberoi group company). Oberoi Hotels and Trident hotels.,"Mahindra Holidays (Club mahindra for time share basis, resorts in India and other countries)","Lemon Tree Hotels (medium segment leader in India, 3rd largest domestic player after Taj and Oberoi)"
+,Units,20,10,3,5,2
 Hotels,Company,,WestLife Development,ITDC,Barbeque Nation,Yum India
 ,Details,Hospitality : Set 2,WestLife Development (QSR - Quick Service Restaurant : McDonald Franchisor : South and West territory - Ajay Jatia. North and South is owned by Cannaught Place Restaurants - conflict with owner - Bakshi). Fight going on. No dividend for last 3 years. The parent company also looks confused with different business interest.,ITDC (India tourism development corporation) - Miniratna. The sale in ITDC has been stagnant for last 10 years - nearly same and it is loss making though it is giving reasonable dividend. Decided to drop it from Portfolio.  Sold everything on 27 Dec 2017.,"Barbeque Nation  (Buffet Dining Restaurant) : Upcoming IPO, Speciality Restaurant (Casual Dining Restaurant & Others)","Pizza Hut, KFC and Taco Bell : yum brands (Yum India .It is not listed in India). It is franchise of Ravi Jaipuria group that is also bottler for Pepsi (Varun Beverages). The company is RJ Corp. Promoter RJ Corp is a franchisee for Yum Restaurants-owned KFC and Pizza Hut, UK coffee chain Costa Coffee and Singapore-based tea salon firm TWG. It also owns the South Indian restaurant chain Vaango and ice-cream brand Cream Bell. Devyani International handles the brands. Varun Beverages is a bottler of RJ corp."
 ,Units,2,2,0,0,0
@@ -226,6 +226,10 @@ Media & Entertainment,Company,,ZEE Entertainment,Dish TV,PVR,Sun TV Network
 ,Details,,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries.","Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years.","PVR (Best movie experience in India, largest number of screens : 700 screens, 160 properties, 60 cities). PVR became 7th largest cinema exhibitor in the world by number of admissions (100 millon) in a year after acquring Satyam Cinemas of South. Future plan : 1000 screens by 2020. Go to forum anyday, to experience the scale and experience. INOX is 2nd. It has close to 500 screens. ","Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer."
 ,PEP,,,,,Maran Family (DMK)
 ,Units,15,5,5,5,0
+Media & Entertainment,Company,,Entertainment Network,INOX Leisure,Network 18 Media & Investments,
+,Details,,Pure Radio operator. ENIL (Entertainment Network India Ltd). FM Radio Mirchi + event management. Owned by Times of India.,Inox Leisure is 2nd largest theater chain in India.,Network18 is owned by Reliance. TV18 Broadcast is a subsidiary of Network18.,
+,PEP,,,,,
+,Units,6,2,2,2,0
 Metals - Non Ferrous,Company,,Hindustan Zinc,,,
 ,Details,,Hindustan Zinc,,,
 ,Units,5,5,,,
@@ -268,9 +272,9 @@ Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Phar
 Pharmaceuticals,Company,,Glaxosmithkline Pharma,Sanofi India,Abbott India,Pfizer
 ,Details,Pharma - Set 3 (Other International biggies AstraZeneca and Merck etc are too small in India. Reckitt Bankiser - Dettol is not listed in India. Ranbaxy is owned by Sun Pharma.),GSK Pharma - acquired consumer healthcare JV of Novartis. GSK is a global MNC.,Sanofi India (International biggie : creating footprint),"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)",Pfizer (International biggie: creating footprint)
 ,Units,6,2,2,2,2
-Pharmaceuticals,Company,,Biocon,LALPATHLAB,,
-,Details,Pharma - Set 4,Biocon - leader in Biosimilars In India.,"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc. Other Smaller players are Thyrocare Technologies, Metropolis and SRL Diagnostic.",,
-,Units,4,2,2,,
+Pharmaceuticals,Company,,Biocon,LALPATHLAB,Thyrocare Technologies,Metropolis  Healthcare
+,Details,Pharma - Set 4,Biocon - leader in Biosimilars In India.,"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc. Other Smaller players are Thyrocare Technologies, Metropolis and SRL Diagnostic.",Thyrocare Technologies also operates in this segment in India and in other countires. It also operates under other name like Aarogyam etc,Metropolis is also a poular pathlogoy chain with origin in Mumbai. Trying to make pan-india footprint.
+,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Details,,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)","Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)",Largest tea plantation company with estates spread in Assam and WB. Acquired tea estates in other countries also. Both McLeod Russel (Williamson Magor Group) and Eveready group are owned by B M Khaitan group. Eveready has a tie up with McLeod Russel for Tej brand (packet tea).,
 ,Units,10,5,5,0,
@@ -295,7 +299,7 @@ Pumps,Company,,KSB Pumps,Kirloskar Brothers ,Shakti Pumps ,
 ,Details,90% market share with 3 : Oligopoly. Small company (<1K Cr),"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)","Kirloskar Brothers (Domestic leader in pumps and valves, Kirloskar group company) Has international presence also. Kirloskar group is confused with too many listed companies without much differentiation. Don't invest without clear differentiation between them.",Shakti Pumps ,
 ,Units,2,2,0,0,
 Refineries,Company,,Reliance Industries,IOC,BPCL,Hindustan Petroleum
-,Details,refineries and retail outlets. ,Reliance Industries (Refineries : 60 mmtpa in Jamnagar),"IOC (Indian Oil Corporation) : refining : 81 mmt (Dibhoi, Guwahati, Bongaigoan, Barauni, Gujrat, Haldia, Mathura, Panipat, Paradip) - CPSE Maharatna","BPCL (40 mt refinery capacity : Mumbai - 13mt, Kochi - 16mt, Bina - 6mt, Numaligarh - 3mt) - CPSE Navaratna","HPCL (45mt refineries capacity - mumbai - 6 mmt, visakhapatnam - 8mmt, mangalore - 10mmt, bhatinda - 9 mmt, barmer - 9mt. 15k petrol pumps. 15% stake in MRPL.) - CPSE NAVARATNA"
+,Details,refineries and retail outlets. ,"Reliance Industries (Refineries : 60 mmtpa in Jamnagar), Reliance Jio (Telecom), Reliance Retail (Reliance Jewels, Reliance Brands - tie up with several international brands, Reliance Trends, Reliance Mart, Reliance Fresh etc)","IOC (Indian Oil Corporation) : refining : 81 mmt (Dibhoi, Guwahati, Bongaigoan, Barauni, Gujrat, Haldia, Mathura, Panipat, Paradip) - CPSE Maharatna","BPCL (40 mt refinery capacity : Mumbai - 13mt, Kochi - 16mt, Bina - 6mt, Numaligarh - 3mt) - CPSE Navaratna","HPCL (45mt refineries capacity - mumbai - 6 mmt, visakhapatnam - 8mmt, mangalore - 10mmt, bhatinda - 9 mmt, barmer - 9mt. 15k petrol pumps. 15% stake in MRPL.) - CPSE NAVARATNA"
 ,Units,32,20,5,4,3
 Retail,Company,,Aditya Birla Fashion & Retail,Trent,Shoppers Stop,Future Retail 
 ,Details,Retail - Set 1. Retail is an interesting business with very low margins. Lifestyle.,"Aditya Birla Fashion & Retail (Sale finished product, raw material may be from Grasim.) ","Trent (JV of Tata and Tesco: operates star bazzar, star daily etc)",Shoppers Stop,"Future Retail (for big bazaar, kirana, easyday etc). Future group is very confused and has too many listed companies for the same purpose without much differentiaion : Future Retail (for big bazaar, easy day, kb fair price etc), Future lifestyle fashion for central and brand factory. future supply chain for logistics. Future enterprises is for non-retail business like future generali etc. Praxis Home solution as a spin-off from hometown and fabfurnish. Future Consumer is for branding of FMCG products. Too many tie-ups with many companies like celio and sketchers but head company is unkown. Future group is not listed as an umbrella group. Why did Niligiri retail and aadhaar retail go to Future consumer etc? Can such a group have so many listed companies without differntiation? How many listed companies walmart has?"
@@ -307,7 +311,7 @@ Rubber,Company,,Apar Industries,COSCO INDIA,,
 ,Details,,Apar Industries (How is it related to rubber ?),COSCO INDIA (very small player in rubber : Requires more analysis) : Volleyball (Sponsor of equipment for all Indian major tournament),,
 ,Units,0,0,0,,
 Shipping,Company,,Great Eastern Shipping,Shipping Corporation,Cochin Shipyard Ltd,
-,Details,"Shipping, transport, logistics, courier is a same category.",Great Eastern Shipping,Shipping Corporation - CPSE Navaratna (Transporation on Vessel) : 80 ships & 5.9 Million Tons (Dead weight),Cochin Shipyard Ltd (Largest ship building company in India : Cochin Shipyard Limited is the largest shipbuilding and maintenance facility in India) : TBB,
+,Details,"Shipping, transport, logistics, courier is a same category.",Great Eastern Shipping,Shipping Corporation - CPSE Navaratna (Transporation on Vessel) : 80 ships & 5.9 Million Tons (Dead weight). NOTE: Bought by mistake. Doesn't pay any dividend and revenue is flat for last 10 years. Need to EXIT.,Cochin Shipyard Ltd (Largest ship building company in India : Cochin Shipyard Limited is the largest shipbuilding and maintenance facility in India) : TBB,
 ,Units,3,0,3,0,
 Steel - CR & HR Strips,,,,,,
 Steel - GP & GC Sheets,,,,,,
@@ -365,7 +369,10 @@ Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players : World View
 ,Details,Tyre - Set 2,Balkrishna Industries focuses on off the road (BKT Tyres : leader in off-the-road tyres),Goodyear (USA),Cycle and two-wheeler tyres,"India's MRF and Apollo figures in top 15 tyre manufacture worldwide. JK tyre also figures in top 25 world wide. Worlds biggest tyre manufacture are : Bridgestone (Japan), Michelin (France), Goodyear (USA), Continental AG (Germany), Sumitomo rubber (Japan), Pirelli (Italy), Hancock (South Korea), zc rubber (china), yokohama (Japan), Toyo Tires (Japan), Cooper Tires (US)."
 ,Units,6,2,2,2,0
-Vanaspati & Oils,,,,,,
+Vanaspati & Oils,Company,,Zydus Wellness,,,
+,Details,,"Zydus Wellness is a subsidiary of Cadilla Healthcare. Acquired Heinz India portfolio. Brands: Nutralite, SugarFree, Everyuth, Complan Glucon-D, Nycil, .",,,
+,Units,2,2,,,
+,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
@@ -375,6 +382,9 @@ MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE Ratings,IndiaRatings
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Details,"Covers travels, food & amusement park. Long history. same travel agents. E-commerce sector is heating up. Will they be able to compete?","Thomas Cook : Travels (Owned by Prem Watsa's Fairfax holding, Thomas Cook owns 66% of Quess Corp - Business Service Provider and Sterling Holiday Resorts - Time Share Holiday). SOTC Travel Services (formerly Kuoni) is also a subsidiary of Thomas Cook (Fairfax). Avon facility management is also owned by Quess Corp. Monster.com in India is also owned by Thomas Cook/Quess corp. ",Cox & Kings : Travels,"Jubilant Food (The Company & its subsidiary operates Domino's Pizza brand with the exclusive rights for India, Nepal, Bangladesh and Sri Lanka. Bought rights for Dunkin Donuts also.) Should be in Hospitality / Food.","Wonderla Holidays Limited (India's biggest amusement park. 6th in Asia. Presence in Bangalore, Kochi and Hyderabad. Planning pan-india presence)"
 ,Units,8,2,2,2,2
+Misc: Gaming,Company,,Delta Corp,,,
+,Details,"Gaming Casinos in India, Entertainment, Hospitality","Delta Cop operates Casinos in Goa, Sikkim and Daman. Has some land based gaming infra in hotels and floating cruises with gaming infrastructure. Leading player in India. Sunrise sector. Damani and Jhunjhunwala also positive on this.",,,
+,Units,2,2,,,
 Misc: Fitness,Company,,Talwalkars Better Value Fitness,,,
 ,Details,Good domestic brand for fitness. Tough competition from international franchise.,"Talwalkars Better Value Fitness (leader in fitness in India. Owner of Talwalkars, Hi-Fi and several other such chains etc. Acquired 50% in force fitness : master franchisee of Snap fitness in India. South Asea master franchise of Snap fitness in 6 countries like Sri lanka, Bangladesh etc). Tough competition from Cult.Fit, mind.fit and eat.fit etc.",,,
 ,Units,2,2,,,

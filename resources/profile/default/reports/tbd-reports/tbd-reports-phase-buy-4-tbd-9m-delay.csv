@@ -1,6 +1,25 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham
-Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,334,Buy,Mid Cap,32,203,50,0,0
-Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,365,Buy,Large Cap,253,98,774,238,433
-Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,273,Buy,Large Cap,0,0,0,0,0
-Shipping corporation,INE109A01011,3,2,1,33,04-Apr-2018,273,Buy,Small Cap,-69,-34,51,0,62
-Icra,INE725G01011,5,4,1,20,22-Jun-2017,559,Buy,Small Cap,1553,-239,3679,4369,1274
+Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,366,Buy,Small Cap,16,204,87,16,96
+Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,441,Buy,Mid Cap,32,203,50,0,0
+Hindalco industries,INE038A01020,5,3,2,40,03-Jul-2018,290,Buy,Large Cap,134,112,238,407,386
+Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,472,Buy,Large Cap,253,98,774,238,433
+Hcl technologies,INE860A01027,5,2,3,60,03-Jul-2018,290,Buy,Large Cap,385,1,1087,1060,635
+Shree renuka sugars,INE087H01022,2,1,1,50,28-Jun-2018,295,Buy,Micro Cap,0,0,0,0,0
+Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,380,Buy,Large Cap,0,0,0,0,0
+L&t finance holdings,INE498L01015,2,1,1,50,28-May-2018,326,Buy,Large Cap,0,0,0,0,0
+Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,290,Buy,Large Cap,175,-2,409,297,204
+Engineers,INE510A01028,5,2,3,60,03-Jul-2018,290,Buy,Mid Cap,1020,-17,125,-225,71
+Godfrey phillips,INE260B01028,2,1,1,50,29-Jun-2018,294,Buy,Small Cap,470,-22,950,-26924,569
+Mahindra cie automotive,INE536H01010,2,1,1,50,28-May-2018,326,Buy,Small Cap,219,-28,281,0,145
+L&t technology services,INE010V01017,2,1,1,50,28-May-2018,326,Buy,Mid Cap,536,-28,1633,0,521
+Gail,INE129A01019,4,2,2,50,10-Apr-2018,374,Buy,Large Cap,257,-98,370,2169,299
+Greenply industries,INE461C01038,2,1,1,50,28-Jun-2018,295,Buy,Small Cap,157,-100,187,780,135
+Adani ports special economic zone,INE742F01042,5,2,3,60,03-Jul-2018,290,Buy,Large Cap,144,-123,376,305,203
+Tvs motor company,INE494B01023,5,3,2,40,03-Jul-2018,290,Buy,Large Cap,236,-144,579,314,143
+Prestige estates projects,INE811K01011,5,2,3,60,03-Jul-2018,290,Buy,Mid Cap,15,-221,218,798,184
+Arvind,INE034A01011,3,2,1,33,03-Jul-2018,290,Buy,Mid Cap,142,-232,386,730,205
+Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,290,Buy,Mid Cap,143,-232,673,2006,328
+Icra,INE725G01011,5,4,1,20,22-Jun-2017,666,Buy,Small Cap,1553,-239,3679,4369,1274
+Icici lombard general insurance company,INE765G01017,5,3,2,40,03-Jul-2018,290,Buy,Large Cap,13,-252,897,611,222
+V guard industries,INE951I01027,2,1,1,50,19-Apr-2018,365,Buy,Small Cap,354,-268,199,195,37
+Info edge,INE663F01024,5,3,2,40,03-Jul-2018,290,Buy,Mid Cap,273,-282,1597,2515,398

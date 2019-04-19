@@ -1,6 +1,6 @@
 Sectors,,Units,Company (First),Company (Second),Company (Third),Company (Fourth)
 ,,Total Units,Investment per Unit,Total Investment,,
-,,1147,1000,1147000,,
+,,1165,1000,1165000,,
 ,,,,,,
 Group 1,,,,,,
 Abrasives,Company,,Carborundum Universal ,Grindwell norton,,
@@ -41,8 +41,8 @@ Castings & Forgings,Company,,Bharat Forge,Mahindra CIE,AIA,
 ,Units,2,0,2,0,
 Cement - Major,Company,,UltraTech ,ACC,Ambuja,Shree Cement
 ,Units,34,10,3,3,18
-Cement - Major,Company,,Heidelberg cement,,,
-,Units,2,2,,,
+Cement - Major,Company,,Dalmia Bharat Cement,Heidelberg cement,,
+,Units,4,2,2,,
 Cement - Mini,,,,,,
 Cement - Products & Building Materials,,,,,,
 Group 3,,,,,,
@@ -140,7 +140,7 @@ Hospitals & Medical Services,Company,,Apollo Hospitals,Fortis Healthcare,Narayan
 Hospitals & Medical Services,Company,,HCG,Columbia Asia,Manipal Hospital,
 ,Units,0,0,0,0,
 Hotels,Company,,Indian Hotels,EIH,Mahindra Holidays,Lemon Tree Hotels
-,Units,18,10,3,5,0
+,Units,20,10,3,5,2
 Hotels,Company,,WestLife Development,ITDC,Barbeque Nation,Yum India
 ,Units,2,2,0,0,0
 Infrastructure - General,Company,,Larsen & Toubro ,Adani Ports,Siemens India,ABB India
@@ -159,6 +159,9 @@ Group 8,,,,,,
 Media & Entertainment,Company,,ZEE Entertainment,Dish TV,PVR,Sun TV Network
 ,PEP,,,,,Maran Family (DMK)
 ,Units,15,5,5,5,0
+Media & Entertainment,Company,,Entertainment Network,INOX Leisure,Network 18 Media & Investments,
+,PEP,,,,,
+,Units,6,2,2,2,0
 Metals - Non Ferrous,Company,,Hindustan Zinc,,,
 ,Units,5,5,,,
 Mining & Minerals,Company,,Coal India ,Vedanta,NMDC,
@@ -187,8 +190,8 @@ Pharmaceuticals,Company,,Dr. Reddy's Laboratories,Aurobindo Pharma,Glenmark Phar
 ,Units,16,5,5,3,3
 Pharmaceuticals,Company,,Glaxosmithkline Pharma,Sanofi India,Abbott India,Pfizer
 ,Units,6,2,2,2,2
-Pharmaceuticals,Company,,Biocon,LALPATHLAB,,
-,Units,4,2,2,,
+Pharmaceuticals,Company,,Biocon,LALPATHLAB,Thyrocare Technologies,Metropolis  Healthcare
+,Units,8,2,2,2,2
 Plantations - Tea & Coffee,Company,,Tata Global Beverages,Tata Coffee,McLeod Russel,
 ,Units,10,5,5,0,
 Plastics,Company,,Supreme Industries,Nilkamal,VIP Industries,Jain Irrigation
@@ -258,7 +261,9 @@ Tyres,Company,,MRF,Apollo Tyres,CEAT ,JK Tyre
 ,Units,66,60,2,2,2
 Tyres,Company,,Balkrishna Industries,Goodyear ,TVS Srichakra,Unlisted players : World View
 ,Units,6,2,2,2,0
-Vanaspati & Oils,,,,,,
+Vanaspati & Oils,Company,,Zydus Wellness,,,
+,Units,2,2,,,
+,,,,,,
 Group 12,,,,,,
 ,,,,,,
 Miscellaneous,,,,,,
@@ -266,6 +271,8 @@ MIsc : Credit Rating Agencies,Company,,ICRA,CRISIL,CARE Ratings,IndiaRatings
 ,Units,10,5,3,2,0
 Misc: Hospitality,Company,,Thomas Cook,Cox & Kings,Jubilant Food ,Wonderla Holidays Limited
 ,Units,8,2,2,2,2
+Misc: Gaming,Company,,Delta Corp,,,
+,Units,2,2,,,
 Misc: Fitness,Company,,Talwalkars Better Value Fitness,,,
 ,Units,2,2,,,
 Misc: Woodwork,Company,,Century Plyboard,Greenlam,Greenply,

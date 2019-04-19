@@ -1,2 +1,7 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham
-Icra,INE725G01011,5,4,1,20,22-Jun-2017,559,Buy,Small Cap,1553,-239,3679,4369,1274
+Manappuram finance,INE522D01027,2,1,1,50,18-Apr-2018,366,Buy,Small Cap,16,204,87,16,96
+Future consumer,INE220J01025,2,1,1,50,02-Feb-2018,441,Buy,Mid Cap,32,203,50,0,0
+Aurobindo pharma,INE406A01037,5,2,3,60,02-Jan-2018,472,Buy,Large Cap,253,98,774,238,433
+Dr reddys laboratories,INE089A01023,5,4,1,20,04-Apr-2018,380,Buy,Large Cap,0,0,0,0,0
+Gail,INE129A01019,4,2,2,50,10-Apr-2018,374,Buy,Large Cap,257,-98,370,2169,299
+Icra,INE725G01011,5,4,1,20,22-Jun-2017,666,Buy,Small Cap,1553,-239,3679,4369,1274
