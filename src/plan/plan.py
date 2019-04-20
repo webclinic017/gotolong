@@ -13,6 +13,7 @@ class Plan(Amfi):
 
 	def __init__(self):
 		super(Plan, self).__init__()
+		self.multiplier	= 0 
 		self.plan_comp_units	= {}
 		self.plan_comp_days	= {}
 		self.indu_units	= {}
@@ -26,6 +27,12 @@ class Plan(Amfi):
 	def load_plan_row(self, row):
 		try:
 			row_list = row
+
+			if row_list[1] == "Multiplier":
+				self.multiplier = float(row_list[3])/1000.0
+				if self.debug_level > 1 :
+					print 'multiplier ', self.multiplier
+				return
 
 			if row_list[1] == "Details":
 				if self.debug_level > 1 :
@@ -71,7 +78,7 @@ class Plan(Amfi):
 				isin = self.get_amfi_isin_by_name(company_name)
 				if self.debug_level > 0:
 					print isin, company_name
-				self.plan_comp_units[isin] = cutil.cutil.get_number(plan_comp_units_list[iter])
+				self.plan_comp_units[isin] = cutil.cutil.get_number(plan_comp_units_list[iter]) * (self.multiplier)
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
