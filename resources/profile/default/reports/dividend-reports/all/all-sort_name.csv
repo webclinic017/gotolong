@@ -5,39 +5,39 @@ Adani ports , 1 , 12
 Aegis logistics , 2 , 5
 Akzo nobel , 2 , 66
 All cargo logistics , 1 , 10
-Amara raja , 4 , 18
+Amarajabat , 4 , 18
 Ambuja cements , 2 , 26
 Apl , 1 , 22
-Apollo hospitals ent , 2 , 60
 Apollo tyres , 2 , 42
+Apollohosp , 2 , 60
 Arvind , 1 , 14
-Asahi india glass li , 2 , 14
+Asahiindia , 2 , 14
 Asian granito , 1 , 2
-Asian paints , 3 , 76
-Asianpaint , 1 , 48
+Asian paints , 1 , 53
+Asianpaint , 3 , 71
 Aurobindo pharma , 3 , 9
 Avanti feeds , 2 , 45
 Axis bank , 1 , 10
 Bajaj auto , 2 , 175
 Bajaj finserv , 1 , 2
-Balkrishna industries , 7 , 20
+Balkrisind , 7 , 20
 Basf , 2 , 7
 Bata , 2 , 23
 Bayer , 2 , 35
+Bel , 2 , 14
 Berger paints , 2 , 21
 Bharat dynamics , 1 , 21
-Bharat electronics , 2 , 14
 Bharat petroleum , 2 , 105
 Bharti airtel , 5 , 269
 Bhel , 2 , 40
-Blue dart , 2 , 27
 Blue star , 1 , 10
+Bluedart , 2 , 27
 Bosch , 1 , 100
-Brigade enterprises , 2 , 28
+Brigade , 2 , 28
 Britannia industries , 2 , 72
 Bse , 3 , 123
 Cadila healthcare , 1 , 17
-Carborundum universal , 2 , 9
+Carboruniv , 2 , 9
 Care ratings , 7 , 132
 Castrol , 3 , 66
 Ceat , 2 , 34
@@ -47,11 +47,10 @@ Cera sanitaryware , 2 , 24
 Chambal fertilisers , 1 , 13
 Cipla , 2 , 16
 Coal , 3 , 1049
-Colgate palmolive , 5 , 51
-Container corporation , 3 , 31
-Coromandel internati , 2 , 32
-Coromandel international , 1 , 15
-Cox & kings ltd , 2 , 12
+Colpal , 5 , 51
+Concor , 3 , 31
+Coromandel , 3 , 47
+Cox&kings , 2 , 12
 Crisil , 6 , 60
 Crompton greaves , 1 , 7
 Cummins , 3 , 54
@@ -60,8 +59,7 @@ Dcm shriram , 1 , 12
 Dish tv , 1 , 14
 Dividend , 1 , 110
 Dlf , 3 , 32
-Dr lal pathlabs , 3 , 12
-Dr reddy's laborato , 1 , 40
+Drreddy , 1 , 40
 Eicher motors , 1 , 110
 Eid parry , 1 , 18
 Eih , 2 , 20
@@ -69,7 +67,7 @@ Emami , 2 , 19
 Engineers , 3 , 47
 Eveready industries , 1 , 9
 Exide industries , 4 , 24
-Future lifestyle fashions , 2 , 9
+Flfl , 2 , 9
 Future supply chain , 1 , 2
 Gail , 4 , 275
 General insurance co , 1 , 27
@@ -88,26 +86,27 @@ Havells , 1 , 20
 Hcil , 1 , 8
 Hcl technologies , 9 , 154
 Hdfc , 4 , 283
-Hdfc bank , 3 , 546
 Hdfc standard life , 1 , 4
+Hdfcbank , 3 , 546
+Hdfclife , 3 , 0
 Hero motocorp , 3 , 165
 Hindalco industries , 2 , 25
+Hindunilvr , 4 , 194
 Hindustan petroleum , 3 , 104
-Hindustan unilever , 6 , 305
+Hindustan unilever , 2 , 111
 Hindustan zinc , 2 , 58
 Honeywell , 1 , 32
 Hsil , 2 , 36
 Hudco ltd , 1 , 6
+Ibulhsgfin , 5 , 53
 Icici bank , 3 , 99
 Icici lombard , 3 , 22
-Icici prudential , 4 , 59
 Icici securities , 2 , 29
+Icicipruli , 4 , 59
 Icra , 2 , 57
-Indiabulls housing finance , 5 , 53
-Indian hotels , 2 , 38
+Igl , 1 , 8
+Indhotel , 2 , 38
 Indian oil corpn , 3 , 141
-Indraprastha gas lim , 1 , 8
-Infoedge india limi , 5 , 20
 Interglobe aviation , 2 , 46
 Itc , 4 , 689
 Itdc ltd , 1 , 2
@@ -115,114 +114,116 @@ Jain irrigation syst , 1 , 10
 Jk tyre and industri , 2 , 38
 Johnson controlshit , 1 , 1
 Jsw steel , 2 , 43
-Jubilant foodworks , 2 , 12
+Jublfood , 2 , 12
 Kajaria ceramics , 2 , 15
 Kansai , 1 , 13
-Kansai nerolac , 1 , 9
+Kansainer , 1 , 9
 Kaveri seed company , 1 , 6
 Kotak mahindra bank , 2 , 2
 Krbl , 1 , 11
 Ksb pumps , 1 , 18
-L&t finance holdings , 1 , 6
-L&t technology serv , 1 , 12
-L&t technology servi , 1 , 7
-Larsen & toubro info , 2 , 27
-Larsen & toubro ltd , 3 , 232
-Lic housing finance , 2 , 32
+L&tfh , 1 , 6
+Lalpathlab , 3 , 12
+Lichsgfin , 2 , 32
+Lt , 3 , 232
+Lti , 2 , 27
+Ltts , 2 , 19
 Lupin , 2 , 75
-Mahindra & mahindra , 3 , 55
-Mahindra holidays & , 1 , 24
-Mahindra logistics l , 1 , 3
+M&m , 1 , 13
+Mahindra & mahindra , 2 , 42
+Mahlog , 1 , 3
 Marico , 3 , 39
 Maruti suzuki , 2 , 155
 Mcx of india ltd , 1 , 17
 Mfl q fy , 3 , 15
+Mhril , 1 , 24
 Monsanto , 4 , 110
-Motherson sumi syste , 3 , 174
+Mothersumi , 3 , 174
 Mrf , 3 , 60
-Muthoot finance , 1 , 40
-National aluminium co , 2 , 194
+Muthootfin , 1 , 40
+Nationalum , 2 , 194
+Naukri , 5 , 20
 Nbcc , 3 , 18
 Ncc , 2 , 25
 Nestle , 5 , 161
-New india assurance , 2 , 17
 Nhpc , 2 , 56
+Niacl , 2 , 17
 Nilkamal , 4 , 28
 Nlc , 2 , 53
 Nmdc , 2 , 83
 Ntpc , 7 , 393
-Oil & natural gas , 7 , 229
 Oil india ltd , 4 , 240
+Ongc , 7 , 229
 Page industries , 5 , 287
 Pc jeweller , 1 , 7
 Petronet lng , 3 , 102
 Pfizer , 1 , 20
+Pghh , 2 , 67
 Pi industries , 2 , 4
 Pidilite , 1 , 9
 Pidilite fn , 1 , 18
 Piramal enterprises , 2 , 71
 Power finance corpor , 2 , 132
-Power grid corp , 4 , 273
+Powergrid , 3 , 202
+Powergrid corporatio , 1 , 71
 Praxis home retail l , 1 , 31
-Prestige estates pro , 2 , 14
-Procter & gamble hyg , 2 , 67
+Prestige , 2 , 14
 Puravankara , 2 , 72
 Pvr , 2 , 6
-Rajesh exports , 2 , 6
+Rajeshexpo , 2 , 6
 Rallis , 2 , 43
+Recltd , 3 , 125
 Relaxo footwears , 2 , 8
 Reliance industries , 2 , 167
-Rural electrification , 3 , 125
 Sanofi , 2 , 71
-Sbi life insurance c , 1 , 4
-Shriram transport fi , 1 , 6
-Shriram transport finance , 2 , 10
+Sbilife , 1 , 4
 Siemens , 1 , 14
 Skf , 2 , 34
 Sobha , 2 , 49
 Somany ceramics , 1 , 2
+Srtransfin , 3 , 16
 State bank of india , 1 , 26
-Sun pharmaceutical i , 3 , 91
+Sunpharma , 3 , 91
 Supreme industries , 4 , 41
-Talwalkars better value fitness , 2 , 10
+Talwalkars , 2 , 10
 Talwalkars lifestyle , 1 , 11
-Tata chemicals , 2 , 110
-Tata coffee , 1 , 14
-Tata global beverages , 2 , 46
-Tata motors , 1 , 1
 Tata power , 1 , 16
+Tatachem , 2 , 110
 Tatacoffe , 1 , 22
-Tatasteelfp , 1 , 140
-Tcook , 1 , 3
+Tatacoffee , 1 , 14
+Tataglobal , 2 , 46
+Tatamotors , 1 , 1
+Tatasteel , 1 , 140
 Tcs , 11 , 839
 Tech mahindra , 1 , 84
 Thomas cook , 1 , 1
-Ti financial holdings , 2 , 3
+Thomascook , 1 , 3
+Tifin , 2 , 3
+Tiindia , 2 , 7
 Titan , 2 , 27
-Tp hdfc std lifins , 3 , 0
 Tpower , 1 , 32
 Trent , 2 , 12
 Ttk prestige , 2 , 42
-Tube investments , 3 , 9
+Tube investments , 1 , 2
 Tvs motor company , 3 , 26
+Ubl , 2 , 5
 Uflex , 1 , 8
 Ultratech cement , 2 , 61
-United breweries , 2 , 5
 Upl , 2 , 105
 Varun beverages , 1 , 5
 Vedanta , 3 , 1118
-Venky's india ltd , 1 , 8
-Vguard industries l , 1 , 2
+Venkys , 1 , 8
+Vguard , 1 , 2
 Vip industries , 3 , 36
 Voltas , 2 , 23
 Vrl logistics , 1 , 21
 Vst industries , 1 , 77
-Vst tillers tractors , 2 , 65
+Vsttillers , 2 , 65
 Whirlpool , 2 , 11
 Wipro , 3 , 44
 Wonderla holidays , 1 , 4
-Zee entertainment en , 2 , 51
 Zee learn , 2 , 5
+Zeel , 2 , 51
 total dividend amount:  ,  0 , 15061
 total dividend entries: ,  0 , 491
-total companies count:  ,  0 , 225
+total companies count:  ,  0 , 226
