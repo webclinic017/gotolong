@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PLAN_NAME=${PROJ_PROFILE_REPORTS_LOC}/plan-reports/plan-reports-name-only.csv
+PLAN_NAME=${PROJ_PROFILE_REPORTS_LOC}/plan-reports/plan-reports-ticker-only.csv
 
 mkdir -p ${PROJ_PROFILE_REPORTS_LOC}/review-reports
 

@@ -108,8 +108,8 @@ class Plan(Amfi):
 					units_1k = 0
 				if units_1k > 0: 
 					p_str = self.get_amfi_ticker_by_code(isin) 
-					p_str += ' '
-					p_str += comp_name
+					# p_str += ' '
+					# p_str += comp_name
 					p_str += '\n'
 					lines.append(p_str)
 			except ValueError:

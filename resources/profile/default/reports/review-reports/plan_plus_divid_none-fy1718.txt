@@ -1,144 +1,259 @@
-3m
-Abb
-Abbott
-Adani ports special economic zone
-Adani transmission
-Aditya birla fashion retail
-Allcargo logistics
-Amara raja batteries
-Apollo hospitals enterprises
-Arvind
-Asahi glass
-Ashok leyland
-Asian granito
-Avenue supermarts
-Bajaj finance
-Bajaj finserv
-Balrampur chini mills
-Bandhan bank
-Bankbaroda
-Bayer cropscience
-Bharat dynamics
-Bharat heavy electricals
-Biocon
-Blue dart express
-Blue star
-Bosch
-Cadila healthcare
-Central depository services
-Chambal fertilisers chemicals
-Cholamandalam investment finance company
-Coffee day enterprises
-Cox kings
-Crompton greaves consumer electricals
-Dcm shriram
-Dewan housing finance
-Dish tv
-Dr reddys laboratories
-Eicher motors
-Eid parry
-Endurance technologies
-Essel propack
-Eveready industries
-Fortis healthcare
-Future consumer
-Future retail
-Future supply chain solutions
-General insurance corporation
-Glaxosmithkline consumer healthcare
-Glaxosmithkline pharmaceuticals
-Glenmark pharmaceuticals
-Godfrey phillips
-Godrej agrovet
-Godrej consumer products
-Godrej industries
-Godrej properties
-Goodyear
-Grasim industries
-Greenply industries
-Grindwell norton
-Hatsun agro products
-Havells
-Hdfc standard life insurance company
-Hindustan aeronautics
-Hindustan petroleum corporation
-Honeywell automation
-Housing &urban development corporation
-Housing development finance corplt
-Huhtamaki ppl
-Icici lombard general insurance company
-Icici prudential life insurance company
-Icici securities
-Idea cellular
-Ifb industries
-Iifl holdings
-Indian hotels co
-Indian oil corporation
-Indusind bank
-Info edge
-Infosys
-Jain irrigation systems
-Jk tyre industries
-Johnson controls hitachi air conditioning
-Kansai nerolac paints
-Kaveri seed company
-Krbl
-Ksb pumps
-L&t finance holdings
-L&t technology services
-Larsen toubro
-Larsen toubro infotech
-Mahindra cie automotive
-Mahindra holidays resorts
-Mahindra logistics
-Mahindra mahindra financial services
-Manappuram finance
-Motherson sumi systems
-Multi commodity exchange
-Narayana hrudayalaya
-Oil natural gas corporation
-Pc jeweller
-Pfizer
-Pi industries
-Pidilite industries
-Power finance corporation
-Power grid corporation
-Prestige estates projects
-Procter gamble hygiene health care
-Quess corp
-Rural electrification corporation
-Sanofi
-Sbi life insurance company
-Schaeffler
-Sheela foam
-Shipping corporation
-Shoppers stop
-Shree cements
-Shree renuka sugars
-Shriram transport finance co
-Somany ceramics
-Sun pharmaceutical industries
-Sundaram finance holdings
-Tata consultancy services
-Tata elxsi
-Tata investment corporation
-Tata motors
-Tata power co
-Tata steel
-Tech mahindra
-The new assurance company
-Titan company
-Trent [lakme ]
-Tvs srichakra
-UNK_COMP
-Uflex
-United spirits
-V guard industries
-Venkys
-Vrl logistics
-Vst industries
-Vsttillers tractors
-Wabco
-Westlife development
-Wonderla holidays
-Zee entertainment enterprises
+3MINDIA
+ABB
+ABBOTINDIA
+ABFRL
+ACC
+ADANIENT
+ADANIPORTS
+ADANITRANS
+AEGISLOG
+AKZOINDIA
+ALLCARGO
+AMARAJABAT
+AMBUJACEM
+APOLLOHOSP
+APOLLOTYRE
+ARVIND
+ASAHIINDIA
+ASHOKLEY
+ASIANPAINT
+ASIANTILES
+AUROPHARMA
+AVANTI
+AXISBANK
+BAJAJ-AUTO
+BAJAJFINSV
+BAJFINANCE
+BALKRISIND
+BALRAMCHIN
+BANDHANBNK
+BANKBARODA
+BASF
+BATAINDIA
+BAYERCROP
+BDL
+BEL
+BERGEPAINT
+BHARTIARTL
+BHEL
+BIOCON
+BLUEDART
+BLUESTARCO
+BOSCHLTD
+BPCL
+BRIGADE
+BRITANNIA
+BSE
+CADILAHC
+CARBORUNIV
+CARERATING
+CASTROLIND
+CDSL
+CEATLTD
+CENTURYPLY
+CERA
+CHAMBLFERT
+CHOLAINV
+CIPLA
+COALINDIA
+COFFEEDAY
+COLPAL
+CONCOR
+COROMANDEL
+COX&KINGS
+CRISIL
+CROMPTON
+CUMMINSIND
+DABUR
+DCMSHRIRAM
+DELTACORP
+DHFL
+DISHTV
+DLF
+DMART
+DRREDDY
+EICHERMOT
+EIDPARRY
+EIHOTEL
+EMAMILTD
+ENDURANCE
+ENGINERSIN
+ENIL
+ESSELPRO
+EVEREADY
+EXIDEIND
+FCONSUMER
+FLFL
+FORTIS
+FRETAIL
+FSC
+GAIL
+GICRE
+GILLETTE
+GLAXO
+GLENMARK
+GODFRYPHLP
+GODREJAGRO
+GODREJCP
+GODREJIND
+GODREJPROP
+GOODYEAR
+GRASIM
+GREENPLY
+GRINDWELL
+GRNLAMIND
+GSKCONS
+HAL
+HATSUN
+HAVELLS
+HCLTECH
+HDFC
+HDFCBANK
+HDFCLIFE
+HEROMOTOCO
+HINDALCO
+HINDPETRO
+HINDUNILVR
+HINDZINC
+HONAUT
+HSIL
+HUDCO
+IBULHSGFIN
+ICICIBANK
+ICICIGI
+ICICIPRULI
+ICRA
+IDEA
+IFBIND
+IIFL
+INDHOTEL
+INDIGO
+INDUSINDBK
+INFY
+INOXLEISUR
+IOC
+ISEC
+ITC
+JCHAC
+JISLJALEQS
+JKTYRE
+JSWSTEEL
+JUBLFOOD
+KAJARIACER
+KANSAINER
+KOTAKBANK
+KRBL
+KSBPUMPS
+KSCL
+L&TFH
+LALPATHLAB
+LEMONTREE
+LICHSGFIN
+LT
+LTI
+LTTS
+LUPIN$
+M&MFIN
+MAHFORG
+MAHLOG
+MANAPPURAM
+MARICO
+MARUTI
+MCX
+MHRIL
+MONSANTO
+MOTHERSUMI
+MRF
+MUTHOOTFIN
+NATIONALUM
+NAUKRI
+NBCC
+NESTLEIND
+NETWORK18
+NH
+NHPC
+NIACL
+NILKAMAL
+NLCINDIA
+NMDC
+NTPC
+ONGC
+PAGEIND
+PAPERPROD
+PCJEWELLER
+PEL
+PETRONET
+PFC
+PFIZER
+PGHH
+PIDILITIND
+PIIND
+POWERGRID
+PRESTIGE
+PURVA
+PVR
+QUESS
+RAJESHEXPO
+RALLIS
+RECLTD
+RELAXO
+RELIANCE
+RENUKA
+SANOFI
+SBILIFE
+SCHAEFFLER
+SCI
+SFL
+SHOPERSTOP
+SHREECEM
+SIEMENS
+SKFINDIA
+SOBHA
+SOMANYCERA
+SRTRANSFIN
+SUNDARMHLD
+SUNPHARMA
+SUPREMEIND
+TALWALKARS
+TATACHEM
+TATACOFFEE
+TATAELXSI
+TATAINVEST
+TATAMOTORS
+TATAPOWER
+TATASTEEL
+TATATEA
+TCS
+TECHM
+THOMASCOOK
+THYROCARE
+TIFHL
+TIINDIA
+TITAN
+TRENT
+TTKPRESTIG
+TVSMOTOR
+TVSSRICHAK
+UBL
+UFLEX
+ULTRACEMCO
+UNITDSPR
+UNK_TICKER
+UPL
+VBL
+VEDL
+VENKYS
+VGUARD
+VIPIND
+VOLTAS
+VRLLOG
+VSTIND
+VSTTILLERS
+WABCOINDIA
+WESTLIFE
+WHIRLPOOL
+WIPRO
+WONDERLA
+ZEEL
+ZEELEARN
+ZYDUSWELL
