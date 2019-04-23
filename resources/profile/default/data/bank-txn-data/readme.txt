@@ -14,4 +14,4 @@
 # Clear contents of Balance Column (Last column). Do not remove it.
 # From bottom : remove all lines including Legends Used in Account Statement
 # Save it as CSV (Comma delimited) (*.csv) : OpTransactionHistory17-04-2018.csv file
-# Upload OpTransactionHistory17-04-2018.csv to stock-market/fy17-18/
+# Upload OpTransactionHistory-fy1819.csv to stock-market/fy17-18/
