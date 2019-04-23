@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=2
+DEBUG_LEVEL=1
 
 IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
 IN_FILE_ALIASES=$PROJ_LOCAL_DATA_LOC/other-data/dividend-company-ticker-aliases.csv

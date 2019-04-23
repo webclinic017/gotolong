@@ -177,7 +177,8 @@ class Dividend(Amfi):
 				remarks_arr = txn_remarks.split('/')
 				deposit_way = remarks_arr[0] 
 				company_name = remarks_arr[1] 
-				comment_str = remarks_arr[2] 
+				if len(remarks_arr) >= 3:
+					comment_str = remarks_arr[2]
 				# ignore rest
 			except ValueError:
 				print 'ValueError ' + txn_remarks
