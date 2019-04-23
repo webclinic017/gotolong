@@ -21,6 +21,7 @@ do
      	dividend-stats.py out_csv ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv > ${OUT_DIR}/${FY}/${FY}-${SORT_TYPE}.csv
       fi
   done # SORT_TYPE
+
 done # FY
 
 

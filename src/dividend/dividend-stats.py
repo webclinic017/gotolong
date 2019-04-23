@@ -120,12 +120,12 @@ def load_aliases():
 	with open(company_aliases_filename, 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		for row in reader:
-			name_alias, name_real = row
+			name_alias, ticker = row
 			name_alias = name_alias.strip().capitalize()
-			name_real = name_real.strip().capitalize()
+			ticker = ticker.strip().upper()
 			if debug_level > 2: 
-				print 'alias ', name_alias, 'real ', name_real
-			company_aliases[name_alias] = name_real
+				print 'alias ', name_alias, 'ticker ', ticker 
+			company_aliases[name_alias] = ticker 
 
 def resolve_alias(company_name):
 	if company_name in company_aliases.keys():

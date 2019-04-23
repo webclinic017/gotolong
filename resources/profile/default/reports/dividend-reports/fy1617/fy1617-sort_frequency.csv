@@ -1,21 +1,18 @@
-State bank of india , 1 , 26
-Sunpharma , 1 , 9
-Hdfcbank , 1 , 114
-Tatamotors , 1 , 1
-Powergrid , 1 , 24
-Asianpaint , 1 , 5
-Lt , 1 , 36
-Icici bank , 1 , 50
-Hdfc , 1 , 18
-Bharti airtel , 1 , 34
-Wipro , 2 , 22
-Hcl technologies , 2 , 42
-Itc , 2 , 321
-Coal , 2 , 537
-Hindunilvr , 2 , 50
-Ongc , 3 , 67
-Ntpc , 3 , 85
-Tcs , 4 , 91
-total dividend amount:  ,  0 , 1532
-total dividend entries: ,  0 , 30
-total companies count:  ,  0 , 18
+SUNPHARMA,1,9
+BHARTIARTL,1,34
+SBIN,1,26
+HDFCBANK,1,114
+TATAMOTORS,1,1
+ASIANPAINT,1,5
+LT,1,36
+HDFC,1,18
+ICICIBANK,1,50
+POWERGRID,1,24
+WIPRO,2,22
+ITC,2,321
+COALINDIA,2,537
+HCLTECH,2,42
+HINDUNILVR,2,50
+ONGC,3,67
+NTPC,3,85
+TCS,4,91
