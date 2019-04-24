@@ -1,15 +1,17 @@
 #!/bin/sh
 
-DEBUG_LEVEL=1
+DEBUG_LEVEL=0
 
-IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
-IN_FILE_ALIASES=$PROJ_LOCAL_DATA_LOC/other-data/dividend-company-ticker-aliases.csv
+BANK=icici-bank
+
 
 # dividends data
 IN_DIR=$PROJ_PROFILE_DATA_LOC/bank-txn-data
 OUT_DIR=$PROJ_PROFILE_REPORTS_LOC/dividend-reports
 
-BANK=icici-bank
+IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
+IN_FILE_ALIASES=${IN_DIR}/nach-aliases/nach-company-ticker-aliases.csv
+
 
 for FY in fy1617 fy1718 fy1819 all
 do

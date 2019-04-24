@@ -10,7 +10,6 @@ import finratio.comp_perf
 import finratio.comp_price
 from isin.isin import *
 
-# S.No.,Name,CMP,Sales,NP 12M,P/E,OPM,EPS 12M,Dividend Payout,Debt / Eq,Int Coverage,Div Yld,PEG,CMP / BV,Avg Div Payout 3Yrs,IV,EV,Mar Cap,Altman Z Scr,Current ratio,ROE 3Yr,Graham Price,Sales Var 5Yrs,Profit Var 5Yrs,EV / EBIT
 
 
 class Screener(Isin):
@@ -19,33 +18,42 @@ class Screener(Isin):
 		self.sc_sno = [] 
 		self.sc_name = {} 
 		self.sc_cmp = {}
+		self.sc_myavgiv = {}
+		self.sc_iv = {}
+		self.sc_mcap = {}
 		self.sc_sales = {}
 		self.sc_np = {}
 		self.sc_pe = {}
-		self.sc_opm = {}
+		self.sc_pe5 = {}
 		self.sc_eps = {}
-		self.sc_dp = {}
+		self.sc_peg = {}
+		self.sc_p2bv = {}
+		self.sc_p2ocf = {}
+		self.sc_p2sales = {}
+		self.sc_ev2ebitda = {}
+		self.sc_ev = {}
+		self.sc_opm = {}
 		self.sc_d2e = {}
 		self.sc_ic = {}
-		self.sc_dy = {}
-		self.sc_peg = {}
-		self.sc_cmp2bv = {}
+		self.sc_dp = {}
 		self.sc_dp3 = {}
-		self.sc_iv = {}
-		self.sc_ev = {}
-		self.sc_mcap = {}
-		self.sc_altmanz = {}
-		self.sc_cr = {}
+		self.sc_dy = {}
 		self.sc_roe3 = {}
-		self.sc_graham = {}
+		self.sc_roce3 = {}
+		self.sc_cr = {}
 		self.sc_sales_var5 = {}
 		self.sc_profit_var5 = {}
-		self.sc_ev2ebit = {}
 		self.sc_pledge = {}
+		self.sc_promhold = {}
+		self.sc_piotski = {}
+		self.sc_altmanz = {}
+		self.sc_graham = {}
 		self.sc_crank = {}
 		self.sc_prank = {}
                 self.sc_name_aliases = {}
  		self.debug_level = 0 
+		self.sc_ratio_name = { 'S.No. ':'sno','Name ':'name','CMP Rs. ':'cmp','MyAvgIV ':'myavgiv','IV Rs. ':'iv','Mar Cap Rs.Cr. ':'mcap','Sales Rs.Cr. ':'sales','NP 12M Rs.Cr. ':'np','P/E ':'pe','5Yrs PE ':'pe5','EPS 12M Rs. ':'eps','PEG ':'peg','CMP / BV ':'p2bv','CMP / OCF ':'p2ocf','CMP / Sales ':'p2sales','EV / EBITDA ':'ev2ebitda', 'EV Rs.Cr. ' : 'ev' , 'OPM % ':'opm','Debt / Eq ':'d2e','Int Coverage ':'ic','Dividend Payout % ':'dp','Avg Div Payout 3Yrs % ':'dp3','Div Yld % ':'dy','ROE 3Yr % ':'roe3','ROCE3yr avg % ':'roce3','Current ratio ':'cr','Sales Var 5Yrs % ':'sales_var5','Profit Var 5Yrs % ':'profit_var5','Pledged % ':'pledge','Prom. Hold. % ':'prom_hold','Piotski Scr ':'piotski' }
+		self.sc_ratio_loc = { 'sno' : 0,'name' : 0,'cmp' : 0,'myavgiv' : 0,'iv' : 0,'mcap' : 0,'sales' : 0,'np' : 0,'pe' : 0,'pe5' : 0,'eps' : 0,'peg' : 0,'p2bv' : 0,'p2ocf' : 0,'p2sales' : 0,'ev2ebitda' : 0,'ev' : 0,'opm' : 0,'d2e' : 0,'icover' : 0,'dp' : 0,'dp3' : 0,'dy' : 0,'roe3' : 0,'roce3' : 0,'cr' : 0,'sales_var5' : 0,'profit_var5' : 0,'pledge' : 0,'prom_hold' : 0,'piotski' : 0 }
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
@@ -77,15 +85,23 @@ class Screener(Isin):
 					print 'ignored empty row', row_list
 				return
 
-			cmp_rs = row_list[2].strip()
-			if cmp_rs == 'CMP' or cmp_rs == 'Rs.' or cmp_rs == '' or cmp_rs == 'CMP Rs.' : 
+			sc_no = row_list[0].strip()
+			if sc_no == 'S.No.' : 
 				if self.debug_level > 1:
-					print 'ignored CMP / Rs.', row_list
+					print 'picked up keys', row_list
+				rindex = 0
+				for ratio in row_list:
+					if ratio in self.sc_ratio_name.keys():
+						if self.debug_level > 1:
+							print 'found ', ratio
+						self.sc_ratio_loc[self.sc_ratio_name[ratio]] = rindex
+						rindex += 1
+					else:
+						print 'check sc_ratio_name for', ratio
 				return
 
-			# S.No.,Name,CMP,Sales,NP 12M,P/E,OPM,EPS 12M,Dividend Payout,Debt / Eq,Int Coverage,Div Yld,PEG,CMP / BV,Avg Div Payout 3Yrs,IV,EV,Mar Cap,Altman Z Scr,Current ratio,ROE 3Yr,Graham Price,Sales Var 5Yrs,Profit Var 5Yrs,EV / EBIT
-			sc_sno = cutil.cutil.get_number(row_list[0])
-			sc_name = row_list[1]
+			sc_sno = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sno']])
+			sc_name = row_list[self.sc_ratio_loc['name']]
 			sc_name = self.resolve_screener_name_alias(sc_name)
 			sc_name = cutil.cutil.normalize_comp_name(sc_name)
 			isin_code = self.get_isin_code_by_name(sc_name)
@@ -95,31 +111,34 @@ class Screener(Isin):
 				sc_sno = isin_code
 				if self.debug_level > 1:
 					print 'Found isin_code : ', sc_sno, ' for ', sc_name
-
-			sc_cmp = cutil.cutil.get_number(row_list[2])
-			sc_sales = cutil.cutil.get_number(row_list[3])
-			sc_np = cutil.cutil.get_number(row_list[4])
-			sc_pe = cutil.cutil.get_number(row_list[5])
-			sc_opm = cutil.cutil.get_number(row_list[6])
-			sc_eps = cutil.cutil.get_number(row_list[7])
-			sc_dp = cutil.cutil.get_number(row_list[8])
-			sc_d2e = cutil.cutil.get_number(row_list[9])
-			sc_ic = cutil.cutil.get_number(row_list[10])
-			sc_dy = cutil.cutil.get_number(row_list[11])
-			sc_peg  = cutil.cutil.get_number(row_list[12])
-			sc_cmp2bv = cutil.cutil.get_number(row_list[13])
-			sc_dp3  = cutil.cutil.get_number(row_list[14])
-			sc_iv  = cutil.cutil.get_number(row_list[15])
-			sc_ev  = cutil.cutil.get_number(row_list[16])
-			sc_mcap  = cutil.cutil.get_number(row_list[17])
-			sc_altmanz = cutil.cutil.get_number(row_list[18])
-			sc_cr = cutil.cutil.get_number(row_list[19])
-			sc_roe3 = cutil.cutil.get_number(row_list[20])
-			sc_graham = cutil.cutil.get_number(row_list[21])
-			sc_sales_var5 = cutil.cutil.get_number(row_list[22])
-			sc_profit_var5 = cutil.cutil.get_number(row_list[23])
-			sc_ev2ebit = cutil.cutil.get_number(row_list[24])
-			sc_pledge = cutil.cutil.get_number(row_list[25])
+			sc_cmp = cutil.cutil.get_number(row_list[self.sc_ratio_loc['cmp']])
+			sc_myavgiv = cutil.cutil.get_number(row_list[self.sc_ratio_loc['myavgiv']])
+			sc_iv  = cutil.cutil.get_number(row_list[self.sc_ratio_loc['iv']]) 
+			sc_mcap  = cutil.cutil.get_number(row_list[self.sc_ratio_loc['mcap']]) 
+			sc_sales  = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sales']]) 
+			sc_np = cutil.cutil.get_number(row_list[self.sc_ratio_loc['np']]) 
+			sc_pe = cutil.cutil.get_number(row_list[self.sc_ratio_loc['pe']]) 
+			sc_pe5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['pe5']]) 
+			sc_eps = cutil.cutil.get_number(row_list[self.sc_ratio_loc['eps']]) 
+			sc_peg = cutil.cutil.get_number(row_list[self.sc_ratio_loc['peg']]) 
+			sc_opm = cutil.cutil.get_number(row_list[self.sc_ratio_loc['opm']]) 
+			sc_dp = cutil.cutil.get_number(row_list[self.sc_ratio_loc['dp']]) 
+			sc_d2e = cutil.cutil.get_number(row_list[self.sc_ratio_loc['d2e']]) 
+			sc_ic = cutil.cutil.get_number(row_list[self.sc_ratio_loc['ic']]) 
+			sc_dy = cutil.cutil.get_number(row_list[self.sc_ratio_loc['dy']]) 
+			sc_p2bv = cutil.cutil.get_number(row_list[self.sc_ratio_loc['p2bv']]) 
+			sc_dp3 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['dp3']]) 
+			sc_ev = cutil.cutil.get_number(row_list[self.sc_ratio_loc['ev']]) 
+			# TBD GOLD sc_altmanz = cutil.cutil.get_number(row_list[self.sc_ratio_loc['altmanz']]) 
+			sc_altmanz = 0 
+			sc_cr = cutil.cutil.get_number(row_list[self.sc_ratio_loc['cr']]) 
+			sc_roe3 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['roe3']]) 
+			# TBD GOLD sc_graham = cutil.cutil.get_number(row_list[self.sc_ratio_loc['graham']]) 
+			sc_graham = 0 
+			sc_sales_var5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sales_var5']]) 
+			sc_profit_var5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['profit_var5']]) 
+			sc_ev2ebitda = cutil.cutil.get_number(row_list[self.sc_ratio_loc['ev2ebitda']]) 
+			sc_pledge = cutil.cutil.get_number(row_list[self.sc_ratio_loc['pledge']]) 
 
 			self.sc_sno.append(sc_sno)
 
@@ -135,8 +154,9 @@ class Screener(Isin):
 			self.sc_ic[sc_sno] = sc_ic 
 			self.sc_dy[sc_sno] = sc_dy 
 			self.sc_peg[sc_sno]  = sc_peg
-			self.sc_cmp2bv[sc_sno]  = sc_cmp2bv 
+			self.sc_p2bv[sc_sno]  = sc_p2bv 
 			self.sc_dp3[sc_sno]  = sc_dp3 
+			self.sc_myavgiv[sc_sno]  = sc_myavgiv 
 			self.sc_iv[sc_sno]  = sc_iv 
 			self.sc_ev[sc_sno]  = sc_ev 
 			self.sc_mcap[sc_sno]  = sc_mcap 
@@ -146,7 +166,7 @@ class Screener(Isin):
 			self.sc_graham[sc_sno] = sc_graham 
 			self.sc_sales_var5[sc_sno] = sc_sales_var5
 			self.sc_profit_var5[sc_sno] = sc_profit_var5 
-			self.sc_ev2ebit[sc_sno] =  sc_ev2ebit
+			self.sc_ev2ebitda[sc_sno] =  sc_ev2ebitda
 			self.sc_pledge[sc_sno] =  sc_pledge
 			
 			sc_crank = 0
@@ -169,7 +189,7 @@ class Screener(Isin):
 			sc_prank = 0
 			sc_prank += finratio.comp_price.get_pscore_pe(sc_pe)
 			sc_prank += finratio.comp_price.get_pscore_peg(sc_peg)
-			sc_prank += finratio.comp_price.get_pscore_pb(sc_cmp2bv)
+			sc_prank += finratio.comp_price.get_pscore_pb(sc_p2bv)
 			sc_prank += finratio.comp_price.get_pscore_dy(sc_dy)
 			sc_prank += finratio.comp_price.get_pscore_iv(sc_cmp, sc_iv)
 			sc_prank += finratio.comp_price.get_pscore_graham(sc_cmp, sc_graham)
@@ -182,6 +202,10 @@ class Screener(Isin):
 			
 		except IndexError:
 			print 'except ', row
+			traceback.print_exc()
+		except KeyError:
+			print 'except ', row
+			traceback.print_exc()
 		except:
 			print 'except ', row
 			traceback.print_exc()
@@ -198,7 +222,7 @@ class Screener(Isin):
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_cmp2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebit, sc_pledge, sc_crank, sc_prank\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_p2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebitda, sc_pledge, sc_crank, sc_prank\n')
 		if sort_score:
 			sorted_input = sorted(self.sc_crank, key=self.sc_crank.__getitem__, reverse=True)
 		else:
@@ -234,7 +258,7 @@ class Screener(Isin):
 			p_str += ', ' 
 			p_str += str(self.sc_peg[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_cmp2bv[sc_sno])
+			p_str += str(self.sc_p2bv[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_dp3[sc_sno])
 			p_str += ', ' 
@@ -256,7 +280,7 @@ class Screener(Isin):
 			p_str += ', ' 
 			p_str += str(self.sc_profit_var5[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_ev2ebit[sc_sno])
+			p_str += str(self.sc_ev2ebitda[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_pledge[sc_sno])
 			p_str += ', ' 
@@ -295,6 +319,10 @@ class Screener(Isin):
 	def get_sc_iv_by_sno(self, sc_sno):
 		if sc_sno in self.sc_iv:
 			return self.sc_iv[sc_sno]
+		return 0
+	def get_sc_myavgiv_by_sno(self, sc_sno):
+		if sc_sno in self.sc_myavgiv:
+			return self.sc_myavgiv[sc_sno]
 		return 0
 	def get_sc_graham_by_sno(self, sc_sno):
 		if sc_sno in self.sc_graham:

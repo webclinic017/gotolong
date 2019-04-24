@@ -24,8 +24,7 @@ class Tbd(Plan, Demat, Screener):
 		self.tbd_isin_name = {}
 		self.tbd_isin_code = {}
 		self.tbd_captype = {}
-		self.tbd_crank = {}
-		self.tbd_prank = {}
+		self.tbd_myavgiv = {}
 		self.tbd_demat_last_txn_date = {}
 		self.tbd_demat_last_txn_type = {}
 
@@ -83,25 +82,22 @@ class Tbd(Plan, Demat, Screener):
 			        isin_name = self.get_isin_name_by_code(isin_code)
 				if isin_name == '':
 					self.tbd_isin_name[comp_name] = comp_name
-					sc_crank = 0
-					sc_prank = 0
+					sc_myavgiv = 0
 				else:
 					self.tbd_isin_name[comp_name] = isin_name
-					sc_crank = self.get_sc_crank_by_sno(isin_code)
-					sc_prank = self.get_sc_prank_by_sno(isin_code)
-				self.tbd_crank[comp_name] = sc_crank
-				self.tbd_prank[comp_name] = sc_prank
+					sc_myavgiv = self.get_sc_myavgiv_by_sno(isin_code)
+				self.tbd_myavgiv[comp_name] = sc_myavgiv
 			except ValueError:
 				print 'except : process: ValueError :', comp_name
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, demat_only = None, sort_sale = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_graham\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_myavgiv, sc_cmp, sc_iv\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 		if sort_sale:
-			sorted_items = sorted(self.tbd_crank, key=self.tbd_crank.__getitem__)
+			sorted_items = sorted(self.tbd_myavgiv, key=self.tbd_myavgiv.__getitem__)
 		else:
-			sorted_items = sorted(self.tbd_prank, key=self.tbd_prank.__getitem__, reverse=True)
+			sorted_items = sorted(self.tbd_myavgiv, key=self.tbd_myavgiv.__getitem__, reverse=True)
 		for comp_name in sorted_items:
 			try:
 			        isin_code = self.get_isin_code_by_name(comp_name)
@@ -126,16 +122,13 @@ class Tbd(Plan, Demat, Screener):
 					
 				tbd_units = int(self.tbd_units[comp_name])
 				tbd_pct = int(round(float(self.tbd_pct[comp_name])))
-				sc_crank = self.tbd_crank[comp_name] 
-				sc_prank = self.tbd_prank[comp_name] 
+				sc_myavgiv = self.tbd_myavgiv[comp_name] 
 				if isin_code == '':
 					sc_cmp = 0
 					sc_iv = 0
-					sc_graham = 0
 				else:
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
-					sc_graham = self.get_sc_graham_by_sno(isin_code)
 				
 				last_txn_days = self.tbd_last_txn_days[comp_name]
 				p_str = self.tbd_isin_name[comp_name]
@@ -158,15 +151,11 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += self.tbd_captype[comp_name]
 				p_str += ',' 
-				p_str += str(sc_crank)
-				p_str += ',' 
-				p_str += str(sc_prank)
+				p_str += str(sc_myavgiv)
 				p_str += ',' 
 				p_str += str(sc_cmp)
 				p_str += ',' 
 				p_str += str(sc_iv)
-				p_str += ',' 
-				p_str += str(sc_graham)
 				p_str += '\n' 
 				if tbd_only:
 					if tbd_units > 0:

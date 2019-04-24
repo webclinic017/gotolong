@@ -2,16 +2,17 @@
 setenv PROJECT_ROOT `pwd` 
 
 setenv PROJ_SOURCE_LOC $PROJECT_ROOT/src
-setenv PROJ_DATA_LOC  $PROJECT_ROOT/resources/global/data
-setenv PROJ_REPORTS_LOC $PROJECT_ROOT/resources/global/reports
+setenv PROJ_DATA_LOC  $PROJECT_ROOT/input-global-data
+setenv PROJ_REPORTS_LOC $PROJECT_ROOT/output-global-reports
 
-setenv PROJ_LOCAL_DATA_LOC  $PROJECT_ROOT/resources/local/data
-setenv PROJ_LOCAL_REPORTS_LOC $PROJECT_ROOT/resources/local/reports
+setenv PROJ_LOCAL_DATA_LOC  $PROJECT_ROOT/input-local-data
+setenv PROJ_LOCAL_REPORTS_LOC $PROJECT_ROOT/output-local-reports
 
+# use later
 setenv PROJ_PROFILE default 
 
-setenv PROJ_PROFILE_DATA_LOC  $PROJECT_ROOT/resources/profile/$PROJ_PROFILE/data
-setenv PROJ_PROFILE_REPORTS_LOC $PROJECT_ROOT/resources/profile/$PROJ_PROFILE/reports
+setenv PROJ_PROFILE_DATA_LOC  $PROJECT_ROOT/input-user-data
+setenv PROJ_PROFILE_REPORTS_LOC $PROJECT_ROOT/output-user-reports
 
 setenv PATH ${PROJ_SOURCE_LOC}:.:${PATH}
 
