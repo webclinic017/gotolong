@@ -90,7 +90,7 @@ Kaveri seed company,INE455I01029,3,2,1,33,02-Jan-2019,112,Buy,Small Cap,739,470,
 Titan company,INE280A01028,6,5,1,17,02-Jan-2019,112,Buy,Large Cap,738,1149,1916
 Sbi life insurance company,INE123W01016,3,3,0,0,09-Nov-2018,166,Buy,Large Cap,737,610,763
 Infosys,INE009A01021,15,11,4,27,11-Sep-2018,225,Buy,Large Cap,689,736,1607
-Aurobindo pharma,INE406A01037,3,2,1,33,02-Jan-2018,477,Buy,Large Cap,678,785,237
+Aurobindo pharma,INE406A01037,3,3,0,0,22-Apr-2019,2,Buy,Large Cap,678,785,237
 Godrej agrovet,INE850D01014,3,2,1,33,09-Nov-2018,166,Buy,Mid Cap,663,524,460
 Blue star,INE472A01039,3,2,1,33,09-Nov-2018,166,Buy,Small Cap,663,649,350
 Balkrishna industries,INE787D01026,3,3,0,0,05-Dec-2018,140,Buy,Mid Cap,626,952,1049
@@ -121,7 +121,7 @@ Kajaria ceramics,INE217B01036,3,3,0,0,09-Nov-2018,166,Buy,Small Cap,435,622,570
 Asahi glass,INE439A01020,3,5,-2,-67,05-Dec-2018,140,Buy,Small Cap,426,242,0
 Iifl holdings,INE530B01024,3,1,2,67,07-Sep-2018,229,Buy,Mid Cap,419,448,262
 Voltas,INE226A01021,3,3,0,0,09-Nov-2018,166,Buy,Mid Cap,416,617,405
-Gail,INE129A01019,3,2,1,33,10-Apr-2018,379,Buy,Large Cap,410,346,2026
+Gail,INE129A01019,3,3,0,0,22-Apr-2019,2,Buy,Large Cap,410,346,2026
 Basf,INE373A01013,3,3,0,0,04-Apr-2018,385,Buy,Small Cap,405,1370,30520
 Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,447,Buy,Small Cap,391,483,0
 Oil natural gas corporation,INE213A01029,3,4,-1,-33,09-Nov-2018,166,Buy,Large Cap,390,180,-534
@@ -179,7 +179,7 @@ Greenply industries,INE461C01038,3,1,2,67,28-Jun-2018,300,Buy,Small Cap,151,169,
 Bharat electronics,INE263A01024,3,8,-5,-167,18-Apr-2019,6,Buy,Large Cap,142,88,141
 Zee learn,INE565L01011,3,4,-1,-33,28-Jan-2019,86,Buy,Nano Cap,126,27,0
 Ntpc,INE733E01010,15,8,7,47,28-Mar-2019,27,Buy,Large Cap,124,134,-1093
-V guard industries,INE951I01027,3,1,2,67,19-Apr-2018,370,Buy,Small Cap,120,221,219
+V guard industries,INE951I01027,3,2,1,33,22-Apr-2019,2,Buy,Small Cap,120,221,219
 Indian hotels co,INE053A01029,3,11,-8,-267,09-Nov-2018,166,Buy,Mid Cap,115,152,0
 Engineers,INE510A01028,3,2,1,33,03-Jul-2018,295,Buy,Mid Cap,115,115,-207
 Chambal fertilizers chemicals,INE085A01013,3,2,1,33,09-Nov-2018,166,Buy,Small Cap,114,159,234
@@ -187,7 +187,7 @@ Eveready industries,INE128A01029,3,3,0,0,09-Nov-2018,166,Buy,Micro Cap,114,154,2
 Allcargo logistics,INE418H01029,3,2,1,33,02-Jan-2019,112,Buy,Small Cap,111,113,2473
 Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,385,Buy,Large Cap,110,753,-334
 Essel propack,INE255A01020,3,2,1,33,09-Oct-2018,197,Buy,Small Cap,107,134,152
-Manappuram finance,INE522D01027,3,1,2,67,18-Apr-2018,371,Buy,Small Cap,106,119,22
+Manappuram finance,INE522D01027,3,2,1,33,22-Apr-2019,2,Buy,Small Cap,106,119,22
 Arvind,INE034A01011,3,2,1,33,03-Jul-2018,295,Buy,Mid Cap,102,88,70
 Bharat heavy electricals,INE257A01026,3,4,-1,-33,02-Jan-2019,112,Buy,Large Cap,97,73,-32
 Nhpc,INE848E01016,3,2,1,33,09-Nov-2018,166,Buy,Mid Cap,96,23,75
@@ -202,7 +202,7 @@ Pi industries,INE603J01030,3,2,1,33,02-Jan-2019,112,Buy,Mid Cap,0,0,0
 Thyrocare technologies,INE594H01019,3,1,2,67,12-Mar-2019,43,Buy,Small Cap,0,0,0
 Shree renuka sugars,INE087H01022,3,1,2,67,28-Jun-2018,300,Buy,Micro Cap,0,0,0
 Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,385,Buy,Mid Cap,0,0,0
-Future consumer,INE220J01025,3,1,2,67,02-Feb-2018,446,Buy,Mid Cap,0,43,0
+Future consumer,INE220J01025,3,2,1,33,22-Apr-2019,2,Buy,Mid Cap,0,43,0
 Multi commodity exchange,INE745G01035,3,1,2,67,26-Jul-2018,272,Buy,Small Cap,0,0,0
 Entertainment network,INE265F01028,3,1,2,67,13-Mar-2019,42,Buy,Small Cap,0,0,0
 Ti financial holdings,INE149A01033,3,3,0,0,03-Jul-2018,295,Buy,Mid Cap,0,0,0
@@ -213,7 +213,7 @@ National aluminium co,INE139A01034,3,4,-1,-33,09-Nov-2018,166,Buy,Mid Cap,0,0,0
 Idea cellular,INE669E01016,6,5,1,17,25-Mar-2019,30,Buy,Large Cap,0,0,0
 Godrej industries,INE233A01035,3,2,1,33,09-Nov-2018,166,Buy,Mid Cap,0,0,0
 Central depository services,INE736A01011,3,2,1,33,03-Jul-2018,295,Buy,Small Cap,0,0,0
-Zydus wellness,INE768C01010,3,0,3,100,,0,,Small Cap,0,0,0
+Zydus wellness,INE768C01010,3,1,2,67,22-Apr-2019,2,Buy,Small Cap,0,0,0
 Icici prudential life insurance company,INE726G01019,3,3,0,0,04-Dec-2018,141,Buy,Large Cap,0,0,0
 Dr reddys laboratories,INE089A01023,3,4,-1,-33,04-Apr-2018,385,Buy,Large Cap,0,0,0
 Rural electrification corporation,INE020B01018,3,6,-3,-100,09-Nov-2018,166,Buy,Mid Cap,0,0,0
