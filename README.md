@@ -2,7 +2,7 @@
 
 An Indian Stock Screener can be used to identify stocks for buy and sale.
 
-The tool is depdendant on things like AMFI data to figure out cap (small, mid, large etc). 
+The tool is dependent on things like AMFI data to figure out cap (small, mid, large etc). 
 * currently loaded manually. 
 * To be automated for refresh every 6 month.
 
