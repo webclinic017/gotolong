@@ -2,6 +2,11 @@
 
 DEBUG_LEVEL=0
 
+PROJ_DATA_LOC=`python -m project data`
+PROJ_REPORTS_LOC=`python -m project reports`
+PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
+PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+
 IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
 IN_FILE_RAW_PLAN=$PROJ_PROFILE_DATA_LOC/plan-data/plan-data-raw.csv
 IN_FILE_PROC_PLAN=$PROJ_PROFILE_DATA_LOC/plan-data/plan-data-proc.csv

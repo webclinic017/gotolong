@@ -213,10 +213,12 @@ class Dividend(Amfi):
 
 	def load_dividend_data(self, in_filenames):
 		for in_filename in in_filenames:
-			print  'div file', in_filename
+			if self.debug_level > 1:
+				print  'div file', in_filename
 			file_obj = open (in_filename, "r")
 			for line in file_obj:
-				print 'div line', line
+				if self.debug_level > 1:
+					print 'div line', line
 				self.load_dividend_row(line)
 		print 'loaded dividend', len (self.dividend_amount)
 
@@ -240,7 +242,8 @@ class Dividend(Amfi):
 		print 'loaded aliases', len (self.company_aliases)
 
 	def dump_orig(self, out_filename):
-		print self.company_orig
+		if self.debug_level > 2: 
+			print self.company_orig
 		lines = []
 		fh = open(out_filename, "w") 
 		for comp_name in self.company_orig.keys():

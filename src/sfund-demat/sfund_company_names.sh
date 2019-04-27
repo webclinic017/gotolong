@@ -1,5 +1,10 @@
 #!/bin/sh
 
+PROJ_DATA_LOC=`python -m project data`
+PROJ_REPORTS_LOC=`python -m project reports`
+PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
+PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+
 DATA_SFUND_FILE=$PROJ_PROFILE_DATA_LOC/sfund-data/sfund-data.csv
 REPORTS_SFUND_FILE=$PROJ_PROFILE_REPORTS_LOC/sfund-demat-reports/sfund-names.csv
  

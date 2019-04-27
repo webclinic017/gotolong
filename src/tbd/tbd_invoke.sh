@@ -2,6 +2,11 @@
 
 DEBUG_LEVEL=0
 
+PROJ_DATA_LOC=`python -m project data`
+PROJ_REPORTS_LOC=`python -m project reports`
+PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
+PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+
 ISIN_BSE_FILE=$PROJ_DATA_LOC/isin-data/isin-bse-500.csv
 ISIN_NSE_FILE=$PROJ_DATA_LOC/isin-data/isin-nse-500.csv
 AMFI_FILE=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
