@@ -17,7 +17,7 @@ The tool is also dependent on mstar (morning star) data. Yet to be integrated.
 
 The user has to provide following information.
 
-Currently, user has to prepare a plan-data sheet under profile/ directory : create .xls file and save it as .csv file.
+Currently, user has to prepare a plan-data sheet under input-user-data directory : create .xls file and save it as .csv file.
 
 The default user-profile is default.
 
@@ -37,11 +37,12 @@ For sh/bash
 Prepare plan file
 
 Input Data
-* profile/default/data/plan-data/plan-data.csv
+* input-user-data/plan-data/plan-data-raw.csv
 
 Include weight for each company and cummulative weight for industry.
 
-1 Unit can be represented by 1000 Rs.
+Minimum investment size : 1 Unit (can be represented by 1k or 3k depending on years of investment)
+
 0 Unit : stock is under watch but there is no plan to acquire it right now.
 
 Format of the data
@@ -62,7 +63,7 @@ Generate Report
 Review the generated report file
 
 Output Data
-* profile/default/reports/plan-reports/\*.csv
+* output-user-reports/plan-reports/\*.csv
 
 The summary lines shows distribution of large cap, mid cap and small cap.
 TBD : Include line for micro cap and nano cap.
@@ -72,8 +73,8 @@ TBD : Include line for micro cap and nano cap.
 Download demat data from ICICI Direct (all holdings, all txns in csv format) in 
 
 Input Data
-* profile/default/data/demat-data/icicidirect/demat-data.csv 
-* profile/default/data/demat-data/zerodha/demat-data.csv 
+* input-user-data/demat-data/icicidirect/demat-data.csv 
+* input-user-data/demat-data/zerodha/demat-data.csv 
 
 Generate Report.
 
@@ -84,7 +85,7 @@ Generate Report.
  Review the generated report files.
  
  Output Data
- * profile/default/reports/demat-reports/\*.csv 
+ * output-user-reports/demat-reports/\*.csv 
  
 
  # User : TBD Data (To Be Done)
@@ -105,21 +106,21 @@ Generate Buy and Sale Report.
    $ ./tbd-invoke.sh
 
 Review the generated reports file for buy (ordered by company price score)
-* profile/default/reports/tbd-reports/\*buy\*.csv
+* output-user-reports/tbd-reports/\*buy\*.csv
 
 Review the generated reports file for sale (ordered by company performance score)
-* profile/default/reports/tbd-reports/\*sale\*.csv
+* output-user-reports/tbd-reports/\*sale\*.csv
 
 # User : SFUND Demat Sync (SURI 250 Equity Fund)
 
 To ensure that the plan data is in sync with SURI 250 EQUITY FUND.
 
 Input data : SURI 250 Fund data
-* profile/default/data/sfund/sfund-data.csv
+* input-user-data/sfund-data/sfund-data.csv
    
 Input data : Demat Summary data
-* profile/default/data/demat/icicidirect/demat-summary-data.csv
-* profile/default/data/demat/zerodha/demat-data.csv
+* input-user-data/demat-data/icicidirect/demat-summary-data.csv
+* input-user-data/demat-data/zerodha/demat-data.csv
 
 Generate required reports
 
@@ -127,16 +128,16 @@ Generate required reports
 * $ ./one.sh
 
 Review the generated reports
-* profile/default/reports/sfund-demat-reports/sfund-demat-dumb-join.csv
-* profile/default/reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
+* output-user-reports/sfund-demat-reports/sfund-demat-dumb-join.csv
+* output-user-reports/sfund-demat-reports/sfund-demat-dumb-diff.csv
 
 
 # User : DIVIDEND Data
 Shows dividend receieved through bank account statement.
 
 Input data
-* profile/default/data/bank-txn-data/fy1718/\*OpTransactionHistory-fy1718.csv
-* profile/default/data/bank-txn-data/fy1617/\*OpTransactionHistory-fy1617.csv
+* input-user-data/bank-txn-data/fy1718/\*OpTransactionHistory-fy1718.csv
+* input-user-data/bank-txn-data/fy1617/\*OpTransactionHistory-fy1617.csv
 
 Generate report
 
@@ -147,7 +148,7 @@ $ ./dividend-reports.sh
 Review report.
 
 Output data
-* profile/default/reports/dividend-reports/
+* output-user-reports/dividend-reports/
 
 # Global : AMFI Data
 
@@ -156,7 +157,7 @@ The file data/amfi-data/amfi-\*.csv has a list of companies with market cap and 
 These are downloaded from the amfi website and processed further.
 
 Input Data
-* data/amfi-data/amfi-\*.csv 
+* input-global-data/amfi-data/amfi-\*.csv 
 
 Generate Report
 
@@ -167,14 +168,14 @@ $ ./amfi_invoke.sh
 Review the generated report file
 
 Output Data
-* reports/amfi-reports/\*.csv
+* output-global-reports/amfi-reports/\*.csv
 
 The report has important things like ISIN Number, Company name, Company Rank By mcap, mcap (avg of 6 months)
 and cap type (large, mid cap and small cap).
 
 # Global : ISIN Data
 
-The file data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
+The file input-global-data/isin-data/isin-(bse|nse)-500.csv has a list of BSE 500 and NSE 500 companies with ISIN number.
 
 These were downloaded directly from the NSE and BSE websites.
 
@@ -191,7 +192,7 @@ Generate Report
 Review the generated report file
 
 Output Data
-* reports/isin-reports/\*.csv
+* output-global-reports/isin-reports/\*.csv
 
 
  # Global : SCREENER Data
@@ -201,7 +202,7 @@ Output Data
  Download the screener data in data/screener-data/\*.csv
  
  Input Data
- * data/screener-data/\*.csv
+ * input-global-data/screener-data/\*.csv
  
  Generate screener reports using
  
@@ -212,14 +213,14 @@ Output Data
  Review the generated report file.
  
  Output Data
- * reports/screener-reports/\*.csv files
+ * output-globla-reports/screener-reports/\*.csv files
  
  NOTE: To be switched to Quandl or something similar.
 
  # Global : Morning Star Data
 
 Input Data
-* data/mstar-data/\*.csv
+* input-global-data/mstar-data/\*.csv
 
 Generate Report
 
@@ -230,7 +231,7 @@ Generate Report
 Review the generated report
 
 Output Data:
-* reports/mstar-reports/\*.csv
+* output-global-reports/mstar-reports/\*.csv
 
 Useful to analyze moat rating (wide, narrow), Valuation Rating (Undervalued, Fairly Valued, Overvalued) 
 and financial strength (Strong, Moderate etc)
@@ -243,8 +244,8 @@ Shows dividend recieved and bonus recevied in last few years through BSE/NSE dir
 * Incorporate Share splits data also
 
 Input data (For last 3 years)
-* data/bse-data/dividend/fy\*/bse-corp-action-dividend-fy\*.csv
-* data/bse-data/bonus/fy\*/bse-corp-action-bonus-fy\*.csv
+* input-global-data/bse-data/dividend/fy\*/bse-corp-action-dividend-fy\*.csv
+* input-globla-data/bse-data/bonus/fy\*/bse-corp-action-bonus-fy\*.csv
 
 Generate Report
 
@@ -256,5 +257,5 @@ Review the generated report.
 
 Output data
 
-* reports/dividends-bonus/
+* output-global-reports/dividends-bonus/
 
