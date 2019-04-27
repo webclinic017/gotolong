@@ -7,13 +7,18 @@ GIT Setup for Github
 
 On windows: also setup global env variable HTTP_PROXY and HTTPS_PROXY
 
-1> Clone git clone https://github.com/surinder432/stock-market.git
+1> Clone
 
-1.2> If already present (rebase) git pull
+git clone https://github.com/surinder432/stock-market.git
 
-2>
+1.1> If code is already present (rebase) use git pull
 
 cd stock-market
+git pull
+
+1.2>  For PyCharm
+
+VCS -> git -> pull
 
 3.1> configuration
 
@@ -35,22 +40,33 @@ git config credential.helper store
 
 git config --global credential.helper 'cache --timeout 86400'
 
-3.3> Add a file (or Let git know that file must be commited again)
+3.3> Making changes in git command line
 
-git add
+ 3.3.1> Add a file (or Let git know that file must be committed again)
 
-4> Commit changes
+  git add <filename | dirname>
 
-git commit
+ 3.3.2> Commit changes
+
+ git commit
 
 (Uncomment modification to be committed)
 
-5> Push changs to Remote
+ 3.3.3> Push changes to Remote
 
 git push (short for git push origin master)
 
-Username : emailid Password: Secret pass
+Username : email-id Password: Secret pass
 
-5.2> Remote location : Check output of these git remove -v
+3.4> Using PyCharm
 
-6>
+  3.4.1> Add file
+     VCS -> Git -> +Add
+  3.4.2> Commit changes
+      VCS-> Commit or VCS->git -> commit file
+  3.4.3>
+      VCS-> Git -> Push
+
+3.4> Remote location : Check output of these git remove -v
+
+
