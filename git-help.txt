@@ -67,6 +67,35 @@ Username : email-id Password: Secret pass
   3.4.3>
       VCS-> Git -> Push
 
-3.4> Remote location : Check output of these git remove -v
+3.5> Remote location : Check output of these
+
+git remove -v
 
 
+3.6> see previous version of the files (git reflog)
+
+
+3.6.1>  To fetch previous entries
+
+git reflog ./tbd.py
+
+# get the first field SHA1 sum and also the last version that modified it using HEAD@{4}.
+ca1390b HEAD@{4}: commit: renamed: resources/global/data/amfi-data/amfi-data-mcap.csv -> input-global-data/amfi-data/amfi-data-mcap.csv
+8997c97 HEAD@{25}: commit: renamed: profile/default/reports/tbd-reports/tbd-reports-phase-buy-1.csv -> profile/default/reports/tbd-reports/tbd-reports-phase-buy-1-coverage.csv
+
+3.6.2> To see actual file
+git show ca1390b:./tbd.py
+
+git show HEAD~4:./tbd.py
+
+git show 8997c97:./tbd.py
+git show HEAD~25:./tbd.py
+
+3.6.3> browse graphically
+
+ * gitk filename
+  * This is gui interface for browing log changes etc
+
+3.7> Identify user who modified the file or line
+ * git blame filename
+ * like ade annotate (who modified each line and when)
