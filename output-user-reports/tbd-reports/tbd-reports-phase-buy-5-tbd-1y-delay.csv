@@ -1,23 +1,15 @@
-comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_myavgiv, sc_cmp, sc_iv
-Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,450,Buy,Small Cap,12538,460,0
-Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,450,Buy,Small Cap,10970,250,1215
-Venkys,INE398A01010,3,2,1,33,22-Sep-2017,582,Buy,Small Cap,2379,2077,632
-Future retail,INE752P01024,3,2,1,33,01-Feb-2018,450,Buy,Mid Cap,1579,423,0
-Sheela foam,INE916U01025,6,2,4,67,02-Feb-2018,449,Buy,Small Cap,1288,1354,619
-Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,388,Buy,Large Cap,1248,1215,3066
-Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,388,Buy,Mid Cap,1132,1187,2513
-Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,388,Buy,Mid Cap,828,68,0
-Coffee day enterprises,INE335K01011,3,2,1,33,04-Apr-2018,388,Buy,Small Cap,488,267,0
-Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,450,Buy,Small Cap,391,483,0
-Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,450,Buy,Small Cap,349,274,293
-Trent,INE849A01020,3,2,1,33,04-Apr-2018,388,Buy,Mid Cap,262,355,243
-Rallis,INE613A01020,3,2,1,33,04-Apr-2018,388,Buy,Small Cap,212,158,317
-Cox kings,INE008I01026,3,2,1,33,01-Feb-2018,450,Buy,Small Cap,197,132,187
-Hsil,INE415A01038,3,2,1,33,04-Apr-2018,388,Buy,Micro Cap,173,264,-2695
-Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,450,Buy,Mid Cap,159,209,775
-Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,388,Buy,Large Cap,110,753,-334
-Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,388,Buy,Mid Cap,0,0,0
-Johnson controls hitachi air conditioning,INE782A01015,3,2,1,33,17-Oct-2017,557,Buy,Small Cap,0,0,0
--,INE999A01015,3,2,1,33,04-Apr-2018,388,Buy,Micro Cap,0,0,0
-Kotak mahindra bank,INE237A01028,3,2,1,33,04-Apr-2018,388,Buy,Large Cap,0,0,0
-Fortis healthcare,INE061F01013,3,2,1,33,04-Apr-2018,388,Buy,Small Cap,-4099,139,0
+comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3
+Venkys,INE398A01010,3,2,1,33,22-Sep-2017,583,Buy,Small Cap,219,102,2077,632,2379,10
+Cox kings,INE008I01026,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,133,5,132,187,197,17
+Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,9,-13,68,0,828,36
+Hsil,INE415A01038,3,2,1,33,04-Apr-2018,389,Buy,Micro Cap,41,-26,264,-2695,173,31
+Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,106,-59,460,0,12538,82
+Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,105,-65,250,1215,10970,5
+Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,138,-67,483,0,391,19
+Rallis,INE613A01020,3,2,1,33,04-Apr-2018,389,Buy,Small Cap,266,-92,158,317,212,29
+Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,451,Buy,Mid Cap,219,-92,209,775,159,16
+Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,243,-231,1187,2513,1132,41
+Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,225,-231,274,293,349,32
+Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,389,Buy,Large Cap,16,-245,1215,3066,1248,64
+Trent,INE849A01020,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,220,-303,355,243,262,33
+Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,389,Buy,Large Cap,-99,-463,753,-334,110,15
