@@ -121,6 +121,12 @@ class Isin(object):
 				if self.debug_level > 1:
 					print 'found match : name : ', req_name
 				return isin_code
+			if isin_code in  self.isin_symbol:
+				ticker_symbol = self.isin_symbol[isin_code]
+				if req_name.upper() == ticker_symbol :
+					if self.debug_level > 1:
+						print 'found ticker : ', req_name
+					return isin_code	
 		if self.debug_level > 1:
 			print 'demat not found : req_name :',req_name,':'
 		return ''

@@ -8,11 +8,12 @@ import operator
 import cutil.cutil
 import finratio.comp_perf
 import finratio.comp_price
+
 from isin.isin import *
+from amfi.amfi import * 
 
-
-
-class Screener(Isin):
+#class Screener(Isin):
+class Screener(Isin, Amfi):
 	def __init__(self):
 		super(Screener, self).__init__()
 		self.sc_sno = [] 
@@ -102,11 +103,13 @@ class Screener(Isin):
 
 			sc_sno = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sno']])
 			sc_name = row_list[self.sc_ratio_loc['name']]
+			screener_name = sc_name
 			sc_name = self.resolve_screener_name_alias(sc_name)
 			sc_name = cutil.cutil.normalize_comp_name(sc_name)
-			isin_code = self.get_isin_code_by_name(sc_name)
+			# isin_code = self.get_isin_code_by_name(sc_name)
+			isin_code = self.get_amfi_isin_by_name(sc_name)
 			if isin_code == '':
-				print 'unable to get isin_code : ', sc_name
+				print 'screener: unable to get isin_code :', screener_name, ': ', sc_name 
 			else:
 				sc_sno = isin_code
 				if self.debug_level > 1:

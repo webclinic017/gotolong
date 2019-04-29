@@ -16,10 +16,11 @@ if len(sys.argv) < 8 :
 debug_level = int(sys.argv[1])
 isin_bse_filename = sys.argv[2]
 isin_nse_filename = sys.argv[3]
-sc_aliases_filename = sys.argv[4]
-sc_data_filename = sys.argv[5]
-out_filename_phase1 = sys.argv[6]
-out_filename_phase2 = sys.argv[7]
+in_amfi_filename = sys.argv[4]
+sc_aliases_filename = sys.argv[5]
+sc_data_filename = sys.argv[6]
+out_filename_phase1 = sys.argv[7]
+out_filename_phase2 = sys.argv[8]
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -29,6 +30,7 @@ screener = screener.Screener()
 screener.set_debug_level(debug_level)
 
 screener.load_isin_data_both(isin_bse_filename, isin_nse_filename)
+screener.load_amfi_data(in_amfi_filename)
 
 screener.load_screener_name_aliases(sc_aliases_filename)
 screener.load_screener_data(sc_data_filename)

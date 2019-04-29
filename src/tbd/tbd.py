@@ -33,11 +33,12 @@ class Tbd(Plan, Demat, Screener):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
 
-	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, amfi_filename, plan_filename, demat_filename, screener_filename):
+	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, amfi_filename, screener_aliases_filename, plan_filename, demat_filename, screener_filename):
 		self.load_isin_bse_data(isin_bse_filename)
 		self.load_isin_nse_data(isin_nse_filename)
 		self.load_demat_data(demat_filename)
 		self.load_amfi_data(amfi_filename)
+		self.load_screener_name_aliases(screener_aliases_filename)
 		self.load_plan_data(plan_filename)
 		self.load_screener_data(screener_filename)
 		self.process_tbd_data()
