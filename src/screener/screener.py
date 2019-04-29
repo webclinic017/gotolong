@@ -308,10 +308,12 @@ class Screener(Isin):
 		if sc_sno in self.sc_crank:
 			return self.sc_crank[sc_sno]
 		return 0
+
 	def get_sc_prank_by_sno(self, sc_sno):
 		if sc_sno in self.sc_prank:
 			return self.sc_prank[sc_sno]
 		return 0
+
 	def get_sc_cmp_by_sno(self, sc_sno):
 		if sc_sno in self.sc_cmp:
 			return self.sc_cmp[sc_sno]
@@ -320,10 +322,27 @@ class Screener(Isin):
 		if sc_sno in self.sc_iv:
 			return self.sc_iv[sc_sno]
 		return 0
+
+	def get_sc_dp3_by_sno(self, sc_sno):
+		if sc_sno in self.sc_dp3:
+			return self.sc_dp3[sc_sno]
+		return 0
+
+	def get_sc_dp_by_sno(self, sc_sno):
+		if sc_sno in self.sc_dp:
+			return self.sc_dp[sc_sno]
+		return 0
+
+	def get_sc_dy_by_sno(self, sc_sno):
+		if sc_sno in self.sc_dy:
+			return self.sc_dy[sc_sno]
+		return 0
+
 	def get_sc_myavgiv_by_sno(self, sc_sno):
 		if sc_sno in self.sc_myavgiv:
 			return self.sc_myavgiv[sc_sno]
 		return 0
+
 	def get_sc_graham_by_sno(self, sc_sno):
 		if sc_sno in self.sc_graham:
 			return self.sc_graham[sc_sno]
