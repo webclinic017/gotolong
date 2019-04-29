@@ -373,6 +373,11 @@ class Screener(Isin):
 		return 0
 
 
+	def get_sc_peg_by_sno(self, sc_sno):
+		if sc_sno in self.sc_peg:
+			return self.sc_peg[sc_sno]
+		return 0
+
 	def get_sc_pledge_by_sno(self, sc_sno):
 		if sc_sno in self.sc_pledge:
 			return self.sc_pledge[sc_sno]
