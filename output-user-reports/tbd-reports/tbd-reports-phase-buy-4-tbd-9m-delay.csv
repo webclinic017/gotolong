@@ -1,30 +1,16 @@
-comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3
-Sobha,INE671H01015,3,2,1,33,03-Jul-2018,299,Buy,Small Cap,140,108,485,-77663,495,20
-Arvind,INE034A01011,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,138,106,88,70,102,20
-Venkys,INE398A01010,3,2,1,33,22-Sep-2017,583,Buy,Small Cap,219,102,2077,632,2379,10
-Housing urban development corporation,INE031A01017,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,11,6,43,225,807,13
-Cox kings,INE008I01026,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,133,5,132,187,197,17
-Hcl technologies,INE860A01027,3,2,1,33,03-Jul-2018,299,Buy,Large Cap,316,4,1139,1090,1152,33
-Krbl,INE001B01026,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,149,3,348,196,284,13
-Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,299,Buy,Large Cap,160,2,330,239,500,20
-Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,9,-13,68,0,828,36
-Engineers,INE510A01028,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,653,-14,115,-207,115,59
-Godfrey phillips,INE260B01028,3,1,2,67,29-Jun-2018,303,Buy,Small Cap,631,-19,1129,-30114,1245,27
-L&t technology services,INE010V01017,3,1,2,67,28-May-2018,335,Buy,Mid Cap,658,-20,1695,0,1552,40
-Hsil,INE415A01038,3,2,1,33,04-Apr-2018,389,Buy,Micro Cap,41,-26,264,-2695,173,31
-Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,106,-59,460,0,12538,82
-Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,105,-65,250,1215,10970,5
-Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,138,-67,483,0,391,19
-Rallis,INE613A01020,3,2,1,33,04-Apr-2018,389,Buy,Small Cap,266,-92,158,317,212,29
-Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,451,Buy,Mid Cap,219,-92,209,775,159,16
-Greenply industries,INE461C01038,3,1,2,67,28-Jun-2018,304,Buy,Small Cap,138,-97,169,706,151,5
-Adani ports special economic zone,INE742F01042,6,2,4,67,03-Jul-2018,299,Buy,Large Cap,140,-121,392,327,363,9
-Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,139,-221,636,2143,1223,7
-Amara raja batteries,INE885A01032,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,325,-222,674,1075,760,15
-Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,243,-231,1187,2513,1132,41
-Prestige estates projects,INE811K01011,3,2,1,33,03-Jul-2018,299,Buy,Mid Cap,15,-231,263,969,243,12
-Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,451,Buy,Small Cap,225,-231,274,293,349,32
-Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,389,Buy,Large Cap,16,-245,1215,3066,1248,64
-Dr lal path labs,INE600L01024,3,2,1,33,03-Jul-2018,299,Buy,Small Cap,544,-251,1070,684,1203,18
-Trent,INE849A01020,3,2,1,33,04-Apr-2018,389,Buy,Mid Cap,220,-303,355,243,262,33
-Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,389,Buy,Large Cap,-99,-463,753,-334,110,15
+comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_pledge, comments
+Arvind,INE034A01011,3,2,1,33,03-Jul-2018,300,Buy,Mid Cap,138,106,88,70,102,20,1,10,12,15,8,10, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Venkys,INE398A01010,3,2,1,33,22-Sep-2017,584,Buy,Small Cap,219,102,2077,632,2379,10,0,24,24,14,53,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Hcl technologies,INE860A01027,3,2,1,33,03-Jul-2018,300,Buy,Large Cap,316,4,1139,1090,1152,33,0,25,31,15,16,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Krbl,INE001B01026,3,2,1,33,03-Jul-2018,300,Buy,Mid Cap,149,3,348,196,284,13,1,22,20,10,28,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,300,Buy,Large Cap,160,2,330,239,500,20,1,27,20,13,22,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Rallis,INE613A01020,3,2,1,33,04-Apr-2018,390,Buy,Small Cap,266,-92,158,317,212,29,0,16,21,5,8,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,452,Buy,Mid Cap,219,-92,209,775,159,16,0,14,15,3,4,15, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,300,Buy,Mid Cap,139,-221,636,2143,1223,7,1,23,18,13,5,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Amara raja batteries,INE885A01032,3,2,1,33,03-Jul-2018,300,Buy,Mid Cap,325,-222,674,1075,760,15,0,20,29,15,10,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,390,Buy,Mid Cap,243,-231,1187,2513,1132,41,0,24,29,8,8,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Prestige estates projects,INE811K01011,3,2,1,33,03-Jul-2018,300,Buy,Mid Cap,15,-231,263,969,243,12,2,9,10,23,5,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,452,Buy,Small Cap,225,-231,274,293,349,32,0,18,21,8,15,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,390,Buy,Large Cap,16,-245,1215,3066,1248,64,0,54,79,6,6,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Dr lal path labs,INE600L01024,3,2,1,33,03-Jul-2018,300,Buy,Small Cap,544,-251,1070,684,1203,18,0,27,42,19,25,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25
+Trent,INE849A01020,3,2,1,33,04-Apr-2018,390,Buy,Mid Cap,221,-303,355,243,262,33,0,7,10,18,23,0, dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25

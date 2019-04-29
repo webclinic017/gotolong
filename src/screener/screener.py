@@ -41,8 +41,8 @@ class Screener(Isin):
 		self.sc_roe3 = {}
 		self.sc_roce3 = {}
 		self.sc_cr = {}
-		self.sc_sales_var5 = {}
-		self.sc_profit_var5 = {}
+		self.sc_sales5 = {}
+		self.sc_profit5 = {}
 		self.sc_pledge = {}
 		self.sc_promhold = {}
 		self.sc_piotski = {}
@@ -52,8 +52,8 @@ class Screener(Isin):
 		self.sc_prank = {}
                 self.sc_name_aliases = {}
  		self.debug_level = 0 
-		self.sc_ratio_name = { 'S.No. ':'sno','Name ':'name','CMP Rs. ':'cmp','MyAvgIV ':'myavgiv','IV Rs. ':'iv','Mar Cap Rs.Cr. ':'mcap','Sales Rs.Cr. ':'sales','NP 12M Rs.Cr. ':'np','P/E ':'pe','5Yrs PE ':'pe5','EPS 12M Rs. ':'eps','PEG ':'peg','CMP / BV ':'p2bv','CMP / OCF ':'p2ocf','CMP / Sales ':'p2sales','EV / EBITDA ':'ev2ebitda', 'EV Rs.Cr. ' : 'ev' , 'OPM % ':'opm','Debt / Eq ':'d2e','Int Coverage ':'ic','Dividend Payout % ':'dp','Avg Div Payout 3Yrs % ':'dp3','Div Yld % ':'dy','ROE 3Yr % ':'roe3','ROCE3yr avg % ':'roce3','Current ratio ':'cr','Sales Var 5Yrs % ':'sales_var5','Profit Var 5Yrs % ':'profit_var5','Pledged % ':'pledge','Prom. Hold. % ':'prom_hold','Piotski Scr ':'piotski' }
-		self.sc_ratio_loc = { 'sno' : 0,'name' : 0,'cmp' : 0,'myavgiv' : 0,'iv' : 0,'mcap' : 0,'sales' : 0,'np' : 0,'pe' : 0,'pe5' : 0,'eps' : 0,'peg' : 0,'p2bv' : 0,'p2ocf' : 0,'p2sales' : 0,'ev2ebitda' : 0,'ev' : 0,'opm' : 0,'d2e' : 0,'icover' : 0,'dp' : 0,'dp3' : 0,'dy' : 0,'roe3' : 0,'roce3' : 0,'cr' : 0,'sales_var5' : 0,'profit_var5' : 0,'pledge' : 0,'prom_hold' : 0,'piotski' : 0 }
+		self.sc_ratio_name = { 'S.No. ':'sno','Name ':'name','CMP Rs. ':'cmp','MyAvgIV ':'myavgiv','IV Rs. ':'iv','Mar Cap Rs.Cr. ':'mcap','Sales Rs.Cr. ':'sales','NP 12M Rs.Cr. ':'np','P/E ':'pe','5Yrs PE ':'pe5','EPS 12M Rs. ':'eps','PEG ':'peg','CMP / BV ':'p2bv','CMP / OCF ':'p2ocf','CMP / Sales ':'p2sales','EV / EBITDA ':'ev2ebitda', 'EV Rs.Cr. ' : 'ev' , 'OPM % ':'opm','Debt / Eq ':'d2e','Int Coverage ':'ic','Dividend Payout % ':'dp','Avg Div Payout 3Yrs % ':'dp3','Div Yld % ':'dy','ROE 3Yr % ':'roe3','ROCE3yr avg % ':'roce3','Current ratio ':'cr','Sales Var 5Yrs % ':'sales5','Profit Var 5Yrs % ':'profit5','Pledged % ':'pledge','Prom. Hold. % ':'prom_hold','Piotski Scr ':'piotski' }
+		self.sc_ratio_loc = { 'sno' : 0,'name' : 0,'cmp' : 0,'myavgiv' : 0,'iv' : 0,'mcap' : 0,'sales' : 0,'np' : 0,'pe' : 0,'pe5' : 0,'eps' : 0,'peg' : 0,'p2bv' : 0,'p2ocf' : 0,'p2sales' : 0,'ev2ebitda' : 0,'ev' : 0,'opm' : 0,'d2e' : 0,'icover' : 0,'dp' : 0,'dp3' : 0,'dy' : 0,'roe3' : 0,'roce3' : 0,'cr' : 0,'sales5' : 0,'profit5' : 0,'pledge' : 0,'prom_hold' : 0,'piotski' : 0 }
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
@@ -133,10 +133,11 @@ class Screener(Isin):
 			sc_altmanz = 0 
 			sc_cr = cutil.cutil.get_number(row_list[self.sc_ratio_loc['cr']]) 
 			sc_roe3 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['roe3']]) 
+			sc_roce3 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['roce3']]) 
 			# TBD GOLD sc_graham = cutil.cutil.get_number(row_list[self.sc_ratio_loc['graham']]) 
 			sc_graham = 0 
-			sc_sales_var5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sales_var5']]) 
-			sc_profit_var5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['profit_var5']]) 
+			sc_sales5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['sales5']]) 
+			sc_profit5 = cutil.cutil.get_number(row_list[self.sc_ratio_loc['profit5']]) 
 			sc_ev2ebitda = cutil.cutil.get_number(row_list[self.sc_ratio_loc['ev2ebitda']]) 
 			sc_pledge = cutil.cutil.get_number(row_list[self.sc_ratio_loc['pledge']]) 
 
@@ -163,9 +164,10 @@ class Screener(Isin):
 			self.sc_altmanz[sc_sno] = sc_altmanz
 			self.sc_cr[sc_sno] = sc_cr 
 			self.sc_roe3[sc_sno] = sc_roe3 
+			self.sc_roce3[sc_sno] = sc_roce3 
 			self.sc_graham[sc_sno] = sc_graham 
-			self.sc_sales_var5[sc_sno] = sc_sales_var5
-			self.sc_profit_var5[sc_sno] = sc_profit_var5 
+			self.sc_sales5[sc_sno] = sc_sales5
+			self.sc_profit5[sc_sno] = sc_profit5 
 			self.sc_ev2ebitda[sc_sno] =  sc_ev2ebitda
 			self.sc_pledge[sc_sno] =  sc_pledge
 			
@@ -183,7 +185,7 @@ class Screener(Isin):
 				sc_crank += 1
 			if sc_eps > 0:
 				sc_crank += 1
-			if sc_roe3 > 8:
+			if sc_roe3 > 6:
 				sc_crank += 1 
 			
 			sc_prank = 0
@@ -222,7 +224,7 @@ class Screener(Isin):
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_p2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_graham, sc_sales_var5, sc_profit_var5, sc_ev2ebitda, sc_pledge, sc_crank, sc_prank\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_p2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_roce3, sc_graham, sc_sales5, sc_profit5, sc_ev2ebitda, sc_pledge, sc_crank, sc_prank\n')
 		if sort_score:
 			sorted_input = sorted(self.sc_crank, key=self.sc_crank.__getitem__, reverse=True)
 		else:
@@ -274,11 +276,13 @@ class Screener(Isin):
 			p_str += ', ' 
 			p_str += str(self.sc_roe3[sc_sno])
 			p_str += ', ' 
+			p_str += str(self.sc_roce3[sc_sno])
+			p_str += ', ' 
 			p_str += str(self.sc_graham[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_sales_var5[sc_sno])
+			p_str += str(self.sc_sales5[sc_sno])
 			p_str += ', ' 
-			p_str += str(self.sc_profit_var5[sc_sno])
+			p_str += str(self.sc_profit5[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_ev2ebitda[sc_sno])
 			p_str += ', ' 
@@ -342,6 +346,38 @@ class Screener(Isin):
 		if sc_sno in self.sc_myavgiv:
 			return self.sc_myavgiv[sc_sno]
 		return 0
+
+	def get_sc_d2e_by_sno(self, sc_sno):
+		if sc_sno in self.sc_d2e:
+			return self.sc_d2e[sc_sno]
+		return 0
+
+	def get_sc_roe3_by_sno(self, sc_sno):
+		if sc_sno in self.sc_roe3:
+			return self.sc_roe3[sc_sno]
+		return 0
+
+	def get_sc_roce3_by_sno(self, sc_sno):
+		if sc_sno in self.sc_roce3:
+			return self.sc_roce3[sc_sno]
+		return 0
+
+	def get_sc_sales5_by_sno(self, sc_sno):
+		if sc_sno in self.sc_sales5:
+			return self.sc_sales5[sc_sno]
+		return 0
+
+	def get_sc_profit5_by_sno(self, sc_sno):
+		if sc_sno in self.sc_profit5:
+			return self.sc_profit5[sc_sno]
+		return 0
+
+
+	def get_sc_pledge_by_sno(self, sc_sno):
+		if sc_sno in self.sc_pledge:
+			return self.sc_pledge[sc_sno]
+		return 0
+
 
 	def get_sc_graham_by_sno(self, sc_sno):
 		if sc_sno in self.sc_graham:

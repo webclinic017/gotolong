@@ -96,7 +96,7 @@ class Tbd(Plan, Demat, Screener):
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, demat_only = None, sort_sale = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_pledge, comments\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 		if sort_sale:
 			sorted_items = sorted(self.tbd_crank, key=self.tbd_crank.__getitem__)
@@ -133,11 +133,23 @@ class Tbd(Plan, Demat, Screener):
 					sc_iv = 0
 					sc_myavgiv = 0
 					sc_dp3 = 0
+					sc_d2e = 0
+					sc_roe3 = 0
+					sc_roce3 = 0
+					sc_sales5 = 0
+					sc_profit5 = 0
+					sc_pledge = 0
 				else:
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
 					sc_myavgiv = self.get_sc_myavgiv_by_sno(isin_code)
 					sc_dp3 = self.get_sc_dp3_by_sno(isin_code)
+					sc_d2e = self.get_sc_d2e_by_sno(isin_code)
+					sc_roe3 = self.get_sc_roe3_by_sno(isin_code)
+					sc_roce3 = self.get_sc_roce3_by_sno(isin_code)
+					sc_sales5 = self.get_sc_sales5_by_sno(isin_code)
+					sc_profit5 = self.get_sc_profit5_by_sno(isin_code)
+					sc_pledge = self.get_sc_pledge_by_sno(isin_code)
 				
 				last_txn_days = self.tbd_last_txn_days[comp_name]
 				p_str = self.tbd_isin_name[comp_name]
@@ -171,17 +183,52 @@ class Tbd(Plan, Demat, Screener):
 				p_str += str(sc_myavgiv)
 				p_str += ',' 
 				p_str += str(sc_dp3)
-				p_str += '\n' 
+				p_str += ',' 
+				p_str += str(sc_d2e)
+				p_str += ',' 
+				p_str += str(sc_roe3)
+				p_str += ',' 
+				p_str += str(sc_roce3)
+				p_str += ',' 
+				p_str += str(sc_sales5)
+				p_str += ',' 
+				p_str += str(sc_profit5)
+				p_str += ',' 
+				p_str += str(sc_pledge)
+				p_str += ',' 
 				if sort_sale:
-					fh.write(p_str)
+					skip_row = False 
+					if sc_dp3 < 6:
+						p_str += 'dp3 < 6' 
+					elif sc_d2e > 2:
+						p_str += 'd2e > 2' 
+					elif sc_roe3 < 4:
+						p_str += 'roe3 < 4' 
+					elif sc_roce3 < 4:
+						p_str += 'roce3 < 4' 
+					elif sc_sales5 < 0:
+						p_str += 'sales5 < 0' 
+					elif sc_profit5 < 0:
+						p_str += 'profit5 < 0' 
+					elif sc_pledge > 25:
+						p_str += 'pledge > 25' 
+					else:
+						skip_row = True 
+					if not skip_row:
+						p_str += '\n' 
+						fh.write(p_str)
 				elif tbd_only:
-					if tbd_units > 0 and sc_dp3 > 0:
+					p_str += ' dp3 gt 6 and d2e lt 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and pledge lt 25'
+					p_str += '\n' 
+					if tbd_units > 0 and sc_dp3 >= 6 and sc_d2e <= 2 and sc_roe3 >= 4 and sc_roce3 >= 4 and sc_sales5 > 0 and sc_profit5 > 0and sc_pledge <= 25 :
 						if days_filter:
 							if last_txn_days > days_filter :
 								fh.write(p_str)
 						else:	
 							fh.write(p_str)
 				else:
+					p_str += 'no comments' 
+					p_str += '\n' 
 					fh.write(p_str)
 			except ValueError:
 				print 'except : print : ValueError :', comp_name
