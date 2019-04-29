@@ -1,4 +1,6 @@
 To Do Items
+* Fix the tbd data where screener data is shown as 0
+  ** Fix the name to isin code / stock code translation for screener
 * Fix the dividend report from bank txn stmt
   ** Bank Txn Stmt -> Dividend -> Company name -> convert to name/stock code.
   ** Otherwise. comparison doesn't work well.
