@@ -1,6 +1,6 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_iv, sc_myavgiv, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments
 Coal,INE522F01014,3,10,-7,-233,27-Nov-2017,519,Buy,Large Cap,284,208,254,-244,437,133,0,34,51,14,-17,-1,0,Failed as profit5 < 0 and 
-Tata chemicals,INE092A01019,3,3,0,0,04-Apr-2018,391,Buy,Mid Cap,149,208,583,470,1199,28,1,13,12,-7,20,0,0,Failed as sales5 < 0 and 
+Tata chemicals,INE092A01019,3,3,0,0,04-Apr-2018,391,Buy,Mid Cap,149,208,583,470,1199,28,1,13,12,-7,20,0,0,Failed as sales5 < 0 and tbd_units eq 0 and 
 Piramal enterprises,INE140A01024,3,5,-2,-67,04-Apr-2018,391,Buy,Large Cap,18,206,2586,0,3820,24,2,16,9,25,0,0,0,Failed as 
 Fortis healthcare,INE061F01013,3,2,1,33,04-Apr-2018,391,Buy,Small Cap,1,204,139,0,-4099,0,0,2,6,8,-5,0,0,Failed as dp3 < 6 and roe3 < 4 and profit5 < 0 and 
 Venkys,INE398A01010,3,2,1,33,22-Sep-2017,585,Buy,Small Cap,219,102,2077,632,2379,10,0,24,24,14,53,0,0,Failed as 
@@ -16,7 +16,7 @@ Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,453,Buy,Small Cap,106,-59,460,0,
 Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,453,Buy,Small Cap,105,-65,250,1215,10970,5,0,-16,63,92,159,0,0,Failed as dp3 < 6 and roe3 < 4 and 
 Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,453,Buy,Small Cap,139,-67,483,0,391,19,1,7,11,0,0,0,23,Failed as cmp > myavgiv and 
 Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,391,Buy,Mid Cap,7,-69,217,0,481,0,2,2,8,41,0,0,0,Failed as dp3 < 6 and roe3 < 4 and 
-Care ratings,INE752H01013,3,3,0,0,01-Feb-2018,453,Buy,Small Cap,16,-92,984,1749,1363,75,0,30,44,10,9,2,0,Failed as 
+Care ratings,INE752H01013,3,3,0,0,01-Feb-2018,453,Buy,Small Cap,16,-92,984,1749,1363,75,0,30,44,10,9,2,0,Failed as tbd_units eq 0 and 
 Rallis,INE613A01020,3,2,1,33,04-Apr-2018,391,Buy,Small Cap,266,-92,158,317,212,29,0,16,21,5,8,2,0,Failed as 
 Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,453,Buy,Mid Cap,219,-92,209,775,159,16,0,14,15,3,4,3,15,Failed as cmp > myavgiv and 
 Bajaj auto,INE917I01010,3,6,-3,-100,04-Apr-2018,391,Buy,Large Cap,1701,-95,3076,7593,3168,40,0,26,36,5,6,3,0,Failed as 
@@ -27,22 +27,22 @@ Johnson controls hitachi air conditioning,INE782A01015,3,2,1,33,17-Oct-2017,560,
 Icra,INE725G01011,3,4,-1,-33,22-Jun-2017,677,Buy,Small Cap,1553,-228,3139,3664,4488,31,0,16,25,4,13,2,0,Failed as 
 Crisil,INE007A01025,3,4,-1,-33,04-Apr-2018,391,Buy,Mid Cap,499,-228,1461,3151,2567,64,0,31,44,10,7,4,0,Failed as 
 Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,453,Buy,Small Cap,225,-231,274,293,349,32,0,18,21,8,15,2,0,Failed as 
-Pfizer,INE182A01018,3,3,0,0,19-Sep-2017,588,Buy,Mid Cap,1368,-233,3149,4251,5588,25,0,13,20,13,12,3,0,Failed as 
+Pfizer,INE182A01018,3,3,0,0,19-Sep-2017,588,Buy,Mid Cap,1368,-233,3149,4251,5588,25,0,13,20,13,12,3,0,Failed as tbd_units eq 0 and 
 Glaxosmithkline consumer healthcare,INE264A01014,3,5,-2,-67,19-Sep-2017,588,Buy,Mid Cap,1259,-233,7271,11739,8304,44,0,23,36,6,10,3,0,Failed as 
 Sanofi,INE058A01010,3,4,-1,-33,19-Sep-2017,588,Buy,Mid Cap,1089,-234,5669,6938,5416,49,0,17,27,9,13,3,0,Failed as 
 -,INE999A01015,3,2,1,33,04-Apr-2018,391,Buy,Micro Cap,246,-236,688,3398,637,29,0,12,18,6,3,10,0,Failed as peg > 4 and 
-Cera sanitaryware,INE739E01017,3,3,0,0,14-Jun-2017,685,Buy,Small Cap,258,-236,2859,2919,2692,15,0,20,29,19,16,2,0,Failed as 
+Cera sanitaryware,INE739E01017,3,3,0,0,14-Jun-2017,685,Buy,Small Cap,258,-236,2859,2919,2692,15,0,20,29,19,16,2,0,Failed as tbd_units eq 0 and 
 Bajaj finserv,INE918I01018,3,6,-3,-100,19-Sep-2017,588,Buy,Large Cap,7,-240,7638,10403,3244,1,3,15,15,31,12,3,0,Failed as dp3 < 6 and d2e > 2 and cmp > myavgiv and 
 Abbott,INE358A01014,3,4,-1,-33,19-Sep-2017,588,Buy,Mid Cap,400,-242,7826,5248,6512,30,0,24,38,15,24,2,0,Failed as cmp > myavgiv and 
 Kotak mahindra bank,INE237A01028,3,2,1,33,04-Apr-2018,391,Buy,Large Cap,-94,-243,1367,961,1103,2,5,13,8,18,23,2,0,Failed as dp3 < 6 and d2e > 2 and cmp > myavgiv and 
 Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,391,Buy,Large Cap,16,-245,1215,3066,1248,64,0,54,79,6,6,7,0,Failed as peg > 4 and 
-Whirlpool,INE716A01013,3,3,0,0,04-Apr-2018,391,Buy,Mid Cap,293,-250,1398,997,1200,9,0,23,35,12,22,2,0,Failed as cmp > myavgiv and 
+Whirlpool,INE716A01013,3,3,0,0,04-Apr-2018,391,Buy,Mid Cap,293,-250,1398,997,1200,9,0,23,35,12,22,2,0,Failed as cmp > myavgiv and tbd_units eq 0 and 
 Ttk prestige,INE690A01010,3,6,-3,-100,18-Jul-2017,651,Buy,Small Cap,364,-260,8148,32116,6006,21,0,18,24,6,4,13,0,Failed as peg > 4 and cmp > myavgiv and 
 Nestle,INE239A01016,3,7,-4,-133,09-Jun-2017,690,Buy,Large Cap,239,-268,10833,22452,11473,66,0,39,61,4,8,8,0,Failed as peg > 4 and 
-Pidilite industries,INE318A01026,3,3,0,0,04-Apr-2018,391,Buy,Large Cap,275,-272,1222,1040,814,29,0,29,41,11,19,4,0,Failed as cmp > myavgiv and 
+Pidilite industries,INE318A01026,3,3,0,0,04-Apr-2018,391,Buy,Large Cap,275,-272,1222,1040,814,29,0,29,41,11,19,4,0,Failed as cmp > myavgiv and tbd_units eq 0 and 
 Procter gamble hygiene health care,INE179A01014,3,8,-5,-167,09-Jun-2017,690,Buy,Large Cap,332,-292,10557,13196,7282,118,0,39,60,8,13,7,0,Failed as peg > 4 and cmp > myavgiv and 
 Trent,INE849A01020,3,2,1,33,04-Apr-2018,391,Buy,Mid Cap,221,-303,355,243,262,33,0,7,10,18,23,4,0,Failed as cmp > myavgiv and 
 Bayer cropscience /,INE462A01022,3,5,-2,-67,09-Jun-2017,690,Buy,Mid Cap,256,-311,4248,94395,2862,20,0,16,23,0,1,67,0,Failed as peg > 4 and cmp > myavgiv and 
 Gillette,INE322A01010,3,5,-2,-67,12-Jun-2017,687,Buy,Mid Cap,263,-318,7599,5650,6633,101,0,33,50,3,22,5,0,Failed as peg > 4 and cmp > myavgiv and 
 Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,391,Buy,Large Cap,-98,-463,753,-334,110,15,10,8,6,11,-40,-12,0,Failed as d2e > 2 and profit5 < 0 and cmp > myavgiv and 
-Basf,INE373A01013,3,3,0,0,04-Apr-2018,391,Buy,Small Cap,30,-492,1370,30520,405,-13,1,-3,4,7,1,135,0,Failed as dp3 < 6 and roe3 < 4 and peg > 4 and cmp > myavgiv and 
+Basf,INE373A01013,3,3,0,0,04-Apr-2018,391,Buy,Small Cap,30,-492,1370,30520,405,-13,1,-3,4,7,1,135,0,Failed as dp3 < 6 and roe3 < 4 and peg > 4 and cmp > myavgiv and tbd_units eq 0 and 

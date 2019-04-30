@@ -297,6 +297,10 @@ class Tbd(Plan, Demat, Screener):
 							p_str += 'cmp > myavgiv' 
 							p_str += ' and '
 							skip_row = False 
+						if tbd_units == 0:
+							p_str += 'tbd_units eq 0' 
+							p_str += ' and '
+							skip_row = False 
 					
 					p_str += '\n' 
 					if passed_cond :
