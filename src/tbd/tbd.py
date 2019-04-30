@@ -256,51 +256,55 @@ class Tbd(Plan, Demat, Screener):
 					if apply_cond and passed_cond :
 						p_str += ' Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25 and sc_cmp le sc_myavgiv'
 					else:
-						p_str += 'Failed as '
+						check_failed = False
 						if sc_dp3 < 6:
 							p_str += 'dp3 < 6' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_d2e > 2:
 							p_str += 'd2e > 2' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_roe3 < 4:
 							p_str += 'roe3 < 4' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_roce3 < 4:
 							p_str += 'roce3 < 4' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_sales5 < 0:
 							p_str += 'sales5 < 0' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_profit5 < 0:
 							p_str += 'profit5 < 0' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_peg > 4:
 							p_str += 'peg > 4' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_pledge > 25:
 							p_str += 'pledge > 25' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_myavgiv == 0:
 							p_str += 'myavgiv eq 0' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if sc_myavgiv != 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
 							p_str += 'cmp > myavgiv' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
 						if tbd_units == 0:
 							p_str += 'tbd_units eq 0' 
 							p_str += ' and '
-							skip_row = False 
+							check_failed = True
+						if check_failed:
+							p_str += 'Failed'
+						else:
+							p_str += 'Passed'
 					
 					p_str += '\n' 
 					if passed_cond :
