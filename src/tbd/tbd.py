@@ -297,8 +297,8 @@ class Tbd(Plan, Demat, Screener):
 							p_str += 'cmp > myavgiv' 
 							p_str += ' and '
 							check_failed = True
-						if tbd_units == 0:
-							p_str += 'tbd_units eq 0' 
+						if tbd_units <= 0:
+							p_str += 'tbd_units le 0' 
 							p_str += ' and '
 							check_failed = True
 						if check_failed:
