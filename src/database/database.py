@@ -24,3 +24,15 @@ class Database(Config):
 
 	def db_get_conn(self):
 		return self.db_conn
+
+	def db_table_count_rows(self, table):
+		SQL = """select count(*) from {}""".format(table)
+		print 'count_amfi_db sql', SQL
+		# SQL = """select count(*) from amfi"""
+		cursor = self.db_conn.cursor()
+		cursor.execute(SQL)
+		result = cursor.fetchone()
+		row_count = result[0]
+		if self.debug_level > 0 :
+			print 'count_amfi_db : row_count : ', row_count 
+		return row_count

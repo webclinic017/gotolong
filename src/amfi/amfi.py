@@ -84,8 +84,10 @@ class Amfi(Database):
 			print 'except ', row
 			traceback.print_exc()
 		
-	def count_amfi_db(self):
-		SQL = """select count(*) from amfi"""
+	def count_amfi_db(self, table):
+		SQL = """select count(*) from {}""".format(table)
+		print 'count_amfi_db sql', SQL
+		# SQL = """select count(*) from amfi"""
 		cursor = self.db_conn.cursor()
 		cursor.execute(SQL)
 		result = cursor.fetchone()
@@ -95,7 +97,9 @@ class Amfi(Database):
 		return row_count
 
 	def load_amfi_data(self, in_filename):
-		row_count = self.count_amfi_db()
+		table = "amfi"
+		# row_count = self.count_amfi_db(table)
+		row_count = self.db_table_count_rows(table)
 		if row_count == 0:
 			self.insert_amfi_data(in_filename)
 		else:
@@ -115,7 +119,10 @@ class Amfi(Database):
 			self.db_conn.commit()
 
 	def load_amfi_db(self):
-		SQL = """select * from amfi"""
+		table = "amfi"
+		SQL = """select * from {}""".format(table)
+		print 'load_amfi_db sql', SQL
+		# SQL = """select * from amfi"""
 		cursor = self.db_conn.cursor()
 		cursor.execute(SQL)
 		for row in cursor.fetchall():
@@ -129,7 +136,7 @@ class Amfi(Database):
 		fh = open(out_filename, "w") 
 		fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
 		for amfi_isin in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
-			if self.debug_level > 0:
+			if self.debug_level > 1:
 				print 'isin ', amfi_isin
 			p_str = str(self.amfi_rank[amfi_isin])
 			p_str += ', ' 

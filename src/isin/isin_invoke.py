@@ -25,7 +25,7 @@ isin = isin.Isin()
 
 isin.set_debug_level(debug_level)
 
-isin.load_isin_data(bse_filename, 'bse')
+# isin.load_isin_data(bse_filename, 'bse')
 isin.load_isin_data(nse_filename, 'nse')
 
 isin.print_phase1(out_filename)
