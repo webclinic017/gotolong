@@ -2,24 +2,24 @@
 
 DEBUG_LEVEL=0
 
-PROJ_DATA_LOC=`python -m project data`
-PROJ_REPORTS_LOC=`python -m project reports`
-PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
-PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+CONFIG_DATA_LOC=`python -m config data`
+CONFIG_REPORTS_LOC=`python -m config reports`
+CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
-ISIN_BSE_FILE=$PROJ_DATA_LOC/isin-data/isin-bse-500.csv
-ISIN_NSE_FILE=$PROJ_DATA_LOC/isin-data/isin-nse-500.csv
-AMFI_FILE=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
-SCREENER_NAME_ALIASES=$PROJ_DATA_LOC/screener-data/screener-name-aliases.csv
-PLAN_FILE=$PROJ_PROFILE_DATA_LOC/plan-data/plan-data-proc.csv
-DEMAT_FILE=$PROJ_PROFILE_DATA_LOC/demat-data/icicidirect/demat-data.csv
-SCREENER_FILE=$PROJ_DATA_LOC/screener-data/screener-data-account1.csv
-OUT_FILE_1=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-1-coverage.csv
-OUT_FILE_2=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-2-planned.csv
-OUT_FILE_3=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-3-tbd.csv
-OUT_FILE_4=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-4-tbd-1y-all.csv
-OUT_FILE_5=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-5-tbd-1y-cond.csv
-OUT_FILE_6=$PROJ_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-sale-1.csv
+ISIN_BSE_FILE=$CONFIG_DATA_LOC/isin-data/isin-bse-500.csv
+ISIN_NSE_FILE=$CONFIG_DATA_LOC/isin-data/isin-nse-500.csv
+AMFI_FILE=$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv
+SCREENER_NAME_ALIASES=$CONFIG_DATA_LOC/screener-data/screener-name-aliases.csv
+PLAN_FILE=$CONFIG_PROFILE_DATA_LOC/plan-data/plan-data-proc.csv
+DEMAT_FILE=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-data.csv
+SCREENER_FILE=$CONFIG_DATA_LOC/screener-data/screener-data-account1.csv
+OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-1-coverage.csv
+OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-2-planned.csv
+OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-3-tbd.csv
+OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-4-tbd-1y-all.csv
+OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-5-tbd-1y-cond.csv
+OUT_FILE_6=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-sale-1.csv
 
 # 1 year
 DAYS_DIFF_1=365

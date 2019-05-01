@@ -1,14 +1,13 @@
 import os
 import sqlite3
 
-from project import *
+from config import *
 
-class Database(Project):
+class Database(Config):
 	def __init__(self):
 		super(Database, self).__init__()
 		self.debug_level = 0 
-		self.db_filename =  'equity.db'
-		self.db_filepath = os.path.join(self.project_db_files_get(), self.db_filename)
+		self.db_filepath = os.path.join(self.get_db_files(), self.DB_FILENAME) 
 		db_exists = os.path.exists(self.db_filepath)
 		if db_exists:
 			print 'db exists'

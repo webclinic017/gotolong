@@ -2,20 +2,20 @@
 
 DEBUG_LEVEL=0
 
-PROJ_DATA_LOC=`python -m project data`
-PROJ_REPORTS_LOC=`python -m project reports`
-PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
-PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+CONFIG_DATA_LOC=`python -m config data`
+CONFIG_REPORTS_LOC=`python -m config reports`
+CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 
 BANK=icici-bank
 
 
 # dividends data
-IN_DIR=$PROJ_PROFILE_DATA_LOC/bank-txn-data
-OUT_DIR=$PROJ_PROFILE_REPORTS_LOC/dividend-reports
+IN_DIR=$CONFIG_PROFILE_DATA_LOC/bank-txn-data
+OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/dividend-reports
 
-IN_FILE_AMFI=$PROJ_DATA_LOC/amfi-data/amfi-data-mcap.csv
+IN_FILE_AMFI=$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv
 IN_FILE_ALIASES=${IN_DIR}/nach-aliases/nach-company-ticker-aliases.csv
 
 

@@ -9,9 +9,9 @@ do
   for SORT_TYPE in sort_frequency sort_amount
   do
 	if [[ "${FY}" == "all" ]] ; then
-     	./bse-dividend-bonus.py --out_type out_csv --sort_type ${SORT_TYPE} --summary_type yes --debug_level ${DEBUG_LEVEL} --dividend_file ${PROJ_DATA_LOC}/bse-data/dividend/*/bse-*.csv --bonus_file ${PROJ_DATA_LOC}/bse-data/bonus/*/bse-*.csv > ${PROJ_REPORTS_LOC}/dividends-bonus/${FY}/bse-${FY}-${SORT_TYPE}.csv
+     	./bse-dividend-bonus.py --out_type out_csv --sort_type ${SORT_TYPE} --summary_type yes --debug_level ${DEBUG_LEVEL} --dividend_file ${CONFIG_DATA_LOC}/bse-data/dividend/*/bse-*.csv --bonus_file ${CONFIG_DATA_LOC}/bse-data/bonus/*/bse-*.csv > ${CONFIG_REPORTS_LOC}/dividends-bonus/${FY}/bse-${FY}-${SORT_TYPE}.csv
 	else
-     	./bse-dividend-bonus.py --out_type out_csv --sort_type ${SORT_TYPE} --summary_type yes --debug_level ${DEBUG_LEVEL} --dividend_file ${PROJ_DATA_LOC}/bse-data/dividend/${FY}/bse-*.csv --bonus_file ${PROJ_DATA_LOC}/bse-data/bonus/${FY}/bse-*.csv > ${PROJ_REPORTS_LOC}/dividends-bonus/${FY}/bse-${FY}-${SORT_TYPE}.csv
+     	./bse-dividend-bonus.py --out_type out_csv --sort_type ${SORT_TYPE} --summary_type yes --debug_level ${DEBUG_LEVEL} --dividend_file ${CONFIG_DATA_LOC}/bse-data/dividend/${FY}/bse-*.csv --bonus_file ${CONFIG_DATA_LOC}/bse-data/bonus/${FY}/bse-*.csv > ${CONFIG_REPORTS_LOC}/dividends-bonus/${FY}/bse-${FY}-${SORT_TYPE}.csv
 	fi
   done
 done

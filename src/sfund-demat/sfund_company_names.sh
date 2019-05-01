@@ -1,12 +1,12 @@
 #!/bin/sh
 
-PROJ_DATA_LOC=`python -m project data`
-PROJ_REPORTS_LOC=`python -m project reports`
-PROJ_PROFILE_DATA_LOC=`python -m project profile_data`
-PROJ_PROFILE_REPORTS_LOC=`python -m project profile_reports`
+CONFIG_DATA_LOC=`python -m config data`
+CONFIG_REPORTS_LOC=`python -m config reports`
+CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
-DATA_SFUND_FILE=$PROJ_PROFILE_DATA_LOC/sfund-data/sfund-data.csv
-REPORTS_SFUND_FILE=$PROJ_PROFILE_REPORTS_LOC/sfund-demat-reports/sfund-names.csv
+DATA_SFUND_FILE=$CONFIG_PROFILE_DATA_LOC/sfund-data/sfund-data.csv
+REPORTS_SFUND_FILE=$CONFIG_PROFILE_REPORTS_LOC/sfund-demat-reports/sfund-names.csv
  
 awk -F "," '
 { if (start_printing) { for (i=4; i<=NF;i++) {print $i} } }
