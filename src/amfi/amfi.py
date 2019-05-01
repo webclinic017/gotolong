@@ -6,9 +6,13 @@ import csv
 import traceback
 import operator
 
+import sqlite3
+
 import cutil.cutil
 
-class Amfi(object):
+from database.database import *
+
+class Amfi(Database):
 	def __init__(self):
 		super(Amfi, self).__init__()
 		# isin number
@@ -73,10 +77,24 @@ class Amfi(object):
 			traceback.print_exc()
 		
 	def load_amfi_data(self, in_filename):
+		SQL = """insert into amfi (sno, company_name, isin, bse_symbol, bse_mcap, nse_symbol, nse_mcap, mse_symbol, mse_mcap, avg_mcap, cap_type, unused1, unused2) values (:sno, :company_name, :isin, :bse_symbol, :bse_mcap, :nse_symbol, :nse_mcap, :mse_symbol, :mse_mcap, :avg_mcap, :cap_type, :unused1, :unused2) """
+		cursor = self.db_conn
+		with open(in_filename, 'rt') as csvfile:
+			# future 
+			csv_reader = csv.reader(csvfile)
+			cursor.executemany(SQL, csv_reader)
+			# current
+			csv_reader = csv.reader(csvfile)
+			for row in csv_reader:
+				self.load_amfi_row(row)
+
+	def amfi_bulk_load(self, in_filename):
+		print 'store amfi data'	
 		with open(in_filename, 'r') as csvfile:
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_amfi_row(row)
+
 
 	def print_phase1(self, out_filename):
 		if self.debug_level > 1:
