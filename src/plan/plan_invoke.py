@@ -40,7 +40,8 @@ plan = plan.Plan()
 
 plan.set_debug_level(debug_level)
 
-plan.load_amfi_data(in_amfi_filename)
+plan.load_amfi_db()
+# plan.load_amfi_data(in_amfi_filename)
 plan.load_plan_data(in_plan_filename)
 
 plan.print_phase1(out_filename_phase1)

@@ -78,23 +78,29 @@ class Amfi(Database):
 		
 	def load_amfi_data(self, in_filename):
 		SQL = """insert into amfi (sno, company_name, isin, bse_symbol, bse_mcap, nse_symbol, nse_mcap, mse_symbol, mse_mcap, avg_mcap, cap_type, unused1, unused2) values (:sno, :company_name, :isin, :bse_symbol, :bse_mcap, :nse_symbol, :nse_mcap, :mse_symbol, :mse_mcap, :avg_mcap, :cap_type, :unused1, :unused2) """
-		cursor = self.db_conn
+		cursor = self.db_conn.cursor()
 		with open(in_filename, 'rt') as csvfile:
 			# future 
 			csv_reader = csv.reader(csvfile)
+			# insert row
 			cursor.executemany(SQL, csv_reader)
+			# commit db changes
+			self.db_conn.commit()
 			# current
-			csv_reader = csv.reader(csvfile)
-			for row in csv_reader:
-				self.load_amfi_row(row)
+			# csv_reader = csv.reader(csvfile)
+			# for row in csv_reader:
+				# self.load_amfi_row(row)
+		print 'display db data'
+		self.load_amfi_db()
 
-	def amfi_bulk_load(self, in_filename):
-		print 'store amfi data'	
-		with open(in_filename, 'r') as csvfile:
-			reader = csv.reader(csvfile)
-			for row in reader:
-				self.load_amfi_row(row)
-
+	def load_amfi_db(self):
+		SQL = """select * from amfi"""
+		cursor = self.db_conn.cursor()
+		cursor.execute(SQL)
+		for row in cursor.fetchall():
+			if self.debug_level > 0 :
+				print row
+			self.load_amfi_row(row)
 
 	def print_phase1(self, out_filename):
 		if self.debug_level > 1:

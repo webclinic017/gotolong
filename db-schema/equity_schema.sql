@@ -1,5 +1,8 @@
+
+drop table amfi;
+
 create table amfi (
-sno integer,
+sno text,
 company_name text,
 isin text,
 bse_symbol text,

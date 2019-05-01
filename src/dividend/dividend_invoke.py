@@ -33,7 +33,8 @@ dividend = dividend.Dividend()
 
 dividend.set_debug_level(debug_level)
 
-dividend.load_amfi_data(in_amfi_filename)
+dividend.load_amfi_db()
+#dividend.load_amfi_data(in_amfi_filename)
 dividend.load_aliases_data(in_aliases_filename)
 dividend.load_dividend_data(in_dividend_filenames)
 

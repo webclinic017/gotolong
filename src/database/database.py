@@ -15,6 +15,10 @@ class Database(Project):
 		else:
 			print 'db new'
 		self.db_conn = sqlite3.connect(self.db_filepath)
+		
+		# sqlite3.ProgrammingError: You must not use 8-bit bytestrings unless you use a text_factory that can interpret 8-bit bytestrings (like text_factory = str). It is highly recommended that you instead just switch your application to Unicode strings.
+		
+		self.db_conn.text_factory = str
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
