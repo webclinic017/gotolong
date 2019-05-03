@@ -1,4 +1,6 @@
 To Do Items
+* Integrate it with SQLlite Relational DB and no-sql Db.
+  * push the data once and load it in other dependent classes.
 * Fix the tbd data where screener data is shown as 0
   ** Fix the name to isin code / stock code translation for screener
 * Fix the dividend report from bank txn stmt
