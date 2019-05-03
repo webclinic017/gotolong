@@ -142,6 +142,7 @@ class Tbd(Plan, Demat, Screener):
 					sc_profit5 = 0
 					sc_peg = 0
 					sc_pledge = 0
+					sc_mos = 0
 				else:
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
@@ -154,6 +155,7 @@ class Tbd(Plan, Demat, Screener):
 					sc_profit5 = self.get_sc_profit5_by_sno(isin_code)
 					sc_peg = self.get_sc_peg_by_sno(isin_code)
 					sc_pledge = self.get_sc_pledge_by_sno(isin_code)
+					sc_mos = self.get_sc_mos_by_sno(isin_code)
 				
 				last_txn_days = self.tbd_last_txn_days[comp_name]
 				p_str = self.tbd_isin_name[comp_name]
@@ -180,13 +182,7 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += str(sc_myavgiv)
 				p_str += ',' 
-				upside_pct = 0
-				if sc_myavgiv > 0:
-					# it is with respect to cmp
-					# cmp(40), iv(80) - upside 100%	
-					# cmp(80), iv(40) - downside 50%
-					upside_pct = int(float(sc_myavgiv-sc_cmp)*100.0/float(sc_cmp))
-				p_str += str(upside_pct) +' %'
+				p_str += str(sc_mos) +' %'
 				p_str += ',' 
 				p_str += str(sc_dp3)
 				p_str += ',' 
@@ -242,10 +238,8 @@ class Tbd(Plan, Demat, Screener):
 						p_str += 'myavgiv eq 0' 
 						p_str += ' and '
 						skip_row = False 
-					if sc_myavgiv > 0 and sc_cmp > sc_myavgiv:
-						pct = int(float(sc_myavgiv-sc_cmp)*100.0/float(sc_cmp))
-					if sc_myavgiv > 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
-						p_str += 'cmp > myavgiv + ' + str(pct) + '%'
+					if sc_mos > 10: 
+						p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
 						p_str += ' and '
 						skip_row = False 
 					
@@ -298,11 +292,8 @@ class Tbd(Plan, Demat, Screener):
 							p_str += 'myavgiv eq 0' 
 							p_str += ' and '
 							check_failed = True
-						if sc_myavgiv > 0:
-							if sc_cmp > sc_myavgiv:
-								 pct = int(float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv))
-						if sc_myavgiv > 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
-							p_str += 'cmp > myavgiv + ' + str(pct) + '%'
+						if sc_mos > 10:
+							p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
 							p_str += ' and '
 							check_failed = True
 						if tbd_units <= 0:

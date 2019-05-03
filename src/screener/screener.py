@@ -52,6 +52,8 @@ class Screener(Isin, Amfi):
 		self.sc_crank = {}
 		self.sc_prank = {}
                 self.sc_name_aliases = {}
+		# margin of safety
+		self.sc_mos = {}
  		self.debug_level = 0 
 		self.sc_ratio_name = { 'S.No. ':'sno','Name ':'name','CMP Rs. ':'cmp','MyAvgIV ':'myavgiv','IV Rs. ':'iv','Mar Cap Rs.Cr. ':'mcap','Sales Rs.Cr. ':'sales','NP 12M Rs.Cr. ':'np','P/E ':'pe','5Yrs PE ':'pe5','EPS 12M Rs. ':'eps','PEG ':'peg','CMP / BV ':'p2bv','CMP / OCF ':'p2ocf','CMP / Sales ':'p2sales','EV / EBITDA ':'ev2ebitda', 'EV Rs.Cr. ' : 'ev' , 'OPM % ':'opm','Debt / Eq ':'d2e','Int Coverage ':'ic','Dividend Payout % ':'dp','Avg Div Payout 3Yrs % ':'dp3','Div Yld % ':'dy','ROE 3Yr % ':'roe3','ROCE3yr avg % ':'roce3','Current ratio ':'cr','Sales Var 5Yrs % ':'sales5','Profit Var 5Yrs % ':'profit5','Pledged % ':'pledge','Prom. Hold. % ':'prom_hold','Piotski Scr ':'piotski' }
 		self.sc_ratio_loc = { 'sno' : 0,'name' : 0,'cmp' : 0,'myavgiv' : 0,'iv' : 0,'mcap' : 0,'sales' : 0,'np' : 0,'pe' : 0,'pe5' : 0,'eps' : 0,'peg' : 0,'p2bv' : 0,'p2ocf' : 0,'p2sales' : 0,'ev2ebitda' : 0,'ev' : 0,'opm' : 0,'d2e' : 0,'icover' : 0,'dp' : 0,'dp3' : 0,'dy' : 0,'roe3' : 0,'roce3' : 0,'cr' : 0,'sales5' : 0,'profit5' : 0,'pledge' : 0,'prom_hold' : 0,'piotski' : 0 }
@@ -173,6 +175,13 @@ class Screener(Isin, Amfi):
 			self.sc_profit5[sc_sno] = sc_profit5 
 			self.sc_ev2ebitda[sc_sno] =  sc_ev2ebitda
 			self.sc_pledge[sc_sno] =  sc_pledge
+			# margin of safety
+			# cmp(40), iv(80) - upside 100%
+			# cmp(80), iv(40) - downside 50%
+			if sc_myavgiv > 0:
+				self.sc_mos[sc_sno] = int(float(sc_myavgiv-sc_cmp)*100.0/float(sc_cmp))
+			else:
+				self.sc_mos[sc_sno] = 0
 			
 			sc_crank = 0
 			
@@ -228,7 +237,7 @@ class Screener(Isin, Amfi):
 
 	def print_phase1(self, out_filename, sort_score = None):
 		fh = open(out_filename, "w") 
-		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_p2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_roce3, sc_graham, sc_sales5, sc_profit5, sc_ev2ebitda, sc_pledge, sc_crank, sc_prank\n')
+		fh.write('sc_isin, sc_name, sc_cmp, sc_sales, sc_np, sc_pe, sc_opm, sc_eps, sc_dp3, sc_d2e, sc_ic, sc_dy, sc_peg, sc_p2bv, sc_dp3, sc_iv, sc_ev, sc_mcap, sc_altmanz, sc_cr, sc_roe3, sc_roce3, sc_graham, sc_sales5, sc_profit5, sc_ev2ebitda, sc_pledge, sc_mos, sc_crank, sc_prank\n')
 		if sort_score:
 			sorted_input = sorted(self.sc_crank, key=self.sc_crank.__getitem__, reverse=True)
 		else:
@@ -291,6 +300,8 @@ class Screener(Isin, Amfi):
 			p_str += str(self.sc_ev2ebitda[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_pledge[sc_sno])
+			p_str += ', ' 
+			p_str += str(self.sc_mos[sc_sno])
 			p_str += ', ' 
 			p_str += str(self.sc_crank[sc_sno])
 			p_str += ', ' 
@@ -376,6 +387,10 @@ class Screener(Isin, Amfi):
 			return self.sc_profit5[sc_sno]
 		return 0
 
+	def get_sc_mos_by_sno(self, sc_sno):
+		if sc_sno in self.sc_mos:
+			return self.sc_mos[sc_sno]
+		return 0
 
 	def get_sc_peg_by_sno(self, sc_sno):
 		if sc_sno in self.sc_peg:

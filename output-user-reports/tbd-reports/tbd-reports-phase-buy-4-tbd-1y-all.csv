@@ -1,20 +1,20 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments
 Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and Failed
-Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,67,620,825 %,36,3,5,7,-2,0,0,4,d2e > 2 and sales5 < 0 and Failed
-Hsil,INE415A01038,3,2,1,33,04-Apr-2018,394,Buy,Micro Cap,259,230,-11 %,31,1,7,8,8,-2,-21,0,profit5 < 0 and cmp > myavgiv + 12% and Failed
-Future retail,INE752P01024,3,2,1,33,01-Feb-2018,456,Buy,Mid Cap,419,279,-33 %,0,0,17,16,66,0,0,48,dp3 < 6 and pledge > 25 and cmp > myavgiv + 50% and Failed
-Coffee day enterprises,INE335K01011,3,2,1,33,04-Apr-2018,394,Buy,Small Cap,261,409,56 %,0,2,1,7,8,0,0,72,dp3 < 6 and roe3 < 4 and pledge > 25 and Failed
-Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,459,12538,2631 %,82,0,2,5,4,0,0,13,roe3 < 4 and Failed
-Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,495,317,-35 %,19,1,7,11,0,0,0,23,cmp > myavgiv + 56% and Failed
-Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,247,10975,4343 %,5,0,-16,63,92,159,0,0,dp3 < 6 and roe3 < 4 and Failed
-Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,207,246,18 %,0,2,2,8,41,0,0,0,dp3 < 6 and roe3 < 4 and Failed
-Rallis,INE613A01020,3,2,1,33,04-Apr-2018,394,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0,Passed
-Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,456,Buy,Mid Cap,202,130,-35 %,16,0,14,15,3,4,3,15,cmp > myavgiv + 55% and Failed
+Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,67,620,825 %,36,3,5,7,-2,0,0,4,d2e > 2 and sales5 < 0 and cmp > myavgiv + 825% and Failed
+Hsil,INE415A01038,3,2,1,33,04-Apr-2018,394,Buy,Micro Cap,259,230,-11 %,31,1,7,8,8,-2,-21,0,profit5 < 0 and Failed
+Future retail,INE752P01024,3,2,1,33,01-Feb-2018,456,Buy,Mid Cap,419,279,-33 %,0,0,17,16,66,0,0,48,dp3 < 6 and pledge > 25 and Failed
+Coffee day enterprises,INE335K01011,3,2,1,33,04-Apr-2018,394,Buy,Small Cap,261,409,56 %,0,2,1,7,8,0,0,72,dp3 < 6 and roe3 < 4 and pledge > 25 and cmp > myavgiv + 56% and Failed
+Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,459,12538,2631 %,82,0,2,5,4,0,0,13,roe3 < 4 and cmp > myavgiv + 2631% and Failed
+Future lifestyle fashions,INE452O01016,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,495,317,-35 %,19,1,7,11,0,0,0,23,Passed
+Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,247,10975,4343 %,5,0,-16,63,92,159,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 4343% and Failed
+Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,207,246,18 %,0,2,2,8,41,0,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 18% and Failed
+Rallis,INE613A01020,3,2,1,33,04-Apr-2018,394,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0,cmp > myavgiv + 39% and Failed
+Apollo tyres,INE438A01022,3,2,1,33,01-Feb-2018,456,Buy,Mid Cap,202,130,-35 %,16,0,14,15,3,4,3,15,Passed
 Sheela foam,INE916U01025,6,2,4,67,02-Feb-2018,455,Buy,Small Cap,1350,1345,0 %,0,0,30,37,12,35,1,0,dp3 < 6 and Failed
 Johnson controls hitachi air conditioning,INE782A01015,3,2,1,33,17-Oct-2017,563,Buy,Small Cap,1854,2037,9 %,6,0,19,23,19,46,1,0,Passed
-Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0,Passed
+Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0,cmp > myavgiv + 46% and Failed
 -,INE999A01015,3,2,1,33,04-Apr-2018,394,Buy,Micro Cap,668,717,7 %,29,0,11,17,8,4,8,0,peg > 4 and Failed
 Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,394,Buy,Large Cap,1171,1096,-6 %,64,0,54,79,6,6,7,0,peg > 4 and Failed
-Kotak mahindra bank,INE237A01028,3,2,1,33,04-Apr-2018,394,Buy,Large Cap,1418,984,-30 %,2,5,13,8,18,23,2,0,dp3 < 6 and d2e > 2 and cmp > myavgiv + 44% and Failed
-Trent,INE849A01020,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,384,248,-35 %,33,0,7,10,18,23,4,0,cmp > myavgiv + 54% and Failed
-Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,394,Buy,Large Cap,757,110,-85 %,15,10,8,6,11,-40,-12,0,d2e > 2 and profit5 < 0 and cmp > myavgiv + 588% and Failed
+Kotak mahindra bank,INE237A01028,3,2,1,33,04-Apr-2018,394,Buy,Large Cap,1418,984,-30 %,2,5,13,8,18,23,2,0,dp3 < 6 and d2e > 2 and Failed
+Trent,INE849A01020,3,2,1,33,04-Apr-2018,394,Buy,Mid Cap,384,248,-35 %,33,0,7,10,18,23,4,0,Passed
+Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,394,Buy,Large Cap,757,110,-85 %,15,10,8,6,11,-40,-12,0,d2e > 2 and profit5 < 0 and Failed
