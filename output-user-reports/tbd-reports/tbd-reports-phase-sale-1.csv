@@ -12,7 +12,7 @@ Hdfc bank,INE040A01026,15,18,-3,-20,04-Dec-2018,150,Buy,Large Cap,2368,1654,-30 
 Cholamandalam investment finance company,INE121A01016,3,1,2,67,24-Aug-2018,252,Buy,Mid Cap,1317,1118,-15 %,12,6,19,12,16,26,1,0,d2e > 2 and 
 Indiabulls housing finance,INE148I01020,3,2,1,33,04-Dec-2018,150,Buy,Large Cap,706,1013,43 %,55,8,28,12,25,25,0,13,d2e > 2 and cmp > myavgiv + 43% and 
 L&t finance holdings,INE498L01015,3,1,2,67,28-May-2018,340,Buy,Large Cap,127,136,7 %,15,5,12,9,21,20,1,0,d2e > 2 and 
-Shriram transport finance co,INE721A01013,3,2,1,33,09-Nov-2018,175,Buy,Large Cap,1080,1191,10 %,14,5,12,11,13,2,8,0,d2e > 2 and peg > 4 and 
+Shriram transport finance co,INE721A01013,3,2,1,33,09-Nov-2018,175,Buy,Large Cap,1080,1191,10 %,14,5,12,11,13,2,8,0,d2e > 2 and peg > 4 and cmp > myavgiv + 10% and 
 Iifl holdings,INE530B01024,3,1,2,67,07-Sep-2018,238,Buy,Mid Cap,424,406,-4 %,22,7,18,12,8,27,1,0,d2e > 2 and 
 Power finance corporation,INE134E01011,3,3,0,0,09-Nov-2018,175,Buy,Mid Cap,114,158,38 %,42,6,13,10,9,6,1,0,d2e > 2 and cmp > myavgiv + 38% and 
 Housing development finance corporation,INE001A01036,15,13,2,13,04-Dec-2018,150,Buy,Large Cap,2006,2132,6 %,35,5,20,11,11,14,3,0,d2e > 2 and 
