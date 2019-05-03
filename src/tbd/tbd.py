@@ -256,7 +256,7 @@ class Tbd(Plan, Demat, Screener):
 					if apply_cond:
 						passed_cond = tbd_units > 0 and sc_dp3 >= 6 and sc_d2e <= 2 and sc_roe3 >= 4 and sc_roce3 >= 4 and sc_sales5 > 0 and sc_profit5 > 0and sc_peg <=4 and (sc_cmp <= sc_myavgiv or float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) <= 10.0)
 					else:
-						passed_cond = True
+						passed_cond = tbd_units > 0 
 					
 					if apply_cond and passed_cond :
 						p_str += ' Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25 and sc_cmp le sc_myavgiv'
