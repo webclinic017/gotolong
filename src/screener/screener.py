@@ -87,7 +87,7 @@ class Screener(Isin, Amfi):
 				return
 
 			sc_no = row_list[0].strip()
-			if sc_no == 'S.No.' : 
+			if sc_no == 'S.No.': 
 				if self.debug_level > 1:
 					print 'picked up keys', row_list
 				rindex = 0
@@ -216,8 +216,9 @@ class Screener(Isin, Amfi):
 			traceback.print_exc()
 		
 	def load_isin_data_both(self, isin_bse_filename, isin_nse_filename):
-		self.load_isin_bse_data(isin_bse_filename)
-		self.load_isin_nse_data(isin_nse_filename)
+		# self.load_isin_bse_data(isin_bse_filename)
+		# self.load_isin_nse_data(isin_nse_filename)
+		self.load_isin_db()
 
 	def load_screener_data(self, sc_filename):
 		with open(sc_filename, 'r') as csvfile:

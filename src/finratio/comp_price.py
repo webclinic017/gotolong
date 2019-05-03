@@ -53,6 +53,9 @@ def get_pscore_pb(ratio):
 	elif ratio == 0:
 		# best 
 		score = 4
+	elif ratio < 0:
+		# TBD: sure ?
+		score = 0
 	return score
 
 def get_pscore_dy(ratio):
