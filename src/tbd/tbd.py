@@ -98,7 +98,7 @@ class Tbd(Plan, Demat, Screener):
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, apply_cond = True, demat_only = None, sort_sale = None):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_crank, sc_prank, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 		if sort_sale:
 			sorted_items = sorted(self.tbd_crank, key=self.tbd_crank.__getitem__)
@@ -176,16 +176,15 @@ class Tbd(Plan, Demat, Screener):
 				p_str += ',' 
 				p_str += self.tbd_captype[comp_name]
 				p_str += ',' 
-				p_str += str(sc_crank)
-				p_str += ',' 
-				p_str += str(sc_prank)
-				p_str += ',' 
 				p_str += str(sc_cmp)
 				p_str += ',' 
 				p_str += str(sc_myavgiv)
 				p_str += ',' 
 				upside_pct = 0
 				if sc_myavgiv > 0:
+					# it is with respect to cmp
+					# cmp(40), iv(80) - upside 100%	
+					# cmp(80), iv(40) - downside 50%
 					upside_pct = int(float(sc_myavgiv-sc_cmp)*100.0/float(sc_cmp))
 				p_str += str(upside_pct) +' %'
 				p_str += ',' 
@@ -243,9 +242,9 @@ class Tbd(Plan, Demat, Screener):
 						p_str += 'myavgiv eq 0' 
 						p_str += ' and '
 						skip_row = False 
-					if sc_myavgiv != 0 and sc_cmp > sc_myavgiv:
+					if sc_myavgiv > 0 and sc_cmp > sc_myavgiv:
 						pct = int(float(sc_myavgiv-sc_cmp)*100.0/float(sc_cmp))
-					if sc_myavgiv != 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
+					if sc_myavgiv > 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
 						p_str += 'cmp > myavgiv + ' + str(pct) + '%'
 						p_str += ' and '
 						skip_row = False 
@@ -294,15 +293,15 @@ class Tbd(Plan, Demat, Screener):
 						if sc_pledge > 25:
 							p_str += 'pledge > 25' 
 							p_str += ' and '
-							# check_failed = True
+							check_failed = True
 						if sc_myavgiv == 0:
 							p_str += 'myavgiv eq 0' 
 							p_str += ' and '
 							check_failed = True
-						if sc_myavgiv != 0:
+						if sc_myavgiv > 0:
 							if sc_cmp > sc_myavgiv:
 								 pct = int(float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv))
-						if sc_myavgiv != 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
+						if sc_myavgiv > 0 and sc_cmp > sc_myavgiv and float(sc_cmp-sc_myavgiv)*100.0/float(sc_myavgiv) > 10.0:
 							p_str += 'cmp > myavgiv + ' + str(pct) + '%'
 							p_str += ' and '
 							check_failed = True
