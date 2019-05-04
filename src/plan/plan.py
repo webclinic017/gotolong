@@ -28,27 +28,28 @@ class Plan(Amfi):
 		try:
 			row_list = row
 		
-			if row_list[0] == 'industry_name':
+			if row_list[0] == 'comp_industry':
 				return
-			industry_name = row_list[0]
-			company_name = row_list[1]
-			company_weight = row_list[2]
-			company_desc = row_list[3]
-			if industry_name in self.industry_units.keys():
-				self.industry_units[industry_name] = self.industry_units[industry_name] + company_weight
+			comp_industry = row_list[0]
+			comp_name = row_list[1]
+			comp_ticker = row_list[2]
+			comp_weight = row_list[3]
+			comp_desc = row_list[4]
+			if comp_industry in self.industry_units.keys():
+				self.industry_units[comp_industry] = self.industry_units[comp_industry] + comp_weight
 			else:
-				self.industry_units[industry_name] = company_weight
+				self.industry_units[comp_industry] = comp_weight
 			if self.debug_level > 0:
-				print 'industry ', industry_name
-				print 'company name', company_name 
-				print 'company weight', company_weight
-				print 'company desc', company_desc
-			company_name = cutil.cutil.normalize_comp_name(company_name)
-			isin = self.get_amfi_isin_by_name(company_name)
+				print 'industry ', comp_industry 
+				print 'company name', comp_name 
+				print 'company weight', comp_weight
+				print 'company desc', comp_desc
+			# use ticker as an input
+			isin = self.get_amfi_isin_by_name(comp_ticker)
 			if self.debug_level > 0:
-				print isin, company_name
-			if company_weight >= 0:
-				self.plan_comp_units[isin] = cutil.cutil.get_number(company_weight)
+				print isin, comp_name
+			if comp_weight >= 0:
+				self.plan_comp_units[isin] = cutil.cutil.get_number(comp_weight)
 				self.plan_comp_units[isin] = self.plan_comp_units[isin] * self.multiplier
 			else:
 				self.plan_comp_units[isin] = 0
@@ -70,7 +71,7 @@ class Plan(Amfi):
 		self.load_plan_db()
 		
 	def insert_plan_data(self, in_filename):	
-		SQL = """insert into plan(industry_name, company_name, company_weight, company_desc) values (:industry_name, :company_name, :company_weight, :company_desc) """
+		SQL = """insert into plan(comp_industry, comp_name, comp_ticker, comp_weight, comp_desc) values (:comp_industry, :comp_name, :comp_ticker, :comp_weight, :comp_desc) """
 		cursor = self.db_conn.cursor()
 		with open(in_filename, 'rt') as csvfile:
 			# future 

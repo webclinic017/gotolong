@@ -1,154 +1,159 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments
-Bankbaroda,INE028A01039,111,1,110,99,18-Sep-2018,228,Buy,Large Cap,119,0,0 %,7,15,-5,4,4,0,0,0,d2e > 2 and roe3 < 4 and myavgiv eq 0 and 
-Sbi life insurance company,INE123W01016,111,3,108,97,09-Nov-2018,176,Buy,Large Cap,310,0,0 %,292,15,1,5,6,0,0,0,d2e > 2 and roe3 < 4 and myavgiv eq 0 and 
-Axis bank,INE238A01034,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,757,110,-85 %,15,10,8,6,11,-40,-12,0,d2e > 2 and profit5 < 0 and 
-Idea cellular,INE669E01016,111,5,106,96,25-Mar-2019,40,Buy,Large Cap,16,0,0 %,3,2,-3,4,5,0,0,0,dp3 < 6 and roe3 < 4 and myavgiv eq 0 and 
-Lic housing finance,INE115A01026,111,3,108,97,04-Dec-2018,151,Buy,Mid Cap,484,528,9 %,17,11,18,10,15,14,1,0,d2e > 2 and 
-Dewan housing finance corporation,INE202B01012,111,2,109,98,04-Feb-2019,89,Buy,Mid Cap,141,289,104 %,17,11,17,10,21,21,0,0,d2e > 2 and cmp > myavgiv + 104% and 
-Icici bank,INE090A01021,111,6,105,95,04-Dec-2018,151,Buy,Large Cap,402,187,-53 %,18,8,10,6,7,-4,-10,0,d2e > 2 and profit5 < 0 and 
-Indusind bank,INE095A01012,111,2,109,98,23-Aug-2018,254,Buy,Large Cap,1557,1514,-2 %,12,8,16,8,20,28,1,0,d2e > 2 and 
-Kotak mahindra bank,INE237A01028,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,1418,984,-30 %,2,5,13,8,18,23,2,0,dp3 < 6 and d2e > 2 and 
-Hdfc bank,INE040A01026,555,18,537,97,04-Dec-2018,151,Buy,Large Cap,2368,1654,-30 %,19,9,18,8,18,21,1,0,d2e > 2 and 
-Cholamandalam investment finance company,INE121A01016,111,1,110,99,24-Aug-2018,253,Buy,Mid Cap,1317,1118,-15 %,12,6,19,12,16,26,1,0,d2e > 2 and 
-Indiabulls housing finance,INE148I01020,111,2,109,98,04-Dec-2018,151,Buy,Large Cap,706,1013,43 %,55,8,28,12,25,25,0,13,d2e > 2 and cmp > myavgiv + 43% and 
-L&t finance holdings,INE498L01015,111,1,110,99,28-May-2018,341,Buy,Large Cap,127,136,7 %,15,5,12,9,21,20,1,0,d2e > 2 and 
-Shriram transport finance co,INE721A01013,111,2,109,98,09-Nov-2018,176,Buy,Large Cap,1080,1191,10 %,14,5,12,11,13,2,8,0,d2e > 2 and peg > 4 and cmp > myavgiv + 10% and 
-Iifl holdings,INE530B01024,111,1,110,99,07-Sep-2018,239,Buy,Mid Cap,424,406,-4 %,22,7,18,12,8,27,1,0,d2e > 2 and 
-Power finance corporation,INE134E01011,111,3,108,97,09-Nov-2018,176,Buy,Mid Cap,114,158,38 %,42,6,13,10,9,6,1,0,d2e > 2 and cmp > myavgiv + 38% and 
-Basf,INE373A01013,111,3,108,97,04-Apr-2018,395,Buy,Small Cap,1352,1634,20 %,-13,1,-3,4,7,1,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 20% and 
-Shipping corporation,INE109A01011,111,3,108,97,18-Apr-2019,16,Buy,Small Cap,34,70,105 %,0,1,6,4,-4,0,0,0,dp3 < 6 and sales5 < 0 and cmp > myavgiv + 105% and 
-Thyrocare technologies,INE594H01019,111,1,110,99,12-Mar-2019,53,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Ti financial holdings,INE149A01033,111,3,108,97,03-Jul-2018,305,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Supreme industries,INE195A01028,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Ifb industries,INE559A01017,111,2,109,98,09-Nov-2018,176,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Rural electrification corporation,INE020B01018,111,6,105,95,09-Nov-2018,176,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Delta corp,INE124G01033,111,1,110,99,18-Apr-2019,16,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Network18 media investments,INE870H01013,111,1,110,99,13-Mar-2019,52,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Inox leisure,INE312H01016,111,1,110,99,13-Mar-2019,52,Buy,Micro Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Hatsun agro product,INE473B01035,111,1,110,99,05-Sep-2018,241,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
-Shree renuka sugars,INE087H01022,111,1,110,99,28-Jun-2018,310,Buy,Micro Cap,11,0,0 %,0,0,-25,-3,-2,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and sales5 < 0 and myavgiv eq 0 and 
-Coffee day enterprises,INE335K01011,111,2,109,98,04-Apr-2018,395,Buy,Small Cap,261,409,56 %,0,2,1,7,8,0,0,72,dp3 < 6 and roe3 < 4 and pledge > 25 and cmp > myavgiv + 56% and 
-Aditya birla fashion retail,INE647O01011,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,207,246,18 %,0,2,2,8,41,0,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 18% and 
-Bajaj finserv,INE918I01018,111,6,105,95,19-Sep-2017,592,Buy,Large Cap,7624,2949,-61 %,1,3,15,15,31,12,3,0,dp3 < 6 and d2e > 2 and 
-Adani transmission,INE931S01010,111,1,110,99,26-Jul-2018,282,Buy,Mid Cap,216,159,-26 %,0,2,23,15,0,0,0,52,dp3 < 6 and pledge > 25 and 
-Godrej properties,INE484J01027,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,818,422,-48 %,0,2,8,6,13,-8,-9,0,dp3 < 6 and profit5 < 0 and 
-Tata power co,INE245A01021,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,67,620,825 %,36,3,5,7,-2,0,0,4,d2e > 2 and sales5 < 0 and cmp > myavgiv + 825% and 
-Bajaj finance,INE296A01024,111,3,108,97,24-Aug-2018,253,Buy,Large Cap,3112,1139,-63 %,10,4,21,13,34,35,1,0,d2e > 2 and 
-Jubilant foodworks,INE797F01012,111,3,108,97,03-Jul-2018,305,Buy,Mid Cap,1326,1193,-10 %,19,0,16,23,16,9,6,13,peg > 4 and 
-Housing urban development corporation,INE031A01017,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,41,550,1241 %,13,4,9,9,7,3,2,0,d2e > 2 and cmp > myavgiv + 1241% and 
-Jk tyre industries,INE573A01042,111,3,108,97,05-Feb-2019,88,Buy,Small Cap,86,39,-54 %,26,3,15,12,4,-33,0,29,d2e > 2 and profit5 < 0 and pledge > 25 and 
-General insurance corporation,INE481Y01014,111,3,108,97,04-Dec-2018,151,Buy,Large Cap,241,367,52 %,30,0,5,5,0,0,0,0,cmp > myavgiv + 52% and 
-Icici prudential life insurance company,INE726G01019,111,3,108,97,04-Dec-2018,151,Buy,Large Cap,372,380,2 %,65,0,28,30,14,1,27,0,peg > 4 and 
-Godrej industries,INE233A01035,111,2,109,98,09-Nov-2018,176,Buy,Mid Cap,507,577,13 %,24,2,6,8,6,-2,-17,0,profit5 < 0 and cmp > myavgiv + 13% and 
-Prestige estates projects,INE811K01011,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,265,236,-10 %,12,2,9,10,23,5,6,0,peg > 4 and 
-Central depository services,INE736A01011,111,2,109,98,03-Jul-2018,305,Buy,Small Cap,232,283,21 %,34,0,17,23,13,15,1,0,cmp > myavgiv + 21% and 
-Care ratings,INE752H01013,111,3,108,97,01-Feb-2018,457,Buy,Small Cap,984,1543,56 %,75,0,30,44,10,9,2,0,cmp > myavgiv + 56% and 
-Colgate palmolive,INE259A01022,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,1171,1096,-6 %,64,0,54,79,6,6,7,0,peg > 4 and 
-Mahindra mahindra financial services,INE774D01024,111,2,109,98,04-Dec-2018,151,Buy,Mid Cap,402,345,-14 %,32,4,10,10,13,1,25,0,d2e > 2 and peg > 4 and 
-Manappuram finance,INE522D01027,111,2,109,98,22-Apr-2019,12,Buy,Small Cap,118,79,-33 %,32,3,19,14,83,87,0,5,d2e > 2 and 
-Bharti airtel,INE397D01024,111,11,100,90,09-Nov-2018,176,Buy,Large Cap,331,144,-56 %,71,2,6,10,2,-8,0,0,profit5 < 0 and 
-Muthoot finance,INE414G01012,111,3,108,97,04-Dec-2018,151,Buy,Mid Cap,600,417,-30 %,24,3,20,16,3,11,1,0,d2e > 2 and 
-Tata elxsi,INE670A01012,111,3,108,97,29-Oct-2018,187,Buy,Small Cap,874,1158,32 %,28,0,39,60,18,51,0,0,cmp > myavgiv + 32% and 
-Piramal enterprises,INE140A01024,111,5,106,96,04-Apr-2018,395,Buy,Large Cap,2317,4259,83 %,24,2,16,9,25,0,0,0,cmp > myavgiv + 83% and 
-Future consumer,INE220J01025,111,2,109,98,22-Apr-2019,12,Buy,Mid Cap,43,0,0 %,0,1,-10,0,27,-13,0,61,dp3 < 6 and roe3 < 4 and roce3 < 4 and profit5 < 0 and pledge > 25 and myavgiv eq 0 and 
-Narayana hrudayalaya,INE410P01011,111,3,108,97,02-Jan-2019,122,Buy,Small Cap,198,388,95 %,0,1,6,10,22,34,4,0,dp3 < 6 and cmp > myavgiv + 95% and 
-Eveready industries,INE128A01029,111,3,108,97,09-Nov-2018,176,Buy,Micro Cap,109,230,111 %,14,1,22,22,7,56,0,50,pledge > 25 and cmp > myavgiv + 111% and 
-Jain irrigation systems,INE175A01038,111,2,109,98,09-Nov-2018,176,Buy,Small Cap,52,887,1605 %,31,1,4,9,10,0,0,48,pledge > 25 and cmp > myavgiv + 1605% and 
-Dlf,INE271C01023,111,9,102,92,02-Jan-2018,487,Buy,Large Cap,178,1242,597 %,58,1,1,7,-3,-2,-21,0,roe3 < 4 and sales5 < 0 and profit5 < 0 and cmp > myavgiv + 597% and 
-Hsil,INE415A01038,111,2,109,98,04-Apr-2018,395,Buy,Micro Cap,259,230,-11 %,31,1,7,8,8,-2,-21,0,profit5 < 0 and 
-Dish tv,INE836F01026,111,4,107,96,28-Jan-2019,96,Buy,Mid Cap,36,0,0 %,0,0,18,13,16,-12,-2,95,dp3 < 6 and profit5 < 0 and pledge > 25 and myavgiv eq 0 and 
-Thomas cook,INE332A01027,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,247,10975,4343 %,5,0,-16,63,92,159,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 4343% and 
-Shoppers stop,INE498B01024,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,459,12538,2631 %,82,0,2,5,4,0,0,13,roe3 < 4 and cmp > myavgiv + 2631% and 
-Tata steel,INE081A01012,111,6,105,95,03-Jul-2018,305,Buy,Large Cap,548,925,68 %,-72,2,0,7,0,0,0,4,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 68% and 
-Chambal fertilizers chemicals,INE085A01013,111,2,109,98,09-Nov-2018,176,Buy,Small Cap,155,109,-29 %,-225,2,14,11,0,11,1,1,dp3 < 6 and 
-Eid parry,INE126A01031,111,3,108,97,02-Jan-2019,122,Buy,Small Cap,192,530,176 %,11,2,11,16,6,8,25,0,peg > 4 and cmp > myavgiv + 176% and 
-Hindalco industries,INE038A01020,111,3,108,97,03-Jul-2018,305,Buy,Large Cap,205,456,122 %,-22,1,5,7,8,12,1,0,dp3 < 6 and cmp > myavgiv + 122% and 
-Zee learn,INE565L01011,111,4,107,96,28-Jan-2019,96,Buy,Nano Cap,26,96,269 %,5,1,12,10,22,0,0,83,dp3 < 6 and pledge > 25 and cmp > myavgiv + 269% and 
-Rajesh exports,INE343B01030,111,4,107,96,09-Oct-2018,207,Buy,Mid Cap,673,522,-22 %,3,1,24,17,43,23,1,0,dp3 < 6 and 
-United spirits,INE854D01024,111,14,97,87,05-Dec-2018,150,Buy,Large Cap,531,1244,134 %,0,1,15,13,0,7,8,3,dp3 < 6 and peg > 4 and cmp > myavgiv + 134% and 
-Jsw steel,INE019A01038,111,3,108,97,09-Nov-2018,176,Buy,Large Cap,309,623,101 %,-11,1,18,13,13,42,0,46,dp3 < 6 and pledge > 25 and cmp > myavgiv + 101% and 
-Indian hotels co,INE053A01029,111,11,100,90,09-Nov-2018,176,Buy,Mid Cap,153,47,-69 %,-7,1,-3,6,2,0,0,0,dp3 < 6 and roe3 < 4 and 
-Greenply industries,INE461C01038,111,1,110,99,28-Jun-2018,310,Buy,Small Cap,158,190,20 %,5,1,20,19,-3,4,5,0,dp3 < 6 and sales5 < 0 and peg > 4 and cmp > myavgiv + 20% and 
-Ultratech cement,INE481G01011,555,16,539,97,05-Dec-2018,150,Buy,Large Cap,4566,2840,-37 %,11,1,11,13,9,-1,-48,0,profit5 < 0 and 
-Glenmark pharmaceuticals,INE935A01035,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,633,1075,69 %,7,1,23,18,13,5,4,0,cmp > myavgiv + 69% and 
-Apollo hospitals enterprise,INE437A01024,111,8,103,93,09-Nov-2018,176,Buy,Mid Cap,1199,875,-27 %,28,1,8,10,17,-5,-12,78,profit5 < 0 and pledge > 25 and 
-Adani ports special economic zone,INE742F01042,111,2,109,98,03-Jul-2018,305,Buy,Large Cap,387,367,-5 %,9,1,23,15,26,19,1,42,pledge > 25 and 
-Varun beverages,INE200M01013,111,3,108,97,02-Jan-2019,122,Buy,Mid Cap,905,1441,59 %,12,1,12,14,19,0,0,0,cmp > myavgiv + 59% and 
-Tube investments,INE974X01010,111,2,109,98,02-Jan-2019,122,Buy,Small Cap,374,222,-40 %,0,1,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and 
-Asahi glass,INE439A01020,111,5,106,96,05-Dec-2018,150,Buy,Small Cap,235,380,61 %,18,1,21,18,6,0,0,5,cmp > myavgiv + 61% and 
-Century plyboards,INE348B01021,111,3,108,97,02-Jan-2019,122,Buy,Small Cap,169,200,18 %,13,1,28,22,12,25,1,0,cmp > myavgiv + 18% and 
-Vedanta,INE205A01025,111,7,104,94,04-Feb-2019,89,Buy,Large Cap,168,245,45 %,50,1,0,4,102,27,0,0,roe3 < 4 and cmp > myavgiv + 45% and 
-Tata coffee,INE493A01027,111,3,108,97,09-Nov-2018,176,Buy,Micro Cap,87,112,28 %,26,1,11,14,-2,-3,-8,0,sales5 < 0 and profit5 < 0 and cmp > myavgiv + 28% and 
-Indian oil corporation,INE242A01010,111,3,108,97,02-Jan-2019,122,Buy,Large Cap,156,259,66 %,54,1,19,19,-2,38,0,0,sales5 < 0 and cmp > myavgiv + 66% and 
-Ntpc,INE733E01010,111,8,103,93,28-Mar-2019,37,Buy,Large Cap,135,119,-11 %,36,1,11,8,5,-2,-7,0,profit5 < 0 and 
-Nhpc,INE848E01016,111,2,109,98,09-Nov-2018,176,Buy,Mid Cap,24,113,370 %,69,1,9,9,6,5,2,0,cmp > myavgiv + 370% and 
-Lupin,INE326A01037,111,10,101,91,09-Nov-2018,176,Buy,Large Cap,871,252,-71 %,39,1,14,17,10,-27,-2,0,profit5 < 0 and 
-Motherson sumi systems,INE775A01035,111,3,108,97,06-Nov-2018,179,Buy,Large Cap,142,184,29 %,24,1,24,23,17,31,1,4,cmp > myavgiv + 29% and 
-Crompton greaves consumer electricals,INE299U01018,111,2,109,98,09-Nov-2018,176,Buy,Mid Cap,232,242,4 %,22,1,63,45,0,0,0,49,pledge > 25 and 
-Balrampur chini mills,INE119A01028,111,2,109,98,02-Jan-2019,122,Buy,Micro Cap,157,769,389 %,13,1,26,17,6,6,2,0,cmp > myavgiv + 389% and 
-Hindustan petroleum corporation,INE094A01015,111,4,107,96,09-Oct-2018,207,Buy,Large Cap,286,350,22 %,40,1,28,21,1,49,0,0,cmp > myavgiv + 22% and 
-Tata chemicals,INE092A01019,111,3,108,97,04-Apr-2018,395,Buy,Mid Cap,557,1522,173 %,28,1,13,12,-7,20,0,0,sales5 < 0 and cmp > myavgiv + 173% and 
-Nlc,INE589A01014,111,2,109,98,26-Oct-2018,190,Buy,Mid Cap,65,169,160 %,102,1,15,17,9,7,1,0,cmp > myavgiv + 160% and 
-Cadila healthcare,INE010B01027,111,2,109,98,03-Jul-2018,305,Buy,Large Cap,304,448,47 %,20,1,27,20,13,22,1,0,cmp > myavgiv + 47% and 
-Future retail,INE752P01024,111,2,109,98,01-Feb-2018,457,Buy,Mid Cap,419,279,-33 %,0,0,17,16,66,0,0,48,dp3 < 6 and pledge > 25 and 
-Quess corp,INE615P01015,111,2,109,98,02-Jan-2019,122,Buy,Mid Cap,677,1282,89 %,0,0,17,14,44,91,0,0,dp3 < 6 and cmp > myavgiv + 89% and 
-Pc jeweller,INE785M01013,111,4,107,96,09-Oct-2018,207,Buy,Mid Cap,110,200,81 %,8,0,17,25,19,14,1,0,cmp > myavgiv + 81% and 
-Mrf,INE883A01011,111,55,56,50,12-Mar-2019,53,Buy,Large Cap,53111,36870,-30 %,2,0,22,28,5,14,1,0,dp3 < 6 and 
-Mahindra cie automotive,INE536H01010,111,1,110,99,28-May-2018,341,Buy,Small Cap,222,550,147 %,0,0,10,12,25,0,0,0,dp3 < 6 and cmp > myavgiv + 147% and 
-Shree cement,INE070A01015,111,18,93,84,12-Mar-2019,53,Buy,Large Cap,19872,17216,-13 %,19,0,18,19,13,8,7,0,peg > 4 and 
-Bharat heavy electricals,INE257A01026,111,4,107,96,02-Jan-2019,122,Buy,Large Cap,69,79,14 %,49,0,1,2,-10,-35,-1,0,roe3 < 4 and roce3 < 4 and sales5 < 0 and profit5 < 0 and cmp > myavgiv + 14% and 
-Allcargo logistics,INE418H01029,111,2,109,98,02-Jan-2019,122,Buy,Small Cap,104,110,5 %,24,0,11,13,9,1,20,0,peg > 4 and 
-Abb,INE117A01022,111,4,107,96,02-Jan-2019,122,Buy,Mid Cap,1493,1950,30 %,22,0,12,16,-3,23,3,0,sales5 < 0 and cmp > myavgiv + 30% and 
-Sun pharmaceutical industries,INE044A01036,111,12,99,89,09-Nov-2018,176,Buy,Large Cap,453,358,-20 %,13,0,15,17,19,-3,-8,11,profit5 < 0 and 
-Godrej agrovet,INE850D01014,111,2,109,98,09-Nov-2018,176,Buy,Mid Cap,519,638,22 %,29,0,21,21,13,18,2,0,cmp > myavgiv + 22% and 
-Blue dart express,INE233B01017,111,7,104,94,09-Nov-2018,176,Buy,Small Cap,3162,6932,119 %,28,0,33,34,5,-6,-11,0,profit5 < 0 and cmp > myavgiv + 119% and 
-Vrl logistics,INE366I01010,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0,cmp > myavgiv + 46% and 
-Tata global beverages,INE192A01025,111,3,108,97,09-Nov-2018,176,Buy,Mid Cap,204,221,8 %,-834,0,5,8,-2,5,6,4,dp3 < 6 and sales5 < 0 and peg > 4 and 
-Cipla,INE059A01026,111,2,109,98,02-Jan-2019,122,Buy,Large Cap,565,588,4 %,15,0,10,10,13,-2,-13,0,profit5 < 0 and 
-Eih,INE230A01023,111,3,108,97,02-Jan-2019,122,Buy,Mid Cap,188,224,19 %,42,0,6,9,2,24,2,0,cmp > myavgiv + 19% and 
-Sheela foam,INE916U01025,111,2,109,98,02-Feb-2018,456,Buy,Small Cap,1350,1345,0 %,0,0,30,37,12,35,1,0,dp3 < 6 and 
-Oil natural gas corporation,INE213A01029,111,4,107,96,09-Nov-2018,176,Buy,Large Cap,183,350,91 %,53,0,10,11,1,-6,-1,0,profit5 < 0 and cmp > myavgiv + 91% and 
-Biocon,INE376G01013,111,1,110,99,24-Aug-2018,253,Buy,Large Cap,551,210,-61 %,15,0,10,10,11,-1,-51,0,profit5 < 0 and 
-Ambuja cements,INE079A01024,111,3,108,97,02-Jan-2019,122,Buy,Large Cap,222,342,54 %,17,0,8,14,23,14,1,0,cmp > myavgiv + 54% and 
-Zee entertainment enterprises,INE256A01028,111,8,103,93,28-Jan-2019,96,Buy,Large Cap,411,532,29 %,19,0,20,25,13,15,2,66,pledge > 25 and cmp > myavgiv + 29% and 
-Acc,INE012A01025,111,5,106,96,09-Nov-2018,176,Buy,Mid Cap,1634,2527,54 %,40,0,11,14,6,7,3,0,cmp > myavgiv + 54% and 
-Emami,INE548C01032,111,4,107,96,19-Feb-2019,74,Buy,Mid Cap,379,355,-6 %,47,0,23,25,8,4,15,6,peg > 4 and 
-Avenue supermarts,INE192R01011,111,3,108,97,09-Nov-2018,176,Buy,Large Cap,1262,1181,-6 %,0,0,19,23,36,53,2,0,dp3 < 6 and 
-Dr reddys laboratories,INE089A01023,111,4,107,96,04-Apr-2018,395,Buy,Large Cap,2907,1558,-46 %,26,0,12,12,4,-10,-3,0,profit5 < 0 and 
-Petronet lng,INE347G01014,222,3,219,99,02-Jan-2019,122,Buy,Large Cap,234,219,-6 %,25,0,21,24,-1,13,1,0,sales5 < 0 and 
--,INE999A01015,111,2,109,98,04-Apr-2018,395,Buy,Micro Cap,668,717,7 %,29,0,11,17,8,4,8,0,peg > 4 and 
-Titan company,INE280A01028,555,5,550,99,02-Jan-2019,122,Buy,Large Cap,1145,615,-46 %,30,0,22,25,10,9,8,0,peg > 4 and 
-Ashok leyland,INE208A01029,111,1,110,99,29-Oct-2018,187,Buy,Large Cap,90,377,318 %,50,0,22,25,16,57,0,7,cmp > myavgiv + 318% and 
-Rallis,INE613A01020,111,2,109,98,04-Apr-2018,395,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0,cmp > myavgiv + 39% and 
-Info edge,INE663F01024,111,3,108,97,03-Jul-2018,305,Buy,Mid Cap,1987,7007,252 %,-64,0,7,11,16,21,5,0,dp3 < 6 and peg > 4 and cmp > myavgiv + 252% and 
-Gillette,INE322A01010,111,5,106,96,12-Jun-2017,691,Buy,Mid Cap,7498,6743,-10 %,101,0,33,50,3,22,5,0,peg > 4 and 
-Gail,INE129A01019,111,3,108,97,22-Apr-2019,12,Buy,Large Cap,345,318,-7 %,43,0,10,14,3,3,5,0,peg > 4 and 
-Havells,INE176B01034,111,3,108,97,03-Jul-2018,305,Buy,Large Cap,770,421,-45 %,43,0,20,27,14,13,5,0,peg > 4 and 
-Coal,INE522F01014,111,10,101,91,27-Nov-2017,523,Buy,Large Cap,252,170,-32 %,133,0,34,51,14,-17,-1,0,profit5 < 0 and 
-Cummins,INE298A01020,111,3,108,97,09-Nov-2018,176,Buy,Mid Cap,715,747,4 %,54,0,20,25,2,0,296,0,peg > 4 and 
-Asian paints,INE021A01026,111,9,102,92,09-Nov-2018,176,Buy,Large Cap,1439,1088,-24 %,44,0,28,40,10,13,5,12,peg > 4 and 
-Akzo nobel,INE133A01011,111,4,107,96,03-Jul-2018,305,Buy,Small Cap,1666,2511,50 %,73,0,24,31,5,27,1,0,cmp > myavgiv + 50% and 
-Bata,INE176A01028,111,4,107,96,09-Nov-2018,176,Buy,Small Cap,1442,649,-54 %,24,0,15,23,7,5,12,0,peg > 4 and 
-Amara raja batteries,INE885A01032,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,659,736,11 %,15,0,20,29,15,10,2,0,cmp > myavgiv + 11% and 
-Procter gamble hygiene health care,INE179A01014,111,8,103,93,09-Jun-2017,694,Buy,Large Cap,10349,6888,-33 %,118,0,39,60,8,13,7,0,peg > 4 and 
-Ttk prestige,INE690A01010,111,6,105,95,18-Jul-2017,655,Buy,Small Cap,8063,8397,4 %,21,0,18,24,6,4,13,0,peg > 4 and 
-Nmdc,INE584A01023,111,3,108,97,02-Jan-2019,122,Buy,Large Cap,100,150,50 %,86,0,11,18,2,-10,-1,0,profit5 < 0 and cmp > myavgiv + 50% and 
-Bharat dynamics,INE171Z01018,111,1,110,99,17-Sep-2018,229,Buy,Small Cap,278,397,42 %,30,0,28,41,0,0,0,0,cmp > myavgiv + 42% and 
-Bosch,INE323A01026,111,23,88,79,12-Mar-2019,53,Buy,Large Cap,18023,20306,12 %,23,0,17,24,6,9,3,0,cmp > myavgiv + 12% and 
-Crisil,INE007A01025,111,4,107,96,04-Apr-2018,395,Buy,Mid Cap,1442,2604,80 %,64,0,31,44,10,7,4,0,cmp > myavgiv + 80% and 
-Bse,INE118H01025,111,4,107,96,08-Oct-2018,208,Buy,Small Cap,634,1970,210 %,52,0,14,16,5,30,1,0,cmp > myavgiv + 210% and 
-3m,INE470A01017,111,23,88,79,12-Mar-2019,53,Buy,Mid Cap,22844,20330,-11 %,0,0,22,34,10,43,2,0,dp3 < 6 and 
-Hindustan unilever,INE030A01027,111,4,107,96,05-Dec-2018,150,Buy,Large Cap,1694,1045,-38 %,83,0,76,108,6,11,6,0,peg > 4 and 
-Wabco,INE342J01019,111,7,104,94,07-Sep-2018,239,Buy,Mid Cap,6313,7435,17 %,6,0,18,26,22,15,3,0,cmp > myavgiv + 17% and 
-Godfrey phillips,INE260B01028,111,1,110,99,29-Jun-2018,309,Buy,Small Cap,1065,805,-24 %,27,0,9,13,2,-1,-37,0,profit5 < 0 and 
-Engineers,INE510A01028,111,2,109,98,03-Jul-2018,305,Buy,Mid Cap,110,126,14 %,59,0,12,19,-7,-9,-2,0,sales5 < 0 and profit5 < 0 and cmp > myavgiv + 14% and 
-Eicher motors,INE066A01013,111,24,87,78,12-Mar-2019,53,Buy,Large Cap,20352,31106,52 %,17,0,36,53,7,45,1,0,cmp > myavgiv + 52% and 
-Hero motocorp,INE158A01026,111,7,104,94,03-Jul-2018,305,Buy,Large Cap,2565,3801,48 %,49,0,35,49,6,13,1,0,cmp > myavgiv + 48% and 
-Glaxosmithkline pharmaceuticals,INE159A01016,111,3,108,97,21-Sep-2018,225,Buy,Mid Cap,1284,1506,17 %,91,0,16,25,2,-13,-4,0,profit5 < 0 and cmp > myavgiv + 17% and 
-National aluminium co,INE139A01034,111,4,107,96,09-Nov-2018,176,Buy,Mid Cap,52,95,82 %,76,0,6,10,7,5,1,0,cmp > myavgiv + 82% and 
-Pfizer,INE182A01018,111,3,108,97,19-Sep-2017,592,Buy,Mid Cap,3128,4745,51 %,25,0,13,20,13,12,3,0,cmp > myavgiv + 51% and 
-Kaveri seed company,INE455I01029,111,2,109,98,02-Jan-2019,122,Buy,Small Cap,449,728,62 %,6,0,18,19,2,10,1,0,cmp > myavgiv + 62% and 
-Castrol,INE172A01027,111,3,108,97,09-Nov-2018,176,Buy,Mid Cap,150,255,70 %,84,0,71,111,4,8,3,0,cmp > myavgiv + 70% and 
-Bharat electronics,INE263A01024,111,8,103,93,18-Apr-2019,16,Buy,Large Cap,88,110,25 %,33,0,17,24,11,10,1,0,cmp > myavgiv + 25% and 
-Container corporation,INE111A01025,111,4,107,96,18-Feb-2019,75,Buy,Large Cap,505,422,-16 %,35,0,11,15,7,2,12,0,peg > 4 and 
-Mahindra holidays resorts,INE998I01010,111,3,108,97,02-Jan-2019,122,Buy,Small Cap,239,277,15 %,37,0,19,30,9,5,8,0,peg > 4 and cmp > myavgiv + 15% and 
+Bankbaroda,INE028A01039,3,1,2,67,18-Sep-2018,228,Buy,Large Cap,119,0,0 %,7,15,-5,4,4,0,0,0,d2e > 2 and roe3 < 4 and myavgiv eq 0 and 
+Sbi life insurance company,INE123W01016,3,3,0,0,09-Nov-2018,176,Buy,Large Cap,310,0,0 %,292,15,1,5,6,0,0,0,d2e > 2 and roe3 < 4 and myavgiv eq 0 and 
+Axis bank,INE238A01034,3,2,1,33,04-Apr-2018,395,Buy,Large Cap,757,110,-85 %,15,10,8,6,11,-40,-12,0,d2e > 2 and profit5 < 0 and 
+Idea cellular,INE669E01016,3,5,-2,-67,25-Mar-2019,40,Buy,Large Cap,16,0,0 %,3,2,-3,4,5,0,0,0,dp3 < 6 and roe3 < 4 and myavgiv eq 0 and 
+Lic housing finance,INE115A01026,3,3,0,0,04-Dec-2018,151,Buy,Mid Cap,484,528,9 %,17,11,18,10,15,14,1,0,d2e > 2 and 
+Dewan housing finance corporation,INE202B01012,3,2,1,33,04-Feb-2019,89,Buy,Mid Cap,141,289,104 %,17,11,17,10,21,21,0,0,d2e > 2 and cmp > myavgiv + 104% and 
+Icici bank,INE090A01021,3,6,-3,-100,04-Dec-2018,151,Buy,Large Cap,402,187,-53 %,18,8,10,6,7,-4,-10,0,d2e > 2 and profit5 < 0 and 
+Indusind bank,INE095A01012,3,2,1,33,23-Aug-2018,254,Buy,Large Cap,1557,1514,-2 %,12,8,16,8,20,28,1,0,d2e > 2 and 
+Kotak mahindra bank,INE237A01028,3,2,1,33,04-Apr-2018,395,Buy,Large Cap,1418,984,-30 %,2,5,13,8,18,23,2,0,dp3 < 6 and d2e > 2 and 
+Hdfc bank,INE040A01026,15,18,-3,-20,04-Dec-2018,151,Buy,Large Cap,2368,1654,-30 %,19,9,18,8,18,21,1,0,d2e > 2 and 
+Cholamandalam investment finance company,INE121A01016,3,1,2,67,24-Aug-2018,253,Buy,Mid Cap,1317,1118,-15 %,12,6,19,12,16,26,1,0,d2e > 2 and 
+Indiabulls housing finance,INE148I01020,3,2,1,33,04-Dec-2018,151,Buy,Large Cap,706,1013,43 %,55,8,28,12,25,25,0,13,d2e > 2 and cmp > myavgiv + 43% and 
+L&t finance holdings,INE498L01015,3,1,2,67,28-May-2018,341,Buy,Large Cap,127,136,7 %,15,5,12,9,21,20,1,0,d2e > 2 and 
+Shriram transport finance co,INE721A01013,3,2,1,33,09-Nov-2018,176,Buy,Large Cap,1080,1191,10 %,14,5,12,11,13,2,8,0,d2e > 2 and peg > 4 and cmp > myavgiv + 10% and 
+Iifl holdings,INE530B01024,3,1,2,67,07-Sep-2018,239,Buy,Mid Cap,424,406,-4 %,22,7,18,12,8,27,1,0,d2e > 2 and 
+Power finance corporation,INE134E01011,3,3,0,0,09-Nov-2018,176,Buy,Mid Cap,114,158,38 %,42,6,13,10,9,6,1,0,d2e > 2 and cmp > myavgiv + 38% and 
+Housing development finance corporation,INE001A01036,3,13,-10,-333,04-Dec-2018,151,Buy,Large Cap,2006,2132,6 %,35,5,20,11,11,14,3,0,d2e > 2 and 
+Basf,INE373A01013,3,3,0,0,04-Apr-2018,395,Buy,Small Cap,1352,1634,20 %,-13,1,-3,4,7,1,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 20% and 
+Shipping corporation,INE109A01011,3,3,0,0,18-Apr-2019,16,Buy,Small Cap,34,70,105 %,0,1,6,4,-4,0,0,0,dp3 < 6 and sales5 < 0 and cmp > myavgiv + 105% and 
+Thyrocare technologies,INE594H01019,3,1,2,67,12-Mar-2019,53,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Ti financial holdings,INE149A01033,3,3,0,0,03-Jul-2018,305,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Supreme industries,INE195A01028,3,2,1,33,04-Apr-2018,395,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Ifb industries,INE559A01017,3,2,1,33,09-Nov-2018,176,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Rural electrification corporation,INE020B01018,3,6,-3,-100,09-Nov-2018,176,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Delta corp,INE124G01033,3,1,2,67,18-Apr-2019,16,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Network18 media investments,INE870H01013,3,1,2,67,13-Mar-2019,52,Buy,Small Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Oil,INE274J01014,3,2,1,33,06-Apr-2018,393,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Inox leisure,INE312H01016,3,1,2,67,13-Mar-2019,52,Buy,Micro Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+State bank,INE062A01020,3,3,0,0,09-Nov-2018,176,Buy,Large Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Hatsun agro product,INE473B01035,3,1,2,67,05-Sep-2018,241,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and 
+Shree renuka sugars,INE087H01022,3,1,2,67,28-Jun-2018,310,Buy,Micro Cap,11,0,0 %,0,0,-25,-3,-2,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and sales5 < 0 and myavgiv eq 0 and 
+Coffee day enterprises,INE335K01011,3,2,1,33,04-Apr-2018,395,Buy,Small Cap,261,409,56 %,0,2,1,7,8,0,0,72,dp3 < 6 and roe3 < 4 and pledge > 25 and cmp > myavgiv + 56% and 
+Aditya birla fashion retail,INE647O01011,3,2,1,33,04-Apr-2018,395,Buy,Mid Cap,207,246,18 %,0,2,2,8,41,0,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 18% and 
+Bajaj finserv,INE918I01018,3,6,-3,-100,19-Sep-2017,592,Buy,Large Cap,7624,2949,-61 %,1,3,15,15,31,12,3,0,dp3 < 6 and d2e > 2 and 
+Adani transmission,INE931S01010,3,1,2,67,26-Jul-2018,282,Buy,Mid Cap,216,159,-26 %,0,2,23,15,0,0,0,52,dp3 < 6 and pledge > 25 and 
+Tata power co,INE245A01021,3,2,1,33,04-Apr-2018,395,Buy,Mid Cap,67,620,825 %,36,3,5,7,-2,0,0,4,d2e > 2 and sales5 < 0 and cmp > myavgiv + 825% and 
+Bajaj finance,INE296A01024,3,3,0,0,24-Aug-2018,253,Buy,Large Cap,3112,1139,-63 %,10,4,21,13,34,35,1,0,d2e > 2 and 
+Jubilant foodworks,INE797F01012,3,3,0,0,03-Jul-2018,305,Buy,Mid Cap,1326,1193,-10 %,19,0,16,23,16,9,6,13,peg > 4 and 
+Housing urban development corporation,INE031A01017,3,2,1,33,03-Jul-2018,305,Buy,Mid Cap,41,550,1241 %,13,4,9,9,7,3,2,0,d2e > 2 and cmp > myavgiv + 1241% and 
+Jk tyre industries,INE573A01042,3,3,0,0,05-Feb-2019,88,Buy,Small Cap,86,39,-54 %,26,3,15,12,4,-33,0,29,d2e > 2 and profit5 < 0 and pledge > 25 and 
+General insurance corporation,INE481Y01014,3,3,0,0,04-Dec-2018,151,Buy,Large Cap,241,367,52 %,30,0,5,5,0,0,0,0,cmp > myavgiv + 52% and 
+Icici prudential life insurance company,INE726G01019,3,3,0,0,04-Dec-2018,151,Buy,Large Cap,372,380,2 %,65,0,28,30,14,1,27,0,peg > 4 and 
+Godrej industries,INE233A01035,3,2,1,33,09-Nov-2018,176,Buy,Mid Cap,507,577,13 %,24,2,6,8,6,-2,-17,0,profit5 < 0 and cmp > myavgiv + 13% and 
+Prestige estates projects,INE811K01011,3,2,1,33,03-Jul-2018,305,Buy,Mid Cap,265,236,-10 %,12,2,9,10,23,5,6,0,peg > 4 and 
+Central depository services,INE736A01011,3,2,1,33,03-Jul-2018,305,Buy,Small Cap,232,283,21 %,34,0,17,23,13,15,1,0,cmp > myavgiv + 21% and 
+Care ratings,INE752H01013,3,3,0,0,01-Feb-2018,457,Buy,Small Cap,984,1543,56 %,75,0,30,44,10,9,2,0,cmp > myavgiv + 56% and 
+Mahindra mahindra financial services,INE774D01024,3,2,1,33,04-Dec-2018,151,Buy,Mid Cap,402,345,-14 %,32,4,10,10,13,1,25,0,d2e > 2 and peg > 4 and 
+Bharti infratel,INE121J01017,3,2,1,33,09-Nov-2018,176,Buy,Large Cap,274,479,74 %,79,0,14,18,-8,22,1,0,sales5 < 0 and cmp > myavgiv + 74% and 
+Colgate palmolive,INE259A01022,3,2,1,33,04-Apr-2018,395,Buy,Large Cap,1171,1096,-6 %,64,0,54,79,6,6,7,0,peg > 4 and 
+Manappuram finance,INE522D01027,3,2,1,33,22-Apr-2019,12,Buy,Small Cap,118,79,-33 %,32,3,19,14,83,87,0,5,d2e > 2 and 
+Bharti airtel,INE397D01024,3,11,-8,-267,09-Nov-2018,176,Buy,Large Cap,331,144,-56 %,71,2,6,10,2,-8,0,0,profit5 < 0 and 
+Muthoot finance,INE414G01012,3,3,0,0,04-Dec-2018,151,Buy,Mid Cap,600,417,-30 %,24,3,20,16,3,11,1,0,d2e > 2 and 
+Tata elxsi,INE670A01012,3,3,0,0,29-Oct-2018,187,Buy,Small Cap,874,1158,32 %,28,0,39,60,18,51,0,0,cmp > myavgiv + 32% and 
+Piramal enterprises,INE140A01024,3,5,-2,-67,04-Apr-2018,395,Buy,Large Cap,2317,4259,83 %,24,2,16,9,25,0,0,0,cmp > myavgiv + 83% and 
+Future consumer,INE220J01025,3,2,1,33,22-Apr-2019,12,Buy,Mid Cap,43,0,0 %,0,1,-10,0,27,-13,0,61,dp3 < 6 and roe3 < 4 and roce3 < 4 and profit5 < 0 and pledge > 25 and myavgiv eq 0 and 
+Narayana hrudayalaya,INE410P01011,3,3,0,0,02-Jan-2019,122,Buy,Small Cap,198,388,95 %,0,1,6,10,22,34,4,0,dp3 < 6 and cmp > myavgiv + 95% and 
+Eveready industries,INE128A01029,3,3,0,0,09-Nov-2018,176,Buy,Micro Cap,109,230,111 %,14,1,22,22,7,56,0,50,pledge > 25 and cmp > myavgiv + 111% and 
+Jain irrigation systems,INE175A01038,3,2,1,33,09-Nov-2018,176,Buy,Small Cap,52,887,1605 %,31,1,4,9,10,0,0,48,pledge > 25 and cmp > myavgiv + 1605% and 
+Dlf,INE271C01023,3,9,-6,-200,02-Jan-2018,487,Buy,Large Cap,178,1242,597 %,58,1,1,7,-3,-2,-21,0,roe3 < 4 and sales5 < 0 and profit5 < 0 and cmp > myavgiv + 597% and 
+Hsil,INE415A01038,3,2,1,33,04-Apr-2018,395,Buy,Micro Cap,259,230,-11 %,31,1,7,8,8,-2,-21,0,profit5 < 0 and 
+Dish tv,INE836F01026,3,4,-1,-33,28-Jan-2019,96,Buy,Mid Cap,36,0,0 %,0,0,18,13,16,-12,-2,95,dp3 < 6 and profit5 < 0 and pledge > 25 and myavgiv eq 0 and 
+Thomas cook,INE332A01027,3,2,1,33,01-Feb-2018,457,Buy,Small Cap,247,10975,4343 %,5,0,-16,63,92,159,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 4343% and 
+Shoppers stop,INE498B01024,3,2,1,33,01-Feb-2018,457,Buy,Small Cap,459,12538,2631 %,82,0,2,5,4,0,0,13,roe3 < 4 and cmp > myavgiv + 2631% and 
+Tata steel,INE081A01012,3,6,-3,-100,03-Jul-2018,305,Buy,Large Cap,548,925,68 %,-72,2,0,7,0,0,0,4,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 68% and 
+Chambal fertilizers chemicals,INE085A01013,3,2,1,33,09-Nov-2018,176,Buy,Small Cap,155,109,-29 %,-225,2,14,11,0,11,1,1,dp3 < 6 and 
+Mahindra mahindra,INE101A01026,3,6,-3,-100,05-Dec-2018,150,Buy,Large Cap,646,1038,60 %,18,2,14,13,6,9,2,3,cmp > myavgiv + 60% and 
+Eid parry,INE126A01031,3,3,0,0,02-Jan-2019,122,Buy,Small Cap,192,530,176 %,11,2,11,16,6,8,25,0,peg > 4 and cmp > myavgiv + 176% and 
+Hindalco industries,INE038A01020,3,3,0,0,03-Jul-2018,305,Buy,Large Cap,205,456,122 %,-22,1,5,7,8,12,1,0,dp3 < 6 and cmp > myavgiv + 122% and 
+Zee learn,INE565L01011,3,4,-1,-33,28-Jan-2019,96,Buy,Nano Cap,26,96,269 %,5,1,12,10,22,0,0,83,dp3 < 6 and pledge > 25 and cmp > myavgiv + 269% and 
+Rajesh exports,INE343B01030,3,4,-1,-33,09-Oct-2018,207,Buy,Mid Cap,673,522,-22 %,3,1,24,17,43,23,1,0,dp3 < 6 and 
+United spirits,INE854D01024,3,14,-11,-367,05-Dec-2018,150,Buy,Large Cap,531,1244,134 %,0,1,15,13,0,7,8,3,dp3 < 6 and peg > 4 and cmp > myavgiv + 134% and 
+Jsw steel,INE019A01038,3,3,0,0,09-Nov-2018,176,Buy,Large Cap,309,623,101 %,-11,1,18,13,13,42,0,46,dp3 < 6 and pledge > 25 and cmp > myavgiv + 101% and 
+Indian hotels co,INE053A01029,3,11,-8,-267,09-Nov-2018,176,Buy,Mid Cap,153,47,-69 %,-7,1,-3,6,2,0,0,0,dp3 < 6 and roe3 < 4 and 
+Greenply industries,INE461C01038,3,1,2,67,28-Jun-2018,310,Buy,Small Cap,158,190,20 %,5,1,20,19,-3,4,5,0,dp3 < 6 and sales5 < 0 and peg > 4 and cmp > myavgiv + 20% and 
+Ultratech cement,INE481G01011,15,16,-1,-7,05-Dec-2018,150,Buy,Large Cap,4566,2840,-37 %,11,1,11,13,9,-1,-48,0,profit5 < 0 and 
+Glenmark pharmaceuticals,INE935A01035,3,2,1,33,03-Jul-2018,305,Buy,Mid Cap,633,1075,69 %,7,1,23,18,13,5,4,0,cmp > myavgiv + 69% and 
+Apollo hospitals enterprise,INE437A01024,3,8,-5,-167,09-Nov-2018,176,Buy,Mid Cap,1199,875,-27 %,28,1,8,10,17,-5,-12,78,profit5 < 0 and pledge > 25 and 
+Adani ports special economic zone,INE742F01042,3,2,1,33,03-Jul-2018,305,Buy,Large Cap,387,367,-5 %,9,1,23,15,26,19,1,42,pledge > 25 and 
+Varun beverages,INE200M01013,3,3,0,0,02-Jan-2019,122,Buy,Mid Cap,905,1441,59 %,12,1,12,14,19,0,0,0,cmp > myavgiv + 59% and 
+Tube investments,INE974X01010,3,2,1,33,02-Jan-2019,122,Buy,Small Cap,374,222,-40 %,0,1,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and 
+Asahi glass,INE439A01020,3,5,-2,-67,05-Dec-2018,150,Buy,Small Cap,235,380,61 %,18,1,21,18,6,0,0,5,cmp > myavgiv + 61% and 
+Century plyboards,INE348B01021,3,3,0,0,02-Jan-2019,122,Buy,Small Cap,169,200,18 %,13,1,28,22,12,25,1,0,cmp > myavgiv + 18% and 
+Vedanta,INE205A01025,3,7,-4,-133,04-Feb-2019,89,Buy,Large Cap,168,245,45 %,50,1,0,4,102,27,0,0,roe3 < 4 and cmp > myavgiv + 45% and 
+Tata coffee,INE493A01027,3,3,0,0,09-Nov-2018,176,Buy,Micro Cap,87,112,28 %,26,1,11,14,-2,-3,-8,0,sales5 < 0 and profit5 < 0 and cmp > myavgiv + 28% and 
+Indian oil corporation,INE242A01010,3,3,0,0,02-Jan-2019,122,Buy,Large Cap,156,259,66 %,54,1,19,19,-2,38,0,0,sales5 < 0 and cmp > myavgiv + 66% and 
+Ntpc,INE733E01010,3,8,-5,-167,28-Mar-2019,37,Buy,Large Cap,135,119,-11 %,36,1,11,8,5,-2,-7,0,profit5 < 0 and 
+Nhpc,INE848E01016,3,2,1,33,09-Nov-2018,176,Buy,Mid Cap,24,113,370 %,69,1,9,9,6,5,2,0,cmp > myavgiv + 370% and 
+Motherson sumi systems,INE775A01035,3,3,0,0,06-Nov-2018,179,Buy,Large Cap,142,184,29 %,24,1,24,23,17,31,1,4,cmp > myavgiv + 29% and 
+Crompton greaves consumer electricals,INE299U01018,3,2,1,33,09-Nov-2018,176,Buy,Mid Cap,232,242,4 %,22,1,63,45,0,0,0,49,pledge > 25 and 
+Heidelbergcement,INE578A01017,3,1,2,67,26-Oct-2018,190,Buy,Small Cap,182,224,23 %,34,1,9,12,16,42,0,0,cmp > myavgiv + 23% and 
+Balrampur chini mills,INE119A01028,3,2,1,33,02-Jan-2019,122,Buy,Micro Cap,157,769,389 %,13,1,26,17,6,6,2,0,cmp > myavgiv + 389% and 
+Hindustan petroleum corporation,INE094A01015,3,4,-1,-33,09-Oct-2018,207,Buy,Large Cap,286,350,22 %,40,1,28,21,1,49,0,0,cmp > myavgiv + 22% and 
+Tata chemicals,INE092A01019,3,3,0,0,04-Apr-2018,395,Buy,Mid Cap,557,1522,173 %,28,1,13,12,-7,20,0,0,sales5 < 0 and cmp > myavgiv + 173% and 
+Nlc,INE589A01014,3,2,1,33,26-Oct-2018,190,Buy,Mid Cap,65,169,160 %,102,1,15,17,9,7,1,0,cmp > myavgiv + 160% and 
+Cadila healthcare,INE010B01027,3,2,1,33,03-Jul-2018,305,Buy,Large Cap,304,448,47 %,20,1,27,20,13,22,1,0,cmp > myavgiv + 47% and 
+Future retail,INE752P01024,3,2,1,33,01-Feb-2018,457,Buy,Mid Cap,419,279,-33 %,0,0,17,16,66,0,0,48,dp3 < 6 and pledge > 25 and 
+Quess corp,INE615P01015,3,2,1,33,02-Jan-2019,122,Buy,Mid Cap,677,1282,89 %,0,0,17,14,44,91,0,0,dp3 < 6 and cmp > myavgiv + 89% and 
+Pc jeweller,INE785M01013,3,4,-1,-33,09-Oct-2018,207,Buy,Mid Cap,110,200,81 %,8,0,17,25,19,14,1,0,cmp > myavgiv + 81% and 
+Mrf,INE883A01011,3,55,-52,-1733,12-Mar-2019,53,Buy,Large Cap,53111,36870,-30 %,2,0,22,28,5,14,1,0,dp3 < 6 and 
+Mahindra cie automotive,INE536H01010,3,1,2,67,28-May-2018,341,Buy,Small Cap,222,550,147 %,0,0,10,12,25,0,0,0,dp3 < 6 and cmp > myavgiv + 147% and 
+Shree cement,INE070A01015,3,18,-15,-500,12-Mar-2019,53,Buy,Large Cap,19872,17216,-13 %,19,0,18,19,13,8,7,0,peg > 4 and 
+Bharat heavy electricals,INE257A01026,3,4,-1,-33,02-Jan-2019,122,Buy,Large Cap,69,79,14 %,49,0,1,2,-10,-35,-1,0,roe3 < 4 and roce3 < 4 and sales5 < 0 and profit5 < 0 and cmp > myavgiv + 14% and 
+Allcargo logistics,INE418H01029,3,2,1,33,02-Jan-2019,122,Buy,Small Cap,104,110,5 %,24,0,11,13,9,1,20,0,peg > 4 and 
+Abb,INE117A01022,3,4,-1,-33,02-Jan-2019,122,Buy,Mid Cap,1493,1950,30 %,22,0,12,16,-3,23,3,0,sales5 < 0 and cmp > myavgiv + 30% and 
+Sun pharmaceutical industries,INE044A01036,3,12,-9,-300,09-Nov-2018,176,Buy,Large Cap,453,358,-20 %,13,0,15,17,19,-3,-8,11,profit5 < 0 and 
+Godrej agrovet,INE850D01014,3,2,1,33,09-Nov-2018,176,Buy,Mid Cap,519,638,22 %,29,0,21,21,13,18,2,0,cmp > myavgiv + 22% and 
+Blue dart express,INE233B01017,3,7,-4,-133,09-Nov-2018,176,Buy,Small Cap,3162,6932,119 %,28,0,33,34,5,-6,-11,0,profit5 < 0 and cmp > myavgiv + 119% and 
+Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,457,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0,cmp > myavgiv + 46% and 
+Tata global beverages,INE192A01025,3,3,0,0,09-Nov-2018,176,Buy,Mid Cap,204,221,8 %,-834,0,5,8,-2,5,6,4,dp3 < 6 and sales5 < 0 and peg > 4 and 
+Cipla,INE059A01026,3,2,1,33,02-Jan-2019,122,Buy,Large Cap,565,588,4 %,15,0,10,10,13,-2,-13,0,profit5 < 0 and 
+Eih,INE230A01023,3,3,0,0,02-Jan-2019,122,Buy,Mid Cap,188,224,19 %,42,0,6,9,2,24,2,0,cmp > myavgiv + 19% and 
+Sheela foam,INE916U01025,3,2,1,33,02-Feb-2018,456,Buy,Small Cap,1350,1345,0 %,0,0,30,37,12,35,1,0,dp3 < 6 and 
+Oil natural gas corporation,INE213A01029,3,4,-1,-33,09-Nov-2018,176,Buy,Large Cap,183,350,91 %,53,0,10,11,1,-6,-1,0,profit5 < 0 and cmp > myavgiv + 91% and 
+Biocon,INE376G01013,3,1,2,67,24-Aug-2018,253,Buy,Large Cap,551,210,-61 %,15,0,10,10,11,-1,-51,0,profit5 < 0 and 
+Ambuja cements,INE079A01024,3,3,0,0,02-Jan-2019,122,Buy,Large Cap,222,342,54 %,17,0,8,14,23,14,1,0,cmp > myavgiv + 54% and 
+Zee entertainment enterprises,INE256A01028,3,8,-5,-167,28-Jan-2019,96,Buy,Large Cap,411,532,29 %,19,0,20,25,13,15,2,66,pledge > 25 and cmp > myavgiv + 29% and 
+Acc,INE012A01025,3,5,-2,-67,09-Nov-2018,176,Buy,Mid Cap,1634,2527,54 %,40,0,11,14,6,7,3,0,cmp > myavgiv + 54% and 
+Emami,INE548C01032,3,4,-1,-33,19-Feb-2019,74,Buy,Mid Cap,379,355,-6 %,47,0,23,25,8,4,15,6,peg > 4 and 
+Avenue supermarts,INE192R01011,3,3,0,0,09-Nov-2018,176,Buy,Large Cap,1262,1181,-6 %,0,0,19,23,36,53,2,0,dp3 < 6 and 
+Dr reddys laboratories,INE089A01023,3,4,-1,-33,04-Apr-2018,395,Buy,Large Cap,2907,1558,-46 %,26,0,12,12,4,-10,-3,0,profit5 < 0 and 
+Petronet lng,INE347G01014,6,3,3,50,02-Jan-2019,122,Buy,Large Cap,234,219,-6 %,25,0,21,24,-1,13,1,0,sales5 < 0 and 
+-,INE999A01015,3,2,1,33,04-Apr-2018,395,Buy,Micro Cap,668,717,7 %,29,0,11,17,8,4,8,0,peg > 4 and 
+Titan company,INE280A01028,15,5,10,67,02-Jan-2019,122,Buy,Large Cap,1145,615,-46 %,30,0,22,25,10,9,8,0,peg > 4 and 
+Ashok leyland,INE208A01029,3,1,2,67,29-Oct-2018,187,Buy,Large Cap,90,377,318 %,50,0,22,25,16,57,0,7,cmp > myavgiv + 318% and 
+Rallis,INE613A01020,3,2,1,33,04-Apr-2018,395,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0,cmp > myavgiv + 39% and 
+Info edge,INE663F01024,3,3,0,0,03-Jul-2018,305,Buy,Mid Cap,1987,7007,252 %,-64,0,7,11,16,21,5,0,dp3 < 6 and peg > 4 and cmp > myavgiv + 252% and 
+Gillette,INE322A01010,3,5,-2,-67,12-Jun-2017,691,Buy,Mid Cap,7498,6743,-10 %,101,0,33,50,3,22,5,0,peg > 4 and 
+Gail,INE129A01019,3,3,0,0,22-Apr-2019,12,Buy,Large Cap,345,318,-7 %,43,0,10,14,3,3,5,0,peg > 4 and 
+Havells,INE176B01034,3,3,0,0,03-Jul-2018,305,Buy,Large Cap,770,421,-45 %,43,0,20,27,14,13,5,0,peg > 4 and 
+Coal,INE522F01014,3,10,-7,-233,27-Nov-2017,523,Buy,Large Cap,252,170,-32 %,133,0,34,51,14,-17,-1,0,profit5 < 0 and 
+Cummins,INE298A01020,3,3,0,0,09-Nov-2018,176,Buy,Mid Cap,715,747,4 %,54,0,20,25,2,0,296,0,peg > 4 and 
+Asian paints,INE021A01026,3,9,-6,-200,09-Nov-2018,176,Buy,Large Cap,1439,1088,-24 %,44,0,28,40,10,13,5,12,peg > 4 and 
+Akzo nobel,INE133A01011,3,4,-1,-33,03-Jul-2018,305,Buy,Small Cap,1666,2511,50 %,73,0,24,31,5,27,1,0,cmp > myavgiv + 50% and 
+Bata,INE176A01028,3,4,-1,-33,09-Nov-2018,176,Buy,Small Cap,1442,649,-54 %,24,0,15,23,7,5,12,0,peg > 4 and 
+Amara raja batteries,INE885A01032,3,2,1,33,03-Jul-2018,305,Buy,Mid Cap,659,736,11 %,15,0,20,29,15,10,2,0,cmp > myavgiv + 11% and 
+Procter gamble hygiene health care,INE179A01014,3,8,-5,-167,09-Jun-2017,694,Buy,Large Cap,10349,6888,-33 %,118,0,39,60,8,13,7,0,peg > 4 and 
+Ttk prestige,INE690A01010,3,6,-3,-100,18-Jul-2017,655,Buy,Small Cap,8063,8397,4 %,21,0,18,24,6,4,13,0,peg > 4 and 
+Nmdc,INE584A01023,3,3,0,0,02-Jan-2019,122,Buy,Large Cap,100,150,50 %,86,0,11,18,2,-10,-1,0,profit5 < 0 and cmp > myavgiv + 50% and 
+Bharat dynamics,INE171Z01018,3,1,2,67,17-Sep-2018,229,Buy,Small Cap,278,397,42 %,30,0,28,41,0,0,0,0,cmp > myavgiv + 42% and 
+Bosch,INE323A01026,3,23,-20,-667,12-Mar-2019,53,Buy,Large Cap,18023,20306,12 %,23,0,17,24,6,9,3,0,cmp > myavgiv + 12% and 
+Crisil,INE007A01025,3,4,-1,-33,04-Apr-2018,395,Buy,Mid Cap,1442,2604,80 %,64,0,31,44,10,7,4,0,cmp > myavgiv + 80% and 
+Bse,INE118H01025,3,4,-1,-33,08-Oct-2018,208,Buy,Small Cap,634,1970,210 %,52,0,14,16,5,30,1,0,cmp > myavgiv + 210% and 
+3m,INE470A01017,3,23,-20,-667,12-Mar-2019,53,Buy,Mid Cap,22844,20330,-11 %,0,0,22,34,10,43,2,0,dp3 < 6 and 
+Hindustan unilever,INE030A01027,3,4,-1,-33,05-Dec-2018,150,Buy,Large Cap,1694,1045,-38 %,83,0,76,108,6,11,6,0,peg > 4 and 
+Wabco,INE342J01019,3,7,-4,-133,07-Sep-2018,239,Buy,Mid Cap,6313,7435,17 %,6,0,18,26,22,15,3,0,cmp > myavgiv + 17% and 
+Godfrey phillips,INE260B01028,3,1,2,67,29-Jun-2018,309,Buy,Small Cap,1065,805,-24 %,27,0,9,13,2,-1,-37,0,profit5 < 0 and 
+Indraprastha gas,INE203G01027,3,1,2,67,07-Sep-2018,239,Buy,Mid Cap,309,696,125 %,15,0,20,30,6,13,2,0,cmp > myavgiv + 125% and 
+Engineers,INE510A01028,3,2,1,33,03-Jul-2018,305,Buy,Mid Cap,110,126,14 %,59,0,12,19,-7,-9,-2,0,sales5 < 0 and profit5 < 0 and cmp > myavgiv + 14% and 
+Eicher motors,INE066A01013,3,24,-21,-700,12-Mar-2019,53,Buy,Large Cap,20352,31106,52 %,17,0,36,53,7,45,1,0,cmp > myavgiv + 52% and 
+Hero motocorp,INE158A01026,3,7,-4,-133,03-Jul-2018,305,Buy,Large Cap,2565,3801,48 %,49,0,35,49,6,13,1,0,cmp > myavgiv + 48% and 
+Glaxosmithkline pharmaceuticals,INE159A01016,3,3,0,0,21-Sep-2018,225,Buy,Mid Cap,1284,1506,17 %,91,0,16,25,2,-13,-4,0,profit5 < 0 and cmp > myavgiv + 17% and 
+National aluminium co,INE139A01034,3,4,-1,-33,09-Nov-2018,176,Buy,Mid Cap,52,95,82 %,76,0,6,10,7,5,1,0,cmp > myavgiv + 82% and 
+Pfizer,INE182A01018,3,3,0,0,19-Sep-2017,592,Buy,Mid Cap,3128,4745,51 %,25,0,13,20,13,12,3,0,cmp > myavgiv + 51% and 
+Kaveri seed company,INE455I01029,3,2,1,33,02-Jan-2019,122,Buy,Small Cap,449,728,62 %,6,0,18,19,2,10,1,0,cmp > myavgiv + 62% and 
+Castrol,INE172A01027,3,3,0,0,09-Nov-2018,176,Buy,Mid Cap,150,255,70 %,84,0,71,111,4,8,3,0,cmp > myavgiv + 70% and 
+Bharat electronics,INE263A01024,3,8,-5,-167,18-Apr-2019,16,Buy,Large Cap,88,110,25 %,33,0,17,24,11,10,1,0,cmp > myavgiv + 25% and 
+Container corporation,INE111A01025,3,4,-1,-33,18-Feb-2019,75,Buy,Large Cap,505,422,-16 %,35,0,11,15,7,2,12,0,peg > 4 and 
+Mahindra holidays resorts,INE998I01010,3,3,0,0,02-Jan-2019,122,Buy,Small Cap,239,277,15 %,37,0,19,30,9,5,8,0,peg > 4 and cmp > myavgiv + 15% and 

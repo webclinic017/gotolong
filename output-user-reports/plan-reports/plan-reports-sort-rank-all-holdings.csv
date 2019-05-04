@@ -4,11 +4,11 @@ Reliance industries, RELIANCE, INE002A01018, 15, 2, Large Cap, 603880
 Hdfc bank, HDFCBANK, INE040A01026, 15, 3, Large Cap, 504850
 Itc, ITC, INE154A01025, 15, 4, Large Cap, 328388
 Hindustan unilever, HINDUNILVR, INE030A01027, 3, 5, Large Cap, 310473
-Housing development finance corplt, HDFC, INE001A01036, 0, 6, Large Cap, 302362
+Housing development finance corplt, HDFC, INE001A01036, 3, 6, Large Cap, 302362
 Maruti suzuki, MARUTI, INE585B01010, 15, 7, Large Cap, 270719
 Infosys, INFY, INE009A01021, 15, 8, Large Cap, 257789
 Oil natural gas corporation, ONGC, INE213A01029, 3, 9, Large Cap, 234474
-State bank, SBIN, INE062A01020, 0, 10, Large Cap, 234343
+State bank, SBIN, INE062A01020, 3, 10, Large Cap, 234343
 Kotak mahindra bank, KOTAKBANK, INE237A01028, 3, 11, Large Cap, 220006
 Icici bank, ICICIBANK, INE090A01021, 3, 12, Large Cap, 194457
 Larsen toubro, LT, INE018A01030, 15, 13, Large Cap, 187311
@@ -28,7 +28,7 @@ Vedanta, VEDL, INE205A01025, 3, 26, Large Cap, 109187
 Bajaj finance, BAJFINANCE, INE296A01024, 3, 27, Large Cap, 108156
 Indusind bank, INDUSINDBK, INE095A01012, 3, 28, Large Cap, 108074
 Power grid corporation, POWERGRID, INE752E01010, 3, 29, Large Cap, 104378
-Mahindra mahindra, M&M, INE101A01026, 0, 30, Large Cap, 99800
+Mahindra mahindra, M&M, INE101A01026, 3, 30, Large Cap, 99800
 Hdfc standard life insurance company, HDFCLIFE, INE795G01014, 3, 31, Large Cap, 93944
 Bharat petroleum, BPCL, INE029A01011, 3, 32, Large Cap, 93548
 Bajaj auto, BAJAJ-AUTO, INE917I01010, 3, 33, Large Cap, 85676
@@ -51,7 +51,7 @@ General insurance corporation, GICRE, INE481Y01014, 3, 49, Large Cap, 64104
 Dabur, DABUR, INE016A01026, 3, 50, Large Cap, 62645
 Britannia industries, BRITANNIA, INE216A01022, 3, 51, Large Cap, 62400
 Tech mahindra, TECHM, INE669C01036, 3, 52, Large Cap, 62221
-Bharti infratel, INFRATEL, INE121J01017, 0, 53, Large Cap, 61031
+Bharti infratel, INFRATEL, INE121J01017, 3, 53, Large Cap, 61031
 Bandhan bank, BANDHANBNK, INE545U01014, 3, 54, Large Cap, 59878
 Shree cements, SHREECEM, INE070A01015, 3, 55, Large Cap, 58810
 Icici prudential life insurance company, ICICIPRULI, INE726G01019, 3, 56, Large Cap, 58332
@@ -73,7 +73,7 @@ Cadila healthcare, CADILAHC, INE010B01027, 3, 71, Large Cap, 40733
 Siemens, SIEMENS, INE003A01024, 3, 72, Large Cap, 40201
 Nmdc, NMDC, INE584A01023, 3, 73, Large Cap, 39854
 Dlf, DLF, INE271C01023, 3, 74, Large Cap, 39282
-Lupin, LUPIN$, INE326A01037, 3, 75, Large Cap, 37107
+Lupin, LUPIN$, INE326A01037, 0, 75, Large Cap, 37107
 Upl, UPL, INE628A01036, 3, 76, Large Cap, 36887
 Biocon, BIOCON, INE376G01013, 3, 77, Large Cap, 36655
 Sun tv network, SUNTV, INE424H01027, 0, 78, Large Cap, 36464
@@ -96,7 +96,7 @@ Bharat heavy electricals, BHEL, INE257A01026, 3, 94, Large Cap, 32014
 Mrf, MRF, INE883A01011, 3, 95, Large Cap, 31142
 Idea cellular, IDEA, INE669E01016, 3, 96, Large Cap, 30925
 Procter gamble hygiene health care, PGHH, INE179A01014, 3, 97, Large Cap, 30662
-Bajaj holdings investment, BAJAJHLDNG, INE118A01012, 0, 98, Large Cap, 30644
+Bajaj holdings investment, BAJAJHLDNG, INE118A01012, 3, 98, Large Cap, 30644
 Tvs motor company, TVSMOTOR, INE494B01023, 3, 99, Large Cap, 30634
 Colgate palmolive, COLPAL, INE259A01022, 3, 100, Large Cap, 30609
 United breweries, UBL, INE686F01025, 3, 101, Mid Cap, 29338
@@ -110,7 +110,7 @@ Future retail, FRETAIL, INE752P01024, 3, 108, Mid Cap, 27905
 Kansai nerolac paints, KANSAINER, INE531A01024, 3, 109, Mid Cap, 26867
 Glaxosmithkline consumer healthcare, GSKCONS, INE264A01014, 3, 110, Mid Cap, 26570
 Lic housing finance, LICHSGFIN, INE115A01026, 3, 111, Mid Cap, 26345
-Oil, OIL, INE274J01014, 0, 112, Mid Cap, 26083
+Oil, OIL, INE274J01014, 3, 112, Mid Cap, 26083
 Page industries, PAGEIND, INE761H01022, 3, 113, Mid Cap, 26079
 Rural electrification corporation, RECLTD, INE020B01018, 3, 114, Mid Cap, 26022
 Berger paints, BERGEPAINT, INE463A01038, 3, 115, Mid Cap, 25789
@@ -134,7 +134,7 @@ Rajesh exports, RAJESHEXPO, INE343B01030, 3, 132, Mid Cap, 21298
 Rbl bank, RBLBANK, INE976G01028, 0, 133, Mid Cap, 21223
 Pnb housing finance, PNBHOUSING, INE572E01012, 0, 134, Mid Cap, 20749
 Glaxosmithkline pharmaceuticals, GLAXO, INE159A01016, 3, 135, Mid Cap, 20596
-Indraprashtha gas, IGL, INE203G01027, 0, 136, Mid Cap, 20204
+Indraprashtha gas, IGL, INE203G01027, 3, 136, Mid Cap, 20204
 Vakrangee, VAKRANG, INE051B01021, 0, 137, Mid Cap, 19910
 Exide industries, EXIDEIND, INE302A01020, 3, 138, Mid Cap, 19862
 Voltas, VOLTAS, INE226A01021, 3, 139, Mid Cap, 19763
@@ -160,7 +160,7 @@ Adani enterprises, ADANIENT, INE423A01024, 0, 158, Mid Cap, 17540
 Oberoi realty, OBEROIREAL, INE093I01010, 0, 159, Mid Cap, 17287
 Kiocl, KIOCL, INE880L01014, 0, 160, Mid Cap, 16803
 Idfc bank, IDFCBANK, INE092T01019, 0, 161, Mid Cap, 16715
-Godrej properties, GODREJPROP, INE484J01027, 3, 162, Mid Cap, 16691
+Godrej properties, GODREJPROP, INE484J01027, 0, 162, Mid Cap, 16691
 Muthoot finance, MUTHOOTFIN, INE414G01012, 3, 163, Mid Cap, 16503
 Indian hotels co, INDHOTEL, INE053A01029, 3, 164, Mid Cap, 16299
 Central bank, CENTRALBK, INE483A01010, 0, 165, Mid Cap, 16195
@@ -426,7 +426,7 @@ Omaxe, OMAXE, INE800H01010, 0, 424, Small Cap, 4100
 Linde, BOCINDIA, INE473A01011, 0, 425, Small Cap, 4070
 Phillips carbon black, PHILIPCARB, INE602A01023, 0, 426, Small Cap, 4023
 Shankara building products, SHANKARA, INE274V01019, 0, 427, Small Cap, 4008
-Multi commodity exchange, MCX, INE745G01035, 3, 428, Small Cap, 4005
+Multi commodity exchange, MCX, INE745G01035, 0, 428, Small Cap, 4005
 Nesco, NESCO, INE317F01035, 0, 429, Small Cap, 4002
 Jindal saw, JINDALSAW, INE324A01024, 0, 430, Small Cap, 3963
 Suprajit engineering, SUPRAJIT, INE399C01030, 0, 431, Small Cap, 3958
@@ -466,7 +466,7 @@ Rane holdings, RANEHOLDIN, INE384A01010, 0, 464, Small Cap, 3497
 Jammu kashmir bank, J&KBANK, INE168A01041, 0, 465, Small Cap, 3493
 Amber enterprises, AMBER, INE371P01015, 0, 466, Small Cap, 3476
 Jk tyre industries, JKTYRE, INE573A01042, 3, 467, Small Cap, 3460
-Heidelbergcement, HEIDELBERG, INE578A01017, 0, 468, Small Cap, 3440
+Heidelbergcement, HEIDELBERG, INE578A01017, 3, 468, Small Cap, 3440
 Deepak nitrite, DEEPAKNI, INE288B01029, 0, 469, Small Cap, 3431
 Rupa company, RUPA, INE895B01021, 0, 470, Small Cap, 3405
 Jamna auto industries, JAMNAAUTO, INE039C01032, 0, 471, Small Cap, 3391
@@ -517,9 +517,8 @@ Vsttillers tractors, VSTTILLERS, INE764D01017, 3, 580, Micro Cap, 2289
 Shree renuka sugars, RENUKA, INE087H01022, 3, 601, Micro Cap, 2159
 Balrampur chini mills, BALRAMCHIN, INE119A01028, 3, 607, Micro Cap, 2136
 Wonderla holidays, WONDERLA, INE066O01014, 3, 620, Micro Cap, 2050
-Mcleod russel, MCLEODRUSS*, INE942G01012, 3, 664, Micro Cap, 1752
 Asian granito, ASIANTILES, INE022I01019, 3, 732, Micro Cap, 1425
 Zee learn, ZEELEARN, INE565L01011, 3, 771, Nano Cap, 1260
 Talwalkars better value fitness, TALWALKARS, INE502K01016, 3, 1062, Unknown Cap, 552
-Summary, -, -, 882, large 43 %, mid 26 %, small 31 %
+Summary, -, -, 894, large 44 %, mid 26 %, small 31 %
 Ideal, -, -, 100, large 65-70 %, mid 20 %, small 10-15 %

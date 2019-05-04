@@ -58,9 +58,10 @@ unused1 text
 );
 
 create table if not exists plan(
-industry_name text,
-company_name text,
-company_weight text,
-company_desc text
+comp_industry text,
+comp_name text,
+comp_ticker text,
+comp_weight text,
+comp_desc text
 );
 

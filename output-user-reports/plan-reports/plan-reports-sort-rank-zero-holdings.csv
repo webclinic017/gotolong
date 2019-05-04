@@ -1,18 +1,13 @@
 comp_name, ticker, isin, plan_units_1k, rank, captype, mcap
-Housing development finance corplt, HDFC, INE001A01036, 0, 6, Large Cap, 302362
-State bank, SBIN, INE062A01020, 0, 10, Large Cap, 234343
-Mahindra mahindra, M&M, INE101A01026, 0, 30, Large Cap, 99800
 Yes bank, YESBANK, INE528G01027, 0, 40, Large Cap, 75861
-Bharti infratel, INFRATEL, INE121J01017, 0, 53, Large Cap, 61031
+Lupin, LUPIN$, INE326A01037, 0, 75, Large Cap, 37107
 Sun tv network, SUNTV, INE424H01027, 0, 78, Large Cap, 36464
 Aditya birla capital, ABCAPITAL, INE674K01013, 0, 86, Large Cap, 34583
 Oracle financial services software, OFSS, INE881D01027, 0, 87, Large Cap, 34340
 Steel authority, SAIL, INE114A01011, 0, 88, Large Cap, 33647
 Bharat forge, BHARATFORG, INE465A01025, 0, 90, Large Cap, 33221
-Bajaj holdings investment, BAJAJHLDNG, INE118A01012, 0, 98, Large Cap, 30644
 Divis laboratories, DIVISLAB, INE361B01024, 0, 104, Mid Cap, 28918
 Punjab national bank, PNB, INE160A01022, 0, 106, Mid Cap, 28610
-Oil, OIL, INE274J01014, 0, 112, Mid Cap, 26083
 Edelweiss financial services, EDELWEISS, INE532F01054, 0, 116, Mid Cap, 25700
 Dalmia bharat, DALMIABHA, INE439L01019, 0, 119, Mid Cap, 24996
 Alkem laboratories, ALKEM, INE540L01014, 0, 121, Mid Cap, 24601
@@ -21,7 +16,6 @@ Jindal steel power, JINDALSTEL, INE749A01030, 0, 125, Mid Cap, 22991
 Gruh finance, GRUH, INE580B01029, 0, 129, Mid Cap, 21963
 Rbl bank, RBLBANK, INE976G01028, 0, 133, Mid Cap, 21223
 Pnb housing finance, PNBHOUSING, INE572E01012, 0, 134, Mid Cap, 20749
-Indraprashtha gas, IGL, INE203G01027, 0, 136, Mid Cap, 20204
 Vakrangee, VAKRANG, INE051B01021, 0, 137, Mid Cap, 19910
 Mangalore refinery petrochemicals, MRPL, INE103A01014, 0, 142, Mid Cap, 19398
 Sundaram finance, SUNDARMFIN, INE660A01013, 0, 143, Mid Cap, 19362
@@ -36,6 +30,7 @@ Adani enterprises, ADANIENT, INE423A01024, 0, 158, Mid Cap, 17540
 Oberoi realty, OBEROIREAL, INE093I01010, 0, 159, Mid Cap, 17287
 Kiocl, KIOCL, INE880L01014, 0, 160, Mid Cap, 16803
 Idfc bank, IDFCBANK, INE092T01019, 0, 161, Mid Cap, 16715
+Godrej properties, GODREJPROP, INE484J01027, 0, 162, Mid Cap, 16691
 Central bank, CENTRALBK, INE483A01010, 0, 165, Mid Cap, 16195
 Bank, BANKINDIA, INE084A01016, 0, 166, Mid Cap, 16121
 Indian bank, INDIANB, INE562A01011, 0, 168, Mid Cap, 15942
@@ -206,6 +201,7 @@ Omaxe, OMAXE, INE800H01010, 0, 424, Small Cap, 4100
 Linde, BOCINDIA, INE473A01011, 0, 425, Small Cap, 4070
 Phillips carbon black, PHILIPCARB, INE602A01023, 0, 426, Small Cap, 4023
 Shankara building products, SHANKARA, INE274V01019, 0, 427, Small Cap, 4008
+Multi commodity exchange, MCX, INE745G01035, 0, 428, Small Cap, 4005
 Nesco, NESCO, INE317F01035, 0, 429, Small Cap, 4002
 Jindal saw, JINDALSAW, INE324A01024, 0, 430, Small Cap, 3963
 Suprajit engineering, SUPRAJIT, INE399C01030, 0, 431, Small Cap, 3958
@@ -237,7 +233,6 @@ Trident, TRIDENT, INE064C01014, 0, 463, Small Cap, 3532
 Rane holdings, RANEHOLDIN, INE384A01010, 0, 464, Small Cap, 3497
 Jammu kashmir bank, J&KBANK, INE168A01041, 0, 465, Small Cap, 3493
 Amber enterprises, AMBER, INE371P01015, 0, 466, Small Cap, 3476
-Heidelbergcement, HEIDELBERG, INE578A01017, 0, 468, Small Cap, 3440
 Deepak nitrite, DEEPAKNI, INE288B01029, 0, 469, Small Cap, 3431
 Rupa company, RUPA, INE895B01021, 0, 470, Small Cap, 3405
 Jamna auto industries, JAMNAAUTO, INE039C01032, 0, 471, Small Cap, 3391
@@ -264,5 +259,5 @@ Prakash industries, PRAKASH, INE603A01013, 0, 497, Small Cap, 3010
 Prataap snacks, DIAMONDYD, INE393P01035, 0, 498, Small Cap, 2949
 Merck, MERCK, INE199A01012, 0, 499, Small Cap, 2942
 Apar industries, APARINDS, INE372A01015, 0, 500, Small Cap, 2928
-Summary, -, -, 882, large 43 %, mid 26 %, small 31 %
+Summary, -, -, 894, large 44 %, mid 26 %, small 31 %
 Ideal, -, -, 100, large 65-70 %, mid 20 %, small 10-15 %
