@@ -33,11 +33,12 @@ class Tbd(Plan, Demat, Screener):
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
 
-	def load_tbd_data(self, isin_bse_filename, isin_nse_filename, amfi_filename, screener_aliases_filename, plan_filename, demat_filename, screener_filename):
+	def load_tbd_data(self, screener_aliases_filename, plan_filename, screener_filename):
 		self.load_isin_db()
-		# self.load_isin_data(isin_nse_filename, "nse")
-		self.load_demat_data(demat_filename)
+		self.load_demat_db()
 		self.load_amfi_db()
+		# self.load_isin_data(isin_nse_filename, "nse")
+		# self.load_demat_data(demat_filename)
 		# self.load_amfi_data(amfi_filename)
 		self.load_screener_name_aliases(screener_aliases_filename)
 		self.load_plan_data(plan_filename)
@@ -331,10 +332,10 @@ class Tbd(Plan, Demat, Screener):
 	def dump_plan_tbd_cond(self, out_filename):
 		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True)
 	def dump_plan_tbd_days_nocond(self, out_filename, days_filter):
-		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter)
+		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter, apply_cond=False)
 
 	def dump_plan_tbd_days_cond(self, out_filename, days_filter):
-		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter, apply_cond=False)
+		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter)
 
 	def dump_plan_demat_cond_sale(self, out_filename):
 		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=False, days_filter=None, apply_cond=True, demat_only=True, sort_sale=True)

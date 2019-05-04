@@ -36,3 +36,10 @@ class Database(Config):
 		if self.debug_level > 0 :
 			print 'count_amfi_db : row_count : ', row_count 
 		return row_count
+
+	def db_table_load(self, table):
+		SQL = """select * from {}""".format(table)
+		print 'db_table_load sql', SQL
+		cursor = self.db_conn.cursor()
+		cursor.execute(SQL)
+		return cursor

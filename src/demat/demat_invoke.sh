@@ -5,7 +5,7 @@ DEBUG_LEVEL=0
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
-IN_FILE=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-data.csv
+IN_FILE=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-txn-data.csv
 OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-1.csv
 OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-2.csv
 OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-3.csv

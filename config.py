@@ -5,7 +5,7 @@ import sys
 class Config(object):
 	def __init__(self):
 		super(Config, self).__init__()
-		self.DB_FILENAME = 'equity.db'
+		self.DB_FILENAME = 'equity.sqlite3'
 
 	def get_root(self):
 		# print globals()

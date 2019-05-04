@@ -8,7 +8,9 @@ import operator
 
 import cutil.cutil
 
-class Demat(object):
+from database.database import *
+
+class Demat(Database):
 
 	def __init__(self):
 		super(Demat, self).__init__()
@@ -83,14 +85,35 @@ class Demat(object):
 		except:
 			print "Unexpected error:", sys.exc_info()
 
-	def load_demat_data(self, in_file):
-		with open(in_file, 'r') as csvfile:
-			reader = csv.reader(csvfile)
-			for row in reader:
-				self.load_demat_row(row)
+	def load_demat_data(self, in_filename):
+		table = "demat_txn"
+		row_count = self.db_table_count_rows(table)
+		if row_count == 0:
+			self.insert_demat_data(in_filename)
+		else:
+			print 'demat_txn data already loaded in db', row_count
+		print 'display db data'
+		self.load_demat_db()
+		
+	def insert_demat_data(self, in_filename):	
+		SQL = """insert into demat_txn (stock_symbol, company_name, isin_code, action, quantity, txn_price, brokerage, txn_charges, stamp_duty, segment, stt, remarks, txn_date, exchange, unused1) values (:stock_symbol, :company_name, :isin_code, :action, :quantity, :txn_price, :brokerage, :txn_charges, :stamp_dty, :segment, :stt, :remarks, :txn_date, :exchange, :unused1) """
+		cursor = self.db_conn.cursor()
+		with open(in_filename, 'rt') as csvfile:
+			# future 
+			csv_reader = csv.reader(csvfile)
+			# insert row
+			cursor.executemany(SQL, csv_reader)
+			# commit db changes
+			self.db_conn.commit()
+
+	def load_demat_db(self):
+		table = "demat_txn"
+		cursor = self.db_table_load(table)
+		for row in cursor.fetchall():
+			if self.debug_level > 1 :
+				print row
+			self.load_demat_row(row)
 		self.prepare_demat_data()
-		# sorted(self.phase1_data, key=lambda dct: dct['isin_code'])	
-		# sorted(self.phase1_data, key=operator.itemgetter('isin_code'))	
 
 	def prepare_demat_data(self):
 		for isin_code in sorted(self.phase1_data):

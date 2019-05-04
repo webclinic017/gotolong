@@ -86,10 +86,7 @@ class Isin(Database):
 
 	def load_isin_db(self):
 		table = "isin"
-		SQL = """select * from {}""".format(table)
-		print 'load_isin_db sql', SQL
-		cursor = self.db_conn.cursor()
-		cursor.execute(SQL)
+		cursor = self.db_table_load(table)
 		for row in cursor.fetchall():
 			if self.debug_level > 1 :
 				print row

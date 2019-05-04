@@ -84,18 +84,6 @@ class Amfi(Database):
 			print 'except ', row
 			traceback.print_exc()
 		
-	def count_amfi_db(self, table):
-		SQL = """select count(*) from {}""".format(table)
-		print 'count_amfi_db sql', SQL
-		# SQL = """select count(*) from amfi"""
-		cursor = self.db_conn.cursor()
-		cursor.execute(SQL)
-		result = cursor.fetchone()
-		row_count = result[0]
-		if self.debug_level > 0 :
-			print 'count_amfi_db : row_count : ', row_count 
-		return row_count
-
 	def load_amfi_data(self, in_filename):
 		table = "amfi"
 		# row_count = self.count_amfi_db(table)
@@ -120,11 +108,7 @@ class Amfi(Database):
 
 	def load_amfi_db(self):
 		table = "amfi"
-		SQL = """select * from {}""".format(table)
-		print 'load_amfi_db sql', SQL
-		# SQL = """select * from amfi"""
-		cursor = self.db_conn.cursor()
-		cursor.execute(SQL)
+		cursor = self.db_table_load(table)
 		for row in cursor.fetchall():
 			if self.debug_level > 1 :
 				print row

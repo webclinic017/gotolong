@@ -13,10 +13,10 @@ class Plan(Amfi):
 
 	def __init__(self):
 		super(Plan, self).__init__()
-		self.multiplier	= 0 
-		self.plan_comp_units	= {}
-		self.plan_comp_days	= {}
-		self.indu_units	= {}
+		# years of investing. started in 2017
+		self.multiplier	= 3
+		self.plan_comp_units = {}
+		self.industry_units = {}
 		self.debug_level = 0 
 		self.last_row = "" 
 		print 'init : Plan'
@@ -27,58 +27,30 @@ class Plan(Amfi):
 	def load_plan_row(self, row):
 		try:
 			row_list = row
-
-			if row_list[1] == "Multiplier":
-				self.multiplier = float(row_list[3])/1000.0
-				if self.debug_level > 1 :
-					print 'multiplier ', self.multiplier
+		
+			if row_list[0] == 'industry_name':
 				return
-
-			if row_list[1] == "Details":
-				if self.debug_level > 1 :
-					print 'skipped ', row
-				return
-
-			if row_list[1] == "Company":
-				# print 'stored last', row
-				self.last_row = row
-				return
-
-			plan_comp_units_list = row
-			plan_comp_units_items_count = len(plan_comp_units_list)
-
-			if plan_comp_units_list[1] != "Units":
-				if self.debug_level > 1:
-					print 'Bypassed units: ', row
-				return
-
-			comp_name_list = self.last_row
-			comp_name_items_count = len(comp_name_list)
-
-			if self.debug_level > 1:
-				print 'count name : ', comp_name_items_count, "\n"
-				print 'count units : ', plan_comp_units_items_count, "\n"
-			indu_name = comp_name_list[0]
-			# industry units
-			indu_units = plan_comp_units_list[2]
-			self.indu_units[indu_name] = indu_units 
-
-			if self.debug_level> 1:
-				print 'stored industry ', indu_name, ' : ', indu_units
-			for iter in range(3, int(comp_name_items_count)): 
-				company_name = comp_name_list[iter]
-				if company_name == "":
-					if self.debug_level > 1:
-						print 'found an empty listing', row 
-					break
-				else:
-					if self.debug_level > 2:
-						print 'iter ', iter, row, "\n"
-				company_name = cutil.cutil.normalize_comp_name(company_name)
-				isin = self.get_amfi_isin_by_name(company_name)
-				if self.debug_level > 0:
-					print isin, company_name
-				self.plan_comp_units[isin] = cutil.cutil.get_number(plan_comp_units_list[iter]) * (self.multiplier)
+			industry_name = row_list[0]
+			company_name = row_list[1]
+			company_weight = row_list[2]
+			company_desc = row_list[3]
+			if industry_name in self.industry_units.keys():
+				self.industry_units[industry_name] = self.industry_units[industry_name] + company_weight
+			else:
+				self.industry_units[industry_name] = company_weight
+			if self.debug_level > 0:
+				print 'industry ', industry_name
+				print 'company name', company_name 
+				print 'company weight', company_weight
+				print 'company desc', company_desc
+			company_name = cutil.cutil.normalize_comp_name(company_name)
+			isin = self.get_amfi_isin_by_name(company_name)
+			if self.debug_level > 0:
+				print isin, company_name
+			if company_weight >= 0:
+				self.plan_comp_units[isin] = cutil.cutil.get_number(company_weight * self.multiplier)
+			else:
+				self.plan_comp_units[isin] = 0 
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
@@ -252,15 +224,15 @@ class Plan(Amfi):
 	def size_comp_data(self):
 		print len(self.plan_comp_units)
 
-	def get_indu_units(self, name):
-		if name in self.indu_units:
-			return self.indu_units[name]	
+	def get_industry_units(self, name):
+		if name in self.industry_units:
+			return self.industry_units[name]	
 		else:
 			print 'invalid key :', name
 
 	def print_indu_data(self):
-		print self.indu_units
+		print self.industry_units
 
 	def size_indu_data(self):
-		print len(self.indu_units)
+		print len(self.industry_units)
 

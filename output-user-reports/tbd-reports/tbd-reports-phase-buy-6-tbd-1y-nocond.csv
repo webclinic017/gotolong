@@ -1,3 +1,40 @@
 comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments
-Rallis,INE613A01020,3,2,1,33,04-Apr-2018,394,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0, Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25and sc_mos ge10 
-Vrl logistics,INE366I01010,3,2,1,33,01-Feb-2018,456,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0, Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25and sc_mos ge10 
+Coal,INE522F01014,111,10,101,91,27-Nov-2017,523,Buy,Large Cap,252,170,-32 %,133,0,34,51,14,-17,-1,0,profit5 < 0 and Failed
+Tata chemicals,INE092A01019,111,3,108,97,04-Apr-2018,395,Buy,Mid Cap,557,1522,173 %,28,1,13,12,-7,20,0,0,sales5 < 0 and cmp > myavgiv + 173% and Failed
+Basf,INE373A01013,111,3,108,97,04-Apr-2018,395,Buy,Small Cap,1352,1634,20 %,-13,1,-3,4,7,1,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 20% and Failed
+Supreme industries,INE195A01028,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,0,0,0 %,0,0,0,0,0,0,0,0,dp3 < 6 and roe3 < 4 and roce3 < 4 and myavgiv eq 0 and Failed
+Tata power co,INE245A01021,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,67,620,825 %,36,3,5,7,-2,0,0,4,d2e > 2 and sales5 < 0 and cmp > myavgiv + 825% and Failed
+Piramal enterprises,INE140A01024,111,5,106,96,04-Apr-2018,395,Buy,Large Cap,2317,4259,83 %,24,2,16,9,25,0,0,0,cmp > myavgiv + 83% and Failed
+Dr reddys laboratories,INE089A01023,111,4,107,96,04-Apr-2018,395,Buy,Large Cap,2907,1558,-46 %,26,0,12,12,4,-10,-3,0,profit5 < 0 and Failed
+Hsil,INE415A01038,111,2,109,98,04-Apr-2018,395,Buy,Micro Cap,259,230,-11 %,31,1,7,8,8,-2,-21,0,profit5 < 0 and Failed
+Future retail,INE752P01024,111,2,109,98,01-Feb-2018,457,Buy,Mid Cap,419,279,-33 %,0,0,17,16,66,0,0,48,dp3 < 6 and pledge > 25 and Failed
+Dlf,INE271C01023,111,9,102,92,02-Jan-2018,487,Buy,Large Cap,178,1242,597 %,58,1,1,7,-3,-2,-21,0,roe3 < 4 and sales5 < 0 and profit5 < 0 and cmp > myavgiv + 597% and Failed
+Coffee day enterprises,INE335K01011,111,2,109,98,04-Apr-2018,395,Buy,Small Cap,261,409,56 %,0,2,1,7,8,0,0,72,dp3 < 6 and roe3 < 4 and pledge > 25 and cmp > myavgiv + 56% and Failed
+Shoppers stop,INE498B01024,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,459,12538,2631 %,82,0,2,5,4,0,0,13,roe3 < 4 and cmp > myavgiv + 2631% and Failed
+Future lifestyle fashions,INE452O01016,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,495,317,-35 %,19,1,7,11,0,0,0,23,Passed
+Thomas cook,INE332A01027,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,247,10975,4343 %,5,0,-16,63,92,159,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 4343% and Failed
+Aditya birla fashion retail,INE647O01011,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,207,246,18 %,0,2,2,8,41,0,0,0,dp3 < 6 and roe3 < 4 and cmp > myavgiv + 18% and Failed
+Care ratings,INE752H01013,111,3,108,97,01-Feb-2018,457,Buy,Small Cap,984,1543,56 %,75,0,30,44,10,9,2,0,cmp > myavgiv + 56% and Failed
+Rallis,INE613A01020,111,2,109,98,04-Apr-2018,395,Buy,Small Cap,146,204,39 %,29,0,16,21,5,8,2,0,cmp > myavgiv + 39% and Failed
+Apollo tyres,INE438A01022,111,2,109,98,01-Feb-2018,457,Buy,Mid Cap,202,130,-35 %,16,0,14,15,3,4,3,15,Passed
+Bajaj auto,INE917I01010,111,6,105,95,04-Apr-2018,395,Buy,Large Cap,3060,2847,-6 %,40,0,26,36,5,6,3,0,Passed
+Upl,INE628A01036,111,5,106,96,25-Jan-2017,829,Buy,Large Cap,970,623,-35 %,21,1,29,23,14,22,1,2,Passed
+Sheela foam,INE916U01025,111,2,109,98,02-Feb-2018,456,Buy,Small Cap,1350,1345,0 %,0,0,30,37,12,35,1,0,dp3 < 6 and Failed
+Johnson controls hitachi air conditioning,INE782A01015,111,2,109,98,17-Oct-2017,564,Buy,Small Cap,1854,2037,9 %,6,0,19,23,19,46,1,0,Passed
+Crisil,INE007A01025,111,4,107,96,04-Apr-2018,395,Buy,Mid Cap,1442,2604,80 %,64,0,31,44,10,7,4,0,cmp > myavgiv + 80% and Failed
+Vrl logistics,INE366I01010,111,2,109,98,01-Feb-2018,457,Buy,Small Cap,265,388,46 %,32,0,18,21,8,15,2,0,cmp > myavgiv + 46% and Failed
+Glaxosmithkline consumer healthcare,INE264A01014,111,5,106,96,19-Sep-2017,592,Buy,Mid Cap,7004,6397,-8 %,44,0,23,36,6,10,3,0,Passed
+Sanofi,INE058A01010,111,4,107,96,19-Sep-2017,592,Buy,Mid Cap,5513,5489,0 %,51,0,17,28,9,9,4,0,Passed
+Pfizer,INE182A01018,111,3,108,97,19-Sep-2017,592,Buy,Mid Cap,3128,4745,51 %,25,0,13,20,13,12,3,0,cmp > myavgiv + 51% and Failed
+-,INE999A01015,111,2,109,98,04-Apr-2018,395,Buy,Micro Cap,668,717,7 %,29,0,11,17,8,4,8,0,peg > 4 and Failed
+Cera sanitaryware,INE739E01017,111,3,108,97,14-Jun-2017,689,Buy,Small Cap,2819,2508,-11 %,15,0,20,29,19,16,2,0,Passed
+Bajaj finserv,INE918I01018,111,6,105,95,19-Sep-2017,592,Buy,Large Cap,7624,2949,-61 %,1,3,15,15,31,12,3,0,dp3 < 6 and d2e > 2 and Failed
+Colgate palmolive,INE259A01022,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,1171,1096,-6 %,64,0,54,79,6,6,7,0,peg > 4 and Failed
+Kotak mahindra bank,INE237A01028,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,1418,984,-30 %,2,5,13,8,18,23,2,0,dp3 < 6 and d2e > 2 and Failed
+Whirlpool,INE716A01013,111,3,108,97,04-Apr-2018,395,Buy,Mid Cap,1393,1068,-23 %,9,0,23,35,12,22,2,0,Passed
+Ttk prestige,INE690A01010,111,6,105,95,18-Jul-2017,655,Buy,Small Cap,8063,8397,4 %,21,0,18,24,6,4,13,0,peg > 4 and Failed
+Pidilite industries,INE318A01026,111,3,108,97,04-Apr-2018,395,Buy,Large Cap,1202,839,-30 %,29,0,29,41,11,19,3,0,Passed
+Procter gamble hygiene health care,INE179A01014,111,8,103,93,09-Jun-2017,694,Buy,Large Cap,10349,6888,-33 %,118,0,39,60,8,13,7,0,peg > 4 and Failed
+Trent,INE849A01020,111,2,109,98,04-Apr-2018,395,Buy,Mid Cap,384,248,-35 %,33,0,7,10,18,23,4,0,Passed
+Gillette,INE322A01010,111,5,106,96,12-Jun-2017,691,Buy,Mid Cap,7498,6743,-10 %,101,0,33,50,3,22,5,0,peg > 4 and Failed
+Axis bank,INE238A01034,111,2,109,98,04-Apr-2018,395,Buy,Large Cap,757,110,-85 %,15,10,8,6,11,-40,-12,0,d2e > 2 and profit5 < 0 and Failed
