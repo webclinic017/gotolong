@@ -8,7 +8,6 @@ CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 SCREENER_NAME_ALIASES=$CONFIG_DATA_LOC/screener-data/screener-name-aliases.csv
-PLAN_FILE=$CONFIG_PROFILE_DATA_LOC/plan-data/plan-data.csv
 SCREENER_FILE=$CONFIG_DATA_LOC/screener-data/screener-data-account1.csv
 OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-1-coverage.csv
 OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/tbd-reports/tbd-reports-phase-buy-2-planned-nocond.csv
@@ -31,4 +30,4 @@ MOS_1=25
 # margin of safety 50%
 MOS_2=50
 
-tbd_invoke.py ${DEBUG_LEVEL} ${SCREENER_NAME_ALIASES} ${PLAN_FILE} ${SCREENER_FILE} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7} ${OUT_FILE_8} ${DAYS_DIFF_1} ${DAYS_DIFF_2} ${MOS_1} ${MOS_2}
+tbd_invoke.py ${DEBUG_LEVEL} ${SCREENER_NAME_ALIASES} ${SCREENER_FILE} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7} ${OUT_FILE_8} ${DAYS_DIFF_1} ${DAYS_DIFF_2} ${MOS_1} ${MOS_2}

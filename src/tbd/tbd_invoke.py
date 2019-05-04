@@ -15,21 +15,20 @@ if len(sys.argv) < 15 :
 
 debug_level = int(sys.argv[1])
 screener_aliases_filename = sys.argv[2]
-plan_filename = sys.argv[3]
-screener_filename = sys.argv[4]
+screener_filename = sys.argv[3]
 
-cover_filename= sys.argv[5]
-plan_nocond_filename = sys.argv[6]
-plan_cond_filename = sys.argv[7]
-plan_cond_mos_filename = sys.argv[8]
-plan_tbd_cond_filename = sys.argv[9]
-plan_tbd_days_nocond_filename = sys.argv[10]
-plan_tbd_days_cond_filename = sys.argv[11]
-plan_demat_cond_sale_filename = sys.argv[12]
-days_1 = int(sys.argv[13])
-days_2 = int(sys.argv[14])
-mos_1 = int(sys.argv[15])
-mos_2 = int(sys.argv[16])
+cover_filename= sys.argv[4]
+plan_nocond_filename = sys.argv[5]
+plan_cond_filename = sys.argv[6]
+plan_cond_mos_filename = sys.argv[7]
+plan_tbd_cond_filename = sys.argv[8]
+plan_tbd_days_nocond_filename = sys.argv[9]
+plan_tbd_days_cond_filename = sys.argv[10]
+plan_demat_cond_sale_filename = sys.argv[11]
+days_1 = int(sys.argv[12])
+days_2 = int(sys.argv[13])
+mos_1 = int(sys.argv[14])
+mos_2 = int(sys.argv[15])
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -37,7 +36,7 @@ if debug_level > 1 :
 tbd = tbd.Tbd()
 
 tbd.set_debug_level(debug_level)
-tbd.load_tbd_data(screener_aliases_filename, plan_filename, screener_filename)
+tbd.load_tbd_data(screener_aliases_filename, screener_filename)
 
 tbd.print_tbd_phase1(cover_filename)
 tbd.dump_plan_nocond(plan_nocond_filename)

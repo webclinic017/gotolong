@@ -56,3 +56,11 @@ txn_date text,
 exchange text,
 unused1 text
 );
+
+create table if not exists plan(
+industry_name text,
+company_name text,
+company_weight text,
+company_desc text
+);
+

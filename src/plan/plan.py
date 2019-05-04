@@ -59,10 +59,33 @@ class Plan(Amfi):
 			traceback.print_exc()
 
 	def load_plan_data(self, in_filename):
-		with open(in_filename, 'r') as csvfile:
-			reader = csv.reader(csvfile)
-			for row in reader:
-				self.load_plan_row(row)
+		table = "plan"
+		row_count = self.db_table_count_rows(table)
+		if row_count == 0:
+			self.insert_plan_data(in_filename)
+		else:
+			print 'plan data already loaded in db', row_count
+		print 'display db data'
+		self.load_plan_db()
+		
+	def insert_plan_data(self, in_filename):	
+		SQL = """insert into plan(industry_name, company_name, company_weight, company_desc) values (:industry_name, :company_name, :company_weight, :company_desc) """
+		cursor = self.db_conn.cursor()
+		with open(in_filename, 'rt') as csvfile:
+			# future 
+			csv_reader = csv.reader(csvfile)
+			# insert row
+			cursor.executemany(SQL, csv_reader)
+			# commit db changes
+			self.db_conn.commit()
+
+	def load_plan_db(self):
+		table = "plan"
+		cursor = self.db_table_load(table)
+		for row in cursor.fetchall():
+			if self.debug_level > 1 :
+				print row
+			self.load_plan_row(row)
 
 	def print_phase1(self, out_filename):
 		lines = []
