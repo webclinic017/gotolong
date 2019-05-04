@@ -28,20 +28,24 @@ class Demat(Database):
 		self.debug_level = 0 
 		print 'init : Demat'
 
+
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level 
-		
+
+
 	def load_demat_row(self, row):
 		try:
 			row_list = row
-			isin_code   = (row_list[2]).upper().strip()
+			# skip header
+			if row_list[0] == 'Stock Symbol':
+				return
 			comp_name = row_list[1]
+			isin_code   = (row_list[2]).upper().strip()
 			txn_type = row_list[3]
 			txn_qty = row_list[4]
 			txn_price = str(int(round(float(row_list[5]))))
 			txn_date = row_list[12]
-
-
+			
 			p_str = isin_code 
 			p_str += ','
 			p_str += comp_name 
@@ -54,36 +58,39 @@ class Demat(Database):
 			p_str += ','
 			p_str += txn_date
 			p_str += '\n'
-	
+			
+			if self.debug_level > 1:
+				print p_str
+			
 			if isin_code in self.phase1_data:	
 				self.phase1_data[isin_code] += p_str	
 			else:
 				self.phase1_data[isin_code] = p_str	
 				
-
 			self.company_name[isin_code] = cutil.cutil.normalize_comp_name(comp_name)
 			if txn_type == "Buy":
 				if isin_code in self.buy_qty:
-                        		self.buy_qty[isin_code] += int(txn_qty)
-                        		self.buy_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
+					self.buy_qty[isin_code] += int(txn_qty)
+					self.buy_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
 				else:
-                        		self.buy_qty[isin_code] = int(txn_qty) 
-                        		self.buy_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
+					self.buy_qty[isin_code] = int(txn_qty) 
+					self.buy_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
 			else:
 				if isin_code in self.sale_qty:
-                        		self.sale_qty[isin_code] += int(txn_qty)
-                        		self.sale_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
+					self.sale_qty[isin_code] += int(txn_qty)
+					self.sale_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
 				else:
-                        		self.sale_qty[isin_code] = int(txn_qty)
-                        		self.sale_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
+					self.sale_qty[isin_code] = int(txn_qty)
+					self.sale_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
 		
 			# skip updating bonus entries	
 			if txn_price != 0:	
 				self.last_txn_type[isin_code]  = txn_type 
-                        	self.last_txn_date[isin_code]  = txn_date 
-
+				self.last_txn_date[isin_code]  = txn_date 
+	
 		except:
-			print "Unexpected error:", sys.exc_info()
+			print "demat Unexpected error:", sys.exc_info()
+
 
 	def load_demat_data(self, in_filename):
 		table = "demat_txn"
@@ -94,7 +101,8 @@ class Demat(Database):
 			print 'demat_txn data already loaded in db', row_count
 		print 'display db data'
 		self.load_demat_db()
-		
+
+
 	def insert_demat_data(self, in_filename):	
 		SQL = """insert into demat_txn (stock_symbol, company_name, isin_code, action, quantity, txn_price, brokerage, txn_charges, stamp_duty, segment, stt, remarks, txn_date, exchange, unused1) values (:stock_symbol, :company_name, :isin_code, :action, :quantity, :txn_price, :brokerage, :txn_charges, :stamp_dty, :segment, :stt, :remarks, :txn_date, :exchange, :unused1) """
 		cursor = self.db_conn.cursor()
@@ -106,6 +114,7 @@ class Demat(Database):
 			# commit db changes
 			self.db_conn.commit()
 
+
 	def load_demat_db(self):
 		table = "demat_txn"
 		cursor = self.db_table_load(table)
@@ -114,6 +123,7 @@ class Demat(Database):
 				print row
 			self.load_demat_row(row)
 		self.prepare_demat_data()
+
 
 	def prepare_demat_data(self):
 		for isin_code in sorted(self.phase1_data):
@@ -145,12 +155,17 @@ class Demat(Database):
 				hold_units = 0
 			# store 
 			self.hold_units[isin_code] = hold_units
+			
+			if self.debug_level > 1:
+				print 'prepare demat data ', isin_code
 
 
 	def print_phase1(self, out_filename):
 		fh = open(out_filename, "w") 
 		fh.write('isin_code, comp_name, action, qty, price, txn_date\n')
 		for isin_code in sorted(self.phase1_data):
+			if self.debug_level > 1:
+				print 'dumping isin', isin_code
 			fh.write(self.phase1_data[isin_code])
 		fh.close()
 

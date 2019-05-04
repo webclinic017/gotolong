@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=0
+DEBUG_LEVEL=1
 
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`

@@ -48,9 +48,10 @@ class Plan(Amfi):
 			if self.debug_level > 0:
 				print isin, company_name
 			if company_weight >= 0:
-				self.plan_comp_units[isin] = cutil.cutil.get_number(company_weight * self.multiplier)
+				self.plan_comp_units[isin] = cutil.cutil.get_number(company_weight)
+				self.plan_comp_units[isin] = self.plan_comp_units[isin] * self.multiplier
 			else:
-				self.plan_comp_units[isin] = 0 
+				self.plan_comp_units[isin] = 0
 			return
 		except TypeError:
 			print 'except : TypeError : ' , row  , "\n"
