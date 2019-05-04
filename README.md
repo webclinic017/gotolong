@@ -26,10 +26,7 @@ The user also has to provide icidirect demat data (portfolio detailed summary).
 # Project Environment
 
 For csh
-* $ source project-env.csh
-
-For sh/bash
-* $ . ./project-env.sh
+* $ source config.csh
 
 
 # User : PLAN DATA
@@ -37,20 +34,15 @@ For sh/bash
 Prepare plan file
 
 Input Data
-* input-user-data/plan-data/plan-data-raw.csv
+* input-user-data/plan-data/plan-data.csv
 
-Include weight for each company and cummulative weight for industry.
-
-Minimum investment size : 1 Unit (can be represented by 1k or 3k depending on years of investment)
+Minimum investment size : 1 Unit
 
 0 Unit : stock is under watch but there is no plan to acquire it right now.
 
 Format of the data
 
-* Industry name,  Company, Space, Company name (First), Company name (Second), Company name (Third)
-* Space,          Details, Industry Details,
-* Space,          Units, <cummuulative units>, Unit (First), Unit (Second), Unit (Third)
-
+* Industry name,  Company, Space, Company Weight, Company_description
 
 NOTE: Try to use just first two words for the company name if that will make it unique in BSE 500.
 
