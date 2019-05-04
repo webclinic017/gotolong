@@ -96,7 +96,7 @@ class Tbd(Plan, Demat, Screener):
 			except ValueError:
 				print 'except : process: ValueError :', comp_name
 	
-	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, apply_cond = True, demat_only = None, sort_sale = None):
+	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, apply_cond = True, demat_only = None, sort_sale = None, mos = 10):
 		fh = open(out_filename, "w")
 		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
@@ -238,7 +238,7 @@ class Tbd(Plan, Demat, Screener):
 						p_str += 'myavgiv eq 0' 
 						p_str += ' and '
 						skip_row = False 
-					if sc_mos >= 10: 
+					if sc_mos >= mos: 
 						p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
 						p_str += ' and '
 						skip_row = False 
@@ -253,9 +253,10 @@ class Tbd(Plan, Demat, Screener):
 						passed_cond = True
 					
 					if apply_cond and passed_cond:
-						passed_cond = sc_dp3 >= 6 and sc_d2e <= 2 and sc_roe3 >= 4 and sc_roce3 >= 4 and sc_sales5 > 0 and sc_profit5 > 0 and sc_peg <=4 and sc_mos >= 10
+						passed_cond = sc_dp3 >= 6 and sc_d2e <= 2 and sc_roe3 >= 4 and sc_roce3 >= 4 and sc_sales5 > 0 and sc_profit5 > 0 and sc_peg <=4 and sc_mos >= mos 
 					if apply_cond and passed_cond :
-						p_str += ' Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25 and sc_mos ge 10'
+						p_str += ' Passed as dp3 ge 6 and d2e le 2 and roe3 ge 5 and roce3 ge 4 and sales5 gt 0 and profit5 gt 0 and peg le 4 and pledge le 25'
+						p_str += 'and sc_mos ge' + str(mos) +' '
 					else:
 						check_failed = False
 						if sc_dp3 < 6:
@@ -294,7 +295,7 @@ class Tbd(Plan, Demat, Screener):
 							p_str += 'myavgiv eq 0' 
 							p_str += ' and '
 							check_failed = True
-						if sc_mos >= 10:
+						if sc_mos >= mos:
 							p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
 							p_str += ' and '
 							check_failed = True
@@ -319,17 +320,21 @@ class Tbd(Plan, Demat, Screener):
 				traceback.print_exc()
 		fh.close()
 
-	def print_tbd_phase2(self, out_filename):
+	def dump_plan_nocond(self, out_filename):
+		self.print_tbd_phase1(out_filename, plan_only=True, apply_cond=False)
+	def dump_plan_cond(self, out_filename):
 		self.print_tbd_phase1(out_filename, plan_only=True)
 
-	def print_tbd_phase3(self, out_filename):
+	def dump_plan_cond_mos(self, out_filename, mos):
+		self.print_tbd_phase1(out_filename, plan_only=True, mos=mos)
+
+	def dump_plan_tbd_cond(self, out_filename):
 		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True)
-
-	def print_tbd_phase4(self, out_filename, days_filter):
-		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter, apply_cond=False)
-
-	def print_tbd_phase5(self, out_filename, days_filter):
+	def dump_plan_tbd_days_nocond(self, out_filename, days_filter):
 		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter)
 
-	def print_tbd_phase6(self, out_filename):
+	def dump_plan_tbd_days_cond(self, out_filename, days_filter):
+		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=True, days_filter=days_filter, apply_cond=False)
+
+	def dump_plan_demat_cond_sale(self, out_filename):
 		self.print_tbd_phase1(out_filename, plan_only=True, tbd_only=False, days_filter=None, apply_cond=True, demat_only=True, sort_sale=True)

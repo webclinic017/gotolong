@@ -22,14 +22,18 @@ plan_filename = sys.argv[6]
 demat_filename = sys.argv[7]
 screener_filename = sys.argv[8]
 
-out_filename_phase1 = sys.argv[9]
-out_filename_phase2 = sys.argv[10]
-out_filename_phase3 = sys.argv[11]
-out_filename_phase4 = sys.argv[12]
-out_filename_phase5 = sys.argv[13]
-out_filename_phase6 = sys.argv[14]
-filter_days_1 = int(sys.argv[15])
-filter_days_2 = int(sys.argv[16])
+cover_filename= sys.argv[9]
+plan_nocond_filename = sys.argv[10]
+plan_cond_filename = sys.argv[11]
+plan_cond_mos_filename = sys.argv[12]
+plan_tbd_cond_filename = sys.argv[13]
+plan_tbd_days_nocond_filename = sys.argv[14]
+plan_tbd_days_cond_filename = sys.argv[15]
+plan_demat_cond_sale_filename = sys.argv[16]
+days_1 = int(sys.argv[17])
+days_2 = int(sys.argv[18])
+mos_1 = int(sys.argv[19])
+mos_2 = int(sys.argv[20])
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -39,9 +43,11 @@ tbd = tbd.Tbd()
 tbd.set_debug_level(debug_level)
 tbd.load_tbd_data(isin_bse_filename, isin_nse_filename, amfi_filename, screener_aliases_filename, plan_filename, demat_filename, screener_filename)
 
-tbd.print_tbd_phase1(out_filename_phase1)
-tbd.print_tbd_phase2(out_filename_phase2)
-tbd.print_tbd_phase3(out_filename_phase3)
-tbd.print_tbd_phase4(out_filename_phase4, filter_days_1)
-tbd.print_tbd_phase5(out_filename_phase5, filter_days_1)
-tbd.print_tbd_phase6(out_filename_phase6)
+tbd.print_tbd_phase1(cover_filename)
+tbd.dump_plan_nocond(plan_nocond_filename)
+tbd.dump_plan_cond(plan_cond_filename)
+tbd.dump_plan_cond_mos(plan_cond_mos_filename, mos_1)
+tbd.dump_plan_tbd_cond(plan_tbd_cond_filename)
+tbd.dump_plan_tbd_days_nocond(plan_tbd_days_nocond_filename, days_1)
+tbd.dump_plan_tbd_days_cond(plan_tbd_days_cond_filename, days_1)
+tbd.dump_plan_demat_cond_sale(plan_demat_cond_sale_filename)
