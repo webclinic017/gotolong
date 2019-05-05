@@ -26,6 +26,7 @@ class Tbd(Plan, Demat, Screener):
 		self.tbd_captype = {}
 		self.tbd_crank = {}
 		self.tbd_prank = {}
+		self.tbd_mos = {}
 		self.tbd_demat_last_txn_date = {}
 		self.tbd_demat_last_txn_type = {}
 
@@ -89,12 +90,15 @@ class Tbd(Plan, Demat, Screener):
 					self.tbd_isin_name[comp_name] = comp_name
 					sc_crank = 0
 					sc_prank = 0
+					sc_mos = 0
 				else:
 					self.tbd_isin_name[comp_name] = isin_name
 					sc_crank = self.get_sc_crank_by_sno(isin_code)
 					sc_prank = self.get_sc_prank_by_sno(isin_code)
+					sc_mos = self.get_sc_mos_by_sno(isin_code)
 				self.tbd_crank[comp_name] = sc_crank
 				self.tbd_prank[comp_name] = sc_prank
+				self.tbd_mos[comp_name] = sc_mos
 			except ValueError:
 				print 'except : process: ValueError :', comp_name
 	
@@ -103,9 +107,11 @@ class Tbd(Plan, Demat, Screener):
 		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 		if sort_sale:
-			sorted_items = sorted(self.tbd_crank, key=self.tbd_crank.__getitem__)
+			# earlier tbd_crank
+			sorted_items = sorted(self.tbd_mos, key=self.tbd_mos.__getitem__)
 		else:
-			sorted_items = sorted(self.tbd_prank, key=self.tbd_prank.__getitem__, reverse=True)
+			# earlier tbd_prank
+			sorted_items = sorted(self.tbd_mos, key=self.tbd_mos.__getitem__, reverse=True)
 		for comp_name in sorted_items:
 			try:
 			        isin_code = self.get_isin_code_by_name(comp_name)
@@ -132,6 +138,7 @@ class Tbd(Plan, Demat, Screener):
 				tbd_pct = int(round(float(self.tbd_pct[comp_name])))
 				sc_crank = self.tbd_crank[comp_name] 
 				sc_prank = self.tbd_prank[comp_name] 
+				sc_mos = self.tbd_mos[comp_name] 
 				if isin_code == '':
 					sc_cmp = 0
 					sc_iv = 0
@@ -144,7 +151,6 @@ class Tbd(Plan, Demat, Screener):
 					sc_profit5 = 0
 					sc_peg = 0
 					sc_pledge = 0
-					sc_mos = 0
 				else:
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
@@ -157,7 +163,6 @@ class Tbd(Plan, Demat, Screener):
 					sc_profit5 = self.get_sc_profit5_by_sno(isin_code)
 					sc_peg = self.get_sc_peg_by_sno(isin_code)
 					sc_pledge = self.get_sc_pledge_by_sno(isin_code)
-					sc_mos = self.get_sc_mos_by_sno(isin_code)
 				
 				last_txn_days = self.tbd_last_txn_days[comp_name]
 				p_str = self.tbd_isin_name[comp_name]
