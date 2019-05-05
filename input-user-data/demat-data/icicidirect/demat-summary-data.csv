@@ -1,4 +1,4 @@
-tock Symbol,Company Name,ISIN Code,Qty,Average Cost Price,Current Market Price,% Change over prev close,Value At Cost,Value At Market Price,Realized Profit / Loss,Unrealized Profit/Loss,Unrealized Profit/Loss %,
+Stock Symbol,Company Name,ISIN Code,Qty,Average Cost Price,Current Market Price,% Change over prev close,Value At Cost,Value At Market Price,Realized Profit / Loss,Unrealized Profit/Loss,Unrealized Profit/Loss %,
 UNIBR,UNITED BREWERIES LTD,INE686F01025,3,1069.37,1428.85,+ 0.66,3208.11,4286.55,0.00,1078.44,33.62,
 UNISPI,UNITED SPIRITS LIMITED,INE854D01024,27,507.45,555.00,+ 0.09,13701.15,14985.00,(395.31),1283.85,9.37,
 AMARAJ,AMARA RAJA BATTERIES LTD,INE885A01032,3,817.16,674.35,- 0.16,2451.48,2023.05,0.00,-428.43,(17.48),

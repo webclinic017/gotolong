@@ -15,11 +15,12 @@ if len(sys.argv) < 6 :
    sys.exit(1) 
 
 debug_level = int(sys.argv[1])
-in_file = sys.argv[2]
-out_file_1 = sys.argv[3]
-out_file_2 = sys.argv[4]
-out_file_3 = sys.argv[5]
-out_file_4 = sys.argv[6]
+txn_file = sys.argv[2]
+summary_file = sys.argv[3]
+out_file_1 = sys.argv[4]
+out_file_2 = sys.argv[5]
+out_file_3 = sys.argv[6]
+out_file_4 = sys.argv[7]
 	
 if debug_level > 1 :
 	print 'args :' , len(sys.argv)
@@ -27,7 +28,8 @@ if debug_level > 1 :
 demat = demat.Demat()
 
 demat.set_debug_level(debug_level)
-demat.load_demat_data(in_file)
+demat.demat_txn_load_data(txn_file)
+demat.demat_summary_load_data(summary_file)
 demat.print_phase1(out_file_1)
 demat.print_phase2(out_file_2)
 demat.print_phase3(out_file_3)

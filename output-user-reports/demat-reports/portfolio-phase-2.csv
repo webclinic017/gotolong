@@ -1,4 +1,4 @@
-isin_code, comp_name, buy_qty, sale_qty, buy_price, sale_price, last_txn_type, last_txn_date
+isin_code, comp_name, buy_qty, sale_qty, buy_price, sale_price, demat_txn_last_type, demat_txn_last_date
 INE001A01036,Housing development finance co,9,0,12924,0,Buy,04-Dec-2018
 INE001B01026,Krbl,5,0,1957,0,Buy,03-Jul-2018
 INE002A01018,Reliance industries,23,7,14059,6083,Buy,09-Nov-2018
