@@ -40,9 +40,9 @@ Minimum investment size : 1 Unit
 
 0 Unit : stock is under watch but there is no plan to acquire it right now.
 
-Format of the data
+Format of the data for plan
 
-* Industry name,  Company, Space, Company Weight, Company_description
+* Comp_Industry ,  Comp_Name, Comp_Ticker, Comp_Weight, Comp_Desc (company description)
 
 NOTE: Try to use just first two words for the company name if that will make it unique in BSE 500.
 
