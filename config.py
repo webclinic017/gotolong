@@ -2,10 +2,19 @@
 import os
 import sys
 
+from dateutil.relativedelta import relativedelta
+import datetime
+
 class Config(object):
 	def __init__(self):
 		super(Config, self).__init__()
 		self.DB_FILENAME = 'equity.sqlite3'
+		# started investment in year 2017
+		start_date = datetime.date(2017, 1, 1)
+		end_date = datetime.date.today()
+		self.INVEST_YEARS = relativedelta(end_date, start_date).years
+		self.INVEST_YEARS += 1
+		# print 'investing for ', self.INVEST_YEARS, ' years'
 
 	def get_root(self):
 		# print globals()

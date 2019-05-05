@@ -14,9 +14,9 @@ class Plan(Amfi):
 	def __init__(self):
 		super(Plan, self).__init__()
 		# years of investing. started in 2017
-		self.multiplier	= 3
+		self.plan_multiply = self.INVEST_YEARS
 		self.plan_comp_units = {}
-		self.industry_units = {}
+		self.plan_indu_units = {}
 		self.debug_level = 0 
 		self.last_row = "" 
 		print 'init : Plan'
@@ -35,10 +35,10 @@ class Plan(Amfi):
 			comp_ticker = row_list[2]
 			comp_weight = row_list[3]
 			comp_desc = row_list[4]
-			if comp_industry in self.industry_units.keys():
-				self.industry_units[comp_industry] = self.industry_units[comp_industry] + comp_weight
+			if comp_industry in self.plan_indu_units.keys():
+				self.plan_indu_units[comp_industry] = self.plan_indu_units[comp_industry] + comp_weight
 			else:
-				self.industry_units[comp_industry] = comp_weight
+				self.plan_indu_units[comp_industry] = comp_weight
 			if self.debug_level > 0:
 				print 'industry ', comp_industry 
 				print 'company name', comp_name 
@@ -50,7 +50,7 @@ class Plan(Amfi):
 				print isin, comp_name
 			if comp_weight >= 0:
 				self.plan_comp_units[isin] = cutil.cutil.get_number(comp_weight)
-				self.plan_comp_units[isin] = self.plan_comp_units[isin] * self.multiplier
+				self.plan_comp_units[isin] = self.plan_comp_units[isin] * self.plan_multiply
 			else:
 				self.plan_comp_units[isin] = 0
 			return
@@ -89,7 +89,7 @@ class Plan(Amfi):
 				print row
 			self.load_plan_row(row)
 
-	def print_phase1(self, out_filename):
+	def plan_dump_ticker(self, out_filename):
 		lines = []
 		fh = open(out_filename, "w") 
 		sorted_items = sorted(self.plan_comp_units, key=self.plan_comp_units.__getitem__, reverse=True)
@@ -115,7 +115,7 @@ class Plan(Amfi):
 		fh.writelines(lines)
 		return
 
-	def print_phase2(self, out_filename, sort_type_rank = None, plus_holdings_only = None, zero_holdings_only = None):
+	def plan_dump_generic(self, out_filename, sort_type_rank = None, plus_holdings = None, zero_holdings = None):
 		total_units = 0
 		cap_units = {}
 		fh = open(out_filename, "w") 
@@ -153,11 +153,11 @@ class Plan(Amfi):
 			except ValueError:
 				print 'except : ValueError :', comp_name
 
-			if plus_holdings_only:
+			if plus_holdings:
 				if units_1k <= 0 :
 					continue
 
-			if zero_holdings_only:
+			if zero_holdings :
 				if units_1k > 0 :
 					continue
 
@@ -226,16 +226,20 @@ class Plan(Amfi):
 		fh.close()
 
 	# print all holdings : plus and zero 
-	def print_phase3(self, out_filename):
-		self.print_phase2(out_filename, True)
+	def plan_dump_sorted_units(self, out_filename):
+		self.plan_dump_generic(out_filename, sort_type_rank=False)
+
+	# print all holdings : plus and zero 
+	def plan_dump_all(self, out_filename):
+		self.plan_dump_generic(out_filename, sort_type_rank=True)
 
 	# print plus holdings only
-	def print_phase4(self, out_filename):
-		self.print_phase2(out_filename, True, True, False)
+	def plan_dump_plus(self, out_filename):
+		self.plan_dump_generic(out_filename, sort_type_rank=True, plus_holdings=True)
 
 	# print zero holdings only
-	def print_phase5(self, out_filename):
-		self.print_phase2(out_filename, True, False, True)
+	def plan_dump_zero(self, out_filename):
+		self.plan_dump_generic(out_filename, sort_type_rank=True, zero_holdings=True)
 
 	def get_plan_comp_units(self, name):
 		if name in self.plan_comp_units:
@@ -249,15 +253,15 @@ class Plan(Amfi):
 	def size_comp_data(self):
 		print len(self.plan_comp_units)
 
-	def get_industry_units(self, name):
-		if name in self.industry_units:
-			return self.industry_units[name]	
+	def get_plan_indu_units(self, name):
+		if name in self.plan_indu_units:
+			return self.plan_indu_units[name]	
 		else:
 			print 'invalid key :', name
 
 	def print_indu_data(self):
-		print self.industry_units
+		print self.plan_indu_units
 
 	def size_indu_data(self):
-		print len(self.industry_units)
+		print len(self.plan_indu_units)
 

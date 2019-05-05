@@ -37,7 +37,8 @@ class Amfi(Database):
 			
 			serial_number = row_list[0]
 			if serial_number == 'Sr. No.':
-				print 'skipped header line', row_list
+				if self.debug_level > 0:
+					print 'skipped header line', row_list
 				return
 			
 			serial_number = cutil.cutil.get_number(serial_number)
