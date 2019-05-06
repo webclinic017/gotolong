@@ -256,6 +256,16 @@ class Demat(Database):
 	def print_phase4(self, out_filename):
 		self.print_phase3(out_filename, True)
 
+	def demat_summary_get_upl_pct_by_isin_code(self, isin_code):
+		if isin_code in self.demat_summary_upl_pct:
+			return self.demat_summary_upl_pct[isin_code]
+		return 0
+
+	def demat_summary_get_acp_by_isin_code(self, isin_code):
+		if isin_code in self.demat_summary_acp:
+			return self.demat_summary_acp[isin_code]
+		return 0
+
 	def get_demat_units_by_isin_code(self, isin_code):
 		if isin_code in self.demat_summary_hold_units:
 			return self.demat_summary_hold_units[isin_code]

@@ -105,7 +105,7 @@ class Tbd(Plan, Demat, Screener):
 	
 	def print_tbd_phase1(self, out_filename, plan_only = None, tbd_only = None, days_filter = None, apply_cond = True, demat_only = None, sort_sale = None, mos = 10):
 		fh = open(out_filename, "w")
-		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
+		fh.write('comp_name, isin, plan_1k, demat_1k, tbd_1k, tbd_pct, last_txn_date, days, type, captype, sc_cmp, sc_myavgiv, upside, upl, acp, sc_dp3, sc_d2e, sc_roe3, sc_roce3, sc_sales5, sc_profit5, sc_peg, sc_pledge, comments\n')
 		# for comp_name in sorted(self.tbd_last_txn_days, key=self.tbd_last_txn_days.__getitem__, reverse=True):
 		if sort_sale:
 			# earlier tbd_crank
@@ -144,6 +144,8 @@ class Tbd(Plan, Demat, Screener):
 					sc_cmp = 0
 					sc_iv = 0
 					sc_myavgiv = 0
+					upl = 0
+					acp = 0
 					sc_dp3 = 0
 					sc_d2e = 0
 					sc_roe3 = 0
@@ -156,6 +158,8 @@ class Tbd(Plan, Demat, Screener):
 					sc_cmp = self.get_sc_cmp_by_sno(isin_code)
 					sc_iv = self.get_sc_iv_by_sno(isin_code)
 					sc_myavgiv = self.get_sc_myavgiv_by_sno(isin_code)
+					upl = self.demat_summary_get_upl_pct_by_isin_code(isin_code)
+					acp = self.demat_summary_get_acp_by_isin_code(isin_code)
 					sc_dp3 = self.get_sc_dp3_by_sno(isin_code)
 					sc_d2e = self.get_sc_d2e_by_sno(isin_code)
 					sc_roe3 = self.get_sc_roe3_by_sno(isin_code)
@@ -191,6 +195,10 @@ class Tbd(Plan, Demat, Screener):
 				p_str += str(sc_myavgiv)
 				p_str += ',' 
 				p_str += str(sc_mos) +' %'
+				p_str += ',' 
+				p_str += str(upl)
+				p_str += ',' 
+				p_str += str(acp)
 				p_str += ',' 
 				p_str += str(sc_dp3)
 				p_str += ',' 
