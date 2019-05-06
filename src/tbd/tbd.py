@@ -37,6 +37,7 @@ class Tbd(Plan, Demat, Screener):
 	def load_tbd_data(self, screener_aliases_filename, screener_filename):
 		self.load_isin_db()
 		self.demat_txn_load_db()
+		self.demat_summary_load_db()
 		self.load_amfi_db()
 		self.load_plan_db()
 		# self.load_isin_data(isin_nse_filename, "nse")
