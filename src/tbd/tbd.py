@@ -36,7 +36,7 @@ class Tbd(Plan, Demat, Screener):
 
 	def load_tbd_data(self, screener_aliases_filename, screener_filename):
 		self.load_isin_db()
-		self.load_demat_db()
+		self.demat_txn_load_db()
 		self.load_amfi_db()
 		self.load_plan_db()
 		# self.load_isin_data(isin_nse_filename, "nse")
@@ -65,7 +65,7 @@ class Tbd(Plan, Demat, Screener):
 				
 				demat_units = int(self.get_demat_units_by_isin_code(isin_code)) 
 				self.tbd_demat_units[comp_name] = demat_units 
-				demat_last_txn_date = self.get_demat_last_txn_date_by_isin_code(isin_code)
+				demat_last_txn_date = self.get_demat_txn_last_date_by_isin_code(isin_code)
 				self.tbd_demat_last_txn_date[comp_name] = demat_last_txn_date 
 				if demat_last_txn_date != '':
 					last_datetime = datetime.datetime.strptime(demat_last_txn_date, '%d-%b-%Y').date()
@@ -76,7 +76,7 @@ class Tbd(Plan, Demat, Screener):
 				
 				self.tbd_last_txn_days[comp_name] = last_txn_days
 				
-				self.tbd_demat_last_txn_type[comp_name] = self.get_demat_last_txn_type_by_isin_code(isin_code)
+				self.tbd_demat_last_txn_type[comp_name] = self.get_demat_txn_last_type_by_isin_code(isin_code)
 				tbd_units = plan_units - demat_units
 				if plan_units <= 0:
 					tbd_pct = 0
@@ -245,8 +245,8 @@ class Tbd(Plan, Demat, Screener):
 						p_str += 'myavgiv eq 0' 
 						p_str += ' and '
 						skip_row = False 
-					if sc_mos >= mos: 
-						p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
+					if sc_mos < mos: 
+						p_str += 'cmp + ' + str(sc_mos) + '%' + '= myavgiv'
 						p_str += ' and '
 						skip_row = False 
 					
@@ -303,7 +303,7 @@ class Tbd(Plan, Demat, Screener):
 							p_str += ' and '
 							check_failed = True
 						if sc_mos >= mos:
-							p_str += 'cmp > myavgiv + ' + str(sc_mos) + '%'
+							p_str += 'cmp + ' + str(sc_mos) + '%' + ' = myavgiv'
 							p_str += ' and '
 							check_failed = True
 						if tbd_units <= 0:
