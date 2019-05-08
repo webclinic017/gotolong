@@ -1,4 +1,14 @@
 To Do Items
+* Ensure that NSE stock symbol is used as an index for reference everywhere.
+* The mos (margin of safety) should be by cap wise similar to ICICI direct recommendation. 
+  * Strong Buy :
+    ** > 15 % - Large
+    ** > 20% - Midcap
+  * Buy : 
+     **  10% to 15%  - Large
+     **  10% to 20% - MidCap
+  * Hold : +/- 10%
+  * Sale : -10% or more
 * Integrate it with SQLlite Relational DB and no-sql Db.
   * push the data once and load it in other dependent classes.
 * Fix the tbd data where screener data is shown as 0
