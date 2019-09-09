@@ -19,8 +19,9 @@ IN_FILE_AMFI=$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv
 IN_FILE_ALIASES=${IN_DIR}/nach-aliases/nach-company-ticker-aliases.csv
 
 
-for FY in fy1617 fy1718 fy1819 all
+for FY in fy1617 fy1718 fy1819 fy1920 all
 do
+      mkdir -p ${OUT_DIR}/${FY}
 
       if [[ "${FY}" == "all" ]]; then
         stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv
