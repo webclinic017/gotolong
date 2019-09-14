@@ -32,6 +32,22 @@ git commit --amend --reset-author
 
 git config --global push.default simple
 
+3.1.1> display config
+
+$ git config --list
+user.name=Surinder Kumar
+user.email=surinder.kumar.432@gmail.com
+credential.helper=cache --timeout 86400
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/surinder432/stock-market.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+credential.helper=store
+
 3.2> credential helper and cache expiry
 
 Avoid asking git username (e-mail) and password for every push. Set cache expiry of 24 hours = 246060 = 86400
@@ -39,6 +55,7 @@ Avoid asking git username (e-mail) and password for every push. Set cache expiry
 git config credential.helper store
 
 git config --global credential.helper 'cache --timeout 86400'
+
 
 3.3> Making changes in git command line
 
