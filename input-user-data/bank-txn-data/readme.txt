@@ -6,6 +6,13 @@
 # Get Statement
 # At bottom :  Download details as XLS file
 # Save it as OpTransactionHistory17-04-2018.xls (automatic name)
+
+# 1> Automatic
+# Do not store .xlsx in git directory for security. use /tmp
+# Use src/dividend/excel_to_csv.py - to get the .csv file
+# Upload OpTransactionHistory-fy1819.csv to stock-market/fy17-18/
+
+# 2> Manual process
 # Open it and Delete first 12 lines
 #   ** This remove personal details information (Name and Account number)
 #   ** line # 4 'Account Number'
