@@ -1,4 +1,4 @@
-# In-Stock-Screener
+# GotoLong
 
 An Indian Stock Screener can be used to identify stocks for buy and sale.
 
