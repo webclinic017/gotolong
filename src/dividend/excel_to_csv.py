@@ -7,7 +7,7 @@ import pandas as pd
 program_name = sys.argv[0]
 
 if len(sys.argv) < 4 :
-   print "usage: " + program_name + " <file.xls> <file.csv> <debug_level>"
+   print("usage: " + program_name + " <file.xls> <file.csv> <debug_level>")
    sys.exit(1) 
 
 excel_file = sys.argv[1]
@@ -18,30 +18,49 @@ debug_level = int(sys.argv[3])
 
 # get worksheet name
 xl = pd.ExcelFile(excel_file)
-print xl.sheet_names
+
+if debug_level > 0:
+	print(xl.sheet_names)
 
 # single worksheet - OpTransactionHistory
 sheet_name = xl.sheet_names[0]
 
-if sheet_name != 'OpTransactionHistory':
-	print "check sheet name"
+if sheet_name != 'OpTransactionHistory' :
+	print("check sheet name")
 	sys.exit(1)
 
 df = xl.parse(sheet_name)
 
-# remove top 10 lines and bottom lines from dataframe
-df = df.iloc[10:]
+# find index of 'Transactions List -' in Unnamed:1 column
+# top_index = map(lambda x: x.find('Transactions List -'), df['Unnamed: 1'])
 
-# change columns from top line
+# print("top_index : " + str(top_index))
+# find index of 'Legends Used in Account Statement' in Unnamed:1 column
+# bottom_index = map(lambda x: x.find('Legends Used in Account Statement'), df['Unnamed: 1'])
+
+# print("bottom_index : " + str(bottom_index))
+
+# remove top 11 lines (ignore logo) from dataframe
+# df = df.iloc[top_index:]
+
+# remove 28 lines from bottom  : exclude Legends data
+# df = df[:bottom_index-1]
+
+# Keep only if Transaction Remarks column is not NA
+df = df[df['Unnamed: 5'].notnull()]
+
+# first line is 'Transaction Date from' : case sensitive
+df = df[df['Unnamed: 1'] != 'Transaction Date from']
+
+# change columns from second line from top
 df.columns = df.iloc[0]
 
-print df.columns
+if debug_level > 0:
+	print("columns : " + df.columns)
 
-# remove the top line that contains column nmae
+# remove the top line that contains column name
 df = df.iloc[1:]
 
-# remove 28 lines from bottom  : Legends data
-df = df[:-28]
 
 # TBD - later
 # remove last column : Balance (INR)
@@ -61,7 +80,7 @@ pattern = "Transaction\ Remarks|ACH/|CMS/"
 filter = df['Transaction Remarks'].str.contains(pattern, regex=True)
 
 if debug_level > 0:
-	print filter
+	print(filter)
 
 df = df[filter]
 
