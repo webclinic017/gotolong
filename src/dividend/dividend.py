@@ -27,7 +27,7 @@ class Dividend(Amfi):
 		self.total_dividend = 0
 		# conglomerate name db
 		self.cong_name_db=[]
-		print 'init : Dividend'
+		print('init : Dividend')
 
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level
@@ -37,25 +37,25 @@ class Dividend(Amfi):
 		# NEFT or RTGS or MMT - Mobile money Transfer	
 		if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
 			if self.debug_level > 2:
-				print 'NEFT-/RTGS-/MMT skipped' + line
+				print('NEFT-/RTGS-/MMT skipped' + line)
 			return True 
 	
 		# CASH deposit
 		if re.match('BY CASH.*', txn_remarks):
 			if self.debug_level > 2:
-				print 'CASH skipped' + line
+				print('CASH skipped' + line)
 			return True 
 	
 		# Interest paid	- anywhere in string
 		if re.search('.*:Int\.Pd:.*', txn_remarks):
 			if self.debug_level > 2:
-				print 'Int.Pd skipped' + line
+				print('Int.Pd skipped' + line)
 			return True 
 	
 		# APBS / BLPGCM : Aadhaar Payment Bridge System for LPG Subsidy
 		if re.match('APBS/.*', txn_remarks):
 			if self.debug_level > 2:
-				print 'APBS skipped' + line
+				print('APBS skipped' + line)
 			return True 
 	
 		return False 
@@ -102,7 +102,7 @@ class Dividend(Amfi):
 		company_name = self.resolve_real_company_name_db(company_name)
 		self.company_orig[company_name] = orig_name
 		if self.debug_level > 1:
-			print 'orig name', orig_name, 'new name', company_name
+			print('orig name', orig_name, 'new name', company_name)
 		return company_name
 
 	def load_real_company_name_db():
@@ -112,7 +112,7 @@ class Dividend(Amfi):
 			name_real = name_real.strip()
 			name_real = name_real.capitalize()
 			if debug_level > 2:
-				print 'real name', name_real 
+				print('real name', name_real)
 			self.company_real_name_db.append(name_real)
 
 	def load_conglomerate_name_db():
@@ -122,7 +122,7 @@ class Dividend(Amfi):
 			name_cong = name_cong.strip()
 			name_cong = name_cong.capitalize()
 			if debug_level > 2:
-				print 'cong name', name_cong
+				print('cong name', name_cong)
 			self.cong_name_db.append(name_cong)
 	
 	def resolve_alias(self, company_name):
@@ -138,7 +138,7 @@ class Dividend(Amfi):
 		for real_company_name in self.company_real_name_db:
 			if company_name.find(real_company_name, 0) >= 0:
 				if debug_level > 2:
-					print 'replaced from ', company_name, 'to ', real_company_name
+					print('replaced from ', company_name, 'to ', real_company_name)
 				company_name = real_company_name
 				return company_name
 		return company_name
@@ -149,9 +149,9 @@ class Dividend(Amfi):
 		line = re.sub(r'Ltd,','Ltd',line)
 		
 		try:
-		  empty1, sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount, balance, empty2  = line.split(",")
+		  sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount  = line.split(",")
 		except ValueError:
-			print 'ValueError ', line
+			print('ValueError ', line)
 	
 		# avoid cases where txn_remarks itself is double quoted
 		txn_remarks = re.sub(r'"','', txn_remarks);
@@ -159,16 +159,16 @@ class Dividend(Amfi):
 		if txn_remarks == "":
 			if line != "":
 				if debug_level > 1:
-					   print 'empty ' + line
+					   print('empty ' + line)
 			return	
 	
 		if self.debug_level > 1:
-			print 'txn_remarks '+ txn_remarks
+			print('txn_remarks '+ txn_remarks)
 			# pass	
 	
 		if self.ignore_txn(line, txn_remarks):
 			if self.debug_level > 2:
-				print 'ignored ', txn_remarks
+				print('ignored ', txn_remarks)
 			return	
 	
 		if re.match('ACH/.*|CMS/.*', txn_remarks):
@@ -181,18 +181,18 @@ class Dividend(Amfi):
 					comment_str = remarks_arr[2]
 				# ignore rest
 			except ValueError:
-				print 'ValueError ' + txn_remarks
+				print('ValueError ' + txn_remarks)
 	
 			# print company_name, deposit_amount
 			company_name = self.normalize_company_name(company_name)
 			if self.debug_level > 1: 
-				print 'normalized :', company_name
+				print('normalized :', company_name)
 			isin  = self.get_amfi_isin_by_name(company_name)
 			if self.debug_level > 1: 
-				print ' isin :', isin 
+				print(' isin :', isin)
 			ticker = self.get_amfi_ticker_by_code(isin)
 			if self.debug_level > 1: 
-				print ' ticker :', ticker
+				print(' ticker :', ticker)
 			if ticker != "UNK_TICKER" :
 				company_name = ticker
 	
@@ -200,38 +200,38 @@ class Dividend(Amfi):
 	
 			if company_name in self.dividend_amount.keys():
 				if self.debug_level > 1:                 
-					print 'dividend amount :', self.dividend_amount[company_name]
-					print 'deposit amount :', deposit_amount 
+					print('dividend amount :', self.dividend_amount[company_name])
+					print('deposit amount :', deposit_amount)
 				self.dividend_amount[company_name] = int(self.dividend_amount[company_name]) + int(float(deposit_amount))
 			else:
 				self.dividend_amount[company_name] = int(float(deposit_amount))
 			return	
 	
 		if self.debug_level > 1:
-			print 'Unknown skipped' + line
+			print('Unknown skipped' + line)
 		return	
 
 	def load_dividend_data(self, in_filenames):
 		for in_filename in in_filenames:
 			if self.debug_level > 1:
-				print  'div file', in_filename
+				print('div file', in_filename)
 			file_obj = open (in_filename, "r")
 			for line in file_obj:
 				if self.debug_level > 1:
-					print 'div line', line
+					print('div line', line)
 				self.load_dividend_row(line)
-		print 'loaded dividend', len (self.dividend_amount)
+		print('loaded dividend', len (self.dividend_amount))
 
 	def load_aliases_row(self, row):
 		try:
 			name_alias, ticker = row
 		except ValueError:
-			print 'ValueError ', row 
+			print('ValueError ', row)
 		
 		name_alias = name_alias.strip().capitalize()
 		ticker = ticker.strip().upper()
 		if self.debug_level > 2: 
-			print 'alias ', name_alias, 'ticker ', ticker 
+			print('alias ', name_alias, 'ticker ', ticker)
 		self.company_aliases[name_alias] = ticker 
 
 	def load_aliases_data(self, in_filename):
@@ -239,11 +239,11 @@ class Dividend(Amfi):
 			reader = csv.reader(csvfile)
 			for row in reader:
 				self.load_aliases_row(row)
-		print 'loaded aliases', len (self.company_aliases)
+		print('loaded aliases', len (self.company_aliases))
 
 	def dump_orig(self, out_filename):
 		if self.debug_level > 2: 
-			print self.company_orig
+			print(self.company_orig)
 		lines = []
 		fh = open(out_filename, "w") 
 		for comp_name in self.company_orig.keys():

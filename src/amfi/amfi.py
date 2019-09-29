@@ -23,7 +23,7 @@ class Amfi(Database):
 		self.amfi_ticker = {}
 		self.amfi_mcap = {}
 		self.amfi_captype = {}
- 		self.debug_level = 0 
+		self.debug_level = 0 
 
 	def set_debug_level(self, debug_level):
  		self.debug_level = debug_level
@@ -32,13 +32,13 @@ class Amfi(Database):
 		try:
 			row_list = row
 			if len(row_list) == 0:
-				print 'ignored empty row', row_list
+				print('ignored empty row', row_list)
 				return
 			
 			serial_number = row_list[0]
 			if serial_number == 'Sr. No.':
 				if self.debug_level > 0:
-					print 'skipped header line', row_list
+					print('skipped header line', row_list)
 				return
 			
 			serial_number = cutil.cutil.get_number(serial_number)
@@ -61,12 +61,12 @@ class Amfi(Database):
 			comp_name = cutil.cutil.normalize_comp_name(comp_name)
 			
 			if self.debug_level > 1:
-				print 'serial_number : ', serial_number	
-				print 'isin_number: ', isin_number
-				print 'comp_ticker : ', comp_ticker
-				print 'avg_mcap : ', avg_mcap 
-				print 'captype : ', captype 
-				print 'comp_name : ', comp_name
+				print('serial_number : ', serial_number	)
+				print('isin_number: ', isin_number)
+				print('comp_ticker : ', comp_ticker)
+				print('avg_mcap : ', avg_mcap )
+				print('captype : ', captype )
+				print('comp_name : ', comp_name)
 			
 			self.amfi_rank[isin_number] = serial_number
 			self.amfi_cname[isin_number] = comp_name 
@@ -76,13 +76,13 @@ class Amfi(Database):
 			self.amfi_isin.append(isin_number)
 			
 			if self.debug_level > 1:
-				print 'comp_name : ', comp_name , '\n'
-				print 'isin_number: ', isin_number, '\n'
+				print('comp_name : ', comp_name , '\n')
+				print('isin_number: ', isin_number, '\n')
 			
 		except IndexError:
-			print 'except ', row
+			print('except ', row)
 		except:
-			print 'except ', row
+			print('except ', row)
 			traceback.print_exc()
 		
 	def load_amfi_data(self, in_filename):
@@ -92,8 +92,8 @@ class Amfi(Database):
 		if row_count == 0:
 			self.insert_amfi_data(in_filename)
 		else:
-			print 'amfi data already loaded in db', row_count
-		print 'display db data'
+			print('amfi data already loaded in db', row_count)
+		print('display db data')
 		self.load_amfi_db()
 		
 	def insert_amfi_data(self, in_filename):	
@@ -112,17 +112,17 @@ class Amfi(Database):
 		cursor = self.db_table_load(table)
 		for row in cursor.fetchall():
 			if self.debug_level > 1 :
-				print row
+				print(row)
 			self.load_amfi_row(row)
 
 	def print_phase1(self, out_filename):
 		if self.debug_level > 0:
-			print 'filename ', out_filename
+			print('filename ', out_filename)
 		fh = open(out_filename, "w") 
 		fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
 		for amfi_isin in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
 			if self.debug_level > 1:
-				print 'isin ', amfi_isin
+				print('isin ', amfi_isin)
 			p_str = str(self.amfi_rank[amfi_isin])
 			p_str += ', ' 
 			p_str += self.amfi_cname[amfi_isin]
@@ -146,16 +146,16 @@ class Amfi(Database):
 			comp_name = comp_name.strip()
 			if re.match(req_name, comp_name):
 				if self.debug_level > 1:
-					print 'found match : name : ', req_name
+					print('found match : name : ', req_name)
 				return amfi_isin
 			if amfi_isin in  self.amfi_ticker:
 				ticker_symbol = self.amfi_ticker[amfi_isin]
 				if req_name.upper() == ticker_symbol :
 					if self.debug_level > 1:
-						print 'found ticker : ', req_name
+						print('found ticker : ', req_name)
 					return amfi_isin	
 		if self.debug_level > 1:
-			print 'amfi : comp not found : req_name :',req_name,':'
+			print('amfi : comp not found : req_name :',req_name,':')
 		return ''
 
 	def get_amfi_captype_by_code(self, amfi_isin):

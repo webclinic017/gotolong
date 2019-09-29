@@ -8,8 +8,11 @@
 # Save it as OpTransactionHistory17-04-2018.xls (automatic name)
 
 # 1> Automatic
-# Do not store .xlsx in git directory for security. use /tmp
-# Use src/dividend/excel_to_csv.py - to get the .csv file
+# Do not store .xlsx in git directory for security.
+# Use D:\Google Drive\my_personal_pack\invest\Equity\icici-bank-txn-data\in-xls
+# Use D:\Google Drive\my_personal_pack\invest\Equity\icici-bank-txn-data\xls-to-csv.sh to get .csv from .xls
+# It uses src/dividend/excel_to_csv.py - to get the .csv file
+# Copy out-csv directory contents to D:\Google Drive\my_github\GitHub\gotolong\input-user-data\bank-txn-data
 # Upload OpTransactionHistory-fy1819.csv to stock-market/fy17-18/
 
 # 2> Manual process

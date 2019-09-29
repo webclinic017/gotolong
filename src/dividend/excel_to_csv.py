@@ -52,6 +52,12 @@ df = df[df['Unnamed: 5'].notnull()]
 # first line is 'Transaction Date from' : case sensitive
 df = df[df['Unnamed: 1'] != 'Transaction Date from']
 
+# remove first column (NaN before S.No) - axis 1 is column, 0 is row
+df.drop(df.columns[0], axis=1, inplace=True)
+
+# remove last column : Balance (INR)
+df = df.iloc[:, :-1]
+
 # change columns from second line from top
 df.columns = df.iloc[0]
 
@@ -61,16 +67,12 @@ if debug_level > 0:
 # remove the top line that contains column name
 df = df.iloc[1:]
 
-
-# TBD - later
-# remove last column : Balance (INR)
-# df = df.iloc[:, :-1]
 # For backward compatibility
 # Currently, clear the value in last column  : Balance(INR)
-df['Balance (INR)'] = 0
+# df['Balance (INR)'] = 0
 
 # Add a dummy column - for backward compatibility
-df[''] = ''
+# df[''] = ''
 
 # Keep only ACH and CMS for dividend transfer
 # remove transactions with remarks ':Int.Pd:' and 'BY CASH', MMT (IMPS), EBA etc

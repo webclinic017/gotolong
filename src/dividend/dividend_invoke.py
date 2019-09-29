@@ -8,12 +8,14 @@ import dividend
 
 from operator import itemgetter
 
+import glob
+
 # Main caller
 program_name = sys.argv[0]
 
 if len(sys.argv) < 6 :
-   print "usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <dividend.csv> ... "
-   sys.exit(1) 
+	print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <dividend.csv> ... ")
+	sys.exit(1) 
 
 debug_level = int(sys.argv[1])
 in_amfi_filename = sys.argv[2]
@@ -23,11 +25,11 @@ out_filename_phase1 = sys.argv[5]
 out_filename_phase2 = sys.argv[6]
 out_filename_phase3 = sys.argv[7]
 out_filename_phase4 = sys.argv[8]
-in_dividend_filenames = sys.argv[9:]
+in_dividend_filenames = sys.argv[9]
 	
 if debug_level > 1 :
-	print 'args :' , len(sys.argv)
-        print 'in_dividend_filenames :', in_dividend_filenames
+	print('args :' , len(sys.argv))
+	print('in_dividend_filenames :' + in_dividend_filenames)
 
 dividend = dividend.Dividend()
 
@@ -36,7 +38,8 @@ dividend.set_debug_level(debug_level)
 dividend.load_amfi_db()
 #dividend.load_amfi_data(in_amfi_filename)
 dividend.load_aliases_data(in_aliases_filename)
-dividend.load_dividend_data(in_dividend_filenames)
+# expand * for all
+dividend.load_dividend_data(glob.glob(in_dividend_filenames))
 
 dividend.dump_orig(out_filename_phase0)
 dividend.print_phase1(out_filename_phase1)

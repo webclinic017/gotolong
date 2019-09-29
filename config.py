@@ -20,7 +20,8 @@ class Config(object):
 		# print globals()
 		# print '__file__ : ', __file__
 		config_root = os.path.abspath(os.path.dirname(__file__))
-		# print config_root
+		config_root = config_root.replace("Google Drive",r"""'Google Drive'""")
+		# print(config_root)
 		return config_root
 
 	def get_src(self):
@@ -50,18 +51,18 @@ if __name__ == "__main__":
 
 	cmd = sys.argv[1]
 	if cmd == "root" : 
-		print config.get_root()
+		print(config.get_root())
 	elif cmd == "src" : 
-		print config.get_src()
+		print(config.get_src())
 	elif cmd == "data" : 
-		print config.get_data()
+		print(config.get_data())
 	elif cmd == "reports" : 
-		print config.get_reports()
+		print(config.get_reports())
 	elif cmd == "profile_data" : 
-		print config.get_profile_data()
+		print(config.get_profile_data())
 	elif cmd == "profile_reports" : 
-		print config.get_profile_reports()
+		print(config.get_profile_reports())
 	elif cmd == "db_files" : 
-		print config.get_db_files()
+		print(config.get_db_files())
 	elif cmd == "db_schema" : 
-		print config.get_db_schema()
+		print(config.get_db_schema())
