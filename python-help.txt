@@ -1,0 +1,61 @@
+
+1. Install python 3.7.4 from python.org
+
+pip install pandas
+
+pip install xlrd
+
+
+2. python -m pip install --upgrade pip
+
+
+D:\Google Drive\my_personal_pack\invest\Equity\icici-bank-txn-data\fy1617>
+
+d:\> python "D:\Google Drive\my_github\GitHub\gotolong\src\dividend\excel_to_csv.py" OpTransactionHistory-fy1617.xls OpTransactionHistory-fy1617.csv 0
+
+D:\Google Drive\my_personal_pack\invest\Equity\icici-bank-txn-data\fy1617>python -m pdb  "D:\Google Drive\my_github\GitHub\gotolong\src\dividend\excel_to_csv.py" OpTransactionHistory-fy1617.xls OpTransactionHistory-fy1617.csv 1
+
+
+3.  Python with debugger
+
+python -m pdb x.py
+
+4. To introduce single quote and double quote. This is required in GIT BASH for 'Google Drive' as that is in path.
+
+use r with """" (triple quotes) and can embed either single quote or double quote.
+
+use r""" """
+
+4. python : expand file names using * etc in the path.
+
+import glob
+glob.glob(path)
+
+5. windows port
+   5.1 use python x.py instead of /usr/bin/python in .py file.
+   5.2 handle Google Drive with a space by renaming it to GoogleDrive otherwise GitBash and .py modules will continue to get confused.
+
+6. Migration to 3.7 from 2.*
+   6.1 The print has been converted to a function so print must be enclosed in () like print('hello')
+
+7. dataframe tips
+   7.1> exclude columns with NaN
+
+# Keep only if Transaction Remarks column is not NA
+df = df[df['Unnamed: 5'].notnull()]
+
+7.2> exclude columns with special content
+# first line is 'Transaction Date from' : case sensitive
+df = df[df['Unnamed: 1'] != 'Transaction Date from']
+
+7.3> drop first column (column with an index)
+# remove first column (NaN before S.No) - axis 1 is column, 0 is row
+df.drop(df.columns[0], axis=1, inplace=True)
+
+7.4> drop last column
+# remove last column : Balance (INR)
+df = df.iloc[:, :-1]
+
+7.5> set columns
+# change columns from second line from top
+df.columns = df.iloc[0]

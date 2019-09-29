@@ -300,7 +300,7 @@ class Dividend(Amfi):
 			for key, value in sorted(self.dividend_amount.items(), key=itemgetter(1)) :
 				p_str = key
 				p_str += ','
-				p_str += str(value)
+				p_str += str(comp_freq[key])
 				p_str += ','
 				p_str += str(self.dividend_amount[key]) 
 				p_str += '\n'
