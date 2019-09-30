@@ -12,6 +12,8 @@ import csv
 from collections import Counter
 from operator import itemgetter
 
+import glob
+
 import argparse
 
 parser = argparse.ArgumentParser(description='Process arguments')
@@ -25,14 +27,14 @@ parser.add_argument('--bonus_file', nargs='+', dest='bonus_file', help='bonus fi
 
 args = parser.parse_args()
 
-# print args
+# print(args)
 
 
 program_name = sys.argv[0]
 
 """
 if len(sys.argv) < 6 :
-   print "usage: " + program_name + " <out_plain | out_csv> <sort_frequency| sort_frquency_name_only|sort_amount|company_name_only> <summary_yes|sumary_no> <debug_level : 1-4> <dividend-bse.csv> ... "
+   print("usage: " + program_name + " <out_plain | out_csv> <sort_frequency| sort_frquency_name_only|sort_amount|company_name_only> <summary_yes|sumary_no> <debug_level : 1-4> <dividend-bse.csv> ... ")
    sys.exit(1) 
 
 out_type= sys.argv[1]
@@ -46,11 +48,12 @@ out_type= args.out_type
 sort_type= args.sort_type 
 summary_type= args.summary_type 
 debug_level= args.debug_level 
-bonus_filenames = args.bonus_file
-dividend_filenames = args.dividend_file
+# use the argument as pattern
+bonus_filenames = glob.glob(args.bonus_file[0])
+dividend_filenames = glob.glob(args.dividend_file[0])
 
-# print 'bonus_filenames', bonus_filenames
-# print 'dividend_filenames', dividend_filenames
+# print('bonus_filenames', bonus_filenames)
+# print('dividend_filenames', dividend_filenames)
 
 # Error-1, Warn-2, Log-3
 companies=[]
@@ -66,42 +69,42 @@ def load_dividend(row, company_name, purpose):
 		m = re.search("(.*)(Dividend - Rs. -)(.*)", purpose)
 		if m.group(2) != "Dividend - Rs. -" :
 			if debug_level > 1:
-				print 'no dividend match', row 
+				print('no dividend match', row)
 			return
 		else:
 			companies.append(company_name)
 
-        	if company_name in dividend_amount.keys():
+		if company_name in dividend_amount.keys():
 			dividend_amount[company_name] =  int(dividend_amount[company_name]) + int(float(m.group(3)))
 		else:
 			dividend_amount[company_name] =  int(float(m.group(3)))
 	except NameError :
 		if debug_level > 1:
-			print 'NameError', row
+			print('NameError', row)
 	except AttributeError:
 		if debug_level > 1:
-			print 'AttributeError', row
+			print('AttributeError', row)
 
 def load_bonus(row, company_name, purpose):
 	try:
 		m = re.search("(Bonus issue)(.*)", purpose)
 		if m.group(1) != "Bonus issue":
 			if debug_level > 1:
-				print 'no bonus match', row 
+				print('no bonus match', row )
 			return
 		else:
 			companies.append(company_name)
 
-        	if company_name in bonus_share.keys():
+		if company_name in bonus_share.keys():
 			bonus_share[company_name] =  bonus_share[company_name] +' &' + m.group(2)
 		else:
 			bonus_share[company_name] =  m.group(2) 
 	except NameError :
 		if debug_level > 1:
-			print 'NameError', row
+			print('NameError', row)
 	except AttributeError:
 		if debug_level > 1:
-			print 'AttributeError', row
+			print('AttributeError', row)
 
 
 def load_row(data_type, row):
@@ -129,7 +132,7 @@ companies.sort()
 
 if sort_type == "company_name_only": 
 	for cname in sorted(set(companies)):
-		print cname
+		print(cname)
 
 # calculate frequency of occurence of each company
 comp_freq = Counter(companies)
@@ -139,10 +142,10 @@ if debug_level > 1:
 
 if sort_type == "sort_frequency_name_only" :
 	for key, value in sorted(comp_freq.items()):
-		print key
+		print(key)
 
 if sort_type == "sort_frequency" :
-	print 'company_name, company_frequency, company_dividend, company_bonus'
+	print('company_name, company_frequency, company_dividend, company_bonus')
 	try:
 		for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
 			if key in bonus_share.keys():
@@ -157,14 +160,14 @@ if sort_type == "sort_frequency" :
 				dividend_column=0
 			
 			if out_type == "out_csv" :
-				print key,',', value, ',', dividend_column, ',', bonus_column
+				print(key,',', value, ',', dividend_column, ',', bonus_column)
 			else:
-				print key, value, dividend_column, bonus_column
+				print(key, value, dividend_column, bonus_column)
 	except KeyError:
-		print 'failed key : ', key 
+		print('failed key : ', key )
 
 if sort_type == "sort_amount" :
-	print 'company_name, company_dividend, company_bonus, company_frequency'
+	print('company_name, company_dividend, company_bonus, company_frequency')
 	try:
 		for key, value in sorted(dividend_amount.items(), key=itemgetter(1)):
 			if key in bonus_share.keys():
@@ -178,8 +181,8 @@ if sort_type == "sort_amount" :
 				dividend_column=0
 			
 			if out_type == "out_csv" :
-				print key,',', value, ',', bonus_column, ',', comp_freq[key]
+				print(key,',', value, ',', bonus_column, ',', comp_freq[key])
 			else:
-				print key, value, bonus_column, comp_freq [key]
+				print(key, value, bonus_column, comp_freq [key])
 	except KeyError:
-		print 'failed key :', key 
+		print('failed key :', key )

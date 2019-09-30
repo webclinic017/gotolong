@@ -59,3 +59,31 @@ df = df.iloc[:, :-1]
 7.5> set columns
 # change columns from second line from top
 df.columns = df.iloc[0]
+
+8. arguments using argument specifier : argparse module
+
+import argparse
+
+parser = argparse.ArgumentParser(description='Process arguments')
+# dest= not required as option itself is the destination in args
+parser.add_argument('--out_type', default='out_plain', help='out_plain | out_csv')
+parser.add_argument('--sort_type', default='sort_frequency', help='sort_frequency')
+parser.add_argument('--summary_type', default='summary_yes|summary_no', help='summary_yes')
+parser.add_argument('--debug_level', default='0', help='debug level 0|1|2|3', type=int, choices=[0, 1, 2, 3])
+parser.add_argument('--dividend_file', nargs='+', dest='dividend_file', help='dividend file')
+parser.add_argument('--bonus_file', nargs='+', dest='bonus_file', help='bonus file')
+
+args = parser.parse_args()
+# print(args)
+
+program_name = sys.argv[0]
+
+out_type= args.out_type
+sort_type= args.sort_type
+summary_type= args.summary_type
+debug_level= args.debug_level
+# use the argument as pattern
+bonus_filenames = glob.glob(args.bonus_file[0])
+dividend_filenames = glob.glob(args.dividend_file[0])
+
+9.
