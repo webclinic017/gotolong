@@ -10,7 +10,8 @@ debug_level=1
 in_dir=in-xls
 out_dir=out-csv
 
-bank=icici-bank
+# moved bank to up level
+#bank=icici-bank
 
 for fy_dir in `ls ${in_dir}`
 do

@@ -10,7 +10,7 @@ import isin
 program_name = sys.argv[0]
 
 if len(sys.argv) < 4 :
-   print "usage: " + program_name + " <debug_level : 1-4> <isin.csv> ... "
+   print("usage: " + program_name + " <debug_level : 1-4> <isin.csv> ... ")
    sys.exit(1) 
 
 debug_level = int(sys.argv[1])
@@ -19,7 +19,7 @@ nse_filename = sys.argv[3]
 out_filename = sys.argv[4]
 	
 if debug_level > 1 :
-	print 'args :' , len(sys.argv)
+	print('args :' , len(sys.argv))
 
 isin = isin.Isin()
 

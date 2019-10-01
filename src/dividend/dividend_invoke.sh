@@ -16,7 +16,7 @@ IN_DIR=$CONFIG_PROFILE_DATA_LOC/bank-txn-data
 OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/dividend-reports
 
 IN_FILE_AMFI="$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv"
-IN_FILE_ALIASES=${IN_DIR}/nach-aliases/nach-company-ticker-aliases.csv
+IN_FILE_ALIASES=${IN_DIR}/${BANK}/nach-aliases/nach-company-ticker-aliases.csv
 
 
 # excluded all : as it doesn't work on windows
@@ -27,10 +27,10 @@ do
 
       if [[ "${FY}" == "all" ]]; then
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv
-	IN_FILE_1=${IN_DIR}/*/${BANK}/OpTransactionHistory-*.csv
+	IN_FILE_1=${IN_DIR}/${BANK}/*/OpTransactionHistory-*.csv
       else
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv
-	IN_FILE_1=${IN_DIR}/${FY}/${BANK}/OpTransactionHistory-${FY}.csv
+	IN_FILE_1=${IN_DIR}/${BANK}/${FY}/OpTransactionHistory-${FY}.csv
       fi
 
       OUT_FILE_0=$OUT_DIR/${FY}/${FY}-name_map.csv

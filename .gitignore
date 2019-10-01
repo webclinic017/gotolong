@@ -1,3 +1,5 @@
 
+in-xls
+*.xls
 *.pyc
 *.key

@@ -1,6 +1,9 @@
 To Do Items
 * Port it for windows
 * Port it for Python 3* from Python 2*
+* Fix the dividend in bse-data as we should know the CMP on that day to normalize over 1K of investment.
+  * Is the dividend value of any use otherwise (if it is per share) ?
+
 * Ensure that NSE stock symbol is used as an index for reference everywhere.
 * The mos (margin of safety) should be by cap wise similar to ICICI direct recommendation. 
   * Strong Buy :
