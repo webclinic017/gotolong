@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
-FILE=$1
+
+
+# get rid of the program name
+shift
+
+echo files : $*
 
 # replace print ... with print()
 
-perl -p -i -e 's/print (.*)$/print\($1\)\$/g' $1
-
+for file in $*
+do
+  unix2dos $file
+  perl -p -i -e 's/print (.*)$/print\($1\)\$/g' $file
+done
