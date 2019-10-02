@@ -27,7 +27,7 @@ class Demat(Database):
 		self.demat_summary_upl_pct = {}
 		self.demat_summary_hold_units	= {}
 		self.debug_level = 0 
-		print 'init : Demat'
+		print('init : Demat')
 
 	def set_debug_level(self, debug_level):
 		self.debug_level = debug_level 
@@ -60,7 +60,7 @@ class Demat(Database):
 			p_str += '\n'
 			
 			if self.debug_level > 1:
-				print p_str
+				print(p_str)
 			
 			if isin_code in self.demat_txn_list:	
 				self.demat_txn_list[isin_code] += p_str	
@@ -89,14 +89,14 @@ class Demat(Database):
 				self.demat_txn_last_date[isin_code]  = txn_date 
 	
 		except:
-			print "demat Unexpected error:", sys.exc_info()
+			print("demat Unexpected error:", sys.exc_info())
 
 
 	def demat_summary_load_row(self, row):
 		try:
 			row_list = row
-			# skip header
-			if row_list[0] == 'Stock Symbol':
+                        # skip header : sometime Stock Symbol appears as 'tock Symbol'
+			if row_list[0] == 'Stock Symbol' or row_list[1] == 'Company Name':
 				return
 			comp_name = row_list[1]
 			isin_code   = (row_list[2]).upper().strip()
@@ -113,14 +113,14 @@ class Demat(Database):
 			self.demat_summary_qty[isin_code] = qty 
 			self.demat_summary_acp[isin_code] = acp
 			self.demat_summary_upl_pct[isin_code] = unrealized_pl_pct 
-			if qty > 0:
+			if int(qty) > 0:
 				hold_units = int(round(float(qty)*float(acp)/1000))
 			else:
 				hold_units = 0
 			# store 
 			self.demat_summary_hold_units[isin_code] = hold_units
 		except:
-			print "demat_summary_load_row Unexpected error:", sys.exc_info(), row
+			print("demat_summary_load_row Unexpected error:", sys.exc_info(), row)
 			
 	def demat_txn_load_data(self, in_filename):
 		table = "demat_txn"
@@ -128,8 +128,8 @@ class Demat(Database):
 		if row_count == 0:
 			self.demat_txn_insert_data(in_filename)
 		else:
-			print 'demat_txn data already loaded in db', row_count
-		print 'display db data'
+			print('demat_txn data already loaded in db', row_count)
+		print('display db data')
 		self.demat_txn_load_db()
 
 
@@ -139,8 +139,8 @@ class Demat(Database):
 		if row_count == 0:
 			self.demat_summary_insert_data(in_filename)
 		else:
-			print 'demat_summary data already loaded in db', row_count
-		print 'display db data'
+			print('demat_summary data already loaded in db', row_count)
+		print('display db data')
 		self.demat_summary_load_db()
 
 	def demat_txn_insert_data(self, in_filename):	
@@ -171,7 +171,7 @@ class Demat(Database):
 		cursor = self.db_table_load(table)
 		for row in cursor.fetchall():
 			if self.debug_level > 1 :
-				print row
+				print(row)
 			self.demat_txn_load_row(row)
 		# self.demat_txn_prepare_data()
 
@@ -181,7 +181,7 @@ class Demat(Database):
 		cursor = self.db_table_load(table)
 		for row in cursor.fetchall():
 			if self.debug_level > 1 :
-				print row
+				print(row)
 			self.demat_summary_load_row(row)
 		# self.prepare_demat_data()
 
@@ -191,7 +191,7 @@ class Demat(Database):
 		fh.write('isin_code, comp_name, action, qty, price, txn_date\n')
 		for isin_code in sorted(self.demat_txn_list):
 			if self.debug_level > 1:
-				print 'dumping isin', isin_code
+				print('dumping isin', isin_code)
 			fh.write(self.demat_txn_list[isin_code])
 		fh.close()
 
@@ -240,14 +240,17 @@ class Demat(Database):
 			p_str += ','
 			p_str += str(self.demat_summary_acp[isin_code])
 			p_str += ','
-			p_str += str(self.demat_summary_hold_units[isin_code])
+			if isin_code in self.demat_summary_hold_units:
+				p_str += str(self.demat_summary_hold_units[isin_code])
+			else:
+				p_str += '0' 
 			p_str += ','
 			p_str += self.demat_txn_last_type[isin_code] 
 			p_str += ','
 			p_str += self.demat_txn_last_date[isin_code] 
 			p_str += '\n'
 			if positive_holdings:
-				if self.demat_summary_qty[isin_code] > 0:
+				if int(self.demat_summary_qty[isin_code]) > 0:
 					fh.write(p_str)
 			else:
 				fh.write(p_str)

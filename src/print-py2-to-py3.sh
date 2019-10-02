@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-
-
-# get rid of the program name
-shift
-
 echo files : $*
 
 # replace print ... with print()
@@ -12,5 +7,7 @@ echo files : $*
 for file in $*
 do
   unix2dos $file
-  perl -p -i -e 's/print (.*)$/print\($1\)\$/g' $file
+  perl -p -i -e 's/print (.*)$/print\($1\)/g' $file
+  dos2unix $file
+  perl -p -i -e 's///g' $file
 done

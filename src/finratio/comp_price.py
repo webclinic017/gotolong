@@ -98,11 +98,11 @@ def get_pscore_iv(cmp, iv):
 	elif iv > cmp :
 		low = cmp
 		high = iv 
-	        score = get_offset_pscore(low, high, pos=True)
+		score = get_offset_pscore(low, high, pos=True)
 	elif iv < cmp :
 		high = cmp
 		low = iv
-	        score = get_offset_pscore(low, high, pos=False)
+		score = get_offset_pscore(low, high, pos=False)
 	return score
 
 def get_pscore_graham(cmp, graham):
@@ -113,9 +113,9 @@ def get_pscore_graham(cmp, graham):
 	elif graham > cmp :
 		low = cmp
 		high = graham
-	        score = get_offset_pscore(low, high, pos=True)
+		score = get_offset_pscore(low, high, pos=True)
 	elif graham < cmp :
 		high = cmp
 		low = graham
-	        score = get_offset_pscore(low, high, pos=False)
+		score = get_offset_pscore(low, high, pos=False)
 	return score

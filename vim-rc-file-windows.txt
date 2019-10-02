@@ -1,0 +1,11 @@
+
+In case the tab is being replaced with the spaces in the .py file,
+
+1> set following in ~/.vimrc file
+
+set softtabstop=0
+set noexpandtab
+
+2>  To see the order of files
+vim --version | grep vimrc
+

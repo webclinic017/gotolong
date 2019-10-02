@@ -12,7 +12,7 @@ OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-2.csv
 OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-3.csv
 OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-4.csv
 
-demat_invoke.py ${DEBUG_LEVEL} ${IN_FILE_TXN} ${IN_FILE_SUMMARY} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} 
+python demat_invoke.py ${DEBUG_LEVEL} ${IN_FILE_TXN} ${IN_FILE_SUMMARY} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} 
 
 # gather stats
 OUT_FILE_YEAR=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/stats_year_output.csv
