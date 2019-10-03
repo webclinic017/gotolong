@@ -21,7 +21,7 @@ print(df.tail(60))
 forecast_out = int(30) # predicting 30 days into future
 
 #  label column with data shifted 30 units up
-df['Prediction'] = df[['Adj. Close']].shift(-forecast_out)
+df['Prediction'] = df[['Adj. Close']].shift(-forecast_out) 
 
 print 'dataframe : with prediction label'
 print(df)
@@ -85,3 +85,4 @@ print X
 
 forecast_prediction = model.predict(X_forecast)
 print(forecast_prediction)
+

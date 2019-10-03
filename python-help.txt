@@ -86,4 +86,14 @@ debug_level= args.debug_level
 bonus_filenames = glob.glob(args.bonus_file[0])
 dividend_filenames = glob.glob(args.dividend_file[0])
 
-9.
+9. reindent (replace tabs with 4 whitespaces)
+-r recursively
+directory - for all files in that directory
+
+python $(dirname `which python`)/Tools/scripts/reindent.py -r .
+
+10. 2-d python array
+
+XYZ_2d[row, column] = 1
+
+11.

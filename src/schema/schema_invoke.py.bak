@@ -10,15 +10,15 @@ import schema
 program_name = sys.argv[0]
 
 if len(sys.argv) < 3 :
-    print "usage: " + program_name + " <debug_level : 1-4> <schema.csv> ... "
-    sys.exit(1)
+   print "usage: " + program_name + " <debug_level : 1-4> <schema.csv> ... "
+   sys.exit(1) 
 
 debug_level = int(sys.argv[1])
 schema_filename = sys.argv[2]
 #db_filename = sys.argv[3]
-
+	
 if debug_level > 1 :
-    print 'args :' , len(sys.argv)
+	print 'args :' , len(sys.argv)
 
 schema = schema.Schema()
 

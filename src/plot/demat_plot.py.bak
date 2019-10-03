@@ -23,7 +23,7 @@ mode   = sys.argv[1]
 in_file = sys.argv[2]
 
 if mode == 'offline':
-    out_file = sys.argv[3]
+	out_file = sys.argv[3]
 
 plotly_api_key = os.environ.get('PLOTLY_API_KEY').rstrip()
 
@@ -55,7 +55,7 @@ trace3 = go.Bar(x = df['YEAR'], y = df['Portfolio'], name='Portfolio')
 
 
 # layout = go.Layout(title='Portfolio',
-#                   plot_bgcolor='rgb(230, 230,230)',
+#                   plot_bgcolor='rgb(230, 230,230)', 
 #                   showlegend=True)
 
 layout = go.Layout(
@@ -67,7 +67,7 @@ layout = go.Layout(
 fig = go.Figure(data=[trace1, trace2, trace3], layout=layout)
 
 if mode == 'offline' :
-    offline.iplot(fig, filename='portfolio-bar')
-    pio.write_image(fig, out_file)
+	offline.iplot(fig, filename='portfolio-bar')
+	pio.write_image(fig, out_file)
 else:
-    py.iplot(fig, filename='portfolio-bar')
+	py.iplot(fig, filename='portfolio-bar')

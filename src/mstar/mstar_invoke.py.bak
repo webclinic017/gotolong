@@ -10,17 +10,17 @@ import mstar
 program_name = sys.argv[0]
 
 if len(sys.argv) < 6 :
-    print "usage: " + program_name + " <debug_level : 1-4> <mstar.csv> ... "
-    sys.exit(1)
+   print "usage: " + program_name + " <debug_level : 1-4> <mstar.csv> ... "
+   sys.exit(1) 
 
 debug_level = int(sys.argv[1])
 in_filename = sys.argv[2]
 out_filename_1 = sys.argv[3]
 out_filename_2 = sys.argv[4]
 out_filename_3 = sys.argv[5]
-
+	
 if debug_level > 1 :
-    print 'args :' , len(sys.argv)
+	print 'args :' , len(sys.argv)
 
 mstar = mstar.Mstar()
 

@@ -9,16 +9,16 @@ import amfi
 # Main caller
 program_name = sys.argv[0]
 
-if len(sys.argv) < 4 :
-   print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> ... ")
-   sys.exit(1) 
+if len(sys.argv) < 4:
+    print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> ... ")
+    sys.exit(1)
 
 debug_level = int(sys.argv[1])
 in_filename = sys.argv[2]
 out_filename = sys.argv[3]
-	
-if debug_level > 1 :
-	print('args :' , len(sys.argv))
+
+if debug_level > 1:
+    print('args :', len(sys.argv))
 
 amfi = amfi.Amfi()
 

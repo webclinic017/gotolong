@@ -4,14 +4,14 @@ import sys
 import re
 import csv
 import traceback
-import tbd
+import tbd 
 
 # Main caller
 program_name = sys.argv[0]
 
 if len(sys.argv) < 15 :
-    print "usage: " + program_name + " <debug_level : 1-4> <isin-bse.csv> <isin-nse.csv> <amfi.csv> <plan.csv> <demat.csv>... "
-    sys.exit(1)
+   print "usage: " + program_name + " <debug_level : 1-4> <isin-bse.csv> <isin-nse.csv> <amfi.csv> <plan.csv> <demat.csv>... "
+   sys.exit(1) 
 
 debug_level = int(sys.argv[1])
 screener_aliases_filename = sys.argv[2]
@@ -29,9 +29,9 @@ days_1 = int(sys.argv[12])
 days_2 = int(sys.argv[13])
 mos_1 = int(sys.argv[14])
 mos_2 = int(sys.argv[15])
-
+	
 if debug_level > 1 :
-    print 'args :' , len(sys.argv)
+	print 'args :' , len(sys.argv)
 
 tbd = tbd.Tbd()
 

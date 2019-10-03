@@ -14,11 +14,11 @@ IN_FILE_NSE=$CONFIG_DATA_LOC/isin-data/isin-nse-500.csv
 
 IN_FILE_AMFI=$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv
 
-IN_FILE_SC_NAME_ALIASES=$CONFIG_DATA_LOC/screener-data/screener-name-aliases.csv
+#IN_FILE_SC_NAME_ALIASES=$CONFIG_DATA_LOC/screener-data/screener-name-aliases.csv
 IN_FILE_SC_DATA=$CONFIG_DATA_LOC/screener-data/AC500.csv
 # IN_FILE_SC_DATA=$CONFIG_DATA_LOC/screener-data/Core.csv
 
 OUT_FILE_1=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-phase-1.csv
 OUT_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-phase-2.csv
 
-python screener_invoke.py ${DEBUG_LEVEL} ${IN_FILE_BSE} ${IN_FILE_NSE} ${IN_FILE_AMFI} ${IN_FILE_SC_NAME_ALIASES} ${IN_FILE_SC_DATA} ${OUT_FILE_1} ${OUT_FILE_2}
+python screener_invoke.py ${DEBUG_LEVEL} ${IN_FILE_BSE} ${IN_FILE_NSE} ${IN_FILE_AMFI} ${IN_FILE_SC_DATA} ${OUT_FILE_1} ${OUT_FILE_2}
