@@ -96,4 +96,10 @@ python $(dirname `which python`)/Tools/scripts/reindent.py -r .
 
 XYZ_2d[row, column] = 1
 
-11.
+11. duplicate the dictionary in case you are going to browse it and also manipulate it using del and pop.
+    x_dup = dict(y)
+
+
+12. fh.write() takes only 1 argument
+
+13.

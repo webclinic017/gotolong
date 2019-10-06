@@ -38,11 +38,12 @@ class Screener(Isin, Amfi):
                               'Profit growth 5Years': 'profit5', 'Pledged percentage': 'pledge',
                               'Promoter Holding': 'prom_hold',
                               'Piotroski score': 'piotski'}
-        self.sc_ratio_loc = {'name': -1, 'bse_code': -1, 'nse_code': -1, 'industry': -1, 'cmp': -1, 'myavgiv': -1, 'iv': -1,
-                             'mcap': -1, 'sales': -1, 'np': -1, 'pe': -1, 'pe5': -1, 'eps': -1, 'peg': -1, 'p2bv': -1,
-                             'p2ocf': -1, 'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1, 'd2e': -1, 'icover': -1,
-                             'dp': -1, 'dp3': -1, 'dy': -1, 'roe3': -1, 'roce3': -1, 'cr': -1, 'sales5': -1, 'profit5': -1,
-                             'pledge': -1, 'prom_hold': -1, 'piotski': -1, 'unused':-1}
+        self.sc_ratio_loc = {'name': -1, 'bse_code': -1, 'nse_code': -1, 'industry': -1, 'captype': -1,
+                             'cmp': -1, 'mcap': -1, 'sales': -1, 'np': -1,
+                             'd2e': -1, 'roe3': -1, 'roce3': -1, 'dp3': -1, 'dp': -1, 'dy': -1,
+                             'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
+                             'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1,
+                             'cr': -1, 'sales5': -1, 'profit5': -1, 'pledge': -1, 'piotski': -1}
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -59,33 +60,44 @@ class Screener(Isin, Amfi):
             if sc_name == 'Name':
                 if self.debug_level > 1:
                     print('picked up keys', row_list)
-                rindex = 0
+                ratio_name_column_index = 0
                 for ratio in row_list:
                     if ratio in self.sc_ratio_name.keys():
-                        if self.debug_level > 1:
-                            print('found ', ratio)
-                        self.sc_ratio_loc[self.sc_ratio_name[ratio]] = rindex
-                        rindex += 1
+                        new_key = self.sc_ratio_name[ratio]
+                        if self.debug_level > 0:
+                            print('found ratio', ratio, 'mapped to ', new_key)
+                        self.sc_ratio_loc[new_key] = ratio_name_column_index
                     else:
                         print('check sc_ratio_name for ', ratio)
+                    # increment the ratio name index
+                    ratio_name_column_index += 1
+
                 # don't try to delete and iterate original dictionary at the same time. it will become inconsistent.
                 loc_dup = dict(self.sc_ratio_loc)
                 # delete columns that doesn't have values 
                 for ratio in loc_dup:
-                    if loc_dup[ratio] == -1 :
+                    if loc_dup[ratio] == -1 and ratio != 'captype':
                         # remove the ratio name from original dictionary
                         self.sc_ratio_loc.pop(ratio)
-                        print('removed ratio', ratio)
+                        if self.debug_level > 0:
+                            print('removed ratio', ratio)
                     else:
-                        print('kept ratio', ratio)
-
+                        if self.debug_level > 0:
+                            print('kept ratio', ratio)
                 return
+            else:
+                sc_nsecode = row_list[self.sc_ratio_loc['nse_code']]
+                self.sc_nsecode.append(sc_nsecode)
 
-            sc_nsecode = row_list[self.sc_ratio_loc['nse_code']]
-            self.sc_nsecode.append(sc_nsecode)
-            
-            for ratio in self.sc_ratio_loc:
-                    self.sc_ratio_values[sc_nsecode, ratio] = row_list[self.sc_ratio_loc[ratio]]
+                for ratio in self.sc_ratio_loc:
+                    if ratio == 'captype':
+                        self.sc_ratio_values[sc_nsecode, ratio] = self.get_amfi_captype_by_ticker(sc_nsecode)
+                    else:
+                        self.sc_ratio_values[sc_nsecode, ratio] = row_list[self.sc_ratio_loc[ratio]]
+                    if self.debug_level > 1:
+                        print('ticker: ', sc_nsecode, 'ratio: ', ratio, 'value: ',
+                              self.sc_ratio_values[sc_nsecode, ratio])
+
 
         except IndexError:
             print('except ', row)
@@ -108,7 +120,7 @@ class Screener(Isin, Amfi):
             for row in reader:
                 self.load_screener_row(row)
 
-    def print_phase1(self, out_filename, sort_score=None):
+    def print_phase1(self, out_filename, filter_rows=False):
         fh = open(out_filename, "w")
         for ratio in self.sc_ratio_loc:
             fh.write(ratio)
@@ -118,10 +130,35 @@ class Screener(Isin, Amfi):
         sorted_input = sorted(self.sc_nsecode)
 
         for sc_nsecode in sorted_input:
+            skip_row = False
+            p_str = ''
             for ratio in self.sc_ratio_loc:
-                fh.write(self.sc_ratio_values[sc_nsecode, ratio])
-                fh.write(', ')
-            fh.write('\n')
+                if filter_rows == True:
+                    if ratio == 'd2e' or ratio == 'dp3' or ratio == 'roce3':
+                        value = self.sc_ratio_values[sc_nsecode, ratio]
+                        if value == '':
+                            if self.debug_level > 1:
+                                print(sc_nsecode, ' skipped ', ratio, 'due to missing value : ', value)
+                            skip_row = True
+                        else:
+                            value = float(value)
+                            if ratio == 'd2e' and value > 0.10:
+                                if self.debug_level > 1:
+                                    print(sc_nsecode, ' skipped due to d2e : ', value)
+                                skip_row = True
+                            if ratio == 'dp3' and value < 10:
+                                if self.debug_level > 1:
+                                    print(sc_nsecode, ' skipped due to dp3 : ', value)
+                                skip_row = True
+                            if ratio == 'roce3' and value < 10:
+                                if self.debug_level > 1:
+                                    print(sc_nsecode, ' skipped due to roce3 : ', value)
+                                skip_row = True
+                p_str += self.sc_ratio_values[sc_nsecode, ratio]
+                p_str += ', '
+            if skip_row == False:
+                fh.write(p_str)
+                fh.write('\n')
             
         fh.close()
 
