@@ -19,6 +19,6 @@ do
 		OUT_EXT=txt
 	fi
 
-	target-stats.py ${OUT_TYPE} ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${CONFIG_DATA_LOC}/sample-data/target-hist/*/*-targets.csv  > ${CONFIG_REPORTS_LOC}/targets/${FY}/${FY}-${SORT_TYPE}.${OUT_EXT}
+	python target-stats.py ${OUT_TYPE} ${SORT_TYPE} ${SUMMARY_TYPE} ${DEBUG_LEVEL} ${CONFIG_DATA_LOC}/sample-data/target-hist/*/*-targets.csv  > ${CONFIG_REPORTS_LOC}/targets/${FY}/${FY}-${SORT_TYPE}.${OUT_EXT}
 
 done

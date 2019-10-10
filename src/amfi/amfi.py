@@ -16,13 +16,15 @@ class Amfi(Database):
     def __init__(self):
         super(Amfi, self).__init__()
         # isin number
-        self.amfi_isin = []
+        self.amfi_isin_list = []
+        self.amfi_ticker_list = []
         # serial number
-        self.amfi_rank = {}
         self.amfi_cname = {}
-        self.amfi_ticker = {}
         self.amfi_mcap = {}
+        self.amfi_rank = {}
         self.amfi_captype = {}
+        self.amfi_ticker_isin_dict = {}
+        self.amfi_isin_ticker_dict = {}
         self.debug_level = 0
 
     def set_debug_level(self, debug_level):
@@ -68,12 +70,14 @@ class Amfi(Database):
                 print('captype : ', captype )
                 print('comp_name : ', comp_name)
 
-            self.amfi_rank[isin_number] = serial_number
-            self.amfi_cname[isin_number] = comp_name
-            self.amfi_ticker[isin_number] = comp_ticker
-            self.amfi_mcap[isin_number] = avg_mcap
-            self.amfi_captype[isin_number] = captype
-            self.amfi_isin.append(isin_number)
+            self.amfi_isin_ticker_dict[isin_number] = comp_ticker
+            self.amfi_ticker_isin_dict[comp_ticker] = isin_number
+            self.amfi_rank[comp_ticker] = serial_number
+            self.amfi_cname[comp_ticker] = comp_name
+            self.amfi_mcap[comp_ticker] = avg_mcap
+            self.amfi_captype[comp_ticker] = captype
+            self.amfi_isin_list.append(isin_number)
+            self.amfi_ticker_list.append(comp_ticker)
 
             if self.debug_level > 1:
                 print('comp_name : ', comp_name , '\n')
@@ -117,28 +121,28 @@ class Amfi(Database):
 
     def print_phase1(self, out_filename):
         if self.debug_level > 0:
-            print('filename ', out_filename)
+            print('output filename ', out_filename)
         fh = open(out_filename, "w")
         fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
-        for amfi_isin in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
+        for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
             if self.debug_level > 1:
-                print('isin ', amfi_isin)
-            p_str = str(self.amfi_rank[amfi_isin])
+                print('isin ', ticker)
+            p_str = str(self.amfi_rank[ticker])
             p_str += ', '
-            p_str += self.amfi_cname[amfi_isin]
+            p_str += self.amfi_cname[ticker]
             p_str += ', '
-            p_str += amfi_isin
+            p_str += self.amfi_ticker_isin_dict[ticker]
             p_str += ', '
-            p_str += self.amfi_ticker[amfi_isin]
+            p_str += ticker
             p_str += ', '
-            p_str += str(self.amfi_mcap[amfi_isin])
+            p_str += str(self.amfi_mcap[ticker])
             p_str += ', '
-            p_str += self.amfi_captype[amfi_isin]
+            p_str += self.amfi_captype[ticker]
             p_str += '\n'
             fh.write(p_str);
         fh.close()
 
-    def get_amfi_isin_by_name(self, req_name):
+    def amfi_get_isin_by_name(self, req_name):
         req_name = re.sub('\s+', ' ', req_name).strip()
         for amfi_isin in sorted(self.amfi_cname):
             # try to find a matching company
@@ -149,7 +153,7 @@ class Amfi(Database):
                     print('found match : name : ', req_name)
                 return amfi_isin
             if amfi_isin in  self.amfi_ticker:
-                ticker_symbol = self.amfi_ticker[amfi_isin]
+                ticker_symbol = self.amfi_isin_ticker_dict[amfi_isin]
                 if req_name.upper() == ticker_symbol :
                     if self.debug_level > 1:
                         print('found ticker : ', req_name)
@@ -158,33 +162,51 @@ class Amfi(Database):
             print('amfi : comp not found : req_name :',req_name,':')
         return ''
 
-    def get_amfi_captype_by_code(self, amfi_isin):
-        if amfi_isin in self.amfi_captype:
-            return self.amfi_captype[amfi_isin]
-        return '-'
+    def amfi_get_value_by_isin(self, isin, value_name):
+        try:
+            ticker = self.amfi_isin_ticker_dict[isin]
+            if ticker:
+                self.amfi_get_value_by_ticker(self, isin, value_name)
+        except KeyError:
+            print('KeyError ', isin)
+            traceback.print_exc()
+        return 'UNK_COMP_2'
 
-    def get_amfi_captype_by_ticker(self, ticker):
-        for amfi_isin in self.amfi_isin:
-            if self.amfi_ticker[amfi_isin] == ticker:
-                return self.get_amfi_captype_by_code(amfi_isin                                                                                    )
-        return '-'
+    def amfi_get_value_by_ticker(self, ticker, value_name):
+        try:
+            if ticker:
+                if value_name == "cname":
+                    return self.amfi_cname[ticker]
+                if value_name == "mcap":
+                    return self.amfi_mcap[ticker]
+                if value_name == "rank":
+                    return self.amfi_rank[ticker]
+                if value_name == "captype":
+                    return self.amfi_captype[ticker]
+                if value_name == "isin":
+                    return self.amfi_get_isin_by_ticker(ticker)
+        except KeyError:
+            print('KeyError ', ticker)
+            traceback.print_exc()
+        except:
+            print('Except ', ticker)
+            traceback.print_exc()
+        if value_name == "mcap" or value_name == "rank":
+            return 0
+        else:
+            return 'UNK_COMP_E'
 
-    def get_amfi_rank_by_code(self, amfi_isin):
-        if amfi_isin in self.amfi_rank:
-            return self.amfi_rank[amfi_isin]
-        return '0'
-
-    def get_amfi_mcap_by_code(self, amfi_isin):
-        if amfi_isin in self.amfi_mcap:
-            return self.amfi_mcap[amfi_isin]
-        return '0'
-
-    def get_amfi_cname_by_code(self, amfi_isin):
-        if amfi_isin in self.amfi_cname:
-            return self.amfi_cname[amfi_isin]
-        return 'UNK_COMP'
-
-    def get_amfi_ticker_by_code(self, amfi_isin):
+    def amfi_get_ticker_by_isin(self, amfi_isin):
         if amfi_isin in self.amfi_ticker:
-            return self.amfi_ticker[amfi_isin]
+            return self.amfi_isin_ticker_dict[amfi_isin]
         return 'UNK_TICKER'
+
+    def amfi_get_isin_by_ticker(self, ticker):
+        try:
+            amfi_isin = self.amfi_ticker_isin_dict[ticker]
+            if amfi_isin:
+                return amfi_isin
+        except KeyError:
+            print('KeyError ', ticker)
+            traceback.print_exc()
+        return 'UNK_ISIN'

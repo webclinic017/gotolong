@@ -13,7 +13,7 @@ from operator import itemgetter
 program_name = sys.argv[0]
 
 if len(sys.argv) < 6 :
-    print "usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <plan.csv> ... "
+    print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <plan.csv> ... ")
     sys.exit(1)
 
 debug_level = int(sys.argv[1])
@@ -25,7 +25,7 @@ out_filename_phase4 = sys.argv[6]
 out_filename_phase5 = sys.argv[7]
 
 if debug_level > 1 :
-    print 'args :' , len(sys.argv)
+    print('args :', len(sys.argv))
 
 indu_comp = 'comp'
 ic_name = 'all'
@@ -50,14 +50,14 @@ plan.plan_dump_zero(out_filename_phase5)
 
 if len(sys.argv) == 8 :
     if indu_comp.lower() == "comp":
-        print 'companies count : ', plan.size_comp_data()
+        print('companies count : ', plan.size_comp_data())
         if ic_name == "All":
             plan.print_comp_data()
         else:
-            print plan.get_plan_comp_units(ic_name)
+            print(plan.get_plan_comp_units(ic_name))
     else:
-        print 'industries count : ', plan.size_indu_data()
+        print('industries count : ', plan.size_indu_data())
         if ic_name == "All":
             plan.print_indu_data()
         else:
-            print plan.get_indu_units(ic_name)
+            print(plan.get_indu_units(ic_name))

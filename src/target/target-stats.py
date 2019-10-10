@@ -9,6 +9,7 @@
 import sys
 import re
 import csv
+import glob
 from collections import Counter
 from operator import itemgetter
 
@@ -22,7 +23,7 @@ out_type= sys.argv[1]
 sort_type= sys.argv[2]
 summary_type= sys.argv[3]
 debug_level= int(sys.argv[4])
-in_filenames= sys.argv[5:]
+in_filenames = glob.glob(sys.argv[5])
 # Error-1, Warn-2, Log-3
 companies=[]
 industries=[]

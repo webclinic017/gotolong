@@ -6,8 +6,7 @@ echo files : $*
 
 for file in $*
 do
-  unix2dos $file
   perl -p -i -e 's/print (.*)$/print\($1\)/g' $file
-  dos2unix $file
-  perl -p -i -e 's///g' $file
+  # edit in vi editor
+  # :1,$s///g 
 done

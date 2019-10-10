@@ -393,7 +393,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 392, Elgi equipments, INE285A01027, ELGIEQUIP, 4556, Small Cap
 393, Adani green energy, INE364U01010, ADANIGREEN, 4543, Small Cap
 394, Forbes company, INE518A01013, FORBESCO, 4540, Small Cap
-395, Sital leasing finance, INE341O01029, , 4524, Small Cap
 396, Tata investment corporation, INE672A01018, TATAINVEST, 4512, Small Cap
 397, Jaiprakash associates, INE455F01025, JPASSOCIAT, 4506, Small Cap
 398, Bse, INE118H01025, BSE, 4493, Small Cap
@@ -637,7 +636,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 636, Subros, INE287B01021, SUBROS, 1967, Micro Cap
 637, Kewal kiran clothing, INE401H01017, KKCL, 1959, Micro Cap
 638, Satin creditcare network, INE836B01017, SATIN, 1951, Micro Cap
-639, Emrald commercial, INE162D01014, , 1949, Micro Cap
 640, Thirumalai chemicals, INE338A01016, TIRUMALCHM, 1942, Micro Cap
 641, Texmaco rail engineering, INE621L01012, TEXRAIL, 1935, Micro Cap
 642, Hmt, INE262A01018, HMT, 1931, Micro Cap
@@ -655,7 +653,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 654, Dredging corporation, INE506A01018, DREDGECORP, 1818, Micro Cap
 655, Bls international services, INE153T01027, BLS, 1808, Micro Cap
 656, Zee media corporation, INE966H01019, ZEEMEDIA, 1803, Micro Cap
-657, Fertilizers chemicals travancore, INE188A01015, FACT, 1790, Micro Cap
 658, Housing development infrastructure, INE191I01012, HDIL, 1786, Micro Cap
 659, Lgbalkrishnan bros, INE337A01034, LGBBROSLTD, 1780, Micro Cap
 660, Sequent scientific, INE807F01027, SEQUENT, 1776, Micro Cap
@@ -849,7 +846,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 848, B l kashyap sons, INE350H01032, BLKASHYAP, 997, Nano Cap
 849, Bhushan steel, INE824B01021, BHUSANSTL, 986, Nano Cap
 850, Orissa minerals development company, INE725E01024, ORISSAMINE, 984, Nano Cap
-851, Hind ispat, INE951E01018, , 982, Nano Cap
 852, Mercator, INE934B01028, MERCATOR, 982, Nano Cap
 853, Jayant agro organics, INE785A01026, JAYAGROGN, 981, Nano Cap
 854, Summit securities, INE519C01017, SUMMITSEC, 981, Nano Cap
@@ -952,7 +948,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 951, Udaipur cement works, INE225C01029, JKUDAI, 727, Nano Cap
 952, Beekay steel industries, INE213D01015, BEEKAY, 726, Nano Cap
 953, Centum electronics, INE320B01020, CENTUM, 723, Nano Cap
-954, Porsche capital market, INE939Q01017, , 722, Nano Cap
 955, Ion exchange, INE570A01014, IONEXCHANG, 720, Nano Cap
 956, Century enka, INE485A01015, CENTENKA, 717, Nano Cap
 957, Control print, INE663B01015, CONTROLP, 716, Nano Cap
@@ -1026,6 +1021,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1025, Pokarna, INE637C01025, POKARNA, 608, Unknown Cap
 1026, Rpp infra projects, INE324L01013, RPPINFRA, 606, Unknown Cap
 1027, Wendt, INE274C01019, WENDT, 603, Unknown Cap
+1028, Hindustan photo films mfg co, NA          , HINPHOT, 603, Unknown Cap
 1029, Orissa sponge iron steel, INE228D01013, ORISSASP, 599, Unknown Cap
 1030, Ruby mills, INE301D01026, RUBYMILLS, 599, Unknown Cap
 1031, Linc pen plastics, INE802B01019, LINCPEN, 597, Unknown Cap
@@ -1064,7 +1060,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1064, Plastiblends, INE083C01022, PLASTIBLEN, 548, Unknown Cap
 1065, Arfin, INE784R01015, ARFIN, 546, Unknown Cap
 1066, Allsec technologies, INE835G01018, ALLSEC, 545, Unknown Cap
-1067, Alba polymers, INE314S01019, , 543, Unknown Cap
 1068, Crest ventures, INE559D01011, CREST, 543, Unknown Cap
 1069, Jayaswal neco industries, INE854B01010, JAYNECOIND, 541, Unknown Cap
 1070, Shiva cement, INE555C01029, SHIVACEM, 540, Unknown Cap
@@ -1140,6 +1135,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1140, Subex, INE754A01014, SUBEX, 458, Unknown Cap
 1141, 5paisa capital, INE618L01018, 5PAISA, 457, Unknown Cap
 1142, Hindustan foods, INE254N01018, HNDFDS, 455, Unknown Cap
+1143, Haryana financial corporation, NA          , HARAFIN, 455, Unknown Cap
 1144, Paushak, INE111F01016, PAUSHAKLTD, 455, Unknown Cap
 1145, Lincoln pharmaceuticals, INE405C01035, LINCOPH, 454, Unknown Cap
 1146, Adlabs entertainment, INE172N01012, ADLABS, 453, Unknown Cap
@@ -1279,7 +1275,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1280, Indo national, INE567A01010, NIPPOBATRY, 318, Unknown Cap
 1281, Hov services, INE596H01014, HOVS, 318, Unknown Cap
 1282, Geecee ventures, INE916G01016, GEECEE, 317, Unknown Cap
-1283, U p electricals, INE922R01011, , 317, Unknown Cap
 1284, Cupid, INE509F01011, CUPID, 316, Unknown Cap
 1285, Pil italica lifestyle, INE600A01035, PILITA, 313, Unknown Cap
 1286, Ind swift laboratories, INE915B01019, INDSWFTLAB, 313, Unknown Cap
@@ -1319,7 +1314,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1320, Pondy oxides chemicals, INE063E01046, PONDYOXIDE, 284, Unknown Cap
 1321, Acrysil, INE482D01016, ACRYSIL, 284, Unknown Cap
 1322, Samkrg pistons rings, INE706B01012, SAMKRG, 284, Unknown Cap
-1323, Moneytech finlease, INE632R01016, , 283, Unknown Cap
 1324, Kopran, INE082A01010, KOPRAN$, 283, Unknown Cap
 1325, Ptc industries, INE596F01018, PTCIL, 281, Unknown Cap
 1326, Raj television network, INE952H01027, RAJTV, 281, Unknown Cap
@@ -1340,7 +1334,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1341, New delhi television, INE155G01029, NDTV, 269, Unknown Cap
 1342, Kappac pharma, INE601D01011, KAPPH, 268, Unknown Cap
 1343, Ngl fine chem, INE887E01022, NGLFINE, 267, Unknown Cap
-1344, Rk manufacturing company, INE423E01018, , 266, Unknown Cap
 1345, Chemfab alkalis, INE783X01023, CHEMFABALKA, 266, Unknown Cap
 1346, Orient press, INE609C01024, ORIENTLTD, 266, Unknown Cap
 1347, Partani appliances, INE217P01010, PARTANI, 266, Unknown Cap
@@ -1369,7 +1362,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1370, Sinclairs hotels, INE985A01014, SINCLAIR, 255, Unknown Cap
 1371, Maha rashtra apex corporation, INE843B01013, MAHAPEXLTD, 254, Unknown Cap
 1372, The mandhana retail ventures, INE759V01019, TMRVL, 254, Unknown Cap
-1373, Verum properties, INE501R01013, , 253, Unknown Cap
 1374, Share securities, INE932X01018, SISL, 253, Unknown Cap
 1375, Aym syntex, INE193B01039, AYMSYNTEX, 253, Unknown Cap
 1376, Shanti educational initiatives, INE440T01010, SEIL, 253, Unknown Cap
@@ -1434,7 +1426,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1435, Sunshield chemicals, INE199E01014, SUNSHIEL, 220, Unknown Cap
 1436, Industrial prudential inv co lt, INE620D01011, INDPRUD, 219, Unknown Cap
 1437, Noida toll bridge company, INE781B01015, NOIDATOLL, 219, Unknown Cap
-1438, Svarnim trade udyog, INE730R01034, , 219, Unknown Cap
 1439, Indian acrylics, INE862B01013, INDIANACRY, 219, Unknown Cap
 1440, Coral laboratories, INE683E01017, CORALAB, 219, Unknown Cap
 1441, Consolidated finvest holdings, INE025A01027, CONSOFINVT, 219, Unknown Cap
@@ -1590,7 +1581,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1591, Aimco pesticides, INE008B01013, AIMCOPEST, 158, Unknown Cap
 1592, Captain polyplast, INE536P01013, CPL, 158, Unknown Cap
 1593, India nivesh, INE131H01028, INDIANVSH, 158, Unknown Cap
-1594, Mcnally sayaji engineering, INE105E01011, , 157, Unknown Cap
 1595, Ismt, INE732F01019, ISMTLTD, 157, Unknown Cap
 1596, International travel house, INE262B01016, ITHL, 157, Unknown Cap
 1597, Morarjee textiles, INE161G01027, MORARJEE, 157, Unknown Cap
@@ -1644,7 +1634,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1645, Machino plastics, INE082B01018, MACPLAS, 143, Unknown Cap
 1646, Rdb rasayans, INE123M01017, RDBRL, 143, Unknown Cap
 1647, Amal, INE841D01013, AMAL, 143, Unknown Cap
-1648, Bt syndicate, INE139E01028, , 142, Unknown Cap
 1649, Menon pistons, INE650G01029, MENNPIS, 142, Unknown Cap
 1650, C c constructions, INE874H01015, CANDC, 141, Unknown Cap
 1651, Damodar industries, INE497D01014, DAMOTH, 141, Unknown Cap
@@ -1655,6 +1644,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1656, Jullundur motor agency, INE412C01015, JMA, 140, Unknown Cap
 1657, Bodhtree consulting, INE104F01011, BODHTREE, 140, Unknown Cap
 1658, Shreekrishna biotech, INE571N01015, SHKRISHNAB, 139, Unknown Cap
+1659, Crb share custodian services, NA          , CRBSHAR, 139, Unknown Cap
 1660, The grob tea company, INE646C01018, GROBTEA, 139, Unknown Cap
 1661, Kavit industries, INE313M01014, ATREYA, 139, Unknown Cap
 1662, Bilcare, INE986A01012, BI, 139, Unknown Cap
@@ -1809,7 +1799,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1811, Gini silk mills, INE548B01018, GINISILK, 101, Unknown Cap
 1812, V b industries, INE334E01017, VBIND, 101, Unknown Cap
 1813, Rajshree sugars chemicals, INE562B01019, RAJSREESUG, 101, Unknown Cap
-1814, Jalan cement works, INE172F01018, , 101, Unknown Cap
 1815, Raghav productivity enhancers, INE912T01018, RPEL, 100, Unknown Cap
 1816, Meera industries, INE343X01018, MEERA, 100, Unknown Cap
 1817, William magor company, INE210A01017, WILLAMAGOR, 100, Unknown Cap
@@ -1836,6 +1825,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1838, Winsome textile industries, INE837B01031, WINSOMTX, 96, Unknown Cap
 1839, Axtel industries, INE767C01012, AXTEL, 96, Unknown Cap
 1840, Grm overseas, INE192H01012, GRMOVER, 96, Unknown Cap
+1841, Bombay oxygen corporation, NA          , BOMOXY-B1, 95, Unknown Cap
 1842, Kerala ayurveda, INE817B01025, KERALAYU, 95, Unknown Cap
 1843, Sahara one media entertainment, INE479B01016, SAHARA, 95, Unknown Cap
 1844, Digjam, INE731U01010, DIGJAMLTD, 95, Unknown Cap
@@ -1918,7 +1908,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1921, India finsec, INE474O01010, IFINSEC, 83, Unknown Cap
 1922, Weizmann, INE080A01014, WEIZMANIND, 82, Unknown Cap
 1923, Mysore petro chemicals, INE741A01011, MYSORPETRO, 82, Unknown Cap
-1924, Ba, INE489D01011, BBREALTY, 82, Unknown Cap
 1925, Premier synthetics, INE940N01012, PREMSYN, 82, Unknown Cap
 1926, Akshar spintex, INE256Z01017, AKSHAR, 82, Unknown Cap
 1927, Srs finance, INE002J01027, SRSFIN, 82, Unknown Cap
@@ -1949,7 +1938,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1952, Cressanda solutions, INE716D01033, CRESSAN, 79, Unknown Cap
 1953, Marg, INE941E01019, MARG, 79, Unknown Cap
 1954, Solix technologies, INE314H01012, SOLIXTEC, 78, Unknown Cap
-1955, Naga, INE327M01014, , 78, Unknown Cap
 1956, Precot meridian, INE283A01014, PRECOT, 78, Unknown Cap
 1957, Palred technologies, INE218G01033, PALRED, 78, Unknown Cap
 1958, Porwal auto components, INE386I01018, PORWAL, 78, Unknown Cap
@@ -1996,7 +1984,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 1999, Globalspace technologies, INE632W01016, GSTL, 73, Unknown Cap
 2000, Premier, INE342A01018, PREMIER, 73, Unknown Cap
 2001, Shree ashtavinayak cine vision, INE538H01024, SHREEASHTA, 72, Unknown Cap
-2002, The ramaraju surgical cotton mills, INE328E01027, , 72, Unknown Cap
 2003, United breweries, INE696A01025, UBHOLDINGS, 72, Unknown Cap
 2004, Natural capsules, INE936B01015, NATCAPSU, 72, Unknown Cap
 2005, Radhika jeweltech, INE583V01013, RADHIKAJWE, 72, Unknown Cap
@@ -2035,7 +2022,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2038, Devhari exports, INE553P01018, DEVHARI, 67, Unknown Cap
 2039, Mangal credit fincorp, INE545L01021, MANCREDIT, 67, Unknown Cap
 2040, Raghuvir synthetics, INE969C01014, RAGHUSYN, 67, Unknown Cap
-2041, Tarini enterprises, INE999P01013, , 67, Unknown Cap
 2042, Mukesh babu financial services, INE596B01017, MUKESHB, 67, Unknown Cap
 2043, Malu paper mills, INE383H01017, MALUPAPER, 67, Unknown Cap
 2044, Tayo rolls, INE895C01011, TATAYODOGA, 67, Unknown Cap
@@ -2053,7 +2039,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2056, Jaysynth dyestuff, INE703C01025, JAYSYN, 65, Unknown Cap
 2057, Softsol, INE002B01016, SOFTSOL, 65, Unknown Cap
 2058, Somi conveyor beltings, INE323J01019, SOMICONV, 65, Unknown Cap
-2059, Sunayana investment company, INE724R01011, , 65, Unknown Cap
 2060, Goenka business finance, INE997C01015, GBFL, 65, Unknown Cap
 2061, Chandni textiles engineering ind, INE713D01055, CHANDNI, 65, Unknown Cap
 2062, Educomp solutions, INE216H01027, EDUCOMP, 65, Unknown Cap
@@ -2194,6 +2179,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2197, Asya infosoft, INE520G01016, ASYAINFO, 52, Unknown Cap
 2198, Naturite agro products, INE223R01014, NAPL, 52, Unknown Cap
 2199, Vegetable products, INE761D01021, VEGETABLE, 51, Unknown Cap
+2200, Punctual trading, NA, PUNCTRD, 51, Unknown Cap
 2201, Madhav marbles granites, INE925C01016, MADHAV, 51, Unknown Cap
 2202, Divinus fabrics, INE478P01018, DIVINUS, 51, Unknown Cap
 2203, Mukand engineers, INE022B01014, MUKANDENGG, 51, Unknown Cap
@@ -2208,7 +2194,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2212, Kanco tea industries, INF398L01017, OKANCOTEA, 50, Unknown Cap
 2213, Kss, INE216D01026, KSERA, 50, Unknown Cap
 2214, Sanghvi forging engineering, INE263L01013, SANGHVIFOR, 50, Unknown Cap
-2215, N e electronics, INE955E01019, , 50, Unknown Cap
 2216, Lgb forge, INE201J01017, LGBFORGE, 50, Unknown Cap
 2217, Kernex microsystems, INE202H01019, KERNEX, 50, Unknown Cap
 2218, Polylink polymers, INE323D01020, POLYLINK, 50, Unknown Cap
@@ -2398,7 +2383,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2402, T i global, INE811B01010, TIGLOB, 38, Unknown Cap
 2403, Mobile telecommunications, INE770B01026, MOBILTEL, 38, Unknown Cap
 2404, Blb, INE791A01024, BLBLIMITED, 38, Unknown Cap
-2405, North eastern publishing advertising co, INE930E01012, , 38, Unknown Cap
 2406, Remi edelstahl tubulars, INE158G01015, RAJNMCH, 38, Unknown Cap
 2407, Bemco hydraulics, INE142E01014, BEMHY, 38, Unknown Cap
 2408, Kailash auto finance, INE410O01022, KAILASH, 38, Unknown Cap
@@ -2448,17 +2432,14 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2452, Tci finance, INE911B01018, TCIFINANCE, 35, Unknown Cap
 2453, Cubex tubings, INE144D01012, CUBEXTUB, 35, Unknown Cap
 2454, Pranavaditya spg mills, INE569D01028, PRANAVSP, 35, Unknown Cap
-2455, Mohindra fasteners, INE705H01011, , 35, Unknown Cap
 2456, Kdj holidayscapes resorts, INE089E01025, KDJHRL, 35, Unknown Cap
 2457, Kanishk steel industries, INE791E01018, KANSHST, 35, Unknown Cap
 2458, Nivedita mercantile financing, INE992I01013, ZNIVEMER, 35, Unknown Cap
 2459, Milestone furniture, INE424Z01011, MILEFUR, 35, Unknown Cap
 2460, Gccl infrastructure projects, INE438F01013, GCCLINP, 35, Unknown Cap
-2461, Purbanchal prestressed, INE931E01010, , 35, Unknown Cap
 2462, Wires fabriks, INE469D01013, WIREFABR, 35, Unknown Cap
 2463, Sterling international enterprises, INE696C01021, STERINTER, 35, Unknown Cap
 2464, Victoria mills, INE203D01016, VICTMILL, 35, Unknown Cap
-2465, Marble finvest, INE476K01013, , 35, Unknown Cap
 2466, Aanchal ispat, INE322R01014, AANCHALISP, 34, Unknown Cap
 2467, Maris spinners, INE866D01010, MARIS, 34, Unknown Cap
 2468, Sumedha fiscal services, INE886B01012, SUMEDHA, 34, Unknown Cap
@@ -2478,6 +2459,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2482, Aikyam intellectual property consultancy, INE739N01026, AIPCL, 33, Unknown Cap
 2483, Mudit finlease, INE220D01010, MUDITFN, 33, Unknown Cap
 2484, Raja bahadur international, INE491N01016, RAJABAH, 33, Unknown Cap
+2485, Bombay potteries tiles, NA          , BOMBPOT, 33, Unknown Cap
 2486, Sbec sugar, INE948G01019, SBECSUG, 33, Unknown Cap
 2487, Terai tea co, INE390D01011, TERAI, 33, Unknown Cap
 2488, Tarini international, INE849M01017, TARINI, 33, Unknown Cap
@@ -2509,7 +2491,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2514, Aadhaar ventures, INE063D01030, AADHAARVEN, 31, Unknown Cap
 2515, Octaware technologies, INE208U01019, OCTAWARE, 31, Unknown Cap
 2516, Capital finance, INE345H01016, CIFL, 31, Unknown Cap
-2517, Adtech systems, INE257C01014, , 31, Unknown Cap
 2518, Inani marbles industries, INE635D01027, INANI, 31, Unknown Cap
 2519, Aqua pumps infra ventures, INE005E01013, AQUAPIV, 31, Unknown Cap
 2520, Prithvi exchange, INE621B01021, PRITHVIEXCH, 31, Unknown Cap
@@ -2523,7 +2504,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2528, Blue cloud softech solutions, INE373T01021, BLUECLOUDS, 30, Unknown Cap
 2529, Eastern gases, INE846C01014, EASTERNGAS, 30, Unknown Cap
 2530, Asit c mehta financial services, INE041B01014, ASITCFIN, 30, Unknown Cap
-2531, Rajparis civil constructions, INE477F01011, , 30, Unknown Cap
 2532, Simplex realty, INE167H01014, SIMPLXREA, 30, Unknown Cap
 2533, Jash dealmark, INE801W01017, JDML, 30, Unknown Cap
 2534, Think ink studio, INE365S01029, TISL, 30, Unknown Cap
@@ -2535,7 +2515,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2540, Smifs capital markets, INE641A01013, SMIFS, 30, Unknown Cap
 2541, Utl industries, INE184E01024, UTLINDS, 30, Unknown Cap
 2542, Karnavati finance, INE554R01012, KARNAVATI, 30, Unknown Cap
-2543, Jagadishwar pharmaceuticals works, INE832F01017, , 30, Unknown Cap
 2544, Medi caps, INE442D01010, MEDICAP, 30, Unknown Cap
 2545, Valson industries, INE808A01018, VALSON, 30, Unknown Cap
 2546, Phoenix international, INE245B01011, PHOENXINTL, 30, Unknown Cap
@@ -2563,6 +2542,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2568, Sampre nutritions, INE375C01014, SAMPRE, 29, Unknown Cap
 2569, Vippy spinpro, INE660D01017, VIPPYSP, 29, Unknown Cap
 2570, Orosil smiths, INE628B01034, OROSMITHS, 28, Unknown Cap
+2571, Bhilai engineering corporation, NA          , ZBHILENG, 28, Unknown Cap
 2572, Dynamic industries, INE457C01010, DYNAMIND, 28, Unknown Cap
 2573, Rishi laser, INE988D01012, RISHILASE, 28, Unknown Cap
 2574, Modipon, INE170C01019, MODIPON, 28, Unknown Cap
@@ -2600,7 +2580,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2606, Williamson financial services, INE188E01017, WILLIMFI, 26, Unknown Cap
 2607, Goldstone technologies, INE805A01014, GOLDTECH, 26, Unknown Cap
 2608, Mm rubber company, INE159E01026, MMRUBBR-B, 26, Unknown Cap
-2609, Logic infotech, INE566F01011, , 26, Unknown Cap
 2610, Refex industries, INE056I01017, REFEX, 26, Unknown Cap
 2611, Ngindustries, INE825C01018, NGIND, 26, Unknown Cap
 2612, Hardcastle waud mfg co, INE722D01015, HARDCAS, 26, Unknown Cap
@@ -2646,7 +2625,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2652, Modex international securities, INE072D01015, MODEX, 25, Unknown Cap
 2653, Ashnoor textiles mills, INE372I01018, ASHNOOR, 25, Unknown Cap
 2654, Godavari drugs, INE362C01012, GODAVARI, 25, Unknown Cap
-2655, Dr fresh assets, INE412A01019, , 25, Unknown Cap
 2656, Nakoda groupindustries, INE236Y01012, NGIL, 25, Unknown Cap
 2657, Pmc fincorp, INE793G01035, PMCFIN, 25, Unknown Cap
 2658, Tijaria polypipes, INE440L01017, TIJARIA, 25, Unknown Cap
@@ -2667,9 +2645,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2673, Ad manum finance, INE556D01017, ADMANUM, 24, Unknown Cap
 2674, Rungta irrigation, INE347C01013, RUNGTAIR, 24, Unknown Cap
 2675, Maximus international, INE544W01013, MAXIMUS, 24, Unknown Cap
-2676, Roselabs finance, INE475C01012, ROSELABS, 24, Unknown Cap
 2677, Cenlub industries, INE627F01011, CENLUB, 24, Unknown Cap
-2678, Intertec technologies, INE137B01010, , 24, Unknown Cap
 2679, Kunststoffe industries, INE638D01021, KUNSTOFF, 24, Unknown Cap
 2680, Ett, INE546I01017, ETT, 24, Unknown Cap
 2681, Pact industries, INE494K01024, PACT, 24, Unknown Cap
@@ -2682,6 +2658,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2688, Zodiac jrd mkj, INE077B01018, ZODJRDMKJ, 23, Unknown Cap
 2689, Aagam capital, INE817D01013, AAGAMCAP, 23, Unknown Cap
 2690, Palm jewels, INE838Z01012, PALMJEWELS, 23, Unknown Cap
+2691, Metropoli overseas, NA          , METROOV, 23, Unknown Cap
 2692, G g engineering, INE694X01014, GGENG, 23, Unknown Cap
 2693, Ravileela granites, INE427E01027, RALEGRA, 23, Unknown Cap
 2694, Shiva granito export, INE191V01015, SHIVAEXPO, 23, Unknown Cap
@@ -2707,14 +2684,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2714, Purple entertainment, INE905R01016, PURPLE, 22, Unknown Cap
 2715, Modern steels, INE001F01019, MDRNSTL, 22, Unknown Cap
 2716, Ln industries, INE366C01013, LNIND, 22, Unknown Cap
-2717, Chitrakut holdings, INE228E01011, , 22, Unknown Cap
 2718, Sunbright stock broking, INE476D01026, SUNBRIGHT, 22, Unknown Cap
 2719, Hawa engineers, INE230I01018, HAWAENG, 22, Unknown Cap
-2720, Ace stone craft, INE026E01019, , 22, Unknown Cap
 2721, Value industries, INE352A01017, VALUEIND, 22, Unknown Cap
 2722, Square four projects, INE716K01012, SFPIL, 22, Unknown Cap
 2723, Sonal mercantile, INE321M01017, SONAL, 22, Unknown Cap
-2724, Mil industries, INE651L01019, , 22, Unknown Cap
 2725, Sinner energy, INE873S01022, SIENERGY, 22, Unknown Cap
 2726, Esaar, INE404L01039, ESARIND, 22, Unknown Cap
 2727, Khaitan, INE731C01018, KHAITANLTD, 22, Unknown Cap
@@ -2740,10 +2714,12 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2747, Birla cotsyn, INE655I01024, BIRLACOT, 21, Unknown Cap
 2748, Network, INE010C01025, NETWORK, 21, Unknown Cap
 2749, Vcu data management, INE962O01014, VCU, 21, Unknown Cap
+2750, Kratos energy infrastructure, NA          , KRATOSENER, 21, Unknown Cap
 2751, Kalyanpur cement, INE991E01022, KLYNCEM, 21, Unknown Cap
 2752, Orient beverages, INE247F01018, ORIBEVER, 21, Unknown Cap
 2753, Metkore alloys industries, INE592I01029, METKORE, 21, Unknown Cap
 2754, Span divergent, INE004E01016, SDL, 21, Unknown Cap
+2755, Arihant tournesol, NA          , ARHNTTO, 21, Unknown Cap
 2756, Chemtech industrial valves, INE212P01011, CHEMTECH, 21, Unknown Cap
 2757, Futura polyesters, INE564A01017, FUTURAPOLY, 21, Unknown Cap
 2758, Triveni glass, INE094C01011, TRIVENIG, 21, Unknown Cap
@@ -2766,12 +2742,12 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2775, Tirupati starch chemicals, INE314D01011, TIRUSTA, 21, Unknown Cap
 2776, Arc finance, INE202R01018, ARCFIN, 21, Unknown Cap
 2777, Girdharilal sugar allied industl, INE310M01010, GIRDSGA, 21, Unknown Cap
-2778, Pearl apartments, INE511W01012, , 21, Unknown Cap
 2779, Sarup industries, INE305D01019, SARUPINDUS, 21, Unknown Cap
 2780, Relicab cable manufacturing, INE773T01014, RELICAB, 21, Unknown Cap
 2781, Jct electronics, INE264B01020, JCTEL, 20, Unknown Cap
 2782, Royale manor hotels industries lt, INE008C01011, RAYALEMA, 20, Unknown Cap
 2783, Shree hari chemicals export, INE065E01017, SHHARICH, 20, Unknown Cap
+2784, Bagalkot udyog, NA          , BAGALKOT, 20, Unknown Cap
 2785, Suraj products, INE069E01019, SURAJ, 20, Unknown Cap
 2786, Core education technologies, INE247G01024, COREEDUTEC, 20, Unknown Cap
 2787, S t corporation, INE110Q01015, MANAVYN, 20, Unknown Cap
@@ -2783,7 +2759,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2793, K lifestyle industries, INE218A01028, KLIFESTYL, 20, Unknown Cap
 2794, Asahi industries, INE745I01015, ASHIFIR, 20, Unknown Cap
 2795, Mihika industries, INE779Q01017, MIHIKA, 20, Unknown Cap
-2796, Hotahoti wood products, INE925E01012, , 20, Unknown Cap
 2797, West leisure resorts, INE266P01017, WESTLEIRES, 20, Unknown Cap
 2798, Ramasigns industries, INE650D01018, RAMASIGNS, 20, Unknown Cap
 2799, Rama vision, INE763B01013, RAMAVISION, 20, Unknown Cap
@@ -2812,7 +2787,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2822, Birla power solutions, INE224B01024, BIRLAYAM, 19, Unknown Cap
 2823, Lok housing construction, INE367C01011, LOKHSG, 19, Unknown Cap
 2824, Captain pipes, INE513R01018, CAPPIPES, 19, Unknown Cap
-2825, Visisth chay vyapar, INE178W01010, , 19, Unknown Cap
 2826, Emerald leisures, INE044N01013, EMERALL, 19, Unknown Cap
 2827, Vyapar industries, INE070G01012, VYAPAR, 19, Unknown Cap
 2828, Indian infotech software, INE300B01022, INDINFO, 19, Unknown Cap
@@ -2837,8 +2811,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2847, S r k industries, INE951M01037, SRK, 19, Unknown Cap
 2848, Spectra industries, INE848B01012, SPECTRA, 19, Unknown Cap
 2849, Champion finsec, INE815H01018, CHAMPFIN, 19, Unknown Cap
-2850, Flare finance, INE913Q01012, , 19, Unknown Cap
-2851, Sangrahalaya timber crafts, INE932E01018, , 19, Unknown Cap
 2852, Teesta agro industries, INE757D01011, TEEAI, 18, Unknown Cap
 2853, Mefcom capital markets, INE186C01015, MEFCOMCAP, 18, Unknown Cap
 2854, Thacker co, INE077P01034, THACKER, 18, Unknown Cap
@@ -2860,10 +2832,12 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2870, C mahendra exports, INE378J01013, CMAHENDRA, 18, Unknown Cap
 2871, Polymechplast machines, INE809B01014, POLYCHMP, 18, Unknown Cap
 2872, Trio mercantile trading, INE234G01014, TRIOMERC, 18, Unknown Cap
+2873, Bwl, NA          , BWLLTD, 18, Unknown Cap
 2874, Expo gas containers, INE561D01025, EXPOGAS, 18, Unknown Cap
 2875, Rasi electrodes, INE822D01021, RASIELEC, 18, Unknown Cap
 2876, India green reality, INE373V01019, IGRL, 18, Unknown Cap
 2877, Ankit metal power, INE106I01010, ANKITMETAL, 18, Unknown Cap
+2878, Suvidha infraestate corporation, NA          , SICL, 18, Unknown Cap
 2879, Creative merchants, INE896P01011, CML, 18, Unknown Cap
 2880, Reliable ventures, INE419H01019, RELIABVEN, 18, Unknown Cap
 2881, Pba infrastructure, INE160H01019, PBAINFRA, 18, Unknown Cap
@@ -2876,7 +2850,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2888, Pooja entertainment films, INE147C01017, POOJAENT, 18, Unknown Cap
 2889, Panache innovations, INE516E01019, PANACHE, 17, Unknown Cap
 2890, Libord finance, INE212B01011, LIBORD FIN, 17, Unknown Cap
-2891, Bihariji ispat udyog, INE073F01018, , 17, Unknown Cap
 2892, Taparia tools, INE614R01014, TAPARIA, 17, Unknown Cap
 2893, Comfort fincap, INE274M01018, COMFINCAP, 17, Unknown Cap
 2894, Hckk ventures, INE345Q01017, HCKKVENTURE, 17, Unknown Cap
@@ -2896,7 +2869,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2908, Brawn biotech, INE899B01015, BRAWN, 17, Unknown Cap
 2909, Siel financial services, INE027F01014, SIELFNS, 17, Unknown Cap
 2910, Inter globe finance, INE661M01016, INTRGLB, 17, Unknown Cap
-2911, Anglo french drugs industries, INE570E01016, , 17, Unknown Cap
 2912, Zylog systems, INE225I01026, ZYLOG, 17, Unknown Cap
 2913, Baba arts, INE893A01036, BABA, 17, Unknown Cap
 2914, Galaxy bearings, INE020S01012, GALXBRG, 17, Unknown Cap
@@ -2940,7 +2912,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2952, Shree bhawani paper mills, INE688C01010, SHBHAWPA, 16, Unknown Cap
 2953, Bcc fuba, INE788D01016, BCCFUBA, 16, Unknown Cap
 2954, Gem spinners, INE165F01020, GEMSPIN, 16, Unknown Cap
-2955, Online information technologies, INE831F01019, , 16, Unknown Cap
 2956, Hindustan hardy spicer, INE724D01011, HINDHARD, 16, Unknown Cap
 2957, Amar remedies, INE787G01011, AMAR, 16, Unknown Cap
 2958, Piccadily sugar allied, INE544C01023, PICCASUG, 16, Unknown Cap
@@ -2964,6 +2935,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2976, Gautam exim, INE721X01015, GEL, 16, Unknown Cap
 2977, Universal credit securities, INE607F01039, UNICRSE, 16, Unknown Cap
 2978, Firstobject technologies, INE683B01047, FIRSTOBJ, 16, Unknown Cap
+2979, Padmanabh alloys polymers, NA          , PADALPO, 15, Unknown Cap
 2980, Sree sakthi paper mills, INE266H01014, SREESAKHTI, 15, Unknown Cap
 2981, Polychem, INE752B01024, POLYCHEM, 15, Unknown Cap
 2982, Nu tek, INE318J01027, NUTEK, 15, Unknown Cap
@@ -2978,12 +2950,12 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 2991, Amco, INE924B01011, AMCOIND, 15, Unknown Cap
 2992, Brady morris engineering co, INE856A01017, BRADYM, 15, Unknown Cap
 2993, Starlit power systems, INE909P01012, STARLIT, 15, Unknown Cap
-2994, Laffan software, INE991F01011, , 15, Unknown Cap
 2995, Emmessar biotech nutrition, INE634B01016, EMMESSA, 15, Unknown Cap
 2996, Skyline millars, INE178E01026, SKYMILAR, 15, Unknown Cap
 2997, Soni medicare, INE848R01018, SML, 15, Unknown Cap
 2998, Enbee trade finance, INE993I01011, ENBETRD, 15, Unknown Cap
 2999, Consecutive investments trading company, INE187R01011, CITL, 15, Unknown Cap
+3000, Sai industries, NA          , SAINDUS, 15, Unknown Cap
 3001, Gujarat petrosynthese, INE636P01011, GUJPETR, 15, Unknown Cap
 3002, Ajwa fun world resorts, INE863E01015, AJWAFUN, 15, Unknown Cap
 3003, Jet infraventure, INE155R01018, JETINFRA, 15, Unknown Cap
@@ -2992,7 +2964,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3006, Alfavision overseas, INE883B01019, ALFAVIO, 15, Unknown Cap
 3007, Link pharma chem, INE302F01011, LINKPH, 15, Unknown Cap
 3008, Morarka finance, INE367A01015, MORARKFI, 15, Unknown Cap
-3009, Merit credit corporation, INE023D01018, , 15, Unknown Cap
 3010, Unison metals, INE099D01018, UNISON, 15, Unknown Cap
 3011, Parle software, INE272G01014, PARLESOFT, 15, Unknown Cap
 3012, Asian tea exports, INE822B01017, ASIANTNE, 15, Unknown Cap
@@ -3012,14 +2983,15 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3026, Integrated capital services, INE682B01023, ICSL, 15, Unknown Cap
 3027, Chromatic, INE662C01015, CHROMATIC, 15, Unknown Cap
 3028, Cosboard industries, INE496D01016, COSBOARD, 14, Unknown Cap
-3029, Sterling estates properties, INE078L01015, , 14, Unknown Cap
 3030, Cg vak software exports, INE084D01010, CGVAK, 14, Unknown Cap
 3031, Yash management satellite, INE216B01012, YASHMGM, 14, Unknown Cap
 3032, Deco mica, INE907E01010, DECOMIC, 14, Unknown Cap
+3033, Sai capital, NA          , SAICAPI, 14, Unknown Cap
 3034, Cil securities, INE830A01012, CILSEC, 14, Unknown Cap
 3035, Regency ceramics, INE277C01012, REGENCERAM, 14, Unknown Cap
 3036, Secure earth technologies, INE160B01038, SECEARTH, 14, Unknown Cap
 3037, Sun techno overseas, INE703D01023, WELLWORT, 14, Unknown Cap
+3038, Asian food products, NA          , ASIFOOD, 14, Unknown Cap
 3039, Jay mahesh infraventures, INE984L01014, JAYMAHESH, 14, Unknown Cap
 3040, K&r rail engineering, INE078T01026, KRRAIL, 14, Unknown Cap
 3041, Five core exim, INE600D01021, FIVECORE, 14, Unknown Cap
@@ -3050,7 +3022,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3066, Ub engineering, INE328C01013, UBENGG, 14, Unknown Cap
 3067, Salguti industries, INE159C01012, SALGUTI, 14, Unknown Cap
 3068, Sun shine worldwide, INE560F01014, ROBINSON, 14, Unknown Cap
-3069, Agarwal duplex board mills, INE290T01019, , 14, Unknown Cap
 3070, Mathew easow research securities lt, INE963B01019, MATHEWE, 13, Unknown Cap
 3071, Sezal glass, INE955I01036, SEZAL, 13, Unknown Cap
 3072, Hp cotton textile mills, INE950C01014, HPCOTTON, 13, Unknown Cap
@@ -3116,7 +3087,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3132, Gandhinagar leasing finance, INE202J01015, GANDLEA, 13, Unknown Cap
 3133, Jenson nicholson, INE819B01021, JENSONICOL, 12, Unknown Cap
 3134, Aruna hotels, INE957C01019, ARUNASUN, 12, Unknown Cap
-3135, International securities, INE086D01015, , 12, Unknown Cap
 3136, Svc industries, INE038B01010, SVCIND, 12, Unknown Cap
 3137, Jtaparia projects, INE075K01013, JTAPARIA, 12, Unknown Cap
 3138, Micro technologies, INE358B01012, MICROTECH, 12, Unknown Cap
@@ -3124,8 +3094,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3140, Kandagiri spinning mills, INE292D01019, KANDAGIRI, 12, Unknown Cap
 3141, Titan securities, INE090D01017, TITANSEC, 12, Unknown Cap
 3142, Rgf capital markets, INE684D01025, RGF, 12, Unknown Cap
-3143, Operational energy group, INE239V01012, , 12, Unknown Cap
-3144, Meenakshi mercantiles, INE189G01010, , 12, Unknown Cap
 3145, Golkunda diamonds jewellery, INE798D01015, GOLKUNDIA, 12, Unknown Cap
 3146, Achal investments, INE860P01025, ACHAL, 12, Unknown Cap
 3147, O p chains, INE118Q01018, OPCHAINS, 12, Unknown Cap
@@ -3143,7 +3111,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3159, Canopy finance, INE095R01016, CANOPYFIN, 12, Unknown Cap
 3160, Pressure sensitive systems, INE891E01016, PRESSURS, 12, Unknown Cap
 3161, Sterling spinners, INE173E01019, STERSPN, 12, Unknown Cap
-3162, Central cables, INE672G01015, , 12, Unknown Cap
 3163, Anup malleable, INE188O01016, ANUPMAL, 12, Unknown Cap
 3164, Norris medicines, INE744C01029, NORRIS, 12, Unknown Cap
 3165, Ritesh properties industries, INE299D01014, RPIL, 12, Unknown Cap
@@ -3194,8 +3161,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3210, Funny software, INE105R01013, FUNNY, 11, Unknown Cap
 3211, Sab events governance now media, INE860T01019, GOVNOW, 11, Unknown Cap
 3212, Kabsons industries, INE645C01010, KABSON, 11, Unknown Cap
-3213, Impala industrial enterprises, INE226G01010, , 11, Unknown Cap
-3214, Kirti investments, INE507L01013, , 11, Unknown Cap
 3215, Swojas energy foods, INE295B01016, SWOEF, 11, Unknown Cap
 3216, Organic coatings, INE412E01011, ORGCOAT, 11, Unknown Cap
 3217, Action financial services, INE357A01032, ACTIONFI, 11, Unknown Cap
@@ -3218,7 +3183,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3234, Ahmedabad steelcraft, INE868C01018, AHMDSTE, 11, Unknown Cap
 3235, Dhampure speciality sugars, INE956B01013, DHAMPURE, 11, Unknown Cap
 3236, Igc industries, INE099S01016, IGCIL, 11, Unknown Cap
-3237, Steadfast corporation, INE089B01013, , 11, Unknown Cap
 3238, Indo euro indchem, INE319N01019, INDOEURO, 11, Unknown Cap
 3239, Omkar pharmachem, INE501C01015, OMKARPH, 11, Unknown Cap
 3240, Antarctica, INE414B01021, ANTGRAPHIC, 11, Unknown Cap
@@ -3227,17 +3191,13 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3243, Inducto steels, INE146H01018, INDCTST, 11, Unknown Cap
 3244, Ph capital, INE160F01013, PHCAP, 11, Unknown Cap
 3245, Aplab, INE273A01015, APLAB, 11, Unknown Cap
-3246, Marsons, INE415B01036, MARSONS, 10, Unknown Cap
 3247, Continental petroleums, INE369D01015, CONTPTR, 10, Unknown Cap
-3248, Sigachi laboratories, INE368H01018, , 10, Unknown Cap
 3249, Sellwin traders, INE195F01019, SELLWIN, 10, Unknown Cap
-3250, Deepjyoti textiles, INE565D01018, , 10, Unknown Cap
 3251, Blazon marbles, INE096H01023, BLAZONMRB, 10, Unknown Cap
 3252, Roopa industries, INE443C01010, ROOPAIND, 10, Unknown Cap
 3253, Kaiser corporation, INE229G01022, KACL, 10, Unknown Cap
 3254, Apollo finvest, INE412D01013, APOLLOFI, 10, Unknown Cap
 3255, Photoquip, INE813B01016, PHOTOQUP, 10, Unknown Cap
-3256, Basant, INE603U01011, , 10, Unknown Cap
 3257, Joy realty, INE433O01024, JOYREALTY, 10, Unknown Cap
 3258, Oswal spinning weaving mills, INE716C01027, OSSWM, 10, Unknown Cap
 3259, Nova publications, INE900O01014, NOVAPUB, 10, Unknown Cap
@@ -3266,6 +3226,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3282, Dhanuka commercial, INE296Q01012, DHANUKACOM, 10, Unknown Cap
 3283, Sylph technologies, INE706F01013, SYLPH, 10, Unknown Cap
 3284, Pvv infra, INE428B01013, PVVINFRA, 10, Unknown Cap
+3285, Vsd confin, NA          , VSDCONF, 10, Unknown Cap
 3286, Cranex, INE608B01010, CRANEX, 10, Unknown Cap
 3287, Good value marketing co, INE532A01014, GOVMC, 10, Unknown Cap
 3288, Nakoda, INE559B01023, NAKODA, 10, Unknown Cap
@@ -3277,7 +3238,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3294, Gei industrial systems, INE599B01011, GEIINDSYS, 10, Unknown Cap
 3295, Balurghat technologies, INE654B01014, BALTE, 10, Unknown Cap
 3296, Tarai foods, INE906C01016, TARAI, 10, Unknown Cap
-3297, Dhsl textiles, INE287F01014, , 10, Unknown Cap
 3298, Allied computers international, INE335I01056, ACIASIA, 10, Unknown Cap
 3299, Apis, INE070K01014, APIS, 10, Unknown Cap
 3300, Sanathnagar enterprises, INE367E01033, BAKHY, 10, Unknown Cap
@@ -3288,6 +3248,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3305, Flora corporation, INE318U01016, FLORACORP, 10, Unknown Cap
 3306, Otco international, INE910B01010, OTCO, 10, Unknown Cap
 3307, Madhusudan industries, INE469C01023, MADHUDIN, 10, Unknown Cap
+3308, Modern syntex, NA          , MDRNSYN-B, 10, Unknown Cap
 3309, Monnet project developers, INE493H01014, MONNETPRO, 10, Unknown Cap
 3310, Morgan industries, INE701E01017, MRGNIND, 10, Unknown Cap
 3311, First winner industries, INE315J01015, FIRSTWIN, 10, Unknown Cap
@@ -3297,6 +3258,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3315, Resurgere mines minerals, INE774I01031, RMMIL, 10, Unknown Cap
 3316, Northlink fiscal capital services, INE736P01019, NORTHLINK, 10, Unknown Cap
 3317, Alpha graphic, INE952B01020, ALPGRAPH, 10, Unknown Cap
+3318, Somaiya organics, NA          , ZSOMAIYO, 10, Unknown Cap
 3319, Bhageeratha engg, INE869E01012, BHAGEENG, 10, Unknown Cap
 3320, Noble explochem, INE875D01011, NOBLEXP, 9, Unknown Cap
 3321, Galaxy agrico exports, INE803L01016, GALAGEX, 9, Unknown Cap
@@ -3304,7 +3266,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3323, Axel polymers, INE197C01012, AXELPOLY, 9, Unknown Cap
 3324, Vision cinemas, INE515B01025, VISIONCINE, 9, Unknown Cap
 3325, Info drive software, INE804D01029, INFODRIVE, 9, Unknown Cap
-3326, Pace automation, INE413R01011, , 9, Unknown Cap
 3327, Trend electronics, INE219F01017, TRENDELEC, 9, Unknown Cap
 3328, Vantage corporate services, INE069B01015, VANTAGE, 9, Unknown Cap
 3329, Noida medicare centre, INE740C01019, NOIMC, 9, Unknown Cap
@@ -3333,28 +3294,25 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3352, United credit, INE858C01027, UNITDCR, 9, Unknown Cap
 3353, Kaushalya infrastructure development corporation, INE234I01010, KAUSHALYA, 9, Unknown Cap
 3354, Spice islands apparels, INE882D01017, SPICEISL, 9, Unknown Cap
-3355, U p asbestos, INE181C01016, , 9, Unknown Cap
 3356, Lakhotia polyesters, INE191O01010, LAKHOTIA, 9, Unknown Cap
 3357, Advik laboratories, INE537C01019, ADVIKLA, 9, Unknown Cap
 3358, Ritesh international, INE534D01014, RITESHIN, 9, Unknown Cap
 3359, Adarsh plant project, INE627D01016, ADARSHPL, 9, Unknown Cap
-3360, Radico khaitan finance, INE146D01017, , 9, Unknown Cap
 3361, Sugal damani share brokers, INE309D01011, SUGALDAM, 9, Unknown Cap
 3362, Sangam health care products, INE431E01011, SANHP, 9, Unknown Cap
 3363, Jointeca education solutions, INE131N01018, JOINTECAED, 9, Unknown Cap
 3364, 7seas technologies, INF454F01010, O7SEAS, 9, Unknown Cap
-3365, Progressive finlease, INE911R01014, , 9, Unknown Cap
 3366, Sudal industries, INE618D01015, SUDAI, 9, Unknown Cap
 3367, Saboo brothers, INE021N01011, SABOOBR, 9, Unknown Cap
 3368, Pecos hotels pubs, INE484S01010, PECOS, 9, Unknown Cap
 3369, Tricom fruit products, INE843F01014, TRICOMFRU, 9, Unknown Cap
 3370, Sirohia sons, INE785O01019, SIROHIA, 9, Unknown Cap
-3371, Kumar autocast, INE168U01015, , 9, Unknown Cap
 3372, Euro leder fashion, INE940E01011, EUROLED, 9, Unknown Cap
 3373, Mega fin, INE524D01015, MEGFI, 9, Unknown Cap
 3374, Gujarat containers, INE276I01011, GUJCONT, 9, Unknown Cap
 3375, Kenvi jewels, INE923Y01015, KENVI, 9, Unknown Cap
 3376, Indo biotech foods, INE183C01012, INDBF, 9, Unknown Cap
+3377, Gold multifab, NA          , GOLDMUL, 9, Unknown Cap
 3378, Uniroyal industries, INE980D01019, UNIROYAL, 9, Unknown Cap
 3379, Sturdy industries, INE134F01026, STURDY, 9, Unknown Cap
 3380, Dhanlaxmi cotex, INE977F01010, DHANCOT, 9, Unknown Cap
@@ -3380,14 +3338,12 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3400, Garv industries, INE626Z01011, GARVIND, 9, Unknown Cap
 3401, Cindrella hotels, INE908C01012, CINDHO, 8, Unknown Cap
 3402, Manraj housing finance, INE948I01015, MANRAJH, 8, Unknown Cap
-3403, Hillridge investments, INE138S01012, , 8, Unknown Cap
-3404, Ranjan polysters, INE936V01013, , 8, Unknown Cap
 3405, Jainex aamcol, INE280F01019, JAINEX, 8, Unknown Cap
 3406, Suryajyoti spinning mills, INE411C01017, SURYAJYOTI, 8, Unknown Cap
-3407, Midland services, INE551E01016, , 8, Unknown Cap
 3408, Junction fabrics apparels, INE653S01010, JUNCTION, 8, Unknown Cap
 3409, Nivyah infrastructure telecom services, INE303D01014, NIVINFRA, 8, Unknown Cap
 3410, Southern latex, INE410M01018, SOUTLAT, 8, Unknown Cap
+3411, Sagar tourist resorts, NA          , SGARRES, 8, Unknown Cap
 3412, Danube industries, INE575D01033, DANUBE, 8, Unknown Cap
 3413, Onesource techmedia, INE807O01011, OTML, 8, Unknown Cap
 3414, Kjmc corporate advisors, INE602C01011, KJMCCORP, 8, Unknown Cap
@@ -3398,27 +3354,27 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3419, Tumus electric corporation, INE064R01012, TUMUSEL, 8, Unknown Cap
 3420, Betex, INE765L01017, BETXIND, 8, Unknown Cap
 3421, Creative eye, INE230B01021, CREATIVEYE, 8, Unknown Cap
-3423, Dtl holdings, INE348W01019, , 8, Unknown Cap
+3422, Gsl, NA          , GSLINDL, 8, Unknown Cap
 3424, Tashi, INE552H01017, TASHIND, 8, Unknown Cap
 3425, Golden crest education services, INE222U01010, GOLDENCREST, 8, Unknown Cap
 3426, Hanung toys textiles, INE648H01013, HANUNG, 8, Unknown Cap
 3427, Jr foods, INE989E01018, JRFOODS, 8, Unknown Cap
-3428, Genesis developers holdings, INE273R01019, , 8, Unknown Cap
 3429, Coastal roadways, INE229E01019, COARO, 8, Unknown Cap
 3430, Genera agri corp, INE993L01015, GENERAAGRI, 8, Unknown Cap
 3431, Acrow, INE950D01012, ACROW, 8, Unknown Cap
 3432, Cat technologies, INE170B01037, CATECH, 8, Unknown Cap
 3433, Powerhouse gym wellness, INE982Q01017, POWERGYM, 8, Unknown Cap
-3434, Hardoli paper mills, INE699F01010, , 8, Unknown Cap
 3435, Advance lifestyles, INE900E01015, AHMADML, 8, Unknown Cap
 3436, Nb footwear, INE006F01018, NBFOOT, 8, Unknown Cap
 3437, Tti enterprise, INE404F01031, TTIENT, 8, Unknown Cap
 3438, Ashoka metcast, INE760Y01011, AML, 8, Unknown Cap
 3439, Southern magnesium chemicals lt, INE308N01012, SOUTHMG, 8, Unknown Cap
+3440, Rj shah co, NA          , RJSHAH, 8, Unknown Cap
 3441, Steel strips infrastructures, INE205F01016, STLSTRINF, 8, Unknown Cap
 3442, Mediaone global entertainment, INE828I01019, MEDIAONE, 8, Unknown Cap
 3443, Tavernier resources, INE355H01015, TAVERNIER, 8, Unknown Cap
 3444, Apoorva leasing finance investment company, INE217S01014, APOORVA, 8, Unknown Cap
+3445, Bilati, NA          , BILATOR, 8, Unknown Cap
 3446, Nihar info global, INE876E01033, NIHARINF, 8, Unknown Cap
 3447, Ecoboard industries, INE866A01016, ECOBOAR, 8, Unknown Cap
 3448, Rainbow foundations, INE230F01014, RAINBOWF, 8, Unknown Cap
@@ -3436,19 +3392,19 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3460, Samruddhi realty, INE621O01016, SRL, 8, Unknown Cap
 3461, Bhagwati oxygen, INE026I01010, BHAGWOX, 8, Unknown Cap
 3462, Rajasthan petro synthetics, INE374C01017, RAJSPTR, 8, Unknown Cap
+3463, Sc steam navigation co, NA          , SCINDIA, 8, Unknown Cap
 3464, Rainbow denim, INE820D01025, RAINBOWD, 8, Unknown Cap
 3465, Bharatiya global infomedia, INE224M01013, BGLOBAL, 8, Unknown Cap
 3466, Oasis securities, INE876A01015, OASISEC, 8, Unknown Cap
 3467, Vmv holidays, INE451S01019, VMV, 8, Unknown Cap
 3468, Kavita fabrics, INE149O01018, KFL, 8, Unknown Cap
 3469, Rajasthan tube mfg co, INE497E01012, RAJTUBE, 8, Unknown Cap
-3471, Itl finlease securities, INE767V01012, , 8, Unknown Cap
+3470, South east agro industries, NA          , SEASTAG, 8, Unknown Cap
 3472, Secunderabad health care, INE930C01016, SECHE, 8, Unknown Cap
 3473, Roselabs, INE479C01014, RLL, 8, Unknown Cap
 3474, Infronics systems, INE463B01036, INFRONICS, 8, Unknown Cap
 3475, Vapi paper mills, INE464D01014, VAPIPPR, 8, Unknown Cap
 3476, Ruchi strips alloys, INE611C01012, RUCHISTR, 8, Unknown Cap
-3477, Dr m induscorp, INE733B01016, , 8, Unknown Cap
 3478, Moongipa securities, INE618R01015, MOONGIPASEC, 8, Unknown Cap
 3479, Narendra properties, INE603F01012, NARPROP, 8, Unknown Cap
 3480, Indtradeco, INE853B01020, INTRA, 8, Unknown Cap
@@ -3458,7 +3414,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3484, Sprayking agro equipment, INE537U01011, SPRAYKING, 8, Unknown Cap
 3485, Visco trade associates, INE890S01018, VISCO, 8, Unknown Cap
 3486, Howard hotels, INE931B01016, HOWARHO, 8, Unknown Cap
-3487, Oswal minerals, INE469B01017, , 8, Unknown Cap
 3488, Cubical financial services, INE717D01023, CUBIFIN, 8, Unknown Cap
 3489, Ang industries, INE017D01010, ANGAUTO, 8, Unknown Cap
 3490, Hisar spinning mills, INE689E01014, HISARSP, 8, Unknown Cap
@@ -3505,6 +3460,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3531, Akm lace embrotex, INE777X01017, AKM, 7, Unknown Cap
 3532, Artech power trading, INE421N01021, APTL, 7, Unknown Cap
 3533, Sri amarnath finance, INE985Q01010, AMARNATH, 7, Unknown Cap
+3534, Jyoti poly vinyl, NA          , JYOTPOL, 7, Unknown Cap
 3535, Servalakshmi paper, INE431L01016, SERVALL, 7, Unknown Cap
 3536, Agio paper industries, INE112C01011, AGIOPAPER, 7, Unknown Cap
 3537, Tamilnadu jaibharat mills, INE868H01017, TAMJAIM, 7, Unknown Cap
@@ -3517,7 +3473,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3544, Nalin lease finance, INE606C01012, NALINLEA, 7, Unknown Cap
 3545, Senbo industries, INE792C01010, SENBO, 7, Unknown Cap
 3546, Margo finance, INE680B01019, MARGOFIN, 7, Unknown Cap
-3547, Interact leasing finance, INE838S01017, , 7, Unknown Cap
 3548, Schablona, INE024C01026, SCHABLON, 7, Unknown Cap
 3549, Adharshila capital services, INE269F01012, ADHARSHILA, 7, Unknown Cap
 3550, Mavi industries, INE073A01019, KRISNAFI, 7, Unknown Cap
@@ -3533,17 +3488,16 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3560, Gandhinagar hotels, INE853H01019, GANDHHO, 7, Unknown Cap
 3561, Malabar trading co, INE438D01018, MALTC, 7, Unknown Cap
 3562, Bharat bhushan share commodity brokers, INE900A01013, BHARAT, 7, Unknown Cap
-3563, Ojswi trades investment finance, INE411E01013, , 7, Unknown Cap
 3564, Sri lakshmi saraswathi textiles, INE456D01010, SLSTL, 7, Unknown Cap
 3565, Divya jyoti industries, INE666B01018, DIVYAJY, 7, Unknown Cap
 3566, Pfl infotech, INE600F01018, PFLINFOTC, 7, Unknown Cap
 3567, Supertex industries, INE881B01054, SUPERTEX, 7, Unknown Cap
 3568, Nuway organic naturals, INE414L01012, NUWAY, 7, Unknown Cap
-3569, Kra leasing, INE300F01015, , 7, Unknown Cap
 3570, Kuwer industries, INE430F01010, KUWERIN, 7, Unknown Cap
 3571, Jain studios, INE486B01011, JAINSTUDIO, 7, Unknown Cap
 3572, Mehta integrated finance, INE240B01012, MEHIF, 7, Unknown Cap
 3573, Sun source, INE320F01013, SUNSOUI, 7, Unknown Cap
+3574, Global knitfab, NA          , GLOKNIT, 7, Unknown Cap
 3575, Ace men engg works, INE023R01018, ACEMEN, 7, Unknown Cap
 3576, Kanel industries, INE252C01015, KANELIND, 7, Unknown Cap
 3577, Saianand commercial, INE092G01016, SAICOM, 7, Unknown Cap
@@ -3575,9 +3529,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3603, Pithampur poly products, INE747D01012, PITHP, 6, Unknown Cap
 3604, Telecanor global, INE381G01013, TELECANOR, 6, Unknown Cap
 3605, Nagarjuna agritech, INE793H01017, NAGTECH, 6, Unknown Cap
+3606, Essar investments, NA          , ESSRINV, 6, Unknown Cap
 3607, Perfect octave media projects, INE814L01013, OCTAVE, 6, Unknown Cap
 3608, Epic energy, INE932F01015, FISCAL, 6, Unknown Cap
 3609, Tatia global vennture, INE083G01031, TATILAGLOB, 6, Unknown Cap
+3610, Shaba chemicals, NA          , SHABCHM, 6, Unknown Cap
 3611, Garware synthetics, INE340D01016, GARWSYN, 6, Unknown Cap
 3612, Vistar amar, INE878P01019, VISTARAMAR, 6, Unknown Cap
 3613, Synthiko foils, INE363L01029, SYNTHFO, 6, Unknown Cap
@@ -3588,7 +3544,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3618, Hindustan everest tools, INE598D01019, HINDEVER, 6, Unknown Cap
 3619, Bhagwandas metals, INE656B01019, BHAGWNME, 6, Unknown Cap
 3620, Osiajee texfab, INE186R01013, OSIAJEE, 6, Unknown Cap
-3621, Shradha industries, INE489B01015, , 6, Unknown Cap
 3622, Octal credit capital, INE513C01010, OCTAL, 6, Unknown Cap
 3623, Pet plastics, INE704F01018, PETPLST, 6, Unknown Cap
 3624, Multiplus holdings, INE886E01016, MULTIIN, 6, Unknown Cap
@@ -3610,11 +3565,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3640, Mafatlal lubricants, INE521D01011, MAFLU, 6, Unknown Cap
 3641, Skyline ventures, INE055Q01012, SKILVEN, 6, Unknown Cap
 3642, Mh mills industries, INE698F01020, MHMLIND, 6, Unknown Cap
+3643, Bijoy hans, NA          , BIJHANS, 6, Unknown Cap
 3644, Gcv services, INE236B01036, GUJCV, 6, Unknown Cap
 3645, United leasing industries, INE357P01014, UNTTEMI, 6, Unknown Cap
 3646, Milestone global, INE151H01018, SANGRAN, 6, Unknown Cap
 3647, Jayatma spinners, INE246D01015, JAYATMA, 6, Unknown Cap
-3648, Marg techno projects, INE245H01018, , 6, Unknown Cap
 3649, Silver oak, INE870J01019, SILVOAK, 6, Unknown Cap
 3650, Darjeeling ropeway company, INE830S01014, DARJEELING, 6, Unknown Cap
 3651, Intercontinental leasing finance company, INE858Q01019, ICLF, 6, Unknown Cap
@@ -3630,9 +3585,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3661, Mindvision capital, INE259E01032, KAILASHF, 6, Unknown Cap
 3662, Ikab securities investment, INE874A01010, IKAB, 6, Unknown Cap
 3663, Ishita drugs industries, INE806D01016, ISHITADR, 6, Unknown Cap
-3664, Rampur fertilizers, INE671X01012, , 6, Unknown Cap
 3665, Sterling guarantee fin, INE668Y01016, STRLGUA, 6, Unknown Cap
-3666, Asianlakto industries, INE771U01016, , 6, Unknown Cap
 3667, Sharma east hospitals res, INE465H01012, SHARMEH, 6, Unknown Cap
 3668, Shree ganesh jewellery house, INE553K01019, SGJHL, 6, Unknown Cap
 3669, Balaji industrial corporation, INE455A01018, BALAJIIND, 6, Unknown Cap
@@ -3647,9 +3600,8 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3678, Mahaan foods, INE734D01010, MAHAANF, 6, Unknown Cap
 3679, Ssorganics, INE102E01018, SSORGS, 6, Unknown Cap
 3680, Kanungo financiers, INE453S01015, KANUNGO, 6, Unknown Cap
-3681, Maryada commercial enterprises investment co, INE372W01019, , 6, Unknown Cap
+3682, Datar switchgear, NA, DATARSW-B, 6, Unknown Cap
 3683, Layla textile traders, INE914Q01010, LAYLA, 6, Unknown Cap
-3684, Jds finance company, INE751P01018, , 6, Unknown Cap
 3685, Bansisons tea industries, INE856E01019, BANSTEA, 6, Unknown Cap
 3686, Minaxi textiles, INE952C01028, MINAXI, 6, Unknown Cap
 3687, Evergreen textiles, INE229N01010, EVERTEX, 6, Unknown Cap
@@ -3660,6 +3612,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3692, Sita enterprises, INE579D01019, SITAENT, 6, Unknown Cap
 3693, Southern infosys, INE298B01010, SOUTHERNIN, 6, Unknown Cap
 3694, Chemo pharma laboratories, INE320M01019, CHEMOPH, 6, Unknown Cap
+3695, Vishva vishal engineering, NA          , VISWVIS, 6, Unknown Cap
 3696, Vax housing finance corporation, INE761B01017, VAXHS, 6, Unknown Cap
 3697, Muller phipps, INE003F01015, MULLER, 6, Unknown Cap
 3698, Facor steels, INE829G01011, FACORSTE, 6, Unknown Cap
@@ -3673,12 +3626,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3706, Dharani finance, INE899D01011, DHARFIN, 6, Unknown Cap
 3707, Jagson airlines, INE685B01018, JAGSONAI, 6, Unknown Cap
 3708, Neycer, INE275N01013, NEYCERI, 6, Unknown Cap
-3709, Quality synthetic industries, INE062F01011, , 6, Unknown Cap
 3710, Typhoon financial services, INE761R01013, TFSL, 5, Unknown Cap
 3711, Centron industrial alliance, INE450L01024, CTRNIND, 5, Unknown Cap
 3712, Standard shoe sole mould, INE888N01013, STDSHOE, 5, Unknown Cap
 3713, Rajdarshan industries, INE610C01014, ARENTERP, 5, Unknown Cap
-3714, Kamini finance investment company, INE927E01018, , 5, Unknown Cap
 3715, Triton corp, INE982C01033, TRITON, 5, Unknown Cap
 3716, Unjha formulations, INE576D01015, UNJHAFOR, 5, Unknown Cap
 3717, Gujarat metallic coal coke, INE146F01020, GMETCOAL, 5, Unknown Cap
@@ -3686,7 +3637,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3719, Libord securities, INE267E01019, LIBORD, 5, Unknown Cap
 3720, Swadeshi polytex, INE243N01011, SWADPOL, 5, Unknown Cap
 3721, Anukaran commercial enterprises lt, INE090G01028, ZANUKCOM, 5, Unknown Cap
-3722, Jck infrastructure development, INE188R01019, , 5, Unknown Cap
 3723, Xl energy, INE183H01011, XLENERGY, 5, Unknown Cap
 3724, Global securities, INE742K01018, GLOBSEC, 5, Unknown Cap
 3725, Subhash silk mills, INE690D01014, SUBSM, 5, Unknown Cap
@@ -3698,6 +3648,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3731, National standard, INE166R01015, NATIONSTD, 5, Unknown Cap
 3732, Panther industrial products, INE181D01014, PANIDPR, 5, Unknown Cap
 3733, Gfl financials, INE764K01038, GFLFIN, 5, Unknown Cap
+3734, Pushpsons industries, NA          , PUSHPIN, 5, Unknown Cap
 3735, Ramsarup industries, INE005D01015, RAMSARUP, 5, Unknown Cap
 3736, Sparkling, INE181T01010, SIFL, 5, Unknown Cap
 3737, Shricon industries, INE753D01010, SHRICON, 5, Unknown Cap
@@ -3725,7 +3676,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3759, Luharuka media infra, INE195E01020, LUHARUKA, 5, Unknown Cap
 3760, Prabhav industries, INE538J01012, PRABHAVIN, 5, Unknown Cap
 3761, Asia pack, INE784M01016, ASIAPAK, 5, Unknown Cap
-3762, Phf leasing, INE405N01016, , 5, Unknown Cap
 3763, Alka, INE061B01020, ALKASP, 5, Unknown Cap
 3764, Azure exim services, INE837F01016, AZUREEXIM, 5, Unknown Cap
 3765, Megri soft, INE756R01013, MEGRISOFT, 5, Unknown Cap
@@ -3737,11 +3687,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3771, Ashish polyplast, INE831C01016, ASHISHPO, 5, Unknown Cap
 3772, Inani securities, INE224C01014, INANISEC, 5, Unknown Cap
 3773, Aar commercial company, INE184K01013, AARCOM, 5, Unknown Cap
+3774, Modern insulators, NA          , MODINSU, 5, Unknown Cap
 3775, Hemo organic, INE422G01015, HEMORGANIC, 5, Unknown Cap
 3776, Jindal capital, INE356F01017, JINDCAP, 5, Unknown Cap
 3777, Hktrade international, INE725P01012, HKT, 5, Unknown Cap
 3778, Sharanam infraproject trading, INE104S01022, SIPTL, 5, Unknown Cap
-3779, Uss global, INE277F01015, , 5, Unknown Cap
 3780, Jaihind projects, INE343D01010, JAIHINDPRO, 5, Unknown Cap
 3781, Cura technologies, INE117B01012, CURATECH, 5, Unknown Cap
 3782, Modern shares stockbrokers, INE370A01019, MODRNSH, 5, Unknown Cap
@@ -3751,18 +3701,14 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3786, Io system, INE502D01011, IOSYSTEM, 5, Unknown Cap
 3787, St services, INE907D01012, STSERV, 5, Unknown Cap
 3788, Tiaan ayurvedic herbs, INE864T01011, TAHL, 5, Unknown Cap
-3789, Sri narayan raj kumar merchants, INE063F01019, , 5, Unknown Cap
 3790, Omega interactive technologies, INE113B01029, OMEGAIN, 5, Unknown Cap
 3791, Yashraj containeurs, INE095C01018, YASHRAJC, 5, Unknown Cap
 3792, Saffron industries, INE474D01013, SAFFRON, 5, Unknown Cap
-3793, Sun finlease, INE098D01010, , 5, Unknown Cap
 3794, Som datt finance corporation, INE754C01010, SODFC, 5, Unknown Cap
 3795, Atcom technologies, INE834A01014, ATCOM, 5, Unknown Cap
 3796, Abhishek corporation, INE004I01017, ABHISHEK, 5, Unknown Cap
 3797, Asia capital, INE131Q01011, ASIACAP, 5, Unknown Cap
-3798, Indu engineering textiles, INE022S01018, , 5, Unknown Cap
 3799, Sterling powergensys, INE067E01013, STERPOW, 5, Unknown Cap
-3800, Jotindra steel tubes, INE173F01016, , 5, Unknown Cap
 3801, Bonanza industries, INE143N01021, BONINDL, 5, Unknown Cap
 3802, Aravali securities finance, INE068C01015, ARAVALIS, 5, Unknown Cap
 3803, Mahalaxmi seamless, INE257F01017, MAHALXSE, 5, Unknown Cap
@@ -3816,11 +3762,8 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3851, Jain marmo industries, INE780Q01015, JAINMARMO, 5, Unknown Cap
 3852, Madhusudan securities, INE856D01011, MADHUSE, 5, Unknown Cap
 3853, Ankush finstock, INE784D01015, ANKUSHFI, 5, Unknown Cap
-3854, Amarkantak traders, INE326V01017, , 5, Unknown Cap
 3855, Balaxi ventures, INE618N01014, BALAXI, 5, Unknown Cap
-3856, Smart capital services, INE980S01017, , 4, Unknown Cap
 3857, Containerway international, INE319U01014, CONTAINER, 4, Unknown Cap
-3858, Sarnimal investment, INE464R01022, , 4, Unknown Cap
 3859, Macro, INE307N01014, MACINTR, 4, Unknown Cap
 3860, Crown tours, INE969E01010, CROWNTOURS, 4, Unknown Cap
 3861, Prakash steelage, INE696K01024, PRAKASHSTL, 4, Unknown Cap
@@ -3858,8 +3801,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3893, Rsl textiles, INE259F01013, RSLTEXTIL, 4, Unknown Cap
 3894, Yuranus infrastructure, INE156M01017, YURANUS, 4, Unknown Cap
 3895, Panafic industrials, INE655P01029, PANAFIC, 4, Unknown Cap
+3896, Chase bright steel co, NA          , CHASBRT, 4, Unknown Cap
 3897, Step two corporation, INE623D01015, STEP2COR, 4, Unknown Cap
 3898, Shailja commercial trade frenzy, INE195R01014, SHAILJA, 4, Unknown Cap
+3899, Detroit industries, NA          , DETRIND, 4, Unknown Cap
 3900, Flora textiles, INE161F01011, FLORATX, 4, Unknown Cap
 3901, Max alert systems, INE253N01010, MASL, 4, Unknown Cap
 3902, Gcm commodity derivatives, INE200P01016, GCMCOMM, 4, Unknown Cap
@@ -3871,6 +3816,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3908, Emporis projects, INE742D01013, EMPORIS, 4, Unknown Cap
 3909, Electrex, INE167A01019, ELEXT, 4, Unknown Cap
 3910, Sudev industries, INE670C01018, SUDIN, 4, Unknown Cap
+3911, Knd engeneering technologies, NA          , KNDENGT, 4, Unknown Cap
 3912, Daulat securities, INE108C01019, DAULAT, 4, Unknown Cap
 3913, First custodian fund, INE609B01018, 1STCUS, 4, Unknown Cap
 3914, Chandrima mercantiles, INE371F01016, CHANDRIMA, 4, Unknown Cap
@@ -3883,7 +3829,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3921, Sai moh auto links, INE345U01019, SAIMOH, 4, Unknown Cap
 3922, Nda securities, INE026C01013, NDASEC, 4, Unknown Cap
 3923, Munoth financial services, INE348D01019, MUNOTHFI, 4, Unknown Cap
-3924, Sidh management corporate services, INE482E01014, , 4, Unknown Cap
 3925, Vintron informatics, INE043B01028, VINTRON, 4, Unknown Cap
 3926, Symbiox investment trading co, INE653R01012, SYMBIOX, 4, Unknown Cap
 3927, Futuristic offshore services chemical, INE418A01016, FOSCL, 4, Unknown Cap
@@ -3909,8 +3854,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3947, Advent computer services, INE101C01022, ADVENT, 4, Unknown Cap
 3948, Dalal street investments, INE422D01012, DSINVEST, 4, Unknown Cap
 3949, Katare spinning mills, INE498G01015, KATRSPG, 4, Unknown Cap
+3950, Deltron, NA          , DELTRON, 4, Unknown Cap
 3951, Avon mercantile, INE471D01019, AVONMERC, 4, Unknown Cap
 3952, Nikki global finance, INE526C01012, NIKKIGL, 4, Unknown Cap
+3953, Greenfield corp, NA          , GRFLDCO, 4, Unknown Cap
 3954, Kamron laboratories, INE276T01018, KAMRLAB, 4, Unknown Cap
 3955, Neogem, INE552E01014, NOGMIND, 4, Unknown Cap
 3956, Deep diamond, INE005G01018, DDIL, 4, Unknown Cap
@@ -3928,13 +3875,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3968, Maharashtra corporation, INE272E01027, MAHACORP, 4, Unknown Cap
 3969, Sonal adhesives, INE344I01017, SONALAD, 4, Unknown Cap
 3970, Fe, INE708C01016, FINEYE, 4, Unknown Cap
-3971, Sophia exports, INE948E01014, , 4, Unknown Cap
 3972, Kemistar corporation, INE971L01029, KEMISTAR, 4, Unknown Cap
 3973, Vikalp securities, INE186E01011, VIKALPS, 4, Unknown Cap
 3974, Decillion finance, INE848N01017, DFL, 4, Unknown Cap
 3975, Asis logistics, INE888E01020, ZPARANLT, 4, Unknown Cap
 3976, Anjani finance, INE283D01018, ANJANIFIN, 4, Unknown Cap
-3977, Maxplus logistics, INE961R01019, , 4, Unknown Cap
 3978, Cj gelatine products, INE557D01015, CJGEL, 4, Unknown Cap
 3979, Mfs intercorp, INE614F01019, MUSKFER, 4, Unknown Cap
 3980, Arihants securities, INE190D01015, ARISE, 4, Unknown Cap
@@ -3950,6 +3895,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 3990, Avi polymers, INE897N01014, AVI, 4, Unknown Cap
 3991, Kiduja, INE845A01010, KIDUJA, 4, Unknown Cap
 3992, Klg capital services, INE929C01018, KLGCAP, 4, Unknown Cap
+3993, Rishabh special yarns, NA          , RISHYRN, 4, Unknown Cap
 3994, Ambar protein industries, INE072V01017, AMBARPIL, 4, Unknown Cap
 3995, Iykot hitech toolroom, INE079L01013, IYKOTHITE, 4, Unknown Cap
 3996, Kreon finnancial services, INE302C01018, KREONFIN, 4, Unknown Cap
@@ -3971,6 +3917,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4012, Gagan polycot, INE297L01011, GAGANPO, 4, Unknown Cap
 4013, Stewarts lloyds, INE356D01012, STEWART, 4, Unknown Cap
 4014, Ifl promoters, INE326D01031, IFLPROMOT, 4, Unknown Cap
+4015, Prakash ceramics, NA          , PRACERA, 4, Unknown Cap
 4016, Kwality credit leasing, INE577C01015, KWALITYCL, 4, Unknown Cap
 4017, Gratex industries, INE915E01013, GRATEXI, 4, Unknown Cap
 4018, Abhishek finlease, INE723C01015, ABHIFIN, 4, Unknown Cap
@@ -3983,23 +3930,21 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4025, Alchemist corporation, INE057D01016, ALCHCORP, 4, Unknown Cap
 4026, Gkconsultants, INE131D01019, GKCONS, 4, Unknown Cap
 4027, Fraser company, INE184Q01010, FRASER, 4, Unknown Cap
-4028, Skyline, INE773X01016, , 4, Unknown Cap
 4029, Trivikrama industries, INE641Q01019, TRIVIKRAMA, 4, Unknown Cap
 4030, Hypersoft technologies, INE039D01014, HYPERSOFT, 4, Unknown Cap
-4031, Zel jewellers, INE513F01013, , 4, Unknown Cap
 4032, Enterprise international, INE439G01019, ENTRINT, 4, Unknown Cap
+4033, Shentracon chemicals, NA          , SHENTRA, 4, Unknown Cap
 4034, Devika proteins, INE248C01013, DEVIKA, 4, Unknown Cap
 4035, Kcl infra projects, INE469F01026, KCLINFRA, 4, Unknown Cap
 4036, Gi engineering solutions, INE065J01016, GISOLUTION, 4, Unknown Cap
 4037, Patidar buildcon, INE637N01014, TELSTLB, 4, Unknown Cap
 4038, Xo infotech, INE490B01013, XOINFO, 4, Unknown Cap
 4039, Foundry fuel products, INE617C01027, FFPL, 4, Unknown Cap
-4041, Roadways, INE518C01019, , 4, Unknown Cap
+4040, Associated marmo granites, NA          , ASSMRMO, 4, Unknown Cap
 4042, S kumarscom, INE827A01018, SKUMAR, 4, Unknown Cap
 4043, Thambbi modern spinning mills, INE830D01016, THAMBBI, 4, Unknown Cap
 4044, Nimbus industries, INE470M01020, NIMBUSI, 4, Unknown Cap
 4045, Kmf builders developers, INE580H01026, KMFBLDR, 4, Unknown Cap
-4046, Hindustan auto finance, INE806Q01018, , 4, Unknown Cap
 4047, Teem laboratories, INE202D01018, TEEM, 4, Unknown Cap
 4048, Yogi sung won, INE429B01011, YOGISUNG, 4, Unknown Cap
 4049, Flawless diamond, INE345E01021, FLAWLESD, 4, Unknown Cap
@@ -4022,11 +3967,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4066, Shalimar agencies, INE631E01016, SAGL, 3, Unknown Cap
 4067, Advance petrochemicals, INE334N01018, ADVPETR-B, 3, Unknown Cap
 4068, Regency trust, INE425F01028, REGTRUS, 3, Unknown Cap
-4069, Abhimanu exports, INE076R01016, , 3, Unknown Cap
 4070, Indian link chain mnfrs, INE359D01016, INLCM, 3, Unknown Cap
 4071, Santosh fine fab, INE612D01018, SANTOSHF, 3, Unknown Cap
 4072, Kbs, INE883D01015, KBSINDIA, 3, Unknown Cap
 4073, United interactive, INE706D01018, UNITEDINT, 3, Unknown Cap
+4074, Praveen properties, NA          , PRAVEEN, 3, Unknown Cap
 4075, Sanjivani paranteral, INE860D01013, SANJIVIN, 3, Unknown Cap
 4076, Golden carpets, INE595D01015, GOLCA, 3, Unknown Cap
 4077, Agrimony commodities, INE567P01018, AGRIMONY, 3, Unknown Cap
@@ -4043,7 +3988,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4088, Focus industrial resources, INE603E01023, FOCUSIRL, 3, Unknown Cap
 4089, Quintegra solutions, INE033B01011, QUINTEGRA, 3, Unknown Cap
 4090, Frontier informatics, INE547B01028, FRONTIER, 3, Unknown Cap
-4091, Jain farms palm oil, INE379Y01010, , 3, Unknown Cap
 4092, Sree chem resins, INE377C01010, SRECR, 3, Unknown Cap
 4093, Hitkari industries, INE553B01018, HITKARIIN, 3, Unknown Cap
 4094, Avinash information technologies, INE452C01011, AVINF, 3, Unknown Cap
@@ -4053,12 +3997,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4098, Chambal breweries distilleries li, INE417N01011, CHMBBRW, 3, Unknown Cap
 4099, Aditya ispat, INE570B01012, ADIGLOB, 3, Unknown Cap
 4100, Money masters leasing finance, INE340O01013, MMLF, 3, Unknown Cap
+4101, Hira automobiles, NA          , HIRAUTO, 3, Unknown Cap
 4102, Quest financial services, INE064D01012, QFSL, 3, Unknown Cap
-4103, Parijat paper mills, INE447K01014, , 3, Unknown Cap
 4104, Pasari spinning mills, INE604F01010, PASARI, 3, Unknown Cap
 4105, Netvista information tech, INE738A01017, NETVISTAIT, 3, Unknown Cap
-4106, New era alkaloids export, INE166V01017, , 3, Unknown Cap
-4107, Nitu trading company, INE406T01011, , 3, Unknown Cap
 4108, Savani financials, INE304E01010, SAVFI, 3, Unknown Cap
 4109, Gallops enterprise, INE755J01012, GALLOPENT, 3, Unknown Cap
 4110, Advanced micronic devices, INE903C01013, ADVNCMIC, 3, Unknown Cap
@@ -4067,9 +4009,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4113, Timbor home, INE346L01016, TIMBOR, 3, Unknown Cap
 4114, Kashyap tele medicines, INE108B01029, KASHYAP, 3, Unknown Cap
 4115, Minda finance, INE197E01018, MINDAFIN, 3, Unknown Cap
-4116, Fiber plus industries, INE804R01011, , 3, Unknown Cap
 4117, Bilpower, INE952D01018, BILPOWER, 3, Unknown Cap
-4118, Rakan steels, INE773R01018, , 3, Unknown Cap
 4119, Suryo foods industries, INE565E01016, SURFI, 3, Unknown Cap
 4120, Kkalpana plastick, INE465K01016, KKPLASTICK, 3, Unknown Cap
 4121, Sheetal diamonds, INE786J01017, SHEETAL, 3, Unknown Cap
@@ -4082,59 +4022,46 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4128, Market creators, INE944C01017, MKTCREAT, 3, Unknown Cap
 4129, Bharat textiles proofing industri, INE201N01019, BHATEXT, 3, Unknown Cap
 4130, Peeti securities, INE328D01011, PEETISEC, 3, Unknown Cap
-4131, City gold credit capital, INE868D01016, , 3, Unknown Cap
 4132, Computer point, INE607B01012, COMPUPN, 3, Unknown Cap
-4133, R r corporate securities, INE441F01017, , 3, Unknown Cap
-4134, Ritman infra, INE393C01017, , 3, Unknown Cap
 4135, Palsoft infosystems, INE969B01016, PALSOFT, 3, Unknown Cap
 4136, Crimson metal engineering company, INE318P01016, CRIMSON, 3, Unknown Cap
 4137, Objectone information systems, INE860E01011, OONE, 3, Unknown Cap
 4138, Gajanan securities services, INE868G01019, GAJANANSEC, 3, Unknown Cap
 4139, Bhoruka aluminium, INE866G01013, BHRKALM, 3, Unknown Cap
 4140, Asian films production distribution, INE581B01035, ASIANFILMS, 3, Unknown Cap
-4141, Regal enterprises, INE384R01014, , 3, Unknown Cap
-4143, Dalmia refractories, INE200F01017, , 3, Unknown Cap
+4142, Towels exports, NA          , TOWELIN, 3, Unknown Cap
 4144, Rekvina laboratories, INE092O01028, VINRKLB, 3, Unknown Cap
 4145, Kansal fibres, INE179O01015, KANSAFB, 3, Unknown Cap
 4146, Citiport financial services, INE494D01011, CITIPOR, 3, Unknown Cap
 4147, Suryavanshi spinning mills, INE431C01023, SURYVANSP, 3, Unknown Cap
-4148, Shree worstex, INE926R01012, , 3, Unknown Cap
-4149, Prabhat securities, INE774R01016, , 3, Unknown Cap
 4150, Klk electrical, INE125G01014, KLKELEC, 3, Unknown Cap
 4151, Credence sound vision, INE406C01025, CREDENCE, 3, Unknown Cap
 4152, Integrated thermoplastics, INE038N01015, INTETHR, 3, Unknown Cap
 4153, Mym technologies, INE378B01010, MYMTECH, 3, Unknown Cap
 4154, Haria exports, INE772B01014, HARIAEXPO, 3, Unknown Cap
-4156, Aurum capital projects, INE050F01016, , 3, Unknown Cap
-4157, P k leasing finance, INE061D01018, , 3, Unknown Cap
+4155, Kumaka industries, NA          , ASHKORG, 3, Unknown Cap
 4158, Apple credit corporation, INE212A01013, APPLECREDT, 3, Unknown Cap
 4159, Chennai ferrous industries, INE777O01016, CHENFERRO, 3, Unknown Cap
-4160, Tarangini investments, INE356R01020, , 3, Unknown Cap
 4161, Oswal yarns, INE670H01017, OSWAYRN, 3, Unknown Cap
 4162, Rane computers consultancy, INE749C01010, RANCC, 3, Unknown Cap
 4163, Unistar multimedia, INE808C01014, UNISTRMU, 3, Unknown Cap
 4164, Navketan merchants, INE365G01016, NAVKETAN, 3, Unknown Cap
-4165, River front hotels, INE970W01010, , 3, Unknown Cap
-4166, Encore business system, INE572B01018, , 3, Unknown Cap
 4167, Rich universe network, INE652D01014, RICHUNV, 3, Unknown Cap
 4168, Kinetic trust, INE674M01019, KINETRU, 3, Unknown Cap
-4169, Gracious vanijya, INE405T01013, , 3, Unknown Cap
 4170, Valuemart retail solutions, INE800F01014, VALUEMAR, 3, Unknown Cap
 4171, Mehta securities, INE241B01010, MEHSECU, 3, Unknown Cap
 4172, Shree precoated steels, INE318K01017, SPSL, 3, Unknown Cap
 4173, Nicco uco alliance credit, INE917B01023, NICCOUCO, 3, Unknown Cap
 4174, Desh rakshak aushdhalaya, INE971E01016, DESHRAK, 3, Unknown Cap
 4175, P b films, INE212Q01019, PBFL, 3, Unknown Cap
-4176, Kiranglobal business investment, INE764Y01013, , 3, Unknown Cap
 4177, Dhampur sugar, INE735A01013, DHAMSUGR, 3, Unknown Cap
 4178, Birla shloka edutech, INE814E01018, BIRSHLEDU, 3, Unknown Cap
 4179, Shivagrico implements, INE092H01014, SHIVAGR, 3, Unknown Cap
 4180, Shri kalyan holdings, INE079N01019, SHKALYN, 3, Unknown Cap
-4181, Slesha commercial, INE205S01019, , 3, Unknown Cap
 4182, Superstar distilleries foods lt, INE543D01015, SUPDF, 3, Unknown Cap
 4183, Mount shivalik industries, INE410C01019, MOUNTSHI, 3, Unknown Cap
+4184, Shree narmada aluminium industries, NA          , SHNALUM, 3, Unknown Cap
 4185, Gopal iron steels co, INE641H01018, GOPAIST, 3, Unknown Cap
-4186, Samyak corporation, INE237S01012, , 3, Unknown Cap
 4187, Tecil chemicals hydro power limit, INE014B01011, TRELCHE-B, 3, Unknown Cap
 4188, Avi products, INE316O01021, APIL, 3, Unknown Cap
 4189, Panjon, INE744D01019, PANJON, 3, Unknown Cap
@@ -4142,10 +4069,9 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4191, Ifl enterprises, INE714U01016, IFL, 3, Unknown Cap
 4192, Shiva medicare, INE875N01028, SHIVMED, 3, Unknown Cap
 4193, Jyothi infraventures, INE681K01018, JYOTHI, 3, Unknown Cap
-4194, Orchid securities, INE077D01014, , 3, Unknown Cap
 4195, Dhruv estates, INE780E01011, DHRUVES, 3, Unknown Cap
 4196, Microse, INE809F01015, MICROSE, 3, Unknown Cap
-4198, Ellora traders, INE237E01012, , 3, Unknown Cap
+4197, Realtime finlease, NA          , RETIFNL, 3, Unknown Cap
 4199, Magnum, INE591B01018, MAGNUML, 3, Unknown Cap
 4200, Glory polyfilms, INE408H01012, GLORY, 3, Unknown Cap
 4201, Rapid investments, INE154M01012, RAPIDIN, 3, Unknown Cap
@@ -4155,9 +4081,9 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4205, Vadilal dairy international, INE159T01016, VADIDAI, 3, Unknown Cap
 4206, Purohit construction, INE147J01012, PUROHITCON, 3, Unknown Cap
 4207, Spring fields infraventures, INE717F01010, SFIVL, 3, Unknown Cap
+4208, Mayur floorings, NA          , MAYURFL, 3, Unknown Cap
 4209, Simplex mills company, INE457H01019, SIMPLXMIL, 3, Unknown Cap
 4210, Cyberscape multimedia, INE519B01019, CYBERSC, 3, Unknown Cap
-4211, Udaipur cotton mills company, INE194G01010, , 3, Unknown Cap
 4212, Anna infrastructures, INE336D01014, ANNAINFRA, 3, Unknown Cap
 4213, Sarthak global, INE075H01019, SARTHAKGL, 3, Unknown Cap
 4214, India infraspace, INE954M01031, INDINFRA, 3, Unknown Cap
@@ -4165,9 +4091,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4216, Ceenik exports, INE418D01010, CEENIK, 3, Unknown Cap
 4217, Gujarat investa, INE373D01017, GUJINV, 3, Unknown Cap
 4218, Jyotirgamya enterprises, INE805R01018, JEL, 3, Unknown Cap
-4219, Supraneet finance consultants, INE828D01010, , 3, Unknown Cap
 4220, Jik industries, INE026B01049, JIKIND, 3, Unknown Cap
-4221, Sns laboratories, INE363S01016, , 3, Unknown Cap
 4222, Diamant infrastructure, INE206I01026, DIAMANT, 3, Unknown Cap
 4223, Sungold capital, INE271D01013, SUNGOLD, 3, Unknown Cap
 4224, Aseem global, INE439C01018, ASEEMG, 3, Unknown Cap
@@ -4179,13 +4103,15 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4230, Ontrack systems, INE426B01033, ONTRACK, 3, Unknown Cap
 4231, Pal credit capital, INE983B01025, PALCRED, 3, Unknown Cap
 4232, Jmde packaging realties, INE807C01024, UMPEI, 3, Unknown Cap
+4233, Niwas spinning mills, NA          , NIWASSP, 3, Unknown Cap
+4234, Onida saka, NA          , ONIDSAK, 3, Unknown Cap
 4235, Dazzel confindive, INE149E01027, DAZZEL, 3, Unknown Cap
-4236, Rita finance leasing, INE018S01016, , 3, Unknown Cap
 4237, Kedia infotech, INE245D01025, GRIVS, 3, Unknown Cap
 4238, Gita renewable energy, INE776O01018, GITARENEW, 3, Unknown Cap
 4239, Hb leasing finance co, INE549B01016, HBLEAS, 3, Unknown Cap
 4240, Indovation technologies, INE807M01023, INDOVATION, 3, Unknown Cap
 4241, Suncity synthetics, INE584D01019, SUNCITYSY, 3, Unknown Cap
+4242, Modern thread, NA          , MDRNTHR-B, 3, Unknown Cap
 4243, Mp agro industries, INE468C01017, MPAGI, 3, Unknown Cap
 4244, Nimbus foods industries, INE301B01020, NIMBUSFOO, 3, Unknown Cap
 4245, Todays writing instruments, INE944B01019, TODAYS, 3, Unknown Cap
@@ -4203,9 +4129,9 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4257, Promact plastics, INE818D01011, PROMACT, 3, Unknown Cap
 4258, Omansh enterprises, INE378P01028, OMANSH, 3, Unknown Cap
 4259, Bloom industries, INE373E01015, BLOIN, 3, Unknown Cap
+4260, Prakash solvent extractions, NA, PRAKSOV, 3, Unknown Cap
 4261, Divine multimedia, INE611B01022, KALEFILMS, 3, Unknown Cap
 4262, Incon engineers, INE507D01010, INCON, 3, Unknown Cap
-4263, Distinctive properties leasing, INE715U01013, , 3, Unknown Cap
 4264, Shakti press, INE794C01016, SHAKTIPR, 3, Unknown Cap
 4265, Jla infraville shoppers, INE401Q01018, JSHL, 3, Unknown Cap
 4266, Tpi, INE578C01021, TPINDIA, 3, Unknown Cap
@@ -4230,6 +4156,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4285, Gradiente infotainment, INE361K01017, GRADIENTE, 3, Unknown Cap
 4286, Techtrek, INE892N01015, TECHTREK, 3, Unknown Cap
 4287, Sva, INE763K01014, SVAINDIA, 3, Unknown Cap
+4288, Ads diagnostics, NA, ADSDIAG, 3, Unknown Cap
 4289, Continental controls, INE545B01022, CONTICON, 3, Unknown Cap
 4290, Shree hanuman sugar industries, INE101H01013, HANSUGAR, 3, Unknown Cap
 4291, Mack trading co, INE436D01012, MACK, 3, Unknown Cap
@@ -4240,6 +4167,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4296, Visagar financial services, INE309H01020, INCAFIN, 3, Unknown Cap
 4297, Vks projects, INE213M01024, VKSPL, 3, Unknown Cap
 4298, Towa sokki, INE311M01018, TOWASOK, 3, Unknown Cap
+4299, Claro, NA          , CLARIND, 2, Unknown Cap
 4300, Vaishno cement co, INE116E01018, VAICC, 2, Unknown Cap
 4301, Ykm industries, INE332F01018, YKMIND, 2, Unknown Cap
 4302, Filmcity media, INE600B01033, FILME, 2, Unknown Cap
@@ -4248,6 +4176,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4305, Uniworth, INE207A01013, UNIWORTH, 2, Unknown Cap
 4306, Bkv industries, INE356C01022, BKV, 2, Unknown Cap
 4307, Koffee break pictures, INE208D01023, KOFFBEAK, 2, Unknown Cap
+4308, Jem industries, NA, JEMINDU, 2, Unknown Cap
 4309, Sti granite, INE057G01019, STIGRAN, 2, Unknown Cap
 4310, Pan corporation, INE376A01032, PANINDIAC, 2, Unknown Cap
 4311, Sowbhagya media, INE826D01014, SOWBHAGYA, 2, Unknown Cap
@@ -4268,8 +4197,8 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4326, Zenith computers, INE598B01013, ZENITHCOMP, 2, Unknown Cap
 4327, Mw unitexx, INE578D01011, MWTEXX, 2, Unknown Cap
 4328, Dmc education, INE585D01024, DMCEDU, 2, Unknown Cap
+4329, Asean industrial structures, NA          , ASINSTR, 2, Unknown Cap
 4330, Vandana knitwear, INE219M01021, TRNKNIT, 2, Unknown Cap
-4331, Brisk services, INE750U01010, , 2, Unknown Cap
 4332, Mbparikh finstocks, INE377D01018, MBPARIKH, 2, Unknown Cap
 4333, Virtualsoft systems, INE237C01016, VIRTUALS, 2, Unknown Cap
 4334, Shivamshree businesses, INE857P01021, SBL, 2, Unknown Cap
@@ -4278,18 +4207,22 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4337, Sanblue corporation, INE602D01027, SANBLUE, 2, Unknown Cap
 4338, Arnav corporation, INE647D01014, ARNAVCORP, 2, Unknown Cap
 4339, Good value irrigation, INE164D01010, GOVAI, 2, Unknown Cap
+4340, Classic electricals, NA          , CLASELE, 2, Unknown Cap
 4341, Sbec systems, INE689V01018, SBECSYS, 2, Unknown Cap
 4342, Sudar industries, INE384L01017, SUDARIND, 2, Unknown Cap
+4343, Modern terry towels, NA          , MDTERYT-B, 2, Unknown Cap
 4344, Premier pipes, INE448N01024, PREMPIPES, 2, Unknown Cap
 4345, Top media entertainment, INE049C01023, TOPMEDIA, 2, Unknown Cap
 4346, Dynamic protfolio management serv, INE118C01018, DYNAMICP, 2, Unknown Cap
 4347, Bio green papers, INE958L01018, BGPL, 2, Unknown Cap
+4348, Hemadri cements, NA          , HEMACEM, 2, Unknown Cap
 4349, Hindusthan udyog, INE582K01018, ZHINUDYP, 2, Unknown Cap
 4350, Krishna capital securities, INE897B01019, KRISHNACAP, 2, Unknown Cap
 4351, Krishana fabrics, INE627Q01018, KRISHFAB, 2, Unknown Cap
 4352, Solitaire investments co, INE416G01017, SOLITIN, 2, Unknown Cap
 4353, Chiplun fine chemicals, INE393G01018, CHIPLUN, 2, Unknown Cap
 4354, Hind securities credits, INE727Q01016, HINDSECR, 2, Unknown Cap
+4355, Modern denim, NA          , MDRNSUT-B, 2, Unknown Cap
 4356, Bacil pharma, INE711D01018, BACPHAR, 2, Unknown Cap
 4357, Bits, INE839A01021, BITS, 2, Unknown Cap
 4358, Kiran print pack, INE516D01011, KIRANPR, 2, Unknown Cap
@@ -4297,11 +4230,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4360, Washington softwares, INE163B01016, WASHISOF, 2, Unknown Cap
 4361, Goldcoin health foods, INE634J01019, GOLDCOINHF, 2, Unknown Cap
 4362, Parsharti investments, INE290E01011, PARSHINV, 2, Unknown Cap
+4363, Hindustan agrigenetics, NA          , HINDUST, 2, Unknown Cap
 4364, Clio infotech, INE011B01017, CLIOINFO, 2, Unknown Cap
-4365, Mrigaya estate finance, INE596V01015, , 2, Unknown Cap
 4366, Soma papers industries, INE737E01011, SOMAPPR, 2, Unknown Cap
 4367, Sunraj diamond exports, INE459D01014, SUNRAJDI, 2, Unknown Cap
-4368, Spangle marketing, INE315M01019, , 2, Unknown Cap
 4369, Arunoday mills, INE469E01011, ARUNODAY, 2, Unknown Cap
 4370, Pan electronics, INE648E01010, PANELEC, 2, Unknown Cap
 4371, Dhruva capital services, INE972E01014, DHRUVCA, 2, Unknown Cap
@@ -4310,7 +4242,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4374, Venmax drugs pharmaceuticals, INE154G01022, VENMAX, 2, Unknown Cap
 4375, Iq infotech, INE679B01011, IQINF, 2, Unknown Cap
 4376, Paramount printpackaging, INE702L01010, PARAPRINT, 2, Unknown Cap
-4377, Nidhi services, INE163S01010, , 2, Unknown Cap
+4378, Relson, NA          , RELSIND, 2, Unknown Cap
 4379, Compact disk, INE821B01019, COMDI, 2, Unknown Cap
 4380, Pacific cotspin, INE034C01017, PACIF, 2, Unknown Cap
 4381, Sarda papers, INE385D01011, SARDAPPR, 2, Unknown Cap
@@ -4325,11 +4257,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4390, Birla transasia carpets, INE646O01013, BIRLATR, 2, Unknown Cap
 4391, Dalmia industries, INE839C01019, DALMIAIN, 2, Unknown Cap
 4392, Mahaveer infoway, INE019D01016, MINFY, 2, Unknown Cap
+4393, Hindustan appliances, NA          , HINDAPL, 2, Unknown Cap
 4394, Continental securities, INE183Q01012, CSL, 2, Unknown Cap
 4395, Sarang chemicals, INE003E01026, SARCHEM, 2, Unknown Cap
 4396, Citizen infoline, INE473L01018, CIL, 2, Unknown Cap
 4397, Brilliant portfolios, INE661F01010, BRIPORT, 2, Unknown Cap
-4398, Jrd finance, INE517E01017, , 2, Unknown Cap
 4399, Century twentyfirst portfolio, INE485K01014, CENPORT, 2, Unknown Cap
 4400, Rubra medicaments, INE396H01019, RUBRAME, 2, Unknown Cap
 4401, Exotic coal, INE898K01018, ARSICOS, 2, Unknown Cap
@@ -4341,26 +4273,24 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4407, Hrb flouriculture, INE284D01016, HRBFLOR, 2, Unknown Cap
 4408, Pm telelinnks, INE092C01015, PMTELELIN, 2, Unknown Cap
 4409, Nakshatra infrastructure, INE226B01011, NAKSHTRINF, 2, Unknown Cap
+4410, Mssecurities, NA          , MSECURI, 2, Unknown Cap
 4411, Satya miners transporters, INE394F01018, SATYA, 2, Unknown Cap
 4412, Vccl, INE460E01010, VCCLLTD, 2, Unknown Cap
 4413, Pashupati seohung, INE322D01014, PASHUSEO, 2, Unknown Cap
 4414, Pushpanjali floriculture, INE088D01011, PUSHPA, 2, Unknown Cap
-4415, Saanvi advisors, INE757Q01013, , 2, Unknown Cap
 4416, Dolphin medical services, INE796B01013, DOLPHMED, 2, Unknown Cap
 4417, Vani commercials, INE661Q01017, VANICOM, 2, Unknown Cap
 4418, Pasupati fincap, INE527C01010, PASUFIN, 2, Unknown Cap
 4419, Sri vajra granites, INE047H01018, SRIVAJRA, 2, Unknown Cap
 4420, Invicta meditek, INE537B01011, INVICTA, 2, Unknown Cap
 4421, Tentiwala metal products, INE486P01011, TENTIMETAL, 2, Unknown Cap
-4422, Capital finvest, INE379R01014, , 2, Unknown Cap
-4423, Amar vanijya, INE499F01015, , 2, Unknown Cap
-4424, Pillar investment company, INE752U01016, , 2, Unknown Cap
 4425, Aviva industries, INE461H01011, AVIVA, 2, Unknown Cap
 4426, Gyan developers builders, INE487G01018, GYANDEV, 2, Unknown Cap
 4427, Kuber udyog, INE594R01018, KUBERJI, 2, Unknown Cap
 4428, Autoriders international, INE340U01010, AUTOINT, 2, Unknown Cap
 4429, Sikozy realtors, INE528E01022, SIKOZY, 2, Unknown Cap
 4430, Moonbeam industries, INE526D01010, MOONB, 2, Unknown Cap
+4431, Indian electro chemicals, NA          , INDELTC, 2, Unknown Cap
 4432, Mardia samyoung capillary tubes co, INE277E01026, MSCTC, 2, Unknown Cap
 4433, Brakes auto, INE222G01019, BRAKAUT, 2, Unknown Cap
 4434, Nutricircle, INE536C01029, NUTRICIRCLE, 2, Unknown Cap
@@ -4382,7 +4312,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4450, Inertia steel, INE767M01011, INERTIAST, 2, Unknown Cap
 4451, Indrayani biotech, INE007C01021, INDRANIB, 2, Unknown Cap
 4452, Mahavir impex, INE997B01025, MAHAV, 2, Unknown Cap
-4453, P r holdings, INE160T01014, , 2, Unknown Cap
 4454, Beryl securities, INE508J01015, BERYLSE, 2, Unknown Cap
 4455, Nu tech corporate services, INE041C01012, IITCAP, 2, Unknown Cap
 4456, Shamrock industrial co, INE022F01015, SHAMROIN, 2, Unknown Cap
@@ -4404,7 +4333,9 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4472, Vegepro foods feeds, INE155O01015, VGPRFOO, 2, Unknown Cap
 4473, Raasi refractories, INE858D01017, RASSIREF, 2, Unknown Cap
 4474, Ib infotech enterprises, INE678B01021, IBINFO, 2, Unknown Cap
+4475, Shiva suitings, NA          , SHVSUIT, 2, Unknown Cap
 4476, Classic diamonds, INE987C01024, CLASSIC, 2, Unknown Cap
+4477, Systematix securities, NA          , SYTIXSE, 2, Unknown Cap
 4478, Raghunath international, INE753B01014, RAGHUNAT, 2, Unknown Cap
 4479, Sawaca business machines, INE248B01015, SAWABUSI, 2, Unknown Cap
 4480, Warner multimedia, INE407B01017, WARNER, 2, Unknown Cap
@@ -4421,8 +4352,11 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4491, Centerac technologies, INE157B01026, CENTERAC, 2, Unknown Cap
 4492, Triumph international finance, INE382B01012, TRIUMPIN, 2, Unknown Cap
 4493, Welcure drugs pharmaceuticals, INE331C01017, WELCURE, 2, Unknown Cap
+4494, Scan organics, NA          , SCANORG, 2, Unknown Cap
+4495, Anand projects, NA          , ANANDEL, 2, Unknown Cap
 4496, Gujarat carbon ind, INE462C01010, GUJCARB, 2, Unknown Cap
 4497, Yarn syndicate, INE564C01013, YARNSYN, 2, Unknown Cap
+4498, Shri bhagvati bright bars, NA, SHBHAGV, 2, Unknown Cap
 4499, Transglobe foods, INE213P01019, TRANSFD, 2, Unknown Cap
 4500, Gujarat meditech, INE010M01016, GUJMEDI, 2, Unknown Cap
 4501, Ramchandra leasing finance, INE516P01015, RLFL, 2, Unknown Cap
@@ -4445,13 +4379,13 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4518, Maruti securities, INE368C01019, MARUTISE, 2, Unknown Cap
 4519, Lyons corporate market, INE100F01019, LYONSCO, 2, Unknown Cap
 4520, T spiritual world, INE541C01037, TSPIRITUAL$, 2, Unknown Cap
+4521, Sagar systech, NA, SAGARSYST, 2, Unknown Cap
 4522, Saraswati commercial, INE967G01019, ZSARACOM, 2, Unknown Cap
 4523, Harmony capital services, INE264N01017, HRMNYCP, 2, Unknown Cap
 4524, Omnitech infosolutions, INE810H01019, OMNITECH, 2, Unknown Cap
-4525, Ritz mercantile, INE092S01011, , 2, Unknown Cap
 4526, Sti products, INE205G01014, STIPROD, 2, Unknown Cap
 4527, United van der horst, INE890G01013, UVDRHOR, 2, Unknown Cap
-4529, Sharp commercial enterprises, INE023F01013, , 2, Unknown Cap
+4528, Prem somani financial services, NA          , PRESOFI, 2, Unknown Cap
 4530, Gujarat perstorp electronics, INE878D01015, GUJPE, 2, Unknown Cap
 4531, Sicapital financial services, INE417F01017, SICAPIT, 2, Unknown Cap
 4532, India e commerce, INE416B01018, INDECOM, 2, Unknown Cap
@@ -4481,8 +4415,6 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4556, Nivi trading, INE552F01011, ZNIVITRD, 1, Unknown Cap
 4557, Kachchh minerals, INE059E01010, KACHCHH, 1, Unknown Cap
 4558, Beckons industries, INE955B01015, BECKONIN, 1, Unknown Cap
-4559, Ujala commercials, INE288U01011, , 1, Unknown Cap
-4560, Jeco exports finance, INE719C01013, , 1, Unknown Cap
 4561, Fgp, INE512A01016, FGP, 1, Unknown Cap
 4562, Ashutosh paper mills, INE723K01018, ASHUTPM, 1, Unknown Cap
 4563, Covidh technologies, INE899M01012, COVIDH, 1, Unknown Cap
@@ -4490,10 +4422,10 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4565, Solis marketing, INE717P01027, SOLISMAR, 1, Unknown Cap
 4566, Ken financial services, INE395E01018, KENFIN, 1, Unknown Cap
 4567, Salem erode investments, INE894E01028, SALEM, 1, Unknown Cap
+4568, Suvarna aqua farm exports, NA          , SVRNAQU, 1, Unknown Cap
 4569, Unimode overseas, INE348N01026, UNIMOVR, 1, Unknown Cap
 4570, Cms infotech, INE915A01011, CMSINFO, 1, Unknown Cap
-4571, Uddhav properties, INE162S01012, , 1, Unknown Cap
-4572, Uttaranchal leasing, INE799S01011, , 1, Unknown Cap
+4573, Automobile products, NA          , AUTOPRD, 1, Unknown Cap
 4574, Ncc bluewater products, INE630N01019, NCCBLUE, 1, Unknown Cap
 4575, Silver oak commercial, INE798C01017, SILVERO, 1, Unknown Cap
 4576, Kome on communication, INE833C01012, KOCL, 1, Unknown Cap
@@ -4502,13 +4434,13 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4579, Ambitious plastomac, INE267C01013, AMBIT, 1, Unknown Cap
 4580, Marvel capital finance, INE571D01016, MARVEL, 1, Unknown Cap
 4581, Valley magnesite company, INE834E01016, VALLEY, 1, Unknown Cap
+4582, Integra switchgear, NA          , INTEGSW, 1, Unknown Cap
 4583, Shri gang industries allied products, INE241V01018, SHRIGANG, 1, Unknown Cap
 4584, Dhar textile mills, INE044B01018, DHARTEX, 1, Unknown Cap
 4585, Odyssey video communications, INE342B01016, ODVDC, 1, Unknown Cap
 4586, Women networks, INE905B01010, WOMENNET, 1, Unknown Cap
 4587, Bafna spinning mills exports, INE657F01034, BAFNASP, 1, Unknown Cap
 4588, Ensa steel industries, INE322C01016, ENSSI, 1, Unknown Cap
-4589, Sns diagnostics, INE362S01018, , 1, Unknown Cap
 4590, Aditya forge, INE281H01013, ADTYFRG, 1, Unknown Cap
 4591, Sriven multi tech, INE004B01012, SRIMT, 1, Unknown Cap
 4592, Mefcom agro industries, INE188C01011, MEFCOM, 1, Unknown Cap
@@ -4519,6 +4451,7 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4597, Sancia global infraprojects, INE391H01010, SANCIA, 1, Unknown Cap
 4598, Crazy infotech, INE664B01021, CRAZYINF, 1, Unknown Cap
 4599, East buildtech, INE706N01017, EASTBUILD, 1, Unknown Cap
+4600, All metal process ind, NA          , ALLMEPR, 1, Unknown Cap
 4601, Watson software, INE950B01016, WATSSOFT, 1, Unknown Cap
 4602, Trillenium technologies, INE187B01015, TRILLENT, 1, Unknown Cap
 4603, Af enterprises, INE663P01015, AFEL, 1, Unknown Cap
@@ -4529,31 +4462,36 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4608, Samtel, INE538C01017, SAMTELIN, 1, Unknown Cap
 4609, Kush industries, INE979D01011, KUSHIND, 1, Unknown Cap
 4610, Dugar housing developments, INE919M01018, DUGARHOU, 1, Unknown Cap
+4611, Geologging industries, NA, GEOLOGI, 1, Unknown Cap
 4612, Ekam leasing finance co, INE906L01017, EKAMLEA, 1, Unknown Cap
+4613, Shree benzophen industries, NA, SHBENZO, 1, Unknown Cap
 4614, Seshachal technologies, INE331F01010, SESHACHAL, 1, Unknown Cap
 4615, Mather platt fire systems, INE095E01014, MPFSL, 1, Unknown Cap
 4616, Sarvamangal mercantile co, INE978L01016, ZSARVAMA, 1, Unknown Cap
+4617, Warden construction finance, NA          , ZWARDENC, 1, Unknown Cap
 4618, Uniworth securities, INE728J01019, UNIWSEC, 1, Unknown Cap
 4619, Elango industries, INE594D01018, ELANGO, 1, Unknown Cap
 4620, Madhuveer com 18 network, INE312M01016, MADHUVEER, 1, Unknown Cap
 4621, Quantum build tech, INE222B01028, QUANTBUILD, 1, Unknown Cap
 4622, Rajkot investment trust, INE176R01014, RAJKOTINV, 1, Unknown Cap
-4623, Mangalam engineering projects, INE630M01011, , 1, Unknown Cap
 4624, Veena textile, INE728E01010, VEENATX, 1, Unknown Cap
 4625, Kabra drugs, INE323K01017, KABRADG, 1, Unknown Cap
 4626, Bisil plast, INE214D01021, BISIL, 1, Unknown Cap
-4627, Trans globe textiles, INE206S01017, , 1, Unknown Cap
 4628, Mesco pharmaceuticals, INE839X01015, MESPHAR-B, 1, Unknown Cap
+4629, Esquire money guarantees, NA          , ESQRMON, 1, Unknown Cap
 4630, Source industries, INE695C01015, TISHT, 1, Unknown Cap
 4631, Halder venture, INE115S01010, HALDER, 1, Unknown Cap
 4632, Ashiana agro industries, INE709D01012, ASHAI, 1, Unknown Cap
 4633, Rajesh solvex, INE893E01012, RAJSOLV, 1, Unknown Cap
 4634, Gangotri iron steel company, INE437F01023, GISL, 1, Unknown Cap
 4635, Bmb music magnetics, INE644K01016, BMBMUMG, 1, Unknown Cap
+4636, Precious trading invt, NA          , PRECTRA, 1, Unknown Cap
 4637, Oasis textiles, INE181W01014, OASISTEX, 1, Unknown Cap
+4638, Ube industries, NA          , UBEINDL, 1, Unknown Cap
 4639, Aneri fincap, INE720D01019, ANERI, 1, Unknown Cap
 4640, Aananda lakshmi spinning mills, INE197R01010, AANANDALAK, 1, Unknown Cap
 4641, Karma industries, INE416F01019, KARMAISP, 1, Unknown Cap
+4642, Kanoria plaschem, NA          , KANOPLA, 1, Unknown Cap
 4643, Shyama infosys, INE861E01019, SHYAMAINFO, 1, Unknown Cap
 4644, Lesha industries, INE050L01030, LESHAIND, 1, Unknown Cap
 4645, Blue chip, INE657B01025, BLUECHIP, 1, Unknown Cap
@@ -4563,44 +4501,48 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4649, Proaim enterprises, INE490J01032, PROAIMENT, 1, Unknown Cap
 4650, Pennar aluminium co, INE057C01018, PENNARALUM, 1, Unknown Cap
 4651, Linear industries, INE808D01012, LINEARIND, 1, Unknown Cap
+4652, Oriental remedies herbals, NA          , ORIREME, 1, Unknown Cap
 4653, Cindrella financial services, INE897D01015, CINDRELL, 1, Unknown Cap
 4654, Sibar media entertainment, INE388B01019, SIBARMED, 1, Unknown Cap
-4655, Denim developers, INE956N01018, , 1, Unknown Cap
 4656, Chhattisgarh industries, INE473C01025, CHHATTIND, 1, Unknown Cap
-4657, Abhinandan enterprises, INE841E01011, , 1, Unknown Cap
-4658, Avail holding, INE616R01019, , 1, Unknown Cap
 4659, Bronze infra tech, INE830N01015, BITL, 1, Unknown Cap
 4660, Belapur industries, INE490D01019, BELAIND, 1, Unknown Cap
+4661, Krishna synthetics, NA          , KRISSYN, 1, Unknown Cap
 4662, Total exports, INE109E01013, TOTEX, 1, Unknown Cap
 4663, Kiran syntex, INE293D01017, KIRANSY-B, 1, Unknown Cap
 4664, Abhishek infraventures, INE281P01016, ABHIINFRA, 1, Unknown Cap
-4665, Devrup trading, INE790R01012, , 1, Unknown Cap
 4666, New markets advisory, INE800K01014, NEWMKTADV, 1, Unknown Cap
+4667, Milk specialities, NA          , MILKSPL, 1, Unknown Cap
 4668, Jay energy s energies, INE315L01029, JAYENGY, 1, Unknown Cap
 4669, Kumbhat financial services, INE795E01019, KUMPFIN, 1, Unknown Cap
 4670, Heera ispat, INE025D01013, HEERAISP, 1, Unknown Cap
 4671, Mangalya soft tech, INE820B01011, MANGASOF, 1, Unknown Cap
+4672, Asian vegpro industries, NA          , ASIANVE, 1, Unknown Cap
 4673, Ranjit securities, INE863D01017, RANJITSE, 1, Unknown Cap
-4674, Parag fans cooling systems, INE698V01019, , 1, Unknown Cap
 4675, Ushakiran finance, INE697C01011, USHAKIRA, 1, Unknown Cap
 4676, Alpine capital services, INE118F01011, ALPINFN, 1, Unknown Cap
 4677, Aaswa trading export, INE887D01016, ASWTR, 1, Unknown Cap
 4678, Narmada macplast drip irrigation sy, INE060D01010, NARMP, 1, Unknown Cap
+4679, Piyush steels, NA          , PIYUSHT, 1, Unknown Cap
 4680, Sanmitra commercial, INE896J01014, ZSANMCOM, 1, Unknown Cap
 4681, Brijlaxmi leasing finance, INE957E01023, BRIJLEAS, 1, Unknown Cap
-4682, Nawratan arts, INE999D01019, , 1, Unknown Cap
 4683, Noesis industries, INE141B01020, NOESISIND, 1, Unknown Cap
+4684, Cifco finance, NA          , CIFCO, 1, Unknown Cap
 4685, Bala techno global, INE652B01026, BALTECGL, 1, Unknown Cap
+4686, Olympic management financial serv, NA          , OLYMTFI, 1, Unknown Cap
+4687, Serene industries, NA          , SRNEDYE, 1, Unknown Cap
 4688, Gujarat cypromet, INE673B01014, GUJCYPROM, 1, Unknown Cap
-4689, Shri gurudev en trade, INE844E01015, , 1, Unknown Cap
+4690, Fortune foods, NA          , FORFOOD, 1, Unknown Cap
 4691, Confidence futuristic energetech, INE700F01016, CFEL, 1, Unknown Cap
 4692, Technojet consultants, INE881P01013, TECHCON, 1, Unknown Cap
 4693, Ces, INE396F01013, SEENTSOL, 1, Unknown Cap
+4694, Asian flora, NA          , ASFLORA, 1, Unknown Cap
 4695, Cistro telelink, INE365C01023, CISTRO, 1, Unknown Cap
 4696, Dina iron steel, INE649G01013, DINIRST, 1, Unknown Cap
 4697, Tribhuvan housing, INE884D01039, TRIBHSG, 1, Unknown Cap
 4698, Kyra landscapes, INE094M01028, KYRALANDS, 1, Unknown Cap
 4699, Sunitee chemicals, INE714C01022, SUNITEE, 1, Unknown Cap
+4700, Sindu valley technologies, NA, SINDUVA, 1, Unknown Cap
 4701, Aarv infratel, INE432N01010, AARVINFRA, 1, Unknown Cap
 4702, Aadi industries, INE563D01013, AADIIND, 1, Unknown Cap
 4703, Sfl international, INE320C01010, SFLINTER, 1, Unknown Cap
@@ -4608,55 +4550,50 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4705, Sahyog multibase, INE052T01013, SAHYOGMULT, 1, Unknown Cap
 4706, Inditalia refcon, INE149C01013, INDITALIA, 1, Unknown Cap
 4707, Planter polysacks, INE293E01023, ZPPOLYSA, 1, Unknown Cap
+4708, Naina semiconductor, NA          , NAINAMS, 1, Unknown Cap
 4709, Divine entertainment, INE376B01014, DIVINEENT, 1, Unknown Cap
-4710, Metro commercial company, INE946T01016, , 1, Unknown Cap
 4711, Ruia aquaculture farms, INE673U01014, RUIAAQA, 1, Unknown Cap
 4712, Bluechip stockspin, INE337F01017, BLUCHIP, 1, Unknown Cap
 4713, Aarya global shares securities, INE233H01030, KUVAM, 1, Unknown Cap
 4714, Servoteach industries, INE185D01015, SERVOTEACH, 1, Unknown Cap
-4715, Bhairav enterprises, INE842E01019, , 1, Unknown Cap
-4716, Fortune industrial resources, INE510L01017, , 1, Unknown Cap
-4717, Rishabh enterprises, INE843E01017, , 1, Unknown Cap
-4718, Shreyans financial capital services, INE463R01016, , 1, Unknown Cap
-4719, Skyweb infotech, INE830R01016, , 1, Unknown Cap
-4720, Premium merchants, INE536R01019, , 1, Unknown Cap
-4721, Dhaval exports, INE307I01014, , 1, Unknown Cap
-4722, Trident, INE349T01013, , 1, Unknown Cap
+4723, Tmt, NA          , TMTIND-B1, 1, Unknown Cap
 4724, Richirich inventures, INE102C01020, RICAG, 1, Unknown Cap
 4725, Prime industries, INE543F01010, PRIMIND, 1, Unknown Cap
 4726, Sibar software services, INE940A01019, SIBARSOF, 1, Unknown Cap
-4727, Sns properties leasing, INE777R01019, , 1, Unknown Cap
 4728, Sashwat technocrats, INE789D01014, SASHWAT, 1, Unknown Cap
 4729, Subway finance investment co, INE033F01012, ZSUBWAYF, 1, Unknown Cap
 4730, Vck capital markets services, INE488C01015, VCKCAP, 1, Unknown Cap
 4731, Trijal industries, INE454E01013, TRIJAL, 1, Unknown Cap
 4732, Suryadeep salt refinery chemicals, INE823E01035, SURYADP, 1, Unknown Cap
-4733, India stuffyarn, INE137S01014, , 1, Unknown Cap
+4734, Shell infotech, NA, SHELLIN, 1, Unknown Cap
 4735, Parichay investments, INE701F01014, ZPARICIN, 1, Unknown Cap
+4736, S&s industries enterprises, NA          , SSIND-B1, 1, Unknown Cap
 4737, Konkan tyres, INE730D01018, KONTY, 1, Unknown Cap
-4738, Winmore leasing holdings, INE465E01019, , 1, Unknown Cap
 4739, Aurangabad paper mills, INE525C01014, AURANPAP, 1, Unknown Cap
 4740, Raymed labs, INE741C01017, RAYLA, 1, Unknown Cap
 4741, F mec international financial services, INE108T01013, FMEC, 1, Unknown Cap
-4742, D d ventures, INE458T01012, , 1, Unknown Cap
 4743, Aashee infotech, INE847M01011, AASHEE, 1, Unknown Cap
 4744, Oscar global, INE473F01010, OSCARGLO, 1, Unknown Cap
 4745, Solid carbide tools, INE161C01026, SOLCT, 1, Unknown Cap
 4746, Id info business services, INE088P01015, IDINFO, 1, Unknown Cap
 4747, Speedage commercials, INE497M01015, ZSPEEDCO, 1, Unknown Cap
+4748, Alang marine, NA          , ALANGMR-B, 1, Unknown Cap
 4749, Unimin, INE672C01014, UNIMININ, 1, Unknown Cap
+4750, Baroda electric meters, NA          , BAROELE, 1, Unknown Cap
 4751, Roxy exports, INE549S01010, ROXY, 1, Unknown Cap
 4752, Pervasive commodities, INE443P01020, PERVASIVE, 1, Unknown Cap
 4753, Pharmaids pharmaceuticals, INE117D01018, PHARMAID, 1, Unknown Cap
+4754, Asian fertilisers, NA          , ASIANFR, 1, Unknown Cap
 4755, Millennium cybertech, INE525D01038, MILLENCY, 1, Unknown Cap
 4756, Classic leasing finance, INE949C01016, CLFL, 1, Unknown Cap
-4757, Associated finman, INE947R01018, , 1, Unknown Cap
+4758, Webel communication industries, NA          , WEBLCOM, 1, Unknown Cap
 4759, Grcables, INE769B01010, GRCABLE, 1, Unknown Cap
 4760, Hind commerce, INE691J01019, HCLTD, 1, Unknown Cap
 4761, Birla capital financial services, INE776E01027, BIRLACAP, 1, Unknown Cap
 4762, Grand foundry, INE534A01010, GRANDFONRY, 1, Unknown Cap
 4763, Frontline financial services, INE776R01011, FRONTFN, 1, Unknown Cap
 4764, National plywood industries, INE497C01016, NATPLY, 1, Unknown Cap
+4765, Maniyar plast, NA          , MNYRPLA-B, 1, Unknown Cap
 4766, Simplex papers, INE456H01011, SIMPLXPAP, 1, Unknown Cap
 4767, Koa tools, INE316B01036, KOATOOLIN, 1, Unknown Cap
 4768, Msl industries, INE626C01010, MSLIND, 1, Unknown Cap
@@ -4665,44 +4602,48 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4771, Venus universal, INE381C01020, VENUSUNI, 1, Unknown Cap
 4772, Euro asia exports, INE535P01015, EUROASIA, 1, Unknown Cap
 4773, Global land masters corporation, INE330B01011, GLOBAL, 1, Unknown Cap
+4774, Shah construction co, NA          , SHAHCON, 1, Unknown Cap
 4775, Uniworth international, INE760D01015, UNIIN, 1, Unknown Cap
 4776, Arcee indusrtries, INE276D01012, ARCEEIN, 1, Unknown Cap
 4777, Betala global securities, INE658E01027, BETALA, 1, Unknown Cap
 4778, Jagjanani textiles, INE702H01018, JAGJANANI, 1, Unknown Cap
-4779, Gobind sugar mills, INE246E01013, , 1, Unknown Cap
-4780, Priya international, INE557E01013, , 1, Unknown Cap
-4781, Amrit, INE791U01014, , 1, Unknown Cap
 4782, Remi sales engineering, INE130I01010, REMISIN, 1, Unknown Cap
+4783, Maya rasayan, NA          , MAYARAS, 1, Unknown Cap
 4784, Scan projects, INE393D01015, AMBCE, 1, Unknown Cap
 4785, Alan scott industries, INE273F01022, ALAN SCOTT, 1, Unknown Cap
-4786, N k textile industries, INE800E01017, , 1, Unknown Cap
-4787, Newage marketing, INE948R01016, , 1, Unknown Cap
 4788, Mid industries, INE401C01018, MIDINDIA, 1, Unknown Cap
 4789, Bee electronic machines, INE038E01014, BEELE, 1, Unknown Cap
 4790, Revati organics, INE270D01015, REVAORG, 1, Unknown Cap
 4791, Pratik panels, INE206C01011, PRATIK, 1, Unknown Cap
+4792, Twin roses trades agencies, NA          , TWIROST, 1, Unknown Cap
+4793, Kandhari rubbers, NA          , KANDHAR, 1, Unknown Cap
 4794, Sree jayalakshmi autospin, INE618F01010, SREEJAYA, 1, Unknown Cap
 4795, Globus corporation, INE774B01028, KARUNACAB, 1, Unknown Cap
 4796, Vishvprabha trading, INE762D01011, VISTR, 1, Unknown Cap
 4797, Meuse kara sungrace mafatlal, INE756D01013, BIOGREEN, 1, Unknown Cap
 4798, Gujarat toolroom, INE145J01024, GUJTLRM, 1, Unknown Cap
 4799, Sarda proteins, INE995U01011, SRDAPRT, 1, Unknown Cap
+4800, Persian carpet textiles, NA          , PERSCAR, 1, Unknown Cap
 4801, Indo bonito multinational, INE457B01012, INDOBONIT, 1, Unknown Cap
 4802, Integrated technologies, INE882B01029, INTECH, 1, Unknown Cap
+4803, Sri malini spinning mills, NA          , SRIMALI, 1, Unknown Cap
+4804, Harsh polymers, NA          , HARPOLY, 1, Unknown Cap
 4805, Integrated proteins, INE177M01013, INTEGFD, 1, Unknown Cap
 4806, Hindustan bio sciences, INE597C01013, HINDBIO, 1, Unknown Cap
 4807, Shivansh finserv, INE728Q01014, SHIVA, 1, Unknown Cap
 4808, Neelkanth motels hotels, INE882F01012, NEELKNT, 1, Unknown Cap
 4809, Omkar overseas, INE680D01015, OMKAR, 1, Unknown Cap
 4810, Atn international, INE803A01027, ATNINTER, 1, Unknown Cap
+4811, Golkonda engineering enterprises l, NA, ZGOLKOND, 1, Unknown Cap
 4812, Gujarat inject, INE659F01014, GUJINJEC, 1, Unknown Cap
 4813, I power solutions, INE468F01010, IPOWER, 1, Unknown Cap
 4814, Neptune exports, INE066X01015, NEPTEXP, 1, Unknown Cap
+4815, Gujarat refractories, NA          , GUJRFTO, 1, Unknown Cap
 4816, Precision containeurs, INE191C01015, PRECISION, 1, Unknown Cap
-4817, Shree vijay industries, INE838R01019, , 1, Unknown Cap
+4818, Mackinnon mackenzie co, NA          , MACKINN, 1, Unknown Cap
+4819, Khandelwal extraction, NA, ZKHANDEN, 1, Unknown Cap
 4820, Ncc finance, INE768B01012, NCCFIN, 1, Unknown Cap
 4821, Geetanjali credit capital, INE263R01010, GEETANJ, 1, Unknown Cap
-4822, Atlantic commercial company, INE790U01016, , 1, Unknown Cap
 4823, Sm dyechem, INE620A01025, SMDYECH, 1, Unknown Cap
 4824, Kedia construction co, INE511J01019, KEDIACN, 1, Unknown Cap
 4825, Union bearings, INE670F01011, UNIONBE, 1, Unknown Cap
@@ -4717,53 +4658,66 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4834, Genus commu trade, INE577B01017, GENIUSCO, 1, Unknown Cap
 4835, Vital communications, INE377B01012, VITALCOMM, 1, Unknown Cap
 4836, Capfin, INE960C01013, CAPFIN, 1, Unknown Cap
+4837, Sai jeevadhara finance, NA          , SAIJEEV, 1, Unknown Cap
 4838, Fact enterprise, INE923D01019, FACT, 1, Unknown Cap
+4839, Himgiri foods, NA          , HMGRFOD, 1, Unknown Cap
 4840, Suraj industries, INE170U01011, SURJIND, 1, Unknown Cap
 4841, Mercury metals, INE763M01028, MERMETL, 1, Unknown Cap
-4842, Sunita bonds holdings, INE505E01012, , 1, Unknown Cap
 4843, Master chemicals, INE523D01017, MASCH, 1, Unknown Cap
+4844, Gwalior polypipes, NA          , GWPLPIP, 1, Unknown Cap
 4845, White lion asia, INE910D01024, WHITELIO, 1, Unknown Cap
 4846, Premium capital market investment, INE555D01019, PREMCAPM, 1, Unknown Cap
 4847, Arms paper, INE971A01014, ARMSPAPER, 1, Unknown Cap
 4848, Fourth generation information systems, INE739B01039, 4THGEN, 1, Unknown Cap
 4849, Gold rock investments, INE598F01014, ZGOLDINV, 1, Unknown Cap
+4850, Suryodaya investment trading co, NA          , ZSURYODI, 1, Unknown Cap
 4851, Nachmo knitex, INE228C01015, NACHKNIT, 1, Unknown Cap
 4852, Transcon research infotech, INE273C01011, TRANSCON, 1, Unknown Cap
 4853, Rfl international, INE701D01035, RFLINT, 1, Unknown Cap
 4854, Autoriders finance, INE450A01019, AUTORIDFIN, 1, Unknown Cap
+4855, Kiev finance, NA          , KIEVFIN, 1, Unknown Cap
 4856, Arcuttipore tea co, INE674C01010, ARCUTTIP, 1, Unknown Cap
 4857, Sanchay finvest, INE654D01010, SANCF, 1, Unknown Cap
+4858, B&a packaging, NA          , BAPACK, 1, Unknown Cap
 4859, Abl bio technologies, INE707D01016, ABLBIO, 1, Unknown Cap
 4860, Goplee infotech, INE968B01018, GOPLEEIN, 1, Unknown Cap
 4861, G tech info training, INE634D01038, GTEIT, 1, Unknown Cap
 4862, Deccan polypacks, INE132E01015, DECPO, 1, Unknown Cap
-4863, Gaylord commercial company, INE781E01019, , 1, Unknown Cap
+4864, Kovalam inv trading co, NA          , ZKOVALIN, 1, Unknown Cap
 4865, Standard capital markets, INE625D01010, STANCAP, 1, Unknown Cap
 4866, Baffin engineering projects, INE786D01036, BAFEG, 1, Unknown Cap
+4867, Kshitij investments, NA          , KSHITIJ, 1, Unknown Cap
 4868, Jumbo finance, INE122N01017, JUMBFNL, 1, Unknown Cap
 4869, Supra trends, INE533B01028, VIJAYGR, 1, Unknown Cap
 4870, Bronze trading, INE022R01010, BRONZE, 1, Unknown Cap
 4871, Kanco enterprises, INE248D01011, KANCOENT, 1, Unknown Cap
-4872, Castle traders, INE262V01014, , 1, Unknown Cap
 4873, Digital electronics, INE053N01014, ZDIGIELE, 1, Unknown Cap
+4874, Rajesh malleables, NA, RAJMALL, 1, Unknown Cap
+4875, Packtech industries, NA, PACKTEC, 1, Unknown Cap
 4876, Galore prints industries, INE648C01014, GALORE, 1, Unknown Cap
 4877, High street filatex, INE319M01011, HIGSTREE, 1, Unknown Cap
+4878, Jcl, NA          , JCLLITD, 1, Unknown Cap
 4879, Novagold petro resources, INE517G01012, NOVAGOLD, 1, Unknown Cap
+4880, Tivoli construction, NA          , TVOLCON, 1, Unknown Cap
 4881, Savant infocomm, INE898E01011, SAVINFOCO, 1, Unknown Cap
 4882, Charms industries, INE442C01012, CHARMS, 1, Unknown Cap
-4883, Frick, INE499C01012, , 1, Unknown Cap
 4884, Suryakripa finance, INE381N01019, SURYAKR, 1, Unknown Cap
 4885, Gazi financial services investments, INE111L01014, GAZIFIN, 1, Unknown Cap
+4886, Alna trading exports, NA          , ALNATRD, 1, Unknown Cap
 4887, Tea time, INE237U01018, TEATIME, 1, Unknown Cap
+4888, Mahashree trading, NA          , MAHSHRE, 1, Unknown Cap
 4889, Gujarat wedge wire screens, INE090J01014, GUJWDGE, 1, Unknown Cap
+4890, Subhlaxmi exports, NA          , SUBHLTR, 1, Unknown Cap
 4891, Mansoon trading co, INE776V01013, ZMANSOON, 1, Unknown Cap
 4892, Asutosh enterprise, INE508W01018, ASUTENT, 1, Unknown Cap
 4893, Mid east portfolio management, INE033E01015, MIDEASTP, 1, Unknown Cap
 4894, Aris international, INE588E01026, ARISINT, 1, Unknown Cap
 4895, Sang froid labs, INE345S01013, SANGFROID, 1, Unknown Cap
+4896, Graham firth steel products, NA          , GRHMFRT-B, 1, Unknown Cap
+4897, Oswal leasing, NA          , OSWALEA, 1, Unknown Cap
 4898, Shikhar consultants, INE641B01011, SHIKHAR, 1, Unknown Cap
 4899, Synergy cosmetics, INE198D01018, SYNERGY, 1, Unknown Cap
-4901, Supreme commercial enterprises, INE530F01017, , 1, Unknown Cap
+4900, Goa fruit specialities, NA          , GOAFRUT, 1, Unknown Cap
 4902, Remi process plant machinery, INE513H01019, REMIPRO, 1, Unknown Cap
 4903, Matra realty, INE190E01021, MATRAREAL, 1, Unknown Cap
 4904, Super domestic machines, INE215Q01012, SUPRDOM, 1, Unknown Cap
@@ -4771,117 +4725,141 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 4906, Sagar soya products, INE131O01016, SAGRSOY-B, 1, Unknown Cap
 4907, Siddha ventures, INE140C01012, SIDDHA, 1, Unknown Cap
 4908, Ratnamani agro industries, INE679N01016, RATNAMAGRO, 1, Unknown Cap
+4909, Prashant, NA          , PRSNTIN, 1, Unknown Cap
 4910, Ranjeev alloys, INE478F01019, RANJEEV, 0, Unknown Cap
 4911, Chitradurga spintex, INE676G01024, CHITRTX, 0, Unknown Cap
+4912, Pinky chemicals, NA          , PINKCHM, 0, Unknown Cap
 4913, Maplle infraprojects, INE809D01010, MAPLLEINF, 0, Unknown Cap
-4914, Konark commercial, INE945T01018, , 0, Unknown Cap
-4915, Macor packaging, INE414R01019, , 0, Unknown Cap
-4916, Morn media, INE343T01016, , 0, Unknown Cap
-4917, Sunrise distilleries, INE036S01018, , 0, Unknown Cap
 4918, Khyati multimedia entertainment, INE593B01030, KHYATI, 0, Unknown Cap
-4919, John oakey mohan, INE353T01015, , 0, Unknown Cap
 4920, Shreejal info hubs, INE765C01024, SHREEJAL, 0, Unknown Cap
 4921, Kengold, INE680C01025, KENGI, 0, Unknown Cap
+4922, Lalit polymers electronics, NA          , LALITPL, 0, Unknown Cap
 4923, Indo credit capital, INE147D01015, INDOCRED, 0, Unknown Cap
 4924, Modella woollens, INE380D01012, MODWOOL, 0, Unknown Cap
 4925, Yule financing leasing co, INE490C01011, YULEFIN, 0, Unknown Cap
 4926, Ananthi constructions, INE151O01014, ANNTHMS, 0, Unknown Cap
+4927, Stiles, NA          , STILESI, 0, Unknown Cap
 4928, Minolta finance, INE514C01018, MINOLTAF, 0, Unknown Cap
-4929, The patna electric supply co, INE901E01013, , 0, Unknown Cap
 4930, Ishwarshakti holdings traders, INE073I01012, ISHWATR, 0, Unknown Cap
+4931, Kajal synthetics silk mills, NA          , KAJALSY, 0, Unknown Cap
 4932, Oxford industries, INE114D01015, OXFORDIN, 0, Unknown Cap
+4933, Phelix appliances, NA, PHELAPP, 0, Unknown Cap
 4934, Fast track entertainment, INE074D01037, FASTRAENT, 0, Unknown Cap
-4935, Molind engineering, INE310W01019, , 0, Unknown Cap
 4936, Ayoki mercantile, INE048E01013, AYOME, 0, Unknown Cap
+4937, Elegant pharmaceuticals, NA          , ELEGNPH, 0, Unknown Cap
 4938, Jupiter industries leasing, INE990E01016, JPTRLES, 0, Unknown Cap
+4939, Northern projects, NA          , NORTHPR, 0, Unknown Cap
 4940, Punit commercials, INE750G01019, PUNITCO, 0, Unknown Cap
 4941, Triochem products, INE331E01013, TRIPR, 0, Unknown Cap
+4942, Devinsu trading, NA          , DEVITRD, 0, Unknown Cap
+4943, Mangalwedha sun soya, NA          , MANGALW, 0, Unknown Cap
 4944, Devki leasing finance, INE510B01018, DEVKI, 0, Unknown Cap
+4945, Dewan tyres, NA          , DEWNTYR-B, 0, Unknown Cap
+4946, Southern gas, NA, ZSOUTGAS, 0, Unknown Cap
 4947, Bentley commercial enterprises, INE496M01017, BENTCOM, 0, Unknown Cap
 4948, Gsl securities, INE721D01017, GSLSEC, 0, Unknown Cap
-4949, Kabirdas investments, INE268D01019, , 0, Unknown Cap
-4950, K2 systems, INE441B01024, , 0, Unknown Cap
 4951, Blue pearl texspin, INE439N01023, BPTEX, 0, Unknown Cap
 4952, Silicon valley infotech, INE913A01024, SILICON, 0, Unknown Cap
-4953, Crazypricing online services, INE401L01019, , 0, Unknown Cap
+4954, Andhra pradesh tanneries, NA, APTANN, 0, Unknown Cap
 4955, Cana glass, INE155F01013, CANAGLS, 0, Unknown Cap
 4956, Virgo global, INE400B01020, VIRGOGLOB, 0, Unknown Cap
-4957, Nidhan commercial company, INE001V01016, , 0, Unknown Cap
+4958, Typhoon holdings, NA, TYPHOON, 0, Unknown Cap
+4959, Raashi fertilizers, NA          , RAASHIF, 0, Unknown Cap
+4960, Virgo polymers, NA          , VIRPOLY, 0, Unknown Cap
 4961, Oseaspre consultants, INE880P01015, OSEASPR, 0, Unknown Cap
 4962, Jyoti overseas, INE432D01011, JYOTIOVR, 0, Unknown Cap
 4963, Dot com global, INE440B01018, DOTCOM, 0, Unknown Cap
 4964, Justride enterprises, INE432F01024, JRELTD, 0, Unknown Cap
 4965, White hall commercial co, INE416X01012, WHITHAL, 0, Unknown Cap
+4966, Texel industries, NA          , TEXELIN, 0, Unknown Cap
 4967, Suryodaya plastics, INE998B01015, SURYOPLA, 0, Unknown Cap
 4968, Ganesh holding, INE932M01011, GANHOLD, 0, Unknown Cap
 4969, Ratan glitter industries, INE348E01017, RATANGLI, 0, Unknown Cap
+4970, Surbhi industries, NA          , SURBHIN, 0, Unknown Cap
+4971, Parth industries, NA          , PARTIND, 0, Unknown Cap
+4972, Terraform realstate, NA          , TERRAREAL, 0, Unknown Cap
 4973, Tarrif cine finance, INE177E01010, TARCF, 0, Unknown Cap
+4974, Professional diamonds, NA          , PROFDIA, 0, Unknown Cap
+4975, Shikhar leasing trading, NA, SHIKHARLETR, 0, Unknown Cap
 4976, Nilkanth engineering, INE582V01015, ZNILKENG, 0, Unknown Cap
 4977, Pithampur steels, INE077H01015, PITHMST, 0, Unknown Cap
 4978, Gamma infoway exalt, INE970A01016, GAMIE, 0, Unknown Cap
 4979, Innovation software exports, INE568B01016, INSOE, 0, Unknown Cap
 4980, Alpha hi tech fuel, INE506B01016, ALPHA, 0, Unknown Cap
+4981, Dr sabharwals manufacturing labs, NA          , DRSABHP, 0, Unknown Cap
 4982, Leena consultancy, INE778N01016, ZLEENCON, 0, Unknown Cap
 4983, Milgrey finance investment, INE679T01013, ZMILGFIN, 0, Unknown Cap
 4984, Indsoya, INE314N01010, INDSOYA, 0, Unknown Cap
+4985, Delma infrastructure, NA          , DELINFRA, 0, Unknown Cap
+4986, Pulsar international, NA          , PULSRIN, 0, Unknown Cap
 4987, Kusum iron steel, INE397E01014, KUSIS, 0, Unknown Cap
 4988, Laser diamonds, INE995E01015, LADIAMO, 0, Unknown Cap
 4989, Sunrise industrial traders, INE371U01015, SUNRINV, 0, Unknown Cap
+4990, Steel strips, NA, STRIPMT, 0, Unknown Cap
 4991, Fischer chemic, INE771F01025, FISCHER, 0, Unknown Cap
 4992, Western ministil, INE187U01015, WMINIMT, 0, Unknown Cap
 4993, Baron infotech, INE228B01017, BARONINF, 0, Unknown Cap
 4994, Magnanimous trade finance, INE664N01018, MAGANTR, 0, Unknown Cap
 4995, Vardhaman laboratories, INE503F01014, VARDHCH, 0, Unknown Cap
 4996, Stellant securities, INE395F01023, STELLANT, 0, Unknown Cap
-4997, Delta impex, INE716Q01019, , 0, Unknown Cap
+4998, Satyam silk mills, NA          , ZSATYASL, 0, Unknown Cap
 4999, Datasoft application software, INE072B01019, DATASOFT, 0, Unknown Cap
 5000, Quantum digital vision, INE373C01019, QUANTDIA, 0, Unknown Cap
 5001, Noble polymers, INE203Q01026, NOBPOL, 0, Unknown Cap
-5002, Shantnu investments, INE552V01018, , 0, Unknown Cap
 5003, Avtil enterprise, INE292N01018, AVTIL, 0, Unknown Cap
 5004, Khatau exim, INE092P01017, ZKHATAUE, 0, Unknown Cap
+5005, Sanchana trading finance, NA          , ZSANCHTR, 0, Unknown Cap
+5006, Winmore silk mills, NA          , ZWINMOTR, 0, Unknown Cap
 5007, Infraquest international, INE786B01022, INFOQUES, 0, Unknown Cap
-5008, Supra industrial resources, INE174E01017, , 0, Unknown Cap
-5009, Mashaal impex, INE140S01018, , 0, Unknown Cap
-5010, Morning glory leasing finance, INE183F01015, , 0, Unknown Cap
-5011, Temple leasing finance, INE642U01019, , 0, Unknown Cap
-5012, Efficient industrial finance, INE255S01014, , 0, Unknown Cap
-5013, Sunrise agro products, INE113S01015, , 0, Unknown Cap
-5014, Shree krishna jute products, INE476T01014, , 0, Unknown Cap
-5015, Buckingham industries, INE157T01010, , 0, Unknown Cap
 5016, Rose merc, INE649C01012, ROSEMER, 0, Unknown Cap
-5017, Alirox abrasives, INE143F01019, , 0, Unknown Cap
 5018, Vinaditya trading co, INE952M01019, ZVINADTR, 0, Unknown Cap
 5019, Procal electronics, INE700B01015, PROCAL, 0, Unknown Cap
+5020, Peoples investments, NA          , PEOPLIN, 0, Unknown Cap
+5021, Galaxy consolidated finance, NA          , GALAXCP, 0, Unknown Cap
 5022, Bajaj global, INE553H01015, BAJGLOB, 0, Unknown Cap
 5023, Mayukh dealtrade, INE280E01012, MAYUKH, 0, Unknown Cap
 5024, Vinayak vanijya, INE132V01019, VINVANI, 0, Unknown Cap
-5029, Champion commercial co, INE477E01014, , 0, Unknown Cap
-5030, Mayurbhanj trades agencies, INE171V01017, , 0, Unknown Cap
-5031, Nature communique, INE639R01011, , 0, Unknown Cap
-5034, Gulmohar investments holdings, INE204V01016, , 0, Unknown Cap
-5036, Sree maruthi marine industries, INE150W01019, , 0, Unknown Cap
+5025, Oxemberg apparels, NA, OXEM BAP, 0, Unknown Cap
+5026, Balgopal holding traders, NA          , ZBALGHOL, 0, Unknown Cap
+5027, Coromandel agro products oils, NA          , CORAGRO, 0, Unknown Cap
+5028, Varun mercantile, NA          , VARUNME, 0, Unknown Cap
+5032, Siyaram poddar finance trading lt, NA          , ZSIYARPO, 0, Unknown Cap
+5033, Cromakem, NA          , CROMAKM, 0, Unknown Cap
+5035, Terraform magnum, NA          , TERRAFORM, 0, Unknown Cap
+5037, Ridhi synthetics, NA, RIDHISYN, 0, Unknown Cap
+5038, Specular marketing financing lt, NA          , SPECMKT, 0, Unknown Cap
+5039, Swastik safe deposit invest, NA          , ZSWASTSA, 0, Unknown Cap
 5040, Pb global, INE615W01011, PBGLOBAL, 0, Unknown Cap
-5041, Shinewell leasing, INE808U01016, , 0, Unknown Cap
+5042, Bharat line, NA          , BHARLIN, 0, Unknown Cap
+5043, Sriyansh steel, NA          , SRYSTLT, 0, Unknown Cap
 5044, Saumya capital, INE365L01016, SAUMYACAP, 0, Unknown Cap
 5045, India radiators, INE461Y01016, INRADIA, 0, Unknown Cap
 5046, Shyamal holdings trading, INE481F01013, SHYAMHO, 0, Unknown Cap
+5047, Bsi, NA          , BSILTD, 0, Unknown Cap
 5048, Ph trading, INE603D01017, PHTRADINFG, 0, Unknown Cap
 5049, Jeet machine tools, INE987E01012, ZJEETMAC, 0, Unknown Cap
+5050, Purity flex pack, NA          , PURITY, 0, Unknown Cap
 5051, Softrak venture investments, INE562E01013, SOFTRAKV, 0, Unknown Cap
 5052, Regency world consulting, INE419C01010, , 0, Unknown Cap
 5053, Indo gulf industries, INE684U01011, IGLFXPL-B, 0, Unknown Cap
 5054, Elcid investments, INE927X01018, ELCIDIN, 0, Unknown Cap
 5055, Ardi investment trading, NA, ZARDIINV, 0, Unknown Cap
+5056, Vidarbha iron steel, NA          , VIDIRMT, 0, Unknown Cap
+5057, Viksit engineering, NA          , VIKSHEN, 0, Unknown Cap
 5058, Frontier capital, INE977E01013, FRONTCAP, 0, Unknown Cap
 5059, Mrugesh trading, INE738D01011, MRUTR, 0, Unknown Cap
 5060, Anshuni commercials, INE425H01016, ANSHNCO, 0, Unknown Cap
 5061, Unijolly investments co, INE130N01010, UNIJOLL, 0, Unknown Cap
 5062, Tirth plastic, INE008N01018, TIRTPLS, 0, Unknown Cap
 5063, Healthy investments, INE160N01017, HEALINV, 0, Unknown Cap
+5064, Transoceanic properties, NA          , TRANOCE, 0, Unknown Cap
 5065, Hindustan housing co, INE083O01019, ZHINDHSG, 0, Unknown Cap
+5066, Graphic charts, NA          , BELLGRP, 0, Unknown Cap
 5067, Mercury trade links, INE319T01016, MERCTRD, 0, Unknown Cap
 5068, Arco leasing, INE955S01019, ZARCOLEA, 0, Unknown Cap
+5069, New sagar trading co, NA          , ZNEWSAGA, 0, Unknown Cap
+5070, Hem holdings trading, NA          , ZHEMHOLD, 0, Unknown Cap
+5071, Vishvakirti investment, NA          , VISHINV, 0, Unknown Cap
 5072, Sobhagya merchantile, INE754D01018, SOBME, 0, Unknown Cap
 5073, Chokhani global express, NA          , CHOKGLB, 0, Unknown Cap
 5074, Antariksh industries, INE825M01017, ANTARIKSH, 0, Unknown Cap

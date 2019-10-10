@@ -1,0 +1,109 @@
+
+1> SQLite3 : Light weight embedded database.
+
+https://www.sqlite.org/2019/sqlite-tools-win32-x86-3300000.zip
+
+
+$ sqlite3
+sqlite > .help
+sqlite > .databases
+sqlite > .tables
+sqlite > .schema
+sqlite > .fullschema
+
+2> Open a DB file
+
+$ sqlite3 ./equity.sqlite3
+SQLite version 3.7.17 2013-05-20 00:56:22
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .help
+.backup ?DB? FILE      Backup DB (default "main") to FILE
+.bail ON|OFF           Stop after hitting an error.  Default OFF
+.databases             List names and files of attached databases
+.dump ?TABLE? ...      Dump the database in an SQL text format
+                         If TABLE specified, only dump tables matching
+                         LIKE pattern TABLE.
+.echo ON|OFF           Turn command echo on or off
+.exit                  Exit this program
+.explain ?ON|OFF?      Turn output mode suitable for EXPLAIN on or off.
+                         With no args, it turns EXPLAIN on.
+.header(s) ON|OFF      Turn display of headers on or off
+.help                  Show this message
+.import FILE TABLE     Import data from FILE into TABLE
+.indices ?TABLE?       Show names of all indices
+                         If TABLE specified, only show indices for tables
+                         matching LIKE pattern TABLE.
+.load FILE ?ENTRY?     Load an extension library
+.log FILE|off          Turn logging on or off.  FILE can be stderr/stdout
+.mode MODE ?TABLE?     Set output mode where MODE is one of:
+                         csv      Comma-separated values
+                         column   Left-aligned columns.  (See .width)
+                         html     HTML <table> code
+                         insert   SQL insert statements for TABLE
+                         line     One value per line
+                         list     Values delimited by .separator string
+                         tabs     Tab-separated values
+                         tcl      TCL list elements
+.nullvalue STRING      Use STRING in place of NULL values
+.output FILENAME       Send output to FILENAME
+.output stdout         Send output to the screen
+.print STRING...       Print literal STRING
+.prompt MAIN CONTINUE  Replace the standard prompts
+.quit                  Exit this program
+.read FILENAME         Execute SQL in FILENAME
+.restore ?DB? FILE     Restore content of DB (default "main") from FILE
+.schema ?TABLE?        Show the CREATE statements
+                         If TABLE specified, only show tables matching
+                         LIKE pattern TABLE.
+.separator STRING      Change separator used by output mode and .import
+.show                  Show the current values for various settings
+.stats ON|OFF          Turn stats on or off
+.tables ?TABLE?        List names of tables
+                         If TABLE specified, only list tables matching
+                         LIKE pattern TABLE.
+.timeout MS            Try opening locked tables for MS milliseconds
+.trace FILE|off        Output each SQL statement as it is run
+.vfsname ?AUX?         Print the name of the VFS stack
+.width NUM1 NUM2 ...   Set column widths for "column" mode
+.timer ON|OFF          Turn the CPU timer measurement on or off
+sqlite>
+
+
+3> Show tables
+
+sqlite> .tables
+amfi           demat_summary  demat_txn      isin
+
+
+4> Check Schema
+
+ sqlite>
+
+sqlite> .schema amfi
+CREATE TABLE amfi (
+sno text,
+company_name text,
+isin text,
+bse_symbol text,
+bse_mcap  text,
+nse_symbol text,
+nse_mcap  text,
+mse_symbol text,
+mse_mcap  text,
+avg_mcap text,
+cap_type text,
+unused1 text,
+unused2 text
+);
+sqlite>
+
+
+5> Import Data from File into Table
+
+.import FILE TABLE
+
+
+6> Quit SQLite
+
+sqlite> .quit

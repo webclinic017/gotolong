@@ -19,11 +19,12 @@ class Screener(Isin, Amfi):
         super(Screener, self).__init__()
         self.sc_ratio_values = {}
         self.sc_nsecode = []
+        self.sc_nsecode_industry = {} 
         # margin of safety
         self.debug_level = 0
         self.sc_ratio_name = {'Name': 'name',
                               'BSE Code': 'bse_code', 'NSE Code': 'nse_code', 'Industry': 'industry',
-                              'Current Price': 'cmp', 'MyAvgIV': 'myavgiv', 'IV Rs.': 'iv',
+                              'Current Price': 'cmp',
                               'Market Capitalization': 'mcap',
                               'Sales': 'sales', 'Net profit': 'np',
                               'Price to Earning': 'pe', 'Historical PE 5Years': 'pe5',
@@ -93,7 +94,10 @@ class Screener(Isin, Amfi):
                     if ratio == 'captype':
                         self.sc_ratio_values[sc_nsecode, ratio] = self.get_amfi_captype_by_ticker(sc_nsecode)
                     else:
-                        self.sc_ratio_values[sc_nsecode, ratio] = row_list[self.sc_ratio_loc[ratio]]
+                        ratio_value = row_list[self.sc_ratio_loc[ratio]]
+                        if ratio == 'industry':
+                            self.sc_nsecode_industry[sc_nsecode] = ratio_value
+                        self.sc_ratio_values[sc_nsecode, ratio] = ratio_value
                     if self.debug_level > 1:
                         print('ticker: ', sc_nsecode, 'ratio: ', ratio, 'value: ',
                               self.sc_ratio_values[sc_nsecode, ratio])
@@ -127,7 +131,10 @@ class Screener(Isin, Amfi):
             fh.write(', ')
         fh.write('\n')
 
-        sorted_input = sorted(self.sc_nsecode)
+        if filter_rows:
+            sorted_input = sorted(self.sc_nsecode_industry, key=self.sc_nsecode_industry.__getitem__)
+        else:
+            sorted_input = sorted(self.sc_nsecode)
 
         for sc_nsecode in sorted_input:
             skip_row = False

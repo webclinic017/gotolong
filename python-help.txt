@@ -39,6 +39,20 @@ glob.glob(path)
    6.1 The print has been converted to a function so print must be enclosed in () like print('hello')
 
 7. dataframe tips
+7.0 read csv file as dataframe
+
+# Load the Pandas libraries with alias 'pd'
+import pandas as pd
+
+# Read data from file 'filename.csv'
+# (in the same directory that your python process is based)
+# Control delimiters, rows, column names with read_csv (see later)
+data = pd.read_csv("filename.csv")
+
+# Preview the first 5 lines of the loaded data
+data.head()
+
+
    7.1> exclude columns with NaN
 
 # Keep only if Transaction Remarks column is not NA
@@ -102,4 +116,17 @@ XYZ_2d[row, column] = 1
 
 12. fh.write() takes only 1 argument
 
-13.
+13. Sorting the data using keys/values in associative array. An argument reverse=True can be given to change the order.
+    For sorting using values - use key=associative_array.__getitem__
+
+        if filter_rows:
+            sorted_input = sorted(self.sc_nsecode_industry, key=self.sc_nsecode_industry.__getitem__)
+        else:
+            sorted_input = sorted(self.sc_nsecode)
+
+14. variable type
+    list - x_list = ['1', '2', '3'] - read write list
+    tuple - x_tuple = ('1', '2', '3') - read only list (cannot be edited, pushed, popped etc)
+    dict - x_dict = { 'x' : '1' : 'y' : 2} - key value list (associative array)
+
+15.
