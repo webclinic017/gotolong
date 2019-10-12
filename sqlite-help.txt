@@ -3,6 +3,20 @@
 
 https://www.sqlite.org/2019/sqlite-tools-win32-x86-3300000.zip
 
+D:\sqlite3\sqlite3.exe
+
+
+$ cmd
+$ d:
+$ cd D:\GoogleDrive\my_github\GitHub\gotolong\db-files
+
+$ d:\sqlite3\sqlite3.exe ./equity.sqlite3
+sqlite> drop table weight;
+sqlite> create table weight(comp_ticer text, comp_weight_type text, comp_weight_units text);
+sqlite> .quit
+
+
+
 
 $ sqlite3
 sqlite > .help
@@ -10,6 +24,8 @@ sqlite > .databases
 sqlite > .tables
 sqlite > .schema
 sqlite > .fullschema
+sqlite > drop table weight;
+
 
 2> Open a DB file
 
@@ -98,6 +114,8 @@ unused2 text
 );
 sqlite>
 
+
+create table weight()
 
 5> Import Data from File into Table
 

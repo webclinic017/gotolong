@@ -18,6 +18,7 @@ class Amfi(Database):
         # isin number
         self.amfi_isin_list = []
         self.amfi_ticker_list = []
+        self.amfi_captype_list = []
         # serial number
         self.amfi_cname = {}
         self.amfi_mcap = {}
@@ -38,7 +39,7 @@ class Amfi(Database):
                 return
 
             serial_number = row_list[0]
-            if serial_number == 'Sr. No.':
+            if serial_number == 'Sr. No.' or serial_number == "sr_no":
                 if self.debug_level > 0:
                     print('skipped header line', row_list)
                 return
@@ -47,11 +48,10 @@ class Amfi(Database):
 
             comp_name = row_list[1]
             isin_number = row_list[2]
-            comp_ticker = row_list[3].upper().strip()
-            if comp_ticker == '':
-                comp_ticker = row_list[5]
-            avg_mcap = cutil.cutil.get_number(row_list[9])
-            captype = row_list[10].strip()
+            bse_ticker = row_list[3].upper().strip()
+            nse_ticker = row_list[4]
+            avg_mcap = cutil.cutil.get_number(row_list[5])
+            captype = row_list[6].strip()
             if captype == 'Small Cap':
                 if serial_number > 500 and serial_number < 750:
                     captype = 'Micro Cap'
@@ -65,19 +65,34 @@ class Amfi(Database):
             if self.debug_level > 1:
                 print('serial_number : ', serial_number )
                 print('isin_number: ', isin_number)
-                print('comp_ticker : ', comp_ticker)
+                print('bse_ticker : ', bse_ticker)
+                print('nse_ticker : ', nse_ticker)
                 print('avg_mcap : ', avg_mcap )
                 print('captype : ', captype )
                 print('comp_name : ', comp_name)
 
-            self.amfi_isin_ticker_dict[isin_number] = comp_ticker
-            self.amfi_ticker_isin_dict[comp_ticker] = isin_number
-            self.amfi_rank[comp_ticker] = serial_number
-            self.amfi_cname[comp_ticker] = comp_name
-            self.amfi_mcap[comp_ticker] = avg_mcap
-            self.amfi_captype[comp_ticker] = captype
-            self.amfi_isin_list.append(isin_number)
-            self.amfi_ticker_list.append(comp_ticker)
+            if nse_ticker == '':
+                if bse_ticker != '':
+                    self.amfi_rank[bse_ticker] = serial_number
+                    self.amfi_ticker_isin_dict[bse_ticker] = isin_number
+                    self.amfi_isin_ticker_dict[isin_number] = nse_ticker
+                    self.amfi_cname[bse_ticker] = comp_name
+                    self.amfi_mcap[bse_ticker] = avg_mcap
+                    self.amfi_captype[bse_ticker] = captype
+                    self.amfi_isin_list.append(isin_number)
+                    self.amfi_ticker_list.append(bse_ticker)
+            else:
+                self.amfi_rank[nse_ticker] = serial_number
+                self.amfi_ticker_isin_dict[nse_ticker] = isin_number
+                self.amfi_isin_ticker_dict[isin_number] = nse_ticker
+                self.amfi_cname[nse_ticker] = comp_name
+                self.amfi_mcap[nse_ticker] = avg_mcap
+                self.amfi_captype[nse_ticker] = captype
+                self.amfi_isin_list.append(isin_number)
+                self.amfi_ticker_list.append(nse_ticker)
+
+            if captype not in self.amfi_captype_list:
+                self.amfi_captype_list.append(captype)
 
             if self.debug_level > 1:
                 print('comp_name : ', comp_name , '\n')
@@ -101,11 +116,13 @@ class Amfi(Database):
         self.load_amfi_db()
 
     def insert_amfi_data(self, in_filename):
-        SQL = """insert into amfi (sno, company_name, isin, bse_symbol, bse_mcap, nse_symbol, nse_mcap, mse_symbol, mse_mcap, avg_mcap, cap_type, unused1, unused2) values (:sno, :company_name, :isin, :bse_symbol, :bse_mcap, :nse_symbol, :nse_mcap, :mse_symbol, :mse_mcap, :avg_mcap, :cap_type, :unused1, :unused2) """
+        SQL = """insert into amfi (sno, company_name, isin, bse_symbol, nse_symbol, avg_mcap, cap_type) values (:sno, :company_name, :isin, :bse_symbol, :nse_symbol, :avg_mcap, :cap_type) """
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
             csv_reader = csv.reader(csvfile)
+            if self.debug_level > 0:
+                print(csv_reader)
             # insert row
             cursor.executemany(SQL, csv_reader)
             # commit db changes
@@ -126,7 +143,7 @@ class Amfi(Database):
         fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
         for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
             if self.debug_level > 1:
-                print('isin ', ticker)
+                print('ticker  ', ticker)
             p_str = str(self.amfi_rank[ticker])
             p_str += ', '
             p_str += self.amfi_cname[ticker]

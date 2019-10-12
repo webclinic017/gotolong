@@ -4,15 +4,9 @@ sno text,
 company_name text,
 isin text,
 bse_symbol text,
-bse_mcap  text,
 nse_symbol text,
-nse_mcap  text,
-mse_symbol text,
-mse_mcap  text,
 avg_mcap text,
-cap_type text,
-unused1 text,
-unused2 text
+cap_type text
 );
 
 create table if not exists isin(
@@ -65,3 +59,8 @@ comp_weight text,
 comp_desc text
 );
 
+create table if not exists weight(
+ comp_ticker text,
+ comp_weight_type text,
+ comp_weight_units text
+);

@@ -39,6 +39,7 @@ glob.glob(path)
    6.1 The print has been converted to a function so print must be enclosed in () like print('hello')
 
 7. dataframe tips
+
 7.0 read csv file as dataframe
 
 # Load the Pandas libraries with alias 'pd'
@@ -51,7 +52,6 @@ data = pd.read_csv("filename.csv")
 
 # Preview the first 5 lines of the loaded data
 data.head()
-
 
    7.1> exclude columns with NaN
 
@@ -73,6 +73,12 @@ df = df.iloc[:, :-1]
 7.5> set columns
 # change columns from second line from top
 df.columns = df.iloc[0]
+
+7.6> drop by column names (column index).
+
+# axis = 1 means column name
+df.drop(df.columns[[0, 4, 2]], axis = 1, inplace = True)
+
 
 8. arguments using argument specifier : argparse module
 
@@ -129,4 +135,18 @@ XYZ_2d[row, column] = 1
     tuple - x_tuple = ('1', '2', '3') - read only list (cannot be edited, pushed, popped etc)
     dict - x_dict = { 'x' : '1' : 'y' : 2} - key value list (associative array)
 
-15.
+15. dictionary from two lists
+    # create a dictionary out of two lists
+    dict(zip(keys,values))
+
+16. fix the stripping of all columns in a row (list)
+    # fix the stripping : redundant spaces etc
+    row = [column.strip() for column in row]
+
+17. count of elements in list and dictionary
+    count_elements = len (kv_dict.keys())
+
+18. dataframe - round the column value of float
+    df[["avg_mcap"]] = df[["avg_mcap"]].astype(int)
+
+19.

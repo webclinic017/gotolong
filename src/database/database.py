@@ -37,6 +37,13 @@ class Database(Config):
             print('count_amfi_db : row_count : ', row_count)
         return row_count
 
+    def db_table_truncate(self, table):
+        SQL = """delete from {}""".format(table)
+        print('db_table_truncate sql', SQL)
+        cursor = self.db_conn.cursor()
+        cursor.execute(SQL)
+        return cursor
+
     def db_table_load(self, table):
         SQL = """select * from {}""".format(table)
         print('db_table_load sql', SQL)

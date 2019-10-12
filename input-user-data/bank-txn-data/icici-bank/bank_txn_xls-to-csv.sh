@@ -23,7 +23,7 @@ do
 		out_file=${out_dir}/${fy_dir}/${bank}/OpTransactionHistory-${fy_dir}.csv
 
 		echo processing ${fy_dir}
-	        python  "${local_repo_root}/${local_repo_name}/src/dividend/excel_to_csv.py" ${in_file} ${out_file} ${debug_level}
+	        python  "${local_repo_root}/${local_repo_name}/src/dividend/icici_bank_excel_to_csv.py" ${in_file} ${out_file} ${debug_level}
 
         fi
 done

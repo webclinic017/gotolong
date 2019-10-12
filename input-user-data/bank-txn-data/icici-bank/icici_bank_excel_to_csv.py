@@ -6,9 +6,9 @@ import pandas as pd
 
 program_name = sys.argv[0]
 
-if len(sys.argv) < 4 :
-   print("usage: " + program_name + " <file.xls> <file.csv> <debug_level>")
-   sys.exit(1) 
+if len(sys.argv) < 4:
+    print("usage: " + program_name + " <file.xls> <file.csv> <debug_level>")
+    sys.exit(1)
 
 excel_file = sys.argv[1]
 
@@ -20,14 +20,14 @@ debug_level = int(sys.argv[3])
 xl = pd.ExcelFile(excel_file)
 
 if debug_level > 0:
-	print(xl.sheet_names)
+    print(xl.sheet_names)
 
 # single worksheet - OpTransactionHistory
 sheet_name = xl.sheet_names[0]
 
-if sheet_name != 'OpTransactionHistory' :
-	print("check sheet name")
-	sys.exit(1)
+if sheet_name != 'OpTransactionHistory':
+    print("check sheet name")
+    sys.exit(1)
 
 df = xl.parse(sheet_name)
 
@@ -62,7 +62,7 @@ df = df.iloc[:, :-1]
 df.columns = df.iloc[0]
 
 if debug_level > 0:
-	print("columns : " + df.columns)
+    print("columns : " + df.columns)
 
 # remove the top line that contains column name
 df = df.iloc[1:]
@@ -82,7 +82,7 @@ pattern = "Transaction\ Remarks|ACH/|CMS/"
 filter = df['Transaction Remarks'].str.contains(pattern, regex=True)
 
 if debug_level > 0:
-	print(filter)
+    print(filter)
 
 df = df[filter]
 
