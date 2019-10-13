@@ -14,6 +14,5 @@ OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/plan-reports/plan-reports-all-holdings.cs
 OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/plan-reports/plan-reports-plus-holdings.csv
 OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/plan-reports/plan-reports-zero-holdings.csv
 
-# phase 2
-# python -m pdb plan_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
-python plan_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
+#python plan_invoke.py --truncate_table --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
+python plan_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}

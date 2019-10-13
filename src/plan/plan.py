@@ -14,15 +14,21 @@ class Plan(Amfi):
     def __init__(self):
         super(Plan, self).__init__()
         # years of investing. started in 2017
-        self.plan_multiply = self.INVEST_YEARS
+        # self.plan_multiply = self.INVEST_YEARS
+        self.plan_multiply = 1 
         self.plan_comp_units = {}
         self.plan_indu_units = {}
         self.debug_level = 0
+        self.db_table_reload = False
         self.last_row = ""
+        self.plan_captype_comp_count_dict = {}
         print('init : Plan')
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
+
+    def set_table_reload(self, truncate=False):
+        self.db_table_reload = truncate 
 
     def load_plan_row(self, row):
         try:
@@ -34,27 +40,37 @@ class Plan(Amfi):
                 return
             comp_industry = row_list[0]
             comp_name = row_list[1]
-            comp_ticker = row_list[2]
-            comp_weight = cutil.cutil.get_number(row_list[3])
+            ticker = row_list[2]
+            comp_selected = cutil.cutil.get_number(row_list[3])
             comp_desc = row_list[4]
             if comp_industry in self.plan_indu_units.keys():
-                self.plan_indu_units[comp_industry] = self.plan_indu_units[comp_industry] + comp_weight
+                self.plan_indu_units[comp_industry] = self.plan_indu_units[comp_industry] + comp_selected
             else:
-                self.plan_indu_units[comp_industry] = comp_weight
+                self.plan_indu_units[comp_industry] = comp_selected
             if self.debug_level > 0:
                 print('industry ', comp_industry)
                 print('company name', comp_name)
-                print('company weight', comp_weight)
+                print('company selected', comp_selected)
                 print('company desc', comp_desc)
             # use ticker as an input
             # isin = self.amfi_get_isin_by_name(comp_ticker)
             if self.debug_level > 0:
-                print(comp_ticker, comp_name)
-            if comp_weight >= 0:
-                self.plan_comp_units[comp_ticker] = comp_weight
-                self.plan_comp_units[comp_ticker] = self.plan_comp_units[comp_ticker] * self.plan_multiply
+                print(ticker, comp_name)
+
+            captype = self.amfi_get_value_by_ticker(ticker, "captype")
+            if self.debug_level > 0:
+                print(ticker, captype)
+
+            if comp_selected >= 0:
+                self.plan_comp_units[ticker] = comp_selected
+                self.plan_comp_units[ticker] = self.plan_comp_units[ticker] * self.plan_multiply
             else:
-                self.plan_comp_units[comp_ticker] = 0
+                self.plan_comp_units[ticker] = 0
+
+            if captype in self.plan_captype_comp_count_dict:
+                self.plan_captype_comp_count_dict[captype] += 1
+            else:
+                self.plan_captype_comp_count_dict[captype] = 1
             return
         except TypeError:
             print('except : TypeError : ', row, "\n")
@@ -68,6 +84,9 @@ class Plan(Amfi):
 
     def load_plan_data(self, in_filename):
         table = "plan"
+        if self.db_table_reload:
+            self.db_table_truncate(table)
+
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
             self.insert_plan_data(in_filename)
@@ -77,7 +96,7 @@ class Plan(Amfi):
         self.load_plan_db()
 
     def insert_plan_data(self, in_filename):
-        SQL = """insert into plan(comp_industry, comp_name, comp_ticker, comp_weight, comp_desc) values (:comp_industry, :comp_name, :comp_ticker, :comp_weight, :comp_desc) """
+        SQL = """insert into plan(comp_industry, comp_name, comp_ticker, comp_selected, comp_desc) values (:comp_industry, :comp_name, :comp_ticker, :comp_selected, :comp_desc) """
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
@@ -141,11 +160,6 @@ class Plan(Amfi):
                 if self.debug_level > 0:
                     print(ticker, captype)
                 rank = self.amfi_get_value_by_ticker(ticker, "rank")
-                total_units += units_1k
-                if captype in cap_units:
-                    cap_units[captype] += units_1k
-                else:
-                    cap_units[captype] = units_1k
             except ValueError:
                 print('except : ValueError :', comp_name)
 
@@ -180,9 +194,23 @@ class Plan(Amfi):
             p_str += str(mcap)
             p_str += '\n'
             fh.write(p_str)
-        if self.debug_level > 0 :
-            print(cap_units)
+
         # Current portfolio distribution
+
+        # captype comp count
+        ccc_dict = self.plan_captype_comp_count_dict
+        if self.debug_level > 0:
+            print(ccc_dict)
+
+        total_units = 0
+        # calculate total_units
+        # fix missing values
+        for captype in self.amfi_captype_list:
+            if captype not in ccc_dict:
+                ccc_dict[captype] = 0
+            else:
+                total_units += int(ccc_dict[captype])
+
         p_str = 'Summary'
         p_str += ', '
         p_str += '-'
@@ -192,11 +220,12 @@ class Plan(Amfi):
         p_str += str(total_units)
         p_str += ', '
         try:
-            p_str += 'large '  + str(int(round(float((cap_units['Large Cap']*100.0)/total_units)))) +' %'
+            p_str += 'large ' + str(int(round(float((ccc_dict['Large Cap'] * 100.0) / total_units)))) + ' %'
             p_str += ', '
-            p_str += 'mid '  + str(int(round(float((cap_units['Mid Cap']*100.0)/total_units)))) + ' %'
+            p_str += 'mid ' + str(int(round(float((ccc_dict['Mid Cap'] * 100.0) / total_units)))) + ' %'
             p_str += ', '
-            p_str += 'small '  + str(int(round(float(((cap_units['Small Cap']+cap_units['Micro Cap']+cap_units['Nano Cap']+cap_units['Unknown Cap'])*100.0)/total_units)))) + ' %'
+            p_str += 'small ' + str(int(round(float(((ccc_dict['Small Cap'] + ccc_dict['Micro Cap'] + ccc_dict[
+                'Nano Cap'] + ccc_dict['Unknown Cap']) * 100.0) / total_units)))) + ' %'
             p_str += '\n'
         except KeyError:
             print('except KeyError')

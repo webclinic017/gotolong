@@ -55,7 +55,7 @@ create table if not exists plan(
 comp_industry text,
 comp_name text,
 comp_ticker text,
-comp_weight text,
+comp_selected text,
 comp_desc text
 );
 

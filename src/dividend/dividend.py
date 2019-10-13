@@ -187,12 +187,12 @@ class Dividend(Amfi):
             company_name = self.normalize_company_name(company_name)
             if self.debug_level > 1:
                 print('normalized :', company_name)
-            isin  = self.get_amfi_isin_by_name(company_name)
-            if self.debug_level > 1:
-                print(' isin :', isin)
-            ticker = self.get_amfi_ticker_by_code(isin)
+            ticker = self.amfi_get_ticker_by_name(company_name)
             if self.debug_level > 1:
                 print(' ticker :', ticker)
+            isin = self.amfi_get_value_by_ticker(ticker, "isin")
+            if self.debug_level > 1:
+                print(' isin :', isin)
             if ticker != "UNK_TICKER" :
                 company_name = ticker
 

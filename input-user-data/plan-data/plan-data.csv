@@ -1,6 +1,6 @@
-﻿comp_industry,comp_name,comp_ticker,comp_weight,comp_desc
+﻿comp_industry,comp_name,comp_ticker,comp_selected,comp_desc
 AaStatistics,comp_tracked,comp_tracked,351,comp_tracked
-AaStatistics,comp_invested,comp_invested,276,comp_invested
+AaStatistics,comp_invested,comp_invested,272,comp_invested
 Abrasives,Carborundum Universal ,CARBORUNIV,1,(CUMI : JV with Murugappa group India and Carborundum USA). Also known as CUMI - Carborundum Universal of Madras India. Brilliant Investory presentation.
 Abrasives,Grindwell norton,GRINDWELL,1,Grindwell norton (Saint Gobain group company in india : GNO - Grindwell norton  and Saint Gobain India). Saint Gobain India is supposed to merged to Grindwell Norton but facing oppossition. Earlier Saint Gobain had acquired Norton USA.
 Aluminium,Hindalco,HINDALCO,1,Hindalco (Aditya Birla Group) 
@@ -82,7 +82,7 @@ Computers - Software Medium & Small,L&T Technology Services,LTTS,1,L&T Technolog
 Computers - Software Medium & Small,Tata Elxsi,TATAELXSI,1,"Tata Elxsi : Design : Engineering Services company : set top box, autonomous cars, packaging design, fan design, medical devices etc"
 Construction & Contracting - Civil,Gammon,Gammon,0,Gammon has long history in this space similar to L&T but doesn't seems to be in profit off late (from year 2012 to year 2017). Checked Screener.
 Construction & Contracting - Civil,HCC,HCC,0,"HCC (Hindustan construction company) : no dividend for last 5 years. Also, in losses for last 5 years."
-Construction & Contracting - Civil,NAGARCON,NAGARCON,0,NCC (Nagarjuna Construction Company). Used Ticker name to avoid confusion with other NCC companies.
+Construction & Contracting - Civil,NCC Ltd,NCC,0,NCC (Nagarjuna Construction Company). Used Ticker name to avoid confusion with other NCC companies.
 Construction & Contracting - Housing,Asiana Housing,,0,
 Construction & Contracting - Real Estate,Brigade,BRIGADE,1,Brigade
 Construction & Contracting - Real Estate,DLF,DLF,1,DLF
@@ -161,7 +161,7 @@ Finance - Term Lending Institutions,Power Finance,PFC,1,Power Finance Corporatio
 Finance - Term Lending Institutions,Rural Electrification Corporation,RECLTD,1,REC (Rural Electrification Corporation) - CPSE Navaratna company
 Food Processing,Britannia,BRITANNIA,1,"Britania (Biscuits, Bread, Rusk, Cake). India's number one biscuit maker. Parle leads in econmoy category but that is not listed. Birtania ia leader in all segment. it has a market share of 38%.) Brands: Britania, Tiger. Tagline : Have a Good Day. It is a part of Wadia group company that also owns ... go Air, bomay dyeing, Bomay Burmah trading etc.The group also owns fashin magazine Gladrags. Share Price : 3500 Rs"
 Food Processing,Coffee Day,COFFEEDAY,1,"Coffee Day Enterpises has a subsidiary Coffee Day Global limited that owns Cafe Cofee Day. Cafe Coffee Day (Indian cafe chain, Founder V G Siddharth is Son-in-Law of former CM S M Krishna (political risk). The company is diversifying into unrelated territory that has nothing to do with this business. No dividend for last 3 years. IT Raids in 2017 september. "
-Food Processing,Future Consumer Limited,FCONSUMER,1,Future Consumer Limited (FCL) : creating food and fmcg brands.
+Food Processing,Future Consumer Limited,FCONSUMER,0,Future Consumer Limited (FCL) : creating food and fmcg brands. Dumped it due to very poor financials.
 Food Processing,GlaxoSmithKline Consumer,GSKCONS,1,"GSK Consumer : GlaxoSmithKline Consumer Healthcare Ltd: International biggie : leader in milk mix (Horlicks, Boost & Maltova), Crocin (Tablet, Syrup), Iodex, ENO, Otrivian (Nasal spray), OstoCalcium (Calcium, phosporus), Sensodyne (Toothpaste), Voltaren (like moov)"
 Food Processing,Hatsun,HATSUN,1,"Hatsun Agro Products. Private milk & dairy giant of south india (Asia). Direct sourcing from farmers. Aroyka full cream Milk range. Now, Arun Ice cream and Ibaco Ice cream parlour. Santosa cattle feed also. Now, Oyalo pizza chain also."
 Food Processing,KRBL,KRBL,1,KRBL (KRB Limited : Worlds larges rice millers and basmati exporters). India Gate Basmati Rice is a flagship brand apart from several other brands. LT foods that sells Dawat is another competitor. ITC also wants to make in roads in rice.
@@ -207,7 +207,7 @@ Lubricants,Tide Water Oil,,0,Tide Water Oil ( Brand : Veedol )
 Media & Entertainment,Dish TV,DISHTV,1,"Dish TV (#1 DTH player, acquired videocon, Competes with Tata Sky- unlisted, Bharati Airtel is other operator. BigTv- DTH is strulling due to debt servicing.) approx 20% market share each for Take Sky and Airtel DTH. No dividend in last 3 years."
 Media & Entertainment,Entertainment Network,ENIL,1,Radio Mirchi. Pure Radio operator. ENIL (Entertainment Network India Ltd). FM Radio Mirchi + event management. Owned by Times of India. It can make money from Radio and events as RJ are used during events also.
 Media & Entertainment,INOX Leisure,INOXLEISUR,1,Inox Leisure is 2nd largest theater chain in India.
-Media & Entertainment,Network 18 Media & Investments,NETWORK18,1,Network18 is owned by Reliance. TV18 Broadcast is a subsidiary of Network18.
+Media & Entertainment,Network 18 Media & Investments,NETWORK18,0,Network18 is owned by Reliance. TV18 Broadcast is a subsidiary of Network18. Dumped due to high debt/equity.
 Media & Entertainment,PVR,PVR,1,"PVR (Best movie experience in India, largest number of screens : 700 screens, 160 properties, 60 cities). PVR became 7th largest cinema exhibitor in the world by number of admissions (100 millon) in a year after acquring Satyam Cinemas of South. Future plan : 1000 screens by 2020. Go to forum anyday, to experience the scale and experience. INOX is 2nd. It has close to 500 screens. "
 Media & Entertainment,Sun TV Network,SUNTV,0,"Sun TV Network (Weakness: only south channels). Had newspaper, FM, DTH etc.IPL team for hyderabad. Management Risk - Political and doesn't have good business ethics (used cables of govt) for data transfer. Maran Family (DMK)"
 Media & Entertainment,ZEE Entertainment,ZEEL,1,"ZEE Entertainment (3 listed companies: zee entertainment, zee media, dish tv for different purpose) The content is watched in 150 countries."
@@ -237,7 +237,7 @@ Misc: Trading,MCX,MCX,1,Multi Commodity Exchange. It is a near monopoly but reve
 Misc: Unknown,Sheela foam,SFL,1,Sheela foam (Mattress player included here. Can also be considered with things like Paint or Nilkamal in home furnishing also)
 Misc: Wood & Wood Products,Century Plyboard,CENTURYPLY,1,Century Ply. It also has lamintates business under brand CenturyLam. The star cement is also a subsidiary of Century Plyboard.
 Misc: Wood & Wood Products,Greenply,GREENPLY,1,"Greenlam was demerged in 2014. So, don't just look at last 5 year revenue. In 2014 de-merger and revenue must have splited."
-Misc: Wood & Wood Products,Greenlam,GRNLAMIND,1,Greenlam (Demerged from Greenply industries in 2014)
+Misc: Wood & Wood Products,Greenlam,GREENLAM,1,Greenlam (Demerged from Greenply industries in 2014)
 Oil Drilling And Exploration,Adani Gas,ADANIGAS,1,Adani Gas for CGD - city gas distribution.
 Oil Drilling And Exploration,GAIL,GAIL,1,GAIL - CPSE Maharatna (natural gas processing & distribution company).
 Oil Drilling And Exploration,Indraprasath Gas,IGL,1,"Indraprasath Gas Ltd. Jointly owned by GAIL (22.5%) and BPCL (22.5%). 45%. Very small player compared to GAIL. CGD in Delhi, NCR, Noida, Kanpur, Pune etc"
@@ -267,7 +267,7 @@ Pesticides & Agro Chemicals,Rallis India,RALLIS,1,Rallis India (Subsidiary of Ta
 Pharmaceuticals,Abbott India,ABBOTINDIA,1,"Abott India (International biggie : creating footprint: Thyronorm, pediasure and ensure etc)"
 Pharmaceuticals,AstraZeneca,ASTRAZEN,1,AstraZeneca Pharma India. British-Swedish giant.
 Pharmaceuticals,Procter & Gamble Health,PGHL,1,P&G Health. Earlier MERCK. Merged in 2019.
-Pharmaceuticals,Novartis,NOVARTIS,1,NOVARTIS India. BOM:500672
+Pharmaceuticals,Novartis,NOVARTIND,1,NOVARTIS India. BOM:500672
 Pharmaceuticals,Aurobindo Pharma,AUROPHARMA,1,Aurobindo Pharma
 Pharmaceuticals,Biocon,BIOCON,1,Biocon - leader in Biosimilars In India.
 Pharmaceuticals,Cadila Healthcare,CADILAHC,1,"Cadila Healthcare, Zydus Cadilla, Zydus wellness (Subsidiary) : Sugarfree etc"
@@ -277,7 +277,7 @@ Pharmaceuticals,Glaxosmithkline Pharma,GLAXO,1,GSK Pharma - acquired consumer he
 Pharmaceuticals,Glenmark Pharma,GLENMARK,1,Glenmark Pharma
 Pharmaceuticals,LALPATHLAB,LALPATHLAB,1,"Dr Lal Pathlabs (Only recognisable player in this segment). Used ticker symbol to avoid confusion with space, without space etc. Other Smaller players are Thyrocare Technologies, Metropolis and SRL Diagnostic."
 Pharmaceuticals,Lupin,LUPIN,1,Lupin
-Pharmaceuticals,Metropolis  Healthcare,METROPOLIS,1,Metropolis is also a poular pathlogoy chain with origin in Mumbai. Trying to make pan-india footprint.
+Pharmaceuticals,Metropolis  Healthcare,METROPOLIS,0,Metropolis is also a poular pathlogoy chain with origin in Mumbai. Trying to make pan-india footprint. It has not been included due to high level of pledge of promoter shareholding. The pledge is high as it has pledged to buy remaining stake from another Investor. Had a bitter fight with co-promoter after that. The promoter not taken into confidence.
 Pharmaceuticals,Piramal Enterprises,PEL,1,"Piramal Enterprises (Pharma like i-can, i-know etc, Toy brand - acquired company Little - MRF's funskool is a closest listed competitor, Real Estate through Piramal Capital, Finance like Shriram Capital, Shriram City Union Finance and Shriram Transport Finance etc) : Ajay Piramal : Growth Oriented. Finace to overtake Pharma this year. 3K."
 Pharmaceuticals,Pfizer,PFIZER,1,Pfizer (International biggie: creating footprint)
 Pharmaceuticals,Sanofi India,SANOFI,1,Sanofi India (International biggie : creating footprint)
@@ -285,7 +285,7 @@ Pharmaceuticals,Sun Pharma ,SUNPHARMA,1,Sun Pharma (Acquired Ranbaxy also) Dilip
 Pharmaceuticals,Thyrocare Technologies,THYROCARE,1,Thyrocare Technologies also operates in this segment in India and in other countires. It also operates under other name like Aarogyam etc
 Plantations - Tea & Coffee,McLeod Russel,MCLEODRUSS,1,Largest tea plantation company with estates spread in Assam and WB. Acquired tea estates in other countries also. Both McLeod Russel (Williamson Magor Group) and Eveready group are owned by B M Khaitan group. Eveready has a tie up with McLeod Russel for Tej brand (packet tea).
 Plantations - Tea & Coffee,Tata Coffee,TATACOFFEE,1,"Tata Coffee (subsidiary of Tata Global Beverages, Coffe Plantations and Resorts)"
-Plantations - Tea & Coffee,Tata Global Beverages,TATATEA,1,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)"
+Plantations - Tea & Coffee,Tata Global Beverages,TATAGLOBAL,1,"Tata Global Beverages (Tata Tea, Himalyan Mineral Water - JV with Pepsi, 50:50 JV with Starbucks, Largest Shareholder in Tata Coffee)"
 Plastics,Astral,ASTRAL,0,"Astral pipes, Astral Poly technik"
 Plastics,Finolex Industries,FINPIPE,0,Finolex Industries deals with pipes. Finolex pipes.
 Plastics,Jain Irrigation,JISLJALEQS,1,"Jain Irrrigation Systems  (leader in agri input and pipes, diversified player)"
@@ -302,7 +302,7 @@ Power - Generation & Distribution,Tata Power,TATAPOWER,1,Tata Power - Integrated
 Power - Transmission & Equipment,GE Power India,GEPIL,0,"GE Power India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom India to GE Power India)"
 Power - Transmission & Equipment,GE T&D India,GET&D,0,"GE T&D India (GE acquired energy assets of Alstom, French energy major, and renamed Alstom T&D in India to GE T&D)"
 Printing & Stationery,Navneet,NAVNETEDUL,0,CCan it compete with ITC's Classmate.
-Pumps,KSB Pumps,KSBPUMPS,1,"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)"
+Pumps,KSB Ltd,KSB,1,"KSB Pumps (KSB Aktiengesellschaft, German MNC, operates in all continents. World leader in pumps and valves)"
 Pumps,Kirloskar Brothers ,,0,"Kirloskar Brothers (Domestic leader in pumps and valves, Kirloskar group company) Has international presence also. Kirloskar group is confused with too many listed companies without much differentiation. Don't invest without clear differentiation between them."
 Pumps,Shakti Pumps ,,0,Shakti Pumps 
 Refineries,BPCL,BPCL,1,"BPCL (40 mt refinery capacity : Mumbai - 13mt, Kochi - 16mt, Bina - 6mt, Numaligarh - 3mt) - CPSE Navaratna"
@@ -313,7 +313,7 @@ Retail,Aditya Birla Fashion & Retail,ABFRL,1,"Aditya Birla Fashion & Retail (Sal
 Retail,Avenue Supermarts,DMART,1,Avenue Supermarts (D-mart)
 Retail,Future Lifestyle Fashion,FLFL,1,"Future Lifestyle Fashion (for central, brand factory etc). Future group is very shorted and has 3 listed companies : Future Retail (big bazaar, easy day, kb fair price shop etc), Future lifestyle fashion ( for central and brand factory). Future enterprises is for non-retail business like future generali etc"
 Retail,Future Retail ,FRETAIL,1,"Future Retail (for big bazaar, kirana, easyday etc). Future group is very confused and has too many listed companies for the same purpose without much differentiaion : Future Retail (for big bazaar, easy day, kb fair price etc), Future lifestyle fashion for central and brand factory. future supply chain for logistics. Future enterprises is for non-retail business like future generali etc. Praxis Home solution as a spin-off from hometown and fabfurnish. Future Consumer is for branding of FMCG products. Too many tie-ups with many companies like celio and sketchers but head company is unkown. Future group is not listed as an umbrella group. Why did Niligiri retail and aadhaar retail go to Future consumer etc? Can such a group have so many listed companies without differntiation? How many listed companies walmart has?"
-Retail,Shoppers Stop,SHOPERSTOP,1,Shoppers Stop. Retails stores by RPG Group. 
+Retail,Shoppers Stop,SHOPERSTOP,0,Shoppers Stop. Retails stores by RPG Group. It was dumped in between. To be revieweed later.
 Retail,Trent,TRENT,1,"Trent (JV of Tata and Tesco: operates star bazzar, star daily etc)"
 Rubber,Apar Industries,,0,Apar Industries (How is it related to rubber ?)
 Rubber,COSCO INDIA,,0,COSCO INDIA (very small player in rubber : Requires more analysis) : Volleyball (Sponsor of equipment for all Indian major tournament)
@@ -325,7 +325,7 @@ Steel - Large,SAIL,SAIL,0,SAIL (Steel Authority of India Limited) - CPSE MAHARAT
 Steel - Large,Tata Steel,TATASTEEL,1,"Tata Steel (merged with Thyssenkrupp in Germany, Europe)."
 Sugar,Balrampur Chini Mills,BALRAMCHIN,1,Balrampur Chini Mills (Chini.com)
 Sugar,EID Parry,EIDPARRY,1,"EID Parry (East India Distilleries, a Subsidiary of Murugappa group). It has branded a commodity (Parry's Sugar)"
-Sugar,Shree Renuka Sugars,RENUKA,1,"Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil. Acquired by Wilmar International that has JV with Adani in other things like Oil (Fortune brand). Kanakashree Agro is India's largest sugar refiner and ethanol producer based in Mumbai, Maharashtra, with refining capacity of 4000 tonnes/day and distillery capacity of 600 kilolitre/day."
+Sugar,Shree Renuka Sugars,RENUKA,0,"Shree Renuka Sugar (Branded Commodity : Madhur pure & hygeinic Sugar) ... Net profit is in negative... Net Sales is high may be due to discounts. Largest player in India and Brazil. Production full year due to complementary seasons in India and Brazil. Acquired by Wilmar International that has JV with Adani in other things like Oil (Fortune brand). Kanakashree Agro is India's largest sugar refiner and ethanol producer based in Mumbai, Maharashtra, with refining capacity of 4000 tonnes/day and distillery capacity of 600 kilolitre/day. Dumped due to high debt/equity."
 Sugar,Bajaj Hindustan,,0,"Bajaj Hindustan (Bajaj group company, splited from bajaj holdings and investments that owns just bajaj auto and bajaj finance services) Sishir Bajaj group. Bajaj Hindusthan has 14 sugar mills with cane crushing capacity of 1.36 lakh tonnes per day and alcohol distillation capacity of 800 kilo litres per day."
 Telecommunications - Equipment,Honeywell Automation ,HONAUT,1,"Honeywell Automation (MNC, Honeywell Aerospace is a world leader in aviation. Supplies all components of aircraft. Its competitor is UTC-United Technologies corporation in aviation space. Both are US based companies. It is also into building automation, plant automation, hotel automation etc. It also has speciality paint for aircraft and textile for miliary. High Share Price : 12 K."
 Telecommunications - Equipment,Bharti Infratel ,INFRATEL,1,"Bharti Infratel (Telecom tower company with 40K towers, It also has 45% stake in Indus tower - combined entity of Bharti, Vodafone and Idea. also - 1.2 Lac towers). Bharti Infratel is 10% owned by KKR - Kohlberg Kravis & Roberts group. Key metric is number of towers and tower tenancy ... tower tenancy of 2 to 3 is good. As number of players have come down to just 3 ... it will be difficult to have more than tenacy ratio of 2."
@@ -334,7 +334,7 @@ Telecommunications - Service,Idea,IDEA,1,Vodafone Idea (part owner Vodafone is o
 Textiles - Denim,Arvind Fashions,ARVINDFASN,1,"Arvind Fashions Limited (company of Lal Bhai group. Own Brands: Flying Machine, Newport, Quads, Ruf & Tuf, Excalibur) Licensed Brands : Arrow, Gap Inc., Lee, Wrangler, Twills, Gant U.S.A., Tommy Hilfiger, EdHardy, Izod, Cherokee, Mossimo, U.S. Polo Assn., Billabong, Nautica, Aeropostale."
 Textiles - Readymade Apparels,Page Industries ,PAGEIND,1,"Page Industries (Jockey, Speedo) : High Share Price : 15K"
 Textiles - Woollen & Worsted,Raymond ,,0,"Raymond (Brands : Raymond, ColorPlus, Park Avenue, Parx, KamaSutra)"
-Trading,Adani Enterprises ,ADANIENT,,Adani Enterprises (Check AR and segmented results). Ruchi soya went into trouble after trading on some commodity. What is Adani Enterprises into?
+Trading,Adani Enterprises ,ADANIENT,1,Adani Enterprises (Check AR and segmented results). Ruchi soya went into trouble after trading on some commodity. What is Adani Enterprises into?
 Transport & Logistics,Aegis logistics,AEGISCHEM,1,"Aegis logistics (auto gas) : Liquid transportation : Oil, Gas, Chemicals etc"
 Transport & Logistics,Allcargo Logistics,ALLCARGO,1,"Allcargo Logistics (Ship, Ton load, Vessel etc)"
 Transport & Logistics,Container Corporation,CONCOR,1,Container Corporation - CPSE NAVARATNA (Railway Cargo on Indian Railways) : 68 ICD (Inland Container Depot) / CFS (Container freight station)

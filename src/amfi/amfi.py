@@ -159,22 +159,16 @@ class Amfi(Database):
             fh.write(p_str);
         fh.close()
 
-    def amfi_get_isin_by_name(self, req_name):
+    def amfi_get_ticker_by_name(self, req_name):
         req_name = re.sub('\s+', ' ', req_name).strip()
-        for amfi_isin in sorted(self.amfi_cname):
+        for amfi_ticker in sorted(self.amfi_cname):
             # try to find a matching company
-            comp_name = self.amfi_cname[amfi_isin]
+            comp_name = self.amfi_cname[amfi_ticker]
             comp_name = comp_name.strip()
             if re.match(req_name, comp_name):
                 if self.debug_level > 1:
                     print('found match : name : ', req_name)
-                return amfi_isin
-            if amfi_isin in  self.amfi_ticker:
-                ticker_symbol = self.amfi_isin_ticker_dict[amfi_isin]
-                if req_name.upper() == ticker_symbol :
-                    if self.debug_level > 1:
-                        print('found ticker : ', req_name)
-                    return amfi_isin
+                return amfi_ticker
         if self.debug_level > 1:
             print('amfi : comp not found : req_name :',req_name,':')
         return ''
