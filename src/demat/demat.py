@@ -8,9 +8,10 @@ import operator
 
 import cutil.cutil
 
-from database.database import *
+from amfi.amfi import *
 
-class Demat(Database):
+
+class Demat(Amfi):
 
     def __init__(self):
         super(Demat, self).__init__()
@@ -39,14 +40,24 @@ class Demat(Database):
             # skip header
             if row_list[0] == 'Stock Symbol':
                 return
+            else:
+                # this is not used as ICICI direct uses different names
+                stock_symbol = row_list[0].strip()
+
             comp_name = row_list[1]
             isin_code   = (row_list[2]).upper().strip()
+            stock_symbol = self.amfi_get_value_by_isin(isin_code, "ticker")
+            if stock_symbol == 'UNK_TICKER':
+                print("isin", isin_code, "symbol", stock_symbol, "company", comp_name)
+
             txn_type = row_list[3]
             txn_qty = row_list[4]
             txn_price = str(int(round(float(row_list[5]))))
             txn_date = row_list[12]
 
-            p_str = isin_code
+            p_str = stock_symbol
+            p_str += ','
+            p_str += isin_code
             p_str += ','
             p_str += comp_name
             p_str += ','
@@ -62,31 +73,31 @@ class Demat(Database):
             if self.debug_level > 1:
                 print(p_str)
 
-            if isin_code in self.demat_txn_list:
-                self.demat_txn_list[isin_code] += p_str
+            if stock_symbol in self.demat_txn_list:
+                self.demat_txn_list[stock_symbol] += p_str
             else:
-                self.demat_txn_list[isin_code] = p_str
+                self.demat_txn_list[stock_symbol] = p_str
 
-            self.company_name[isin_code] = cutil.cutil.normalize_comp_name(comp_name)
+            self.company_name[stock_symbol] = cutil.cutil.normalize_comp_name(comp_name)
             if txn_type == "Buy":
-                if isin_code in self.demat_txn_buy_qty:
-                    self.demat_txn_buy_qty[isin_code] += int(txn_qty)
-                    self.demat_txn_buy_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
+                if stock_symbol in self.demat_txn_buy_qty:
+                    self.demat_txn_buy_qty[stock_symbol] += int(txn_qty)
+                    self.demat_txn_buy_price[stock_symbol] += int(round(float(txn_price))) * int(txn_qty)
                 else:
-                    self.demat_txn_buy_qty[isin_code] = int(txn_qty)
-                    self.demat_txn_buy_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
+                    self.demat_txn_buy_qty[stock_symbol] = int(txn_qty)
+                    self.demat_txn_buy_price[stock_symbol] = int(round(float(txn_price))) * int(txn_qty)
             else:
-                if isin_code in self.demat_txn_sale_qty:
-                    self.demat_txn_sale_qty[isin_code] += int(txn_qty)
-                    self.demat_txn_sale_price[isin_code]    += int(round(float(txn_price))) * int(txn_qty)
+                if stock_symbol in self.demat_txn_sale_qty:
+                    self.demat_txn_sale_qty[stock_symbol] += int(txn_qty)
+                    self.demat_txn_sale_price[stock_symbol] += int(round(float(txn_price))) * int(txn_qty)
                 else:
-                    self.demat_txn_sale_qty[isin_code] = int(txn_qty)
-                    self.demat_txn_sale_price[isin_code]    = int(round(float(txn_price))) * int(txn_qty)
+                    self.demat_txn_sale_qty[stock_symbol] = int(txn_qty)
+                    self.demat_txn_sale_price[stock_symbol] = int(round(float(txn_price))) * int(txn_qty)
 
             # skip updating bonus entries
             if txn_price != 0:
-                self.demat_txn_last_type[isin_code]  = txn_type
-                self.demat_txn_last_date[isin_code]  = txn_date
+                self.demat_txn_last_type[stock_symbol] = txn_type
+                self.demat_txn_last_date[stock_symbol] = txn_date
 
         except:
             print("demat Unexpected error:", sys.exc_info())
@@ -98,8 +109,12 @@ class Demat(Database):
             # skip header : sometime Stock Symbol appears as 'tock Symbol'
             if row_list[0] == 'Stock Symbol' or row_list[1] == 'Company Name':
                 return
+
+            # not used
+            # stock_symbol = row_list[0]
             comp_name = row_list[1]
             isin_code   = (row_list[2]).upper().strip()
+            stock_symbol = self.amfi_get_value_by_isin(isin_code, "ticker")
             qty = row_list[3]
             acp = row_list[4]
             cmp = row_list[5]
@@ -110,9 +125,9 @@ class Demat(Database):
             unrealized_pl = row_list[10]
             unrealized_pl_pct = row_list[11]
             unused1 = row_list[12]
-            self.demat_summary_qty[isin_code] = qty
-            self.demat_summary_acp[isin_code] = acp
-            self.demat_summary_upl_pct[isin_code] = unrealized_pl_pct
+            self.demat_summary_qty[stock_symbol] = qty
+            self.demat_summary_acp[stock_symbol] = acp
+            self.demat_summary_upl_pct[stock_symbol] = unrealized_pl_pct
             if int(qty) > 0:
                 hold_units = int(round(float(qty)*float(acp)/1000))
             else:
@@ -188,7 +203,7 @@ class Demat(Database):
 
     def print_phase1(self, out_filename):
         fh = open(out_filename, "w")
-        fh.write('isin_code, comp_name, action, qty, price, txn_date\n')
+        fh.write('stock_symbol, isin_code, comp_name, action, qty, price, txn_date\n')
         for isin_code in sorted(self.demat_txn_list):
             if self.debug_level > 1:
                 print('dumping isin', isin_code)
@@ -197,60 +212,68 @@ class Demat(Database):
 
     def print_phase2(self, out_filename):
         fh = open(out_filename, "w")
-        fh.write('isin_code, comp_name, buy_qty, sale_qty, buy_price, sale_price, demat_txn_last_type, demat_txn_last_date\n')
-        for isin_code in sorted(self.demat_txn_list):
-            if isin_code == 'Stock Symbol':
+        fh.write(
+            'stock_symbol, isin_code, comp_name, buy_qty, sale_qty, buy_price, sale_price, demat_txn_last_type, demat_txn_last_date\n')
+        for stock_symbol in sorted(self.demat_txn_list):
+            if stock_symbol == 'Stock Symbol':
                 continue
-            p_str = isin_code
+            isin_code = self.amfi_get_value_by_ticker(stock_symbol, "isin")
+            p_str = stock_symbol
             p_str += ','
-            p_str += self.company_name[isin_code]
+            p_str += isin_code 
             p_str += ','
-            p_str += str(self.demat_txn_buy_qty[isin_code])
+            p_str += self.company_name[stock_symbol]
             p_str += ','
-            if isin_code in self.demat_txn_sale_qty:
-                p_str += str(self.demat_txn_sale_qty[isin_code])
+            p_str += str(self.demat_txn_buy_qty[stock_symbol])
+            p_str += ','
+            if stock_symbol in self.demat_txn_sale_qty:
+                p_str += str(self.demat_txn_sale_qty[stock_symbol])
             else:
                 p_str += '0'
             p_str += ','
-            p_str += str(self.demat_txn_buy_price[isin_code])
+            p_str += str(self.demat_txn_buy_price[stock_symbol])
             p_str += ','
-            if isin_code in self.demat_txn_sale_price:
-                p_str += str(self.demat_txn_sale_price[isin_code])
+            if stock_symbol in self.demat_txn_sale_price:
+                p_str += str(self.demat_txn_sale_price[stock_symbol])
             else:
                 p_str += '0'
             p_str += ','
-            p_str += self.demat_txn_last_type[isin_code]
+            p_str += self.demat_txn_last_type[stock_symbol]
             p_str += ','
-            p_str += self.demat_txn_last_date[isin_code]
+            p_str += self.demat_txn_last_date[stock_symbol]
             p_str += '\n'
             fh.write(p_str)
         fh.close()
 
     def print_phase3(self, out_filename, positive_holdings = None):
         fh = open(out_filename,"w")
-        fh.write('isin_code, comp_name, demat_summary_qty, demat_summary_acp, demat_summary_hold_units_1k, demat_txn_last_type, demat_txn_last_date\n')
-        for isin_code in sorted(self.demat_txn_list):
-            if isin_code == 'Stock Symbol':
+        fh.write(
+            'stock_symbol, isin_code, comp_name, demat_summary_qty, demat_summary_acp, demat_summary_hold_units_1k, demat_txn_last_type, demat_txn_last_date\n')
+        for stock_symbol in sorted(self.demat_txn_list):
+            if stock_symbol == 'Stock Symbol':
                 continue
-            p_str = isin_code
+            isin_code = self.amfi_get_value_by_ticker(stock_symbol, "isin")
+            p_str = stock_symbol 
             p_str += ','
-            p_str += self.company_name[isin_code]
+            p_str += isin_code
             p_str += ','
-            p_str += str(self.demat_summary_qty[isin_code])
+            p_str += self.company_name[stock_symbol]
             p_str += ','
-            p_str += str(self.demat_summary_acp[isin_code])
+            p_str += str(self.demat_summary_qty[stock_symbol])
             p_str += ','
-            if isin_code in self.demat_summary_hold_units:
-                p_str += str(self.demat_summary_hold_units[isin_code])
+            p_str += str(self.demat_summary_acp[stock_symbol])
+            p_str += ','
+            if stock_symbol in self.demat_summary_hold_units:
+                p_str += str(self.demat_summary_hold_units[stock_symbol])
             else:
                 p_str += '0'
             p_str += ','
-            p_str += self.demat_txn_last_type[isin_code]
+            p_str += self.demat_txn_last_type[stock_symbol]
             p_str += ','
-            p_str += self.demat_txn_last_date[isin_code]
+            p_str += self.demat_txn_last_date[stock_symbol]
             p_str += '\n'
             if positive_holdings:
-                if int(self.demat_summary_qty[isin_code]) > 0:
+                if int(self.demat_summary_qty[stock_symbol]) > 0:
                     fh.write(p_str)
             else:
                 fh.write(p_str)
@@ -259,27 +282,41 @@ class Demat(Database):
     def print_phase4(self, out_filename):
         self.print_phase3(out_filename, True)
 
-    def demat_summary_get_upl_pct_by_isin_code(self, isin_code):
-        if isin_code in self.demat_summary_upl_pct:
-            return self.demat_summary_upl_pct[isin_code]
+    def print_phase5(self, out_filename):
+        self.print_ticker_only(out_filename)
+
+    def print_ticker_only(self, out_filename):
+        fh = open(out_filename, "w")
+        for stock_symbol in sorted(self.demat_txn_list):
+            p_str = stock_symbol
+            p_str += '\n'
+            if stock_symbol == 'Stock Symbol':
+                continue
+            if int(self.demat_summary_qty[stock_symbol]) > 0:
+                fh.write(p_str)
+        fh.close()
+
+    def demat_summary_get_upl_pct_by_ticker(self, ticker):
+        if ticker in self.demat_summary_upl_pct:
+            return self.demat_summary_upl_pct[ticker]
         return 0
 
-    def demat_summary_get_acp_by_isin_code(self, isin_code):
-        if isin_code in self.demat_summary_acp:
-            return self.demat_summary_acp[isin_code]
+    def demat_summary_get_acp_by_ticker(self, ticker):
+        if ticker in self.demat_summary_acp:
+            return self.demat_summary_acp[ticker]
         return 0
 
-    def get_demat_units_by_isin_code(self, isin_code):
-        if isin_code in self.demat_summary_hold_units:
-            return self.demat_summary_hold_units[isin_code]
+    def get_demat_units_by_ticker(self, ticker):
+        if ticker in self.demat_summary_hold_units:
+            return self.demat_summary_hold_units[ticker]
         return 0
 
-    def get_demat_txn_last_date_by_isin_code(self, isin_code):
-        if isin_code in self.demat_txn_last_date:
-            return self.demat_txn_last_date[isin_code]
+    def get_demat_txn_last_date_by_ticker(self, ticker):
+        if ticker in self.demat_txn_last_date:
+            return self.demat_txn_last_date[ticker]
         return ''
 
-    def get_demat_txn_last_type_by_isin_code(self, isin_code):
-        if isin_code in self.demat_txn_last_type:
-            return self.demat_txn_last_type[isin_code]
+    def get_demat_txn_last_type_by_ticker(self, ticker):
+        if ticker in self.demat_txn_last_type:
+            return self.demat_txn_last_type[ticker]
         return ''

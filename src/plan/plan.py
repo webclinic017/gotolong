@@ -28,9 +28,9 @@ class Plan(Amfi):
         self.debug_level = debug_level
 
     def set_table_reload(self, truncate=False):
-        self.db_table_reload = truncate 
+        self.db_table_reload = truncate
 
-    def load_plan_row(self, row):
+    def plan_load_row(self, row):
         try:
             row_list = row
 
@@ -82,20 +82,20 @@ class Plan(Amfi):
             print('except : IndexError : ', row, "\n")
             traceback.print_exc()
 
-    def load_plan_data(self, in_filename):
+    def plan_load_data(self, in_filename):
         table = "plan"
         if self.db_table_reload:
             self.db_table_truncate(table)
 
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.insert_plan_data(in_filename)
+            self.plan_insert_data(in_filename)
         else:
             print('plan data already loaded in db', row_count)
         print('display db data')
-        self.load_plan_db()
+        self.plan_load_db()
 
-    def insert_plan_data(self, in_filename):
+    def plan_insert_data(self, in_filename):
         SQL = """insert into plan(comp_industry, comp_name, comp_ticker, comp_selected, comp_desc) values (:comp_industry, :comp_name, :comp_ticker, :comp_selected, :comp_desc) """
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
@@ -106,13 +106,13 @@ class Plan(Amfi):
             # commit db changes
             self.db_conn.commit()
 
-    def load_plan_db(self):
+    def plan_load_db(self):
         table = "plan"
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1 :
                 print(row)
-            self.load_plan_row(row)
+            self.plan_load_row(row)
 
     def plan_dump_ticker(self, out_filename):
         lines = []
@@ -224,8 +224,7 @@ class Plan(Amfi):
             p_str += ', '
             p_str += 'mid ' + str(int(round(float((ccc_dict['Mid Cap'] * 100.0) / total_units)))) + ' %'
             p_str += ', '
-            p_str += 'small ' + str(int(round(float(((ccc_dict['Small Cap'] + ccc_dict['Micro Cap'] + ccc_dict[
-                'Nano Cap'] + ccc_dict['Unknown Cap']) * 100.0) / total_units)))) + ' %'
+            p_str += 'small ' + str(int(round(float(((ccc_dict['Small Cap']) * 100.0) / total_units)))) + ' %'
             p_str += '\n'
         except KeyError:
             print('except KeyError')

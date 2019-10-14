@@ -31,7 +31,7 @@ class Amfi(Database):
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
-    def load_amfi_row(self, row):
+    def amfi_load_row(self, row):
         try:
             row_list = row
             if len(row_list) == 0:
@@ -104,18 +104,18 @@ class Amfi(Database):
             print('except ', row)
             traceback.print_exc()
 
-    def load_amfi_data(self, in_filename):
+    def amfi_load_data(self, in_filename):
         table = "amfi"
         # row_count = self.count_amfi_db(table)
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.insert_amfi_data(in_filename)
+            self.amfi_insert_data(in_filename)
         else:
             print('amfi data already loaded in db', row_count)
         print('display db data')
-        self.load_amfi_db()
+        self.amfi_load_db()
 
-    def insert_amfi_data(self, in_filename):
+    def amfi_insert_data(self, in_filename):
         SQL = """insert into amfi (sno, company_name, isin, bse_symbol, nse_symbol, avg_mcap, cap_type) values (:sno, :company_name, :isin, :bse_symbol, :nse_symbol, :avg_mcap, :cap_type) """
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
@@ -128,13 +128,13 @@ class Amfi(Database):
             # commit db changes
             self.db_conn.commit()
 
-    def load_amfi_db(self):
+    def amfi_load_db(self):
         table = "amfi"
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1 :
                 print(row)
-            self.load_amfi_row(row)
+            self.amfi_load_row(row)
 
     def print_phase1(self, out_filename):
         if self.debug_level > 0:
@@ -174,6 +174,9 @@ class Amfi(Database):
         return ''
 
     def amfi_get_value_by_isin(self, isin, value_name):
+        # return ticker
+        if value_name == "ticker":
+            return self.amfi_get_ticker_by_isin(isin)
         try:
             ticker = self.amfi_isin_ticker_dict[isin]
             if ticker:
@@ -208,7 +211,7 @@ class Amfi(Database):
             return 'UNK_COMP_E'
 
     def amfi_get_ticker_by_isin(self, amfi_isin):
-        if amfi_isin in self.amfi_ticker:
+        if amfi_isin in self.amfi_isin_list:
             return self.amfi_isin_ticker_dict[amfi_isin]
         return 'UNK_TICKER'
 

@@ -28,7 +28,7 @@ weight = weight.Weight()
 
 weight.set_debug_level(debug_level)
 
-weight.load_amfi_db()
+weight.amfi_load_db()
 weight.load_weight_data(in_weight_filename)
 
 weight.weight_dump_ticker(out_filename_phase1)

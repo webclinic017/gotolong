@@ -7,12 +7,18 @@ CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-txn-data.csv
 IN_FILE_SUMMARY=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-summary-data.csv
-OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-1.csv
-OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-2.csv
-OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-3.csv
-OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/portfolio-phase-4.csv
+OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-simple.csv
+OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-processed.csv
+OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-summary-reports-all.csv
+OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-summary-reports-positive.csv
+OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-reports-ticker-only.csv
 
-python demat_invoke.py ${DEBUG_LEVEL} ${IN_FILE_TXN} ${IN_FILE_SUMMARY} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} 
+python demat_invoke.py ${DEBUG_LEVEL} ${IN_FILE_TXN} ${IN_FILE_SUMMARY} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
+
+# dump company names : why not tickers here
+# dump ticker names from the ISIN instead
+OUT_FILE_COMP_NAME=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-names.txt
+grep -v -e 'Company Name' -e ETF ${IN_FILE_SUMMARY} | sort | awk -F"," '{print $2}' > ${OUT_FILE_COMP_NAME}
 
 # gather stats
 OUT_FILE_YEAR=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/stats_year_output.csv

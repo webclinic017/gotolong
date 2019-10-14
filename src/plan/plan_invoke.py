@@ -67,8 +67,8 @@ plan.set_debug_level(debug_level)
 if truncate_table:
     plan.set_table_reload(truncate_table)
 
-plan.load_amfi_db()
-plan.load_plan_data(in_filename_phase[0])
+plan.amfi_load_db()
+plan.plan_load_data(in_filename_phase[0])
 
 plan.plan_dump_ticker(out_filename_phase[0])
 plan.plan_dump_sorted_units(out_filename_phase[1])

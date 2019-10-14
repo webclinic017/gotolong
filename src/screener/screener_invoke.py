@@ -29,7 +29,7 @@ screener = screener.Screener()
 screener.set_debug_level(debug_level)
 
 screener.load_isin_data_both(isin_bse_filename, isin_nse_filename)
-screener.load_amfi_db()
+screener.amfi_load_db()
 # screener.load_amfi_data(in_amfi_filename)
 
 screener.load_screener_data(sc_data_filename)

@@ -24,6 +24,6 @@ amfi = amfi.Amfi()
 
 amfi.set_debug_level(debug_level)
 
-amfi.load_amfi_data(in_filename)
+amfi.amfi_load_data(in_filename)
 
 amfi.print_phase1(out_filename)

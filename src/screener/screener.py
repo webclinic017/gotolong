@@ -92,7 +92,7 @@ class Screener(Isin, Amfi):
 
                 for ratio in self.sc_ratio_loc:
                     if ratio == 'captype':
-                        self.sc_ratio_values[sc_nsecode, ratio] = self.get_amfi_captype_by_ticker(sc_nsecode)
+                        self.sc_ratio_values[sc_nsecode, ratio] = self.amfi_get_value_by_ticker(sc_nsecode, "captype")
                     else:
                         ratio_value = row_list[self.sc_ratio_loc[ratio]]
                         if ratio == 'industry':
