@@ -19,7 +19,7 @@ class Plan(Amfi):
         self.plan_comp_units = {}
         self.plan_indu_units = {}
         self.debug_level = 0
-        self.db_table_reload = False
+        self.plan_table_truncate = False
         self.last_row = ""
         self.plan_captype_comp_count_dict = {}
         print('init : Plan')
@@ -27,8 +27,8 @@ class Plan(Amfi):
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
-    def set_table_reload(self, truncate=False):
-        self.db_table_reload = truncate
+    def plan_table_reload(self, truncate=False):
+        self.plan_table_truncate = truncate
 
     def plan_load_row(self, row):
         try:
@@ -84,7 +84,7 @@ class Plan(Amfi):
 
     def plan_load_data(self, in_filename):
         table = "plan"
-        if self.db_table_reload:
+        if self.plan_table_truncate:
             self.db_table_truncate(table)
 
         row_count = self.db_table_count_rows(table)

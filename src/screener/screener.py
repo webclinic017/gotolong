@@ -45,6 +45,9 @@ class Screener(Isin, Amfi):
                              'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
                              'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1,
                              'cr': -1, 'sales5': -1, 'profit5': -1, 'pledge': -1, 'piotski': -1}
+        self.sc_filter_d2e = 0.80
+        self.sc_filter_dp3 = 10
+        self.sc_filter_roce3 = 12
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -124,15 +127,17 @@ class Screener(Isin, Amfi):
             for row in reader:
                 self.load_screener_row(row)
 
-    def print_phase1(self, out_filename, filter_rows=False):
+    def print_phase1(self, out_filename, filter_rows=False, ticker_only=False):
         fh = open(out_filename, "w")
-        for ratio in self.sc_ratio_loc:
-            fh.write(ratio)
-            fh.write(', ')
-        fh.write('\n')
+        if not ticker_only:
+            for ratio in self.sc_ratio_loc:
+                fh.write(ratio)
+                fh.write(', ')
+            fh.write('\n')
 
         if filter_rows:
-            sorted_input = sorted(self.sc_nsecode_industry, key=self.sc_nsecode_industry.__getitem__)
+            # sorted_input = sorted(self.sc_nsecode_industry, key=self.sc_nsecode_industry.__getitem__)
+            sorted_input = sorted(self.sc_nsecode)
         else:
             sorted_input = sorted(self.sc_nsecode)
 
@@ -149,25 +154,31 @@ class Screener(Isin, Amfi):
                             skip_row = True
                         else:
                             value = float(value)
-                            if ratio == 'd2e' and value > 0.10:
+                            if ratio == 'd2e' and value > self.sc_filter_d2e:
                                 if self.debug_level > 1:
                                     print(sc_nsecode, ' skipped due to d2e : ', value)
                                 skip_row = True
-                            if ratio == 'dp3' and value < 10:
+                            if ratio == 'dp3' and value < self.sc_filter_dp3:
                                 if self.debug_level > 1:
                                     print(sc_nsecode, ' skipped due to dp3 : ', value)
                                 skip_row = True
-                            if ratio == 'roce3' and value < 10:
+                            if ratio == 'roce3' and value < self.sc_filter_roce3:
                                 if self.debug_level > 1:
                                     print(sc_nsecode, ' skipped due to roce3 : ', value)
                                 skip_row = True
                 p_str += self.sc_ratio_values[sc_nsecode, ratio]
                 p_str += ', '
             if skip_row == False:
-                fh.write(p_str)
+                if ticker_only:
+                    fh.write(sc_nsecode)
+                else:
+                    fh.write(p_str)
                 fh.write('\n')
             
         fh.close()
 
     def print_phase2(self, out_filename):
         self.print_phase1(out_filename, True)
+
+    def print_phase3(self, out_filename):
+        self.print_phase1(out_filename, True, True)

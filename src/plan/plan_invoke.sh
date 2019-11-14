@@ -1,6 +1,11 @@
 #!/bin/sh
 
-DEBUG_LEVEL=0
+if test -n "${GOTOLONG_DEBUG_LEVEL}"
+then
+    DEBUG_LEVEL=${GOTOLONG_DEBUG_LEVEL}
+else
+    DEBUG_LEVEL=0
+fi
 
 CONFIG_DATA_LOC=`python -m config data`
 CONFIG_REPORTS_LOC=`python -m config reports`
@@ -15,4 +20,5 @@ OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/plan-reports/plan-reports-plus-holdings.c
 OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/plan-reports/plan-reports-zero-holdings.csv
 
 #python plan_invoke.py --truncate_table --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
-python plan_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
+# python plan_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
+python plan_invoke.py -d ${DEBUG_LEVEL} -i ${IN_FILE_PLAN} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}

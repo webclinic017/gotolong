@@ -27,9 +27,13 @@ class Amfi(Database):
         self.amfi_ticker_isin_dict = {}
         self.amfi_isin_ticker_dict = {}
         self.debug_level = 0
+        self.amfi_table_truncate = False
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
+
+    def amfi_table_reload(self, truncate=False):
+        self.amfi_table_truncate = truncate
 
     def amfi_load_row(self, row):
         try:
@@ -106,6 +110,10 @@ class Amfi(Database):
 
     def amfi_load_data(self, in_filename):
         table = "amfi"
+
+        if self.amfi_table_truncate:
+            self.db_table_truncate(table)
+
         # row_count = self.count_amfi_db(table)
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
@@ -136,7 +144,7 @@ class Amfi(Database):
                 print(row)
             self.amfi_load_row(row)
 
-    def print_phase1(self, out_filename):
+    def amfi_dump_phase1(self, out_filename):
         if self.debug_level > 0:
             print('output filename ', out_filename)
         fh = open(out_filename, "w")

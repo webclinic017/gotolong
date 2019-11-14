@@ -12,10 +12,10 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Process arguments')
 # dest= not required as option itself is the destination in args
-parser.add_argument('--debug_level', default='0', help='debug level 0|1|2|3', type=int, choices=[0, 1, 2, 3])
-parser.add_argument('--truncate_table', default='False', help='specify to truncate', action='store_true')
-parser.add_argument('--in_files', nargs='+', dest='in_files', help='in files')
-parser.add_argument('--out_files', nargs='+', dest='out_files', help='out files')
+parser.add_argument('-d', '--debug_level', default='0', help='debug level 0|1|2|3', type=int, choices=[0, 1, 2, 3])
+parser.add_argument('-t', '--truncate_table', default='False', help='truncate table', action='store_true')
+parser.add_argument('-i', '--in_files', required=True, nargs='+', dest='in_files', help='in files')
+parser.add_argument('-o', '--out_files', required=True, nargs='+', dest='out_files', help='out files')
 
 args = parser.parse_args()
 
@@ -65,7 +65,7 @@ plan = plan.Plan()
 plan.set_debug_level(debug_level)
 
 if truncate_table:
-    plan.set_table_reload(truncate_table)
+    plan.plan_table_reload(truncate_table)
 
 plan.amfi_load_db()
 plan.plan_load_data(in_filename_phase[0])
