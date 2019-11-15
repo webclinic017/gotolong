@@ -10,21 +10,27 @@ CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 
 # equity user
-for EUSER in nifty normal
+for EUSER in nifty demat normal
 do
     echo "generating reports for equity user ${EUSER}"
 
     EUDIR=user-${EUSER}
 
-    IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/uhealth-data/${EUDIR}/${EUDIR}-ticker-list.csv
+    if test "${EUSER}" == "demat"
+    then
+        IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-reports-ticker-only.csv
+    else
+        IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/uhealth-data/${EUDIR}/${EUDIR}-ticker-list.csv
+    fi
+
     IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-filtered-ticker-only.csv
 
     OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/uhealth-reports/${EUDIR}/
 
     mkdir -p ${OUT_DIR}
 
-    # present in file 1 (ticker list) only - recommendation - remove
-    OUT_FILE_1=${OUT_DIR}/reco-rmv.csv
+    # present in file 1 (ticker list) only - recommendation - drop from portfolio
+    OUT_FILE_1=${OUT_DIR}/reco-drop.csv
 
     # present in file 2 (screener) only - recommendation - add 
     OUT_FILE_2=${OUT_DIR}/reco-add.csv

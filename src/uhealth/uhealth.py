@@ -22,6 +22,8 @@ out_filename_1 = sys.argv[4]
 out_filename_2 = sys.argv[5]
 out_filename_3 = sys.argv[6]
 
+print('debug level :', debug_level)
+
 if debug_level > 1:
     print('args :', len(sys.argv))
 
@@ -34,8 +36,12 @@ with open(in_filename_1, 'rt') as csvfile:
     for row in csv_reader:
         # fix the stripping : redundant spaces etc
         row = [column.strip() for column in row]
-        column = row[0]
-        user_dict[column] = 1
+        if debug_level > 2:
+            print("debugging: blank row")
+            print(row)
+        if len(row) != 0:
+            column = row[0]
+            user_dict[column] = 1
 
 with open(in_filename_2, 'rt') as csvfile:
     # future
@@ -47,12 +53,14 @@ with open(in_filename_2, 'rt') as csvfile:
         screener_dict[column] = 1
 
 if debug_level > 0:
-    print("\nuser dictionary", len(user_dict));
-    if debug_level > 1:
-        print(user_dict)
-    print("\nscreener dictionary", len(screener_dict));
-    if debug_level > 1:
-        print(screener_dict)
+    print("user dictionary", len(user_dict));
+if debug_level > 1:
+    print(user_dict)
+
+if debug_level > 0:
+    print("screener dictionary", len(screener_dict));
+if debug_level > 1:
+    print(screener_dict)
 
 fh = open(out_filename_1, "w")
 for ticker in user_dict:
