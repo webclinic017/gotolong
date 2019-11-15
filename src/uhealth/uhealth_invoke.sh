@@ -23,7 +23,9 @@ do
         IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/uhealth-data/${EUDIR}/${EUDIR}-ticker-list.csv
     fi
 
-    IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-filtered-ticker-only.csv
+    IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-accepted-ticker-only.csv
+
+    IN_FILE_3=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-rejected-ticker-cause.csv
 
     OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/uhealth-reports/${EUDIR}/
 
@@ -39,7 +41,7 @@ do
     OUT_FILE_3=${OUT_DIR}/reco-keep.csv
 
     # python -m pdb weight_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
-    python uhealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3}
+    python uhealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${IN_FILE_3} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3}
 
     echo "generated reports for equity user ${EUSER}"
 done

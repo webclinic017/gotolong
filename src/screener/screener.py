@@ -127,8 +127,13 @@ class Screener(Isin, Amfi):
             for row in reader:
                 self.load_screener_row(row)
 
-    def print_phase1(self, out_filename, filter_rows=False, ticker_only=False):
+    def print_phase1(self, out_filename, filter_rows=False, ticker_only=False, skip_filename=False):
+
         fh = open(out_filename, "w")
+
+        if skip_filename:
+            fh_skip = open(skip_filename, "w")
+
         if not ticker_only:
             for ratio in self.sc_ratio_loc:
                 fh.write(ratio)
@@ -149,26 +154,34 @@ class Screener(Isin, Amfi):
                     if ratio == 'd2e' or ratio == 'dp3' or ratio == 'roce3':
                         value = self.sc_ratio_values[sc_nsecode, ratio]
                         if value == '':
+                            skip_cause = sc_nsecode + ', ' + ratio + ', missing'
                             if self.debug_level > 1:
-                                print(sc_nsecode, ' skipped ', ratio, 'due to missing value : ', value)
+                                print(skip_cause)
                             skip_row = True
                         else:
                             value = float(value)
                             if ratio == 'd2e' and value > self.sc_filter_d2e:
+                                skip_cause = sc_nsecode + ', d2e, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(sc_nsecode, ' skipped due to d2e : ', value)
+                                    print(skip_cause)
                                 skip_row = True
                             if ratio == 'dp3' and value < self.sc_filter_dp3:
+                                skip_cause = sc_nsecode + ', dp3, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(sc_nsecode, ' skipped due to dp3 : ', value)
+                                    print(skip_cause)
                                 skip_row = True
                             if ratio == 'roce3' and value < self.sc_filter_roce3:
+                                skip_cause = sc_nsecode + ', roce3, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(sc_nsecode, ' skipped due to roce3 : ', value)
+                                    print(skip_cause)
                                 skip_row = True
                 p_str += self.sc_ratio_values[sc_nsecode, ratio]
                 p_str += ', '
-            if skip_row == False:
+            if skip_row:
+                if skip_filename:
+                    skip_line = skip_cause + '\n'
+                    fh_skip.write(skip_line)
+            else:
                 if ticker_only:
                     fh.write(sc_nsecode)
                 else:
@@ -177,8 +190,11 @@ class Screener(Isin, Amfi):
             
         fh.close()
 
+        if skip_filename:
+            fh_skip.close()
+
     def print_phase2(self, out_filename):
         self.print_phase1(out_filename, True)
 
-    def print_phase3(self, out_filename):
-        self.print_phase1(out_filename, True, True)
+    def print_phase3(self, out_filename, skip_filename):
+        self.print_phase1(out_filename, True, True, skip_filename)
