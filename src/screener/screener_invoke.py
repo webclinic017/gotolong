@@ -9,7 +9,7 @@ import screener
 # Main caller
 program_name = sys.argv[0]
 
-if len(sys.argv) < 10:
+if len(sys.argv) < 11:
    print("usage: " + program_name + " <debug_level : 1-4> <screener-data.csv> ... ")
    sys.exit(1) 
 
@@ -22,6 +22,7 @@ out_filename_phase1 = sys.argv[6]
 out_filename_phase2 = sys.argv[7]
 out_filename_phase3 = sys.argv[8]
 out_filename_phase4 = sys.argv[9]
+out_filename_phase5 = sys.argv[10]
 	
 if debug_level > 1 :
 	print('args :' , len(sys.argv))
@@ -38,4 +39,4 @@ screener.load_screener_data(sc_data_filename)
 
 screener.print_phase1(out_filename_phase1)
 screener.print_phase2(out_filename_phase2)
-screener.print_phase3(out_filename_phase3, out_filename_phase4)
+screener.print_phase3(out_filename_phase3, out_filename_phase4, out_filename_phase5)

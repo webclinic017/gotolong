@@ -23,25 +23,30 @@ do
         IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/uhealth-data/${EUDIR}/${EUDIR}-ticker-list.csv
     fi
 
-    IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-accepted-ticker-only.csv
+    IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-buy-ticker-only.csv
 
-    IN_FILE_3=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-rejected-ticker-cause.csv
+    IN_FILE_3=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-hold-ticker-cause.csv
+
+    IN_FILE_4=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-sale-ticker-cause.csv
 
     OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/uhealth-reports/${EUDIR}/
 
     mkdir -p ${OUT_DIR}
 
-    # present in file 1 (ticker list) only - recommendation - drop from portfolio
-    OUT_FILE_1=${OUT_DIR}/reco-drop.csv
+    # present in file 1 (ticker list) only - (not in screener - hold and buy ) recommendation - drop from portfolio
+    OUT_FILE_1=${OUT_DIR}/reco-sale.csv
 
-    # present in file 2 (screener) only - recommendation - add 
-    OUT_FILE_2=${OUT_DIR}/reco-add.csv
+    # present in file 2 (screener - buy) only - recommendation - add
+    OUT_FILE_2=${OUT_DIR}/reco-buy-new.csv
 
-    # present in both file 1 and file 2 (screener)  - recommendation - keep
-    OUT_FILE_3=${OUT_DIR}/reco-keep.csv
+    # present in both file 1 and file 2 (screener - buy)  - recommendation - more
+    OUT_FILE_3=${OUT_DIR}/reco-buy-more.csv
+
+    # present in both file 1 and file 2 (screener - hold)  - recommendation - keep - hold
+    OUT_FILE_4=${OUT_DIR}/reco-hold.csv
 
     # python -m pdb weight_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
-    python uhealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${IN_FILE_3} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3}
+    python uhealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${IN_FILE_3} ${IN_FILE_4} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}
 
     echo "generated reports for equity user ${EUSER}"
 done

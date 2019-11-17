@@ -45,9 +45,12 @@ class Screener(Isin, Amfi):
                              'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
                              'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1,
                              'cr': -1, 'sales5': -1, 'profit5': -1, 'pledge': -1, 'piotski': -1}
-        self.sc_filter_d2e = 0.80
-        self.sc_filter_dp3 = 10
-        self.sc_filter_roce3 = 12
+        self.sc_filter_d2e_buy = 0.50
+        self.sc_filter_d2e_hold = 1
+        self.sc_filter_dp3_buy = 10
+        self.sc_filter_dp3_hold = 5
+        self.sc_filter_roce3_buy = 12
+        self.sc_filter_roce3_hold = 6
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -127,12 +130,16 @@ class Screener(Isin, Amfi):
             for row in reader:
                 self.load_screener_row(row)
 
-    def print_phase1(self, out_filename, filter_rows=False, ticker_only=False, skip_filename=False):
+    def print_phase1(self, out_filename, filter_rows=False, ticker_only=False, hold_filename=False,
+                     drop_filename=False):
 
         fh = open(out_filename, "w")
 
-        if skip_filename:
-            fh_skip = open(skip_filename, "w")
+        if hold_filename:
+            fh_hold = open(hold_filename, "w")
+
+        if drop_filename:
+            fh_drop = open(drop_filename, "w")
 
         if not ticker_only:
             for ratio in self.sc_ratio_loc:
@@ -158,19 +165,32 @@ class Screener(Isin, Amfi):
                             if self.debug_level > 1:
                                 print(skip_cause)
                             skip_row = True
+                            skip_type = "hold"
                         else:
                             value = float(value)
-                            if ratio == 'd2e' and value > self.sc_filter_d2e:
+                            if ratio == 'd2e' and value > self.sc_filter_d2e_buy:
+                                if value > self.sc_filter_d2e_hold:
+                                    skip_type = "drop"
+                                else:
+                                    skip_type = "hold"
                                 skip_cause = sc_nsecode + ', d2e, ' + str(value)
                                 if self.debug_level > 1:
                                     print(skip_cause)
                                 skip_row = True
-                            if ratio == 'dp3' and value < self.sc_filter_dp3:
+                            if ratio == 'dp3' and value < self.sc_filter_dp3_buy:
+                                if value < self.sc_filter_dp3_hold:
+                                    skip_type = "drop"
+                                else:
+                                    skip_type = "hold"
                                 skip_cause = sc_nsecode + ', dp3, ' + str(value)
                                 if self.debug_level > 1:
                                     print(skip_cause)
                                 skip_row = True
-                            if ratio == 'roce3' and value < self.sc_filter_roce3:
+                            if ratio == 'roce3' and value < self.sc_filter_roce3_buy:
+                                if value < self.sc_filter_roce3_hold:
+                                    skip_type = "drop"
+                                else:
+                                    skip_type = "hold"
                                 skip_cause = sc_nsecode + ', roce3, ' + str(value)
                                 if self.debug_level > 1:
                                     print(skip_cause)
@@ -178,9 +198,11 @@ class Screener(Isin, Amfi):
                 p_str += self.sc_ratio_values[sc_nsecode, ratio]
                 p_str += ', '
             if skip_row:
-                if skip_filename:
-                    skip_line = skip_cause + '\n'
-                    fh_skip.write(skip_line)
+                skip_line = skip_cause + '\n'
+                if skip_type == "hold" and hold_filename:
+                    fh_hold.write(skip_line)
+                elif skip_type == "drop" and drop_filename:
+                    fh_drop.write(skip_line)
             else:
                 if ticker_only:
                     fh.write(sc_nsecode)
@@ -190,11 +212,14 @@ class Screener(Isin, Amfi):
             
         fh.close()
 
-        if skip_filename:
-            fh_skip.close()
+        if hold_filename:
+            fh_hold.close()
+
+        if drop_filename:
+            fh_drop.close()
 
     def print_phase2(self, out_filename):
         self.print_phase1(out_filename, True)
 
-    def print_phase3(self, out_filename, skip_filename):
-        self.print_phase1(out_filename, True, True, skip_filename)
+    def print_phase3(self, out_filename, hold_filename, drop_filename):
+        self.print_phase1(out_filename, True, True, hold_filename, drop_filename)

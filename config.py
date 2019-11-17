@@ -4,10 +4,28 @@ import sys
 from dateutil.relativedelta import relativedelta
 import datetime
 
+from configparser import ConfigParser
 
 class Config(object):
+    config_der_hold_max = 1
+    config_der_buy_max = 0.50
+
+    config_roce3_buy_min = 12
+    config_roce3_hold_min = 6
+
+    config_dpr3_buy_min = 10
+    config_dpr3_hold_min = 5
+
     def __init__(self):
         super(Config, self).__init__()
+        parser = ConfigParser()
+        parser.read(self.get_config_file())
+        self.config_der_hold = parser.get('DEFAULT', 'der_hold')
+        self.config_der_buy = parser.get('DEFAULT', 'der_buy')
+        self.config_roce3_buy = parser.get('DEFAULT', 'roce3_buy')
+        self.config_roce3_hold = parser.get('DEFAULT', 'roce3_hold')
+        self.config_dpr3_buy = parser.get('DEFAULT', 'dpr3_buy')
+        self.config_dpr3_hold = parser.get('DEFAULT', 'dpr3_hold')
         self.DB_FILENAME = 'equity.sqlite3'
         # started investment in year 2017
         start_date = datetime.date(2017, 1, 1)
@@ -45,6 +63,9 @@ class Config(object):
 
     def get_db_schema(self):
         return os.path.join(self.get_root(), 'db-schema')
+
+    def get_config_file(self):
+        return os.path.join(self.get_root(), 'config.ini')
 
 
 if __name__ == "__main__":
