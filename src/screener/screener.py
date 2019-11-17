@@ -45,12 +45,12 @@ class Screener(Isin, Amfi):
                              'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
                              'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1,
                              'cr': -1, 'sales5': -1, 'profit5': -1, 'pledge': -1, 'piotski': -1}
-        self.sc_filter_d2e_buy = 0.50
-        self.sc_filter_d2e_hold = 1
-        self.sc_filter_dp3_buy = 10
-        self.sc_filter_dp3_hold = 5
-        self.sc_filter_roce3_buy = 12
-        self.sc_filter_roce3_hold = 6
+        self.sc_filter_d2e_buy = self.config_der_buy
+        self.sc_filter_d2e_hold = self.config_der_hold
+        self.sc_filter_dp3_buy = self.config_dpr3_buy
+        self.sc_filter_dp3_hold = self.config_dpr3_hold
+        self.sc_filter_roce3_buy = self.config_roce3_buy
+        self.sc_filter_roce3_hold = self.config_roce3_hold
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
