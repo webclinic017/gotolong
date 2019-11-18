@@ -131,15 +131,18 @@ class Screener(Isin, Amfi):
                 self.load_screener_row(row)
 
     def print_phase1(self, out_filename, filter_rows=False, ticker_only=False, hold_filename=False,
-                     drop_filename=False):
+                     sale_filename=False, reco_filename=False):
 
         fh = open(out_filename, "w")
 
         if hold_filename:
             fh_hold = open(hold_filename, "w")
 
-        if drop_filename:
-            fh_drop = open(drop_filename, "w")
+        if sale_filename:
+            fh_sale = open(sale_filename, "w")
+
+        if reco_filename:
+            fh_reco = open(reco_filename, "w")
 
         if not ticker_only:
             for ratio in self.sc_ratio_loc:
@@ -154,72 +157,78 @@ class Screener(Isin, Amfi):
             sorted_input = sorted(self.sc_nsecode)
 
         for sc_nsecode in sorted_input:
-            skip_row = False
+            reco_type = "BUY"
+            reco_cause = ""
             p_str = ''
             for ratio in self.sc_ratio_loc:
                 if filter_rows == True:
                     if ratio == 'd2e' or ratio == 'dp3' or ratio == 'roce3':
                         value = self.sc_ratio_values[sc_nsecode, ratio]
                         if value == '':
-                            skip_cause = sc_nsecode + ', ' + ratio + ', missing'
+                            reco_cause = ratio + ', missing'
                             if self.debug_level > 1:
-                                print(skip_cause)
-                            skip_row = True
-                            skip_type = "hold"
+                                print(reco_cause)
+                            reco_type = "HOLD"
                         else:
                             value = float(value)
                             if ratio == 'd2e' and value > self.sc_filter_d2e_buy:
                                 if value > self.sc_filter_d2e_hold:
-                                    skip_type = "drop"
+                                    reco_type = "SALE"
                                 else:
-                                    skip_type = "hold"
-                                skip_cause = sc_nsecode + ', d2e, ' + str(value)
+                                    reco_type = "HOLD"
+                                reco_cause = 'd2e, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(skip_cause)
-                                skip_row = True
+                                    print(reco_cause)
                             if ratio == 'dp3' and value < self.sc_filter_dp3_buy:
                                 if value < self.sc_filter_dp3_hold:
-                                    skip_type = "drop"
+                                    reco_type = "SALE"
                                 else:
-                                    skip_type = "hold"
-                                skip_cause = sc_nsecode + ', dp3, ' + str(value)
+                                    reco_type = "HOLD"
+                                reco_cause = 'dp3, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(skip_cause)
-                                skip_row = True
+                                    print(reco_cause)
                             if ratio == 'roce3' and value < self.sc_filter_roce3_buy:
                                 if value < self.sc_filter_roce3_hold:
-                                    skip_type = "drop"
+                                    reco_type = "SALE"
                                 else:
-                                    skip_type = "hold"
-                                skip_cause = sc_nsecode + ', roce3, ' + str(value)
+                                    reco_type = "HOLD"
+                                reco_cause = 'roce3, ' + str(value)
                                 if self.debug_level > 1:
-                                    print(skip_cause)
-                                skip_row = True
+                                    print(reco_cause)
                 p_str += self.sc_ratio_values[sc_nsecode, ratio]
                 p_str += ', '
-            if skip_row:
-                skip_line = skip_cause + '\n'
-                if skip_type == "hold" and hold_filename:
-                    fh_hold.write(skip_line)
-                elif skip_type == "drop" and drop_filename:
-                    fh_drop.write(skip_line)
+
+            reco_str = sc_nsecode + ',' + reco_type + ',' + reco_cause + '\n'
+
+            if reco_filename:
+                fh_reco.write(reco_str)
+
+            if reco_type == "HOLD" or reco_type == "SALE":
+                if reco_type == "HOLD" and hold_filename:
+                    fh_hold.write(reco_str)
+                elif reco_type == "SALE" and sale_filename:
+                    fh_sale.write(reco_str)
             else:
                 if ticker_only:
                     fh.write(sc_nsecode)
                 else:
                     fh.write(p_str)
                 fh.write('\n')
+
             
         fh.close()
 
         if hold_filename:
             fh_hold.close()
 
-        if drop_filename:
-            fh_drop.close()
+        if sale_filename:
+            fh_sale.close()
+
+        if reco_filename:
+            fh_reco.close()
 
     def print_phase2(self, out_filename):
         self.print_phase1(out_filename, True)
 
-    def print_phase3(self, out_filename, hold_filename, drop_filename):
-        self.print_phase1(out_filename, True, True, hold_filename, drop_filename)
+    def print_phase3(self, out_filename, hold_filename, sale_filename, reco_filename):
+        self.print_phase1(out_filename, True, True, hold_filename, sale_filename, reco_filename)
