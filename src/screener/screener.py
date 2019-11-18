@@ -158,7 +158,7 @@ class Screener(Isin, Amfi):
 
         for sc_nsecode in sorted_input:
             reco_type = "BUY"
-            reco_cause = ""
+            reco_cause = "tp, ?"
             p_str = ''
             for ratio in self.sc_ratio_loc:
                 if filter_rows == True:
