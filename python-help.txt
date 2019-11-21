@@ -5,6 +5,13 @@ pip install pandas
 
 pip install xlrd
 
+pip install configparser
+
+1.2 list of modules
+
+python > modules list
+       > help(configparser)
+
 
 2. python -m pip install --upgrade pip
 
