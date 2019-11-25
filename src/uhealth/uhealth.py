@@ -118,7 +118,7 @@ for ticker in user_dict:
             line_ticker = line_ticker + ', ' + screener_sale_ratio_value_dict[ticker] + '\n'
             fh.write(line_ticker)
         else:
-            line_ticker = ticker + ', missing data ?' + '\n'
+            line_ticker = ticker + ', missing data, ?' + '\n'
             fh.write(line_ticker)
 fh.close()
 

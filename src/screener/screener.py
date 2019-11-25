@@ -51,6 +51,8 @@ class Screener(Isin, Amfi):
         self.sc_filter_dp3_hold = self.config_dpr3_hold
         self.sc_filter_roce3_buy = self.config_roce3_buy
         self.sc_filter_roce3_hold = self.config_roce3_hold
+        self.sc_filter_pledge_buy = self.config_pledge_buy
+        self.sc_filter_pledge_hold = self.config_pledge_hold
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -162,7 +164,7 @@ class Screener(Isin, Amfi):
             p_str = ''
             for ratio in self.sc_ratio_loc:
                 if filter_rows == True:
-                    if ratio == 'd2e' or ratio == 'dp3' or ratio == 'roce3':
+                    if ratio == 'd2e' or ratio == 'dp3' or ratio == 'roce3' or ratio == 'pledge':
                         value = self.sc_ratio_values[sc_nsecode, ratio]
                         if value == '':
                             reco_cause = ratio + ', missing'
@@ -176,7 +178,7 @@ class Screener(Isin, Amfi):
                                     reco_type = "SALE"
                                 else:
                                     reco_type = "HOLD"
-                                reco_cause = 'd2e, ' + str(value)
+                                reco_cause = 'der, ' + str(value)
                                 if self.debug_level > 1:
                                     print(reco_cause)
                             if ratio == 'dp3' and value < self.sc_filter_dp3_buy:
@@ -193,6 +195,14 @@ class Screener(Isin, Amfi):
                                 else:
                                     reco_type = "HOLD"
                                 reco_cause = 'roce3, ' + str(value)
+                                if self.debug_level > 1:
+                                    print(reco_cause)
+                            if ratio == 'pledge' and value > self.sc_filter_pledge_buy:
+                                if value > self.sc_filter_pledge_hold:
+                                    reco_type = "SALE"
+                                else:
+                                    reco_type = "HOLD"
+                                reco_cause = 'pledge, ' + str(value)
                                 if self.debug_level > 1:
                                     print(reco_cause)
                 p_str += self.sc_ratio_values[sc_nsecode, ratio]
