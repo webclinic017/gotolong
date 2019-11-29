@@ -26,11 +26,14 @@ class Gfin(Screener, Trendlyne):
 
     def gfin_dump_report(self, out_filename):
 
-        delimit = "#"
+        delimit = "\t"
         fh = open(out_filename, "w")
 
-        # p_str = "ticker, high_52w, low_52w, cmp, bat, mos"
-        p_str = "ticker# bat# cmp# low_52w# high_52w#  mos"
+        if delimit == "\t":
+            p_str = "ticker\tbat\tcmp\tlow_52w\thigh_52w\tmos"
+        else:
+            p_str = "ticker,high_52w,low_52w,cmp,bat,mos"
+
         p_str += '\n'
         gfin_list = ["price", "low52", "high52"]
 
@@ -45,21 +48,31 @@ class Gfin(Screener, Trendlyne):
                 if self.sc_ratio_values[ticker, "reco_type"] == "BUY":
 
                     p_str = ticker
-                    # p_str += ', '
-                    p_str += '# '
+                    if delimit == '\t':
+                        p_str += '\t'
+                    else:
+                        p_str += ','
+
 
                     p_str += self.tl_ratio_values[ticker, "bat"]
-                    # p_str += ', '
-                    p_str += '# '
+
+                    if delimit == '\t':
+                        p_str += '\t'
+                    else:
+                        p_str += ','
 
                     for gfin_name in gfin_list:
+                        # p_str += "'"
                         p_str += '=ROUND(GOOGLEFINANCE(CONCATENATE("NSE:",A'
                         p_str += str(iter1)
-                        p_str += '), "'
+                        p_str += '),"'
                         p_str += gfin_name
                         p_str += '"))'
-                        # p_str += ', '
-                        p_str += '# '
+                        # p_str += "'"
+                        if delimit == '\t':
+                            p_str += '\t'
+                        else:
+                            p_str += ','
 
                     p_str += '=ROUND((B'
                     p_str += str(iter1)
