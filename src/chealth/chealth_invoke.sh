@@ -9,6 +9,8 @@ CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 
+CHEALTH=chealth
+
 # equity user
 for EUSER in nifty demat normal
 do
@@ -20,7 +22,7 @@ do
     then
         IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-reports-ticker-only.csv
     else
-        IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/uhealth-data/${EUDIR}/${EUDIR}-ticker-list.csv
+        IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/${CHEALTH}-data/${EUDIR}/${EUDIR}-ticker-list.csv
     fi
 
     IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-buy-ticker-only.csv
@@ -29,7 +31,7 @@ do
 
     IN_FILE_4=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-sale-ticker-cause.csv
 
-    OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/uhealth-reports/${EUDIR}/
+    OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/${CHEALTH}-reports/${EUDIR}/
 
     mkdir -p ${OUT_DIR}
 
@@ -45,8 +47,11 @@ do
     # present in both file 1 and file 2 (screener - hold)  - recommendation - keep - hold
     OUT_FILE_4=${OUT_DIR}/reco-hold.csv
 
+    # reco - none - as data missing
+    OUT_FILE_5=${OUT_DIR}/reco-none.csv
+
     # python -m pdb weight_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
-    python uhealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${IN_FILE_3} ${IN_FILE_4} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}
+    python chealth.py ${DEBUG_LEVEL} ${IN_FILE_1} ${IN_FILE_2} ${IN_FILE_3} ${IN_FILE_4} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
 
     echo "generated reports for equity user ${EUSER}"
 done

@@ -6,24 +6,35 @@ import csv
 import traceback
 import screener
 
-# Main caller
-program_name = sys.argv[0]
+import argparse
 
-if len(sys.argv) < 12:
-   print("usage: " + program_name + " <debug_level : 1-4> <screener-data.csv> ... ")
-   sys.exit(1) 
+parser = argparse.ArgumentParser(description='Process arguments')
+# dest= not required as option itself is the destination in args
+parser.add_argument('-d', '--debug_level', default='0', help='debug level 0|1|2|3', type=int, choices=[0, 1, 2, 3])
+parser.add_argument('-t', '--truncate_table', default='False', help='truncate table', action='store_true')
+parser.add_argument('-i', '--in_files', required=True, nargs='+', dest='in_files', help='in files')
+parser.add_argument('-o', '--out_files', required=True, nargs='+', dest='out_files', help='out files')
 
-debug_level = int(sys.argv[1])
-isin_bse_filename = sys.argv[2]
-isin_nse_filename = sys.argv[3]
-in_amfi_filename = sys.argv[4]
-sc_data_filename = sys.argv[5]
-out_filename_phase1 = sys.argv[6]
-out_filename_phase2 = sys.argv[7]
-out_filename_phase3 = sys.argv[8]
-out_filename_phase4 = sys.argv[9]
-out_filename_phase5 = sys.argv[10]
-out_filename_phase6 = sys.argv[11]
+args = parser.parse_args()
+
+debug_level = args.debug_level
+truncate_table = args.truncate_table
+
+# dummy assignment
+in_filename_phase = []
+out_filename_phase = []
+# use the argument as pattern
+for index, filename in enumerate(args.in_files):
+    print('index = ', index, filename);
+    in_filename_phase.append(filename)
+
+for index, filename in enumerate(args.out_files):
+    print('index = ', index, filename);
+    out_filename_phase.append(filename)
+
+if debug_level > 1:
+    print('args :', len(sys.argv))
+
 	
 if debug_level > 1 :
 	print('args :' , len(sys.argv))
@@ -32,12 +43,15 @@ screener = screener.Screener()
 
 screener.set_debug_level(debug_level)
 
-screener.load_isin_data_both(isin_bse_filename, isin_nse_filename)
+if truncate_table:
+    screener.screener_table_reload(truncate_table)
+
 screener.amfi_load_db()
 # screener.load_amfi_data(in_amfi_filename)
 
-screener.load_screener_data(sc_data_filename)
+screener.screener_load_data(in_filename_phase[0])
 
-screener.print_phase1(out_filename_phase1)
-screener.print_phase2(out_filename_phase2)
-screener.print_phase3(out_filename_phase3, out_filename_phase4, out_filename_phase5, out_filename_phase6)
+screener.screener_dump_phase1(out_filename_phase[0])
+screener.screener_dump_phase2(out_filename_phase[1])
+screener.screener_dump_phase3(out_filename_phase[2], out_filename_phase[3], out_filename_phase[4],
+                              out_filename_phase[5])

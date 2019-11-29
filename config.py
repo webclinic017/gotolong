@@ -20,6 +20,8 @@ class Config(object):
         self.config_dpr3_hold = float(parser.get('DEFAULT', 'dpr3_hold'))
         self.config_pledge_buy = float(parser.get('DEFAULT', 'pledge_buy'))
         self.config_pledge_hold = float(parser.get('DEFAULT', 'pledge_hold'))
+        self.config_rank_buy = float(parser.get('DEFAULT', 'rank_buy'))
+        self.config_rank_hold = float(parser.get('DEFAULT', 'rank_hold'))
         self.DB_FILENAME = 'equity.sqlite3'
         # started investment in year 2017
         start_date = datetime.date(2017, 1, 1)

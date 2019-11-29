@@ -1,0 +1,3 @@
+
+* ABBOTT not appearing in demat properly.
+  * why is this in buy-new instead of buy-more in reco ?

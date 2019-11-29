@@ -7,13 +7,15 @@ CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-txn-data.csv
 IN_FILE_SUMMARY=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-summary-data.csv
-OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-simple.csv
-OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-processed.csv
-OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-summary-reports-all.csv
-OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-summary-reports-positive.csv
-OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-reports-ticker-only.csv
+OUT_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-detailed.csv
+OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-list-compressed.csv
+OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-summary-reports-all.csv
+OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-txn-summary-reports-positive.csv
+OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-summary-ticker-only.csv
 
-python demat_invoke.py ${DEBUG_LEVEL} ${IN_FILE_TXN} ${IN_FILE_SUMMARY} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
+# -t for truncate the table
+# python demat_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_TXN} ${IN_FILE_SUMMARY} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
+python demat_invoke.py -d ${DEBUG_LEVEL} -i ${IN_FILE_TXN} ${IN_FILE_SUMMARY} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
 
 # dump company names : why not tickers here
 # dump ticker names from the ISIN instead

@@ -64,3 +64,47 @@ create table if not exists weight(
  comp_weight_type text,
  comp_weight_units text
 );
+
+create table if not exists trendlyne(
+ comp_name text,
+ comp_isin text,
+ comp_bat text,
+ comp_bar text,
+ comp_der text,
+ comp_roce3 text,
+ comp_dpr2 text,
+ comp_pledge text
+);
+
+create table screener(
+rank text,
+name text,
+bse_code text,
+nse_code text,
+industry text,
+captype text,
+reco_type text,
+reco_cause text,
+cmp text,
+mcap text,
+sales text,
+np text,
+d2e text,
+roe3 text,
+roce3 text,
+dp3 text,
+dp text,
+dy text,
+pe text,
+pe5 text,
+peg text,
+p2bv text,
+p2sales text,
+ev2ebitda text,
+ev text,
+opm text,
+cr text,
+sales5 text,
+profit5 text,
+pledge text,
+piotski text);

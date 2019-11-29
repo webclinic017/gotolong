@@ -142,6 +142,9 @@ XYZ_2d[row, column] = 1
     tuple - x_tuple = ('1', '2', '3') - read only list (cannot be edited, pushed, popped etc)
     dict - x_dict = { 'x' : '1' : 'y' : 2} - key value list (associative array)
 
+14.2 list functions
+     list.append(x)
+     list.pop() -> pop an element
 15. dictionary from two lists
     # create a dictionary out of two lists
     dict(zip(keys,values))
@@ -156,4 +159,7 @@ XYZ_2d[row, column] = 1
 18. dataframe - round the column value of float
     df[["avg_mcap"]] = df[["avg_mcap"]].astype(int)
 
-19.
+19. string functions
+    x.find('abc') - find substring in the string, return index.
+
+20.
