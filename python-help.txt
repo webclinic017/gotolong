@@ -45,6 +45,7 @@ glob.glob(path)
 6. Migration to 3.7 from 2.*
    6.1 The print has been converted to a function so print must be enclosed in () like print('hello')
 
+
 7. dataframe tips
 
 7.0 read csv file as dataframe
@@ -162,4 +163,6 @@ XYZ_2d[row, column] = 1
 19. string functions
     x.find('abc') - find substring in the string, return index.
 
-20.
+20. print usage
+    20.1 to avoid automatic newline with print use, end=
+            print('x', end='')

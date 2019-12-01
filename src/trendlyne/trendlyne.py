@@ -13,7 +13,7 @@ from isin.isin import *
 from amfi.amfi import *
 
 
-class Trendlyne(Isin, Amfi):
+class Trendlyne(Amfi, Isin):
     def __init__(self):
         super(Trendlyne, self).__init__()
         self.tl_ratio_values = {}

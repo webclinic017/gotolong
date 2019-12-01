@@ -47,6 +47,7 @@ if truncate_table:
     screener.screener_table_reload(truncate_table)
 
 screener.amfi_load_db()
+screener.isin_load_db()
 # screener.load_amfi_data(in_amfi_filename)
 
 screener.screener_load_data(in_filename_phase[0])

@@ -44,7 +44,8 @@ gfin = gfin.Gfin()
 gfin.set_debug_level(debug_level)
 
 gfin.amfi_load_db()
+gfin.isin_load_db()
 gfin.screener_load_db()
 gfin.trendlyne_load_db()
 
-gfin.gfin_dump_report(out_filename_phase[0])
+gfin.gfin_dump_report(out_filename_phase[0], out_filename_phase[1])

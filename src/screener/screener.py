@@ -10,10 +10,10 @@ import finratio.comp_perf
 import finratio.comp_price
 
 from amfi.amfi import *
-
+from isin.isin import *
 
 # class Screener(Isin):
-class Screener(Amfi):
+class Screener(Amfi, Isin):
     def __init__(self):
         super(Screener, self).__init__()
         self.sc_ratio_values = {}
@@ -62,7 +62,8 @@ class Screener(Amfi):
                               'Promoter Holding': 'prom_hold',
                               'Piotroski score': 'piotski'
                               }
-        self.sc_ratio_loc = {'rank': -1, 'name': -1, 'bse_code': -1, 'nse_code': -1, 'industry': -1, 'captype': -1,
+        self.sc_ratio_loc = {'rank': -1, 'name': -1, 'bse_code': -1, 'nse_code': -1, 'isin': -1, 'industry': -1,
+                             'captype': -1,
                              'reco_type': -1, 'reco_cause': -1,
                              'cmp': -1, 'mcap': -1, 'sales': -1, 'np': -1,
                              'd2e': -1, 'roe3': -1, 'roce3': -1, 'dp3': -1, 'dp': -1, 'dy': -1,
@@ -115,7 +116,7 @@ class Screener(Amfi):
                 # delete columns that doesn't have values 
                 for ratio in loc_dup:
                     if loc_dup[ratio] == -1:
-                        if ratio != 'captype' and ratio != 'rank' and ratio != 'reco_type' and ratio != 'reco_cause':
+                        if ratio != 'captype' and ratio != 'rank' and ratio != 'isin' and ratio != 'reco_type' and ratio != 'reco_cause':
                             # remove the ratio name from original dictionary
                             self.sc_ratio_loc.pop(ratio)
                             print('removed ratio', ratio)
@@ -130,6 +131,8 @@ class Screener(Amfi):
                 for ratio in self.sc_ratio_loc:
                     if ratio == 'captype':
                         self.sc_ratio_values[sc_nsecode, ratio] = self.amfi_get_value_by_ticker(sc_nsecode, "captype")
+                    elif ratio == 'isin':
+                        self.sc_ratio_values[sc_nsecode, ratio] = self.amfi_get_value_by_ticker(sc_nsecode, "isin")
                     elif ratio == 'rank':
                         self.sc_ratio_values[sc_nsecode, ratio] = str(self.amfi_get_value_by_ticker(sc_nsecode, "rank"))
                         if self.debug_level > 1:
@@ -138,7 +141,11 @@ class Screener(Amfi):
                         ratio_value = row_list[self.sc_ratio_loc[ratio]]
                         if ratio == 'industry':
                             self.sc_nsecode_industry[sc_nsecode] = ratio_value
-                        self.sc_ratio_values[sc_nsecode, ratio] = ratio_value
+                            # override from value from isin
+                            isin_code = self.sc_ratio_values[sc_nsecode, 'isin']
+                            self.sc_ratio_values[sc_nsecode, ratio] = self.isin_get_value_by_code(isin_code, ratio)
+                        else:
+                            self.sc_ratio_values[sc_nsecode, ratio] = ratio_value
                     if self.debug_level > 1:
                         print('ticker: ', sc_nsecode, 'ratio: ', ratio, 'value: ',
                               self.sc_ratio_values[sc_nsecode, ratio])
@@ -147,21 +154,29 @@ class Screener(Amfi):
                 reco_cause = "tp, ?"
                 ratio = 'd2e'
                 value = self.sc_ratio_values[sc_nsecode, ratio]
+                # know industry
+                industry = self.sc_ratio_values[sc_nsecode, 'industry']
 
                 # handle missing values
                 if value == '':
                     reco_type = "HOLD"
                     reco_cause = ratio + ', ' + 'missing data'
                 else:
-                    value = float(value)
-                    if value > self.sc_filter_d2e_buy:
-                        if value > self.sc_filter_d2e_hold:
-                            reco_type = "SALE"
-                        else:
-                            reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + str(value)
-                        if self.debug_level > 1:
-                            print(reco_cause)
+                    if industry == 'FINANCIAL SERVICES':
+                        # allow more debt/equity for Bank and NBFC
+                        # allow more debt/equity for asset intensive businesses such as Infra and Power
+                        if self.debug_level > 0:
+                            print('skipped der for', sc_nsecode)
+                    else:
+                        value = float(value)
+                        if value > self.sc_filter_d2e_buy:
+                            if value > self.sc_filter_d2e_hold:
+                                reco_type = "SALE"
+                            else:
+                                reco_type = "HOLD"
+                            reco_cause = ratio + ', ' + str(value)
+                            if self.debug_level > 1:
+                                print(reco_cause)
 
                 if reco_type != 'Buy':
                     ratio = 'dp3'
@@ -181,7 +196,11 @@ class Screener(Amfi):
                                 print(reco_cause)
 
                 if reco_type != 'Buy':
-                    ratio = 'roce3'
+                    if industry == 'FINANCIAL SERVICES':
+                        # bank: too much debt : don't consider debt
+                        ratio = 'roe3'
+                    else:
+                        ratio = 'roce3'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
                         reco_type = "HOLD"

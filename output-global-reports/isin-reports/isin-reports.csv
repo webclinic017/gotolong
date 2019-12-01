@@ -1,4 +1,4 @@
-isin_code, industry_name, isin_name_nse, isin_symbol
+isin_code, isin_industry, isin_name_nse, isin_symbol
 IN9155A01020, AUTOMOBILE, Tata motors dvr, TATAMTRDVR
 INE001A01036, FINANCIAL SERVICES, Housing development finance corporation, HDFC
 INE001B01026, CONSUMER GOODS, Krbl, KRBL
