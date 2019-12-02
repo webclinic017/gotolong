@@ -34,9 +34,9 @@ class Gfin(Screener, Trendlyne):
         fh = open(out_filename, "w")
 
         if delimit == "\t":
-            p_str = "ticker\tindustry\tbat\tcmp\tlow_52w\thigh_52w\tmos"
+            p_str = "ticker\tindustry\tbat\tcmp\tlow_52w\thigh_52w\tup_52w_low\tmos"
         else:
-            p_str = "ticker,industry,bat,cmp,low_52w,high_52w,mos"
+            p_str = "ticker,industry,bat,cmp,low_52w,high_52w,up_52w_low,mos"
 
         p_str += '\n'
         gfin_list = ["price", "low52", "high52"]
@@ -98,13 +98,28 @@ class Gfin(Screener, Trendlyne):
                         else:
                             p_str += ','
 
-                    p_str += '=ROUND((B'
+                    p_str += '=IFERROR(ROUND((D'
                     p_str += str(iter1)
-                    p_str += '-C'
+                    p_str += '-E'
                     p_str += str(iter1)
-                    p_str += ')*100/C'
+                    p_str += ')*100/E'
                     p_str += str(iter1)
-                    p_str += ')'
+                    p_str += '),'
+                    p_str += '"-")'
+
+                    if delimit == '\t':
+                        p_str += '\t'
+                    else:
+                        p_str += ','
+
+                    p_str += '=IFERROR(ROUND((C'
+                    p_str += str(iter1)
+                    p_str += '-D'
+                    p_str += str(iter1)
+                    p_str += ')*100/D'
+                    p_str += str(iter1)
+                    p_str += '),'
+                    p_str += '"-")'
 
                     p_str += '\n'
 

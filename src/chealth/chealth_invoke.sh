@@ -8,21 +8,30 @@ CONFIG_REPORTS_LOC=`python -m config reports`
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
-
-CHEALTH=chealth
+MODULE=chealth
 
 # equity user
-for EUSER in nifty demat normal
+for EUSER in nifty demat_idirect demat_zerodha normal
 do
     echo "generating reports for equity user ${EUSER}"
 
     EUDIR=user-${EUSER}
 
-    if test "${EUSER}" == "demat"
+    if test "${EUSER}" == "demat_idirect" -o "${EUSER}" == "demat_zerodha"
     then
-        IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/demat-reports-ticker-only.csv
+        if test "${EUSER}"  ==  "demat_idirect"
+        then
+                BROKER=icicidirect
+        elif test "${EUSER}"  ==  "demat_zerodha"
+        then
+                BROKER=zerodha
+        else
+            echo "wrong broker : $EUSER"
+            exit 1
+        fi
+        IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-reports-ticker-only.csv
     else
-        IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/${CHEALTH}-data/${EUDIR}/${EUDIR}-ticker-list.csv
+        IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/${MODULE}-data/${EUDIR}/${EUDIR}-ticker-list.csv
     fi
 
     IN_FILE_2=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-buy-ticker-only.csv
@@ -31,7 +40,7 @@ do
 
     IN_FILE_4=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-sale-ticker-cause.csv
 
-    OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/${CHEALTH}-reports/${EUDIR}/
+    OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/${MODULE}-reports/${EUDIR}/
 
     mkdir -p ${OUT_DIR}
 

@@ -1,5 +1,5 @@
 
-stock-market
+gotlong
 
 GIT Setup for Github
 
@@ -9,11 +9,11 @@ On windows: also setup global env variable HTTP_PROXY and HTTPS_PROXY
 
 1> Clone
 
-git clone https://github.com/surinder432/stock-market.git
+git clone https://github.com/surinder432/gotolong.git
 
 1.1> If code is already present (rebase) use git pull
 
-cd stock-market
+cd gotlong
 git pull
 
 1.2>  For PyCharm
@@ -42,7 +42,7 @@ core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
-remote.origin.url=https://github.com/surinder432/stock-market.git
+remote.origin.url=https://github.com/surinder432/gotlong.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master

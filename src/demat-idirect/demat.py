@@ -10,7 +10,6 @@ import cutil.cutil
 
 from amfi.amfi import *
 
-
 class Demat(Amfi):
 
     def __init__(self):

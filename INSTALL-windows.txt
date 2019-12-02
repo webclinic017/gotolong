@@ -1,0 +1,17 @@
+
+Download Python 3.*
+
+Download GitHub (includes Git-Bash)
+
+Download PyCharm
+
+Download VIM
+
+Download SqLite 3
+
+Download SQLite DB Browser
+
+Download DropBox/OneDrive/GoogleDrive or something else to store the input data and output reports.
+
+
+git clone https://github.com/surinder432/gotolong.git
