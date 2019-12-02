@@ -35,7 +35,7 @@ ICICIDirect: Analyze output-user-reports/chealth-reports/user-demat_idirect/
 
 Zerodha : Analyze output-user-reports/chealth-reports/user-demat_zerodha/
 
-# For Buy recommendation: Get margin of Safety and up from 52w low %
+# For Buy recommendation: Healthy stocks : Margin of Safety
 
 
 $ cd gfin
