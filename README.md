@@ -43,4 +43,6 @@ $ cd gfin
 $ ./*.sh
 
 
-Open the output file output-global-reports/gfin-reports/gfin-reports-mos.csv in vim and paste it to google sheet to analyze the data
+Open the output file output-global-reports/gfin-reports/gfin-reports-mos.csv in vim or notepad
+
+Paste contents to google sheet to know the stocks
