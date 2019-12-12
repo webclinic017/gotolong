@@ -415,7 +415,8 @@ class Dividend(Amfi):
                     for txn_month_int in range(month_start, month_end):
                         txn_month = str(txn_month_int)
                         p_str += ',' + str(self.dividend_cumm_month_kv[txn_month])
-                    p_str += '\n'
+                    # for the last sum column
+                    p_str += ',' + '-' + '\n'
                     lines.append(p_str)
 
         elif sort_type == "sort_name" :
