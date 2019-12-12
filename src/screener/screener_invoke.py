@@ -55,4 +55,4 @@ screener.screener_load_data(in_filename_phase[0])
 screener.screener_dump_phase1(out_filename_phase[0])
 screener.screener_dump_phase2(out_filename_phase[1])
 screener.screener_dump_phase3(out_filename_phase[2], out_filename_phase[3], out_filename_phase[4],
-                              out_filename_phase[5])
+                              out_filename_phase[5], out_filename_phase[6])

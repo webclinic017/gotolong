@@ -342,7 +342,7 @@ class Screener(Amfi, Isin):
             self.screener_load_row(row)
 
     def screener_dump_phase1(self, out_filename, filter_rows=False, ticker_only=False, hold_filename=False,
-                     sale_filename=False, reco_filename=False):
+                             sale_filename=False, reco_filename=False, gotolong_filename=False):
 
         fh = open(out_filename, "w")
 
@@ -354,6 +354,9 @@ class Screener(Amfi, Isin):
 
         if reco_filename:
             fh_reco = open(reco_filename, "w")
+
+        if gotolong_filename:
+            fh_gotolong = open(gotolong_filename, "w")
 
         if not ticker_only:
             for ratio in self.sc_ratio_loc:
@@ -376,16 +379,20 @@ class Screener(Amfi, Isin):
             reco_type = self.sc_ratio_values[sc_nsecode, "reco_type"]
             reco_cause = self.sc_ratio_values[sc_nsecode, "reco_cause"]
 
-            reco_str = sc_nsecode + ',' + reco_type + ',' + reco_cause + '\n'
+            reco_str_with_cause = sc_nsecode + ',' + reco_type + ',' + reco_cause + '\n'
+            reco_str_without_cause = sc_nsecode + ', ' + reco_type + '\n'
 
             if reco_filename:
-                fh_reco.write(reco_str)
+                fh_reco.write(reco_str_with_cause)
+
+            if gotolong_filename:
+                fh_gotolong.write(reco_str_without_cause)
 
             if reco_type == "HOLD" or reco_type == "SALE":
                 if reco_type == "HOLD" and hold_filename:
-                    fh_hold.write(reco_str)
+                    fh_hold.write(reco_str_with_cause)
                 elif reco_type == "SALE" and sale_filename:
-                    fh_sale.write(reco_str)
+                    fh_sale.write(reco_str_with_cause)
             else:
                 if ticker_only:
                     fh.write(sc_nsecode)
@@ -404,8 +411,12 @@ class Screener(Amfi, Isin):
         if reco_filename:
             fh_reco.close()
 
+        if gotolong_filename:
+            fh_gotolong.close()
+
     def screener_dump_phase2(self, out_filename):
         self.screener_dump_phase1(out_filename, True)
 
-    def screener_dump_phase3(self, out_filename, hold_filename, sale_filename, reco_filename):
-        self.screener_dump_phase1(out_filename, True, True, hold_filename, sale_filename, reco_filename)
+    def screener_dump_phase3(self, out_filename, hold_filename, sale_filename, reco_filename, gotolong_filename):
+        self.screener_dump_phase1(out_filename, True, True, hold_filename, sale_filename, reco_filename,
+                                  gotolong_filename)

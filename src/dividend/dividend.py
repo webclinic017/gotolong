@@ -22,8 +22,12 @@ class Dividend(Amfi):
         self.companies=[]
         self.company_real_name_db=[]
         self.dividend_amount={}
+        self.dividend_amount_ym_kv = {}
+        self.dividend_cumm_year_kv = {}
+        self.dividend_cumm_month_kv = {}
         self.company_aliases={}
         self.company_orig={}
+        self.dividend_year_list = []
         self.total_dividend = 0
         # conglomerate name db
         self.cong_name_db=[]
@@ -149,7 +153,7 @@ class Dividend(Amfi):
         line = re.sub(r'Ltd,','Ltd',line)
 
         try:
-            sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount  = line.split(",")
+            sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount = line.split(",")
         except ValueError:
             print('ValueError ', line)
 
@@ -172,8 +176,18 @@ class Dividend(Amfi):
             return
 
         if re.match('ACH/.*|CMS/.*', txn_remarks):
-            # print txn_date, txn_remarks, deposit_amount
+
+            if self.debug_level > 1:
+                print(txn_date, txn_remarks, deposit_amount)
+
             try:
+                # dd/mm/yyyy
+                txn_date_arr = txn_date.split('/')
+                txn_month = txn_date_arr[1].strip()
+                # get rid of leading 0 in month number
+                txn_month = str(int(txn_month))
+                txn_year = txn_date_arr[2].strip()
+
                 remarks_arr = txn_remarks.split('/')
                 deposit_way = remarks_arr[0]
                 company_name = remarks_arr[1]
@@ -205,6 +219,44 @@ class Dividend(Amfi):
                 self.dividend_amount[company_name] = int(self.dividend_amount[company_name]) + int(float(deposit_amount))
             else:
                 self.dividend_amount[company_name] = int(float(deposit_amount))
+
+            if (txn_year, txn_month) not in self.dividend_amount_ym_kv:
+                self.dividend_amount_ym_kv[txn_year, txn_month] = int(float(deposit_amount))
+
+                if txn_year in self.dividend_cumm_year_kv:
+                    self.dividend_cumm_year_kv[txn_year] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_year_kv[txn_year] = int(float(deposit_amount))
+
+                if txn_month in self.dividend_cumm_month_kv:
+                    self.dividend_cumm_month_kv[txn_month] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_month_kv[txn_month] = int(float(deposit_amount))
+
+                if self.debug_level > 1:
+                    print(txn_year, txn_month, 'set div amount : ', int(float(deposit_amount)))
+            else:
+                self.dividend_amount_ym_kv[txn_year, txn_month] += int(float(deposit_amount))
+                if txn_year in self.dividend_cumm_year_kv:
+                    self.dividend_cumm_year_kv[txn_year] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_year_kv[txn_year] = int(float(deposit_amount))
+
+                if txn_month in self.dividend_cumm_month_kv:
+                    self.dividend_cumm_month_kv[txn_month] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_month_kv[txn_month] = int(float(deposit_amount))
+
+                if self.debug_level > 1:
+                    print(txn_year, txn_month, 'added div amount : ', int(float(deposit_amount)))
+                    print(txn_year, txn_month, 'accumulated div amount : ',
+                          self.dividend_amount_ym_kv[txn_year, txn_month])
+
+            if txn_year not in self.dividend_year_list:
+                if self.debug_level > 0:
+                    print('added dividend year', txn_year)
+                self.dividend_year_list.append(txn_year)
+
             return
 
         if self.debug_level > 1:
@@ -278,6 +330,94 @@ class Dividend(Amfi):
                 p_str = key
                 p_str += '\n'
                 lines.append(p_str)
+        if sort_type == "monthly_dividend":
+            year_iter = 0
+            for txn_year in sorted(self.dividend_year_list):
+                year_iter += 1
+                if len(self.dividend_year_list) == 2:
+                    if year_iter == 1:
+                        month_start = 4
+                        # use 13 to include month till 12
+                        month_end = 13
+                    else:
+                        month_start = 1
+                        # use 4 to include till 3
+                        month_end = 4
+                elif len(self.dividend_year_list) == 1:
+                    # no new entries from new financial year yet
+                    month_start = 4
+                    # use 13 to include month till 12
+                    month_end = 13
+                else:
+                    # all
+                    month_start = 1
+                    # use 13 to include month till 12
+                    month_end = 13
+                # april to march
+                # header
+                if not (len(self.dividend_year_list) == 2 and year_iter == 2):
+                    p_str = 'year'
+                else:
+                    p_str = ''
+
+                if year_iter == 1:
+                    for txn_month_int in range(month_start, month_end):
+                        # txn_month = str(txn_month_int)
+                        txn_month_abre = datetime.date(1900, txn_month_int, 1).strftime('%b')
+                        p_str += ',' + str(txn_month_abre)
+
+                    if len(self.dividend_year_list) == 2:
+                        month_start_2 = 1
+                        # use 4 to include till 3
+                        month_end_2 = 4
+
+                        for txn_month_int in range(month_start_2, month_end_2):
+                            # txn_month = str(txn_month_int)
+                            txn_month_abre = datetime.date(1900, txn_month_int, 1).strftime('%b')
+                            p_str += ',' + str(txn_month_abre)
+
+                    # all data
+                    if len(self.dividend_year_list) > 2:
+                        p_str += ',' + 'sum'
+                    p_str += '\n'
+                    lines.append(p_str)
+
+                # actual data
+                if not (len(self.dividend_year_list) == 2 and year_iter == 2):
+                    # display FY
+                    if len(self.dividend_year_list) == 2 and year_iter == 1:
+                        next_year = int(txn_year) + 1
+                        p_str = 'FY-' + str(txn_year) + '/' + str(next_year)
+                    else:
+                        p_str = str(txn_year)
+                else:
+                    p_str = ''
+
+                for txn_month_int in range(month_start, month_end):
+                    txn_month = str(txn_month_int)
+                    if (txn_year, txn_month) in self.dividend_amount_ym_kv:
+                        p_str += ',' + str(self.dividend_amount_ym_kv[str(txn_year), str(txn_month)])
+                    else:
+                        p_str += ',' + '0'
+
+                if len(self.dividend_year_list) == 2:
+                    if year_iter == 2:
+                        p_str += '\n'
+                else:
+                    # include cumulative data
+                    if len(self.dividend_year_list) > 2:
+                        p_str += ',' + str(self.dividend_cumm_year_kv[txn_year])
+                    p_str += '\n'
+                lines.append(p_str)
+
+                if len(self.dividend_year_list) > 2 and year_iter == len(self.dividend_year_list):
+                    p_str = 'sum'
+                    for txn_month_int in range(month_start, month_end):
+                        txn_month = str(txn_month_int)
+                        p_str += ',' + str(self.dividend_cumm_month_kv[txn_month])
+                    p_str += '\n'
+                    lines.append(p_str)
+
         elif sort_type == "sort_name" :
             for key, value in sorted(comp_freq.items()):
                 p_str = key
@@ -323,3 +463,7 @@ class Dividend(Amfi):
     # sort_amount
     def print_phase4(self, out_filename):
         self.print_phase0(out_filename, "sort_amount")
+
+    # monthly dividend
+    def print_phase5(self, out_filename):
+        self.print_phase0(out_filename, "monthly_dividend")

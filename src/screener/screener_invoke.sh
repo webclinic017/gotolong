@@ -23,5 +23,6 @@ OUT_FILE_3=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-buy-ticker
 OUT_FILE_4=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-hold-ticker-cause.csv
 OUT_FILE_5=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-fltr-sale-ticker-cause.csv
 OUT_FILE_6=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-reco-ticker-cause.csv
+OUT_FILE_7=$CONFIG_REPORTS_LOC/screener-reports/screener-reports-reco-ticker-without-cause-gotolong.csv
 
-python screener_invoke.py -d ${DEBUG_LEVEL} -i  ${IN_FILE_1} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6}
+python screener_invoke.py -d ${DEBUG_LEVEL} -i  ${IN_FILE_1} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7}

@@ -11,11 +11,11 @@ CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 MODULE=chealth
 
 # equity user
-for EUSER in nifty demat_idirect demat_zerodha normal
+for EUSER in index_nifty index_nse500 demat_idirect demat_zerodha user_normal
 do
     echo "generating reports for equity user ${EUSER}"
 
-    EUDIR=user-${EUSER}
+    EUDIR=${EUSER}
 
     if test "${EUSER}" == "demat_idirect" -o "${EUSER}" == "demat_zerodha"
     then

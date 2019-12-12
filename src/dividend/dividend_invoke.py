@@ -13,7 +13,7 @@ import glob
 # Main caller
 program_name = sys.argv[0]
 
-if len(sys.argv) < 6 :
+if len(sys.argv) < 7:
     print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> <dividend.csv> ... ")
     sys.exit(1)
 
@@ -25,7 +25,8 @@ out_filename_phase1 = sys.argv[5]
 out_filename_phase2 = sys.argv[6]
 out_filename_phase3 = sys.argv[7]
 out_filename_phase4 = sys.argv[8]
-in_dividend_filenames = sys.argv[9]
+out_filename_phase5 = sys.argv[9]
+in_dividend_filenames = sys.argv[10]
 
 if debug_level > 1 :
     print('args :' , len(sys.argv))
@@ -46,3 +47,4 @@ dividend.print_phase1(out_filename_phase1)
 dividend.print_phase2(out_filename_phase2)
 dividend.print_phase3(out_filename_phase3)
 dividend.print_phase4(out_filename_phase4)
+dividend.print_phase5(out_filename_phase5)
