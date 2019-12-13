@@ -25,8 +25,11 @@ class Dividend(Amfi):
         self.dividend_amount_ym_kv = {}
         self.dividend_cumm_year_kv = {}
         self.dividend_cumm_month_kv = {}
+        self.dividend_cumm_comp_month_kv = {}
+        self.dividend_cumm_comp_kv = {}
         self.company_aliases={}
         self.company_orig={}
+        self.company_name_pre_alias = {}
         self.dividend_year_list = []
         self.total_dividend = 0
         # conglomerate name db
@@ -36,7 +39,7 @@ class Dividend(Amfi):
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
-    def ignore_txn(self, line, txn_remarks):
+    def dividend_txn_ignore(self, line, txn_remarks):
         # match for search at begining
         # NEFT or RTGS or MMT - Mobile money Transfer
         if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
@@ -64,7 +67,7 @@ class Dividend(Amfi):
 
         return False
 
-    def normalize_company_name(self, company_name):
+    def dividend_company_name_normalize(self, company_name):
         # old orig name
         orig_name = company_name
         # capitalize
@@ -88,7 +91,9 @@ class Dividend(Amfi):
         # remove leading and trailing space
         company_name = company_name.strip()
 
-        company_name = self.resolve_alias(company_name)
+        name_before_resolve_alias = company_name
+        company_name = self.dividend_resolve_alias(company_name)
+
 
         # remove limited, ltd etc
         company_name = re.sub('limited|ltd','', company_name)
@@ -103,51 +108,20 @@ class Dividend(Amfi):
         # remove india
         company_name = re.sub(' india','', company_name)
 
-        company_name = self.resolve_real_company_name_db(company_name)
+
         self.company_orig[company_name] = orig_name
+        self.company_name_pre_alias[company_name] = name_before_resolve_alias
+
         if self.debug_level > 1:
             print('orig name', orig_name, 'new name', company_name)
         return company_name
 
-    def load_real_company_name_db():
-        comp_name_file_obj = open(comp_filename, 'r')
-        for row in comp_name_file_obj:
-            name_real = row
-            name_real = name_real.strip()
-            name_real = name_real.capitalize()
-            if debug_level > 2:
-                print('real name', name_real)
-            self.company_real_name_db.append(name_real)
-
-    def load_conglomerate_name_db():
-        cong_name_file_obj = open(cong_filename, 'r')
-        for row in cong_name_file_obj:
-            name_cong = row
-            name_cong = name_cong.strip()
-            name_cong = name_cong.capitalize()
-            if debug_level > 2:
-                print('cong name', name_cong)
-            self.cong_name_db.append(name_cong)
-
-    def resolve_alias(self, company_name):
+    def dividend_resolve_alias(self, company_name):
         if company_name in self.company_aliases.keys():
             company_name = self.company_aliases[company_name]
         return company_name
 
-    def resolve_real_company_name_db(self, company_name):
-        # avoid tinkering conglomerates with same prefix
-        for cong_name in self.cong_name_db:
-            if company_name.find(cong_name, 0) >= 0:
-                return company_name
-        for real_company_name in self.company_real_name_db:
-            if company_name.find(real_company_name, 0) >= 0:
-                if debug_level > 2:
-                    print('replaced from ', company_name, 'to ', real_company_name)
-                company_name = real_company_name
-                return company_name
-        return company_name
-
-    def load_dividend_row(self, line):
+    def dividend_load_row(self, line):
         # Replace Limited, with just Limited to avoid split error : ValueError
         line = re.sub(r'Limited,','Limited',line)
         line = re.sub(r'Ltd,','Ltd',line)
@@ -170,7 +144,7 @@ class Dividend(Amfi):
             print('txn_remarks '+ txn_remarks)
             # pass
 
-        if self.ignore_txn(line, txn_remarks):
+        if self.dividend_txn_ignore(line, txn_remarks):
             if self.debug_level > 2:
                 print('ignored ', txn_remarks)
             return
@@ -198,7 +172,7 @@ class Dividend(Amfi):
                 print('ValueError ' + txn_remarks)
 
             # print company_name, deposit_amount
-            company_name = self.normalize_company_name(company_name)
+            company_name = self.dividend_company_name_normalize(company_name)
             if self.debug_level > 1:
                 print('normalized :', company_name)
             ticker = self.amfi_get_ticker_by_name(company_name)
@@ -207,10 +181,18 @@ class Dividend(Amfi):
             isin = self.amfi_get_value_by_ticker(ticker, "isin")
             if self.debug_level > 1:
                 print(' isin :', isin)
-            if ticker != "UNK_TICKER" :
+            if ticker != '' and ticker != "UNK_TICKER":
+                if self.debug_level > 1:
+                    print('company is ticker', ticker)
                 company_name = ticker
+            else:
+                print('add ticker alias for', company_name, ':', self.company_name_pre_alias[company_name], ':')
 
-            self.companies.append(company_name)
+            if self.debug_level > 1:
+                print(company_name, 'from', txn_remarks)
+
+            if company_name not in self.companies:
+                self.companies.append(company_name)
 
             if company_name in self.dividend_amount.keys():
                 if self.debug_level > 1:
@@ -233,6 +215,16 @@ class Dividend(Amfi):
                 else:
                     self.dividend_cumm_month_kv[txn_month] = int(float(deposit_amount))
 
+                if (company_name, txn_month) in self.dividend_cumm_comp_month_kv:
+                    self.dividend_cumm_comp_month_kv[company_name, txn_month] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_comp_month_kv[company_name, txn_month] = int(float(deposit_amount))
+
+                if company_name in self.dividend_cumm_comp_kv:
+                    self.dividend_cumm_comp_kv[company_name] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_comp_kv[company_name] = int(float(deposit_amount))
+
                 if self.debug_level > 1:
                     print(txn_year, txn_month, 'set div amount : ', int(float(deposit_amount)))
             else:
@@ -246,6 +238,16 @@ class Dividend(Amfi):
                     self.dividend_cumm_month_kv[txn_month] += int(float(deposit_amount))
                 else:
                     self.dividend_cumm_month_kv[txn_month] = int(float(deposit_amount))
+
+                if (company_name, txn_month) in self.dividend_cumm_comp_month_kv:
+                    self.dividend_cumm_comp_month_kv[company_name, txn_month] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_comp_month_kv[company_name, txn_month] = int(float(deposit_amount))
+
+                if company_name in self.dividend_cumm_comp_kv:
+                    self.dividend_cumm_comp_kv[company_name] += int(float(deposit_amount))
+                else:
+                    self.dividend_cumm_comp_kv[company_name] = int(float(deposit_amount))
 
                 if self.debug_level > 1:
                     print(txn_year, txn_month, 'added div amount : ', int(float(deposit_amount)))
@@ -263,7 +265,7 @@ class Dividend(Amfi):
             print('Unknown skipped' + line)
         return
 
-    def load_dividend_data(self, in_filenames):
+    def dividend_load_data(self, in_filenames):
         for in_filename in in_filenames:
             if self.debug_level > 1:
                 print('div file', in_filename)
@@ -271,10 +273,10 @@ class Dividend(Amfi):
             for line in file_obj:
                 if self.debug_level > 1:
                     print('div line', line)
-                self.load_dividend_row(line)
+                self.dividend_load_row(line)
         print('loaded dividend', len (self.dividend_amount))
 
-    def load_aliases_row(self, row):
+    def dividend_load_aliases_row(self, row):
         try:
             name_alias, ticker = row
         except ValueError:
@@ -286,14 +288,14 @@ class Dividend(Amfi):
             print('alias ', name_alias, 'ticker ', ticker)
         self.company_aliases[name_alias] = ticker
 
-    def load_aliases_data(self, in_filename):
+    def dividend_load_aliases_data(self, in_filename):
         with open(in_filename, 'r') as csvfile:
             reader = csv.reader(csvfile)
             for row in reader:
-                self.load_aliases_row(row)
+                self.dividend_load_aliases_row(row)
         print('loaded aliases', len (self.company_aliases))
 
-    def dump_orig(self, out_filename):
+    def dividend_dump_orig(self, out_filename):
         if self.debug_level > 2:
             print(self.company_orig)
         lines = []
@@ -308,7 +310,7 @@ class Dividend(Amfi):
         return
 
     # sort_type
-    def print_phase0(self, out_filename, sort_type):
+    def dividend_print_phase0(self, out_filename, sort_type):
         # sort companies
         self.companies.sort()
 
@@ -330,7 +332,7 @@ class Dividend(Amfi):
                 p_str = key
                 p_str += '\n'
                 lines.append(p_str)
-        if sort_type == "monthly_dividend":
+        elif sort_type == "monthly_dividend":
             year_iter = 0
             for txn_year in sorted(self.dividend_year_list):
                 year_iter += 1
@@ -419,6 +421,55 @@ class Dividend(Amfi):
                     p_str += ',' + '-' + '\n'
                     lines.append(p_str)
 
+        elif sort_type == "comp_monthly_dividend":
+
+            # all
+            month_start = 1
+            # use 13 to include month till 12
+            month_end = 13
+
+            # header
+            p_str = 'comp_name'
+            for txn_month_int in range(month_start, month_end):
+                # txn_month = str(txn_month_int)
+                txn_month_abre = datetime.date(1900, txn_month_int, 1).strftime('%b')
+                p_str += ',' + str(txn_month_abre)
+
+            # all data
+            p_str += ',' + 'Total'
+            p_str += '\n'
+            lines.append(p_str)
+
+            comp_iter = 0
+            for comp_name in sorted(self.companies):
+                comp_iter += 1
+                p_str = comp_name
+                for txn_month_int in range(month_start, month_end):
+                    txn_month = str(txn_month_int)
+                    if (comp_name, txn_month) in self.dividend_cumm_comp_month_kv:
+                        p_str += ',' + str(self.dividend_cumm_comp_month_kv[comp_name, str(txn_month)])
+                    else:
+                        # use hyphen instead of 0 to easily identify other numbers
+                        p_str += ',' + '-'
+
+                # include cumulative data
+                p_str += ',' + str(self.dividend_cumm_comp_kv[comp_name])
+                p_str += '\n'
+                lines.append(p_str)
+
+                if len(self.companies) == comp_iter:
+                    p_str = 'Total'
+                    for txn_month_int in range(month_start, month_end):
+                        txn_month = str(txn_month_int)
+                        if txn_month in self.dividend_cumm_month_kv:
+                            p_str += ',' + str(self.dividend_cumm_month_kv[txn_month])
+                        else:
+                            # use hyphen instead of 0 to easily identify other numbers
+                            p_str += ',' + '-'
+                            # for the last sum column
+                    p_str += ',' + '-' + '\n'
+                    lines.append(p_str)
+
         elif sort_type == "sort_name" :
             for key, value in sorted(comp_freq.items()):
                 p_str = key
@@ -450,21 +501,25 @@ class Dividend(Amfi):
         return
 
     # name_only
-    def print_phase1(self, out_filename):
-        self.print_phase0(out_filename, "name_only")
+    def dividend_print_phase1(self, out_filename):
+        self.dividend_print_phase0(out_filename, "name_only")
 
     # sort_name
-    def print_phase2(self, out_filename):
-        self.print_phase0(out_filename, "sort_name")
+    def dividend_print_phase2(self, out_filename):
+        self.dividend_print_phase0(out_filename, "sort_name")
 
     # sort_frequency
-    def print_phase3(self, out_filename):
-        self.print_phase0(out_filename, "sort_frequency")
+    def dividend_print_phase3(self, out_filename):
+        self.dividend_print_phase0(out_filename, "sort_frequency")
 
     # sort_amount
-    def print_phase4(self, out_filename):
-        self.print_phase0(out_filename, "sort_amount")
+    def dividend_print_phase4(self, out_filename):
+        self.dividend_print_phase0(out_filename, "sort_amount")
 
     # monthly dividend
-    def print_phase5(self, out_filename):
-        self.print_phase0(out_filename, "monthly_dividend")
+    def dividend_print_phase5(self, out_filename):
+        self.dividend_print_phase0(out_filename, "monthly_dividend")
+
+    # comp monthly dividend
+    def dividend_print_phase6(self, out_filename):
+        self.dividend_print_phase0(out_filename, "comp_monthly_dividend")

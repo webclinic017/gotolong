@@ -1,18 +1,23 @@
 name_alias, ticker_real
+All cargo logistics, ALLCARGO
 Amr int, AMARAJABAT
 Amr,  AMARAJABAT
 Apollo hospitals ent, APOLLOHOSP
 Asahi india glass li, ASAHIINDIA
 Asianpaints, ASIANPAINT
 Asian pnt, ASIANPAINT
+Bajaj holdings & inv, BAJAJHLDNG
 Balkrishna industris, BALKRISIND
 Balkrishnaindustries, BALKRISIND
+Balrampurchinimills, BALRAMCHIN
 Bluedart, BLUEDART
 Bluedart express, BLUEDART
 Brigade, BRIGADE
 Brigade enterprises, BRIGADE
 Bel, BEL
+Bhel, BHEL
 Carborundum universa, CARBORUNIV
+Cdsil, CDSL
 Ceat dt, CEATLTD
 Cgcel, CROMPTON
 Colgatepalmolive, COLPAL
@@ -20,6 +25,7 @@ Container corporatio, CONCOR
 Coromandel internat, COROMANDEL
 Coromandel internati, COROMANDEL
 Cox and Kings ltd, COX&KINGS
+Cox & kings limited, COX&KINGS
 Cox & Kings ltd, COX&KINGS
 Cox & kings, COX&KINGS
 Cox & kings , COX&KINGS
@@ -27,19 +33,30 @@ Dr lal pathlabs lim, LALPATHLAB
 Dr lal pathlabs, LALPATHLAB
 Dr reddy's laborato, DRREDDY
 Future lifestyle fas, FLFL
+Glaxo consumer, GSKCONS
+Glaxo pharma, GLAXO
+Hcil, HEIDELBERG
 Hindustan unilever l, HINDUNILVR
+Hindustanaeronautics, HAL
+Hdfcasset management, HDFCAMC
 Hdfc interim, HDFC
 Hdfc bank ltd, HDFCBANK
 Hdfc life insurance, HDFCLIFE
+Hdfc standard life, HDFCLIFE
+Hppl, PAPERPROD
+Iifl holdings limite, IIFL
 Icici Pru, ICICIPRULI 
 Indianulls housing, IBULHSGFIN
 Indiabulls housing, IBULHSGFIN
 Indian oil corpn, IOC
 Indian oil corpn , IOC
+Indian oil corpn ltd, IOC
 Indraprastha gas lim, IGL
 Infoedge india limi, NAUKRI
-Jk tyre and, JKTYRE
+Jk tyre and industri, JKTYRE
+Johnson controlshit, JCHAC
 Jubliant foodworks l, JUBLFOOD
+Ksb pumps limited, KSB
 L&t finance holdings, L&TFH
 Larsen and toubro lt, LT
 Larsen & toubro ltd, LT
@@ -58,6 +75,8 @@ National aluminium c, NATIONALUM
 Nerolac, KANSAINER
 Oil and Natural Gas, ONGC
 Pidilite fn, PIDILITIND
+Pi industries ltd, PIIND
+Praxis home retail l, PRAXIS
 Power grid corpn, POWERGRID
 Power grid corporati, POWERGRID
 Power grid corp, POWERGRID
@@ -74,6 +93,7 @@ Shriram transport fi, SRTRANSFIN
 Stfc, SRTRANSFIN
 Sun pharmaceutical i, SUNPHARMA
 Talwalkars better va, TALWALKARS
+Talwalkars lifestyle, TALWGYM
 Tatasteelfp, TATASTEEL
 Tata steel fp, TATASTEEL
 Tcl, TATACHEM 
@@ -89,14 +109,16 @@ T power, TATAPOWER
 Tmotorsos f,  TATAMOTORS
 The new india assura, NIACL
 The indian hotels co, INDHOTEL
-Ti financial holding, TIFIN
+Ti financial holding, CHOLAHLDNG
 Ticl, TATAINVEST
 Tube investments of, TIINDIA
 Tvs motor company l, TVSMOTOR
 Ubl, UBL
 Usl, UNITDSPR
-Venky's india ltd, VENKYS
+Venky's india ltd, VENKEYS
+Venky's india ltd, VENKEYS
 Vguard industries l, VGUARD
+Vip industries limit, VIPIND
 Vrl logistics, VRLLOG
 Vst, VSTTILLERS
 Vst industries, VSTIND

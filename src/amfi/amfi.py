@@ -173,7 +173,7 @@ class Amfi(Database):
             # try to find a matching company
             comp_name = self.amfi_cname[amfi_ticker]
             comp_name = comp_name.strip()
-            if re.match(req_name, comp_name):
+            if re.match(req_name, comp_name) or req_name.upper() == amfi_ticker:
                 if self.debug_level > 1:
                     print('found match : name : ', req_name)
                 return amfi_ticker

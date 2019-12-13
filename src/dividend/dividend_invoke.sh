@@ -40,11 +40,12 @@ do
     OUT_FILE_3=$OUT_DIR/${FY}/${FY}-sort_frequency.csv
     OUT_FILE_4=$OUT_DIR/${FY}/${FY}-sort_amount.csv
     OUT_FILE_5=$OUT_DIR/${FY}/${FY}-monthly_dividend.csv
+    OUT_FILE_6=$OUT_DIR/${FY}/${FY}-comp_monthly_dividend.csv
 
     if test ! -e ${IN_FILE_1}
     then
         echo "error: file doen't exist : ${IN_FILE_1}"
     fi
 
-    python dividend_invoke.py ${DEBUG_LEVEL} ${IN_FILE_AMFI} ${IN_FILE_ALIASES} ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${IN_FILE_1}
+    python dividend_invoke.py ${DEBUG_LEVEL} ${IN_FILE_AMFI} ${IN_FILE_ALIASES} ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${IN_FILE_1}
 done
