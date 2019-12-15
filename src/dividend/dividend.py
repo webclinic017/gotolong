@@ -127,7 +127,7 @@ class Dividend(Amfi):
         line = re.sub(r'Ltd,','Ltd',line)
 
         try:
-            sno, value_date, txn_date, cheque, txn_remarks, wdraw_amount, deposit_amount = line.split(",")
+            txn_date, txn_remarks, deposit_amount = line.split(",")
         except ValueError:
             print('ValueError ', line)
 

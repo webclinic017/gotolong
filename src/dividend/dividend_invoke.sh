@@ -7,9 +7,7 @@ CONFIG_REPORTS_LOC=`python -m config reports`
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
-
 BANK=icici-bank
-
 
 # dividends data
 IN_BANK=$CONFIG_PROFILE_DATA_LOC/bank-txn-data/${BANK}
@@ -28,10 +26,10 @@ do
 
     if [[ "${FY}" == "all" ]]; then
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/*/OpTransactionHistory-*.csv
-	IN_FILE_1=${IN_DIR}/*/OpTransactionHistory-*.csv
+	    IN_FILE_1=${IN_DIR}/*/${BANK}-stmt-*.csv
     else
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/${FY}/OpTransactionHistory-${FY}.csv
-	IN_FILE_1=${IN_DIR}/${FY}/OpTransactionHistory-${FY}.csv
+	    IN_FILE_1=${IN_DIR}/${FY}/${BANK}-stmt-${FY}.csv
     fi
 
     OUT_FILE_0=$OUT_DIR/${FY}/${FY}-name_map.csv
