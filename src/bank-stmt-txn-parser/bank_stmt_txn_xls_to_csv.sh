@@ -18,7 +18,7 @@ debug_level=1
 in_dir=in-xls
 out_dir=out-csv
 
-for bank in icici-bank sbi-bank hdfc-bank
+for bank in icici-bank sbi-bank hdfc-bank axis-bank
 do
     echo processing bank ${bank}
 

@@ -51,7 +51,8 @@ df = xl.parse(sheet_name)
 
 if bank_name == 'icici-bank':
     # remarks - description
-    df.columns = ('ignore_0', 'sno', 'value_date', 'txn_date', 'ref_cheque_num', 'txn_description', 'withdraw_amount',
+    df.columns = (
+        'ignore_0', 'serial_num', 'value_date', 'txn_date', 'ref_cheque_num', 'txn_description', 'withdraw_amount',
                   'deposit_amount', 'balance')
 elif bank_name == 'sbi-bank':
     # credit -> deposit
@@ -62,6 +63,12 @@ elif bank_name == 'hdfc-bank':
     # narration -> description
     df.columns = ('txn_date', 'txn_description', 'ref_cheque_num', 'value_date', 'withdraw_amount', 'deposit_amount',
                   'balance')
+elif bank_name == 'axis-bank':
+    # SRL NO, Tran Date, CHQNO, PARTICULARS, DR, CR, BAL, SOL
+    df.columns = ('serial_num', 'txn_date', 'ref_cheque_num', 'txn_description', 'withdraw_amount', 'deposit_amount',
+                  'balance', 'sol')
+else:
+    print('unsupported bank: please configure df.columns')
 
 # TODO : Remove lines in case last column is null. Use -1 instead
 # if bank_name == 'icici-bank':
@@ -121,40 +128,37 @@ df = df.iloc[1:]
 # remove transactions with remarks ':Int.Pd:' and 'BY CASH', MMT (IMPS), EBA etc
 # Donot use single quote around ppatern for regex
 
-if bank_name == 'icici-bank':
-    pattern = "Transaction\ Remarks|ACH/|CMS/"
-    filter = df['txn_description'].str.contains(pattern, regex=True)
-elif bank_name == 'sbi-bank':
-    # Is the comment in Description ? Another field is 'Ref No./Cheque No.'
-    pattern = "Description|ACH/|CMS/"
-    filter = df['txn_description'].str.contains(pattern, regex=True)
-elif bank_name == 'hdfc-bank':
-    # Is the comment in Description ? Another field is 'Ref No./Cheque No.'
-    pattern = "Narration|ACH/|CMS/"
-    filter = df['txn_description'].str.contains(pattern, regex=True)
+pattern = "ACH/|CMS/"
+filter = df['txn_description'].str.contains(pattern, regex=True)
 
 if debug_level > 0:
     print(filter)
 
 df = df[filter]
 
-# fix formatting for date : dd/mm/yyyy
-if bank_name == 'icici-bank':
+# fix formatting for date : dd-mm-yy to dd/mm/yy
+# for any bank like SBI bank
+df['txn_date'] = df['txn_date'].replace({'-': '/'})
+
+# TODO: how to convert mmm to mm ?
+# TODO: how to convert yy to yyyy
+
+# if bank_name == 'icici-bank':
     # dd/mm/YYYY
-    print('date already in format')
-elif bank_name == 'hdfc-bank':
+# print('date already in format')
+# elif bank_name == 'hdfc-bank':
     # convert dd/mm/yy to dd/mm/yyyy
     # d = datetime.datetime.strptime(my_date, '%d/%m/%y')
     # d.strftime('%d/%m/%Y')
     # df['txn_date'] = df['txn_date'].dt.strftime('%d/%m/%Y')
-    print('try to convert yy to yyyy')
-elif bank_name == 'sbi-bank':
+# print('try to convert yy to yyyy')
+# elif bank_name == 'sbi-bank':
     # convert dd-mmm-yy to dd/mm/yyyy
     # d = datetime.datetime.strptime(my_date, '%d-%b-%y')
     # d.strftime('%d/%m/%Y')
     # df['txn_date'] = df['txn_date'].dt.strftime('%d/%m/%Y')
-    df['txn_date'] = df['txn_date'].replace({'-': '/'})
-    print('convert dd-mmm-yy to dd/mm/yyyy')
+# print('convert dd-mmm-yy to dd/mm/yyyy')
+
 
 if debug_level > 0:
     print(df)

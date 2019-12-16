@@ -12,6 +12,8 @@ import cutil.cutil
 
 from amfi.amfi import *
 
+import calendar
+
 class Dividend(Amfi):
 
     def __init__(self):
@@ -32,6 +34,7 @@ class Dividend(Amfi):
         self.company_name_pre_alias = {}
         self.dividend_year_list = []
         self.total_dividend = 0
+        self.dividend_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}
         # conglomerate name db
         self.cong_name_db=[]
         print('init : Dividend')
@@ -158,8 +161,13 @@ class Dividend(Amfi):
                 # dd/mm/yyyy
                 txn_date_arr = txn_date.split('/')
                 txn_month = txn_date_arr[1].strip()
-                # get rid of leading 0 in month number
-                txn_month = str(int(txn_month))
+                if txn_month.isdigit():
+                    # get rid of leading 0 in month number
+                    txn_month = str(int(txn_month))
+                else:
+                    # month name to number
+                    txn_month = self.dividend_abbr_to_num_dict[txn_month]
+
                 txn_year = txn_date_arr[2].strip()
 
                 remarks_arr = txn_remarks.split('/')
@@ -380,7 +388,7 @@ class Dividend(Amfi):
 
                     # all data
                     if len(self.dividend_year_list) > 2:
-                        p_str += ',' + 'sum'
+                        p_str += ',' + 'Total'
                     p_str += '\n'
                     lines.append(p_str)
 
@@ -413,7 +421,7 @@ class Dividend(Amfi):
                 lines.append(p_str)
 
                 if len(self.dividend_year_list) > 2 and year_iter == len(self.dividend_year_list):
-                    p_str = 'sum'
+                    p_str = 'Total'
                     for txn_month_int in range(month_start, month_end):
                         txn_month = str(txn_month_int)
                         p_str += ',' + str(self.dividend_cumm_month_kv[txn_month])
