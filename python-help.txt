@@ -166,3 +166,8 @@ XYZ_2d[row, column] = 1
 20. print usage
     20.1 to avoid automatic newline with print use, end=
             print('x', end='')
+
+21. string replace :
+            string.replace(old, new, count)
+
+22.

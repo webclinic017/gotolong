@@ -21,21 +21,15 @@ BANKBARODA, roe3, 0.62
 BANKINDIA, roe3, -13.28
 BASF, roce3, 5.13
 BBTC, dp3, 1.65
-BHARATFORG, d2e, 0.59
 BHEL, roce3, 5.42
 BLISSGVS, rank, 589.0
-BPCL, d2e, 0.78
-CADILAHC, d2e, 0.76
 CANBK, roe3, -1.86
-CEATLTD, d2e, 0.54
 CENTRALBK, roe3, -24.6
-CENTURYPLY, d2e, 0.54
 CGPOWER, rank, 503.0
 CHALET, pledge, 32.12
 CHAMBLFERT, pledge, 11.8
 CHOLAHLDNG, dp3, 2.72
 COFFEEDAY, pledge, 75.7
-COROMANDEL, d2e, 0.88
 CORPBANK, roce3, 3.52
 CREDITACC, dp3, 0.0
 CROMPTON, pledge, 48.85
@@ -61,7 +55,6 @@ GUJGASLTD, d2e, 1.01
 HATHWAY, roce3, -0.51
 HERITGFOOD, rank, 518.0
 HIMATSEIDE, rank, 553.0
-HINDPETRO, d2e, 0.97
 HSCL, dp3, 2.97
 IBREALEST, dp3, 0.0
 IDBI, roe3, -37.88
@@ -72,7 +65,6 @@ IFCI, rank, 533.0
 INDIANB, roe3, 5.6
 INDUSINDBK, pledge, 26.33
 IOB, roe3, -31.27
-IOC, d2e, 0.86
 ITDC, rank, 505.0
 ITDCEM, rank, 542.0
 ITI, dp3, 0.0
@@ -80,7 +72,6 @@ JAICORPLTD, rank, 552.0
 JAMNAAUTO, rank, 511.0
 JCHAC, dp3, 4.61
 JINDALSTEL, pledge, 64.85
-JKCEMENT, d2e, 0.82
 JKTYRE, rank, 536.0
 JSL, rank, 591.0
 JSLHISAR, rank, 544.0
@@ -89,15 +80,12 @@ JSWSTEEL, pledge, 49.13
 JUSTDIAL, dp3, 0.0
 JYOTHYLAB, pledge, 26.66
 KALPATPOWR, pledge, 39.07
-KEC, d2e, 0.76
 KOTAKBANK, dp3, 2.17
 KPRMILL, dp3, 1.82
-KRBL, d2e, 0.52
 LAURUSLABS, pledge, 31.46
 LEMONTREE, pledge, 34.14
 LINDEINDIA, roce3, 4.83
 LT, d2e, 1.97
-LUPIN, d2e, 0.62
 MAHABANK, roce3, 2.84
 MAHSCOOTER, roce3, 0.72
 MAXINDIA, rank, 550.0
@@ -105,7 +93,6 @@ MFSL, pledge, 80.36
 MMTC, roce3, 4.95
 MOTHERSUMI, d2e, 1.05
 MRF, dp3, 2.13
-MRPL, d2e, 0.85
 NBVENTURES, rank, 560.0
 NCC, pledge, 41.35
 NIACL, roce3, -2.45
@@ -130,7 +117,6 @@ SHK, rank, 517.0
 SHOPERSTOP, pledge, 12.62
 SOBHA, pledge, 20.37
 SPARC, roce3, -95.45
-SRF, d2e, 0.9
 STAR, pledge, 13.02
 STARCEMENT, dp3, 4.23
 STRTECH, d2e, 1.2

@@ -1,1301 +1,1312 @@
-security_name, bonus_count, buyback_count, dividend_count, total_count
-20MICRONS , - , - , 1 , 1
-63MOONS , - , - , 1 , 1
-8KMILES , - , - , 1 , 1
-AAIL , - , - , 1 , 1
-ABB , - , - , 1 , 1
-ABBOTINDIA , - , - , 1 , 1
-ABCBEARS , - , - , 1 , 1
-ABHIJIT , - , - , 1 , 1
-ABIRAFN , - , - , 1 , 1
-ABMKNO , - , - , 1 , 1
-ACC , - , - , 1 , 1
-ACE , - , - , 1 , 1
-ACKNIT , - , - , 1 , 1
-ACRYSIL , - , - , 1 , 1
-ADANIENT , - , - , 1 , 1
-ADANIPORTS , - , - , 1 , 1
-ADFFOODS , - , - , 1 , 1
-ADORFO , - , - , 1 , 1
-ADORWELD , - , - , 1 , 1
-ADROITINFO , - , - , 1 , 1
-ADVANIHOTR , - , - , 1 , 1
-ADVENZYMES , - , - , 1 , 1
-AEL , - , - , 1 , 1
-AHLEAST , - , - , 1 , 1
-AHLWEST , - , - , 1 , 1
-AHMDSTE , - , - , 1 , 1
-AIAENG , - , - , 1 , 1
-AIFL , - , - , 1 , 1
-AINFRA , - , - , 1 , 1
-AKCAPIT , - , - , 1 , 1
-AKZOINDIA , - , - , 1 , 1
-ALBERTDA , - , - , 1 , 1
-ALEXANDER , 1 , - , - , 1
-ALFREDHE , - , - , 1 , 1
-ALKALI , - , - , 1 , 1
-ALKYLAMINE , - , - , 1 , 1
-ALLCARGO , - , - , 1 , 1
-ALPHAGEO , - , - , 1 , 1
-ALPINEHOU , - , - , 1 , 1
-AMARJOTHI , - , - , 1 , 1
-AMBIKCO , - , - , 1 , 1
-AMBUJACEM , - , - , 1 , 1
-AMFORG , - , 1 , - , 1
-AMJLAND , - , - , 1 , 1
-AMNPLST , - , - , 1 , 1
-AMRTCORP , - , - , 1 , 1
-ANANTRAJ , - , - , 1 , 1
-ANDHRSUGAR , - , - , 1 , 1
-ANDREWYU , - , - , 1 , 1
-ANUHPHR , - , - , 1 , 1
-APARINDS , - , - , 1 , 1
-APCL , - , - , 1 , 1
-APCOTEXIND , - , - , 1 , 1
-APLAPOLLO , - , - , 1 , 1
-APLLTD , - , - , 1 , 1
-APMIN , - , - , 1 , 1
-APOLLOHOSP , - , - , 1 , 1
-APOLLOTYRE , - , - , 1 , 1
-APTECHT , - , - , 1 , 1
-ARCOTECH , - , - , 1 , 1
-AREXMIS , - , - , 1 , 1
-ARIES , - , - , 1 , 1
-ARIHCAPM , - , - , 1 , 1
-AROGRANITE , - , - , 1 , 1
-ARROWTEX , - , - , 1 , 1
-ARVIND , - , - , 1 , 1
-ASAHIINDIA , - , - , 1 , 1
-ASALCBR , - , - , 1 , 1
-ASHCAP , - , - , 1 , 1
-ASHIANA , - , - , 1 , 1
-ASHOKALC , - , - , 1 , 1
-ASHOKLEY , - , - , 1 , 1
-ASIANTILES , - , - , 1 , 1
-ASIIL , - , - , 1 , 1
-ASL , - , - , 1 , 1
-ASTAR , - , - , 1 , 1
-ASTEC , - , - , 1 , 1
-ASTRAMICRO , - , - , 1 , 1
-ASYL , - , - , 1 , 1
-ATFL , - , - , 1 , 1
-ATLANTA , - , - , 1 , 1
-ATUL , - , - , 1 , 1
-AURIONPRO , - , - , 1 , 1
-AUTOAXLES , - , - , 1 , 1
-AUTOINT , 1 , - , - , 1
-AVANTEL , - , - , 1 , 1
-AVANTI , - , - , 1 , 1
-AXISBANK , - , - , 1 , 1
-BABA , - , 1 , - , 1
-BAJAJ-AUTO , - , - , 1 , 1
-BAJAJCORP , - , - , 1 , 1
-BAJAJELEC , - , - , 1 , 1
-BAJAJFINSV , - , - , 1 , 1
-BAJAJHLDNG , - , - , 1 , 1
-BAJFINANCE , - , - , 1 , 1
-BALAJITELE , - , - , 1 , 1
-BALAMINES , - , - , 1 , 1
-BALASORE , - , - , 1 , 1
-BALMLAWRIE , - , - , 1 , 1
-BALPHARMA , - , - , 1 , 1
-BAMBINO , - , - , 1 , 1
-BAMPSL , 1 , - , - , 1
-BANARBEADS , - , - , 1 , 1
-BANARISUG , - , - , 1 , 1
-BANKBARODA , - , - , 1 , 1
-BANSWRAS , - , - , 1 , 1
-BAPACK , - , - , 1 , 1
-BASANTGL , - , - , 1 , 1
-BASF , - , - , 1 , 1
-BASML , - , - , 1 , 1
-BATAINDIA , - , - , 1 , 1
-BBARODA , - , - , 1 , 1
-BBREALTY , - , - , 1 , 1
-BBTC , - , - , 1 , 1
-BCLIL , - , - , 1 , 1
-BDH , - , - , 1 , 1
-BEEKAY , - , - , 1 , 1
-BEML , - , - , 1 , 1
-BENARAS , - , - , 1 , 1
-BENGALASM , - , - , 1 , 1
-BEPL , - , - , 1 , 1
-BERGEPAINT , - , - , 1 , 1
-BFLAFL , - , - , 1 , 1
-BGWTATO , - , - , 1 , 1
-BHAGIL , - , - , 1 , 1
-BHARAT , - , - , 1 , 1
-BHARATRAS , - , - , 1 , 1
-BHARATSE , - , - , 1 , 1
-BIGBLOC , - , - , 1 , 1
-BIL , - , - , 1 , 1
-BILENERGY , 1 , - , - , 1
-BIMETAL , - , - , 1 , 1
-BIRLACORPN , - , - , 1 , 1
-BKMINDST , - , - , 1 , 1
-BLACKROSE , - , - , 1 , 1
-BLIL , - , - , 1 , 1
-BLISSGVS , - , - , 1 , 1
-BLS , - , - , 1 , 1
-BLUECHIPT , - , - , 1 , 1
-BLUEDART , - , - , 1 , 1
-BLUESTARCO , - , - , 1 , 1
-BNKCAP , - , - , 1 , 1
-BNRSEC , - , - , 1 , 1
-BNRUDY , - , - , 1 , 1
-BOCINDIA , - , - , 1 , 1
-BODALCHEM , - , - , 1 , 1
-BODHTREE , - , - , 1 , 1
-BOMBCYC , - , - , 1 , 1
-BOMDYEING , - , - , 1 , 1
-BOMOXY-B1 , - , - , 1 , 1
-BOROSIL , - , - , 1 , 1
-BOSCHLTD , - , - , 1 , 1
-BRAWN , - , - , 1 , 1
-BRIGHTBR , - , - , 1 , 1
-BRITANNIA , - , - , 1 , 1
-BRNL , - , - , 1 , 1
-BSL , - , - , 1 , 1
-BWPL , - , - , 1 , 1
-CAIRN , - , - , 1 , 1
-CANBK , - , - , 1 , 1
-CANFINHOME , - , - , 1 , 1
-CAPITALT , - , - , 1 , 1
-CAPPL , - , - , 1 , 1
-CAPRIHANS , - , - , 1 , 1
-CARNATIN , - , - , 1 , 1
-CATVISION , - , - , 1 , 1
-CCL , - , - , 1 , 1
-CEATLTD , - , - , 1 , 1
-CEEJAY , - , - , 1 , 1
-CENTENKA , - , - , 1 , 1
-CENTURYPLY , - , - , 1 , 1
-CENTURYTEX , - , - , 1 , 1
-CERA , - , - , 1 , 1
-CESC , - , - , 1 , 1
-CGVAK , - , - , 1 , 1
-CHAMANSE , - , - , 1 , 1
-CHAMBLFERT , - , - , 1 , 1
-CHDCHEM , - , - , 1 , 1
-CHDDLTD , - , - , 1 , 1
-CHEMBOND , - , - , 1 , 1
-CHEMCRUX , - , - , 1 , 1
-CHENNPETRO , - , - , 1 , 1
-CHOKSI , - , - , 1 , 1
-CILSEC , - , - , 1 , 1
-CINELINE , - , - , 1 , 1
-CIPLA , - , - , 1 , 1
-CLARIS , - , - , 1 , 1
-CLNINDIA , - , - , 1 , 1
-CMI , - , - , 1 , 1
-COALINDIA , - , - , 1 , 1
-COASTCORP , - , - , 1 , 1
-COMCL , - , - , 1 , 1
-COMFINCAP , - , - , 1 , 1
-COMFINTE , - , - , 1 , 1
-COMPEAU , - , - , 1 , 1
-COMPUAGE , - , - , 1 , 1
-COMPUSOFT , - , - , 1 , 1
-CONFIPET , - , - , 1 , 1
-CORALAB , - , - , 1 , 1
-CORALFINAC , - , - , 1 , 1
-COSMOFILMS , - , - , 1 , 1
-COSYN , - , - , 1 , 1
-COX&KINGS , - , - , 1 , 1
-CPL , - , - , 1 , 1
-CREST , - , - , 1 , 1
-CROMPTON , - , - , 1 , 1
-CSLFINANCE , - , - , 1 , 1
-CTL , - , - , 1 , 1
-CYBERTECH , - , - , 1 , 1
-DAAWAT , - , - , 1 , 1
-DAICHI , - , - , 1 , 1
-DALMIABHA , - , - , 1 , 1
-DALMIACEM , - , - , 1 , 1
-DAMOTH , - , - , 1 , 1
-DANLAW , - , 1 , - , 1
-DBL , - , - , 1 , 1
-DCBBANK , - , - , 1 , 1
-DCMSRMIND , - , - , 1 , 1
-DECCANCE , - , - , 1 , 1
-DEEPAKFERT , - , - , 1 , 1
-DEEPAKNI , - , - , 1 , 1
-DEEPIND , - , - , 1 , 1
-DELTACORP , - , - , 1 , 1
-DENISON , - , - , 1 , 1
-DENORA , - , - , 1 , 1
-DFM , - , - , 1 , 1
-DHPIND , - , - , 1 , 1
-DHUNINV , - , - , 1 , 1
-DHUNTEAIND , - , - , 1 , 1
-DIAMINES , - , - , 1 , 1
-DIANATEA , - , - , 1 , 1
-DISA , - , - , 1 , 1
-DIVISLAB , - , - , 1 , 1
-DIVSHKT , - , - , 1 , 1
-DLINK , - , - , 1 , 1
-DLINKINDIA , - , - , 1 , 1
-DONEAR , - , - , 1 , 1
-DPL , - , - , 1 , 1
-DRAGARW , - , - , 1 , 1
-DRREDDY , - , - , 1 , 1
-DUKEOFS , - , - , 1 , 1
-DUPHARIN , - , - , 1 , 1
-DWARKESH , - , - , 1 , 1
-DWITIYA , - , - , 1 , 1
-DYNAMIND , - , - , 1 , 1
-DYNPRO , - , - , 1 , 1
-EASTRED , - , - , 1 , 1
-ECOPLAST , - , - , 1 , 1
-EICHERMOT , - , - , 1 , 1
-EIHAHOTELS , - , - , 1 , 1
-EIHOTEL , - , - , 1 , 1
-EIMCOELECO , - , - , 1 , 1
-ELANTAS , - , - , 1 , 1
-ELCIDIN , - , - , 1 , 1
-ELECON , - , - , 1 , 1
-ELECTCAST , - , - , 1 , 1
-ELEMARB , - , 1 , - , 1
-ELGIEQUIP , - , - , 1 , 1
-ELIXIR , - , - , 1 , 1
-ELNET , - , - , 1 , 1
-EMAMILTD , - , - , 1 , 1
-EMAMIPAP , - , - , 1 , 1
-EMKAY , - , - , 1 , 1
-EML , - , - , 1 , 1
-EMMBI , - , - , 1 , 1
-EMPIND , - , - , 1 , 1
-ENDURANCE , - , - , 1 , 1
-ENERGYDEV , - , - , 1 , 1
-ENIL , - , - , 1 , 1
-ESABINDIA , - , - , 1 , 1
-ESCORTS , - , - , 1 , 1
-ESSELPRO , - , - , 1 , 1
-EVERESTIND , - , - , 1 , 1
-EXCEL , 1 , - , - , 1
-EXCELINDUS , - , - , 1 , 1
-FAIRCHEM , - , - , 1 , 1
-FAIRDSY , - , - , 1 , 1
-FCH , - , - , 1 , 1
-FCL , - , - , 1 , 1
-FEDDERELEC , - , - , 1 , 1
-FEDERALBNK , - , - , 1 , 1
-FEL , - , - , 1 , 1
-FELDVR , - , - , 1 , 1
-FIEMIND , - , - , 1 , 1
-FINCABLES , - , - , 1 , 1
-FINOLEXIND , - , - , 1 , 1
-FLEXFO , - , - , 1 , 1
-FLFL , - , - , 1 , 1
-FLUIDOM , - , - , 1 , 1
-FOMEHOT , - , - , 1 , 1
-FOODSIN , - , - , 1 , 1
-FORBESCO , - , - , 1 , 1
-FORCEMOT , - , - , 1 , 1
-FREDUN , - , - , 1 , 1
-FUTSOL , - , - , 1 , 1
-GAEL , - , - , 1 , 1
-GALLISPAT , - , - , 1 , 1
-GANDHITUBE , - , 1 , - , 1
-GANECOS , - , - , 1 , 1
-GANESHHOUC , - , - , 1 , 1
-GARWARPOLY , - , - , 1 , 1
-GATI , - , - , 1 , 1
-GEECEE , - , - , 1 , 1
-GENCON , - , - , 1 , 1
-GENESYS , - , - , 1 , 1
-GENUSPOWER , - , - , 1 , 1
-GEOJITFSL , - , - , 1 , 1
-GEPIL , - , - , 1 , 1
-GESHIP , - , - , 1 , 1
-GET&D , - , - , 1 , 1
-GGPL , 1 , - , - , 1
-GHCL , - , - , 1 , 1
-GICHSGFIN , - , - , 1 , 1
-GILADAFINS , - , - , 1 , 1
-GINISILK , - , - , 1 , 1
-GIPCL , - , - , 1 , 1
-GITANJALI , - , - , 1 , 1
-GLAXO , - , - , 1 , 1
-GLENMARK , - , - , 1 , 1
-GLOSTER , - , - , 1 , 1
-GMBREW , - , - , 1 , 1
-GMDCLTD , - , - , 1 , 1
-GNFC , - , - , 1 , 1
-GNRL , - , - , 1 , 1
-GOCLCORP , - , - , 1 , 1
-GODFRYPHLP , - , - , 1 , 1
-GODREJIND , - , - , 1 , 1
-GOLCRSFI , - , - , 1 , 1
-GOLKUNDIA , - , - , 1 , 1
-GOODLUCK , - , - , 1 , 1
-GOODRICKE , - , - , 1 , 1
-GOODYEAR , - , - , 1 , 1
-GOWRALE , - , - , 1 , 1
-GRASIM , - , - , 1 , 1
-GRAUWEIL , - , - , 1 , 1
-GRAVITA , - , - , 1 , 1
-GREENPLY , - , - , 1 , 1
-GRINDWELL , - , - , 1 , 1
-GRNLAMIND , - , - , 1 , 1
-GRPLTD , - , - , 1 , 1
-GRUH , - , - , 1 , 1
-GSFC , - , - , 1 , 1
-GSKCONS , - , - , 1 , 1
-GSPL , - , - , 1 , 1
-GTPL , - , - , 1 , 1
-GUFICBIO , - , - , 1 , 1
-GUJALKALI , - , - , 1 , 1
-GUJAPOLLO , - , - , 1 , 1
-GUJFLUORO , - , - , 1 , 1
-GUJGAS , - , - , 1 , 1
-GUJHOTE , - , - , 1 , 1
-GULFPETRO , - , - , 1 , 1
-HALDYNGL , - , - , 1 , 1
-HAVELLS , - , - , 1 , 1
-HAWKINCOOK , - , - , 1 , 1
-HBLPOWER , - , - , 1 , 1
-HDFCBANK , - , - , 1 , 1
-HDFCLIFE , - , - , 1 , 1
-HEG , - , - , 1 , 1
-HEIDELBERG , - , - , 1 , 1
-HERCULES , - , - , 1 , 1
-HIGHGROUND , - , - , 1 , 1
-HIMATSEIDE , - , - , 1 , 1
-HINDALCO , - , - , 1 , 1
-HINDALUMI , - , - , 1 , 1
-HINDCOPPER , - , - , 1 , 1
-HINDTIN , - , - , 1 , 1
-HINDUJAVEN , - , - , 1 , 1
-HISARMET , - , - , 1 , 1
-HITECHCORP , - , - , 1 , 1
-HMVL , - , - , 1 , 1
-HONAUT , - , - , 1 , 1
-HONDAPOWER , - , - , 1 , 1
-HOPFL , - , - , 1 , 1
-HPL , - , - , 1 , 1
-HSCL , - , - , 1 , 1
-HSIL , - , - , 1 , 1
-HTMEDIA , - , - , 1 , 1
-HUIL , - , - , 1 , 1
-ICICIGI , - , - , 1 , 1
-ICRA , - , - , 1 , 1
-IDFC , - , - , 1 , 1
-IDFCBANK , - , - , 1 , 1
-IFGLEXPOR , - , - , 1 , 1
-IFSL , - , - , 1 , 1
-IGARASHI , - , - , 1 , 1
-IGL , - , - , 1 , 1
-IGPL , - , - , 1 , 1
-IIFL , - , - , 1 , 1
-IMPAL , - , - , 1 , 1
-INANI , - , - , 1 , 1
-INCAP , - , - , 1 , 1
-INDHOTEL , - , - , 1 , 1
-INDIACEM , - , - , 1 , 1
-INDIAGLYCO , - , - , 1 , 1
-INDIAHOME , - , - , 1 , 1
-INDIANB , - , - , 1 , 1
-INDIANCARD , - , - , 1 , 1
-INDIANHUME , - , - , 1 , 1
-INDIANVSH , - , - , 1 , 1
-INDIGO , - , - , 1 , 1
-INDLMETER , - , - , 1 , 1
-INDOAMIN , - , - , 1 , 1
-INDOBORAX , - , - , 1 , 1
-INDOCO , - , - , 1 , 1
-INDOTHAI , - , - , 1 , 1
-INDPRUD , - , - , 1 , 1
-INDRAMEDCO , - , - , 1 , 1
-INDSILHYD , - , - , 1 , 1
-INDTONER , - , - , 1 , 1
-INDUSINDBK , - , - , 1 , 1
-INEOSSTYRO , - , - , 1 , 1
-INFIBEAM , - , - , 1 , 1
-INFINITE , 1 , - , - , 1
-INFRATEL , - , - , 1 , 1
-INNOVTEC , - , - , 1 , 1
-INSECTICID , - , - , 1 , 1
-INTLCONV , - , - , 1 , 1
-INTRGLB , - , - , 1 , 1
-IONEXCHANG , - , - , 1 , 1
-IPCALAB , - , - , 1 , 1
-ISFT , - , - , 1 , 1
-ISHANCH , - , - , 1 , 1
-ITC , - , - , 1 , 1
-ITDC , - , - , 1 , 1
-ITDCEM , - , - , 1 , 1
-ITHL , - , - , 1 , 1
-ITL , - , - , 1 , 1
-IVC , - , - , 1 , 1
-IVP , - , - , 1 , 1
-JAGRAN , - , - , 1 , 1
-JAGSNPHARM , - , - , 1 , 1
-JAICORPLTD , - , - , 1 , 1
-JAMESWARREN , - , 1 , - , 1
-JAYBARMARU , - , - , 1 , 1
-JAYSHREETEA , - , - , 1 , 1
-JAYSYN , - , - , 1 , 1
-JAYUSH , - , - , 1 , 1
-JBFIND , - , - , 1 , 1
-JBMA , - , - , 1 , 1
-JCHAC , - , - , 1 , 1
-JDML , 1 , - , - , 1
-JINDALPOLY , - , - , 1 , 1
-JINDALSAW , - , - , 1 , 1
-JINDHOT , - , - , 1 , 1
-JINDRILL , - , - , 1 , 1
-JINDWORLD , - , - , 1 , 1
-JISLDVREQS , - , - , 1 , 1
-JISLJALEQS , - , - , 1 , 1
-JK AGRI , - , - , 1 , 1
-JKCEMENT , - , - , 1 , 1
-JKIL , - , - , 1 , 1
-JKLAKSHMI , - , - , 1 , 1
-JKPAPER , - , - , 1 , 1
-JKTYRE , - , - , 1 , 1
-JLMORI , - , - , 1 , 1
-JMCPROJECT , - , - , 1 , 1
-JOINDRE , - , - , 1 , 1
-JOONKTOLL , - , - , 1 , 1
-JOSTS , - , - , 1 , 1
-JSWENERGY , - , - , 1 , 1
-JSWSTEEL , - , - , 1 , 1
-JTEKTINDIA , - , - , 1 , 1
-JUBILANTORG , - , - , 1 , 1
-JUBLFOOD , - , - , 1 , 1
-JUPITERIN , - , - , 1 , 1
-JYOTHYLAB , - , - , 1 , 1
-KABRAEXTRU , - , - , 1 , 1
-KAIRA , - , - , 1 , 1
-KAJARIACER , - , - , 1 , 1
-KAKATCEM , - , - , 1 , 1
-KALPATPOWR , - , - , 1 , 1
-KALYANIFRG , - , - , 1 , 1
-KAMADGIRI , - , - , 1 , 1
-KAMDHENU , - , - , 1 , 1
-KANCHI , - , - , 1 , 1
-KANORICHEM , - , - , 1 , 1
-KANPRPLA , - , - , 1 , 1
-KARURVYSYA , - , - , 1 , 1
-KAYCEEI , - , - , 1 , 1
-KCP , - , - , 1 , 1
-KCPSUGIND , - , - , 1 , 1
-KDDL , - , - , 1 , 1
-KEC , - , - , 1 , 1
-KEI , - , - , 1 , 1
-KELENRG , - , - , 1 , 1
-KELLTONTEC , 1 , - , - , 1
-KEYCORPSER , - , - , 1 , 1
-KGDENIM , - , - , 1 , 1
-KHAICHEM , - , - , 1 , 1
-KIFS , - , - , 1 , 1
-KILPEST , - , - , 1 , 1
-KIRANVYPAR , - , - , 1 , 1
-KIRLFER , - , - , 1 , 1
-KIRLOSBROS , - , - , 1 , 1
-KIRLOSIND , - , - , 1 , 1
-KIRLPNU , - , - , 1 , 1
-KLBRENG-B , - , - , 1 , 1
-KLRF , - , - , 1 , 1
-KMSMEDI , - , - , 1 , 1
-KNRCON , - , - , 1 , 1
-KOLTEPATIL , - , - , 1 , 1
-KOTAKBANK , - , - , 1 , 1
-KOTHARIPRO , - , - , 1 , 1
-KOVAI , - , - , 1 , 1
-KPEL , - , - , 1 , 1
-KPIT , - , - , 1 , 1
-KPL , 1 , - , - , 1
-KRBL , - , - , 1 , 1
-KRIINFRA , - , - , 1 , 1
-KRITIIND , - , - , 1 , 1
-KRITINUT , - , - , 1 , 1
-KRL , - , - , 1 , 1
-KRONE , - , - , 1 , 1
-KSBPUMPS , - , - , 1 , 1
-KSE , - , - , 1 , 1
-KSL , - , - , 1 , 1
-KTIL , - , - , 1 , 1
-KTKBANK , - , - , 1 , 1
-KUANTUM , - , - , 1 , 1
-KWALITY , - , - , 1 , 1
-L&TFH , - , - , 1 , 1
-LAHOTIOV , - , - , 1 , 1
-LAKSELEC , - , - , 1 , 1
-LAKSHMIMIL , - , - , 1 , 1
-LAKSHVILAS , - , - , 1 , 1
-LAMBODHARA , - , - , 1 , 1
-LANCER , 1 , - , - , 1
-LANCORHOL , - , - , 1 , 1
-LAURUSLABS , - , - , 1 , 1
-LAXMIMACH , - , - , 1 , 1
-LEHIL , - , - , 1 , 1
-LGBBROSLTD , - , - , 1 , 1
-LICHSGFIN , - , - , 1 , 1
-LINCOPH , - , - , 1 , 1
-LINCPEN , - , - , 1 , 1
-LKPFIN , - , - , 1 , 1
-LOYAL , 1 , - , - , 1
-LOYALTEX , - , - , 1 , 1
-LUDLOWJUT , - , - , 1 , 1
-LUHARUKA , - , - , 1 , 1
-LUMAXIND , - , - , 1 , 1
-LUMAXTECH , - , - , 1 , 1
-LUPIN$ , - , - , 1 , 1
-LUXIND , - , - , 1 , 1
-LYPSAGEMS , 1 , - , - , 1
-M&MFIN , - , - , 1 , 1
-MAANALU , 1 , - , - , 1
-MACK , - , - , 1 , 1
-MACPLAS , - , - , 1 , 1
-MADHAV , - , - , 1 , 1
-MADHUCON , - , - , 1 , 1
-MAFATIND , - , - , 1 , 1
-MAGMA , - , - , 1 , 1
-MAGNAEL , - , - , 1 , 1
-MAHLIFE , - , - , 1 , 1
-MAHSCOOTER , - , - , 1 , 1
-MAHSEAMLES , - , - , 1 , 1
-MAHSHRE , - , - , 1 , 1
-MAITHANALL , - , - , 1 , 1
-MAKERSL , - , - , 1 , 1
-MALLCOM , - , - , 1 , 1
-MANAKSIA , - , - , 1 , 1
-MANALIPE , - , - , 1 , 1
-MANCREDIT , - , - , 1 , 1
-MANGALAM , - , - , 1 , 1
-MANGCHEFER , - , - , 1 , 1
-MANGLMCEM , - , - , 1 , 1
-MANINDS , - , - , 1 , 1
-MANUGRAPH , - , - , 1 , 1
-MARIS , - , - , 1 , 1
-MARKSANS , - , - , 1 , 1
-MARUTI , - , - , 1 , 1
-MARVINY , - , - , 1 , 1
-MASFIN , - , - , 1 , 1
-MAZDALTD , - , - , 1 , 1
-MCCHRLS-B , - , - , 1 , 1
-MCLEODRUSS , - , - , 1 , 1
-MCX , - , - , 1 , 1
-MEDICAME , - , - , 1 , 1
-MEGH , - , - , 1 , 1
-MENNPIS , - , - , 1 , 1
-MEP , - , - , 1 , 1
-MERCATOR , - , - , 1 , 1
-MERCK , - , - , 1 , 1
-MERCURYLAB , - , - , 1 , 1
-METALCO , - , - , 1 , 1
-MINDTECK , - , - , 1 , 1
-MIRZAINT , - , - , 1 , 1
-MITSU , - , - , 1 , 1
-MJCO , - , - , 1 , 1
-MMLF , 1 , - , - , 1
-MMTC , - , - , 1 , 1
-MODERN , - , - , 1 , 1
-MODISNME , - , - , 1 , 1
-MODRNSH , - , - , 1 , 1
-MOHOTAIND , - , - , 1 , 1
-MONEYMAST , - , - , 1 , 1
-MONEYMATF , - , - , 1 , 1
-MONTECARLO , - , - , 1 , 1
-MORARJEE , - , - , 1 , 1
-MORGANITE , - , - , 1 , 1
-MPHASIS , - , - , 1 , 1
-MRPL , - , - , 1 , 1
-MUKESHB , - , - , 1 , 1
-MUL , - , - , 1 , 1
-MULTIIN , - , - , 1 , 1
-MUNJALSHOW , - , - , 1 , 1
-MUTHOOTFIN , - , - , 1 , 1
-MUTHTFN , 1 , - , - , 1
-MYSORPETRO , - , - , 1 , 1
-NACLIND , - , - , 1 , 1
-NAGARCON , - , - , 1 , 1
-NAHARCAP , - , - , 1 , 1
-NAHARINDUS , - , - , 1 , 1
-NAHARINVE , - , - , 1 , 1
-NAHARSPING , - , - , 1 , 1
-NANDAN , - , - , 1 , 1
-NATCAPSU , - , - , 1 , 1
-NATFIT , - , - , 1 , 1
-NATIONALUM , - , - , 1 , 1
-NATNLSTEEL , - , - , 1 , 1
-NATPEROX , - , - , 1 , 1
-NATPLAS , - , - , 1 , 1
-NAVBLDR , - , - , 1 , 1
-NAVNETEDUL , - , - , 1 , 1
-NBVENTURES , - , - , 1 , 1
-NEAGI , - , - , 1 , 1
-NECLIFE , - , - , 1 , 1
-NELCAST , - , - , 1 , 1
-NESCO , - , - , 1 , 1
-NFL , - , - , 1 , 1
-NGIND , - , - , 1 , 1
-NIACL , - , - , 1 , 1
-NIDL , - , - , 1 , 1
-NIITTECH , - , - , 1 , 1
-NILA , - , - , 1 , 1
-NIPPOBATRY , - , - , 1 , 1
-NIRLON , - , - , 1 , 1
-NITINCAST , - , - , 1 , 1
-NITINSPIN , - , - , 1 , 1
-NITTAGELA , - , - , 1 , 1
-NLCINDIA , - , - , 1 , 1
-NOCIL , - , - , 1 , 1
-NOVAPUB , - , - , 1 , 1
-NRAGRIND , - , - , 1 , 1
-NRBBEARING , - , - , 1 , 1
-NUCENTFI , - , - , 1 , 1
-OAL , - , - , 1 , 1
-OASIS , - , - , 1 , 1
-OBEROIREAL , - , - , 1 , 1
-OBIL , - , - , 1 , 1
-OCEANIC , - , - , 1 , 1
-OCL , - , - , 1 , 1
-OFSS , - , - , 1 , 1
-OMAXE , - , - , 1 , 1
-ONMOBILE , - , - , 1 , 1
-ONWARDTEC , - , - , 1 , 1
-ORIBEVER , - , - , 1 , 1
-ORICON , - , - , 1 , 1
-ORIENTABRA , - , - , 1 , 1
-ORIENTBELL , - , - , 1 , 1
-ORIENTCEM , - , - , 1 , 1
-ORIENTLTD , - , - , 1 , 1
-ORIENTREF , - , - , 1 , 1
-ORISSAMINE , - , - , 1 , 1
-ORVENPR , - , - , 1 , 1
-PAISALO , - , - , 1 , 1
-PANACHE , - , - , 1 , 1
-PANAENERG , - , - , 1 , 1
-PANCARBON , - , - , 1 , 1
-PANCHSHEEL , - , - , 1 , 1
-PAPERPROD , - , - , 1 , 1
-PARAGMILK , - , - , 1 , 1
-PARMCOS-B , - , - , 1 , 1
-PATELROD , - , - , 1 , 1
-PATELSAI , - , - , 1 , 1
-PBMPOLY , - , - , 1 , 1
-PCCOSMA , - , - , 1 , 1
-PDMJEPAPER , - , - , 1 , 1
-PEL , - , - , 1 , 1
-PFS , - , - , 1 , 1
-PGFOIL , - , - , 1 , 1
-PHILIPCARB , - , - , 1 , 1
-PHOENIXLTD , - , - , 1 , 1
-PILANIINVS , - , - , 1 , 1
-PINCON , - , - , 1 , 1
-PIXTRANS , - , - , 1 , 1
-PNBGILTS , - , - , 1 , 1
-PNBHOUSING , - , - , 1 , 1
-PNCINFRA , - , - , 1 , 1
-PODARPIG , - , - , 1 , 1
-PODDAR , - , - , 1 , 1
-POKARNA , - , - , 1 , 1
-POLYCHEM , - , - , 1 , 1
-POLYMED , - , - , 1 , 1
-POLYSPIN , - , - , 1 , 1
-PONDYOXIDE , - , - , 1 , 1
-PONNIERODE , - , - , 1 , 1
-PORWAL , - , - , 1 , 1
-POWERMECH , - , - , 1 , 1
-PRABHAT , - , - , 1 , 1
-PRAJIND , - , - , 1 , 1
-PRECAM , - , - , 1 , 1
-PREMCO , - , - , 1 , 1
-PREMEXPL , - , - , 1 , 1
-PREMIERPOL , - , - , 1 , 1
-PRESTIGE , - , - , 1 , 1
-PRICOLLTD , - , - , 1 , 1
-PRIMAPLA , - , - , 1 , 1
-PRIME , - , - , 1 , 1
-PRIMEPRO , - , - , 1 , 1
-PRIMEURB , - , - , 1 , 1
-PRITHVIEXCH , - , - , 1 , 1
-PRIYALT , - , - , 1 , 1
-PSPPROJECT , - , - , 1 , 1
-PTC , - , - , 1 , 1
-PTL , - , - , 1 , 1
-PURVA , - , - , 1 , 1
-PVR , - , - , 1 , 1
-QUICKHEAL , - , - , 1 , 1
-RADICO , - , - , 1 , 1
-RADIXIND , - , - , 1 , 1
-RAIN , - , - , 1 , 1
-RAJESHEXPO , - , - , 1 , 1
-RAJGLOWIR , - , - , 1 , 1
-RAJOOENG , - , - , 1 , 1
-RAJPACK , - , - , 1 , 1
-RAJPALAYAM , - , - , 1 , 1
-RAJPUTANA , 1 , - , - , 1
-RAJSREESUG , - , - , 1 , 1
-RAMAPHO , - , - , 1 , 1
-RAMCOCEM , - , - , 1 , 1
-RAMCOIND , - , - , 1 , 1
-RAMRAT , - , - , 1 , 1
-RANEENGINE , - , - , 1 , 1
-RAPICUT , - , - , 1 , 1
-RAPIDIN , - , - , 1 , 1
-RASOI , - , - , 1 , 1
-RATNAMANI , - , - , 1 , 1
-RAYMOND , - , - , 1 , 1
-RBLBANK , - , - , 1 , 1
-RCF , - , - , 1 , 1
-RCIIND , - , - , 1 , 1
-REDINGTON , - , - , 1 , 1
-RELAXO , - , - , 1 , 1
-RELCAPITAL , - , - , 1 , 1
-RELCHEM , - , - , 1 , 1
-RELIANCEINF , - , - , 1 , 1
-RELINFRA , - , - , 1 , 1
-RELSTRUCT , - , - , 1 , 1
-REPCOHOME , - , - , 1 , 1
-RESPONIND , - , - , 1 , 1
-RGL , - , 1 , - , 1
-RISHDIGA , - , - , 1 , 1
-RISHIROOP , - , - , 1 , 1
-RJSHAH , - , - , 1 , 1
-RKFORGE , - , - , 1 , 1
-RMCHEM , 1 , - , - , 1
-RNAM , - , - , 1 , 1
-RODIUM , - , - , 1 , 1
-ROSSELLIND , - , - , 1 , 1
-ROTO , - , - , 1 , 1
-RPGLIFE , - , - , 1 , 1
-RPPINFRA , - , - , 1 , 1
-RSWM , - , - , 1 , 1
-RUBFILA , - , - , 1 , 1
-RUBYMILLS , - , - , 1 , 1
-RUCHIRA , - , - , 1 , 1
-RUPA , - , - , 1 , 1
-RUSHIL , - , - , 1 , 1
-SABTN , - , - , 1 , 1
-SACHEMT , - , - , 1 , 1
-SADBHAV , - , - , 1 , 1
-SADBHIN , - , - , 1 , 1
-SAFARIND , - , - , 1 , 1
-SAGARPROD , - , - , 1 , 1
-SAHYOGMULT , - , - , 1 , 1
-SAKSOFT , - , - , 1 , 1
-SAKTHIFIN , - , - , 1 , 1
-SAKUMA , - , - , 1 , 1
-SALASAR , - , - , 1 , 1
-SALONACOT , - , - , 1 , 1
-SALZER , - , - , 1 , 1
-SAMBANDAM , - , - , 1 , 1
-SAMKRG , - , - , 1 , 1
-SANCTRN , - , - , 1 , 1
-SANDESH , - , - , 1 , 1
-SANGAMIND , - , - , 1 , 1
-SANGHVIMOV , - , - , 1 , 1
-SAPPL , - , - , 1 , 1
-SARDAEN , - , - , 1 , 1
-SAREGAMA , - , - , 1 , 1
-SARLAPOLY , - , - , 1 , 1
-SARUPINDUS , - , - , 1 , 1
-SATRAPROP , - , - , 1 , 1
-SAURASHCEM , - , - , 1 , 1
-SBIN , - , - , 1 , 1
-SCHAEFFLER , - , - , 1 , 1
-SCHAND , - , - , 1 , 1
-SDBL , - , - , 1 , 1
-SELAN , - , - , 1 , 1
-SEQUENT , - , - , 1 , 1
-SESHAPAPER , - , - , 1 , 1
-SETCO , - , - , 1 , 1
-SEYAIND , - , - , 1 , 1
-SHAKTIPUMP , - , - , 1 , 1
-SHANKARA , - , - , 1 , 1
-SHANTAI , 1 , - , - , 1
-SHARDACROP , - , - , 1 , 1
-SHARDUL , - , - , 1 , 1
-SHASHIJIT , - , - , 1 , 1
-SHAWGELTIN , - , - , 1 , 1
-SHEMAROO , - , - , 1 , 1
-SHHARICH , - , - , 1 , 1
-SHILCTECH , - , - , 1 , 1
-SHILGRAV , - , - , 1 , 1
-SHILPAMED , - , - , 1 , 1
-SHIVAEXPO , - , - , 1 , 1
-SHIVALIK , - , - , 1 , 1
-SHIVTEX , - , - , 1 , 1
-SHK , - , - , 1 , 1
-SHOPERSTOP , - , - , 1 , 1
-SHREEPUSHK , - , - , 1 , 1
-SHREYANIND , - , - , 1 , 1
-SHREYAS , - , - , 1 , 1
-SHRIDINE , - , - , 1 , 1
-SHRISTI , - , - , 1 , 1
-SHRJAGP , - , - , 1 , 1
-SHRPREC , - , - , 1 , 1
-SHYAM , - , - , 1 , 1
-SICAGEN , - , - , 1 , 1
-SIEMENS , - , - , 1 , 1
-SIGNETIND , - , - , 1 , 1
-SIKA , - , - , 1 , 1
-SIL , - , - , 1 , 1
-SILINV , - , - , 1 , 1
-SIMMOND , - , - , 1 , 1
-SIMPLEXCAS , - , - , 1 , 1
-SIMPLEXINF , - , - , 1 , 1
-SIMPLXREA , - , - , 1 , 1
-SINCLAIR , - , - , 1 , 1
-SINGER , - , - , 1 , 1
-SINTEX , - , - , 1 , 1
-SIPROJECTS , - , - , 1 , 1
-SIS , - , - , 1 , 1
-SKC , 1 , - , - , 1
-SKCIL , - , - , 1 , 1
-SKIPPER , - , - , 1 , 1
-SKPSEC , - , 1 , - , 1
-SMIFS , - , - , 1 , 1
-SMLT , - , - , 1 , 1
-SMSPHARMA , - , - , 1 , 1
-SOLARINDS , - , - , 1 , 1
-SOLIMAC , - , - , 1 , 1
-SOMANYCERA , - , - , 1 , 1
-SOTL , - , 1 , - , 1
-SOUTHBANK , - , - , 1 , 1
-SPAL , - , - , 1 , 1
-SREINFRA , - , - , 1 , 1
-SRFPOLY , - , - , 1 , 1
-SRHHYPOLTD , - , - , 1 , 1
-SRIPIPES , - , - , 1 , 1
-SSWL , - , - , 1 , 1
-STANROS , - , - , 1 , 1
-STAR , - , - , 1 , 1
-STARPAPER , - , - , 1 , 1
-STEELCAS , - , - , 1 , 1
-STHINPA-B , - , - , 1 , 1
-STOVAC , - , - , 1 , 1
-STRTECH , - , - , 1 , 1
-SUBROS , - , - , 1 , 1
-SUCHITRA , - , - , 1 , 1
-SUCROSA , - , - , 1 , 1
-SUDTIND-B , - , - , 1 , 1
-SUJALA , - , - , 1 , 1
-SUKHJITS , - , - , 1 , 1
-SUMEDHA , - , - , 1 , 1
-SUNCLAYLTD , - , - , 1 , 1
-SUNDARMFIN , - , - , 1 , 1
-SUNILHITEC , - , - , 1 , 1
-SUNPHARMA , - , - , 1 , 1
-SUNTECK , - , - , 1 , 1
-SUPER , - , - , 1 , 1
-SUPERHOUSE , - , - , 1 , 1
-SURYALA , - , - , 1 , 1
-SURYALAXMI , - , - , 1 , 1
-SURYAROSNI , - , - , 1 , 1
-SUTLEJTEX , - , - , 1 , 1
-SUVEN , - , - , 1 , 1
-SVARTCORP , - , - , 1 , 1
-SWANENERGY , - , - , 1 , 1
-SWARAJAUTO , - , - , 1 , 1
-SWARAJMAZD , - , - , 1 , 1
-SWASTIKA , - , - , 1 , 1
-SWASTIVI , - , - , 1 , 1
-SWELECT , - , - , 1 , 1
-SWISSGLA , - , - , 1 , 1
-SYNCOMF , - , - , 1 , 1
-SYNGENE , - , - , 1 , 1
-TAJGVK , - , - , 1 , 1
-TALBROAUTO , - , - , 1 , 1
-TALWALKARS , - , - , 1 , 1
-TAMBOLI , - , - , 1 , 1
-TANLA , - , - , 1 , 1
-TASTYBIT , - , - , 1 , 1
-TATACHEM , - , - , 1 , 1
-TATAINVEST , - , - , 1 , 1
-TATAMETALI , - , - , 1 , 1
-TATAPOWER , - , - , 1 , 1
-TATASPONGE , - , - , 1 , 1
-TATASTEEL , - , - , 1 , 1
-TATATEA , - , - , 1 , 1
-TATATIMKEN , - , - , 1 , 1
-TCPLPACK , - , - , 1 , 1
-TDPOWERSYS , - , - , 1 , 1
-TECHM , - , - , 1 , 1
-TEXMACO , - , - , 1 , 1
-TEXRAIL , - , - , 1 , 1
-TFCILTD , - , - , 1 , 1
-THACKER , 1 , - , - , 1
-THANGAMAYL , - , - , 1 , 1
-THEBYKE , - , - , 1 , 1
-THERMAX , - , - , 1 , 1
-THOMASCOOK , - , - , 1 , 1
-TIFHL , - , - , 1 , 1
-TIGLOB , - , - , 1 , 1
-TIIL , - , 1 , - , 1
-TIINDIA , - , - , 1 , 1
-TIL , - , - , 1 , 1
-TIMETECHNO , - , - , 1 , 1
-TINPLATE , - , - , 1 , 1
-TIPSINDLTD , - , - , 1 , 1
-TIRSARJ , - , - , 1 , 1
-TIRUMALCHM , - , - , 1 , 1
-TITAN , - , - , 1 , 1
-TITANBIO , - , - , 1 , 1
-TNPL , - , - , 1 , 1
-TOKYOPLAST , - , - , 1 , 1
-TORNTPOWER , - , - , 1 , 1
-TPLPLAST , - , - , 1 , 1
-TRANSCOR , - , - , 1 , 1
-TRANSPEK , - , - , 1 , 1
-TRENT , - , - , 1 , 1
-TRITONV , - , - , 1 , 1
-TRIVENI , - , - , 1 , 1
-TTKHEALTH , - , - , 1 , 1
-TULIVE , - , 1 , - , 1
-TVSELECT , - , - , 1 , 1
-TVSSRICHAK , - , - , 1 , 1
-TVTODAY , - , - , 1 , 1
-TWL , - , - , 1 , 1
-TYCHE , - , - , 1 , 1
-UBL , - , - , 1 , 1
-UCALFUEL , - , - , 1 , 1
-UFLEX , - , - , 1 , 1
-UFO , - , - , 1 , 1
-UGARSUGAR , - , - , 1 , 1
-UJAAS , - , - , 1 , 1
-UJJIVAN , - , - , 1 , 1
-ULTRACAB , - , - , 1 , 1
-ULTRACEMCO , - , - , 1 , 1
-ULTRAMAR , - , - , 1 , 1
-UNIDT , - , - , 1 , 1
-UPL , - , - , 1 , 1
-VADILALIND , - , - , 1 , 1
-VADILENT , - , - , 1 , 1
-VALSON , - , - , 1 , 1
-VAMA , - , - , 1 , 1
-VBL , - , - , 1 , 1
-VEDAVAAG , - , - , 1 , 1
-VENKYS , - , - , 1 , 1
-VERITAS , - , - , 1 , 1
-VETO , - , - , 1 , 1
-VGUARD , - , - , 1 , 1
-VHL , - , - , 1 , 1
-VICTMILL , - , - , 1 , 1
-VIDLI , - , - , 1 , 1
-VIJAYABANK , - , - , 1 , 1
-VIKASECO , - , - , 1 , 1
-VIKRAMTH , - , - , 1 , 1
-VINDHYATEL , - , - , 1 , 1
-VINYLINDIA , - , - , 1 , 1
-VIPUL , - , - , 1 , 1
-VIPULORG , - , - , 1 , 1
-VIRAT , - , - , 1 , 1
-VISAKAIND , - , - , 1 , 1
-VISHALBL , - , - , 1 , 1
-VIVIMEDLAB , - , - , 1 , 1
-VKJINFRA , 1 , - , - , 1
-VLSFINANCE , - , - , 1 , 1
-VMART , - , - , 1 , 1
-VOITHPAPR , - , - , 1 , 1
-VOL , - , - , 1 , 1
-VOLTAMP , - , - , 1 , 1
-VOLTAS , - , - , 1 , 1
-VSTIND , - , - , 1 , 1
-VSTTILLERS , - , - , 1 , 1
-VTL , - , - , 1 , 1
-VTMLTD , - , - , 1 , 1
-VYAPAR , - , 1 , - , 1
-WABAG , - , - , 1 , 1
-WABCOINDIA , - , - , 1 , 1
-WATERBASE , - , - , 1 , 1
-WEIZFOREX , - , - , 1 , 1
-WEIZMANIND , - , - , 1 , 1
-WELENT , - , - , 1 , 1
-WELSPUNGUJR , - , - , 1 , 1
-WELSPUNIND , - , - , 1 , 1
-WESTLEIRES , - , - , 1 , 1
-WHIRLPOOL , - , - , 1 , 1
-WIDIA , - , - , 1 , 1
-WIMPLAST , - , - , 1 , 1
-WINDMACHIN , - , - , 1 , 1
-WIREFABR , - , - , 1 , 1
-WONDERLA , - , - , 1 , 1
-WPIL , - , - , 1 , 1
-WSFIN , - , - , 1 , 1
-WSTCSTPAPR , - , - , 1 , 1
-YESBANK , - , - , 1 , 1
-YUKEN , - , - , 1 , 1
-ZANMOLTR , - , - , 1 , 1
-ZEEL , - , - , 1 , 1
-ZEELEARN , - , - , 1 , 1
-ZENIFIB , - , - , 1 , 1
-ZENLABS , - , - , 1 , 1
-ZENTEC , - , - , 1 , 1
-ZFSTEERING , - , - , 1 , 1
-ZODIACLOTH , - , - , 1 , 1
-ZODJRDMKJ , - , - , 1 , 1
-ZSARACOM , - , 1 , - , 1
-ZSOUTGAS , - , - , 1 , 1
-ZSWASTSA , - , - , 1 , 1
-ZUARI , - , - , 1 , 1
-ZUARIGLOB , - , - , 1 , 1
-ZWELCAST , - , - , 1 , 1
-AARTIDRUGS , - , 1 , 1 , 2
-AARTIIND , - , 1 , 1 , 2
-ACGL , - , - , 2 , 2
-AEGISLOG , - , - , 2 , 2
-ALANKIT , - , - , 2 , 2
-ALEMBICLTD , - , 1 , 1 , 2
-ALICON , - , - , 2 , 2
-ALKEM , - , - , 2 , 2
-AMARAJABAT , - , - , 2 , 2
-ARFIN , 1 , - , 1 , 2
-ARROWGREEN , - , - , 2 , 2
-ASHOKA , - , - , 2 , 2
-ASMTEC , - , - , 2 , 2
-ASTRAL , - , - , 2 , 2
-ATULAUTO , - , - , 2 , 2
-AVTNPL , - , - , 2 , 2
-BALFC , - , - , 2 , 2
-BALRAMCHIN , - , 1 , 1 , 2
-BANCOINDIA , - , - , 2 , 2
-BAYERCROP , - , 1 , 1 , 2
-BEARDSELL , 1 , - , 1 , 2
-BHARTIARTL , - , - , 2 , 2
-BIOCON , 1 , - , 1 , 2
-BRIGADE , - , - , 2 , 2
-CARBORUNIV , - , - , 2 , 2
-CEINSYSTECH , 1 , - , 1 , 2
-CENTRUM , - , - , 2 , 2
-CENTUM , - , - , 2 , 2
-CHEVIOT , - , 1 , 1 , 2
-CHOLAINV , - , - , 2 , 2
-CITADEL , 1 , - , 1 , 2
-CONTROLP , - , - , 2 , 2
-COROMANDEL , - , - , 2 , 2
-CUB , 1 , - , 1 , 2
-CUMMINSIND , - , - , 2 , 2
-CUPID , - , - , 2 , 2
-DABUR , - , - , 2 , 2
-DATAMATICS , - , - , 2 , 2
-DHAMPURSUG , - , - , 2 , 2
-DHANUKA , - , - , 2 , 2
-DHFL , - , - , 2 , 2
-DLF , - , - , 2 , 2
-ECLERX , - , 1 , 1 , 2
-EDELWEISS , - , - , 2 , 2
-EXIDEIND , - , - , 2 , 2
-FDC , - , 1 , 1 , 2
-FIBERWEB , 1 , - , 1 , 2
-FLORENCE , - , - , 2 , 2
-FRONTSEC , - , 1 , 1 , 2
-GABRIEL , - , - , 2 , 2
-GARNETINT , 1 , - , 1 , 2
-GARWALLROP , - , - , 2 , 2
-GDL , - , - , 2 , 2
-GILLETTE , - , - , 2 , 2
-GOACARBON , - , - , 2 , 2
-GPPL , - , - , 2 , 2
-GRAPHITE , - , - , 2 , 2
-GREAVESCOT , - , - , 2 , 2
-GULFOILLUB , - , - , 2 , 2
-GULPOLY , - , - , 2 , 2
-HARITASEAT , - , - , 2 , 2
-HATSUN , - , - , 2 , 2
-HDFC , - , - , 2 , 2
-HERITGFOOD , - , - , 2 , 2
-HEROMOTOCO , - , - , 2 , 2
-HESTERPH , - , - , 2 , 2
-HIKAL , - , - , 2 , 2
-HINDCOMPOS , 1 , - , 1 , 2
-HINDUNILVR , - , - , 2 , 2
-HINDZINC , - , - , 2 , 2
-HITECHGEAR , - , - , 2 , 2
-HUDCO , - , - , 2 , 2
-HYDIND , - , - , 2 , 2
-ICICIBANK , 1 , - , 1 , 2
-ICIL , - , - , 2 , 2
-IMFA , - , - , 2 , 2
-INDAG , - , - , 2 , 2
-INDGELA , - , 1 , 1 , 2
-INDNIPPON , - , - , 2 , 2
-INGERRAND , - , - , 2 , 2
-ISGEC , - , - , 2 , 2
-JAMNAAUTO , - , - , 2 , 2
-JBCHEPHARM , - , 1 , 1 , 2
-JMFINANCIL , - , - , 2 , 2
-KALECONSUL , - , - , 2 , 2
-KALLAM , 1 , - , 1 , 2
-KANSAINER , - , - , 2 , 2
-KIOCL , - , - , 2 , 2
-KIRLOSENG , - , - , 2 , 2
-KPRMILL , - , 1 , 1 , 2
-KSCL , - , 1 , 1 , 2
-LALPATHLAB , - , - , 2 , 2
-LAOPALA , 1 , - , 1 , 2
-LEEL , - , - , 2 , 2
-LOVABLE , - , 1 , 1 , 2
-LT , 1 , - , 1 , 2
-LTI , - , - , 2 , 2
-LTTS , - , - , 2 , 2
-M&M , 1 , - , 1 , 2
-MANINFRA , - , - , 2 , 2
-MANPASAND , 1 , - , 1 , 2
-MARATHON , - , 1 , 1 , 2
-MARICO , - , - , 2 , 2
-MASTEK , - , - , 2 , 2
-MEERA , - , - , 2 , 2
-MENONBE , - , - , 2 , 2
-MGL , - , - , 2 , 2
-MHRIL , 1 , - , 1 , 2
-MINDACORP , - , - , 2 , 2
-MINDAIND , - , - , 2 , 2
-MMFL , - , - , 2 , 2
-MOLDTEK , - , - , 2 , 2
-MOLDTKPAC , - , - , 2 , 2
-MONSANTO , - , - , 2 , 2
-MOTHERSUMI , 1 , - , 1 , 2
-MOTILALOFS , - , - , 2 , 2
-MRSS , 1 , - , 1 , 2
-MSL , 1 , - , 1 , 2
-MUNJALAU , 1 , - , 1 , 2
-NATCOPHARM , - , - , 2 , 2
-NAVINFLUOR , - , - , 2 , 2
-NBCC , - , - , 2 , 2
-NCLIND , - , - , 2 , 2
-NHPC , - , - , 2 , 2
-NICCOPAR , - , - , 2 , 2
-NILE , - , - , 2 , 2
-NILKAMAL , - , - , 2 , 2
-NMDC , - , - , 2 , 2
-NOVARTIND , - , 1 , 1 , 2
-NTPC , - , - , 2 , 2
-NUCLEUS , - , 1 , 1 , 2
-OKANCOTEA , 1 , - , 1 , 2
-OMMETALS , - , - , 2 , 2
-ORBTEXP , - , 1 , 1 , 2
-ORIENTC , - , - , 2 , 2
-PANAMAPET , 1 , - , 1 , 2
-PAUSHAKLTD , - , 1 , 1 , 2
-PCJEWELLER , 1 , - , 1 , 2
-PERSISTENT , - , - , 2 , 2
-PETRONET , 1 , - , 1 , 2
-PFC , - , - , 2 , 2
-PFIZER , - , - , 2 , 2
-PGHH , - , - , 2 , 2
-PIDILITIND , - , 1 , 1 , 2
-PIIND , - , - , 2 , 2
-PLASTIBLEN , 1 , - , 1 , 2
-POLYPLEX , - , - , 2 , 2
-POWERGRID , - , - , 2 , 2
-PPAP , - , - , 2 , 2
-PRECWIRE , - , - , 2 , 2
-RALLIS , - , - , 2 , 2
-RANEHOLDIN , - , - , 2 , 2
-RBL , - , - , 2 , 2
-RECLTD , - , - , 2 , 2
-RELIANCE , 1 , - , 1 , 2
-RICOAUTO , - , - , 2 , 2
-RML , - , - , 2 , 2
-SAGCEM , - , - , 2 , 2
-SANOFI , - , - , 2 , 2
-SATIA , - , - , 2 , 2
-SAVERA , - , - , 2 , 2
-SHANTIGEAR , - , - , 2 , 2
-SHARDA , - , - , 2 , 2
-SHERVANI , - , 1 , 1 , 2
-SHREECEM , - , - , 2 , 2
-SHRIRAMCIT , - , - , 2 , 2
-SIYSIL , - , - , 2 , 2
-SKFINDIA , - , 1 , 1 , 2
-SOBHA , - , 1 , 1 , 2
-SONATSOFTW , - , - , 2 , 2
-SQSBFSI , - , - , 2 , 2
-SRF , - , - , 2 , 2
-SRTRANSFIN , - , - , 2 , 2
-STERTOOLS , - , - , 2 , 2
-SUDARSCHEM , - , - , 2 , 2
-SUNDRMFAST , - , - , 2 , 2
-SUPPETRO , - , - , 2 , 2
-SUPRAJIT , - , - , 2 , 2
-TALBROSENG , 1 , - , 1 , 2
-TATACOFFEE , - , - , 2 , 2
-TATACOMM , - , - , 2 , 2
-TATAELXSI , 1 , - , 1 , 2
-TCI , - , - , 2 , 2
-THYROCARE , - , - , 2 , 2
-TIDEWATER , - , - , 2 , 2
-TORNTPHARM , - , - , 2 , 2
-TRITURBINE , - , - , 2 , 2
-TVSMOTOR , - , - , 2 , 2
-UNICHEMLAB , - , 1 , 1 , 2
-VAKRANG , 1 , - , 1 , 2
-VALIANTORG , - , - , 2 , 2
-VEDL , - , - , 2 , 2
-VESUVIUS , - , - , 2 , 2
-VFL , 1 , - , 1 , 2
-VINATIORGA , - , 1 , 1 , 2
-VIPIND , - , - , 2 , 2
-VIRATCRA , - , - , 2 , 2
-WENDT , - , - , 2 , 2
-WHEELS , - , - , 2 , 2
-YASHCHEM , 1 , - , 1 , 2
-ZENSARTECH , - , - , 2 , 2
-AMRUTANJAN , - , - , 3 , 3
-ASIANPAINT , - , - , 3 , 3
-AUROPHARMA , - , - , 3 , 3
-BHARATFORG , 1 , - , 2 , 3
-BHEL , 1 , - , 2 , 3
-BPCL , 1 , - , 2 , 3
-CASTROLIND , 1 , - , 2 , 3
-CONCOR , 1 , - , 2 , 3
-CYIENT , - , - , 3 , 3
-DCMSHRIRAM , - , - , 3 , 3
-ENGINERSIN , - , 1 , 2 , 3
-FOSECOIND , - , - , 3 , 3
-GAIL , 1 , - , 2 , 3
-HINDPETRO , 1 , - , 2 , 3
-INFY , - , 1 , 2 , 3
-IOC , 1 , - , 2 , 3
-IRB , - , - , 3 , 3
-JAYAGROGN , 1 , - , 2 , 3
-JENBURPH , - , 1 , 2 , 3
-KITEX , 1 , - , 2 , 3
-MRF , - , - , 3 , 3
-NAUKRI , - , - , 3 , 3
-ONGC , - , - , 3 , 3
-ORIENTPPR , - , - , 3 , 3
-SANDUMA , - , - , 3 , 3
-SANWARIA , 1 , - , 2 , 3
-SASKEN , - , - , 3 , 3
-SHBCL , 1 , - , 2 , 3
-SJVN , - , 1 , 2 , 3
-SUPREMEIND , - , - , 3 , 3
-SWARAJENG , - , 1 , 2 , 3
-TAKE , - , - , 3 , 3
-TCIEXP , - , - , 3 , 3
-TRIDENT , - , - , 3 , 3
-TTKPRESTIG , - , 1 , 2 , 3
-WIPRO , 1 , 1 , 1 , 3
-BEL , 1 , 1 , 2 , 4
-CARERATING , - , - , 4 , 4
-COLPAL , - , - , 4 , 4
-CRISIL , - , - , 4 , 4
-GMM , - , - , 4 , 4
-GPTINFRA , 1 , - , 3 , 4
-GRANULES , - , - , 4 , 4
-HEXAWARE , - , - , 4 , 4
-HGS , - , - , 4 , 4
-IBULHSGFIN , - , - , 4 , 4
-ICICIPRULI , - , - , 4 , 4
-KUSHAL , - , - , 4 , 4
-MANAPPURAM , - , - , 4 , 4
-MOIL , 1 , 1 , 2 , 4
-NESTLEIND , - , - , 4 , 4
-OIL , 1 , 1 , 2 , 4
-PAGEIND , - , - , 4 , 4
-SUNTV , - , - , 4 , 4
-SYMPHONY , - , - , 4 , 4
-VIDHIING , - , - , 4 , 4
-BALKRISIND , 1 , - , 4 , 5
-GODREJCP , 1 , - , 4 , 5
-HCLTECH , - , 1 , 4 , 5
-KKCL , - , - , 5 , 5
-MAYURUNIQ , - , 1 , 4 , 5
-TCS , - , 1 , 4 , 5
-MINDTREE , - , 1 , 5 , 6
+security_name, split_count, bonus_count, buyback_count, dividend_count, total_count
+20MICRONS , - , - , - , 1 , 1
+63MOONS , - , - , - , 1 , 1
+8KMILES , - , - , - , 1 , 1
+ABB , - , - , - , 1 , 1
+ABBOTINDIA , - , - , - , 1 , 1
+ABCBEARS , - , - , - , 1 , 1
+ABHIJIT , - , - , - , 1 , 1
+ABIRAFN , - , - , - , 1 , 1
+ABMKNO , - , - , - , 1 , 1
+ACC , - , - , - , 1 , 1
+ACE , - , - , - , 1 , 1
+ACKNIT , - , - , - , 1 , 1
+ACRYSIL , - , - , - , 1 , 1
+ADANIENT , - , - , - , 1 , 1
+ADANIPORTS , - , - , - , 1 , 1
+ADFFOODS , - , - , - , 1 , 1
+ADORFO , - , - , - , 1 , 1
+ADORWELD , - , - , - , 1 , 1
+ADROITINFO , - , - , - , 1 , 1
+ADVANIHOTR , - , - , - , 1 , 1
+ADVIKCA , 1 , - , - , - , 1
+AEL , - , - , - , 1 , 1
+AHLEAST , - , - , - , 1 , 1
+AHLWEST , - , - , - , 1 , 1
+AHMDSTE , - , - , - , 1 , 1
+AIAENG , - , - , - , 1 , 1
+AIFL , - , - , - , 1 , 1
+AINFRA , - , - , - , 1 , 1
+AKCAPIT , - , - , - , 1 , 1
+AKZOINDIA , - , - , - , 1 , 1
+ALBERTDA , - , - , - , 1 , 1
+ALEXANDER , - , 1 , - , - , 1
+ALFREDHE , - , - , - , 1 , 1
+ALKALI , - , - , - , 1 , 1
+ALKYLAMINE , - , - , - , 1 , 1
+ALLCARGO , - , - , - , 1 , 1
+ALPHAGEO , - , - , - , 1 , 1
+ALPINEHOU , - , - , - , 1 , 1
+AMARJOTHI , - , - , - , 1 , 1
+AMBIKCO , - , - , - , 1 , 1
+AMBUJACEM , - , - , - , 1 , 1
+AMFORG , - , - , 1 , - , 1
+AMJLAND , - , - , - , 1 , 1
+AMNPLST , - , - , - , 1 , 1
+AMRTCORP , - , - , - , 1 , 1
+ANANTRAJ , - , - , - , 1 , 1
+ANDHRSUGAR , - , - , - , 1 , 1
+ANDREWYU , - , - , - , 1 , 1
+ANUHPHR , - , - , - , 1 , 1
+APARINDS , - , - , - , 1 , 1
+APCL , - , - , - , 1 , 1
+APCOTEXIND , - , - , - , 1 , 1
+APLAPOLLO , - , - , - , 1 , 1
+APLLTD , - , - , - , 1 , 1
+APMIN , - , - , - , 1 , 1
+APOLLOHOSP , - , - , - , 1 , 1
+APOLLOTYRE , - , - , - , 1 , 1
+APTECHT , - , - , - , 1 , 1
+AREXMIS , - , - , - , 1 , 1
+ARIES , - , - , - , 1 , 1
+ARIHCAPM , - , - , - , 1 , 1
+AROGRANITE , - , - , - , 1 , 1
+ARROWTEX , - , - , - , 1 , 1
+ARVIND , - , - , - , 1 , 1
+ASAHIINDIA , - , - , - , 1 , 1
+ASALCBR , - , - , - , 1 , 1
+ASHCAP , - , - , - , 1 , 1
+ASHIANA , - , - , - , 1 , 1
+ASHOKALC , - , - , - , 1 , 1
+ASHOKLEY , - , - , - , 1 , 1
+ASIANTILES , - , - , - , 1 , 1
+ASIIL , - , - , - , 1 , 1
+ASL , - , - , - , 1 , 1
+ASTAR , - , - , - , 1 , 1
+ASTEC , - , - , - , 1 , 1
+ASTRAMICRO , - , - , - , 1 , 1
+ASYL , - , - , - , 1 , 1
+ATFL , - , - , - , 1 , 1
+ATLANTA , - , - , - , 1 , 1
+ATLASCYCLE , 1 , - , - , - , 1
+ATUL , - , - , - , 1 , 1
+AURIONPRO , - , - , - , 1 , 1
+AUTOAXLES , - , - , - , 1 , 1
+AUTOINT , - , 1 , - , - , 1
+AVANTEL , - , - , - , 1 , 1
+AVANTI , - , - , - , 1 , 1
+AXISBANK , - , - , - , 1 , 1
+BABA , - , - , 1 , - , 1
+BAJAJ-AUTO , - , - , - , 1 , 1
+BAJAJCORP , - , - , - , 1 , 1
+BAJAJELEC , - , - , - , 1 , 1
+BAJAJFINSV , - , - , - , 1 , 1
+BAJAJHLDNG , - , - , - , 1 , 1
+BAJFINANCE , - , - , - , 1 , 1
+BALAJITELE , - , - , - , 1 , 1
+BALAMINES , - , - , - , 1 , 1
+BALASORE , - , - , - , 1 , 1
+BALMLAWRIE , - , - , - , 1 , 1
+BALPHARMA , - , - , - , 1 , 1
+BAMBINO , - , - , - , 1 , 1
+BAMPSL , - , 1 , - , - , 1
+BANARBEADS , - , - , - , 1 , 1
+BANARISUG , - , - , - , 1 , 1
+BANKBARODA , - , - , - , 1 , 1
+BANSWRAS , - , - , - , 1 , 1
+BAPACK , - , - , - , 1 , 1
+BASANTGL , - , - , - , 1 , 1
+BASF , - , - , - , 1 , 1
+BASML , - , - , - , 1 , 1
+BATAINDIA , - , - , - , 1 , 1
+BBARODA , - , - , - , 1 , 1
+BBREALTY , - , - , - , 1 , 1
+BBTC , - , - , - , 1 , 1
+BCLIL , - , - , - , 1 , 1
+BDH , - , - , - , 1 , 1
+BEEKAY , - , - , - , 1 , 1
+BEML , - , - , - , 1 , 1
+BENARAS , - , - , - , 1 , 1
+BENGALASM , - , - , - , 1 , 1
+BEPL , - , - , - , 1 , 1
+BERGEPAINT , - , - , - , 1 , 1
+BFLAFL , - , - , - , 1 , 1
+BGWTATO , - , - , - , 1 , 1
+BHAGIL , - , - , - , 1 , 1
+BHARAT , - , - , - , 1 , 1
+BHARATRAS , - , - , - , 1 , 1
+BHARATSE , - , - , - , 1 , 1
+BIGBLOC , - , - , - , 1 , 1
+BIL , - , - , - , 1 , 1
+BILENERGY , - , 1 , - , - , 1
+BIMETAL , - , - , - , 1 , 1
+BIRLACORPN , - , - , - , 1 , 1
+BKMINDST , - , - , - , 1 , 1
+BLACKROSE , - , - , - , 1 , 1
+BLIL , - , - , - , 1 , 1
+BLISSGVS , - , - , - , 1 , 1
+BLUECHIPT , - , - , - , 1 , 1
+BLUEDART , - , - , - , 1 , 1
+BLUESTARCO , - , - , - , 1 , 1
+BNKCAP , - , - , - , 1 , 1
+BNRSEC , - , - , - , 1 , 1
+BNRUDY , - , - , - , 1 , 1
+BOCINDIA , - , - , - , 1 , 1
+BODALCHEM , - , - , - , 1 , 1
+BODHTREE , - , - , - , 1 , 1
+BOMBCYC , - , - , - , 1 , 1
+BOMDYEING , - , - , - , 1 , 1
+BOMOXY-B1 , - , - , - , 1 , 1
+BOSCHLTD , - , - , - , 1 , 1
+BRAWN , - , - , - , 1 , 1
+BRIGHTBR , - , - , - , 1 , 1
+BRITANNIA , - , - , - , 1 , 1
+BRNL , - , - , - , 1 , 1
+BSL , - , - , - , 1 , 1
+BWPL , - , - , - , 1 , 1
+CAIRN , - , - , - , 1 , 1
+CANBK , - , - , - , 1 , 1
+CAPITALT , - , - , - , 1 , 1
+CAPPL , - , - , - , 1 , 1
+CAPRIHANS , - , - , - , 1 , 1
+CARNATIN , - , - , - , 1 , 1
+CATVISION , - , - , - , 1 , 1
+CCL , - , - , - , 1 , 1
+CEATLTD , - , - , - , 1 , 1
+CEEJAY , - , - , - , 1 , 1
+CENTENKA , - , - , - , 1 , 1
+CENTURYPLY , - , - , - , 1 , 1
+CENTURYTEX , - , - , - , 1 , 1
+CERA , - , - , - , 1 , 1
+CESC , - , - , - , 1 , 1
+CGVAK , - , - , - , 1 , 1
+CHAMANSE , - , - , - , 1 , 1
+CHAMBLFERT , - , - , - , 1 , 1
+CHDCHEM , - , - , - , 1 , 1
+CHDDLTD , - , - , - , 1 , 1
+CHEMBOND , - , - , - , 1 , 1
+CHEMCRUX , - , - , - , 1 , 1
+CHENNPETRO , - , - , - , 1 , 1
+CHOKSI , - , - , - , 1 , 1
+CILSEC , - , - , - , 1 , 1
+CINELINE , - , - , - , 1 , 1
+CIPLA , - , - , - , 1 , 1
+CLARIS , - , - , - , 1 , 1
+CLNINDIA , - , - , - , 1 , 1
+CMI , - , - , - , 1 , 1
+COALINDIA , - , - , - , 1 , 1
+COASTCORP , - , - , - , 1 , 1
+COMCL , - , - , - , 1 , 1
+COMFINCAP , - , - , - , 1 , 1
+COMFINTE , - , - , - , 1 , 1
+COMPEAU , - , - , - , 1 , 1
+COMPUAGE , - , - , - , 1 , 1
+COMPUSOFT , - , - , - , 1 , 1
+CONFIPET , - , - , - , 1 , 1
+CORALAB , - , - , - , 1 , 1
+COSMOFILMS , - , - , - , 1 , 1
+COSYN , - , - , - , 1 , 1
+COX&KINGS , - , - , - , 1 , 1
+CPL , - , - , - , 1 , 1
+CREST , - , - , - , 1 , 1
+CROMPTON , - , - , - , 1 , 1
+CSLFINANCE , - , - , - , 1 , 1
+CTL , - , - , - , 1 , 1
+CYBERTECH , - , - , - , 1 , 1
+DAAWAT , - , - , - , 1 , 1
+DAICHI , - , - , - , 1 , 1
+DALMIABHA , - , - , - , 1 , 1
+DALMIACEM , - , - , - , 1 , 1
+DAMOTH , - , - , - , 1 , 1
+DANLAW , - , - , 1 , - , 1
+DANUBE , 1 , - , - , - , 1
+DBL , - , - , - , 1 , 1
+DCBBANK , - , - , - , 1 , 1
+DCMSRMIND , - , - , - , 1 , 1
+DEEPAKFERT , - , - , - , 1 , 1
+DEEPAKNI , - , - , - , 1 , 1
+DEEPIND , - , - , - , 1 , 1
+DELTACORP , - , - , - , 1 , 1
+DENISON , - , - , - , 1 , 1
+DENORA , - , - , - , 1 , 1
+DFM , - , - , - , 1 , 1
+DHPIND , - , - , - , 1 , 1
+DHUNINV , - , - , - , 1 , 1
+DHUNTEAIND , - , - , - , 1 , 1
+DIAMINES , - , - , - , 1 , 1
+DIANATEA , - , - , - , 1 , 1
+DISA , - , - , - , 1 , 1
+DIVISLAB , - , - , - , 1 , 1
+DIVSHKT , - , - , - , 1 , 1
+DLINK , - , - , - , 1 , 1
+DLINKINDIA , - , - , - , 1 , 1
+DONEAR , - , - , - , 1 , 1
+DPL , - , - , - , 1 , 1
+DRAGARW , - , - , - , 1 , 1
+DRREDDY , - , - , - , 1 , 1
+DUKEOFS , - , - , - , 1 , 1
+DUPHARIN , - , - , - , 1 , 1
+DWITIYA , - , - , - , 1 , 1
+DYNAMIND , - , - , - , 1 , 1
+DYNPRO , - , - , - , 1 , 1
+EASTRED , - , - , - , 1 , 1
+ECOPLAST , - , - , - , 1 , 1
+EICHERMOT , - , - , - , 1 , 1
+EIHAHOTELS , - , - , - , 1 , 1
+EIHOTEL , - , - , - , 1 , 1
+EIMCOELECO , - , - , - , 1 , 1
+ELANTAS , - , - , - , 1 , 1
+ELCIDIN , - , - , - , 1 , 1
+ELECON , - , - , - , 1 , 1
+ELECTCAST , - , - , - , 1 , 1
+ELEMARB , - , - , 1 , - , 1
+ELGIEQUIP , - , - , - , 1 , 1
+ELIXIR , - , - , - , 1 , 1
+ELNET , - , - , - , 1 , 1
+ELPROINTL , 1 , - , - , - , 1
+EMAMILTD , - , - , - , 1 , 1
+EMAMIPAP , - , - , - , 1 , 1
+EMKAY , - , - , - , 1 , 1
+EML , - , - , - , 1 , 1
+EMMBI , - , - , - , 1 , 1
+EMPIND , - , - , - , 1 , 1
+ENDURANCE , - , - , - , 1 , 1
+ENERGYDEV , - , - , - , 1 , 1
+ENIL , - , - , - , 1 , 1
+ESABINDIA , - , - , - , 1 , 1
+ESCORTS , - , - , - , 1 , 1
+ESSELPRO , - , - , - , 1 , 1
+EVERESTIND , - , - , - , 1 , 1
+EXCEL , - , 1 , - , - , 1
+EXCELINDUS , - , - , - , 1 , 1
+FAIRCHEM , - , - , - , 1 , 1
+FAIRDSY , - , - , - , 1 , 1
+FCH , - , - , - , 1 , 1
+FCL , - , - , - , 1 , 1
+FEDDERELEC , - , - , - , 1 , 1
+FEDERALBNK , - , - , - , 1 , 1
+FEL , - , - , - , 1 , 1
+FELDVR , - , - , - , 1 , 1
+FIEMIND , - , - , - , 1 , 1
+FINCABLES , - , - , - , 1 , 1
+FINOLEXIND , - , - , - , 1 , 1
+FLEXFO , - , - , - , 1 , 1
+FLFL , - , - , - , 1 , 1
+FLUIDOM , - , - , - , 1 , 1
+FOMEHOT , - , - , - , 1 , 1
+FOODSIN , - , - , - , 1 , 1
+FORBESCO , - , - , - , 1 , 1
+FORCEMOT , - , - , - , 1 , 1
+FREDUN , - , - , - , 1 , 1
+FUTSOL , - , - , - , 1 , 1
+GAEL , - , - , - , 1 , 1
+GALLISPAT , - , - , - , 1 , 1
+GANDHITUBE , - , - , 1 , - , 1
+GANECOS , - , - , - , 1 , 1
+GANESHHOUC , - , - , - , 1 , 1
+GARWARPOLY , - , - , - , 1 , 1
+GATI , - , - , - , 1 , 1
+GEECEE , - , - , - , 1 , 1
+GENCON , - , - , - , 1 , 1
+GENESYS , - , - , - , 1 , 1
+GENUSPOWER , - , - , - , 1 , 1
+GEOJITFSL , - , - , - , 1 , 1
+GEPIL , - , - , - , 1 , 1
+GESHIP , - , - , - , 1 , 1
+GET&D , - , - , - , 1 , 1
+GGPL , - , 1 , - , - , 1
+GHCL , - , - , - , 1 , 1
+GICHSGFIN , - , - , - , 1 , 1
+GILADAFINS , - , - , - , 1 , 1
+GINISILK , - , - , - , 1 , 1
+GIPCL , - , - , - , 1 , 1
+GITANJALI , - , - , - , 1 , 1
+GLAXO , - , - , - , 1 , 1
+GLENMARK , - , - , - , 1 , 1
+GLOSTER , - , - , - , 1 , 1
+GMBREW , - , - , - , 1 , 1
+GMDCLTD , - , - , - , 1 , 1
+GNFC , - , - , - , 1 , 1
+GNRL , - , - , - , 1 , 1
+GOCLCORP , - , - , - , 1 , 1
+GODFRYPHLP , - , - , - , 1 , 1
+GODREJIND , - , - , - , 1 , 1
+GOLCRSFI , - , - , - , 1 , 1
+GOLKUNDIA , - , - , - , 1 , 1
+GOODLUCK , - , - , - , 1 , 1
+GOODRICKE , - , - , - , 1 , 1
+GOODYEAR , - , - , - , 1 , 1
+GOWRALE , - , - , - , 1 , 1
+GRASIM , - , - , - , 1 , 1
+GRAUWEIL , - , - , - , 1 , 1
+GRAVITA , - , - , - , 1 , 1
+GREENPLY , - , - , - , 1 , 1
+GRINDWELL , - , - , - , 1 , 1
+GRNLAMIND , - , - , - , 1 , 1
+GRPLTD , - , - , - , 1 , 1
+GRUH , - , - , - , 1 , 1
+GSFC , - , - , - , 1 , 1
+GSKCONS , - , - , - , 1 , 1
+GSPL , - , - , - , 1 , 1
+GTPL , - , - , - , 1 , 1
+GUFICBIO , - , - , - , 1 , 1
+GUJALKALI , - , - , - , 1 , 1
+GUJAPOLLO , - , - , - , 1 , 1
+GUJFLUORO , - , - , - , 1 , 1
+GUJGAS , - , - , - , 1 , 1
+GUJHOTE , - , - , - , 1 , 1
+GULFPETRO , - , - , - , 1 , 1
+HALDYNGL , - , - , - , 1 , 1
+HAVELLS , - , - , - , 1 , 1
+HAWKINCOOK , - , - , - , 1 , 1
+HBLPOWER , - , - , - , 1 , 1
+HDFCBANK , - , - , - , 1 , 1
+HDFCLIFE , - , - , - , 1 , 1
+HEG , - , - , - , 1 , 1
+HEIDELBERG , - , - , - , 1 , 1
+HERCULES , - , - , - , 1 , 1
+HIGHGROUND , - , - , - , 1 , 1
+HIMATSEIDE , - , - , - , 1 , 1
+HINDALCO , - , - , - , 1 , 1
+HINDALUMI , - , - , - , 1 , 1
+HINDCOPPER , - , - , - , 1 , 1
+HINDTIN , - , - , - , 1 , 1
+HINDUJAVEN , - , - , - , 1 , 1
+HISARMET , - , - , - , 1 , 1
+HITECHCORP , - , - , - , 1 , 1
+HMVL , - , - , - , 1 , 1
+HONAUT , - , - , - , 1 , 1
+HONDAPOWER , - , - , - , 1 , 1
+HOPFL , - , - , - , 1 , 1
+HPL , - , - , - , 1 , 1
+HSCL , - , - , - , 1 , 1
+HSIL , - , - , - , 1 , 1
+HTMEDIA , - , - , - , 1 , 1
+HUIL , - , - , - , 1 , 1
+ICICIGI , - , - , - , 1 , 1
+ICRA , - , - , - , 1 , 1
+IDFC , - , - , - , 1 , 1
+IDFCBANK , - , - , - , 1 , 1
+IFGLEXPOR , - , - , - , 1 , 1
+IFSL , - , - , - , 1 , 1
+IGARASHI , - , - , - , 1 , 1
+IGPL , - , - , - , 1 , 1
+IIFL , - , - , - , 1 , 1
+IMPAL , - , - , - , 1 , 1
+INANI , - , - , - , 1 , 1
+INCAP , - , - , - , 1 , 1
+INDHOTEL , - , - , - , 1 , 1
+INDIACEM , - , - , - , 1 , 1
+INDIAGLYCO , - , - , - , 1 , 1
+INDIAHOME , - , - , - , 1 , 1
+INDIANB , - , - , - , 1 , 1
+INDIANCARD , - , - , - , 1 , 1
+INDIANHUME , - , - , - , 1 , 1
+INDIANVSH , - , - , - , 1 , 1
+INDIGO , - , - , - , 1 , 1
+INDLMETER , - , - , - , 1 , 1
+INDOAMIN , - , - , - , 1 , 1
+INDOBORAX , - , - , - , 1 , 1
+INDOCO , - , - , - , 1 , 1
+INDOTHAI , - , - , - , 1 , 1
+INDPRUD , - , - , - , 1 , 1
+INDRAMEDCO , - , - , - , 1 , 1
+INDSILHYD , - , - , - , 1 , 1
+INDTONER , - , - , - , 1 , 1
+INDUSINDBK , - , - , - , 1 , 1
+INEOSSTYRO , - , - , - , 1 , 1
+INFINITE , - , 1 , - , - , 1
+INFRATEL , - , - , - , 1 , 1
+INNOVTEC , - , - , - , 1 , 1
+INSECTICID , - , - , - , 1 , 1
+INTLCONV , - , - , - , 1 , 1
+INTRGLB , - , - , - , 1 , 1
+IONEXCHANG , - , - , - , 1 , 1
+IPCALAB , - , - , - , 1 , 1
+ISFT , - , - , - , 1 , 1
+ISHANCH , - , - , - , 1 , 1
+ITC , - , - , - , 1 , 1
+ITDC , - , - , - , 1 , 1
+ITDCEM , - , - , - , 1 , 1
+ITHL , - , - , - , 1 , 1
+ITL , - , - , - , 1 , 1
+IVC , - , - , - , 1 , 1
+IVP , - , - , - , 1 , 1
+JAGRAN , - , - , - , 1 , 1
+JAGSNPHARM , - , - , - , 1 , 1
+JAICORPLTD , - , - , - , 1 , 1
+JAMESWARREN , - , - , 1 , - , 1
+JAYBARMARU , - , - , - , 1 , 1
+JAYSHREETEA , - , - , - , 1 , 1
+JAYSYN , - , - , - , 1 , 1
+JAYUSH , - , - , - , 1 , 1
+JBFIND , - , - , - , 1 , 1
+JBMA , - , - , - , 1 , 1
+JCHAC , - , - , - , 1 , 1
+JDML , - , 1 , - , - , 1
+JINDALPOLY , - , - , - , 1 , 1
+JINDALSAW , - , - , - , 1 , 1
+JINDHOT , - , - , - , 1 , 1
+JINDRILL , - , - , - , 1 , 1
+JISLDVREQS , - , - , - , 1 , 1
+JISLJALEQS , - , - , - , 1 , 1
+JK AGRI , - , - , - , 1 , 1
+JKCEMENT , - , - , - , 1 , 1
+JKIL , - , - , - , 1 , 1
+JKLAKSHMI , - , - , - , 1 , 1
+JKPAPER , - , - , - , 1 , 1
+JKTYRE , - , - , - , 1 , 1
+JLMORI , - , - , - , 1 , 1
+JMCPROJECT , - , - , - , 1 , 1
+JOINDRE , - , - , - , 1 , 1
+JOONKTOLL , - , - , - , 1 , 1
+JOSTS , - , - , - , 1 , 1
+JSWENERGY , - , - , - , 1 , 1
+JSWSTEEL , - , - , - , 1 , 1
+JTEKTINDIA , - , - , - , 1 , 1
+JUBILANTORG , - , - , - , 1 , 1
+JUBLFOOD , - , - , - , 1 , 1
+JUPITERIN , - , - , - , 1 , 1
+JYOTHYLAB , - , - , - , 1 , 1
+KABRAEXTRU , - , - , - , 1 , 1
+KAIRA , - , - , - , 1 , 1
+KAJARIACER , - , - , - , 1 , 1
+KAKATCEM , - , - , - , 1 , 1
+KALPATPOWR , - , - , - , 1 , 1
+KALYANIFRG , - , - , - , 1 , 1
+KAMADGIRI , - , - , - , 1 , 1
+KAMDHENU , - , - , - , 1 , 1
+KANCHI , - , - , - , 1 , 1
+KANORICHEM , - , - , - , 1 , 1
+KANPRPLA , - , - , - , 1 , 1
+KARURVYSYA , - , - , - , 1 , 1
+KAYCEEI , - , - , - , 1 , 1
+KCP , - , - , - , 1 , 1
+KCPSUGIND , - , - , - , 1 , 1
+KDDL , - , - , - , 1 , 1
+KEC , - , - , - , 1 , 1
+KEI , - , - , - , 1 , 1
+KELENRG , - , - , - , 1 , 1
+KELLTONTEC , - , 1 , - , - , 1
+KEYCORPSER , - , - , - , 1 , 1
+KGDENIM , - , - , - , 1 , 1
+KHAICHEM , - , - , - , 1 , 1
+KIFS , - , - , - , 1 , 1
+KILPEST , - , - , - , 1 , 1
+KIRANVYPAR , - , - , - , 1 , 1
+KIRLFER , - , - , - , 1 , 1
+KIRLOSBROS , - , - , - , 1 , 1
+KIRLOSIND , - , - , - , 1 , 1
+KIRLPNU , - , - , - , 1 , 1
+KLBRENG-B , - , - , - , 1 , 1
+KLRF , - , - , - , 1 , 1
+KMSMEDI , - , - , - , 1 , 1
+KNRCON , - , - , - , 1 , 1
+KOLTEPATIL , - , - , - , 1 , 1
+KOTAKBANK , - , - , - , 1 , 1
+KOTHARIPRO , - , - , - , 1 , 1
+KOVAI , - , - , - , 1 , 1
+KPEL , - , - , - , 1 , 1
+KPIT , - , - , - , 1 , 1
+KPL , - , 1 , - , - , 1
+KRBL , - , - , - , 1 , 1
+KRIINFRA , - , - , - , 1 , 1
+KRITIIND , - , - , - , 1 , 1
+KRITINUT , - , - , - , 1 , 1
+KRL , - , - , - , 1 , 1
+KRONE , - , - , - , 1 , 1
+KSBPUMPS , - , - , - , 1 , 1
+KSE , - , - , - , 1 , 1
+KSL , - , - , - , 1 , 1
+KTIL , - , - , - , 1 , 1
+KTKBANK , - , - , - , 1 , 1
+KUANTUM , - , - , - , 1 , 1
+KWALITY , - , - , - , 1 , 1
+L&TFH , - , - , - , 1 , 1
+LAHOTIOV , - , - , - , 1 , 1
+LAKSELEC , - , - , - , 1 , 1
+LAKSHMIMIL , - , - , - , 1 , 1
+LAKSHVILAS , - , - , - , 1 , 1
+LAMBODHARA , - , - , - , 1 , 1
+LANCER , - , 1 , - , - , 1
+LANCORHOL , - , - , - , 1 , 1
+LAURUSLABS , - , - , - , 1 , 1
+LAXMIMACH , - , - , - , 1 , 1
+LEHIL , - , - , - , 1 , 1
+LGBBROSLTD , - , - , - , 1 , 1
+LICHSGFIN , - , - , - , 1 , 1
+LINCOPH , - , - , - , 1 , 1
+LINCPEN , - , - , - , 1 , 1
+LKPFIN , - , - , - , 1 , 1
+LOYAL , - , 1 , - , - , 1
+LOYALTEX , - , - , - , 1 , 1
+LUDLOWJUT , - , - , - , 1 , 1
+LUHARUKA , - , - , - , 1 , 1
+LUMAXIND , - , - , - , 1 , 1
+LUMAXTECH , - , - , - , 1 , 1
+LUPIN$ , - , - , - , 1 , 1
+LUXIND , - , - , - , 1 , 1
+LYPSAGEMS , - , 1 , - , - , 1
+M&MFIN , - , - , - , 1 , 1
+MAANALU , - , 1 , - , - , 1
+MACK , - , - , - , 1 , 1
+MACPLAS , - , - , - , 1 , 1
+MADHAV , - , - , - , 1 , 1
+MADHUCON , - , - , - , 1 , 1
+MAFATIND , - , - , - , 1 , 1
+MAGMA , - , - , - , 1 , 1
+MAGNAEL , - , - , - , 1 , 1
+MAHLIFE , - , - , - , 1 , 1
+MAHSCOOTER , - , - , - , 1 , 1
+MAHSEAMLES , - , - , - , 1 , 1
+MAHSHRE , - , - , - , 1 , 1
+MAITHANALL , - , - , - , 1 , 1
+MAKERSL , - , - , - , 1 , 1
+MALLCOM , - , - , - , 1 , 1
+MANAKSIA , - , - , - , 1 , 1
+MANALIPE , - , - , - , 1 , 1
+MANGALAM , - , - , - , 1 , 1
+MANGCHEFER , - , - , - , 1 , 1
+MANGLMCEM , - , - , - , 1 , 1
+MANINDS , - , - , - , 1 , 1
+MANUGRAPH , - , - , - , 1 , 1
+MARIS , - , - , - , 1 , 1
+MARKSANS , - , - , - , 1 , 1
+MARUTI , - , - , - , 1 , 1
+MARVINY , - , - , - , 1 , 1
+MASFIN , - , - , - , 1 , 1
+MAZDALTD , - , - , - , 1 , 1
+MCCHRLS-B , - , - , - , 1 , 1
+MCLEODRUSS , - , - , - , 1 , 1
+MCX , - , - , - , 1 , 1
+MEDICAME , - , - , - , 1 , 1
+MEGH , - , - , - , 1 , 1
+MENNPIS , - , - , - , 1 , 1
+MEP , - , - , - , 1 , 1
+MERCATOR , - , - , - , 1 , 1
+MERCK , - , - , - , 1 , 1
+MERCURYLAB , - , - , - , 1 , 1
+METALCO , - , - , - , 1 , 1
+MINDTECK , - , - , - , 1 , 1
+MIRZAINT , - , - , - , 1 , 1
+MITSU , - , - , - , 1 , 1
+MJCO , - , - , - , 1 , 1
+MMLF , - , 1 , - , - , 1
+MMTC , - , - , - , 1 , 1
+MODERN , - , - , - , 1 , 1
+MODISNME , - , - , - , 1 , 1
+MODRNSH , - , - , - , 1 , 1
+MOHOTAIND , - , - , - , 1 , 1
+MONEYMAST , - , - , - , 1 , 1
+MONEYMATF , - , - , - , 1 , 1
+MONTECARLO , - , - , - , 1 , 1
+MORARJEE , - , - , - , 1 , 1
+MORGANITE , - , - , - , 1 , 1
+MPHASIS , - , - , - , 1 , 1
+MRPL , - , - , - , 1 , 1
+MUKESHB , - , - , - , 1 , 1
+MUL , - , - , - , 1 , 1
+MULTIIN , - , - , - , 1 , 1
+MUNJALSHOW , - , - , - , 1 , 1
+MUTHOOTFIN , - , - , - , 1 , 1
+MUTHTFN , - , 1 , - , - , 1
+MYSORPETRO , - , - , - , 1 , 1
+NACLIND , - , - , - , 1 , 1
+NAGARCON , - , - , - , 1 , 1
+NAHARCAP , - , - , - , 1 , 1
+NAHARINDUS , - , - , - , 1 , 1
+NAHARINVE , - , - , - , 1 , 1
+NAHARSPING , - , - , - , 1 , 1
+NANDAN , - , - , - , 1 , 1
+NATCAPSU , - , - , - , 1 , 1
+NATFIT , - , - , - , 1 , 1
+NATIONALUM , - , - , - , 1 , 1
+NATNLSTEEL , - , - , - , 1 , 1
+NATPEROX , - , - , - , 1 , 1
+NATPLAS , - , - , - , 1 , 1
+NAVBLDR , - , - , - , 1 , 1
+NAVNETEDUL , - , - , - , 1 , 1
+NBVENTURES , - , - , - , 1 , 1
+NEAGI , - , - , - , 1 , 1
+NECLIFE , - , - , - , 1 , 1
+NELCAST , - , - , - , 1 , 1
+NFL , - , - , - , 1 , 1
+NGIND , - , - , - , 1 , 1
+NIACL , - , - , - , 1 , 1
+NIDL , - , - , - , 1 , 1
+NIITTECH , - , - , - , 1 , 1
+NILA , - , - , - , 1 , 1
+NIPPOBATRY , - , - , - , 1 , 1
+NIRLON , - , - , - , 1 , 1
+NITINCAST , - , - , - , 1 , 1
+NITINSPIN , - , - , - , 1 , 1
+NITTAGELA , - , - , - , 1 , 1
+NLCINDIA , - , - , - , 1 , 1
+NOCIL , - , - , - , 1 , 1
+NOVAPUB , - , - , - , 1 , 1
+NRAGRIND , - , - , - , 1 , 1
+NRBBEARING , - , - , - , 1 , 1
+NUCENTFI , - , - , - , 1 , 1
+OAL , - , - , - , 1 , 1
+OASIS , - , - , - , 1 , 1
+OBEROIREAL , - , - , - , 1 , 1
+OBIL , - , - , - , 1 , 1
+OCEANIC , - , - , - , 1 , 1
+OCL , - , - , - , 1 , 1
+OFSS , - , - , - , 1 , 1
+OMAXE , - , - , - , 1 , 1
+ONMOBILE , - , - , - , 1 , 1
+ONWARDTEC , - , - , - , 1 , 1
+ORIBEVER , - , - , - , 1 , 1
+ORICON , - , - , - , 1 , 1
+ORIENTABRA , - , - , - , 1 , 1
+ORIENTBELL , - , - , - , 1 , 1
+ORIENTCEM , - , - , - , 1 , 1
+ORIENTLTD , - , - , - , 1 , 1
+ORIENTREF , - , - , - , 1 , 1
+ORISSAMINE , - , - , - , 1 , 1
+OROSMITHS , 1 , - , - , - , 1
+ORVENPR , - , - , - , 1 , 1
+PAISALO , - , - , - , 1 , 1
+PANACHE , - , - , - , 1 , 1
+PANAENERG , - , - , - , 1 , 1
+PANCARBON , - , - , - , 1 , 1
+PANCHSHEEL , - , - , - , 1 , 1
+PAPERPROD , - , - , - , 1 , 1
+PARAGMILK , - , - , - , 1 , 1
+PARMCOS-B , - , - , - , 1 , 1
+PATELROD , - , - , - , 1 , 1
+PATELSAI , - , - , - , 1 , 1
+PBMPOLY , - , - , - , 1 , 1
+PCCOSMA , - , - , - , 1 , 1
+PDMJEPAPER , - , - , - , 1 , 1
+PEL , - , - , - , 1 , 1
+PFS , - , - , - , 1 , 1
+PGFOIL , - , - , - , 1 , 1
+PHILIPCARB , - , - , - , 1 , 1
+PHOENIXLTD , - , - , - , 1 , 1
+PILANIINVS , - , - , - , 1 , 1
+PINCON , - , - , - , 1 , 1
+PIXTRANS , - , - , - , 1 , 1
+PNBGILTS , - , - , - , 1 , 1
+PNBHOUSING , - , - , - , 1 , 1
+PNCINFRA , - , - , - , 1 , 1
+PODARPIG , - , - , - , 1 , 1
+PODDAR , - , - , - , 1 , 1
+POLYCHEM , - , - , - , 1 , 1
+POLYMED , - , - , - , 1 , 1
+POLYSPIN , - , - , - , 1 , 1
+PONDYOXIDE , - , - , - , 1 , 1
+PONNIERODE , - , - , - , 1 , 1
+PORWAL , - , - , - , 1 , 1
+POWERMECH , - , - , - , 1 , 1
+PRABHAT , - , - , - , 1 , 1
+PRAJIND , - , - , - , 1 , 1
+PRECAM , - , - , - , 1 , 1
+PREMCO , - , - , - , 1 , 1
+PREMEXPL , - , - , - , 1 , 1
+PREMIERPOL , - , - , - , 1 , 1
+PREMPIPES , 1 , - , - , - , 1
+PRESTIGE , - , - , - , 1 , 1
+PRICOLLTD , - , - , - , 1 , 1
+PRIMAPLA , - , - , - , 1 , 1
+PRIME , - , - , - , 1 , 1
+PRIMEPRO , - , - , - , 1 , 1
+PRIMEURB , - , - , - , 1 , 1
+PRITHVIEXCH , - , - , - , 1 , 1
+PRIYALT , - , - , - , 1 , 1
+PSPPROJECT , - , - , - , 1 , 1
+PTC , - , - , - , 1 , 1
+PTL , - , - , - , 1 , 1
+PURVA , - , - , - , 1 , 1
+PVR , - , - , - , 1 , 1
+QUICKHEAL , - , - , - , 1 , 1
+RADICO , - , - , - , 1 , 1
+RADIXIND , - , - , - , 1 , 1
+RAIN , - , - , - , 1 , 1
+RAJESHEXPO , - , - , - , 1 , 1
+RAJGLOWIR , - , - , - , 1 , 1
+RAJOOENG , - , - , - , 1 , 1
+RAJPACK , - , - , - , 1 , 1
+RAJPALAYAM , - , - , - , 1 , 1
+RAJPUTANA , - , 1 , - , - , 1
+RAJSREESUG , - , - , - , 1 , 1
+RAMAPHO , - , - , - , 1 , 1
+RAMCOCEM , - , - , - , 1 , 1
+RAMCOIND , - , - , - , 1 , 1
+RAMRAT , - , - , - , 1 , 1
+RANEENGINE , - , - , - , 1 , 1
+RAPICUT , - , - , - , 1 , 1
+RAPIDIN , - , - , - , 1 , 1
+RASOI , - , - , - , 1 , 1
+RATNAMANI , - , - , - , 1 , 1
+RAYMOND , - , - , - , 1 , 1
+RBLBANK , - , - , - , 1 , 1
+RCF , - , - , - , 1 , 1
+RCIIND , - , - , - , 1 , 1
+REDINGTON , - , - , - , 1 , 1
+RELAXO , - , - , - , 1 , 1
+RELCAPITAL , - , - , - , 1 , 1
+RELCHEM , - , - , - , 1 , 1
+RELIANCEINF , - , - , - , 1 , 1
+RELINFRA , - , - , - , 1 , 1
+RELSTRUCT , - , - , - , 1 , 1
+REPCOHOME , - , - , - , 1 , 1
+RESPONIND , - , - , - , 1 , 1
+RGL , - , - , 1 , - , 1
+RISHDIGA , - , - , - , 1 , 1
+RISHIROOP , - , - , - , 1 , 1
+RJSHAH , - , - , - , 1 , 1
+RKFORGE , - , - , - , 1 , 1
+RMCHEM , - , 1 , - , - , 1
+RNAM , - , - , - , 1 , 1
+RODIUM , - , - , - , 1 , 1
+ROSSELLIND , - , - , - , 1 , 1
+ROTO , - , - , - , 1 , 1
+RPGLIFE , - , - , - , 1 , 1
+RPPINFRA , - , - , - , 1 , 1
+RSWM , - , - , - , 1 , 1
+RUBFILA , - , - , - , 1 , 1
+RUBYMILLS , - , - , - , 1 , 1
+RUCHIRA , - , - , - , 1 , 1
+RUPA , - , - , - , 1 , 1
+RUSHIL , - , - , - , 1 , 1
+SABTN , - , - , - , 1 , 1
+SACHEMT , - , - , - , 1 , 1
+SADBHAV , - , - , - , 1 , 1
+SADBHIN , - , - , - , 1 , 1
+SAGARPROD , - , - , - , 1 , 1
+SAHYOGMULT , - , - , - , 1 , 1
+SAIBABA , 1 , - , - , - , 1
+SAKSOFT , - , - , - , 1 , 1
+SAKTHIFIN , - , - , - , 1 , 1
+SAKUMA , - , - , - , 1 , 1
+SALASAR , - , - , - , 1 , 1
+SALONACOT , - , - , - , 1 , 1
+SALZER , - , - , - , 1 , 1
+SAMBANDAM , - , - , - , 1 , 1
+SAMKRG , - , - , - , 1 , 1
+SANCTRN , - , - , - , 1 , 1
+SANDESH , - , - , - , 1 , 1
+SANGAMIND , - , - , - , 1 , 1
+SANGHVIMOV , - , - , - , 1 , 1
+SAPPL , - , - , - , 1 , 1
+SARDAEN , - , - , - , 1 , 1
+SAREGAMA , - , - , - , 1 , 1
+SARLAPOLY , - , - , - , 1 , 1
+SARUPINDUS , - , - , - , 1 , 1
+SATRAPROP , - , - , - , 1 , 1
+SAURASHCEM , - , - , - , 1 , 1
+SBIN , - , - , - , 1 , 1
+SCHAEFFLER , - , - , - , 1 , 1
+SCHAND , - , - , - , 1 , 1
+SDBL , - , - , - , 1 , 1
+SELAN , - , - , - , 1 , 1
+SEQUENT , - , - , - , 1 , 1
+SESHAPAPER , - , - , - , 1 , 1
+SETCO , - , - , - , 1 , 1
+SEYAIND , - , - , - , 1 , 1
+SHAKTIPUMP , - , - , - , 1 , 1
+SHANKARA , - , - , - , 1 , 1
+SHANTAI , - , 1 , - , - , 1
+SHARDACROP , - , - , - , 1 , 1
+SHARDUL , - , - , - , 1 , 1
+SHASHIJIT , - , - , - , 1 , 1
+SHAWGELTIN , - , - , - , 1 , 1
+SHEMAROO , - , - , - , 1 , 1
+SHHARICH , - , - , - , 1 , 1
+SHILCTECH , - , - , - , 1 , 1
+SHILGRAV , - , - , - , 1 , 1
+SHILPAMED , - , - , - , 1 , 1
+SHIVAEXPO , - , - , - , 1 , 1
+SHIVALIK , - , - , - , 1 , 1
+SHIVTEX , - , - , - , 1 , 1
+SHK , - , - , - , 1 , 1
+SHOPERSTOP , - , - , - , 1 , 1
+SHREEPUSHK , - , - , - , 1 , 1
+SHREYANIND , - , - , - , 1 , 1
+SHREYAS , - , - , - , 1 , 1
+SHRIDINE , - , - , - , 1 , 1
+SHRISTI , - , - , - , 1 , 1
+SHRPREC , - , - , - , 1 , 1
+SHYAM , - , - , - , 1 , 1
+SICAGEN , - , - , - , 1 , 1
+SIEMENS , - , - , - , 1 , 1
+SIGNETIND , - , - , - , 1 , 1
+SIKA , - , - , - , 1 , 1
+SIL , - , - , - , 1 , 1
+SILINV , - , - , - , 1 , 1
+SIMMOND , - , - , - , 1 , 1
+SIMPLEXCAS , - , - , - , 1 , 1
+SIMPLEXINF , - , - , - , 1 , 1
+SIMPLXREA , - , - , - , 1 , 1
+SINCLAIR , - , - , - , 1 , 1
+SINTEX , - , - , - , 1 , 1
+SIPROJECTS , - , - , - , 1 , 1
+SIS , - , - , - , 1 , 1
+SKC , - , 1 , - , - , 1
+SKCIL , - , - , - , 1 , 1
+SKIPPER , - , - , - , 1 , 1
+SKPSEC , - , - , 1 , - , 1
+SMIFS , - , - , - , 1 , 1
+SMLT , - , - , - , 1 , 1
+SMSPHARMA , - , - , - , 1 , 1
+SOLARINDS , - , - , - , 1 , 1
+SOLIMAC , - , - , - , 1 , 1
+SOMANYCERA , - , - , - , 1 , 1
+SOTL , - , - , 1 , - , 1
+SOUTHBANK , - , - , - , 1 , 1
+SPAL , - , - , - , 1 , 1
+SREINFRA , - , - , - , 1 , 1
+SRFPOLY , - , - , - , 1 , 1
+SRHHYPOLTD , - , - , - , 1 , 1
+SRIPIPES , - , - , - , 1 , 1
+SRSFIN , 1 , - , - , - , 1
+SSWL , - , - , - , 1 , 1
+STANROS , - , - , - , 1 , 1
+STAR , - , - , - , 1 , 1
+STARPAPER , - , - , - , 1 , 1
+STEELCAS , - , - , - , 1 , 1
+STHINPA-B , - , - , - , 1 , 1
+STOVAC , - , - , - , 1 , 1
+STRTECH , - , - , - , 1 , 1
+SUBROS , - , - , - , 1 , 1
+SUCHITRA , - , - , - , 1 , 1
+SUDTIND-B , - , - , - , 1 , 1
+SUJALA , - , - , - , 1 , 1
+SUKHJITS , - , - , - , 1 , 1
+SUMEDHA , - , - , - , 1 , 1
+SUNCLAYLTD , - , - , - , 1 , 1
+SUNDARMFIN , - , - , - , 1 , 1
+SUNILHITEC , - , - , - , 1 , 1
+SUNPHARMA , - , - , - , 1 , 1
+SUPER , - , - , - , 1 , 1
+SUPERHOUSE , - , - , - , 1 , 1
+SURYALA , - , - , - , 1 , 1
+SURYALAXMI , - , - , - , 1 , 1
+SURYAROSNI , - , - , - , 1 , 1
+SUVEN , - , - , - , 1 , 1
+SVARTCORP , - , - , - , 1 , 1
+SWANENERGY , - , - , - , 1 , 1
+SWARAJAUTO , - , - , - , 1 , 1
+SWARAJMAZD , - , - , - , 1 , 1
+SWASTIKA , - , - , - , 1 , 1
+SWASTIVI , - , - , - , 1 , 1
+SWELECT , - , - , - , 1 , 1
+SWISSGLA , - , - , - , 1 , 1
+SYNCOMF , - , - , - , 1 , 1
+SYNGENE , - , - , - , 1 , 1
+TAJGVK , - , - , - , 1 , 1
+TALBROAUTO , - , - , - , 1 , 1
+TALWALKARS , - , - , - , 1 , 1
+TAMBOLI , - , - , - , 1 , 1
+TANLA , - , - , - , 1 , 1
+TASTYBIT , - , - , - , 1 , 1
+TATACHEM , - , - , - , 1 , 1
+TATAINVEST , - , - , - , 1 , 1
+TATAMETALI , - , - , - , 1 , 1
+TATAPOWER , - , - , - , 1 , 1
+TATASPONGE , - , - , - , 1 , 1
+TATASTEEL , - , - , - , 1 , 1
+TATATEA , - , - , - , 1 , 1
+TATATIMKEN , - , - , - , 1 , 1
+TCPLPACK , - , - , - , 1 , 1
+TDPOWERSYS , - , - , - , 1 , 1
+TECHM , - , - , - , 1 , 1
+TEXMACO , - , - , - , 1 , 1
+TEXRAIL , - , - , - , 1 , 1
+TFCILTD , - , - , - , 1 , 1
+THACKER , - , 1 , - , - , 1
+THANGAMAYL , - , - , - , 1 , 1
+THEBYKE , - , - , - , 1 , 1
+THERMAX , - , - , - , 1 , 1
+THOMASCOOK , - , - , - , 1 , 1
+TIFHL , - , - , - , 1 , 1
+TIGLOB , - , - , - , 1 , 1
+TIIL , - , - , 1 , - , 1
+TIINDIA , - , - , - , 1 , 1
+TIL , - , - , - , 1 , 1
+TIMETECHNO , - , - , - , 1 , 1
+TINPLATE , - , - , - , 1 , 1
+TIPSINDLTD , - , - , - , 1 , 1
+TIRSARJ , - , - , - , 1 , 1
+TIRUMALCHM , - , - , - , 1 , 1
+TITAN , - , - , - , 1 , 1
+TITANBIO , - , - , - , 1 , 1
+TNPL , - , - , - , 1 , 1
+TOKYOPLAST , - , - , - , 1 , 1
+TORNTPOWER , - , - , - , 1 , 1
+TPLPLAST , - , - , - , 1 , 1
+TRANSCOR , - , - , - , 1 , 1
+TRANSPEK , - , - , - , 1 , 1
+TRENT , - , - , - , 1 , 1
+TRIL , 1 , - , - , - , 1
+TRITONV , - , - , - , 1 , 1
+TRIVENI , - , - , - , 1 , 1
+TTKHEALTH , - , - , - , 1 , 1
+TULIVE , - , - , 1 , - , 1
+TVSELECT , - , - , - , 1 , 1
+TVSSRICHAK , - , - , - , 1 , 1
+TVTODAY , - , - , - , 1 , 1
+TWL , - , - , - , 1 , 1
+TYCHE , - , - , - , 1 , 1
+UBL , - , - , - , 1 , 1
+UCALFUEL , - , - , - , 1 , 1
+UFLEX , - , - , - , 1 , 1
+UFO , - , - , - , 1 , 1
+UGARSUGAR , - , - , - , 1 , 1
+UJAAS , - , - , - , 1 , 1
+UJJIVAN , - , - , - , 1 , 1
+ULTRACAB , - , - , - , 1 , 1
+ULTRACEMCO , - , - , - , 1 , 1
+ULTRAMAR , - , - , - , 1 , 1
+UNICRSE , 1 , - , - , - , 1
+UNIDT , - , - , - , 1 , 1
+UPL , - , - , - , 1 , 1
+VADILALIND , - , - , - , 1 , 1
+VADILENT , - , - , - , 1 , 1
+VALSON , - , - , - , 1 , 1
+VAMA , - , - , - , 1 , 1
+VBL , - , - , - , 1 , 1
+VEDAVAAG , - , - , - , 1 , 1
+VENKYS , - , - , - , 1 , 1
+VERITAS , - , - , - , 1 , 1
+VETO , - , - , - , 1 , 1
+VGUARD , - , - , - , 1 , 1
+VHL , - , - , - , 1 , 1
+VICTMILL , - , - , - , 1 , 1
+VIDLI , - , - , - , 1 , 1
+VIJAYABANK , - , - , - , 1 , 1
+VIKASECO , - , - , - , 1 , 1
+VIKRAMTH , - , - , - , 1 , 1
+VINDHYATEL , - , - , - , 1 , 1
+VINYLINDIA , - , - , - , 1 , 1
+VIPUL , - , - , - , 1 , 1
+VIPULORG , - , - , - , 1 , 1
+VIRAT , - , - , - , 1 , 1
+VISAKAIND , - , - , - , 1 , 1
+VISHAL , 1 , - , - , - , 1
+VISHALBL , - , - , - , 1 , 1
+VIVIMEDLAB , - , - , - , 1 , 1
+VKJINFRA , - , 1 , - , - , 1
+VLSFINANCE , - , - , - , 1 , 1
+VMART , - , - , - , 1 , 1
+VOITHPAPR , - , - , - , 1 , 1
+VOL , - , - , - , 1 , 1
+VOLTAMP , - , - , - , 1 , 1
+VOLTAS , - , - , - , 1 , 1
+VSTIND , - , - , - , 1 , 1
+VSTTILLERS , - , - , - , 1 , 1
+VTL , - , - , - , 1 , 1
+VTMLTD , - , - , - , 1 , 1
+VYAPAR , - , - , 1 , - , 1
+WABAG , - , - , - , 1 , 1
+WABCOINDIA , - , - , - , 1 , 1
+WATERBASE , - , - , - , 1 , 1
+WEIZFOREX , - , - , - , 1 , 1
+WEIZMANIND , - , - , - , 1 , 1
+WELENT , - , - , - , 1 , 1
+WELSPUNGUJR , - , - , - , 1 , 1
+WELSPUNIND , - , - , - , 1 , 1
+WESTLEIRES , - , - , - , 1 , 1
+WHIRLPOOL , - , - , - , 1 , 1
+WIDIA , - , - , - , 1 , 1
+WIMPLAST , - , - , - , 1 , 1
+WINDMACHIN , - , - , - , 1 , 1
+WIREFABR , - , - , - , 1 , 1
+WONDERLA , - , - , - , 1 , 1
+WPIL , - , - , - , 1 , 1
+WSFIN , - , - , - , 1 , 1
+WSTCSTPAPR , - , - , - , 1 , 1
+YUKEN , - , - , - , 1 , 1
+ZANMOLTR , - , - , - , 1 , 1
+ZEEL , - , - , - , 1 , 1
+ZEELEARN , - , - , - , 1 , 1
+ZENIFIB , - , - , - , 1 , 1
+ZENLABS , - , - , - , 1 , 1
+ZENTEC , - , - , - , 1 , 1
+ZFSTEERING , - , - , - , 1 , 1
+ZODIACLOTH , - , - , - , 1 , 1
+ZODJRDMKJ , - , - , - , 1 , 1
+ZSARACOM , - , - , 1 , - , 1
+ZSOUTGAS , - , - , - , 1 , 1
+ZSWASTSA , - , - , - , 1 , 1
+ZUARI , - , - , - , 1 , 1
+ZUARIGLOB , - , - , - , 1 , 1
+ZWELCAST , - , - , - , 1 , 1
+AAIL , 1 , - , - , 1 , 2
+AARTIDRUGS , - , - , 1 , 1 , 2
+AARTIIND , - , - , 1 , 1 , 2
+ACGL , - , - , - , 2 , 2
+ADVENZYMES , 1 , - , - , 1 , 2
+AEGISLOG , - , - , - , 2 , 2
+ALANKIT , - , - , - , 2 , 2
+ALEMBICLTD , - , - , 1 , 1 , 2
+ALICON , - , - , - , 2 , 2
+ALKEM , - , - , - , 2 , 2
+AMARAJABAT , - , - , - , 2 , 2
+ARCOTECH , 1 , - , - , 1 , 2
+ARFIN , - , 1 , - , 1 , 2
+ARROWGREEN , - , - , - , 2 , 2
+ASHOKA , - , - , - , 2 , 2
+ASMTEC , - , - , - , 2 , 2
+ASTRAL , - , - , - , 2 , 2
+ATULAUTO , - , - , - , 2 , 2
+AVTNPL , - , - , - , 2 , 2
+BALFC , - , - , - , 2 , 2
+BALRAMCHIN , - , - , 1 , 1 , 2
+BANCOINDIA , - , - , - , 2 , 2
+BAYERCROP , - , - , 1 , 1 , 2
+BHARTIARTL , - , - , - , 2 , 2
+BIOCON , - , 1 , - , 1 , 2
+BLS , 1 , - , - , 1 , 2
+BOROSIL , 1 , - , - , 1 , 2
+BRIGADE , - , - , - , 2 , 2
+CANFINHOME , 1 , - , - , 1 , 2
+CARBORUNIV , - , - , - , 2 , 2
+CEINSYSTECH , - , 1 , - , 1 , 2
+CENTRUM , - , - , - , 2 , 2
+CENTUM , - , - , - , 2 , 2
+CHEVIOT , - , - , 1 , 1 , 2
+CHOLAINV , - , - , - , 2 , 2
+CITADEL , - , 1 , - , 1 , 2
+CONTROLP , - , - , - , 2 , 2
+CORALFINAC , 1 , - , - , 1 , 2
+COROMANDEL , - , - , - , 2 , 2
+CUB , - , 1 , - , 1 , 2
+CUMMINSIND , - , - , - , 2 , 2
+CUPID , - , - , - , 2 , 2
+DABUR , - , - , - , 2 , 2
+DATAMATICS , - , - , - , 2 , 2
+DECCANCE , 1 , - , - , 1 , 2
+DHAMPURSUG , - , - , - , 2 , 2
+DHANUKA , - , - , - , 2 , 2
+DHFL , - , - , - , 2 , 2
+DLF , - , - , - , 2 , 2
+DWARKESH , 1 , - , - , 1 , 2
+ECLERX , - , - , 1 , 1 , 2
+EDELWEISS , - , - , - , 2 , 2
+EXIDEIND , - , - , - , 2 , 2
+FDC , - , - , 1 , 1 , 2
+FIBERWEB , - , 1 , - , 1 , 2
+FLORENCE , - , - , - , 2 , 2
+FRONTSEC , - , - , 1 , 1 , 2
+GABRIEL , - , - , - , 2 , 2
+GARNETINT , - , 1 , - , 1 , 2
+GARWALLROP , - , - , - , 2 , 2
+GDL , - , - , - , 2 , 2
+GILLETTE , - , - , - , 2 , 2
+GOACARBON , - , - , - , 2 , 2
+GPPL , - , - , - , 2 , 2
+GRAPHITE , - , - , - , 2 , 2
+GREAVESCOT , - , - , - , 2 , 2
+GULFOILLUB , - , - , - , 2 , 2
+GULPOLY , - , - , - , 2 , 2
+HARITASEAT , - , - , - , 2 , 2
+HATSUN , - , - , - , 2 , 2
+HDFC , - , - , - , 2 , 2
+HEROMOTOCO , - , - , - , 2 , 2
+HESTERPH , - , - , - , 2 , 2
+HIKAL , - , - , - , 2 , 2
+HINDUNILVR , - , - , - , 2 , 2
+HINDZINC , - , - , - , 2 , 2
+HITECHGEAR , - , - , - , 2 , 2
+HUDCO , - , - , - , 2 , 2
+HYDIND , - , - , - , 2 , 2
+ICICIBANK , - , 1 , - , 1 , 2
+ICIL , - , - , - , 2 , 2
+IGL , 1 , - , - , 1 , 2
+IMFA , - , - , - , 2 , 2
+INDAG , - , - , - , 2 , 2
+INDGELA , - , - , 1 , 1 , 2
+INFIBEAM , 1 , - , - , 1 , 2
+INGERRAND , - , - , - , 2 , 2
+ISGEC , - , - , - , 2 , 2
+JBCHEPHARM , - , - , 1 , 1 , 2
+JINDWORLD , 1 , - , - , 1 , 2
+JMFINANCIL , - , - , - , 2 , 2
+KALECONSUL , - , - , - , 2 , 2
+KALLAM , - , 1 , - , 1 , 2
+KANSAINER , - , - , - , 2 , 2
+KIOCL , - , - , - , 2 , 2
+KIRLOSENG , - , - , - , 2 , 2
+KPRMILL , - , - , 1 , 1 , 2
+KSCL , - , - , 1 , 1 , 2
+LALPATHLAB , - , - , - , 2 , 2
+LAOPALA , - , 1 , - , 1 , 2
+LEEL , - , - , - , 2 , 2
+LOVABLE , - , - , 1 , 1 , 2
+LT , - , 1 , - , 1 , 2
+LTI , - , - , - , 2 , 2
+LTTS , - , - , - , 2 , 2
+M&M , - , 1 , - , 1 , 2
+MANCREDIT , 1 , - , - , 1 , 2
+MANINFRA , - , - , - , 2 , 2
+MANPASAND , - , 1 , - , 1 , 2
+MARATHON , - , - , 1 , 1 , 2
+MARICO , - , - , - , 2 , 2
+MASTEK , - , - , - , 2 , 2
+MEERA , - , - , - , 2 , 2
+MENONBE , - , - , - , 2 , 2
+MGL , - , - , - , 2 , 2
+MHRIL , - , 1 , - , 1 , 2
+MINDACORP , - , - , - , 2 , 2
+MINDAIND , - , - , - , 2 , 2
+MMFL , - , - , - , 2 , 2
+MOLDTEK , - , - , - , 2 , 2
+MOLDTKPAC , - , - , - , 2 , 2
+MONSANTO , - , - , - , 2 , 2
+MOTHERSUMI , - , 1 , - , 1 , 2
+MOTILALOFS , - , - , - , 2 , 2
+MRSS , - , 1 , - , 1 , 2
+MSL , - , 1 , - , 1 , 2
+MUNJALAU , - , 1 , - , 1 , 2
+NATCOPHARM , - , - , - , 2 , 2
+NBCC , - , - , - , 2 , 2
+NCLIND , - , - , - , 2 , 2
+NESCO , 1 , - , - , 1 , 2
+NHPC , - , - , - , 2 , 2
+NICCOPAR , - , - , - , 2 , 2
+NILE , - , - , - , 2 , 2
+NILKAMAL , - , - , - , 2 , 2
+NMDC , - , - , - , 2 , 2
+NOVARTIND , - , - , 1 , 1 , 2
+NTPC , - , - , - , 2 , 2
+NUCLEUS , - , - , 1 , 1 , 2
+OKANCOTEA , - , 1 , - , 1 , 2
+OMMETALS , - , - , - , 2 , 2
+ORBTEXP , - , - , 1 , 1 , 2
+ORIENTC , - , - , - , 2 , 2
+PANAMAPET , - , 1 , - , 1 , 2
+PAUSHAKLTD , - , - , 1 , 1 , 2
+PCJEWELLER , - , 1 , - , 1 , 2
+PERSISTENT , - , - , - , 2 , 2
+PETRONET , - , 1 , - , 1 , 2
+PFC , - , - , - , 2 , 2
+PFIZER , - , - , - , 2 , 2
+PGHH , - , - , - , 2 , 2
+PIDILITIND , - , - , 1 , 1 , 2
+PIIND , - , - , - , 2 , 2
+PLASTIBLEN , - , 1 , - , 1 , 2
+POKARNA , 1 , - , - , 1 , 2
+POLYPLEX , - , - , - , 2 , 2
+POWERGRID , - , - , - , 2 , 2
+PPAP , - , - , - , 2 , 2
+PRECWIRE , - , - , - , 2 , 2
+RALLIS , - , - , - , 2 , 2
+RANEHOLDIN , - , - , - , 2 , 2
+RBL , - , - , - , 2 , 2
+RECLTD , - , - , - , 2 , 2
+RELIANCE , - , 1 , - , 1 , 2
+RICOAUTO , - , - , - , 2 , 2
+RML , - , - , - , 2 , 2
+SAFARIND , 1 , - , - , 1 , 2
+SAGCEM , - , - , - , 2 , 2
+SANOFI , - , - , - , 2 , 2
+SATIA , - , - , - , 2 , 2
+SAVERA , - , - , - , 2 , 2
+SHANTIGEAR , - , - , - , 2 , 2
+SHARDA , - , - , - , 2 , 2
+SHERVANI , - , - , 1 , 1 , 2
+SHREECEM , - , - , - , 2 , 2
+SHRIRAMCIT , - , - , - , 2 , 2
+SHRJAGP , 1 , - , - , 1 , 2
+SINGER , 1 , - , - , 1 , 2
+SKFINDIA , - , - , 1 , 1 , 2
+SOBHA , - , - , 1 , 1 , 2
+SONATSOFTW , - , - , - , 2 , 2
+SQSBFSI , - , - , - , 2 , 2
+SRF , - , - , - , 2 , 2
+SRTRANSFIN , - , - , - , 2 , 2
+STERTOOLS , - , - , - , 2 , 2
+SUCROSA , 1 , - , - , 1 , 2
+SUDARSCHEM , - , - , - , 2 , 2
+SUNDRMFAST , - , - , - , 2 , 2
+SUNTECK , 1 , - , - , 1 , 2
+SUPPETRO , - , - , - , 2 , 2
+SUPRAJIT , - , - , - , 2 , 2
+SUTLEJTEX , 1 , - , - , 1 , 2
+TALBROSENG , - , 1 , - , 1 , 2
+TATACOFFEE , - , - , - , 2 , 2
+TATACOMM , - , - , - , 2 , 2
+TATAELXSI , - , 1 , - , 1 , 2
+TCI , - , - , - , 2 , 2
+THYROCARE , - , - , - , 2 , 2
+TIDEWATER , - , - , - , 2 , 2
+TORNTPHARM , - , - , - , 2 , 2
+TRITURBINE , - , - , - , 2 , 2
+TVSMOTOR , - , - , - , 2 , 2
+UNICHEMLAB , - , - , 1 , 1 , 2
+VAKRANG , - , 1 , - , 1 , 2
+VALIANTORG , - , - , - , 2 , 2
+VEDL , - , - , - , 2 , 2
+VESUVIUS , - , - , - , 2 , 2
+VFL , - , 1 , - , 1 , 2
+VINATIORGA , - , - , 1 , 1 , 2
+VIPIND , - , - , - , 2 , 2
+VIRATCRA , - , - , - , 2 , 2
+WENDT , - , - , - , 2 , 2
+WHEELS , - , - , - , 2 , 2
+YASHCHEM , - , 1 , - , 1 , 2
+YESBANK , 1 , - , - , 1 , 2
+ZENSARTECH , - , - , - , 2 , 2
+AMRUTANJAN , - , - , - , 3 , 3
+ASIANPAINT , - , - , - , 3 , 3
+AUROPHARMA , - , - , - , 3 , 3
+BEARDSELL , 1 , 1 , - , 1 , 3
+BHARATFORG , - , 1 , - , 2 , 3
+BHEL , - , 1 , - , 2 , 3
+BPCL , - , 1 , - , 2 , 3
+CASTROLIND , - , 1 , - , 2 , 3
+CONCOR , - , 1 , - , 2 , 3
+CYIENT , - , - , - , 3 , 3
+DCMSHRIRAM , - , - , - , 3 , 3
+ENGINERSIN , - , - , 1 , 2 , 3
+FOSECOIND , - , - , - , 3 , 3
+GAIL , - , 1 , - , 2 , 3
+HERITGFOOD , 1 , - , - , 2 , 3
+HINDCOMPOS , 1 , 1 , - , 1 , 3
+HINDPETRO , - , 1 , - , 2 , 3
+INDNIPPON , 1 , - , - , 2 , 3
+INFY , - , - , 1 , 2 , 3
+IOC , - , 1 , - , 2 , 3
+IRB , - , - , - , 3 , 3
+JAMNAAUTO , 1 , - , - , 2 , 3
+JAYAGROGN , - , 1 , - , 2 , 3
+JENBURPH , - , - , 1 , 2 , 3
+KITEX , - , 1 , - , 2 , 3
+MRF , - , - , - , 3 , 3
+NAUKRI , - , - , - , 3 , 3
+NAVINFLUOR , 1 , - , - , 2 , 3
+ONGC , - , - , - , 3 , 3
+ORIENTPPR , - , - , - , 3 , 3
+SANDUMA , - , - , - , 3 , 3
+SANWARIA , - , 1 , - , 2 , 3
+SASKEN , - , - , - , 3 , 3
+SHBCL , - , 1 , - , 2 , 3
+SIYSIL , 1 , - , - , 2 , 3
+SJVN , - , - , 1 , 2 , 3
+SUPREMEIND , - , - , - , 3 , 3
+SWARAJENG , - , - , 1 , 2 , 3
+TAKE , - , - , - , 3 , 3
+TCIEXP , - , - , - , 3 , 3
+TRIDENT , - , - , - , 3 , 3
+TTKPRESTIG , - , - , 1 , 2 , 3
+WIPRO , - , 1 , 1 , 1 , 3
+BEL , - , 1 , 1 , 2 , 4
+CARERATING , - , - , - , 4 , 4
+COLPAL , - , - , - , 4 , 4
+CRISIL , - , - , - , 4 , 4
+GMM , - , - , - , 4 , 4
+GPTINFRA , - , 1 , - , 3 , 4
+GRANULES , - , - , - , 4 , 4
+HEXAWARE , - , - , - , 4 , 4
+HGS , - , - , - , 4 , 4
+IBULHSGFIN , - , - , - , 4 , 4
+ICICIPRULI , - , - , - , 4 , 4
+KUSHAL , - , - , - , 4 , 4
+MANAPPURAM , - , - , - , 4 , 4
+MOIL , - , 1 , 1 , 2 , 4
+NESTLEIND , - , - , - , 4 , 4
+OIL , - , 1 , 1 , 2 , 4
+PAGEIND , - , - , - , 4 , 4
+SUNTV , - , - , - , 4 , 4
+SYMPHONY , - , - , - , 4 , 4
+VIDHIING , - , - , - , 4 , 4
+BALKRISIND , - , 1 , - , 4 , 5
+GODREJCP , - , 1 , - , 4 , 5
+HCLTECH , - , - , 1 , 4 , 5
+KKCL , - , - , - , 5 , 5
+MAYURUNIQ , - , - , 1 , 4 , 5
+TCS , - , - , 1 , 4 , 5
+MINDTREE , - , - , 1 , 5 , 6

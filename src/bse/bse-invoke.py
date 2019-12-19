@@ -25,6 +25,7 @@ parser.add_argument('--debug_level', default='0', help='debug level 0|1|2|3', ty
 parser.add_argument('--dividend_file', nargs='+', dest='dividend_file', help='dividend file')
 parser.add_argument('--bonus_file', nargs='+', dest='bonus_file', help='bonus file')
 parser.add_argument('--buyback_file', nargs='+', dest='buyback_file', help='buyback file')
+parser.add_argument('--split_file', nargs='+', dest='split_file', help='split file')
 
 args = parser.parse_args()
 
@@ -52,6 +53,7 @@ debug_level = args.debug_level
 bonus_filenames = glob.glob(args.bonus_file[0])
 dividend_filenames = glob.glob(args.dividend_file[0])
 buyback_filenames = glob.glob(args.buyback_file[0])
+split_filenames = glob.glob(args.split_file[0])
 
 # print('bonus_filenames', bonus_filenames)
 # print('dividend_filenames', dividend_filenames)
@@ -63,14 +65,16 @@ sectors = []
 dividend_count = {}
 dividend_amount = {}
 bonus_share = {}
+split_share = {}
 bonus_count = {}
 buyback_share = {}
 buyback_count = {}
+split_count = {}
 company_aliases = {}
 total_dividend = 0
 
 
-def load_dividend(row, security_name, purpose):
+def bse_load_dividend(row, security_name, purpose):
     try:
         m = re.search("(.*)(Dividend - Rs. -)(.*)", purpose)
         if m.group(2) != "Dividend - Rs. -":
@@ -94,7 +98,7 @@ def load_dividend(row, security_name, purpose):
             print('AttributeError', row)
 
 
-def load_bonus(row, security_name, purpose):
+def bse_load_bonus(row, security_name, purpose):
     try:
         m = re.search("(Bonus issue)(.*)", purpose)
         if m.group(1) != "Bonus issue":
@@ -119,7 +123,38 @@ def load_bonus(row, security_name, purpose):
             print('AttributeError', row)
 
 
-def load_buyback(row, security_name, purpose):
+def bse_load_split(row, security_name, purpose):
+    try:
+        m = re.search("(Stock  Split From)(.*)", purpose)
+        if m.group(1) != "Stock  Split From":
+            if debug_level > 1:
+                print('no stock split match', row)
+            return
+        else:
+            companies.append(security_name)
+
+        fv_new_to_old = m.group(2)
+        fv_new_to_old = fv_new_to_old.replace('Rs.', '')
+        fv_new_to_old = fv_new_to_old.replace('/-', '')
+        fv_new_to_old = fv_new_to_old.replace(' to ', ':')
+
+        if security_name in split_share.keys():
+            split_count[security_name] += 1
+            split_share[security_name] = split_share[security_name] + ' & ' + fv_new_to_old
+        else:
+            # fv_new_to_old = 'FV (Old : New)' + fv_new_to_old
+            split_count[security_name] = 1
+            split_share[security_name] = fv_new_to_old
+
+    except NameError:
+        if debug_level > 1:
+            print('NameError', row)
+    except AttributeError:
+        if debug_level > 1:
+            print('AttributeError', row)
+
+
+def bse_load_buyback(row, security_name, purpose):
     try:
         m = re.search("(Buy Back of Shares)(.*)", purpose)
         if m.group(1) != "Buy Back of Shares":
@@ -142,31 +177,35 @@ def load_buyback(row, security_name, purpose):
             print('AttributeError', row)
 
 
-def load_row(data_type, row):
+def bse_load_row(data_type, row):
     security_code, security_name, company_name, ex_date, purpose, record_date, bc_state_date, bc_end_date, nd_start_date, nd_end_date, actual_payment_date = row
 
     # company_name = company_name.capitalize()
     # company_name = company_name.strip()
     security_name = security_name.strip()
     if data_type == "d":
-        load_dividend(row, security_name, purpose)
+        bse_load_dividend(row, security_name, purpose)
     if data_type == "b":
-        load_bonus(row, security_name, purpose)
+        bse_load_bonus(row, security_name, purpose)
     if data_type == "bb":
-        load_buyback(row, security_name, purpose)
+        bse_load_buyback(row, security_name, purpose)
+    if data_type == "ss":
+        # stock split
+        bse_load_split(row, security_name, purpose)
 
 
-def load_data(data_type, in_filenames):
+def bse_load_data(data_type, in_filenames):
     for in_filename in in_filenames:
         with open(in_filename, 'r') as csvfile:
             reader = csv.reader(csvfile)
             for row in reader:
-                load_row(data_type, row)
+                bse_load_row(data_type, row)
 
 
-load_data('d', dividend_filenames)
-load_data('b', bonus_filenames)
-load_data('bb', buyback_filenames)
+bse_load_data('d', dividend_filenames)
+bse_load_data('b', bonus_filenames)
+bse_load_data('bb', buyback_filenames)
+bse_load_data('ss', split_filenames)
 
 companies.sort()
 
@@ -174,7 +213,7 @@ if sort_type == "company_name_only":
     for cname in sorted(set(companies)):
         print(cname)
 
-# calculate frequency of occurence of each company
+# calculate frequency of occurrence of each company
 comp_freq = Counter(companies)
 
 if debug_level > 1:
@@ -187,7 +226,7 @@ if sort_type == "sort_frequency_name_only":
 try:
     if sort_type == "total_count":
         items = comp_freq.items()
-        print('security_name, bonus_count, buyback_count, dividend_count, total_count')
+        print('security_name, split_count, bonus_count, buyback_count, dividend_count, total_count')
     if sort_type == "bonus_count":
         items = bonus_count.items()
         print('security_name, bonus_share, bonus_count')
@@ -197,6 +236,9 @@ try:
     if sort_type == "dividend_count":
         items = dividend_count.items()
         print('security_name, dividend_amount, dividend_count')
+    if sort_type == "split_count":
+        items = split_count.items()
+        print('security_name, split_share, split_count')
 
     for key, value in sorted(items, key=itemgetter(1)):
         if key in bonus_share.keys():
@@ -229,13 +271,25 @@ try:
         else:
             dividend_count_column = "-"
 
+        if key in split_share.keys():
+            split_share_column = split_share[key]
+        else:
+            split_share_column = "-"
+
+        if key in split_count.keys():
+            split_count_column = split_count[key]
+        else:
+            split_count_column = "-"            
+
         if debug_level > 0:
-            print(key, bonus_share_column, dividend_amount_column, bonus_count_column, buyback_count_column,
+            print(key, split_share_column, bonus_share_column, dividend_amount_column, bonus_count_column,
+                  buyback_count_column,
                   dividend_count_column,
                   comp_freq[key])
 
         if sort_type == "total_count":
-            print(key, ',', bonus_count_column, ',', buyback_count_column, ',', dividend_count_column, ',',
+            print(key, ',', split_count_column, ',', bonus_count_column, ',', buyback_count_column, ',',
+                  dividend_count_column, ',',
                   comp_freq[key])
         if sort_type == "bonus_count":
             print(key, ',', bonus_share_column, ',', bonus_count_column)
@@ -243,6 +297,8 @@ try:
             print(key, ',', buyback_share_column, ',', buyback_count_column)
         if sort_type == "dividend_count":
             print(key, ',', dividend_amount_column, ',', dividend_count_column)
+        if sort_type == "split_count":
+            print(key, ',', split_share_column, ',', split_count_column)
 
 except KeyError:
     print('failed key :', key)
