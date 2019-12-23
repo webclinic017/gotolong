@@ -30,7 +30,7 @@ class Weight(Amfi):
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
-    def load_weight_row(self, row):
+    def weight_load_row(self, row):
         try:
             row_list = row
 
@@ -77,7 +77,7 @@ class Weight(Amfi):
             print('except : ', row, "\n")
             traceback.print_exc()
 
-    def load_weight_data(self, in_filename):
+    def weight_load_data(self, in_filename):
         table = "weight"
         # put this truncate under some other condition
         if self.debug_level > 0:
@@ -85,13 +85,13 @@ class Weight(Amfi):
 
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.insert_weight_data(in_filename)
+            self.weight_insert_data(in_filename)
         else:
             print('weight data already loaded in db', row_count)
         print('display db data')
-        self.load_weight_db()
+        self.weight_load_db()
 
-    def insert_weight_data(self, in_filename):
+    def weight_insert_data(self, in_filename):
         start_processing = False
         SQL = """insert into weight(comp_ticker, comp_weight_type, comp_weight_units) values(:comp_ticker, :comp_weight_type, :comp_weight_units)"""
         cursor = self.db_conn.cursor()
@@ -135,13 +135,13 @@ class Weight(Amfi):
             # commit db changes
             self.db_conn.commit()
 
-    def load_weight_db(self):
+    def weight_load_db(self):
         table = "weight"
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1:
                 print(row)
-            self.load_weight_row(row)
+            self.weight_load_row(row)
 
     def weight_dump_ticker(self, out_filename):
         lines = []

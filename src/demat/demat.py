@@ -26,7 +26,8 @@ class Demat(Amfi):
         self.demat_summary_qty = {}
         self.demat_summary_acp  = {}
         self.demat_summary_upl_pct = {}
-        self.demat_summary_hold_units   = {}
+        # stock keeping units : sku
+        self.demat_summary_sku = {}
         self.demat_table_truncate = False
         self.debug_level = 0
         print('init : Demat')
@@ -134,14 +135,15 @@ class Demat(Amfi):
             self.demat_summary_acp[stock_symbol] = acp
             self.demat_summary_upl_pct[stock_symbol] = unrealized_pl_pct
             if int(qty) > 0:
-                hold_units = int(round(float(qty)*float(acp)/1000))
+                sku = int(round(float(qty) * float(acp) / 1000))
+                if self.debug_level > 1:
+                    print(stock_symbol, "qty", qty, "acp", acp, "sku", sku)
             else:
                 if self.debug_level > 0:
-                    print("unexpected: qty 0");
-                hold_units = 0
-
+                    print("unexpected: qty 0")
+                sku = 0
             # store
-            self.demat_summary_hold_units[isin_code] = hold_units
+            self.demat_summary_sku[stock_symbol] = sku
         except:
             print("demat_summary_load_row Unexpected error:", sys.exc_info(), row)
 
@@ -259,9 +261,12 @@ class Demat(Amfi):
         fh.close()
 
     def demat_dump_txn_summary(self, out_filename, positive_holdings=None):
+
+        # print(self.demat_summary_sku)
+
         fh = open(out_filename,"w")
         fh.write(
-            'stock_symbol, isin_code, comp_name, demat_summary_qty, demat_summary_acp, demat_summary_hold_units_1k, demat_txn_last_type, demat_txn_last_date\n')
+            'stock_symbol, isin_code, comp_name, demat_summary_qty, demat_summary_acp, demat_summary_sku, demat_txn_last_type, demat_txn_last_date\n')
         for stock_symbol in sorted(self.demat_txn_list):
             if stock_symbol == 'Stock Symbol':
                 continue
@@ -276,10 +281,11 @@ class Demat(Amfi):
             p_str += ','
             p_str += str(self.demat_summary_acp[stock_symbol])
             p_str += ','
-            if stock_symbol in self.demat_summary_hold_units:
-                p_str += str(self.demat_summary_hold_units[stock_symbol])
+            if stock_symbol in self.demat_summary_sku:
+                p_str += str(self.demat_summary_sku[stock_symbol])
             else:
                 p_str += '0'
+                # print(":",stock_symbol,":")
             p_str += ','
             p_str += self.demat_txn_last_type[stock_symbol]
             p_str += ','
@@ -316,17 +322,25 @@ class Demat(Amfi):
             return self.demat_summary_acp[ticker]
         return 0
 
-    def get_demat_units_by_ticker(self, ticker):
-        if ticker in self.demat_summary_hold_units:
-            return self.demat_summary_hold_units[ticker]
+    def demat_summary_get_qty_by_ticker(self, ticker):
+        if ticker in self.demat_summary_qty:
+            return self.demat_summary_qty[ticker]
         return 0
 
-    def get_demat_txn_last_date_by_ticker(self, ticker):
+    def demat_summary_get_holding_value(self, ticker):
+        return self.demat_summary_get_qty_by_ticker(ticker) * self.demat_summary_get_acp_by_ticker(ticker)
+
+    def demat_summary_get_units_by_ticker(self, ticker):
+        if ticker in self.demat_summary_sku:
+            return self.demat_summary_sku[ticker]
+        return 0
+
+    def demat_txn_get_last_date_by_ticker(self, ticker):
         if ticker in self.demat_txn_last_date:
             return self.demat_txn_last_date[ticker]
-        return ''
+        return '-'
 
-    def get_demat_txn_last_type_by_ticker(self, ticker):
+    def demat_txn_get_last_type_by_ticker(self, ticker):
         if ticker in self.demat_txn_last_type:
             return self.demat_txn_last_type[ticker]
-        return ''
+        return '-'

@@ -4,7 +4,7 @@ import sys
 import re
 import csv
 import traceback
-import gfin
+import phealth
 
 from operator import itemgetter
 
@@ -39,13 +39,16 @@ program_name = sys.argv[0]
 if debug_level > 1:
     print('args :', len(sys.argv))
 
-gfin = gfin.Gfin()
+phealth = phealth.Phealth()
 
-gfin.set_debug_level(debug_level)
+phealth.set_debug_level(debug_level)
 
-gfin.amfi_load_db()
-gfin.isin_load_db()
-gfin.screener_load_db()
-gfin.trendlyne_load_db()
+phealth.amfi_load_db()
+phealth.isin_load_db()
+phealth.screener_load_db()
+phealth.trendlyne_load_db()
+phealth.demat_txn_load_db()
+phealth.demat_summary_load_db()
+phealth.weight_load_db()
 
-gfin.gfin_dump_report(out_filename_phase[0], out_filename_phase[1])
+phealth.phealth_dump_report(out_filename_phase[0], out_filename_phase[1])

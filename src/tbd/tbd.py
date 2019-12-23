@@ -66,7 +66,7 @@ class Tbd(Plan, Demat, Screener):
 
                 demat_units = int(self.get_demat_units_by_isin_code(isin_code))
                 self.tbd_demat_units[comp_name] = demat_units
-                demat_last_txn_date = self.get_demat_txn_last_date_by_isin_code(isin_code)
+                demat_last_txn_date = self.demat_txn_get_last_date_by_isin_code(isin_code)
                 self.tbd_demat_last_txn_date[comp_name] = demat_last_txn_date
                 if demat_last_txn_date != '':
                     last_datetime = datetime.datetime.strptime(demat_last_txn_date, '%d-%b-%Y').date()
@@ -77,7 +77,7 @@ class Tbd(Plan, Demat, Screener):
 
                 self.tbd_last_txn_days[comp_name] = last_txn_days
 
-                self.tbd_demat_last_txn_type[comp_name] = self.get_demat_txn_last_type_by_isin_code(isin_code)
+                self.tbd_demat_last_txn_type[comp_name] = self.demat_txn_get_last_type_by_isin_code(isin_code)
                 tbd_units = plan_units - demat_units
                 if plan_units <= 0:
                     tbd_pct = 0
