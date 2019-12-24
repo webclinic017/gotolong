@@ -41,9 +41,9 @@ class Phealth(Screener, Trendlyne, Demat, Weight):
 
         # oku - one k units
         if delimit == "\t":
-            p_str = "ticker\tindustry\tbat\tcmp\tlow_52w\thigh_52w\tup_52w_low\tmos\tlast_txn_months\ttbd_oku"
+            p_str = "ticker\tindustry\tbat\tcmp\tlow_52w\thigh_52w\tup_52w_low\tmos\ttxn_gap\tplan_oku\tcur_oku\ttbd_oku"
         else:
-            p_str = "ticker,industry,bat,cmp,low_52w,high_52w,up_52w_low,mos,last_txn_date,tbd_oku"
+            p_str = "ticker,industry,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku"
 
         p_str += '\n'
         phealth_list = ["price", "low52", "high52"]
@@ -158,12 +158,47 @@ class Phealth(Screener, Trendlyne, Demat, Weight):
                     else:
                         p_str += ','
 
+                    first_buy_date = self.demat_txn_get_first_buy_date_by_ticker(ticker)
+
+                    old_date_format = "%d-%b-%Y"
+                    # new_date_format = '%Y-%m-%d'
+                    if first_buy_date != '-':
+                        someday = datetime.datetime.strptime(first_buy_date, old_date_format).date()
+                        today = datetime.date.today()
+                        if self.debug_level > 1:
+                            print(someday, 'next', today)
+
+                        delta = today - someday
+                        # find years
+                        years = int(delta.days / 365)
+                    else:
+                        # not happening.
+                        years = 1
+
                     if ticker in self.weight_ticker_units_dict:
-                        tbd_units = int(self.weight_ticker_units_dict[ticker]) - self.demat_summary_get_units_by_ticker(
-                            ticker)
+                        plan_units = int(self.weight_ticker_units_dict[ticker]) * years
+                        current_units = self.demat_summary_get_units_by_ticker(ticker)
+                        tbd_units = plan_units - current_units
+                        if self.debug_level > 0:
+                            print(ticker, "years", years, "plan_oku", plan_units, "current_oku", current_units,
+                                  "tbd_oku", tbd_units)
                     else:
                         # missing in weight sheet
                         tbd_units = '-'
+
+                    p_str += str(plan_units)
+
+                    if delimit == '\t':
+                        p_str += '\t'
+                    else:
+                        p_str += ','
+
+                    p_str += str(current_units)
+
+                    if delimit == '\t':
+                        p_str += '\t'
+                    else:
+                        p_str += ','
 
                     p_str += str(tbd_units)
 

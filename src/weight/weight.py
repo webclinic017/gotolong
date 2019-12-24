@@ -14,8 +14,6 @@ class Weight(Amfi):
 
     def __init__(self):
         super(Weight, self).__init__()
-        # years of investing. started in 2017
-        self.weight_multiply = self.INVEST_YEARS
         self.weight_type_list = []
         self.weight_units_list = []
         self.weight_type_units_dict = {}

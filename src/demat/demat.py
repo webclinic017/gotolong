@@ -21,6 +21,7 @@ class Demat(Amfi):
         self.demat_txn_sale_qty = {}
         self.demat_txn_sale_price = {}
         self.demat_txn_last_date = {}
+        self.demat_txn_first_buy_date = {}
         self.demat_txn_list = {}
         self.demat_summary_rw_list = []
         self.demat_summary_qty = {}
@@ -103,7 +104,13 @@ class Demat(Amfi):
             if txn_price != 0:
                 self.demat_txn_last_type[stock_symbol] = txn_type
                 self.demat_txn_last_date[stock_symbol] = txn_date
-
+                if txn_type == "Buy":
+                    if stock_symbol not in self.demat_txn_first_buy_date:
+                        self.demat_txn_first_buy_date[stock_symbol] = txn_date
+                if txn_type == "Sell":
+                    # ignore previous buy entries
+                    # assume - last SELL to be full sale.
+                    del self.demat_txn_first_buy_date[stock_symbol]
         except:
             print("demat Unexpected error:", sys.exc_info())
 
@@ -338,6 +345,11 @@ class Demat(Amfi):
     def demat_txn_get_last_date_by_ticker(self, ticker):
         if ticker in self.demat_txn_last_date:
             return self.demat_txn_last_date[ticker]
+        return '-'
+
+    def demat_txn_get_first_buy_date_by_ticker(self, ticker):
+        if ticker in self.demat_txn_first_buy_date:
+            return self.demat_txn_first_buy_date[ticker]
         return '-'
 
     def demat_txn_get_last_type_by_ticker(self, ticker):
