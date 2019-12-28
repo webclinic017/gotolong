@@ -116,3 +116,8 @@ git show HEAD~25:./tbd.py
 3.7> Identify user who modified the file or line
  * git blame filename
  * like ade annotate (who modified each line and when)
+
+4. Merging two different repositories . one inside another.
+
+ git rm --cached directory
+ git add directory

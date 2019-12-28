@@ -183,8 +183,13 @@ class Phealth(Screener, Trendlyne, Demat, Weight):
                             print(ticker, "years", years, "plan_oku", plan_units, "current_oku", current_units,
                                   "tbd_oku", tbd_units)
                     else:
+                        plan_units = '-'
+                        current_units = self.demat_summary_get_units_by_ticker(ticker)
                         # missing in weight sheet
-                        tbd_units = '-'
+                        if current_units == 0:
+                            tbd_units = '-'
+                        else:
+                            tbd_units = int(-current_units)
 
                     p_str += str(plan_units)
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=0
+DEBUG_LEVEL=1
 
 CONFIG_DATA_LOC=`python -m config data`
 CONFIG_REPORTS_LOC=`python -m config reports`
@@ -17,4 +17,5 @@ OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/${MODULE}-reports/${MODULE}-reports-sort-
 
 # phase 2
 # python -m pdb ${MODULE}_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
+# TODO : add truncate support 
 python ${MODULE}_invoke.py ${DEBUG_LEVEL} ${IN_FILE_PLAN} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3}

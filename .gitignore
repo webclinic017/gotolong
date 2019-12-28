@@ -3,4 +3,6 @@ awkvars.out
 *.pyc
 *.key
 *.swp
+*.xml
+.idea
 mysite

@@ -1,10 +1,10 @@
 ,Comp #,EQ Collection ,SURI 250,Prepared By : @surinder432,Weight Multiplier,1000,Last Updated : 8-Oct-2019
-,246,WEIGHT_TYPE,Platinum,Diamond,Golden,Ruby,Silver
-,,WEIGHT_UNITS,20,10,5,5,5
-,Exp Value,825000,200000,250000,125000,125000,125000
+,245,WEIGHT_TYPE,Platinum,Diamond,Golden,Ruby,Silver
+,,WEIGHT_UNITS,10,10,5,5,5
+,Exp Value,725000,100000,250000,125000,125000,125000
 ,Ideal #,110,10,25,25,25,25
-,Actual #,247,11,40,54,80,62
-,Cur Value,1600000,220000,400000,270000,400000,310000
+,Actual #,246,12,42,55,76,61
+,Cur Value,1500000,120000,420000,275000,380000,305000
 ,,,,,,,
 Category,NUM_ORGS,Sub-Category,Platinum,Diamond,Golden,Ruby,Silver
 Alochol,1,Beer,,,UBL,,
@@ -12,14 +12,14 @@ Alochol,1,Beer,,,UBL,,
 Auto,2,Batteries,,,,EXIDEIND,AMARAJABAT
 ,4,Tyres - 1,,APOLLOTYRE,MRF,CEATLTD,BALKRISIND
 ,2,Tyres - 2,,,,TVSSRICHAK,GOODYEAR
-,4,2 W (Scooter & Motorcycle) & 3W,,HEROMOTOCO,BAJAJ-AUTO,TVSMOTOR,EICHERMOT
+,4,2 W (Scooter & Motorcycle) & 3W,HEROMOTOCO,BAJAJ-AUTO,TVSMOTOR,EICHERMOT,
 ,4,Auto Ancilliary,,BOSCHLTD,MOTHERSUMI,ENDURANCE,WABCOINDIA
 ,4,"4W+ (PV & CV) : Car, Truck, Tractor, Bus ",MARUTI,M&M,TATAMOTORS,ASHOKLEY,
 ,2,Bearing,,,,SKFINDIA,SCHAEFFLER
 ,1,Bicycle,,,,TIINDIA,
 ,1,Tractor Farm Equipment,,,,,VSTTILLERS
 Casting & Forging & Fasteners,1,Casting & Forging,,,,,MAHINDCIE
-Travel,1,Aviation,,,,INDIGO,
+Travel,1,Aviation,,,INDIGO,,
 Bank & Finance & Insurance & Trading & Rating,4,Banks,SBIN,ICICIBANK,HDFCBANK,KOTAKBANK,
 ,2,Finance - auto,,,BAJFINANCE,,SRTRANSFIN
 ,4,Finance – Housing,HDFC,,LICHSGFIN,IBULHSGFIN,HUDCO
@@ -63,7 +63,7 @@ Hospitality,4,Hotels & Resorts,,INDHOTEL,MHRIL,EIHOTEL,LEMONTREE
 ,1,Pizza,,,,,JUBLFOOD
 ,1,Burger / Sandwitch,,,,,WESTLIFE
 ,0,Hangout place like coffee day,,,,,
-,2,Tours & Travels,,,,COX&KINGS,THOMASCOOK
+,1,Tours & Travels,,,,,THOMASCOOK
 ,1,Amusement Park,,,,WONDERLA,
 ,2,"Temporary Staffing, Facility Management, Security Services, HR",,,QUESS,SIS,
 ,1,Gaming Casino,,,,DELTACORP,
@@ -81,7 +81,7 @@ Metals,2,Aluminium,,,HINDALCO,,NATIONALUM
 ,2,Steel,,JSWSTEEL,TATASTEEL,,
 ,1,Iron,,,,NMDC,
 ,1,Diversified,,VEDL,,,
-,1,Coal,,,,COALINDIA,
+,1,Coal,,COALINDIA,,,
 Glass,3,Glass & Glass Products,,,ASAHIINDIA,LAOPALA,BOROSIL
 Fitness,0,Gym,,,,,
 Retail,3,Large format,,DMART,TRENT,FRETAIL,
@@ -101,7 +101,7 @@ Pharma,4,Domestic - 1,,SUNPHARMA,DRREDDY,CIPLA,GLENMARK
 ,2,Diagnostic,,,LALPATHLAB,THYROCARE,
 POWER,4,Power Generation,NTPC,TATAPOWER,NLCINDIA,NHPC,
 ,1,Power Plant (Equipments),,,,BHEL,
-,1,Transmission & Distribution,,,,POWERGRID,
+,1,Transmission & Distribution,,POWERGRID,,,
 Oil & Gas,3,Explorers and Refineries,RELIANCE,ONGC,,OIL,
 ,1,Gas Terminals,,,,PETRONET,
 ,3,Piped gas & city gas,,GAIL,IGL,ADANIGAS,
