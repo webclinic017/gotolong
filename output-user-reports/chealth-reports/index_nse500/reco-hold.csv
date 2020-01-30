@@ -1,168 +1,142 @@
-AAVAS, roce3, 10.84
-ABCAPITAL, roe3, 9.47
-ABFRL, roce3, 10.26
-ADANIGAS, roce3, missing data
-ADANIGREEN, pledge, 37.23
-ADANIPORTS, pledge, 32.1
-ADANIPOWER, pledge, 29.32
-ADVENZYMES, rank, 547.0
-APLAPOLLO, icr, 3.06
+ADANIGAS, profit5, missing data
+ADVENZYMES, dp3, 5.7
+APLAPOLLO, d2e, 0.89
+APOLLOHOSP, d2e, 0.83
 APOLLOTYRE, roce3, 10.98
-ASTERDM, roce3, 7.73
+ASTERDM, d2e, 0.98
 AUROPHARMA, dp3, 6.2
+BAJAJHLDNG, sales5, 0.17
 BAJFINANCE, dp3, 9.63
-BALMLAWRIE, rank, 530.0
 BALRAMCHIN, d2e, 0.83
-BANDHANBNK, roce3, missing data
+BANKBARODA, dp3, 5.09
+BASF, d2e, 0.65
+BDL, profit5, missing data
 BEML, roce3, 7.02
 BHARATFORG, d2e, 0.59
-BHARTIARTL, roce3, 7.16
 BIOCON, roce3, 11.54
-BIRLACORPN, roce3, 7.47
+BIRLACORPN, d2e, 0.9
 BLISSGVS, rank, 589.0
-BOMDYEING, icr, 3.62
 BPCL, d2e, 0.78
 CADILAHC, d2e, 0.76
 CANFINHOME, dp3, 9.86
 CEATLTD, d2e, 0.54
 CENTURYPLY, d2e, 0.54
-CGPOWER, rank, 503.0
-CHALET, pledge, 32.12
-CHAMBLFERT, roce3, 11.75
-CHOLAFIN, roce3, 11.3
 CIPLA, roce3, 9.38
 COROMANDEL, d2e, 0.88
-CROMPTON, pledge, 48.85
-DBCORP, pledge, 30.52
-DBL, pledge, 27.56
-DCAL, roce3, missing data
-DCBBANK, roe3, 10.33
-DHFL, roe3, 7.19
+CROMPTON, d2e, 0.59
+DCBBANK, dp3, 8.69
+DHFL, dp3, 6.08
+DLF, d2e, 0.52
 DRREDDY, roce3, 9.9
-EIDPARRY, icr, 3.12
 EIHOTEL, roce3, 6.99
-EMAMILTD, pledge, 46.81
 ESCORTS, dp3, 8.3
+FCONSUMER, d2e, 0.82
 FDC, dp3, 7.16
 FEDERALBNK, roe3, 9.28
-FINEORG, roce3, missing data
-FORTIS, roce3, 7.13
+FINEORG, profit5, missing data
+FLFL, d2e, 0.52
+FRETAIL, d2e, 0.69
+GALAXYSURF, profit5, missing data
+GESHIP, d2e, 0.88
 GHCL, d2e, 0.66
-GLENMARK, dp3, 6.07
-GODREJIND, roce3, 10.11
-GRANULES, pledge, 43.4
-GRASIM, roce3, 11.69
+GLENMARK, d2e, 0.79
+GODFRYPHLP, sales5, 0.0
+GRANULES, d2e, 0.65
 GSFC, roce3, 7.34
 GUJALKALI, dp3, 9.79
+GULFOILLUB, sales5, missing data
+HAL, profit5, missing data
+HATHWAY, d2e, 0.54
+HDFCAMC, profit5, missing data
 HDFCLIFE, icr, missing data
-HERITGFOOD, rank, 518.0
-HIMATSEIDE, rank, 553.0
-HINDALCO, roce3, 9.64
-HINDCOPPER, roce3, 8.67
+HERITGFOOD, dp3, 9.85
+HINDALCO, d2e, 0.91
+HINDCOPPER, d2e, 0.66
 HINDPETRO, d2e, 0.97
 HONAUT, dp3, 9.21
 HUDCO, roe3, 10.41
 ICICIBANK, roe3, 6.94
 ICICIGI, icr, missing data
-ICICIPRULI, icr, missing data
-IFCI, rank, 533.0
-INDHOTEL, roce3, 7.06
-INDIACEM, pledge, 27.22
-INDOSTAR, roce3, 10.86
+IDFC, dp3, 6.49
+INDHOTEL, d2e, 0.53
+INDIACEM, d2e, 0.65
+INDIANB, dp3, 6.83
 INDUSINDBK, pledge, 26.33
+INOXLEISUR, icr, 3.79
 IOC, d2e, 0.86
-IPCALAB, roce3, 11.69
-IRB, roce3, 11.92
-IRCON, roce3, 10.7
-ISEC, roce3, missing data
-ITDC, rank, 505.0
-ITDCEM, rank, 542.0
-JAICORPLTD, rank, 552.0
+IPCALAB, dp3, 6.82
+IRCON, d2e, 0.78
+ISEC, profit5, missing data
+ITDC, roce3, 6.5
+ITDCEM, d2e, 0.52
+ITI, d2e, 0.7
 JAMNAAUTO, rank, 511.0
-JINDALSAW, roce3, 7.15
-JKCEMENT, icr, 3.83
-JKLAKSHMI, roce3, 7.11
-JKTYRE, rank, 536.0
-JSL, rank, 591.0
-JSLHISAR, rank, 544.0
-JSWSTEEL, pledge, 49.13
-JUBILANT, dp3, 9.29
+JINDALSAW, d2e, 0.91
+JKCEMENT, d2e, 0.82
+JSWENERGY, d2e, 0.89
 JYOTHYLAB, pledge, 26.66
 KALPATPOWR, pledge, 39.07
-KEC, icr, 3.32
-KEI, dp3, 5.2
+KEC, d2e, 0.76
+KEI, d2e, 0.77
 KRBL, d2e, 0.52
 KTKBANK, roe3, 8.21
-LAURUSLABS, pledge, 31.46
-LEMONTREE, pledge, 34.14
+LAURUSLABS, d2e, 0.67
 LUPIN, d2e, 0.62
 LUXIND, dp3, 5.62
 MAGMA, roe3, 8.48
-MAHINDCIE, roce3, 11.64
-MAXINDIA, rank, 550.0
-MINDAIND, dp3, 9.51
-MOIL, icr, missing data
-NAUKRI, roce3, 7.31
-NBVENTURES, rank, 560.0
-NCC, pledge, 41.35
+MAHLOG, profit5, missing data
+MINDAIND, d2e, 0.63
+MMTC, d2e, 0.62
+MRPL, d2e, 0.85
+NBVENTURES, d2e, 0.96
+NCC, d2e, 0.59
 NESCO, dp3, 9.36
-NH, roce3, 10.47
-NHPC, roce3, 9.84
+NH, d2e, 0.75
+NHPC, d2e, 0.65
 NILKAMAL, rank, 548.0
-NTPC, roce3, 8.25
+NMDC, sales5, 0.16
 OBEROIRLTY, roce3, 10.8
+OFSS, profit5, 0.39
 OIL, roce3, 11.86
-ORIENTCEM, rank, 558.0
-ORIENTELEC, roce3, missing data
+ORIENTELEC, profit5, missing data
 PARAGMILK, rank, 543.0
+PCJEWELLER, d2e, 0.54
+PETRONET, sales5, 0.34
 PFC, roe3, 11.92
 PGHL, icr, missing data
-PHOENIXLTD, roce3, 11.43
 PNCINFRA, dp3, 5.06
-POWERGRID, roce3, 10.79
-PRESTIGE, roce3, 9.88
-PRSMJOHNSN, roce3, 11.84
-PTC, rank, 519.0
-PVR, dp3, 7.45
-RAIN, dp3, 8.72
-RAYMOND, roce3, 9.22
+QUESS, icr, 3.29
+RAJESHEXPO, d2e, 0.7
+RALLIS, profit5, 0.42
 RBLBANK, roe3, 11.96
-RELIANCE, roce3, 11.01
+RELCAPITAL, dp3, 6.15
+RELIANCE, d2e, 0.79
 REPCOHOME, dp3, 6.79
-SADBHAV, pledge, 35.9
+RITES, profit5, missing data
 SBILIFE, icr, missing data
-SHILPAMED, roce3, 10.66
+SHILPAMED, dp3, 5.72
 SHK, rank, 517.0
-SIS, dp3, 9.23
-SOBHA, roce3, 10.88
+SIS, d2e, 0.78
 SOUTHBANK, roe3, 6.64
 SRF, d2e, 0.9
 SRTRANSFIN, dp3, 9.33
-STAR, dp3, 7.01
-SUDARSCHEM, rank, 509.0
+SUDARSCHEM, d2e, 0.52
 SUNTECK, dp3, 9.3
-SWANENERGY, pledge, 25.63
 SYNGENE, dp3, 5.51
 TAKE, rank, 534.0
 TATAGLOBAL, roce3, 10.03
-TATAMOTORS, roce3, 6.25
-TATAPOWER, roce3, 7.33
-TATASTEEL, roce3, 11.33
-TIMETECHNO, rank, 526.0
+TIINDIA, profit5, missing data
+TIMETECHNO, icr, 3.73
 TIMKEN, dp3, 6.48
-TORNTPOWER, roce3, 11.91
-TRENT, roce3, 10.43
-TRIDENT, roce3, 10.38
+TRENT, icr, 3.44
+TRIDENT, d2e, 0.83
 TVTODAY, rank, 556.0
-UFLEX, rank, 583.0
-UJJIVAN, roe3, missing data
-ULTRACEMCO, roce3, 11.75
-VARROC, dp3, 8.75
-VBL, icr, 3.55
-VEDL, icr, 3.14
+UJJIVAN, profit5, missing data
+ULTRACEMCO, d2e, 0.8
+VARROC, d2e, 0.79
 VENKEYS, dp3, 6.3
+WABAG, d2e, 0.57
 WABCOINDIA, dp3, 5.94
-WELCORP, roce3, 8.02
 WIPRO, dp3, 6.03
 YESBANK, pledge, 40.78
 ZYDUSWELL, roce3, 11.31

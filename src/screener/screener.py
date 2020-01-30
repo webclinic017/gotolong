@@ -37,6 +37,7 @@ class Screener(Amfi, Isin):
                               'Net profit': 'np',
                               'Market Capitalization': 'mcap',
                               'Debt to equity': 'd2e',
+                              'Interest Coverage Ratio': 'icr',
                               'Average return on equity 3Years': 'roe3',
                               'ROCE3yr avg': 'roce3',
                               'Average dividend payout 3years': 'dp3',
@@ -44,7 +45,6 @@ class Screener(Amfi, Isin):
                               'Historical PE 5Years': 'pe5',
                               'PEG Ratio': 'peg',
                               'OPM': 'opm',
-                              'Interest Coverage Ratio': 'icr',
                               'Enterprise Value': 'ev',
                               'Net worth': 'nw',
                               'Reserves': 'reserves',
@@ -78,6 +78,12 @@ class Screener(Amfi, Isin):
         self.sc_filter_dp3_hold = self.config_dpr3_hold
         self.sc_filter_roce3_buy = self.config_roce3_buy
         self.sc_filter_roce3_hold = self.config_roce3_hold
+
+        self.sc_filter_sales5_buy = self.config_sales5_buy
+        self.sc_filter_sales5_hold = self.config_sales5_hold
+        self.sc_filter_profit5_buy = self.config_profit5_buy
+        self.sc_filter_profit5_hold = self.config_profit5_hold
+
         self.sc_filter_pledge_buy = self.config_pledge_buy
         self.sc_filter_pledge_hold = self.config_pledge_hold
         self.sc_filter_rank_buy = self.config_rank_buy
@@ -154,6 +160,7 @@ class Screener(Amfi, Isin):
                 # figure out reco_type and reco_cause
                 reco_type = "BUY"
                 reco_cause = "tp, ?"
+                missing_reco_cause = ""
                 ratio = 'd2e'
                 value = self.sc_ratio_values[sc_nsecode, ratio]
                 # know industry
@@ -161,8 +168,7 @@ class Screener(Amfi, Isin):
 
                 # handle missing values
                 if value == '':
-                    reco_type = "HOLD"
-                    reco_cause = ratio + ', ' + 'missing data'
+                    missing_reco_cause = ratio + ', ' + 'missing data'
                 else:
                     if industry == 'FINANCIAL SERVICES':
                         # allow more debt/equity for Bank and NBFC
@@ -180,12 +186,11 @@ class Screener(Amfi, Isin):
                             if self.debug_level > 1:
                                 print(reco_cause)
 
-                if reco_type != 'Buy':
+                if reco_type == "BUY":
                     ratio = 'icr'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + 'missing data'
+                        missing_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         # check ICR only for non Financial services
                         # LT : also has LTFS - causing lower IC
@@ -201,13 +206,11 @@ class Screener(Amfi, Isin):
                                 if self.debug_level > 1:
                                     print(reco_cause)
 
-
-                if reco_type != 'Buy':
+                if reco_type == "BUY":
                     ratio = 'dp3'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + 'missing data'
+                        missing_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_dp3_buy:
@@ -219,7 +222,7 @@ class Screener(Amfi, Isin):
                             if self.debug_level > 1:
                                 print(reco_cause)
 
-                if reco_type != 'Buy':
+                if reco_type == "BUY":
                     if industry == 'FINANCIAL SERVICES':
                         # bank: too much debt : don't consider debt
                         ratio = 'roe3'
@@ -227,8 +230,7 @@ class Screener(Amfi, Isin):
                         ratio = 'roce3'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + 'missing data'
+                        missing_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_roce3_buy:
@@ -240,12 +242,43 @@ class Screener(Amfi, Isin):
                             if self.debug_level > 1:
                                 print(reco_cause)
 
-                if reco_type != 'Buy':
+                if reco_type == "BUY":
+                    ratio = 'sales5'
+                    value = self.sc_ratio_values[sc_nsecode, ratio]
+                    if value == '':
+                        missing_reco_cause = ratio + ', ' + 'missing data'
+                    else:
+                        value = float(value)
+                        if value < self.sc_filter_sales5_buy:
+                            if value < self.sc_filter_sales5_hold:
+                                reco_type = "SALE"
+                            else:
+                                reco_type = "HOLD"
+                            reco_cause = ratio + ', ' + str(value)
+                            if self.debug_level > 1:
+                                print(reco_cause)
+
+                if reco_type == "BUY":
+                    ratio = 'profit5'
+                    value = self.sc_ratio_values[sc_nsecode, ratio]
+                    if value == '':
+                        missing_reco_cause = ratio + ', ' + 'missing data'
+                    else:
+                        value = float(value)
+                        if value < self.sc_filter_profit5_buy:
+                            if value < self.sc_filter_profit5_hold:
+                                reco_type = "SALE"
+                            else:
+                                reco_type = "HOLD"
+                            reco_cause = ratio + ', ' + str(value)
+                            if self.debug_level > 1:
+                                print(reco_cause)
+
+                if reco_type == "BUY":
                     ratio = 'pledge'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + 'missing data'
+                        missing_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value > self.sc_filter_pledge_buy:
@@ -257,12 +290,11 @@ class Screener(Amfi, Isin):
                             if self.debug_level > 1:
                                 print(reco_cause)
 
-                if reco_type != 'Buy':
+                if reco_type == "BUY":
                     ratio = 'rank'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        reco_type = "HOLD"
-                        reco_cause = ratio + ', ' + 'missing data'
+                        missing_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value > self.sc_filter_rank_buy:
@@ -273,6 +305,11 @@ class Screener(Amfi, Isin):
                             reco_cause = 'rank, ' + str(value)
                             if self.debug_level > 1:
                                 print(reco_cause)
+
+                # skipping due to misisng data
+                if reco_type == "BUY" and missing_reco_cause != '':
+                    reco_type = "HOLD"
+                    reco_cause = missing_reco_cause
 
                 # store recommendation
                 self.sc_ratio_values[sc_nsecode, "reco_type"] = reco_type

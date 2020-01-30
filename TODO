@@ -34,3 +34,11 @@ To Do Items
 * Identify companies to be dropped
 * Identify companies to be included
 * Use machine learning tools to reduce the list of companies/sectors
+
+
+Jan 2020
+
+* added mariadb support as sqlite has basic features like column rename also missing.
+  ** wanted to try mysql but it was asking for registration. opted for mariadb
+
+*

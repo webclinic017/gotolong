@@ -257,3 +257,8 @@ Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2020-01-30 12:37:26 12 [Warning] Aborted connection 12 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-01-30 12:37:48 13 [Warning] Aborted connection 13 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-01-30 12:38:10 14 [Warning] Aborted connection 14 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-01-30 16:54:09 15 [Warning] Aborted connection 15 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-01-30 16:57:04 16 [Warning] Aborted connection 16 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-01-30 17:03:01 17 [Warning] Aborted connection 17 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-01-30 17:06:49 18 [Warning] Aborted connection 18 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-01-30 17:37:57 19 [Warning] Aborted connection 19 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
