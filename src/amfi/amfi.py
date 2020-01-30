@@ -28,6 +28,16 @@ class Amfi(Database):
         self.amfi_isin_ticker_dict = {}
         self.debug_level = 0
         self.amfi_table_truncate = False
+        self.amfi_table_name = "amfi"
+        self.amfi_table_dict = {
+            "sno": "text",
+            "company_name": "text",
+            "isin": "text",
+            "bse_symbol": "text",
+            "nse_symbol": "text",
+            "avg_mcap": "text",
+            "cap_type": "text",
+        }
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -48,13 +58,18 @@ class Amfi(Database):
                     print('skipped header line', row_list)
                 return
 
-            serial_number = cutil.cutil.get_number(serial_number)
+            # mysql - automatically number
+            if self.config_db_type != 'mariadb':
+                serial_number = cutil.cutil.get_number(serial_number)
 
             comp_name = row_list[1]
             isin_number = row_list[2]
             bse_ticker = row_list[3].upper().strip()
             nse_ticker = row_list[4]
-            avg_mcap = cutil.cutil.get_number(row_list[5])
+            if self.config_db_type == 'mariadb':
+                avg_mcap = row_list[5]
+            else:
+                avg_mcap = cutil.cutil.get_number(row_list[5])
             captype = row_list[6].strip()
             if captype == 'Small Cap':
                 if serial_number > 500 and serial_number < 750:
@@ -124,7 +139,10 @@ class Amfi(Database):
         self.amfi_load_db()
 
     def amfi_insert_data(self, in_filename):
-        SQL = """insert into amfi (sno, company_name, isin, bse_symbol, nse_symbol, avg_mcap, cap_type) values (:sno, :company_name, :isin, :bse_symbol, :nse_symbol, :avg_mcap, :cap_type) """
+
+        create_sql = cutil.cutil.get_create_sql(self.amfi_table_name, self.amfi_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.amfi_table_name, self.amfi_table_dict)
+
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
@@ -132,7 +150,7 @@ class Amfi(Database):
             if self.debug_level > 0:
                 print(csv_reader)
             # insert row
-            cursor.executemany(SQL, csv_reader)
+            cursor.executemany(insert_sql, csv_reader)
             # commit db changes
             self.db_conn.commit()
 

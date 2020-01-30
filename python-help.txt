@@ -6,6 +6,8 @@ pip install pandas
 pip install xlrd
 
 pip install configparser
+pip install mysql
+pip install mysql-connector-python
 
 1.2 list of modules
 
@@ -170,4 +172,7 @@ XYZ_2d[row, column] = 1
 21. string replace :
             string.replace(old, new, count)
 
-22.
+22. for mysql and mariadb
+
+pip install mysql
+pip install mysql-connector-python

@@ -1,0 +1,49 @@
+
+MariaDB
+
+1. Decided to switch to mariaDB from sqlite.
+
+2. Download mariaDb
+
+3. Check my.ini (C:\ProgramData\Microsoft\Windows\Start Menu\Programs\MariaDB 10.4 (x64))
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\MariaDB 10.4 (x64)\my.ini -> symlink to
+C:\Program Files\MariaDB 10.4\data\my.ini
+
+
+[mysqld]
+datadir=C:\Program Files\MariaDB 10.4\data\
+port=3306
+innodb_buffer_pool_size=2027M
+character-set-server=utf8
+[client]
+port=3306
+plugin-dir=C:/Program Files/MariaDB 10.4/lib/plugin
+
+4. Fix datadir
+
+datadir=D:/GoogleDrive/my_github/GitHub/gotolong/db-data/
+
+
+5. server status
+
+C:\Program Files\MariaDB 10.4\bin>mariadbdmin.exe  -uroot -proot status
+Uptime: 3176  Threads: 1  Questions: 97  Slow queries: 0  Opens: 117  Flush tables: 1  Open tables: 102  Queries per second avg: 0.030
+
+C:\Program Files\MariaDB 10.4\bin>
+
+6. Start maria DB
+
+mariadbd
+
+
+7. shutdown maria db
+
+mariadbdmin.exe  -uroot -proot shutdown
+
+
+8. Use prefix for the .err and .pid file
+
+To avoid ${hostname}.err and ${hostname}.pid in the data directory use
+
+log-basename=mariadb (in my.ini file)

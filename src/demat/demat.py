@@ -31,6 +31,40 @@ class Demat(Amfi):
         self.demat_summary_sku = {}
         self.demat_table_truncate = False
         self.debug_level = 0
+        self.demat_txn_table_name = "demat_txn"
+        self.demat_txn_table_dict = {
+            "stock_symbol": "text",
+            "company_name": "text",
+            "isin_code": "text",
+            "action": "text",
+            "quantity": "text",
+            "txn_price": "text",
+            "brokerage": "text",
+            "txn_charges": "text",
+            "stamp_duty": "text",
+            "segment": "text",
+            "stt": "text",
+            "remarks": "text",
+            "txn_date": "text",
+            "exchange": "text",
+            "unused1": "text"
+        }
+        self.demat_summary_table_name = "demat_summary"
+        self.demat_summary_table_dict = {
+            "stock_symbol": "text",
+            "company_name": "text",
+            "isin_code": "text",
+            "qty": "text",
+            "acp": "text",
+            "cmp": "text",
+            "pct_change": "text",
+            "value_cost": "text",
+            "value_market": "text",
+            "realized_pl": "text",
+            "unrealized_pl": "text",
+            "unrealized_pl_pct": "text",
+            "unused1": "text"
+        }
         print('init : Demat')
 
     def set_debug_level(self, debug_level):
@@ -69,7 +103,7 @@ class Demat(Amfi):
             p_str += ','
             p_str += txn_type
             p_str += ','
-            p_str += txn_qty
+            p_str += str(txn_qty)
             p_str += ','
             p_str += txn_price
             p_str += ','
@@ -111,8 +145,12 @@ class Demat(Amfi):
                     # ignore previous buy entries
                     # assume - last SELL to be full sale.
                     del self.demat_txn_first_buy_date[stock_symbol]
+        except KeyError:
+            print("demat key error:", sys.exc_info())
+            traceback.print_exc()
         except:
-            print("demat Unexpected error:", sys.exc_info())
+            print("demat unexpected error:", sys.exc_info())
+            traceback.print_exc()
 
 
     def demat_summary_load_row(self, row):
@@ -182,25 +220,31 @@ class Demat(Amfi):
         self.demat_summary_load_db()
 
     def demat_txn_insert_data(self, in_filename):
-        SQL = """insert into demat_txn (stock_symbol, company_name, isin_code, action, quantity, txn_price, brokerage, txn_charges, stamp_duty, segment, stt, remarks, txn_date, exchange, unused1) values (:stock_symbol, :company_name, :isin_code, :action, :quantity, :txn_price, :brokerage, :txn_charges, :stamp_dty, :segment, :stt, :remarks, :txn_date, :exchange, :unused1) """
+
+        create_sql = cutil.cutil.get_create_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
             csv_reader = csv.reader(csvfile)
             # insert row
-            cursor.executemany(SQL, csv_reader)
+            cursor.executemany(insert_sql, csv_reader)
             # commit db changes
             self.db_conn.commit()
 
 
     def demat_summary_insert_data(self, in_filename):
-        SQL = """insert into demat_summary (stock_symbol, company_name, isin_code, qty, acp, cmp, pct_change, value_cost, value_market, realized_pl, unrealized_pl, unrealized_pl_pct, unused1) values (:stock_symbol, :company_name, :isin_code, :qty, :acp, :cmp, :pct_change, :value_cost, :value_market, :realized_pl, :unrealized_pl, :unrealized_pl_pct, :unused1) """
+
+        create_sql = cutil.cutil.get_create_sql(self.demat_summary_table_name, self.demat_summary_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.demat_summary_table_name, self.demat_summary_table_dict)
+
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
             csv_reader = csv.reader(csvfile)
             # insert row
-            cursor.executemany(SQL, csv_reader)
+            cursor.executemany(insert_sql, csv_reader)
             # commit db changes
             self.db_conn.commit()
 

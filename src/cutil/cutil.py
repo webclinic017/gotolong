@@ -60,7 +60,7 @@ def normalize_comp_name(comp_name):
 
 def get_number(num_str):
     # strip space
-    num_str = num_str.strip()
+    num_str = str(num_str).strip()
     if num_str == 'NaN':
         num_str = '0'
 
@@ -71,3 +71,53 @@ def get_number(num_str):
         num_str = '0'
 
     return int(round(float(num_str)))
+
+
+def get_insert_sql(table_name, table_dict):
+    insert_sql = "insert into "
+    insert_sql += table_name
+    insert_sql += "("
+
+    iter = 0
+    for column_name in table_dict:
+        insert_sql += column_name
+        if iter != len(table_dict) - 1:
+            insert_sql += ","
+        iter += 1
+
+    insert_sql += ") values("
+
+    iter = 0
+    for column_name in table_dict:
+
+        insert_sql += "%s"
+        # insert_sql += ":"
+        # insert_sql += table_dict[column_name]
+
+        if iter != len(table_dict) - 1:
+            insert_sql += ","
+
+        iter += 1
+    insert_sql += ")"
+
+    print(insert_sql)
+
+    return insert_sql
+
+
+def get_create_sql(table_name, table_dict):
+    create_sql = "create table if not exists "
+    create_sql += table_name
+    create_sql += "("
+
+    iter = 0
+    for column_name in table_dict:
+        create_sql += column_name
+        create_sql += " " + table_dict[column_name]
+        if iter != len(table_dict) - 1:
+            create_sql += ","
+        iter += 1
+    create_sql += ")"
+    print(create_sql)
+
+    return create_sql

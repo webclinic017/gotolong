@@ -44,7 +44,7 @@ class Screener(Amfi, Isin):
                               'Historical PE 5Years': 'pe5',
                               'PEG Ratio': 'peg',
                               'OPM': 'opm',
-                              'Int Coverage': 'ic',
+                              'Interest Coverage Ratio': 'icr',
                               'Enterprise Value': 'ev',
                               'Net worth': 'nw',
                               'Reserves': 'reserves',
@@ -66,12 +66,14 @@ class Screener(Amfi, Isin):
                              'captype': -1,
                              'reco_type': -1, 'reco_cause': -1,
                              'cmp': -1, 'mcap': -1, 'sales': -1, 'np': -1,
-                             'd2e': -1, 'roe3': -1, 'roce3': -1, 'dp3': -1, 'dp': -1, 'dy': -1,
+                             'd2e': -1, 'icr': -1, 'roe3': -1, 'roce3': -1, 'dp3': -1, 'dp': -1, 'dy': -1,
                              'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
                              'p2sales': -1, 'ev2ebitda': -1, 'ev': -1, 'opm': -1,
                              'cr': -1, 'sales5': -1, 'profit5': -1, 'pledge': -1, 'piotski': -1}
         self.sc_filter_d2e_buy = self.config_der_buy
         self.sc_filter_d2e_hold = self.config_der_hold
+        self.sc_filter_icr_buy = self.config_icr_buy
+        self.sc_filter_icr_hold = self.config_icr_hold
         self.sc_filter_dp3_buy = self.config_dpr3_buy
         self.sc_filter_dp3_hold = self.config_dpr3_hold
         self.sc_filter_roce3_buy = self.config_roce3_buy
@@ -177,6 +179,28 @@ class Screener(Amfi, Isin):
                             reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
                                 print(reco_cause)
+
+                if reco_type != 'Buy':
+                    ratio = 'icr'
+                    value = self.sc_ratio_values[sc_nsecode, ratio]
+                    if value == '':
+                        reco_type = "HOLD"
+                        reco_cause = ratio + ', ' + 'missing data'
+                    else:
+                        # check ICR only for non Financial services
+                        # LT : also has LTFS - causing lower IC
+                        # any other notables ?
+                        if industry != 'FINANCIAL SERVICES':
+                            value = float(value)
+                            if value < self.sc_filter_icr_buy:
+                                if value < self.sc_filter_icr_hold:
+                                    reco_type = "SALE"
+                                else:
+                                    reco_type = "HOLD"
+                                reco_cause = ratio + ', ' + str(value)
+                                if self.debug_level > 1:
+                                    print(reco_cause)
+
 
                 if reco_type != 'Buy':
                     ratio = 'dp3'
@@ -287,6 +311,7 @@ class Screener(Amfi, Isin):
         self.screener_load_db()
 
     def screener_insert_data(self, in_filename):
+
         SQL = "insert into "
         SQL += self.sc_table_name
         SQL += "("
@@ -302,8 +327,12 @@ class Screener(Amfi, Isin):
 
         iter = 0
         for ratio in self.sc_ratio_name:
-            SQL += ":"
-            SQL += self.sc_ratio_name[ratio]
+            if self.config_db_type == 'mariadb':
+                SQL += "%s"
+            else:
+                SQL += ":"
+                SQL += self.sc_ratio_name[ratio]
+
             if iter != len(self.sc_ratio_name) - 1:
                 SQL += ","
             iter += 1
@@ -373,7 +402,8 @@ class Screener(Amfi, Isin):
         for sc_nsecode in sorted_input:
             p_str = ''
             for ratio in self.sc_ratio_loc:
-                p_str += self.sc_ratio_values[sc_nsecode, ratio]
+                # allow any int conversion to str
+                p_str += str(self.sc_ratio_values[sc_nsecode, ratio])
                 p_str += ', '
 
             reco_type = self.sc_ratio_values[sc_nsecode, "reco_type"]

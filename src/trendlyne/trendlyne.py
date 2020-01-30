@@ -35,6 +35,18 @@ class Trendlyne(Amfi, Isin):
 
         self.tl_ratio_loc = {'ticker': -1, 'name': -1, 'isin': -1, 'bat': -1, 'bar': -1}
 
+        self.tl_table_name = "trendlyne"
+        self.tl_table_dict = {
+            "comp_name": "text",
+            "comp_isin": "text",
+            "comp_bat": "text",
+            "comp_bar": "text",
+            "comp_der": "text",
+            "comp_roce3": "text",
+            "comp_dpr2": "text",
+            "comp_pledge": "text"
+        }
+
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
@@ -129,13 +141,16 @@ class Trendlyne(Amfi, Isin):
         self.trendlyne_load_db()
 
     def trendlyne_insert_data(self, in_filename):
-        SQL = """insert into trendlyne(comp_name, comp_isin, comp_bat, comp_bar, comp_der, comp_roce3, comp_dpr2, comp_pledge) values (:comp_name, :comp_isin, :comp_bat, :comp_bar, :comp_der, :comp_roce3, :comp_dpr2, :comp_pledge) """
+
+        create_sql = cutil.cutil.get_create_sql(self.tl_table_name, self.tl_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.tl_table_name, self.tl_table_dict)
+
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
             csv_reader = csv.reader(csvfile)
             # insert row
-            cursor.executemany(SQL, csv_reader)
+            cursor.executemany(insert_sql, csv_reader)
             # commit db changes
             self.db_conn.commit()
 
@@ -161,7 +176,7 @@ class Trendlyne(Amfi, Isin):
         for tl_nsecode in sorted_input:
             p_str = ''
             for ratio in self.tl_ratio_loc:
-                p_str += self.tl_ratio_values[tl_nsecode, ratio]
+                p_str += str(self.tl_ratio_values[tl_nsecode, ratio])
                 p_str += ', '
 
             fh.write(p_str)

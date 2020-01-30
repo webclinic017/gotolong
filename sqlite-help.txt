@@ -1,10 +1,12 @@
 
+Decided to dump Sqlite as a simple thing like change in column name also requires
+copy of table to another table.
+
 1> SQLite3 : Light weight embedded database.
 
 https://www.sqlite.org/2019/sqlite-tools-win32-x86-3300000.zip
 
 D:\sqlite3\sqlite3.exe
-
 
 1.2> add a new table to schema
 

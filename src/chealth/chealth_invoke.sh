@@ -29,7 +29,7 @@ do
             echo "wrong broker : $EUSER"
             exit 1
         fi
-        IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-reports-ticker-only.csv
+        IN_FILE_1=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-summary-ticker-only.csv
     else
         IN_FILE_1=$CONFIG_PROFILE_DATA_LOC/${MODULE}-data/${EUDIR}/${EUDIR}-ticker-list.csv
     fi
