@@ -2,6 +2,9 @@
 
 An Indian Stock Screener can be used to identify stocks for buy and sale.
 
+## Support
+http://www.gotolong.in/
+
 ## Pull the github repository
 
 Pull the github repository
@@ -28,7 +31,6 @@ provide input-user-data
 ### check output data
 check output-global-data
 check output-user-data
-
 
 ## Modules Description
 
