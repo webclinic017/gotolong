@@ -10,6 +10,4 @@ git clone https://github.com/surinder432/gotolong
 
 # For documentation
 
-Visit wiki page on github
-
 http://www.gotolong.in/
