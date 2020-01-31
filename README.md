@@ -14,7 +14,6 @@ Modify top level config.ini
 
 For DB name, user and password
 
-
 ## Generating reports
 
 ### global scope
@@ -69,7 +68,3 @@ identify companies at healthy price
 ## dividend module
 
 create dividend matrix by company and month.
-
-## bse module
-
-corporate action like dividend, bonus etc by company 
