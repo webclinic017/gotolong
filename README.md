@@ -12,4 +12,4 @@ git clone https://github.com/surinder432/gotolong
 
 Visit wiki page on github
 
-https://github.com/surinder432/gotolong/wiki
+http://www.gotolong.in/
