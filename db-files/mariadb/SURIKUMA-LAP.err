@@ -286,3 +286,162 @@ InnoDB: using atomic writes.
 2020-01-31 10:50:58 0 [Note] Added new Master_info '' to hash table
 2020-01-31 10:50:58 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
 Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-01-31 20:01:34 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-01-31 20:01:34 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-01-31 20:01:34 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-01-31 20:01:34 0 [Note] InnoDB: Starting shutdown...
+2020-01-31 20:01:34 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-01-31 20:01:34 0 [Note] InnoDB: Buffer pool(s) dump completed at 200131 20:01:34
+2020-01-31 20:01:35 0 [Note] InnoDB: Shutdown completed; log sequence number 15710922; transaction id 9062
+2020-01-31 20:01:35 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-02-01 10:54:53 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-02-01 10:54:53 0 [Note] InnoDB: Uses event mutexes
+2020-02-01 10:54:53 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-01 10:54:53 0 [Note] InnoDB: Number of pools: 1
+2020-02-01 10:54:53 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-01 10:54:53 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-02-01 10:54:54 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-01 10:54:54 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-01 10:54:54 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-01 10:54:54 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-01 10:54:54 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-02-01 10:54:54 0 [Note] InnoDB: Waiting for purge to start
+2020-02-01 10:54:54 0 [Note] InnoDB: 10.4.11 started; log sequence number 15710922; transaction id 9061
+2020-02-01 10:54:54 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-01 10:54:54 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-01 10:54:54 0 [Note] Server socket created on IP: '::'.
+2020-02-01 10:54:54 0 [Note] InnoDB: Buffer pool(s) load completed at 200201 10:54:54
+2020-02-01 10:54:54 0 [Note] Reading of all Master_info entries succeeded
+2020-02-01 10:54:54 0 [Note] Added new Master_info '' to hash table
+2020-02-01 10:54:54 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-02-03  9:12:40 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-02-03  9:12:40 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-03  9:12:40 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-03  9:12:40 0 [Note] InnoDB: Starting shutdown...
+2020-02-03  9:12:40 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-03  9:12:40 0 [Note] InnoDB: Buffer pool(s) dump completed at 200203  9:12:40
+2020-02-03  9:12:42 0 [Note] InnoDB: Shutdown completed; log sequence number 15710931; transaction id 9062
+2020-02-03  9:12:43 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-03  9:12:43 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-02-03 10:05:08 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-02-03 10:05:08 0 [Note] InnoDB: Uses event mutexes
+2020-02-03 10:05:08 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-03 10:05:08 0 [Note] InnoDB: Number of pools: 1
+2020-02-03 10:05:08 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-03 10:05:08 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-02-03 10:05:08 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-03 10:05:08 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-03 10:05:08 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-03 10:05:08 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-03 10:05:08 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-02-03 10:05:08 0 [Note] InnoDB: Waiting for purge to start
+2020-02-03 10:05:09 0 [Note] InnoDB: 10.4.11 started; log sequence number 15710931; transaction id 9061
+2020-02-03 10:05:09 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-03 10:05:09 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-03 10:05:09 0 [Note] Server socket created on IP: '::'.
+2020-02-03 10:05:09 0 [Note] InnoDB: Buffer pool(s) load completed at 200203 10:05:09
+2020-02-03 10:05:09 0 [Note] Reading of all Master_info entries succeeded
+2020-02-03 10:05:09 0 [Note] Added new Master_info '' to hash table
+2020-02-03 10:05:09 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-02-03 18:03:53 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-02-03 18:03:53 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-03 18:03:53 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-03 18:03:53 0 [Note] InnoDB: Starting shutdown...
+2020-02-03 18:03:53 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-03 18:03:53 0 [Note] InnoDB: Buffer pool(s) dump completed at 200203 18:03:53
+2020-02-03 18:03:54 0 [Note] InnoDB: Shutdown completed; log sequence number 15710940; transaction id 9062
+2020-02-03 18:03:54 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-03 18:03:54 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-02-03 21:11:39 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-02-03 21:11:39 0 [Note] InnoDB: Uses event mutexes
+2020-02-03 21:11:39 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-03 21:11:39 0 [Note] InnoDB: Number of pools: 1
+2020-02-03 21:11:39 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-03 21:11:39 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-02-03 21:11:39 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-03 21:11:40 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-03 21:11:40 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-03 21:11:40 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-03 21:11:40 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-02-03 21:11:40 0 [Note] InnoDB: Waiting for purge to start
+2020-02-03 21:11:40 0 [Note] InnoDB: 10.4.11 started; log sequence number 15710940; transaction id 9061
+2020-02-03 21:11:40 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-03 21:11:40 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-03 21:11:40 0 [Note] InnoDB: Buffer pool(s) load completed at 200203 21:11:40
+2020-02-03 21:11:40 0 [Note] Server socket created on IP: '::'.
+2020-02-03 21:11:40 0 [Note] Reading of all Master_info entries succeeded
+2020-02-03 21:11:40 0 [Note] Added new Master_info '' to hash table
+2020-02-03 21:11:40 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-02-03 22:50:12 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-02-03 22:50:12 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-03 22:50:12 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-03 22:50:13 0 [Note] InnoDB: Starting shutdown...
+2020-02-03 22:50:13 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-03 22:50:13 0 [Note] InnoDB: Buffer pool(s) dump completed at 200203 22:50:13
+2020-02-03 22:50:14 0 [Note] InnoDB: Shutdown completed; log sequence number 15710949; transaction id 9062
+2020-02-03 22:50:14 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-03 22:50:14 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-02-04 10:54:28 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-02-04 10:54:28 0 [Note] InnoDB: Uses event mutexes
+2020-02-04 10:54:28 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-04 10:54:28 0 [Note] InnoDB: Number of pools: 1
+2020-02-04 10:54:28 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-04 10:54:28 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-02-04 10:54:28 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-04 10:54:29 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-04 10:54:29 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-04 10:54:29 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-04 10:54:29 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-02-04 10:54:29 0 [Note] InnoDB: Waiting for purge to start
+2020-02-04 10:54:29 0 [Note] InnoDB: 10.4.11 started; log sequence number 15710949; transaction id 9061
+2020-02-04 10:54:29 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-04 10:54:29 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-04 10:54:29 0 [Note] InnoDB: Buffer pool(s) load completed at 200204 10:54:29
+2020-02-04 10:54:29 0 [Note] Server socket created on IP: '::'.
+2020-02-04 10:54:29 0 [Note] Reading of all Master_info entries succeeded
+2020-02-04 10:54:29 0 [Note] Added new Master_info '' to hash table
+2020-02-04 10:54:29 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-02-04 11:01:01 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-02-04 11:01:01 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-04 11:01:01 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-04 11:01:01 0 [Note] InnoDB: Starting shutdown...
+2020-02-04 11:01:01 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-04 11:01:01 0 [Note] InnoDB: Buffer pool(s) dump completed at 200204 11:01:01
+2020-02-04 11:01:02 0 [Note] InnoDB: Shutdown completed; log sequence number 15710958; transaction id 9062
+2020-02-04 11:01:02 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-04 11:01:02 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-02-04 11:02:02 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-02-04 11:02:02 0 [Note] InnoDB: Uses event mutexes
+2020-02-04 11:02:02 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-04 11:02:02 0 [Note] InnoDB: Number of pools: 1
+2020-02-04 11:02:02 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-04 11:02:02 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-02-04 11:02:02 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-04 11:02:02 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-04 11:02:02 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-04 11:02:02 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-04 11:02:02 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-02-04 11:02:02 0 [Note] InnoDB: Waiting for purge to start
+2020-02-04 11:02:02 0 [Note] InnoDB: 10.4.11 started; log sequence number 15710958; transaction id 9061
+2020-02-04 11:02:02 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-02-04 11:02:02 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-04 11:02:03 0 [Note] Server socket created on IP: '::'.
+2020-02-04 11:02:03 0 [Note] InnoDB: Buffer pool(s) load completed at 200204 11:02:03
+2020-02-04 11:02:03 0 [Note] Reading of all Master_info entries succeeded
+2020-02-04 11:02:03 0 [Note] Added new Master_info '' to hash table
+2020-02-04 11:02:03 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
