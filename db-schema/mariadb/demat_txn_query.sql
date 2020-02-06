@@ -1,0 +1,1 @@
+SELECT stock_symbol, quantity, txn_price, txn_date FROM demat_txn WHERE stock_symbol = 'WIPRO';

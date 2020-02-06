@@ -15,7 +15,7 @@ CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
 OUT_DIR_1=$CONFIG_PROFILE_REPORTS_LOC/${MODULE_NAME}-reports
-OUT_FILE_1=${OUT_DIR_1}/${MODULE_NAME}-reports-gsheet.csv
+OUT_FILE_1=${OUT_DIR_1}/${MODULE_NAME}-reports-gsheet.tsv
 OUT_FILE_2=${OUT_DIR_1}/${MODULE_NAME}-reports-industry.csv
 
 mkdir -p ${OUT_DIR_1}

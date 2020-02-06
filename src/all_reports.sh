@@ -8,7 +8,7 @@ do
 done
 
 
-for TARGET in demat demat-zerodha demat-txn-stat
+for TARGET in demat demat-zerodha demat-sum-stat demat-txn-stat
 do
   cd $PROJ_SOURCE_LOC/$TARGET
   ./*.sh
