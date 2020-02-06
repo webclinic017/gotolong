@@ -8,7 +8,14 @@ Download PyCharm
 Download VIM
 
 Download mariadb
+
 Download HeidiSQL (crashes sometimes) : DB browser
+
+Install Django
+
+python -m pip install Django
+
+Installed in AppData\Local\Programs\Python\Python37\Lib\site-packages\django\apps
 
 ** Earlier
  *** Download SqLite 3
