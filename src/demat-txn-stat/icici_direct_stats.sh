@@ -2,7 +2,7 @@
 
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
-IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/demat-txn-stat-data/icicidirect/demat-txn-stat-data.csv
+IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-txn-data.csv
 
 if test $# -lt 3
 then

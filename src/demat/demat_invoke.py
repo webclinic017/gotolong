@@ -71,3 +71,4 @@ demat.demat_dump_txn_summary(out_filename_phase[2])
 # positive holdings
 demat.demat_dump_txn_summary(out_filename_phase[3], True)
 demat.demat_dump_summary_ticker_only(out_filename_phase[4])
+demat.demat_dump_summary_captype(out_filename_phase[5])

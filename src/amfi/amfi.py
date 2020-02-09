@@ -71,13 +71,6 @@ class Amfi(Database):
             else:
                 avg_mcap = cutil.cutil.get_number(row_list[5])
             captype = row_list[6].strip()
-            if captype == 'Small Cap':
-                if serial_number > 500 and serial_number < 750:
-                    captype = 'Micro Cap'
-                if serial_number > 750 and serial_number < 1000:
-                    captype = 'Nano Cap'
-                if serial_number > 1000:
-                    captype = 'Unknown Cap'
 
             comp_name = cutil.cutil.normalize_comp_name(comp_name)
 

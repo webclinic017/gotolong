@@ -14,10 +14,11 @@ OUT_FILE_2=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-txn-list-co
 OUT_FILE_3=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-txn-summary-reports-all.csv
 OUT_FILE_4=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-txn-summary-reports-positive.csv
 OUT_FILE_5=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-summary-ticker-only.csv
+OUT_FILE_6=$CONFIG_PROFILE_REPORTS_LOC/demat-reports/${BROKER}/demat-summary-captype.csv
 
 # -t for truncate the table
 # python demat_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_TXN} ${IN_FILE_SUMMARY} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
-python demat_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_TXN} ${IN_FILE_SUMMARY} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5}
+python demat_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_TXN} ${IN_FILE_SUMMARY} -o ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4}  ${OUT_FILE_5} ${OUT_FILE_6}
 
 # dump company names : why not tickers here
 # dump ticker names from the ISIN instead

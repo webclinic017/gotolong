@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# NOTE : removed plan module data
+
 # AMFI & ISIN
 for TARGET in amfi isin
 do

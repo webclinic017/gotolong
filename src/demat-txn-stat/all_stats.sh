@@ -7,7 +7,7 @@ MODULE=demat-txn-stat
 
 BROKER=icicidirect
 
-IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/${MODULE}-data/${BROKER}/${MODULE}-data.csv
+IN_FILE_TXN=$CONFIG_PROFILE_DATA_LOC/demat-data/${BROKER}/demat-txn-data.csv
 
 # gather stats
 OUT_FILE_YEAR=$CONFIG_PROFILE_REPORTS_LOC/${MODULE}-reports/${BROKER}/${MODULE}_year.csv

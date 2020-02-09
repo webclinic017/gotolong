@@ -27,6 +27,10 @@ class Demat(Amfi):
         self.demat_summary_qty = {}
         self.demat_summary_acp  = {}
         self.demat_summary_upl_pct = {}
+        self.demat_summary_captype_stock_count = {}
+        self.demat_summary_captype_stock_cost_value = {}
+        self.demat_summary_captype_stock_market_value = {}
+        self.demat_summary_captype_unrealized_pl = {}
         # stock keeping units : sku
         self.demat_summary_sku = {}
         self.demat_table_truncate = False
@@ -189,6 +193,29 @@ class Demat(Amfi):
                 sku = 0
             # store
             self.demat_summary_sku[stock_symbol] = sku
+
+            captype = self.amfi_get_value_by_ticker(stock_symbol, "captype")
+
+            if captype in self.demat_summary_captype_stock_count:
+                self.demat_summary_captype_stock_count[captype] += 1
+            else:
+                self.demat_summary_captype_stock_count[captype] = 1
+
+            if captype in self.demat_summary_captype_stock_cost_value:
+                self.demat_summary_captype_stock_cost_value[captype] += round(value_cost)
+            else:
+                self.demat_summary_captype_stock_cost_value[captype] = round(value_cost)
+
+            if captype in self.demat_summary_captype_stock_market_value:
+                self.demat_summary_captype_stock_market_value[captype] += round(value_market)
+            else:
+                self.demat_summary_captype_stock_market_value[captype] = round(value_market)
+
+            if captype in self.demat_summary_captype_unrealized_pl:
+                self.demat_summary_captype_unrealized_pl[captype] += round(unrealized_pl)
+            else:
+                self.demat_summary_captype_unrealized_pl[captype] = round(unrealized_pl)
+
         except:
             print("demat_summary_load_row Unexpected error:", sys.exc_info(), row)
 
@@ -362,6 +389,24 @@ class Demat(Amfi):
                 if self.debug_level > 0:
                     print('stock qty 0', stock_symbol)
         fh.close()
+
+    def demat_dump_summary_captype(self, out_filename):
+        fh = open(out_filename, "w")
+        fh.write("captype, stocks, cost value, market value, unrealized pl\n")
+        for captype in sorted(self.amfi_captype_list):
+            p_str = captype
+            p_str += ','
+            p_str += str(self.demat_summary_captype_stock_count[captype])
+            p_str += ','
+            p_str += str(self.demat_summary_captype_stock_cost_value[captype])
+            p_str += ','
+            p_str += str(self.demat_summary_captype_stock_market_value[captype])
+            p_str += ','
+            p_str += str(self.demat_summary_captype_unrealized_pl[captype])
+            p_str += '\n'
+            fh.write(p_str)
+        fh.close()
+
 
     def demat_summary_get_upl_pct_by_ticker(self, ticker):
         if ticker in self.demat_summary_upl_pct:
