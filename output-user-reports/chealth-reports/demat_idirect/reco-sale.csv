@@ -16,7 +16,6 @@ GICRE, roe3, 5.31
 GLAXO, profit5, -2.69
 GODREJIND, d2e, 1.66
 GRASIM, d2e, 1.47
-GSKCONS, sales5, -0.36
 ICICIPRULI, profit5, -6.1
 INDIGO, icr, 2.5
 INFRATEL, icr, -9.78
@@ -30,6 +29,7 @@ MAHINDCIE, dp3, 0.0
 MHRIL, profit5, -7.08
 MOTHERSUMI, d2e, 1.05
 NAUKRI, dp3, -68.37
+NETWORK18, d2e, 3.76
 NLCINDIA, d2e, 1.05
 NTPC, d2e, 1.33
 POWERGRID, d2e, 2.48
@@ -37,6 +37,7 @@ PRESTIGE, d2e, 2.01
 PVR, d2e, 1.03
 SBIN, roe3, -0.33
 SFL, dp3, 0.0
+STRTECH, d2e, 1.2
 SUNPHARMA, profit5, -5.96
 TATACHEM, sales5, -6.59
 TATAMOTORS, d2e, 1.76

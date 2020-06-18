@@ -64,6 +64,8 @@ class Demat(Amfi):
             "pct_change": "text",
             "value_cost": "text",
             "value_market": "text",
+            "days_gain": "text",
+            "days_gain_pct": "text",
             "realized_pl": "text",
             "unrealized_pl": "text",
             "unrealized_pl_pct": "text",
@@ -407,6 +409,47 @@ class Demat(Amfi):
             fh.write(p_str)
         fh.close()
 
+    def demat_dump_holdings_by_rank(self, out_filename):
+        fh = open(out_filename, "w")
+        fh.write('amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku\n')
+        for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
+            rank = self.amfi_rank[ticker]
+            p_str = str(rank)
+            p_str += ', '
+            p_str += ticker
+            p_str += ', '
+            p_str += self.amfi_cname[ticker]
+            p_str += ', '
+
+            if ticker in self.demat_summary_sku:
+                cur_sku = self.demat_summary_sku[ticker]
+            else:
+                cur_sku = 0
+                if rank <= 250:
+                    print("ticker", ticker, "with rank", rank, " doesn't have holdings")
+
+            if rank <= 100:
+                plan_sku = 10
+            else:
+                plan_sku = 5
+
+            tbd_sku = plan_sku - cur_sku
+
+            p_str += str(plan_sku)
+            p_str += ', '
+            p_str += str(cur_sku)
+            p_str += ', '
+            if tbd_sku > 0:
+                p_str += str(tbd_sku)
+            else:
+                p_str += str(0)
+
+            p_str += '\n'
+
+            # skip dumping unless you hold it after rank 250
+            if rank <= 250 or cur_sku > 0:
+                fh.write(p_str)
+        fh.close()
 
     def demat_summary_get_upl_pct_by_ticker(self, ticker):
         if ticker in self.demat_summary_upl_pct:

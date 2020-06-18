@@ -498,499 +498,499 @@ amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype
 498, Ksb, INE999A01015, KSB, 2408, Small Cap
 499, Responsive industries, INE688D01026, RESPONIND, 2406, Small Cap
 500, Ghcl, INE539A01019, GHCL, 2375, Small Cap
-501, Central depository services, INE736A01011, CDSL, 2366, Micro Cap
-502, Mishtann foods, INE094S01041, MISHTANN, 2362, Micro Cap
-503, Cg power industrial soluti, INE067A01029, CGPOWER, 2358, Micro Cap
-504, Vesuvius, INE386A01015, VESUVIUS, 2352, Micro Cap
-505, India tourism development corp, INE353K01014, ITDC, 2350, Micro Cap
-506, Schneider electric infrastruct, INE839M01018, SCHNEIDER, 2329, Micro Cap
-507, Den networks, INE947J01015, DEN, 2312, Micro Cap
-508, Shriram pistons rings, INE526E01018, SHRIPISTON, 2288, Micro Cap
-509, Sudarshan chemical industries, INE659A01023, SUDARSCHEM, 2285, Micro Cap
-510, La opala rg, INE059D01020, LAOPALA, 2274, Micro Cap
-511, Jamna auto industries, INE039C01032, JAMNAAUTO, 2266, Micro Cap
-512, Cox kings, INE008I01026, COX&KINGS, 2266, Micro Cap
-513, Jet airways, INE802G01018, JETAIRWAYS, 2266, Micro Cap
-514, Nocil, INE163A01018, NOCIL, 2256, Micro Cap
-515, Transport corporation, INE688A01022, TCI, 2242, Micro Cap
-516, Vaibhav global, INE884A01019, VAIBHAVGBL, 2236, Micro Cap
-517, S h kelkar company, INE500L01026, SHK, 2232, Micro Cap
-518, Heritage foods, INE978A01027, HERITGFOOD, 2227, Micro Cap
-519, Ptc, INE877F01012, PTC, 2227, Micro Cap
-520, Prataap snacks, INE393P01035, DIAMONDYD, 2167, Micro Cap
-521, Tasty bite eatables, INE488B01017, TASTYBITE, 2158, Micro Cap
-522, Newgen software technologies l, INE619B01017, NEWGEN, 2158, Micro Cap
-523, Jtekt, INE643A01035, JTEKTINDIA, 2155, Micro Cap
-524, Surabhi chemicals investment, INE401F01037, SURCHIN, 2150, Micro Cap
-525, Arvind, INE034A01011, ARVIND, 2146, Micro Cap
-526, Time technoplast, INE508G01029, TIMETECHNO, 2139, Micro Cap
-527, Goodyear, INE533A01012, GOODYEAR, 2124, Micro Cap
-528, Ahluwalia contracts, INE758C01029, AHLUCONT, 2113, Micro Cap
-529, Citurgia biochemicals, INE795B01031, CITURGIA, 2089, Micro Cap
-530, Balmer lawrie co, INE164A01016, BALMLAWRIE, 2087, Micro Cap
-531, Lakshmi vilas bank, INE694C01018, LAKSHVILAS, 2081, Micro Cap
-532, Wheels, INE715A01015, WHEELS, 2066, Micro Cap
-533, Ifci, INE039A01010, IFCI, 2042, Micro Cap
-534, Take solutions, INE142I01023, TAKE, 2039, Micro Cap
-535, Greenlam industries, INE544R01013, GREENLAM, 2037, Micro Cap
-536, Jk tyre industries, INE573A01042, JKTYRE, 2035, Micro Cap
-537, Force motors, INE451A01017, FORCEMOT, 2032, Micro Cap
-538, Hikal, INE475B01022, HIKAL, 2024, Micro Cap
-539, Gabriel, INE524A01029, GABRIEL, 2022, Micro Cap
-540, Shree renuka sugars, INE087H01022, RENUKA, 2020, Micro Cap
-541, Supreme petrochem, INE663A01017, SUPPETRO, 2013, Micro Cap
-542, Itd cementation, INE686A01026, ITDCEM, 2007, Micro Cap
-543, Parag milk foods, INE883N01014, PARAGMILK, 2003, Micro Cap
-544, Jindal stainless, INE455T01018, JSLHISAR, 1998, Micro Cap
-545, Hindustan construction co, INE549A01026, HCC, 1986, Micro Cap
-546, Mahindra lifespace developers, INE813A01018, MAHLIFE, 1976, Micro Cap
-547, Advanced enzyme technologies l, INE837H01020, ADVENZYMES, 1973, Micro Cap
-548, Nilkamal, INE310A01015, NILKAMAL, 1954, Micro Cap
-550, Max, INE153U01017, MAXINDIA, 1939, Micro Cap
-551, Dhanuka agritech, INE435G01025, DHANUKA, 1933, Micro Cap
-552, Jai corp, INE070D01027, JAICORPLTD, 1927, Micro Cap
-553, Himatsingka seide, INE049A01027, HIMATSEIDE, 1927, Micro Cap
-554, Borosil glass works, INE666D01022, BOROSIL, 1917, Micro Cap
-555, Ingersoll rand, INE177A01018, INGERRAND, 1880, Micro Cap
-556, Tv today network, INE038F01029, TVTODAY, 1878, Micro Cap
-557, Jmc projects, INE890A01024, JMCPROJECT, 1852, Micro Cap
-558, Orient cement, INE876N01018, ORIENTCEM, 1852, Micro Cap
-559, Bannari amman sugars, INE459A01010, BANARISUG, 1845, Micro Cap
-560, Nava bharat ventures, INE725A01022, NBVENTURES, 1843, Micro Cap
-561, Greenply industries, INE461C01038, GREENPLY, 1840, Micro Cap
-562, Kolte patil developers, INE094I01018, KOLTEPATIL, 1831, Micro Cap
-563, Poly medicure, INE205C01021, POLYMED, 1819, Micro Cap
-564, Future enterprises, INE623B01027, FEL, 1817, Micro Cap
-565, Nirlon, INE910A01012, NIRLON, 1806, Micro Cap
-566, Nrb bearings, INE349A01021, NRBBEARING, 1804, Micro Cap
-567, Bharat rasayan, INE838B01013, BHARATRAS, 1801, Micro Cap
-568, Prime focus, INE367G01038, PFOCUS, 1790, Micro Cap
-569, Tide water oil, INE484C01022, TIDEWATER, 1779, Micro Cap
-570, Ramco industries, INE614A01028, RAMCOIND, 1774, Micro Cap
-571, Elantas beck, INE280B01018, ELANTAS, 1773, Micro Cap
-572, Puravankara, INE323I01011, PURVA, 1769, Micro Cap
-573, Automotive axles, INE449A01011, AUTOAXLES, 1767, Micro Cap
-574, Hsil, INE415A01038, HSIL, 1757, Micro Cap
-575, International paper appm limit, INE435A01028, IPAPPM, 1756, Micro Cap
-576, Gmm pfaudler, INE541A01023, GMMPFAUDLR, 1755, Micro Cap
-577, Sequent scientific, INE807F01027, SEQUENT, 1750, Micro Cap
-578, National fertilizers, INE870D01012, NFL, 1743, Micro Cap
-579, Vindhya telelinks, INE707A01012, VINDHYATEL, 1742, Micro Cap
-580, Pilani investment industri, INE417C01014, PILANIINVS, 1741, Micro Cap
-581, Indoco remedies, INE873D01024, INDOCO, 1725, Micro Cap
-582, Fairchem speciality, INE959A01019, FAIRCHEM, 1725, Micro Cap
-583, Uflex, INE516A01017, UFLEX, 1715, Micro Cap
-584, Novartis, INE234A01025, NOVARTIND, 1709, Micro Cap
-585, Olectra greentech, INE260D01016, OLECTRA, 1708, Micro Cap
-586, West coast paper mills, INE976A01021, WSTCSTPAPR, 1708, Micro Cap
-587, Healthcare global enterprises, INE075I01017, HCG, 1704, Micro Cap
-588, Swaraj engines, INE277A01016, SWARAJENG, 1703, Micro Cap
-589, Bliss gvs pharma, INE416D01022, BLISSGVS, 1699, Micro Cap
-590, Shipping corporation, INE109A01011, SCI, 1695, Micro Cap
-591, Jindal stainless, INE220G01021, JSL, 1692, Micro Cap
-592, Tvs srichakra, INE421C01016, TVSSRICHAK, 1681, Micro Cap
-593, Siyaram silk mills, INE076B01028, SIYSIL, 1677, Micro Cap
-594, Welspun enterprises limted, INE625G01013, WELENT, 1674, Micro Cap
-595, Tata coffee, INE493A01027, TATACOFFEE, 1669, Micro Cap
-596, Sandhar technologies, INE278H01035, SANDHAR, 1662, Micro Cap
-597, Rane holdings, INE384A01010, RANEHOLDIN, 1657, Micro Cap
-598, Subros, INE287B01021, SUBROS, 1657, Micro Cap
-599, Wonderla holidays, INE066O01014, WONDERLA, 1651, Micro Cap
-600, Polyplex corporation, INE633B01018, POLYPLEX, 1650, Micro Cap
-601, Va tech wabag, INE956G01038, WABAG, 1644, Micro Cap
-602, Alkyl amines chemicals, INE150B01021, ALKYLAMINE, 1630, Micro Cap
-603, Somany ceramics, INE355A01028, SOMANYCERA, 1628, Micro Cap
-604, Psp projects, INE488V01015, PSPPROJECT, 1627, Micro Cap
-605, National peroxide, INE585A01020, NATPEROX, 1625, Micro Cap
-606, Tejas networks, INE010J01012, TEJASNET, 1619, Micro Cap
-607, Music broadcast, INE919I01024, RADIOCITY, 1613, Micro Cap
-608, Punjab sind bank, INE608A01012, PSB, 1606, Micro Cap
-609, Huhtamaki ppl, INE275B01026, PAPERPROD, 1606, Micro Cap
-610, Ramkrishna forgings, INE399G01015, RKFORGE, 1603, Micro Cap
-611, Safari industries, INE429E01023, SAFARIND, 1601, Micro Cap
-612, Capacite infraprojects limite, INE264T01014, CAPACITE, 1596, Micro Cap
-613, Savita oil technologies, INE035D01012, SOTL, 1596, Micro Cap
-614, Niit, INE161A01038, NIITLTD, 1590, Micro Cap
-615, Hg infra engineering, INE926X01010, HGINFRA, 1588, Micro Cap
-616, Hindustan oil exploration col, INE345A01011, HINDOILEXP, 1587, Micro Cap
-617, Hawkins cookers, INE979B01015, HAWKINCOOK, 1563, Micro Cap
-618, Tata metaliks, INE056C01010, TATAMETALI, 1562, Micro Cap
-619, Dollar industries, INE325C01035, DOLLAR, 1558, Micro Cap
-620, Mayur uniquoters, INE040D01038, MAYURUNIQ, 1543, Micro Cap
-621, Meghmani organics, INE974H01013, MEGH, 1534, Micro Cap
-622, Kewal kiran clothing, INE401H01017, KKCL, 1530, Micro Cap
-623, Sanghi industries, INE999B01013, SANGHIIND, 1521, Micro Cap
-624, Triveni engineering industri, INE256C01024, TRIVENI, 1518, Micro Cap
-625, Kiri industries, INE415I01015, KIRIINDUS, 1512, Micro Cap
-626, Inox wind, INE066P01011, INOXWIND, 1511, Micro Cap
-627, Lumax industries, INE162B01018, LUMAXIND, 1500, Micro Cap
-628, Tinplate company, INE422C01014, TINPLATE, 1484, Micro Cap
-629, Reliance communications, INE330H01018, RCOM, 1479, Micro Cap
-630, Satin creditcare network limit, INE836B01017, SATIN, 1463, Micro Cap
-631, Maithan alloys, INE683C01011, MAITHANALL, 1460, Micro Cap
-632, Esab, INE284A01012, ESABINDIA, 1449, Micro Cap
-633, Excel industries, INE369A01029, EXCELINDUS, 1444, Micro Cap
-634, Shalby, INE597J01018, SHALBY, 1432, Micro Cap
-635, Texmaco rail engineering, INE621L01012, TEXRAIL, 1421, Micro Cap
-636, Indian hume pipe co, INE323C01030, INDIANHUME, 1420, Micro Cap
-637, Jindal worldwide, INE247D01039, JINDWORLD, 1420, Micro Cap
-638, Quick heal technologies limite, INE306L01010, QUICKHEAL, 1414, Micro Cap
-639, Tamil nadu newsprint papers, INE107A01015, TNPL, 1413, Micro Cap
-640, Aarti drugs, INE767A01016, AARTIDRUGS, 1408, Micro Cap
-641, Balaji amines, INE050E01027, BALAMINES, 1404, Micro Cap
-642, Gocl corporation, INE077F01035, GOCLCORP, 1400, Micro Cap
-643, Majesco, INE898S01029, MAJESCO, 1399, Micro Cap
-644, Agro tech foods, INE209A01019, ATFL, 1374, Micro Cap
-645, Accelya solutions limite, INE793A01012, ACCELYA, 1372, Micro Cap
-646, Bodal chemicals, INE338D01028, BODALCHEM, 1365, Micro Cap
-647, Dhampur sugar mills, INE041A01016, DHAMPURSUG, 1363, Micro Cap
-648, Power mech projects, INE211R01019, POWERMECH, 1361, Micro Cap
-649, Hil, INE557A01011, HIL, 1361, Micro Cap
-650, Bengal assam company, INE083K01017, BENGALASM, 1361, Micro Cap
-651, Srei infrastructure finance lt, INE872A01014, SREINFRA, 1359, Micro Cap
-652, Muthoot capital services, INE296G01013, MUTHOOTCAP, 1357, Micro Cap
-653, Gateway distriparks, INE852F01015, GDL, 1357, Micro Cap
-654, Gic housing finance, INE289B01019, GICHSGFIN, 1349, Micro Cap
-655, Unichem laboratories, INE351A01035, UNICHEMLAB, 1347, Micro Cap
-656, Jaiprakash associates, INE455F01025, JPASSOCIAT, 1344, Micro Cap
-657, Vishal fabrics, INE755Q01025, VISHAL, 1342, Micro Cap
-658, Paisalo digital, INE420C01042, PAISALO, 1334, Micro Cap
-659, Prakash industries, INE603A01013, PRAKASH, 1331, Micro Cap
-660, Sundaram finance holdings, INE202Z01029, SUNDARMHLD, 1329, Micro Cap
-661, Steel strips wheels, INE802C01017, SSWL, 1320, Micro Cap
-662, Centrum capital, INE660C01027, CENTRUM, 1320, Micro Cap
-663, Hinduja global solutions, INE170I01016, HGS, 1318, Micro Cap
-664, Cesc ventures, INE425Y01011, CESCVENT, 1317, Micro Cap
-665, Insecticides, INE070I01018, INSECTICID, 1313, Micro Cap
-666, Monnet ispat energy, INE743C01021, AIONJSW, 1305, Micro Cap
-667, Mmforgings, INE227C01017, MMFL, 1299, Micro Cap
-668, Reliance home finance, INE217K01011, RHFL, 1298, Micro Cap
-669, Jaiprakash power ventures limi, INE351F01018, JPPOWER, 1298, Micro Cap
-670, Kirloskar brothers, INE732A01036, KIRLOSBROS, 1296, Micro Cap
-671, Fertilizers chemicals travan, INE188A01015, FACT, 1294, Micro Cap
-672, Sagar cements, INE229C01013, SAGCEM, 1292, Micro Cap
-673, Surya roshni, INE335A01012, SURYAROSNI, 1290, Micro Cap
-674, Gromo trade consultancy, INE286N01010, GROMOTRADE, 1284, Micro Cap
-675, Technocraft industries, INE545H01011, TIIL, 1279, Micro Cap
-676, Ls industries, INE345D01031, LSIND, 1273, Micro Cap
-677, Matrimonycom, INE866R01028, MATRIMONY, 1250, Micro Cap
-678, Hester biosciences, INE782E01017, HESTERBIO, 1243, Micro Cap
-679, Kirloskar ferrous industries l, INE884B01025, KIRLFER, 1236, Micro Cap
-680, Tajgvk hotels resorts, INE586B01026, TAJGVK, 1231, Micro Cap
-681, Seshasayee paper boards, INE630A01016, SESHAPAPER, 1213, Micro Cap
-682, Bhansali engineering polymers, INE922A01025, BEPL, 1211, Micro Cap
-683, Lgbalakrishnan bros, INE337A01034, LGBBROSLTD, 1208, Micro Cap
-684, Kelvin fincap, INE232N01022, KELVINFIN, 1200, Micro Cap
-685, Tata sponge iron, INE674A01014, TATASPONGE, 1194, Micro Cap
-686, Ashiana housing, INE365D01021, ASHIANA, 1188, Micro Cap
-687, Bls international services, INE153T01027, BLS, 1188, Micro Cap
-688, Vsttillers tractors, INE764D01017, VSTTILLERS, 1186, Micro Cap
-689, Dpsc, INE360C01024, DPSCLTD, 1186, Micro Cap
-690, Kirloskar pneumatic co, INE811A01020, KIRLPNU, 1179, Micro Cap
-691, Sasken technologies, INE231F01020, SASKEN, 1171, Micro Cap
-692, Deepak fertilisers petrochem, INE501A01019, DEEPAKFERT, 1166, Micro Cap
-693, Oriental carbon chemicals lt, INE321D01016, OCCL, 1162, Micro Cap
-694, Eveready industries, INE128A01029, EVEREADY, 1160, Micro Cap
-695, Garden reach shipbuilders en, INE382Z01011, GRSE, 1156, Micro Cap
-696, Igarashi motors, INE188B01013, IGARASHI, 1152, Micro Cap
-697, Asian star co, INE194D01017, ASTAR, 1148, Micro Cap
-698, Dfm foods, INE456C01020, DFMFOODS, 1148, Micro Cap
-699, Seya industries, INE573R01012, SEYAIND, 1147, Micro Cap
-700, Sintex plastics technology, INE501W01021, SPTL, 1140, Micro Cap
-701, Gtl infrastructure, INE221H01019, GTLINFRA, 1135, Micro Cap
-702, Ace edutrend, INE731H01025, ACE, 1129, Micro Cap
-703, Grauer weil, INE266D01021, GRAUWEIL, 1127, Micro Cap
-704, Kcp, INE805C01028, KCP, 1124, Micro Cap
-705, Hmt, INE262A01018, HMT, 1121, Micro Cap
-706, Dredging corporation, INE506A01018, DREDGECORP, 1114, Micro Cap
-707, Eih associated hotels, INE276C01014, EIHAHOTELS, 1110, Micro Cap
-708, Gujarat industries power colt, INE162A01010, GIPCL, 1106, Micro Cap
-709, Voltamp transformers, INE540H01012, VOLTAMP, 1105, Micro Cap
-710, Banco products, INE213C01025, BANCOINDIA, 1102, Micro Cap
-711, Lt foods, INE818H01020, DAAWAT, 1101, Micro Cap
-712, Spencers retail, INE020801028, SPENCERS, 1101, Micro Cap
-713, Gvk power infrastructure, INE251H01024, GVKPIL, 1095, Micro Cap
-714, Iol chemicals pharmaceutical, INE485C01011, IOLCP, 1093, Micro Cap
-715, Alembic, INE426A01027, ALEMBICLTD, 1088, Micro Cap
-716, Capital finance, INE345H01016, CIFL, 1086, Micro Cap
-717, Panacea biotec, INE922B01023, PANACEABIO, 1081, Micro Cap
-718, Shankara building products lim, INE274V01019, SHANKARA, 1071, Micro Cap
-719, Honda siel power products, INE634A01018, HONDAPOWER, 1071, Micro Cap
-720, Housing development infrastr, INE191I01012, HDIL, 1070, Micro Cap
-721, Jindal poly films, INE197D01010, JINDALPOLY, 1069, Micro Cap
-722, Jkumar infraprojects, INE576I01022, JKIL, 1066, Micro Cap
-723, Jbm auto, INE927D01028, JBMA, 1066, Micro Cap
-724, Confidence petroleum, INE552D01024, CONFIPET, 1060, Micro Cap
-725, Apcotex industries, INE116A01024, APCOTEXIND, 1059, Micro Cap
-726, Mastek, INE759A01021, MASTEK, 1056, Micro Cap
-727, Dolat investments, INE966A01022, DOLAT, 1051, Micro Cap
-728, Filatex, INE816B01027, FILATEX, 1047, Micro Cap
-729, Shemaroo entertainment, INE363M01019, SHEMAROO, 1041, Micro Cap
-730, Sml isuzu, INE294B01019, SMLISUZU, 1037, Micro Cap
-731, Premier capital services, INE946K01023, PREMCAP, 1035, Micro Cap
-732, Ptc financial services l, INE560K01014, PFS, 1027, Micro Cap
-733, Nucleus software exports, INE096B01018, NUCLEUS, 1025, Micro Cap
-734, Usha martin, INE228A01035, USHAMART, 1010, Micro Cap
-735, Gmbreweries, INE075D01018, GMBREW, 1010, Micro Cap
-736, Solara active pharma sciences, INE624Z01016, SOLARA, 1000, Micro Cap
-737, Sterling tools, INE334A01023, STERTOOLS, 999, Micro Cap
-738, Marksans pharma, INE750C01026, MARKSANS, 997, Micro Cap
-739, Saregama, INE979A01017, SAREGAMA, 994, Micro Cap
-740, Shanthi gears, INE631A01022, SHANTIGEAR, 993, Micro Cap
-741, Kesoram industries, INE087A01019, KESORAMIND, 993, Micro Cap
-742, Manpasand beverages, INE122R01018, MANPASAND, 986, Micro Cap
-743, Tourism finance corporation of, INE305A01015, TFCILTD, 984, Micro Cap
-744, Seamec, INE497B01018, SEAMECLTD, 984, Micro Cap
-745, Apex frozen foods, INE346W01013, APEX, 970, Micro Cap
-746, Astec lifesciences, INE563J01010, ASTEC, 968, Micro Cap
-747, Sarda energy minerals, INE385C01013, SARDAEN, 967, Micro Cap
-748, Ineos styrolution limite, INE189B01011, INEOSSTYRO, 964, Micro Cap
-749, Ttk healthcare, INE910C01018, TTKHLTCARE, 959, Micro Cap
+501, Central depository services, INE736A01011, CDSL, 2366, Small Cap
+502, Mishtann foods, INE094S01041, MISHTANN, 2362, Small Cap
+503, Cg power industrial soluti, INE067A01029, CGPOWER, 2358, Small Cap
+504, Vesuvius, INE386A01015, VESUVIUS, 2352, Small Cap
+505, India tourism development corp, INE353K01014, ITDC, 2350, Small Cap
+506, Schneider electric infrastruct, INE839M01018, SCHNEIDER, 2329, Small Cap
+507, Den networks, INE947J01015, DEN, 2312, Small Cap
+508, Shriram pistons rings, INE526E01018, SHRIPISTON, 2288, Small Cap
+509, Sudarshan chemical industries, INE659A01023, SUDARSCHEM, 2285, Small Cap
+510, La opala rg, INE059D01020, LAOPALA, 2274, Small Cap
+511, Jamna auto industries, INE039C01032, JAMNAAUTO, 2266, Small Cap
+512, Cox kings, INE008I01026, COX&KINGS, 2266, Small Cap
+513, Jet airways, INE802G01018, JETAIRWAYS, 2266, Small Cap
+514, Nocil, INE163A01018, NOCIL, 2256, Small Cap
+515, Transport corporation, INE688A01022, TCI, 2242, Small Cap
+516, Vaibhav global, INE884A01019, VAIBHAVGBL, 2236, Small Cap
+517, S h kelkar company, INE500L01026, SHK, 2232, Small Cap
+518, Heritage foods, INE978A01027, HERITGFOOD, 2227, Small Cap
+519, Ptc, INE877F01012, PTC, 2227, Small Cap
+520, Prataap snacks, INE393P01035, DIAMONDYD, 2167, Small Cap
+521, Tasty bite eatables, INE488B01017, TASTYBITE, 2158, Small Cap
+522, Newgen software technologies l, INE619B01017, NEWGEN, 2158, Small Cap
+523, Jtekt, INE643A01035, JTEKTINDIA, 2155, Small Cap
+524, Surabhi chemicals investment, INE401F01037, SURCHIN, 2150, Small Cap
+525, Arvind, INE034A01011, ARVIND, 2146, Small Cap
+526, Time technoplast, INE508G01029, TIMETECHNO, 2139, Small Cap
+527, Goodyear, INE533A01012, GOODYEAR, 2124, Small Cap
+528, Ahluwalia contracts, INE758C01029, AHLUCONT, 2113, Small Cap
+529, Citurgia biochemicals, INE795B01031, CITURGIA, 2089, Small Cap
+530, Balmer lawrie co, INE164A01016, BALMLAWRIE, 2087, Small Cap
+531, Lakshmi vilas bank, INE694C01018, LAKSHVILAS, 2081, Small Cap
+532, Wheels, INE715A01015, WHEELS, 2066, Small Cap
+533, Ifci, INE039A01010, IFCI, 2042, Small Cap
+534, Take solutions, INE142I01023, TAKE, 2039, Small Cap
+535, Greenlam industries, INE544R01013, GREENLAM, 2037, Small Cap
+536, Jk tyre industries, INE573A01042, JKTYRE, 2035, Small Cap
+537, Force motors, INE451A01017, FORCEMOT, 2032, Small Cap
+538, Hikal, INE475B01022, HIKAL, 2024, Small Cap
+539, Gabriel, INE524A01029, GABRIEL, 2022, Small Cap
+540, Shree renuka sugars, INE087H01022, RENUKA, 2020, Small Cap
+541, Supreme petrochem, INE663A01017, SUPPETRO, 2013, Small Cap
+542, Itd cementation, INE686A01026, ITDCEM, 2007, Small Cap
+543, Parag milk foods, INE883N01014, PARAGMILK, 2003, Small Cap
+544, Jindal stainless, INE455T01018, JSLHISAR, 1998, Small Cap
+545, Hindustan construction co, INE549A01026, HCC, 1986, Small Cap
+546, Mahindra lifespace developers, INE813A01018, MAHLIFE, 1976, Small Cap
+547, Advanced enzyme technologies l, INE837H01020, ADVENZYMES, 1973, Small Cap
+548, Nilkamal, INE310A01015, NILKAMAL, 1954, Small Cap
+550, Max, INE153U01017, MAXINDIA, 1939, Small Cap
+551, Dhanuka agritech, INE435G01025, DHANUKA, 1933, Small Cap
+552, Jai corp, INE070D01027, JAICORPLTD, 1927, Small Cap
+553, Himatsingka seide, INE049A01027, HIMATSEIDE, 1927, Small Cap
+554, Borosil glass works, INE666D01022, BOROSIL, 1917, Small Cap
+555, Ingersoll rand, INE177A01018, INGERRAND, 1880, Small Cap
+556, Tv today network, INE038F01029, TVTODAY, 1878, Small Cap
+557, Jmc projects, INE890A01024, JMCPROJECT, 1852, Small Cap
+558, Orient cement, INE876N01018, ORIENTCEM, 1852, Small Cap
+559, Bannari amman sugars, INE459A01010, BANARISUG, 1845, Small Cap
+560, Nava bharat ventures, INE725A01022, NBVENTURES, 1843, Small Cap
+561, Greenply industries, INE461C01038, GREENPLY, 1840, Small Cap
+562, Kolte patil developers, INE094I01018, KOLTEPATIL, 1831, Small Cap
+563, Poly medicure, INE205C01021, POLYMED, 1819, Small Cap
+564, Future enterprises, INE623B01027, FEL, 1817, Small Cap
+565, Nirlon, INE910A01012, NIRLON, 1806, Small Cap
+566, Nrb bearings, INE349A01021, NRBBEARING, 1804, Small Cap
+567, Bharat rasayan, INE838B01013, BHARATRAS, 1801, Small Cap
+568, Prime focus, INE367G01038, PFOCUS, 1790, Small Cap
+569, Tide water oil, INE484C01022, TIDEWATER, 1779, Small Cap
+570, Ramco industries, INE614A01028, RAMCOIND, 1774, Small Cap
+571, Elantas beck, INE280B01018, ELANTAS, 1773, Small Cap
+572, Puravankara, INE323I01011, PURVA, 1769, Small Cap
+573, Automotive axles, INE449A01011, AUTOAXLES, 1767, Small Cap
+574, Hsil, INE415A01038, HSIL, 1757, Small Cap
+575, International paper appm limit, INE435A01028, IPAPPM, 1756, Small Cap
+576, Gmm pfaudler, INE541A01023, GMMPFAUDLR, 1755, Small Cap
+577, Sequent scientific, INE807F01027, SEQUENT, 1750, Small Cap
+578, National fertilizers, INE870D01012, NFL, 1743, Small Cap
+579, Vindhya telelinks, INE707A01012, VINDHYATEL, 1742, Small Cap
+580, Pilani investment industri, INE417C01014, PILANIINVS, 1741, Small Cap
+581, Indoco remedies, INE873D01024, INDOCO, 1725, Small Cap
+582, Fairchem speciality, INE959A01019, FAIRCHEM, 1725, Small Cap
+583, Uflex, INE516A01017, UFLEX, 1715, Small Cap
+584, Novartis, INE234A01025, NOVARTIND, 1709, Small Cap
+585, Olectra greentech, INE260D01016, OLECTRA, 1708, Small Cap
+586, West coast paper mills, INE976A01021, WSTCSTPAPR, 1708, Small Cap
+587, Healthcare global enterprises, INE075I01017, HCG, 1704, Small Cap
+588, Swaraj engines, INE277A01016, SWARAJENG, 1703, Small Cap
+589, Bliss gvs pharma, INE416D01022, BLISSGVS, 1699, Small Cap
+590, Shipping corporation, INE109A01011, SCI, 1695, Small Cap
+591, Jindal stainless, INE220G01021, JSL, 1692, Small Cap
+592, Tvs srichakra, INE421C01016, TVSSRICHAK, 1681, Small Cap
+593, Siyaram silk mills, INE076B01028, SIYSIL, 1677, Small Cap
+594, Welspun enterprises limted, INE625G01013, WELENT, 1674, Small Cap
+595, Tata coffee, INE493A01027, TATACOFFEE, 1669, Small Cap
+596, Sandhar technologies, INE278H01035, SANDHAR, 1662, Small Cap
+597, Rane holdings, INE384A01010, RANEHOLDIN, 1657, Small Cap
+598, Subros, INE287B01021, SUBROS, 1657, Small Cap
+599, Wonderla holidays, INE066O01014, WONDERLA, 1651, Small Cap
+600, Polyplex corporation, INE633B01018, POLYPLEX, 1650, Small Cap
+601, Va tech wabag, INE956G01038, WABAG, 1644, Small Cap
+602, Alkyl amines chemicals, INE150B01021, ALKYLAMINE, 1630, Small Cap
+603, Somany ceramics, INE355A01028, SOMANYCERA, 1628, Small Cap
+604, Psp projects, INE488V01015, PSPPROJECT, 1627, Small Cap
+605, National peroxide, INE585A01020, NATPEROX, 1625, Small Cap
+606, Tejas networks, INE010J01012, TEJASNET, 1619, Small Cap
+607, Music broadcast, INE919I01024, RADIOCITY, 1613, Small Cap
+608, Punjab sind bank, INE608A01012, PSB, 1606, Small Cap
+609, Huhtamaki ppl, INE275B01026, PAPERPROD, 1606, Small Cap
+610, Ramkrishna forgings, INE399G01015, RKFORGE, 1603, Small Cap
+611, Safari industries, INE429E01023, SAFARIND, 1601, Small Cap
+612, Capacite infraprojects limite, INE264T01014, CAPACITE, 1596, Small Cap
+613, Savita oil technologies, INE035D01012, SOTL, 1596, Small Cap
+614, Niit, INE161A01038, NIITLTD, 1590, Small Cap
+615, Hg infra engineering, INE926X01010, HGINFRA, 1588, Small Cap
+616, Hindustan oil exploration col, INE345A01011, HINDOILEXP, 1587, Small Cap
+617, Hawkins cookers, INE979B01015, HAWKINCOOK, 1563, Small Cap
+618, Tata metaliks, INE056C01010, TATAMETALI, 1562, Small Cap
+619, Dollar industries, INE325C01035, DOLLAR, 1558, Small Cap
+620, Mayur uniquoters, INE040D01038, MAYURUNIQ, 1543, Small Cap
+621, Meghmani organics, INE974H01013, MEGH, 1534, Small Cap
+622, Kewal kiran clothing, INE401H01017, KKCL, 1530, Small Cap
+623, Sanghi industries, INE999B01013, SANGHIIND, 1521, Small Cap
+624, Triveni engineering industri, INE256C01024, TRIVENI, 1518, Small Cap
+625, Kiri industries, INE415I01015, KIRIINDUS, 1512, Small Cap
+626, Inox wind, INE066P01011, INOXWIND, 1511, Small Cap
+627, Lumax industries, INE162B01018, LUMAXIND, 1500, Small Cap
+628, Tinplate company, INE422C01014, TINPLATE, 1484, Small Cap
+629, Reliance communications, INE330H01018, RCOM, 1479, Small Cap
+630, Satin creditcare network limit, INE836B01017, SATIN, 1463, Small Cap
+631, Maithan alloys, INE683C01011, MAITHANALL, 1460, Small Cap
+632, Esab, INE284A01012, ESABINDIA, 1449, Small Cap
+633, Excel industries, INE369A01029, EXCELINDUS, 1444, Small Cap
+634, Shalby, INE597J01018, SHALBY, 1432, Small Cap
+635, Texmaco rail engineering, INE621L01012, TEXRAIL, 1421, Small Cap
+636, Indian hume pipe co, INE323C01030, INDIANHUME, 1420, Small Cap
+637, Jindal worldwide, INE247D01039, JINDWORLD, 1420, Small Cap
+638, Quick heal technologies limite, INE306L01010, QUICKHEAL, 1414, Small Cap
+639, Tamil nadu newsprint papers, INE107A01015, TNPL, 1413, Small Cap
+640, Aarti drugs, INE767A01016, AARTIDRUGS, 1408, Small Cap
+641, Balaji amines, INE050E01027, BALAMINES, 1404, Small Cap
+642, Gocl corporation, INE077F01035, GOCLCORP, 1400, Small Cap
+643, Majesco, INE898S01029, MAJESCO, 1399, Small Cap
+644, Agro tech foods, INE209A01019, ATFL, 1374, Small Cap
+645, Accelya solutions limite, INE793A01012, ACCELYA, 1372, Small Cap
+646, Bodal chemicals, INE338D01028, BODALCHEM, 1365, Small Cap
+647, Dhampur sugar mills, INE041A01016, DHAMPURSUG, 1363, Small Cap
+648, Power mech projects, INE211R01019, POWERMECH, 1361, Small Cap
+649, Hil, INE557A01011, HIL, 1361, Small Cap
+650, Bengal assam company, INE083K01017, BENGALASM, 1361, Small Cap
+651, Srei infrastructure finance lt, INE872A01014, SREINFRA, 1359, Small Cap
+652, Muthoot capital services, INE296G01013, MUTHOOTCAP, 1357, Small Cap
+653, Gateway distriparks, INE852F01015, GDL, 1357, Small Cap
+654, Gic housing finance, INE289B01019, GICHSGFIN, 1349, Small Cap
+655, Unichem laboratories, INE351A01035, UNICHEMLAB, 1347, Small Cap
+656, Jaiprakash associates, INE455F01025, JPASSOCIAT, 1344, Small Cap
+657, Vishal fabrics, INE755Q01025, VISHAL, 1342, Small Cap
+658, Paisalo digital, INE420C01042, PAISALO, 1334, Small Cap
+659, Prakash industries, INE603A01013, PRAKASH, 1331, Small Cap
+660, Sundaram finance holdings, INE202Z01029, SUNDARMHLD, 1329, Small Cap
+661, Steel strips wheels, INE802C01017, SSWL, 1320, Small Cap
+662, Centrum capital, INE660C01027, CENTRUM, 1320, Small Cap
+663, Hinduja global solutions, INE170I01016, HGS, 1318, Small Cap
+664, Cesc ventures, INE425Y01011, CESCVENT, 1317, Small Cap
+665, Insecticides, INE070I01018, INSECTICID, 1313, Small Cap
+666, Monnet ispat energy, INE743C01021, AIONJSW, 1305, Small Cap
+667, Mmforgings, INE227C01017, MMFL, 1299, Small Cap
+668, Reliance home finance, INE217K01011, RHFL, 1298, Small Cap
+669, Jaiprakash power ventures limi, INE351F01018, JPPOWER, 1298, Small Cap
+670, Kirloskar brothers, INE732A01036, KIRLOSBROS, 1296, Small Cap
+671, Fertilizers chemicals travan, INE188A01015, FACT, 1294, Small Cap
+672, Sagar cements, INE229C01013, SAGCEM, 1292, Small Cap
+673, Surya roshni, INE335A01012, SURYAROSNI, 1290, Small Cap
+674, Gromo trade consultancy, INE286N01010, GROMOTRADE, 1284, Small Cap
+675, Technocraft industries, INE545H01011, TIIL, 1279, Small Cap
+676, Ls industries, INE345D01031, LSIND, 1273, Small Cap
+677, Matrimonycom, INE866R01028, MATRIMONY, 1250, Small Cap
+678, Hester biosciences, INE782E01017, HESTERBIO, 1243, Small Cap
+679, Kirloskar ferrous industries l, INE884B01025, KIRLFER, 1236, Small Cap
+680, Tajgvk hotels resorts, INE586B01026, TAJGVK, 1231, Small Cap
+681, Seshasayee paper boards, INE630A01016, SESHAPAPER, 1213, Small Cap
+682, Bhansali engineering polymers, INE922A01025, BEPL, 1211, Small Cap
+683, Lgbalakrishnan bros, INE337A01034, LGBBROSLTD, 1208, Small Cap
+684, Kelvin fincap, INE232N01022, KELVINFIN, 1200, Small Cap
+685, Tata sponge iron, INE674A01014, TATASPONGE, 1194, Small Cap
+686, Ashiana housing, INE365D01021, ASHIANA, 1188, Small Cap
+687, Bls international services, INE153T01027, BLS, 1188, Small Cap
+688, Vsttillers tractors, INE764D01017, VSTTILLERS, 1186, Small Cap
+689, Dpsc, INE360C01024, DPSCLTD, 1186, Small Cap
+690, Kirloskar pneumatic co, INE811A01020, KIRLPNU, 1179, Small Cap
+691, Sasken technologies, INE231F01020, SASKEN, 1171, Small Cap
+692, Deepak fertilisers petrochem, INE501A01019, DEEPAKFERT, 1166, Small Cap
+693, Oriental carbon chemicals lt, INE321D01016, OCCL, 1162, Small Cap
+694, Eveready industries, INE128A01029, EVEREADY, 1160, Small Cap
+695, Garden reach shipbuilders en, INE382Z01011, GRSE, 1156, Small Cap
+696, Igarashi motors, INE188B01013, IGARASHI, 1152, Small Cap
+697, Asian star co, INE194D01017, ASTAR, 1148, Small Cap
+698, Dfm foods, INE456C01020, DFMFOODS, 1148, Small Cap
+699, Seya industries, INE573R01012, SEYAIND, 1147, Small Cap
+700, Sintex plastics technology, INE501W01021, SPTL, 1140, Small Cap
+701, Gtl infrastructure, INE221H01019, GTLINFRA, 1135, Small Cap
+702, Ace edutrend, INE731H01025, ACE, 1129, Small Cap
+703, Grauer weil, INE266D01021, GRAUWEIL, 1127, Small Cap
+704, Kcp, INE805C01028, KCP, 1124, Small Cap
+705, Hmt, INE262A01018, HMT, 1121, Small Cap
+706, Dredging corporation, INE506A01018, DREDGECORP, 1114, Small Cap
+707, Eih associated hotels, INE276C01014, EIHAHOTELS, 1110, Small Cap
+708, Gujarat industries power colt, INE162A01010, GIPCL, 1106, Small Cap
+709, Voltamp transformers, INE540H01012, VOLTAMP, 1105, Small Cap
+710, Banco products, INE213C01025, BANCOINDIA, 1102, Small Cap
+711, Lt foods, INE818H01020, DAAWAT, 1101, Small Cap
+712, Spencers retail, INE020801028, SPENCERS, 1101, Small Cap
+713, Gvk power infrastructure, INE251H01024, GVKPIL, 1095, Small Cap
+714, Iol chemicals pharmaceutical, INE485C01011, IOLCP, 1093, Small Cap
+715, Alembic, INE426A01027, ALEMBICLTD, 1088, Small Cap
+716, Capital finance, INE345H01016, CIFL, 1086, Small Cap
+717, Panacea biotec, INE922B01023, PANACEABIO, 1081, Small Cap
+718, Shankara building products lim, INE274V01019, SHANKARA, 1071, Small Cap
+719, Honda siel power products, INE634A01018, HONDAPOWER, 1071, Small Cap
+720, Housing development infrastr, INE191I01012, HDIL, 1070, Small Cap
+721, Jindal poly films, INE197D01010, JINDALPOLY, 1069, Small Cap
+722, Jkumar infraprojects, INE576I01022, JKIL, 1066, Small Cap
+723, Jbm auto, INE927D01028, JBMA, 1066, Small Cap
+724, Confidence petroleum, INE552D01024, CONFIPET, 1060, Small Cap
+725, Apcotex industries, INE116A01024, APCOTEXIND, 1059, Small Cap
+726, Mastek, INE759A01021, MASTEK, 1056, Small Cap
+727, Dolat investments, INE966A01022, DOLAT, 1051, Small Cap
+728, Filatex, INE816B01027, FILATEX, 1047, Small Cap
+729, Shemaroo entertainment, INE363M01019, SHEMAROO, 1041, Small Cap
+730, Sml isuzu, INE294B01019, SMLISUZU, 1037, Small Cap
+731, Premier capital services, INE946K01023, PREMCAP, 1035, Small Cap
+732, Ptc financial services l, INE560K01014, PFS, 1027, Small Cap
+733, Nucleus software exports, INE096B01018, NUCLEUS, 1025, Small Cap
+734, Usha martin, INE228A01035, USHAMART, 1010, Small Cap
+735, Gmbreweries, INE075D01018, GMBREW, 1010, Small Cap
+736, Solara active pharma sciences, INE624Z01016, SOLARA, 1000, Small Cap
+737, Sterling tools, INE334A01023, STERTOOLS, 999, Small Cap
+738, Marksans pharma, INE750C01026, MARKSANS, 997, Small Cap
+739, Saregama, INE979A01017, SAREGAMA, 994, Small Cap
+740, Shanthi gears, INE631A01022, SHANTIGEAR, 993, Small Cap
+741, Kesoram industries, INE087A01019, KESORAMIND, 993, Small Cap
+742, Manpasand beverages, INE122R01018, MANPASAND, 986, Small Cap
+743, Tourism finance corporation of, INE305A01015, TFCILTD, 984, Small Cap
+744, Seamec, INE497B01018, SEAMECLTD, 984, Small Cap
+745, Apex frozen foods, INE346W01013, APEX, 970, Small Cap
+746, Astec lifesciences, INE563J01010, ASTEC, 968, Small Cap
+747, Sarda energy minerals, INE385C01013, SARDAEN, 967, Small Cap
+748, Ineos styrolution limite, INE189B01011, INEOSSTYRO, 964, Small Cap
+749, Ttk healthcare, INE910C01018, TTKHLTCARE, 959, Small Cap
 750, Gallantt ispat, INE528K01029, GALLISPAT, 956, Small Cap
-751, Anant raj, INE242C01024, ANANTRAJ, 950, Nano Cap
-752, Bajaj hindusthan sugar, INE306A01021, BAJAJHIND, 950, Nano Cap
-753, India nippon electricals, INE092B01025, INDNIPPON, 945, Nano Cap
-755, Lumax auto technologies, INE872H01027, LUMAXTECH, 941, Nano Cap
-756, Cigniti technologies, INE675C01017, CIGNITITEC, 937, Nano Cap
-757, Kokuyo camlin, INE760A01029, KOKUYOCMLN, 931, Nano Cap
-758, Valiant organics, INE565V01010, VALIANTORG, 928, Nano Cap
-759, Dynamatic technologies, INE221B01012, DYNAMATECH, 919, Nano Cap
-760, Andhra sugars, INE715B01013, ANDHRSUGAR, 918, Nano Cap
-761, Geojit financial services limi, INE007B01023, GEOJITFSL, 916, Nano Cap
-762, I g petrochemicals, INE204A01010, IGPL, 916, Nano Cap
-763, Zee learn, INE565L01011, ZEELEARN, 915, Nano Cap
-764, Simplex infrastructures, INE059B01024, SIMPLEXINF, 913, Nano Cap
-765, Kalyani steels, INE907A01026, KSL, 908, Nano Cap
-766, Srikalahasthi pipes, INE943C01027, SRIPIPES, 907, Nano Cap
-767, Amrutanjan health care, INE098F01031, AMRUTANJAN, 907, Nano Cap
-768, Ht media, INE501G01024, HTMEDIA, 901, Nano Cap
-769, Andrew yule company, INE449C01025, ANDREWYU, 900, Nano Cap
-770, Optiemus infracom, INE350C01017, OPTIEMUS, 891, Nano Cap
-771, Hbl power systems, INE292B01021, HBLPOWER, 890, Nano Cap
-772, Bf investment, INE878K01010, BFINVEST, 886, Nano Cap
-773, Balmer lawrie investments, INE525F01017, BLIL, 883, Nano Cap
-774, Thirumalai chemicals, INE338A01024, TIRUMALCHM, 883, Nano Cap
-775, Foseco, INE519A01011, FOSECOIND, 880, Nano Cap
-776, Dalmia bharat sugar indust, INE495A01022, DALMIASUG, 879, Nano Cap
-777, Soril infra resources, INE034H01016, SORILINFRA, 876, Nano Cap
-778, Kaya, INE587G01015, KAYA, 873, Nano Cap
-779, Rico auto industries, INE209B01025, RICOAUTO, 871, Nano Cap
-780, Mps, INE943D01017, MPSLTD, 867, Nano Cap
-781, Exdon trading co, INE204I01013, ZEXDONTR, 866, Nano Cap
-782, Indo count industries, INE483B01026, ICIL, 865, Nano Cap
-783, V2 retail, INE945H01013, V2RETAIL, 865, Nano Cap
-784, Man infraconstruction, INE949H01023, MANINFRA, 865, Nano Cap
-785, Shriram epc, INE964H01014, SHRIRAMEPC, 862, Nano Cap
-786, Emami paper mills, INE830C01026, EMAMIPAP, 861, Nano Cap
-787, Disa, INE131C01011, DISAQ, 854, Nano Cap
-788, Gati, INE152B01027, GATI, 847, Nano Cap
-789, Punjab chemicals crop prot, INE277B01014, PUNJABCHEM, 841, Nano Cap
-790, Morepen laboratories, INE083A01026, MOREPENLAB, 841, Nano Cap
-791, Sharda motor industries, INE597I01010, SHARDAMOTR, 840, Nano Cap
-792, Elpro international, INE579B01039, ELPROINTL, 836, Nano Cap
-793, Godawari power ispat, INE177H01013, GPIL, 835, Nano Cap
-794, India glycols, INE560A01015, INDIAGLYCO, 833, Nano Cap
-795, Transpek industry, INE687A01016, TRANSPEK, 824, Nano Cap
-796, Gtpl hathway, INE869I01013, GTPL, 819, Nano Cap
-797, Sunflag iron steel co, INE947A01014, SUNFLAG, 818, Nano Cap
-798, Kovai medical center hospita, INE177F01017, KOVAI, 815, Nano Cap
-799, Kingfa science technology, INE473D01015, KINGFA, 815, Nano Cap
-800, Hindustan media ventures, INE871K01015, HMVL, 813, Nano Cap
-801, Rattan power, INE399K01017, RTNPOWER, 813, Nano Cap
-802, Bharat road network, INE727S01012, BRNL, 808, Nano Cap
-803, Sandur manganese iron ores l, INE149K01016, SANDUMA, 806, Nano Cap
-804, Wpil, INE765D01014, WPIL, 805, Nano Cap
-805, Ifgl refractories, INE133Y01011, IFGLEXPOR, 802, Nano Cap
-806, Jaybharat textiles real esta, INE091E01039, JAYTEX, 802, Nano Cap
-807, Balaji telefilms, INE794B01026, BALAJITELE, 802, Nano Cap
-808, Neuland laboratories, INE794A01010, NEULANDLAB, 800, Nano Cap
-809, Nath bio genes, INE448G01010, NATHBIOGEN, 799, Nano Cap
-810, Clariant chemicals, INE492A01029, CLNINDIA, 799, Nano Cap
-811, Rushil decor, INE573K01017, RUSHIL, 795, Nano Cap
-812, Electrosteel castings, INE086A01029, ELECTCAST, 791, Nano Cap
-813, Atlas jewellery, INE022N01019, AJIL, 790, Nano Cap
-814, Zuari agro chemicals, INE840M01016, ZUARI, 790, Nano Cap
-815, Yuken, INE384C01016, YUKEN, 788, Nano Cap
-816, Alicon castalloy, INE062D01024, ALICON, 786, Nano Cap
-817, The investment trust, INE924D01017, THEINVEST, 785, Nano Cap
-818, Mcleod russel, INE942G01012, MCLEODRUSS, 782, Nano Cap
-819, Oriental aromatics, INE959C01023, OAL, 782, Nano Cap
-820, Kirloskar industries, INE250A01039, KIRLOSIND, 781, Nano Cap
-821, Titagarh wagons, INE615H01020, TWL, 780, Nano Cap
-822, Zee media corporation, INE966H01019, ZEEMEDIA, 774, Nano Cap
-823, Uniply industries, INE950G01023, UNIPLY, 774, Nano Cap
-824, Ricoh, INE291B01015, RICOHQ, 769, Nano Cap
-825, Dil, INE225B01021, DIL, 768, Nano Cap
-826, Sical logistics, INE075B01012, SICAL, 761, Nano Cap
-827, Hinduja ventures, INE353A01023, HINDUJAVEN, 760, Nano Cap
-828, Oriental hotels, INE750A01020, ORIENTHOT, 760, Nano Cap
-829, Mahanagar telephone nigam, INE153A01019, MTNL, 756, Nano Cap
-830, Shakti pumps, INE908D01010, SHAKTIPUMP, 751, Nano Cap
-831, Monte carlo fashions, INE950M01013, MONTECARLO, 748, Nano Cap
-832, Universal cables, INE279A01012, UNIVCABLES, 748, Nano Cap
-833, Genus power infrastructures lt, INE955D01029, GENUSPOWER, 747, Nano Cap
-834, Mukand, INE304A01026, MUKANDLTD, 747, Nano Cap
-835, Astra microwave products, INE386C01029, ASTRAMICRO, 745, Nano Cap
-836, Khadim, INE834I01025, KHADIM, 738, Nano Cap
-837, Kalyani investment company, INE029L01018, KICL, 735, Nano Cap
-838, Mirza international, INE771A01026, MIRZAINT, 733, Nano Cap
-839, Orient paper industries, INE592A01026, ORIENTPPR, 732, Nano Cap
-840, State trading corporationi, INE655A01013, STCINDIA, 731, Nano Cap
-841, Neogen chemicals, INE136S01016, NEOGEN, 727, Nano Cap
-842, India motor parts accessorie, INE547E01014, IMPAL, 724, Nano Cap
-843, Bf utilities, INE243D01012, BFUTILITIE, 723, Nano Cap
-844, Mep infrastructure developers, INE776I01010, MEP, 719, Nano Cap
-845, Arshiya, INE968D01022, ARSHIYA, 715, Nano Cap
-846, Ramco systems, INE246B01019, RAMCOSYS, 710, Nano Cap
-847, Kushal, INE647N01021, KUSHAL, 710, Nano Cap
-848, Tata steel bsl, INE824B01021, TATASTLBSL, 709, Nano Cap
-849, Panama petrochem, INE305C01029, PANAMAPET, 709, Nano Cap
-850, Pine animation, INE452N01026, PINEANIM, 709, Nano Cap
-851, Hotel leelaventure, INE102A01024, HOTELEELA, 708, Nano Cap
-852, Sp apparels, INE212I01016, SPAL, 708, Nano Cap
-853, Mstc, INE255X01014, MSTCLTD, 702, Nano Cap
-854, Texmaco infrastructure holdi, INE435C01024, TEXINFRA, 701, Nano Cap
-855, Hindusthan national glass in, INE952A01022, HINDNATGLS, 694, Nano Cap
-856, Mold tek packaging, INE893J01029, MOLDTKPAC, 693, Nano Cap
-857, Atul auto, INE951D01028, ATULAUTO, 693, Nano Cap
-859, Uniphos enterprises, INE037A01022, UNIENTER, 692, Nano Cap
-860, Everest industries, INE295A01018, EVERESTIND, 692, Nano Cap
-861, Pds multinational fashions lim, INE111Q01013, PDSMFL, 690, Nano Cap
-862, Reliance naval engineering, INE542F01012, RNAVAL, 690, Nano Cap
-863, Paushak, INE111F01016, PAUSHAKLTD, 682, Nano Cap
-864, Kitex garments, INE602G01020, KITEX, 681, Nano Cap
-865, Sakuma exports, INE190H01024, SAKUMA, 676, Nano Cap
-866, Vardhman holdings, INE701A01023, VHL, 676, Nano Cap
-867, Ultramarine pigments, INE405A01021, ULTRAMAR, 676, Nano Cap
-868, Max ventures industries li, INE154U01015, MAXVIL, 673, Nano Cap
-869, Skipper, INE439E01022, SKIPPER, 672, Nano Cap
-870, Wim plast, INE015B01018, WIMPLAST, 672, Nano Cap
-871, Prabhat dairy, INE302M01033, PRABHAT, 672, Nano Cap
-872, Niyogin fintech, INE480D01010, NIYOGIN, 671, Nano Cap
-873, Repro, INE461B01014, REPRO, 667, Nano Cap
-874, G n a axles, INE934S01014, GNA, 667, Nano Cap
-875, Ramky infrastructure, INE874I01013, RAMKY, 662, Nano Cap
-876, Eros international media, INE416L01017, EROSMEDIA, 660, Nano Cap
-877, Tata teleservices, INE517B01013, TTML, 660, Nano Cap
-878, Aptech, INE266F01018, APTECHT, 658, Nano Cap
-879, Elecon engineering co, INE205B01023, ELECON, 658, Nano Cap
-880, Ufo moviez, INE527H01019, UFO, 655, Nano Cap
-881, Sindhu trade links, INE325D01017, SINDHUTRAD, 654, Nano Cap
-882, Munjal showa, INE577A01027, MUNJALSHOW, 652, Nano Cap
-883, Mangalam cement, INE347A01017, MANGLMCEM, 651, Nano Cap
-884, Ambika cotton mills, INE540G01014, AMBIKCO, 642, Nano Cap
-885, Sanwaria consumer, INE890C01046, SANWARIA, 640, Nano Cap
-886, Ganesha ecosphere, INE845D01014, GANECOS, 637, Nano Cap
-887, Gujarat borosil, INE059C01022, GUJBOROS, 631, Nano Cap
-888, R systems international, INE411H01032, RSYSTEMS, 628, Nano Cap
-889, Nelco, INE045B01015, NELCO, 625, Nano Cap
-890, Fiem industries, INE737H01014, FIEMIND, 625, Nano Cap
-891, Orissa sponge iron steel, INE228D01013, ORISSASP, 625, Nano Cap
-892, Sutlej textiles industries l, INE645H01027, SUTLEJTEX, 624, Nano Cap
-893, Satia industries, INE170E01015, SATIA, 620, Nano Cap
-894, Effingo textile trading limi, INE907N01029, EFFTXT, 620, Nano Cap
-895, Indian metals ferro alloys l, INE919H01018, IMFA, 620, Nano Cap
-896, Visaka industries, INE392A01013, VISAKAIND, 620, Nano Cap
-897, Gufic biosciences, INE742B01025, GUFICBIO, 619, Nano Cap
-898, Shaily engineering plastics lt, INE151G01010, SHAILY, 617, Nano Cap
-899, Enkei wheels, INE130L01014, ENKEIWHEL, 614, Nano Cap
-900, Ajmera realty infra lt, INE298G01027, AJMERA, 612, Nano Cap
-901, Ion exchange, INE570A01014, IONEXCHANG, 611, Nano Cap
-902, Asian granito, INE022I01019, ASIANTILES, 609, Nano Cap
-903, Ncl industries, INE732C01016, NCLIND, 609, Nano Cap
-904, Bharat bijlee, INE464A01028, BBL, 608, Nano Cap
-905, Beekay steel industries, INE213D01015, BEEKAY, 603, Nano Cap
-906, Waterbase, INE054C01015, WATERBASE, 602, Nano Cap
-907, Hindustan photo films mfgcol, NA          , HINPHOT, 602, Nano Cap
-908, Hcl infosystems, INE236A01020, HCL-INSYS, 598, Nano Cap
-909, Summit securities, INE519C01017, SUMMITSEC, 595, Nano Cap
-910, Nelcast, INE189I01024, NELCAST, 594, Nano Cap
-911, Datamatics global services, INE365B01017, DATAMATICS, 593, Nano Cap
-912, Jayant agro organics, INE785A01026, JAYAGROGN, 592, Nano Cap
-913, Zfsteering gear, INE116C01012, ZFSTEERING, 592, Nano Cap
-914, Camlin fine sciences, INE052I01032, CAMLINFINE, 592, Nano Cap
-915, Navkar corporation, INE278M01019, NAVKARCORP, 589, Nano Cap
-916, S chand company, INE807K01035, SCHAND, 589, Nano Cap
-917, Bmw industries, INE374E01021, BMW, 586, Nano Cap
-918, Rajapalayam mills, INE296E01026, RAJPALAYAM, 580, Nano Cap
-919, 3i infotech, INE748C01020, 3IINFOTECH, 574, Nano Cap
-920, Rmg alloy steel, INE731F01037, RMGALLOY, 574, Nano Cap
-921, Wendt, INE274C01019, WENDT, 574, Nano Cap
-922, Religare enterprises, INE621H01010, RELIGARE, 572, Nano Cap
-923, Zen technologies, INE251B01027, ZENTEC, 572, Nano Cap
-924, Weizmann forex, INE726L01019, WEIZFOREX, 572, Nano Cap
-925, Pnb gilts, INE859A01011, PNBGILTS, 571, Nano Cap
-926, Cmi fpe, INE515A01019, CMIFPE, 570, Nano Cap
-927, Centum electronics, INE320B01020, CENTUM, 568, Nano Cap
-928, Indo rama synthetics, INE156A01020, INDORAMA, 567, Nano Cap
-929, Stylam industries, INE239C01012, STYLAMIND, 567, Nano Cap
-930, Renaissance global, INE722H01016, RGL, 564, Nano Cap
-931, Bhageria industries, INE354C01027, BHAGERIA, 564, Nano Cap
-932, Grandeur products, INE545R01010, GPL, 558, Nano Cap
-933, Deccan cements, INE583C01021, DECCANCE, 557, Nano Cap
-934, Precision camshafts, INE484I01029, PRECAM, 553, Nano Cap
-935, Maa jagdambe tradelinks limite, INE403N01029, MAAJTL, 552, Nano Cap
-936, Alok industries, INE270A01011, ALOKTEXT, 550, Nano Cap
-937, Snowman logistics, INE734N01019, SNOWMAN, 548, Nano Cap
-938, Sandesh, INE583B01015, SANDESH, 547, Nano Cap
-939, Jay bharat maruti, INE571B01028, JAYBARMARU, 545, Nano Cap
-940, Medicamen biotech, INE646B01010, MEDICAMEQ, 545, Nano Cap
-941, Sadhana nitrochem, INE888C01032, SADHNANIQ, 542, Nano Cap
-942, The hi tech gears, INE127B01011, HITECHGEAR, 539, Nano Cap
-943, Sms pharmaceuticals, INE812G01025, SMSPHARMA, 534, Nano Cap
-944, Sreeleathers, INE099F01013, SREEL, 530, Nano Cap
-945, Nalwa sons investments, INE023A01030, NSIL, 530, Nano Cap
-946, Marathon nextgen realty, INE182D01020, MARATHON, 530, Nano Cap
-947, Nragarwal industries, INE740D01017, NRAIL, 527, Nano Cap
-948, Empire industries, INE515H01014, EMPIND, 525, Nano Cap
-949, Media matrix worldwide, INE200D01020, MMWL, 525, Nano Cap
-950, Polo queen industrial fint, INE689M01017, PQIF, 524, Nano Cap
-951, Munjal auto industries, INE672B01032, MUNJALAU, 523, Nano Cap
-952, Century enka, INE485A01015, CENTENKA, 522, Nano Cap
-953, Gloster, INE350Z01018, GLOSTERLTD, 522, Nano Cap
-954, Garware polyester, INE291A01017, GARWARPOLY, 521, Nano Cap
-956, Hindustan foods, INE254N01018, HNDFDS, 519, Nano Cap
-957, Pokarna, INE637C01025, POKARNA, 519, Nano Cap
-958, Kddl, INE291D01011, KDDL, 519, Nano Cap
-959, Generic engineering constructi, INE854S01022, GENCON, 515, Nano Cap
-960, Adf foods, INE982B01019, ADFFOODS, 511, Nano Cap
-961, The anup engineering, INE294Z01018, ANUP, 509, Nano Cap
-962, Xchanging solutions, INE692G01013, XCHANGING, 507, Nano Cap
-963, Gandhi special tubes, INE524B01027, GANDHITUBE, 505, Nano Cap
-964, Southern petrochemicals, INE147A01011, SPIC, 504, Nano Cap
-965, Dwarikesh sugar industries, INE366A01041, DWARKESH, 501, Nano Cap
-966, Orissa minerals development co, INE725E01024, ORISSAMINE, 500, Nano Cap
-967, Timex group, INE064A01026, TIMEX, 500, Nano Cap
-968, Stovec industries, INE755D01015, STOVACQ, 494, Nano Cap
-969, Astron paper board mill limi, INE646X01014, ASTRON, 493, Nano Cap
-970, Expleo solutions, INE201K01015, EXPLEOSOL, 493, Nano Cap
-971, Mirc electronics, INE831A01028, MIRCELECTR, 492, Nano Cap
-972, Hpc biosciences, INE507O01025, HPCBL, 492, Nano Cap
-973, Gravita, INE024L01027, GRAVITA, 491, Nano Cap
-974, Mt educare, INE472M01018, MTEDUCARE, 490, Nano Cap
-975, Saint gobain sekurit, INE068B01017, SAINTGOBAIN, 489, Nano Cap
-976, The n wood products co l, INE586E01020, IWP, 489, Nano Cap
-977, Lifeline drugs pharma, INE776N01028, LIFELINE, 487, Nano Cap
-978, Vikas proppant granite, INE767B01022, VIKASPROP, 486, Nano Cap
-979, Vipul, INE946H01037, VIPULLTD, 486, Nano Cap
-980, Sintex industries, INE429C01035, SINTEX, 485, Nano Cap
-981, Triveni enterprises, INE916P01025, TRIVENIENT, 484, Nano Cap
-982, Avadh sugar energy, INE349W01017, AVADHSUGAR, 483, Nano Cap
-983, Andhra petrochemicals, INE714B01016, ANDHRAPET, 482, Nano Cap
-984, Plastiblends, INE083C01022, PLASTIBLEN, 481, Nano Cap
-985, Apollo pipes, INE126J01016, APOLLOPIPES, 479, Nano Cap
-986, Goodricke group, INE300A01016, GOODRICKE, 478, Nano Cap
-987, 63 moons technologies, INE111B01023, 63MOONS, 478, Nano Cap
-988, Multibase, INE678F01014, MULTIBASE, 477, Nano Cap
-989, Indian terrain fashions, INE611L01021, INDTERRAIN, 476, Nano Cap
-990, Sanghvi movers, INE989A01024, SANGHVIMOV, 474, Nano Cap
-991, D b realty, INE879I01012, DBREALTY, 474, Nano Cap
-992, Gkw, INE528A01020, GKWLIMITED, 474, Nano Cap
-993, Reliance industrial infrastruc, INE046A01015, RIIL, 474, Nano Cap
-994, Tanla solutions, INE483C01032, TANLA, 472, Nano Cap
-995, Precision wires, INE372C01029, PRECWIRE, 471, Nano Cap
-996, Vimta labs, INE579C01029, VIMTALABS, 468, Nano Cap
-997, Rane brake lining, INE244J01017, RBL, 466, Nano Cap
-998, Nacl industries, INE295D01020, NACLIND, 466, Nano Cap
-999, Ador welding, INE045A01017, ADORWELD, 462, Nano Cap
+751, Anant raj, INE242C01024, ANANTRAJ, 950, Small Cap
+752, Bajaj hindusthan sugar, INE306A01021, BAJAJHIND, 950, Small Cap
+753, India nippon electricals, INE092B01025, INDNIPPON, 945, Small Cap
+755, Lumax auto technologies, INE872H01027, LUMAXTECH, 941, Small Cap
+756, Cigniti technologies, INE675C01017, CIGNITITEC, 937, Small Cap
+757, Kokuyo camlin, INE760A01029, KOKUYOCMLN, 931, Small Cap
+758, Valiant organics, INE565V01010, VALIANTORG, 928, Small Cap
+759, Dynamatic technologies, INE221B01012, DYNAMATECH, 919, Small Cap
+760, Andhra sugars, INE715B01013, ANDHRSUGAR, 918, Small Cap
+761, Geojit financial services limi, INE007B01023, GEOJITFSL, 916, Small Cap
+762, I g petrochemicals, INE204A01010, IGPL, 916, Small Cap
+763, Zee learn, INE565L01011, ZEELEARN, 915, Small Cap
+764, Simplex infrastructures, INE059B01024, SIMPLEXINF, 913, Small Cap
+765, Kalyani steels, INE907A01026, KSL, 908, Small Cap
+766, Srikalahasthi pipes, INE943C01027, SRIPIPES, 907, Small Cap
+767, Amrutanjan health care, INE098F01031, AMRUTANJAN, 907, Small Cap
+768, Ht media, INE501G01024, HTMEDIA, 901, Small Cap
+769, Andrew yule company, INE449C01025, ANDREWYU, 900, Small Cap
+770, Optiemus infracom, INE350C01017, OPTIEMUS, 891, Small Cap
+771, Hbl power systems, INE292B01021, HBLPOWER, 890, Small Cap
+772, Bf investment, INE878K01010, BFINVEST, 886, Small Cap
+773, Balmer lawrie investments, INE525F01017, BLIL, 883, Small Cap
+774, Thirumalai chemicals, INE338A01024, TIRUMALCHM, 883, Small Cap
+775, Foseco, INE519A01011, FOSECOIND, 880, Small Cap
+776, Dalmia bharat sugar indust, INE495A01022, DALMIASUG, 879, Small Cap
+777, Soril infra resources, INE034H01016, SORILINFRA, 876, Small Cap
+778, Kaya, INE587G01015, KAYA, 873, Small Cap
+779, Rico auto industries, INE209B01025, RICOAUTO, 871, Small Cap
+780, Mps, INE943D01017, MPSLTD, 867, Small Cap
+781, Exdon trading co, INE204I01013, ZEXDONTR, 866, Small Cap
+782, Indo count industries, INE483B01026, ICIL, 865, Small Cap
+783, V2 retail, INE945H01013, V2RETAIL, 865, Small Cap
+784, Man infraconstruction, INE949H01023, MANINFRA, 865, Small Cap
+785, Shriram epc, INE964H01014, SHRIRAMEPC, 862, Small Cap
+786, Emami paper mills, INE830C01026, EMAMIPAP, 861, Small Cap
+787, Disa, INE131C01011, DISAQ, 854, Small Cap
+788, Gati, INE152B01027, GATI, 847, Small Cap
+789, Punjab chemicals crop prot, INE277B01014, PUNJABCHEM, 841, Small Cap
+790, Morepen laboratories, INE083A01026, MOREPENLAB, 841, Small Cap
+791, Sharda motor industries, INE597I01010, SHARDAMOTR, 840, Small Cap
+792, Elpro international, INE579B01039, ELPROINTL, 836, Small Cap
+793, Godawari power ispat, INE177H01013, GPIL, 835, Small Cap
+794, India glycols, INE560A01015, INDIAGLYCO, 833, Small Cap
+795, Transpek industry, INE687A01016, TRANSPEK, 824, Small Cap
+796, Gtpl hathway, INE869I01013, GTPL, 819, Small Cap
+797, Sunflag iron steel co, INE947A01014, SUNFLAG, 818, Small Cap
+798, Kovai medical center hospita, INE177F01017, KOVAI, 815, Small Cap
+799, Kingfa science technology, INE473D01015, KINGFA, 815, Small Cap
+800, Hindustan media ventures, INE871K01015, HMVL, 813, Small Cap
+801, Rattan power, INE399K01017, RTNPOWER, 813, Small Cap
+802, Bharat road network, INE727S01012, BRNL, 808, Small Cap
+803, Sandur manganese iron ores l, INE149K01016, SANDUMA, 806, Small Cap
+804, Wpil, INE765D01014, WPIL, 805, Small Cap
+805, Ifgl refractories, INE133Y01011, IFGLEXPOR, 802, Small Cap
+806, Jaybharat textiles real esta, INE091E01039, JAYTEX, 802, Small Cap
+807, Balaji telefilms, INE794B01026, BALAJITELE, 802, Small Cap
+808, Neuland laboratories, INE794A01010, NEULANDLAB, 800, Small Cap
+809, Nath bio genes, INE448G01010, NATHBIOGEN, 799, Small Cap
+810, Clariant chemicals, INE492A01029, CLNINDIA, 799, Small Cap
+811, Rushil decor, INE573K01017, RUSHIL, 795, Small Cap
+812, Electrosteel castings, INE086A01029, ELECTCAST, 791, Small Cap
+813, Atlas jewellery, INE022N01019, AJIL, 790, Small Cap
+814, Zuari agro chemicals, INE840M01016, ZUARI, 790, Small Cap
+815, Yuken, INE384C01016, YUKEN, 788, Small Cap
+816, Alicon castalloy, INE062D01024, ALICON, 786, Small Cap
+817, The investment trust, INE924D01017, THEINVEST, 785, Small Cap
+818, Mcleod russel, INE942G01012, MCLEODRUSS, 782, Small Cap
+819, Oriental aromatics, INE959C01023, OAL, 782, Small Cap
+820, Kirloskar industries, INE250A01039, KIRLOSIND, 781, Small Cap
+821, Titagarh wagons, INE615H01020, TWL, 780, Small Cap
+822, Zee media corporation, INE966H01019, ZEEMEDIA, 774, Small Cap
+823, Uniply industries, INE950G01023, UNIPLY, 774, Small Cap
+824, Ricoh, INE291B01015, RICOHQ, 769, Small Cap
+825, Dil, INE225B01021, DIL, 768, Small Cap
+826, Sical logistics, INE075B01012, SICAL, 761, Small Cap
+827, Hinduja ventures, INE353A01023, HINDUJAVEN, 760, Small Cap
+828, Oriental hotels, INE750A01020, ORIENTHOT, 760, Small Cap
+829, Mahanagar telephone nigam, INE153A01019, MTNL, 756, Small Cap
+830, Shakti pumps, INE908D01010, SHAKTIPUMP, 751, Small Cap
+831, Monte carlo fashions, INE950M01013, MONTECARLO, 748, Small Cap
+832, Universal cables, INE279A01012, UNIVCABLES, 748, Small Cap
+833, Genus power infrastructures lt, INE955D01029, GENUSPOWER, 747, Small Cap
+834, Mukand, INE304A01026, MUKANDLTD, 747, Small Cap
+835, Astra microwave products, INE386C01029, ASTRAMICRO, 745, Small Cap
+836, Khadim, INE834I01025, KHADIM, 738, Small Cap
+837, Kalyani investment company, INE029L01018, KICL, 735, Small Cap
+838, Mirza international, INE771A01026, MIRZAINT, 733, Small Cap
+839, Orient paper industries, INE592A01026, ORIENTPPR, 732, Small Cap
+840, State trading corporationi, INE655A01013, STCINDIA, 731, Small Cap
+841, Neogen chemicals, INE136S01016, NEOGEN, 727, Small Cap
+842, India motor parts accessorie, INE547E01014, IMPAL, 724, Small Cap
+843, Bf utilities, INE243D01012, BFUTILITIE, 723, Small Cap
+844, Mep infrastructure developers, INE776I01010, MEP, 719, Small Cap
+845, Arshiya, INE968D01022, ARSHIYA, 715, Small Cap
+846, Ramco systems, INE246B01019, RAMCOSYS, 710, Small Cap
+847, Kushal, INE647N01021, KUSHAL, 710, Small Cap
+848, Tata steel bsl, INE824B01021, TATASTLBSL, 709, Small Cap
+849, Panama petrochem, INE305C01029, PANAMAPET, 709, Small Cap
+850, Pine animation, INE452N01026, PINEANIM, 709, Small Cap
+851, Hotel leelaventure, INE102A01024, HOTELEELA, 708, Small Cap
+852, Sp apparels, INE212I01016, SPAL, 708, Small Cap
+853, Mstc, INE255X01014, MSTCLTD, 702, Small Cap
+854, Texmaco infrastructure holdi, INE435C01024, TEXINFRA, 701, Small Cap
+855, Hindusthan national glass in, INE952A01022, HINDNATGLS, 694, Small Cap
+856, Mold tek packaging, INE893J01029, MOLDTKPAC, 693, Small Cap
+857, Atul auto, INE951D01028, ATULAUTO, 693, Small Cap
+859, Uniphos enterprises, INE037A01022, UNIENTER, 692, Small Cap
+860, Everest industries, INE295A01018, EVERESTIND, 692, Small Cap
+861, Pds multinational fashions lim, INE111Q01013, PDSMFL, 690, Small Cap
+862, Reliance naval engineering, INE542F01012, RNAVAL, 690, Small Cap
+863, Paushak, INE111F01016, PAUSHAKLTD, 682, Small Cap
+864, Kitex garments, INE602G01020, KITEX, 681, Small Cap
+865, Sakuma exports, INE190H01024, SAKUMA, 676, Small Cap
+866, Vardhman holdings, INE701A01023, VHL, 676, Small Cap
+867, Ultramarine pigments, INE405A01021, ULTRAMAR, 676, Small Cap
+868, Max ventures industries li, INE154U01015, MAXVIL, 673, Small Cap
+869, Skipper, INE439E01022, SKIPPER, 672, Small Cap
+870, Wim plast, INE015B01018, WIMPLAST, 672, Small Cap
+871, Prabhat dairy, INE302M01033, PRABHAT, 672, Small Cap
+872, Niyogin fintech, INE480D01010, NIYOGIN, 671, Small Cap
+873, Repro, INE461B01014, REPRO, 667, Small Cap
+874, G n a axles, INE934S01014, GNA, 667, Small Cap
+875, Ramky infrastructure, INE874I01013, RAMKY, 662, Small Cap
+876, Eros international media, INE416L01017, EROSMEDIA, 660, Small Cap
+877, Tata teleservices, INE517B01013, TTML, 660, Small Cap
+878, Aptech, INE266F01018, APTECHT, 658, Small Cap
+879, Elecon engineering co, INE205B01023, ELECON, 658, Small Cap
+880, Ufo moviez, INE527H01019, UFO, 655, Small Cap
+881, Sindhu trade links, INE325D01017, SINDHUTRAD, 654, Small Cap
+882, Munjal showa, INE577A01027, MUNJALSHOW, 652, Small Cap
+883, Mangalam cement, INE347A01017, MANGLMCEM, 651, Small Cap
+884, Ambika cotton mills, INE540G01014, AMBIKCO, 642, Small Cap
+885, Sanwaria consumer, INE890C01046, SANWARIA, 640, Small Cap
+886, Ganesha ecosphere, INE845D01014, GANECOS, 637, Small Cap
+887, Gujarat borosil, INE059C01022, GUJBOROS, 631, Small Cap
+888, R systems international, INE411H01032, RSYSTEMS, 628, Small Cap
+889, Nelco, INE045B01015, NELCO, 625, Small Cap
+890, Fiem industries, INE737H01014, FIEMIND, 625, Small Cap
+891, Orissa sponge iron steel, INE228D01013, ORISSASP, 625, Small Cap
+892, Sutlej textiles industries l, INE645H01027, SUTLEJTEX, 624, Small Cap
+893, Satia industries, INE170E01015, SATIA, 620, Small Cap
+894, Effingo textile trading limi, INE907N01029, EFFTXT, 620, Small Cap
+895, Indian metals ferro alloys l, INE919H01018, IMFA, 620, Small Cap
+896, Visaka industries, INE392A01013, VISAKAIND, 620, Small Cap
+897, Gufic biosciences, INE742B01025, GUFICBIO, 619, Small Cap
+898, Shaily engineering plastics lt, INE151G01010, SHAILY, 617, Small Cap
+899, Enkei wheels, INE130L01014, ENKEIWHEL, 614, Small Cap
+900, Ajmera realty infra lt, INE298G01027, AJMERA, 612, Small Cap
+901, Ion exchange, INE570A01014, IONEXCHANG, 611, Small Cap
+902, Asian granito, INE022I01019, ASIANTILES, 609, Small Cap
+903, Ncl industries, INE732C01016, NCLIND, 609, Small Cap
+904, Bharat bijlee, INE464A01028, BBL, 608, Small Cap
+905, Beekay steel industries, INE213D01015, BEEKAY, 603, Small Cap
+906, Waterbase, INE054C01015, WATERBASE, 602, Small Cap
+907, Hindustan photo films mfgcol, NA          , HINPHOT, 602, Small Cap
+908, Hcl infosystems, INE236A01020, HCL-INSYS, 598, Small Cap
+909, Summit securities, INE519C01017, SUMMITSEC, 595, Small Cap
+910, Nelcast, INE189I01024, NELCAST, 594, Small Cap
+911, Datamatics global services, INE365B01017, DATAMATICS, 593, Small Cap
+912, Jayant agro organics, INE785A01026, JAYAGROGN, 592, Small Cap
+913, Zfsteering gear, INE116C01012, ZFSTEERING, 592, Small Cap
+914, Camlin fine sciences, INE052I01032, CAMLINFINE, 592, Small Cap
+915, Navkar corporation, INE278M01019, NAVKARCORP, 589, Small Cap
+916, S chand company, INE807K01035, SCHAND, 589, Small Cap
+917, Bmw industries, INE374E01021, BMW, 586, Small Cap
+918, Rajapalayam mills, INE296E01026, RAJPALAYAM, 580, Small Cap
+919, 3i infotech, INE748C01020, 3IINFOTECH, 574, Small Cap
+920, Rmg alloy steel, INE731F01037, RMGALLOY, 574, Small Cap
+921, Wendt, INE274C01019, WENDT, 574, Small Cap
+922, Religare enterprises, INE621H01010, RELIGARE, 572, Small Cap
+923, Zen technologies, INE251B01027, ZENTEC, 572, Small Cap
+924, Weizmann forex, INE726L01019, WEIZFOREX, 572, Small Cap
+925, Pnb gilts, INE859A01011, PNBGILTS, 571, Small Cap
+926, Cmi fpe, INE515A01019, CMIFPE, 570, Small Cap
+927, Centum electronics, INE320B01020, CENTUM, 568, Small Cap
+928, Indo rama synthetics, INE156A01020, INDORAMA, 567, Small Cap
+929, Stylam industries, INE239C01012, STYLAMIND, 567, Small Cap
+930, Renaissance global, INE722H01016, RGL, 564, Small Cap
+931, Bhageria industries, INE354C01027, BHAGERIA, 564, Small Cap
+932, Grandeur products, INE545R01010, GPL, 558, Small Cap
+933, Deccan cements, INE583C01021, DECCANCE, 557, Small Cap
+934, Precision camshafts, INE484I01029, PRECAM, 553, Small Cap
+935, Maa jagdambe tradelinks limite, INE403N01029, MAAJTL, 552, Small Cap
+936, Alok industries, INE270A01011, ALOKTEXT, 550, Small Cap
+937, Snowman logistics, INE734N01019, SNOWMAN, 548, Small Cap
+938, Sandesh, INE583B01015, SANDESH, 547, Small Cap
+939, Jay bharat maruti, INE571B01028, JAYBARMARU, 545, Small Cap
+940, Medicamen biotech, INE646B01010, MEDICAMEQ, 545, Small Cap
+941, Sadhana nitrochem, INE888C01032, SADHNANIQ, 542, Small Cap
+942, The hi tech gears, INE127B01011, HITECHGEAR, 539, Small Cap
+943, Sms pharmaceuticals, INE812G01025, SMSPHARMA, 534, Small Cap
+944, Sreeleathers, INE099F01013, SREEL, 530, Small Cap
+945, Nalwa sons investments, INE023A01030, NSIL, 530, Small Cap
+946, Marathon nextgen realty, INE182D01020, MARATHON, 530, Small Cap
+947, Nragarwal industries, INE740D01017, NRAIL, 527, Small Cap
+948, Empire industries, INE515H01014, EMPIND, 525, Small Cap
+949, Media matrix worldwide, INE200D01020, MMWL, 525, Small Cap
+950, Polo queen industrial fint, INE689M01017, PQIF, 524, Small Cap
+951, Munjal auto industries, INE672B01032, MUNJALAU, 523, Small Cap
+952, Century enka, INE485A01015, CENTENKA, 522, Small Cap
+953, Gloster, INE350Z01018, GLOSTERLTD, 522, Small Cap
+954, Garware polyester, INE291A01017, GARWARPOLY, 521, Small Cap
+956, Hindustan foods, INE254N01018, HNDFDS, 519, Small Cap
+957, Pokarna, INE637C01025, POKARNA, 519, Small Cap
+958, Kddl, INE291D01011, KDDL, 519, Small Cap
+959, Generic engineering constructi, INE854S01022, GENCON, 515, Small Cap
+960, Adf foods, INE982B01019, ADFFOODS, 511, Small Cap
+961, The anup engineering, INE294Z01018, ANUP, 509, Small Cap
+962, Xchanging solutions, INE692G01013, XCHANGING, 507, Small Cap
+963, Gandhi special tubes, INE524B01027, GANDHITUBE, 505, Small Cap
+964, Southern petrochemicals, INE147A01011, SPIC, 504, Small Cap
+965, Dwarikesh sugar industries, INE366A01041, DWARKESH, 501, Small Cap
+966, Orissa minerals development co, INE725E01024, ORISSAMINE, 500, Small Cap
+967, Timex group, INE064A01026, TIMEX, 500, Small Cap
+968, Stovec industries, INE755D01015, STOVACQ, 494, Small Cap
+969, Astron paper board mill limi, INE646X01014, ASTRON, 493, Small Cap
+970, Expleo solutions, INE201K01015, EXPLEOSOL, 493, Small Cap
+971, Mirc electronics, INE831A01028, MIRCELECTR, 492, Small Cap
+972, Hpc biosciences, INE507O01025, HPCBL, 492, Small Cap
+973, Gravita, INE024L01027, GRAVITA, 491, Small Cap
+974, Mt educare, INE472M01018, MTEDUCARE, 490, Small Cap
+975, Saint gobain sekurit, INE068B01017, SAINTGOBAIN, 489, Small Cap
+976, The n wood products co l, INE586E01020, IWP, 489, Small Cap
+977, Lifeline drugs pharma, INE776N01028, LIFELINE, 487, Small Cap
+978, Vikas proppant granite, INE767B01022, VIKASPROP, 486, Small Cap
+979, Vipul, INE946H01037, VIPULLTD, 486, Small Cap
+980, Sintex industries, INE429C01035, SINTEX, 485, Small Cap
+981, Triveni enterprises, INE916P01025, TRIVENIENT, 484, Small Cap
+982, Avadh sugar energy, INE349W01017, AVADHSUGAR, 483, Small Cap
+983, Andhra petrochemicals, INE714B01016, ANDHRAPET, 482, Small Cap
+984, Plastiblends, INE083C01022, PLASTIBLEN, 481, Small Cap
+985, Apollo pipes, INE126J01016, APOLLOPIPES, 479, Small Cap
+986, Goodricke group, INE300A01016, GOODRICKE, 478, Small Cap
+987, 63 moons technologies, INE111B01023, 63MOONS, 478, Small Cap
+988, Multibase, INE678F01014, MULTIBASE, 477, Small Cap
+989, Indian terrain fashions, INE611L01021, INDTERRAIN, 476, Small Cap
+990, Sanghvi movers, INE989A01024, SANGHVIMOV, 474, Small Cap
+991, D b realty, INE879I01012, DBREALTY, 474, Small Cap
+992, Gkw, INE528A01020, GKWLIMITED, 474, Small Cap
+993, Reliance industrial infrastruc, INE046A01015, RIIL, 474, Small Cap
+994, Tanla solutions, INE483C01032, TANLA, 472, Small Cap
+995, Precision wires, INE372C01029, PRECWIRE, 471, Small Cap
+996, Vimta labs, INE579C01029, VIMTALABS, 468, Small Cap
+997, Rane brake lining, INE244J01017, RBL, 466, Small Cap
+998, Nacl industries, INE295D01020, NACLIND, 466, Small Cap
+999, Ador welding, INE045A01017, ADORWELD, 462, Small Cap
 1000, Kse, INE953E01014, KSE, 459, Small Cap

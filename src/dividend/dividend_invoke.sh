@@ -20,7 +20,7 @@ IN_FILE_ALIASES=${IN_BANK}/nach-aliases/nach-company-ticker-aliases.csv
 
 # excluded all : as it doesn't work on windows
 # for FY in fy1617 fy1718 fy1819 fy1920 all
-for FY in fy1617 fy1718 fy1819 fy1920 all
+for FY in fy1617 fy1718 fy1819 fy1920 fy2021 all
 do
     mkdir -p ${OUT_DIR}/${FY}
 
@@ -42,7 +42,7 @@ do
 
     if test ! -e ${IN_FILE_1}
     then
-        echo "error: file doen't exist : ${IN_FILE_1}"
+        echo "error: file doesn't exist : ${IN_FILE_1}"
     fi
 
     python dividend_invoke.py ${DEBUG_LEVEL} ${IN_FILE_AMFI} ${IN_FILE_ALIASES} ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${IN_FILE_1}
