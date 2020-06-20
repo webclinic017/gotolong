@@ -34,6 +34,9 @@ class Demat(Amfi):
         # stock keeping units : sku
         self.demat_summary_sku = {}
         self.demat_table_truncate = False
+        self.demat_lc_weight = self.config_lc_weight
+        self.demat_mc_weight = self.config_mc_weight
+        self.demat_sc_weight = self.config_sc_weight
         self.debug_level = 0
         self.demat_txn_table_name = "demat_txn"
         self.demat_txn_table_dict = {
@@ -178,10 +181,12 @@ class Demat(Amfi):
             pct_change = row_list[6]
             value_cost = row_list[7]
             value_market = row_list[8]
-            realized_pl = row_list[9]
-            unrealized_pl = row_list[10]
-            unrealized_pl_pct = row_list[11]
-            unused1 = row_list[12]
+            days_gain = row_list[9]
+            days_gain_pct = row_list[10]
+            realized_pl = row_list[11]
+            unrealized_pl = row_list[12]
+            unrealized_pl_pct = row_list[13]
+            unused1 = row_list[14]
             self.demat_summary_qty[stock_symbol] = qty
             self.demat_summary_acp[stock_symbol] = acp
             self.demat_summary_upl_pct[stock_symbol] = unrealized_pl_pct
@@ -204,19 +209,19 @@ class Demat(Amfi):
                 self.demat_summary_captype_stock_count[captype] = 1
 
             if captype in self.demat_summary_captype_stock_cost_value:
-                self.demat_summary_captype_stock_cost_value[captype] += round(value_cost)
+                self.demat_summary_captype_stock_cost_value[captype] += round(float(value_cost))
             else:
-                self.demat_summary_captype_stock_cost_value[captype] = round(value_cost)
+                self.demat_summary_captype_stock_cost_value[captype] = round(float(value_cost))
 
             if captype in self.demat_summary_captype_stock_market_value:
-                self.demat_summary_captype_stock_market_value[captype] += round(value_market)
+                self.demat_summary_captype_stock_market_value[captype] += round(float(value_market))
             else:
-                self.demat_summary_captype_stock_market_value[captype] = round(value_market)
+                self.demat_summary_captype_stock_market_value[captype] = round(float(value_market))
 
             if captype in self.demat_summary_captype_unrealized_pl:
-                self.demat_summary_captype_unrealized_pl[captype] += round(unrealized_pl)
+                self.demat_summary_captype_unrealized_pl[captype] += round(float(unrealized_pl))
             else:
-                self.demat_summary_captype_unrealized_pl[captype] = round(unrealized_pl)
+                self.demat_summary_captype_unrealized_pl[captype] = round(float(unrealized_pl))
 
         except:
             print("demat_summary_load_row Unexpected error:", sys.exc_info(), row)
@@ -427,11 +432,15 @@ class Demat(Amfi):
                 cur_sku = 0
                 if rank <= 250:
                     print("ticker", ticker, "with rank", rank, " doesn't have holdings")
-
+            # large cap
             if rank <= 100:
-                plan_sku = 10
+                plan_sku = self.demat_lc_weight
+                # mid cap
+            elif rank <= 250:
+                plan_sku = self.demat_mc_weight
+                # small cap
             else:
-                plan_sku = 5
+                plan_sku = self.demat_sc_weight 
 
             tbd_sku = plan_sku - cur_sku
 

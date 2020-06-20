@@ -12,6 +12,8 @@ python manage.py runserver
 
 cd D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root
 
+cd d:/GoogleDrive/my_github/GitHub/gotolong/src/django-proj-root
+
 D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root>python manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
@@ -86,3 +88,19 @@ replaced (blank=True,null=True) with (primary_key=True)
 
 
 8.
+
+8.1> python manage.py startapp dematsum
+
+Add entry of the new app to mysite/settings.py
+INSTALLED_APPS = []
+
+8.2> python manage.py startapp amfi
+
+Add entry of the new app to mysite/settings.py
+INSTALLED_APPS = []
+
+
+8.3 > python manage.py startapp dividend
+
+Add entry of the new app to mysite/settings.py
+INSTALLED_APPS = []

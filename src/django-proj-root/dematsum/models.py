@@ -18,6 +18,8 @@ class DematSummary(models.Model):
     pct_change = models.TextField(blank=True, null=True)
     value_cost = models.TextField(blank=True, null=True)
     value_market = models.TextField(blank=True, null=True)
+    days_gain = models.TextField(blank=True, null=True)
+    days_gain_pct = models.TextField(blank=True, null=True)
     realized_pl = models.TextField(blank=True, null=True)
     unrealized_pl = models.TextField(blank=True, null=True)
     unrealized_pl_pct = models.TextField(blank=True, null=True)

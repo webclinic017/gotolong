@@ -20,16 +20,17 @@ IN_FILE_ALIASES=${IN_BANK}/nach-aliases/nach-company-ticker-aliases.csv
 
 # excluded all : as it doesn't work on windows
 # for FY in fy1617 fy1718 fy1819 fy1920 all
-for FY in fy1617 fy1718 fy1819 fy1920 fy2021 all
+# for FY in fy1617 fy1718 fy1819 fy1920 fy2021 all
+for FY in all 
 do
     mkdir -p ${OUT_DIR}/${FY}
 
     if [[ "${FY}" == "all" ]]; then
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/*/OpTransactionHistory-*.csv
-	    IN_FILE_1=${IN_DIR}/*/${BANK}-stmt-*.csv
+	    IN_FILE_BANK_STMT=${IN_DIR}/*/${BANK}-stmt-*.csv
     else
         #stmt-clean/bank-txn-stmt-clean.sh stmt-clean/*legends*.txt ${IN_DIR}/${FY}/OpTransactionHistory-${FY}.csv
-	    IN_FILE_1=${IN_DIR}/${FY}/${BANK}-stmt-${FY}.csv
+	    IN_FILE_BANK_STMT=${IN_DIR}/${FY}/${BANK}-stmt-${FY}.csv
     fi
 
     OUT_FILE_0=$OUT_DIR/${FY}/${FY}-name_map.csv
@@ -45,5 +46,6 @@ do
         echo "error: file doesn't exist : ${IN_FILE_1}"
     fi
 
-    python dividend_invoke.py ${DEBUG_LEVEL} ${IN_FILE_AMFI} ${IN_FILE_ALIASES} ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${IN_FILE_1}
+    python dividend_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_BANK_STMT} -a ${IN_FILE_ALIASES} -o ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6}
+
 done

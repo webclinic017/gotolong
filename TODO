@@ -1,4 +1,5 @@
 To Do Items
+* Django - add support for amfi, demat txn and dividend data
 * allow multi broker configuration like user have account in both icicidirect and zerodha
 * allow multi-user configuration : different user support with different broker configuration.
 
@@ -33,7 +34,7 @@ To Do Items
 * Identify stressed sectors (struggling with profits)
 * Identify companies to be dropped
 * Identify companies to be included
-* Use machine learning tools to reduce the list of companies/sectors
+* Use machine learning tools to reduce the list of companies/sectors from top 250.
 
 
 Jan 2020

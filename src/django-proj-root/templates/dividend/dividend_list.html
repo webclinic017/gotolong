@@ -1,0 +1,37 @@
+{% include "top.html" %}
+
+<h1>Dividend List </h1>
+<table>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.date }}
+        </td>
+        <td>
+            {{ dividend_row.remarks }}
+        </td>
+        <td>
+            {{ dividend_row.amount }}
+        </td>
+        <td>
+            {{ dividend_row.comp_name }}
+        </td>
+        <td>
+            {{ dividend_row.ticker }}
+        </td>
+        <td>
+            {{ dividend_row.isin }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

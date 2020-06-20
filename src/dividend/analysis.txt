@@ -1,0 +1,84 @@
+
+1> sorted by dividend frequency
+
+select ticker, count(ticker) from dividend group by ticker order by count(ticker) asc;
+
+| WIPRO      |             6 |
+| HDFC       |             6 |
+| COALINDIA  |             6 |
+| HEROMOTOCO |             6 |
+| VIPIND     |             6 |
+| ICICIPRULI |             6 |
+| DABUR      |             6 |
+| CUMMINSIND |             6 |
+| ENGINERSIN |             6 |
+| TIINDIA    |             6 |
+| AUROPHARMA |             6 |
+| LALPATHLAB |             6 |
+| INFRATEL   |             6 |
+| CHOLAFIN   |             6 |
+| POWERGRID  |             7 |
+| SUPREMEIND |             7 |
+| EXIDEIND   |             7 |
+| NILKAMAL   |             7 |
+| AMARAJABAT |             7 |
+| IOC        |             7 |
+| GAIL       |             7 |
+| OIL        |             7 |
+| MARICO     |             7 |
+| BEL        |             7 |
+| IBULHSGFIN |             8 |
+| COLPAL     |             8 |
+| INFY       |             9 |
+| HINDUNILVR |             9 |
+| NAUKRI     |             9 |
+| NESTLEIND  |             9 |
+| PAGEIND    |             9 |
+| GODREJCP   |             9 |
+| MANAPPURAM |             9 |
+|            |            10 |
+| ONGC       |            11 |
+| CRISIL     |            11 |
+| BALKRISIND |            12 |
+| CARERATING |            12 |
+| NTPC       |            13 |
+| HCLTECH    |            14 |
+| TCS        |            18 |
++------------+---------------+
+256 rows in set (0.032 sec)
+
+
+2>  sorted by dividend amount
+
+select ticker, round(sum(amount)) from dividend group by ticker order by sum(amount) asc;
+
+| UPL        |                433 |
+| CARERATING |                434 |
+| ENGINERSIN |                450 |
+| NESTLEIND  |                467 |
+| HDFC       |                472 |
+| PAGEIND    |                489 |
+| BAJAJ-AUTO |                535 |
+| LT         |                656 |
+| PFIZER     |                705 |
+| HAL        |                718 |
+| RECLTD     |                731 |
+| NATIONALUM |                782 |
+| HEROMOTOCO |                826 |
+| GAIL       |                830 |
+| HDFCBANK   |                926 |
+| ITC        |                942 |
+| NTPC       |                964 |
+| IOC        |               1105 |
+| POWERGRID  |               1256 |
+| HINDUNILVR |               1297 |
+| VEDL       |               1380 |
+| ONGC       |               1418 |
+| TTKPRESTIG |               1456 |
+| INFY       |               1592 |
+| HINDZINC   |               1741 |
+|            |               1904 |
+| TCS        |               2413 |
+| COALINDIA  |               2895 |
++------------+--------------------+
+256 rows in set, 3348 warnings (0.020 sec)

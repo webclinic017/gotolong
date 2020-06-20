@@ -34,13 +34,40 @@ class Dividend(Amfi):
         self.company_name_pre_alias = {}
         self.dividend_year_list = []
         self.total_dividend = 0
+        self.dividend_records = []
         self.dividend_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}
+        self.dividend_table_truncate = False
+        self.dividend_table_name = "dividend"
+        # do not add 'id' here as that is automatically auto-incremented.
+        self.dividend_table_dict = {
+            "date": "text",
+            "remarks": "text",
+            "amount": "text",
+            "comp_name": "text",
+            "ticker": "text",
+            "isin": "text"
+        }
+
         # conglomerate name db
         self.cong_name_db=[]
         print('init : Dividend')
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
+
+    def dividend_table_reload(self, truncate=False):
+        self.dividend_table_truncate = truncate
+
+    def dividend_load_row(self, row):
+        row_list = row
+        self.dividend_records.append(row_list)
+
+        dividend_date = row_list[0]
+        dividend_remarks = row_list[1]
+        dividend_amount = row_list[2]
+        dividend_comp_name = row_list[3]
+        dividend_ticker = row_list[4]
+        dividend_isin = row_list[5]
 
     def dividend_txn_ignore(self, line, txn_remarks):
         # match for search at begining
@@ -124,7 +151,7 @@ class Dividend(Amfi):
             company_name = self.company_aliases[company_name]
         return company_name
 
-    def dividend_load_row(self, line):
+    def dividend_get_insert_row(self, line, row_bank):
         # Replace Limited, with just Limited to avoid split error : ValueError
         line = re.sub(r'Limited,','Limited',line)
         line = re.sub(r'Ltd,','Ltd',line)
@@ -195,6 +222,9 @@ class Dividend(Amfi):
                 company_name = ticker
             else:
                 print('add ticker alias for', company_name, ':', self.company_name_pre_alias[company_name], ':')
+
+            new_row = (txn_date, txn_remarks, deposit_amount, company_name, ticker, isin)
+            row_bank.append(new_row)
 
             if self.debug_level > 1:
                 print(company_name, 'from', txn_remarks)
@@ -273,7 +303,7 @@ class Dividend(Amfi):
             print('Unknown skipped' + line)
         return
 
-    def dividend_load_data(self, in_filenames):
+    def dividend_insert_data_core(self, in_filenames):
         for in_filename in in_filenames:
             if self.debug_level > 1:
                 print('div file', in_filename)
@@ -281,7 +311,7 @@ class Dividend(Amfi):
             for line in file_obj:
                 if self.debug_level > 1:
                     print('div line', line)
-                self.dividend_load_row(line)
+                self.dividend_get_insert_row(line)
         print('loaded dividend', len (self.dividend_amount))
 
     def dividend_load_aliases_row(self, row):
@@ -301,7 +331,54 @@ class Dividend(Amfi):
             reader = csv.reader(csvfile)
             for row in reader:
                 self.dividend_load_aliases_row(row)
-        print('loaded aliases', len (self.company_aliases))
+        print('loaded aliases', len(self.company_aliases), 'from', in_filename)
+
+    def dividend_load_data(self, in_filenames):
+        table = "dividend"
+        if self.dividend_table_truncate:
+            self.db_table_truncate(table)
+
+        row_count = self.db_table_count_rows(table)
+        if row_count == 0:
+            self.dividend_insert_data(in_filenames)
+        else:
+            print('dividend data already loaded in db', row_count)
+        print('display db data')
+        self.dividend_load_db()
+
+    def dividend_insert_data(self, in_filenames):
+
+        create_sql = cutil.cutil.get_create_sql(self.dividend_table_name, self.dividend_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.dividend_table_name, self.dividend_table_dict)
+
+        if self.debug_level > 0:
+            print(create_sql)
+
+        cursor = self.db_conn.cursor()
+
+        for in_filename in in_filenames:
+            if self.debug_level > 1:
+                print('div file', in_filename)
+
+            with open(in_filename, 'rt') as csvfile:
+                # future
+                # csv_reader = csv.reader(csvfile)
+                row_bank = []
+                for line in csvfile:
+                    self.dividend_get_insert_row(line, row_bank)
+                print('loaded dividends : ', len(row_bank))
+                # insert row
+                cursor.executemany(insert_sql, row_bank)
+        # commit db changes
+        self.db_conn.commit()
+
+    def dividend_load_db(self):
+        table = "dividend"
+        cursor = self.db_table_load(table)
+        for row in cursor.fetchall():
+            if self.debug_level > 1:
+                print(row)
+            self.dividend_load_row(row)
 
     def dividend_dump_orig(self, out_filename):
         if self.debug_level > 2:

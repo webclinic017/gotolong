@@ -12,7 +12,9 @@ from dematsum.models import DematSummary
 
 class DematSummaryListView(ListView):
     model = DematSummary
-    paginate_by = 300  # if pagination is desired
+
+    # if pagination is desired
+    # paginate_by = 300
 
     queryset = DematSummary.objects.all()
 

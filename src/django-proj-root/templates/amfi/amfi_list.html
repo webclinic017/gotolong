@@ -1,0 +1,40 @@
+{% include "top.html" %}
+
+<h1>AMFI List </h1>
+<table>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    {% for amfi_row in object_list %}
+    <tr>
+        <td>
+            {{ amfi_row.sno }}
+        </td>
+        <td>
+            {{ amfi_row.company_name }}
+        </td>
+        <td>
+            {{ amfi_row.isin }}
+        </td>
+        <td>
+            {{ amfi_row.bse_symbol }}
+        </td>
+        <td>
+            {{ amfi_row.nse_symbol }}
+        </td>
+        <td>
+            {{ amfi_row.avg_mcap }}
+        </td>
+        <td>
+            {{ amfi_row.cap_type }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No amfi yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}
