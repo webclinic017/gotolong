@@ -40,10 +40,9 @@ class Dividend(Amfi):
         self.dividend_table_name = "dividend"
         # do not add 'id' here as that is automatically auto-incremented.
         self.dividend_table_dict = {
-            "date": "text",
+            "div_date": "Date",
             "remarks": "text",
             "amount": "text",
-            "comp_name": "text",
             "ticker": "text",
             "isin": "text"
         }
@@ -187,7 +186,9 @@ class Dividend(Amfi):
             try:
                 # dd/mm/yyyy
                 txn_date_arr = txn_date.split('/')
+                txn_day = txn_date_arr[0].strip()
                 txn_month = txn_date_arr[1].strip()
+                txn_year = txn_date_arr[2].strip()
                 if txn_month.isdigit():
                     # get rid of leading 0 in month number
                     txn_month = str(int(txn_month))
@@ -195,13 +196,13 @@ class Dividend(Amfi):
                     # month name to number
                     txn_month = self.dividend_abbr_to_num_dict[txn_month]
 
-                txn_year = txn_date_arr[2].strip()
-
                 remarks_arr = txn_remarks.split('/')
                 deposit_way = remarks_arr[0]
                 company_name = remarks_arr[1]
                 if len(remarks_arr) >= 3:
                     comment_str = remarks_arr[2]
+
+                div_date_iso = txn_year + "-" + txn_month + "-" + txn_day
                 # ignore rest
             except ValueError:
                 print('ValueError ' + txn_remarks)
@@ -223,7 +224,7 @@ class Dividend(Amfi):
             else:
                 print('add ticker alias for', company_name, ':', self.company_name_pre_alias[company_name], ':')
 
-            new_row = (txn_date, txn_remarks, deposit_amount, company_name, ticker, isin)
+            new_row = (div_date_iso, txn_remarks, deposit_amount, ticker, isin)
             row_bank.append(new_row)
 
             if self.debug_level > 1:
@@ -314,24 +315,7 @@ class Dividend(Amfi):
                 self.dividend_get_insert_row(line)
         print('loaded dividend', len (self.dividend_amount))
 
-    def dividend_load_aliases_row(self, row):
-        try:
-            name_alias, ticker = row
-        except ValueError:
-            print('ValueError ', row)
 
-        name_alias = name_alias.strip().capitalize()
-        ticker = ticker.strip().upper()
-        if self.debug_level > 2:
-            print('alias ', name_alias, 'ticker ', ticker)
-        self.company_aliases[name_alias] = ticker
-
-    def dividend_load_aliases_data(self, in_filename):
-        with open(in_filename, 'r') as csvfile:
-            reader = csv.reader(csvfile)
-            for row in reader:
-                self.dividend_load_aliases_row(row)
-        print('loaded aliases', len(self.company_aliases), 'from', in_filename)
 
     def dividend_load_data(self, in_filenames):
         table = "dividend"

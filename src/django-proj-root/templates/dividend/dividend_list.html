@@ -1,25 +1,43 @@
 {% include "top.html" %}
 
 <h1>Dividend List </h1>
+
+Dividend Archives :
+
+{% for year in year_list %}
+<a href=/dividend/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
+{% endfor %}
+
+<br>
+
 <table>
     <tr>
         <td>
-
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+        <td>
+            Ticker
+        </td>
+        <td>
+            ISIN
         </td>
     </tr>
     {% for dividend_row in object_list %}
     <tr>
         <td>
-            {{ dividend_row.date }}
+            {{ dividend_row.div_date }}
         </td>
         <td>
             {{ dividend_row.remarks }}
         </td>
         <td>
             {{ dividend_row.amount }}
-        </td>
-        <td>
-            {{ dividend_row.comp_name }}
         </td>
         <td>
             {{ dividend_row.ticker }}

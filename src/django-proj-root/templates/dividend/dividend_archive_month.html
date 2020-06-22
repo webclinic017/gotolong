@@ -1,0 +1,54 @@
+{% include "top.html" %}
+
+<h1>Dividend Archive Monthly List </h1>
+
+Days Archive
+
+{% for date in date_list %}
+{{ date|date:"d" }} |
+{% endfor %}
+
+
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+        <td>
+            Ticker
+        </td>
+        <td>
+            ISIN
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.div_date }}
+        </td>
+        <td>
+            {{ dividend_row.remarks }}
+        </td>
+        <td>
+            {{ dividend_row.amount }}
+        </td>
+        <td>
+            {{ dividend_row.ticker }}
+        </td>
+        <td>
+            {{ dividend_row.isin }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

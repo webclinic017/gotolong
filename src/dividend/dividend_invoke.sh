@@ -15,7 +15,7 @@ IN_DIR=${IN_BANK}/out-csv
 OUT_DIR=$CONFIG_PROFILE_REPORTS_LOC/dividend-reports
 
 IN_FILE_AMFI="$CONFIG_DATA_LOC/amfi-data/amfi-data-mcap.csv"
-IN_FILE_ALIASES=${IN_BANK}/nach-aliases/nach-company-ticker-aliases.csv
+IN_FILE_ALIASES=$CONFIG_DATA_LOC/nach-aliases-data/nach-company-ticker-aliases.csv
 
 
 # excluded all : as it doesn't work on windows

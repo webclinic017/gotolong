@@ -14,6 +14,11 @@ cd D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root
 
 cd d:/GoogleDrive/my_github/GitHub/gotolong/src/django-proj-root
 
+d:
+
+python manage.py runserver
+
+
 D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root>python manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
