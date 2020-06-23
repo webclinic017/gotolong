@@ -9,8 +9,8 @@ from django.db import models
 
 
 class DematSummary(models.Model):
-    stock_symbol = models.TextField(primary_key=True)
-    company_name = models.TextField(blank=True, null=True)
+    stock_symbol = models.TextField(blank=True, null=True)
+    company_name = models.TextField(primary_key=True)
     isin_code = models.TextField(blank=True, null=True)
     qty = models.TextField(blank=True, null=True)
     acp = models.TextField(blank=True, null=True)

@@ -6,9 +6,9 @@ from django.db import models
 
 
 class Dividend(models.Model):
-    id = models.TextField(primary_key=True)
+    # id = models.TextField(primary_key=True)
     div_date = models.DateField(blank=True, null=True)
-    remarks = models.TextField(blank=True, null=True)
+    remarks = models.TextField(primary_key=True)
     amount = models.TextField(blank=True, null=True)
     ticker = models.TextField(blank=True, null=True)
     isin = models.TextField(blank=True, null=True)
@@ -16,3 +16,4 @@ class Dividend(models.Model):
     class Meta:
         managed = False
         db_table = 'dividend'
+        unique_together = (('div_date', 'ticker'),)

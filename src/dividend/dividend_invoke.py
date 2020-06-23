@@ -61,7 +61,9 @@ if truncate_table:
 
 dividend.amfi_load_db()
 
-dividend.dividend_load_aliases_data(alias_filename_phase[0])
+dividend.nach_load_db()
+
+# dividend.dividend_load_aliases_data(alias_filename_phase[0])
 
 # expand * for all
 dividend.dividend_load_data(glob.glob(in_filename_phase[0]))

@@ -2,9 +2,23 @@
 
 <h1>Dividend Archive Monthly List </h1>
 
-Days Archive
 
 {% for date in date_list %}
+
+{% if forloop.first %}
+
+<a href=/dividend/list/> Go Top </a>
+
+<br>
+
+<a href=/dividend/list/{{ date|date:"Y" }}/> {{ date|date:"Y" }} </a> |
+
+<a href=/dividend/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+
+<br>
+Days  Archive :
+{% endif %}
+
 {{ date|date:"d" }} |
 {% endfor %}
 

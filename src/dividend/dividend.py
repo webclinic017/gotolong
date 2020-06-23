@@ -11,10 +11,12 @@ from operator import itemgetter
 import cutil.cutil
 
 from amfi.amfi import *
+from nach.nach import *
 
 import calendar
 
-class Dividend(Amfi):
+
+class Dividend(Amfi, Nach):
 
     def __init__(self):
         super(Dividend, self).__init__()
@@ -29,7 +31,6 @@ class Dividend(Amfi):
         self.dividend_cumm_month_kv = {}
         self.dividend_cumm_comp_month_kv = {}
         self.dividend_cumm_comp_kv = {}
-        self.company_aliases={}
         self.company_orig={}
         self.company_name_pre_alias = {}
         self.dividend_year_list = []
@@ -146,8 +147,8 @@ class Dividend(Amfi):
         return company_name
 
     def dividend_resolve_alias(self, company_name):
-        if company_name in self.company_aliases.keys():
-            company_name = self.company_aliases[company_name]
+        if company_name in self.nach_aliases.keys():
+            company_name = self.nach_aliases[company_name]
         return company_name
 
     def dividend_get_insert_row(self, line, row_bank):

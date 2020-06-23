@@ -4,7 +4,7 @@ if test -n "${GOTOLONG_DEBUG_LEVEL}"
 then
     DEBUG_LEVEL=${GOTOLONG_DEBUG_LEVEL}
 else
-    DEBUG_LEVEL=0
+    DEBUG_LEVEL=1
 fi
 
 CONFIG_DATA_LOC=`python -m config data`

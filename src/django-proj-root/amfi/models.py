@@ -5,8 +5,8 @@ from django.db import models
 
 
 class Amfi(models.Model):
-    sno = models.TextField(primary_key=True)
-    company_name = models.TextField(blank=True, null=True)
+    sno = models.TextField(blank=True, null=True)
+    company_name = models.TextField(primary_key=True)
     isin = models.TextField(blank=True, null=True)
     bse_symbol = models.TextField(blank=True, null=True)
     nse_symbol = models.TextField(blank=True, null=True)

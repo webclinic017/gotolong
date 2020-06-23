@@ -30,9 +30,12 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 
 
-4. admin.py : register model
+4. For table to be visible on admin site
 
+admin.py : register model
 admin.site.register()
+
+admin.site.register(Amfi)
 
 5. create special tables for admin :  python manage.py migrate
 
@@ -109,3 +112,11 @@ INSTALLED_APPS = []
 
 Add entry of the new app to mysite/settings.py
 INSTALLED_APPS = []
+
+
+9. migrations
+
+ python mnaage.py makemigrations
+ pythong manage.py migrate
+
+10.

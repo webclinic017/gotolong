@@ -33,10 +33,13 @@ class Nach(Database):
 
     def nach_load_row(self, row):
         try:
-            name_alias, ticker = row
+            if self.debug_level > 1:
+                print('row : ', row);
+
+            auto_id, name_alias, ticker = row
             name_alias = name_alias.strip().capitalize()
             ticker = ticker.strip().upper()
-            if self.debug_level > 2:
+            if self.debug_level > 1:
                 print('alias ', name_alias, 'ticker ', ticker)
             self.nach_aliases[name_alias] = ticker
         except ValueError:
@@ -92,12 +95,12 @@ class Nach(Database):
             print('output filename ', out_filename)
         fh = open(out_filename, "w")
         fh.write('nach_name, nach_ticker\n')
-        for name, ticker in enumerate(sorted(self.nach_aliases)):
+        for name in sorted(self.nach_aliases):
             if self.debug_level > 1:
                 print('name : ticker ', name, ':', ticker)
             p_str = name
             p_str += ', '
-            p_str += ticker
+            p_str += self.nach_aliases[name] 
             p_str += '\n'
             fh.write(p_str);
         fh.close()
