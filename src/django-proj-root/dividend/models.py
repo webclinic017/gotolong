@@ -14,6 +14,4 @@ class Dividend(models.Model):
     isin = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'dividend'
-        unique_together = (('div_date', 'ticker'),)
+        db_table = 'user_dividend'

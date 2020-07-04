@@ -20,4 +20,4 @@ OUT_FILE_1=$CONFIG_REPORTS_LOC/amfi-reports/amfi-reports-phase-1.csv
 # python amfi_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE} --out_files ${OUT_FILE_1}
 python amfi_invoke.py -d ${DEBUG_LEVEL} -i ${IN_FILE} -o ${OUT_FILE_1}
 
-csv2html -o test.html test/test.csv
+# csv2html -o test.html test/test.csv

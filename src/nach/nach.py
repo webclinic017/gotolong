@@ -19,7 +19,7 @@ class Nach(Database):
         self.nach_aliases = {}
         self.debug_level = 0
         self.nach_table_truncate = False
-        self.nach_table_name = "nach"
+        self.nach_table_name = "global_nach"
         self.nach_table_dict = {
             "name": "text",
             "ticker": "text"
@@ -36,7 +36,7 @@ class Nach(Database):
             if self.debug_level > 1:
                 print('row : ', row);
 
-            auto_id, name_alias, ticker = row
+            name_alias, ticker = row
             name_alias = name_alias.strip().capitalize()
             ticker = ticker.strip().upper()
             if self.debug_level > 1:
@@ -51,7 +51,7 @@ class Nach(Database):
             traceback.print_exc()
 
     def nach_load_data(self, in_filename):
-        table = "nach"
+        table = self.nach_table_name
 
         if self.nach_table_truncate:
             self.db_table_truncate(table)
@@ -74,21 +74,22 @@ class Nach(Database):
         with open(in_filename, 'rt') as csvfile:
             # future
             csv_reader = csv.reader(csvfile)
-            if self.debug_level > 0:
+            if self.debug_level > 1:
                 print(csv_reader)
             # insert row
             cursor.executemany(insert_sql, csv_reader)
             # commit db changes
             self.db_conn.commit()
-        print('loaded aliases', len(self.nach_aliases), 'from', in_filename)
+        print('loaded aliases from', in_filename)
 
     def nach_load_db(self):
-        table = "nach"
+        table = self.nach_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1:
                 print(row)
             self.nach_load_row(row)
+        print('loaded aliases count ', len(self.nach_aliases))
 
     def nach_dump_phase1(self, out_filename):
         if self.debug_level > 0:

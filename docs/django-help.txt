@@ -30,12 +30,24 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 
 
-4. For table to be visible on admin site
+4. Steps to add a new add
 
-admin.py : register model
+4.1> python manage.py startapp amfi
+
+It will create amfi directory with several files.
+
+4.2> Add entry of the new app to mysite/settings.py
+
+INSTALLED_APPS = []
+
+4.3> For the table to be visible on admin site
+
+<app>/admin.py : register model
 admin.site.register()
 
+Example :
 admin.site.register(Amfi)
+
 
 5. create special tables for admin :  python manage.py migrate
 
@@ -97,21 +109,8 @@ replaced (blank=True,null=True) with (primary_key=True)
 
 8.
 
-8.1> python manage.py startapp dematsum
-
-Add entry of the new app to mysite/settings.py
-INSTALLED_APPS = []
-
-8.2> python manage.py startapp amfi
-
-Add entry of the new app to mysite/settings.py
-INSTALLED_APPS = []
 
 
-8.3 > python manage.py startapp dividend
-
-Add entry of the new app to mysite/settings.py
-INSTALLED_APPS = []
 
 
 9. migrations

@@ -38,7 +38,7 @@ class Dividend(Amfi, Nach):
         self.dividend_records = []
         self.dividend_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}
         self.dividend_table_truncate = False
-        self.dividend_table_name = "dividend"
+        self.dividend_table_name = "user_dividend"
         # do not add 'id' here as that is automatically auto-incremented.
         self.dividend_table_dict = {
             "div_date": "Date",
@@ -319,7 +319,7 @@ class Dividend(Amfi, Nach):
 
 
     def dividend_load_data(self, in_filenames):
-        table = "dividend"
+        table = self.dividend_table_name
         if self.dividend_table_truncate:
             self.db_table_truncate(table)
 
@@ -358,7 +358,7 @@ class Dividend(Amfi, Nach):
         self.db_conn.commit()
 
     def dividend_load_db(self):
-        table = "dividend"
+        table = self.dividend_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1:

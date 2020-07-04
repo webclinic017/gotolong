@@ -64,7 +64,7 @@ if truncate_table:
 
 demat.amfi_load_db()
 demat.demat_txn_load_data(txn_file)
-demat.demat_summary_load_data(summary_file)
+demat.demat_sum_load_data(summary_file)
 demat.demat_dump_txn_detailed(out_filename_phase[0])
 demat.demat_dump_txn_compressed(out_filename_phase[1])
 demat.demat_dump_txn_summary(out_filename_phase[2])

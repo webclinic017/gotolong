@@ -28,11 +28,11 @@ class Amfi(Database):
         self.amfi_isin_ticker_dict = {}
         self.debug_level = 0
         self.amfi_table_truncate = False
-        self.amfi_table_name = "amfi"
+        self.amfi_table_name = "global_amfi"
         self.amfi_table_dict = {
-            "sno": "text",
-            "company_name": "text",
-            "isin": "text",
+            "comp_rank": "int",
+            "comp_name": "text",
+            "comp_isin": "text",
             "bse_symbol": "text",
             "nse_symbol": "text",
             "avg_mcap": "text",
@@ -52,15 +52,15 @@ class Amfi(Database):
                 print('ignored empty row', row_list)
                 return
 
-            serial_number = row_list[0]
-            if serial_number == 'Sr. No.' or serial_number == "sr_no":
+            comp_rank = row_list[0]
+            if comp_rank == 'Sr. No.' or comp_rank == "sr_no":
                 if self.debug_level > 0:
                     print('skipped header line', row_list)
                 return
 
             # mysql - automatically number
             if self.config_db_type != 'mariadb':
-                serial_number = cutil.cutil.get_number(serial_number)
+                comp_rank = cutil.cutil.get_number(comp_rank)
 
             comp_name = row_list[1]
             isin_number = row_list[2]
@@ -75,7 +75,7 @@ class Amfi(Database):
             comp_name = cutil.cutil.normalize_comp_name(comp_name)
 
             if self.debug_level > 1:
-                print('serial_number : ', serial_number )
+                print('comp_rank : ', comp_rank)
                 print('isin_number: ', isin_number)
                 print('bse_ticker : ', bse_ticker)
                 print('nse_ticker : ', nse_ticker)
@@ -85,7 +85,7 @@ class Amfi(Database):
 
             if nse_ticker == '':
                 if bse_ticker != '':
-                    self.amfi_rank[bse_ticker] = serial_number
+                    self.amfi_rank[bse_ticker] = comp_rank
                     self.amfi_ticker_isin_dict[bse_ticker] = isin_number
                     self.amfi_isin_ticker_dict[isin_number] = nse_ticker
                     self.amfi_cname[bse_ticker] = comp_name
@@ -94,7 +94,7 @@ class Amfi(Database):
                     self.amfi_isin_list.append(isin_number)
                     self.amfi_ticker_list.append(bse_ticker)
             else:
-                self.amfi_rank[nse_ticker] = serial_number
+                self.amfi_rank[nse_ticker] = comp_rank
                 self.amfi_ticker_isin_dict[nse_ticker] = isin_number
                 self.amfi_isin_ticker_dict[isin_number] = nse_ticker
                 self.amfi_cname[nse_ticker] = comp_name
@@ -117,7 +117,7 @@ class Amfi(Database):
             traceback.print_exc()
 
     def amfi_load_data(self, in_filename):
-        table = "amfi"
+        table = self.amfi_table_name
 
         if self.amfi_table_truncate:
             self.db_table_truncate(table)
@@ -131,6 +131,26 @@ class Amfi(Database):
         print('display db data')
         self.amfi_load_db()
 
+    def amfi_get_insert_row(self, line, row_bank):
+
+        # split on comma
+        row_list = line.split(',')
+
+        if self.debug_level > 1:
+            print('row_list', row_list)
+            print('len row_list', len(row_list))
+
+        (comp_rank, comp_name, comp_isin, bse_symbol, nse_symbol, avg_mcap, cap_type) = row_list
+
+        if comp_rank == 'Sr. No.' or comp_rank == "sr_no":
+            if self.debug_level > 0:
+                print('skipped header line', row_list)
+            return
+
+        # remove any un-required stuff
+        new_row = (comp_rank, comp_name, comp_isin, bse_symbol, nse_symbol, avg_mcap, cap_type)
+        row_bank.append(new_row)
+
     def amfi_insert_data(self, in_filename):
 
         create_sql = cutil.cutil.get_create_sql(self.amfi_table_name, self.amfi_table_dict)
@@ -139,16 +159,18 @@ class Amfi(Database):
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
-            csv_reader = csv.reader(csvfile)
-            if self.debug_level > 0:
-                print(csv_reader)
             # insert row
-            cursor.executemany(insert_sql, csv_reader)
+            row_bank = []
+            for line in csvfile:
+                self.amfi_get_insert_row(line, row_bank)
+            print('loaded amfi : ', len(row_bank))
+            # insert row
+            cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
 
     def amfi_load_db(self):
-        table = "amfi"
+        table = self.amfi_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1 :

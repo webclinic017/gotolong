@@ -5,10 +5,12 @@ import re
 import csv
 import traceback
 import operator
+import calendar
 
 import cutil.cutil
 
 from amfi.amfi import *
+
 
 class Demat(Amfi):
 
@@ -23,22 +25,23 @@ class Demat(Amfi):
         self.demat_txn_last_date = {}
         self.demat_txn_first_buy_date = {}
         self.demat_txn_list = {}
-        self.demat_summary_rw_list = []
-        self.demat_summary_qty = {}
-        self.demat_summary_acp  = {}
-        self.demat_summary_upl_pct = {}
-        self.demat_summary_captype_stock_count = {}
-        self.demat_summary_captype_stock_cost_value = {}
-        self.demat_summary_captype_stock_market_value = {}
-        self.demat_summary_captype_unrealized_pl = {}
+        self.demat_sum_rw_list = []
+        self.demat_sum_qty = {}
+        self.demat_sum_acp = {}
+        self.demat_sum_upl_pct = {}
+        self.demat_sum_captype_stock_count = {}
+        self.demat_sum_captype_stock_cost_value = {}
+        self.demat_sum_captype_stock_market_value = {}
+        self.demat_sum_captype_unrealized_pl = {}
         # stock keeping units : sku
-        self.demat_summary_sku = {}
+        self.demat_sum_sku = {}
         self.demat_table_truncate = False
         self.demat_lc_weight = self.config_lc_weight
         self.demat_mc_weight = self.config_mc_weight
         self.demat_sc_weight = self.config_sc_weight
+        self.demat_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}
         self.debug_level = 0
-        self.demat_txn_table_name = "demat_txn"
+        self.demat_txn_table_name = "user_demat_txn"
         self.demat_txn_table_dict = {
             "stock_symbol": "text",
             "company_name": "text",
@@ -56,11 +59,11 @@ class Demat(Amfi):
             "exchange": "text",
             "unused1": "text"
         }
-        self.demat_summary_table_name = "demat_summary"
-        self.demat_summary_table_dict = {
+        self.demat_sum_table_name = "user_demat_sum"
+        self.demat_sum_table_dict = {
             "stock_symbol": "text",
             "company_name": "text",
-            "isin_code": "text",
+            "isin_code_id": "text",
             "qty": "text",
             "acp": "text",
             "cmp": "text",
@@ -74,6 +77,7 @@ class Demat(Amfi):
             "unrealized_pl_pct": "text",
             "unused1": "text"
         }
+
         print('init : Demat')
 
     def set_debug_level(self, debug_level):
@@ -102,7 +106,8 @@ class Demat(Amfi):
             txn_type = row_list[3]
             txn_qty = row_list[4]
             txn_price = str(int(round(float(row_list[5]))))
-            txn_date = row_list[12]
+            # convert datetime.date to str
+            txn_date = str(row_list[12])
 
             p_str = stock_symbol
             p_str += ','
@@ -153,7 +158,8 @@ class Demat(Amfi):
                 if txn_type == "Sell":
                     # ignore previous buy entries
                     # assume - last SELL to be full sale.
-                    del self.demat_txn_first_buy_date[stock_symbol]
+                    if stock_symbol in self.demat_txn_first_buy_date:
+                        del self.demat_txn_first_buy_date[stock_symbol]
         except KeyError:
             print("demat key error:", sys.exc_info())
             traceback.print_exc()
@@ -161,8 +167,7 @@ class Demat(Amfi):
             print("demat unexpected error:", sys.exc_info())
             traceback.print_exc()
 
-
-    def demat_summary_load_row(self, row):
+    def demat_sum_load_row(self, row):
         try:
             row_list = row
             # skip header : sometime Stock Symbol appears as 'tock Symbol'
@@ -174,7 +179,7 @@ class Demat(Amfi):
             comp_name = row_list[1]
             isin_code = (row_list[2]).upper().strip()
             stock_symbol = self.amfi_get_value_by_isin(isin_code, "ticker")
-            self.demat_summary_rw_list.append(stock_symbol)
+            self.demat_sum_rw_list.append(stock_symbol)
             qty = row_list[3]
             acp = row_list[4]
             cmp = row_list[5]
@@ -187,9 +192,9 @@ class Demat(Amfi):
             unrealized_pl = row_list[12]
             unrealized_pl_pct = row_list[13]
             unused1 = row_list[14]
-            self.demat_summary_qty[stock_symbol] = qty
-            self.demat_summary_acp[stock_symbol] = acp
-            self.demat_summary_upl_pct[stock_symbol] = unrealized_pl_pct
+            self.demat_sum_qty[stock_symbol] = qty
+            self.demat_sum_acp[stock_symbol] = acp
+            self.demat_sum_upl_pct[stock_symbol] = unrealized_pl_pct
             if int(qty) > 0:
                 sku = int(round(float(qty) * float(acp) / 1000))
                 if self.debug_level > 1:
@@ -199,35 +204,35 @@ class Demat(Amfi):
                     print("unexpected: qty 0")
                 sku = 0
             # store
-            self.demat_summary_sku[stock_symbol] = sku
+            self.demat_sum_sku[stock_symbol] = sku
 
             captype = self.amfi_get_value_by_ticker(stock_symbol, "captype")
 
-            if captype in self.demat_summary_captype_stock_count:
-                self.demat_summary_captype_stock_count[captype] += 1
+            if captype in self.demat_sum_captype_stock_count:
+                self.demat_sum_captype_stock_count[captype] += 1
             else:
-                self.demat_summary_captype_stock_count[captype] = 1
+                self.demat_sum_captype_stock_count[captype] = 1
 
-            if captype in self.demat_summary_captype_stock_cost_value:
-                self.demat_summary_captype_stock_cost_value[captype] += round(float(value_cost))
+            if captype in self.demat_sum_captype_stock_cost_value:
+                self.demat_sum_captype_stock_cost_value[captype] += round(float(value_cost))
             else:
-                self.demat_summary_captype_stock_cost_value[captype] = round(float(value_cost))
+                self.demat_sum_captype_stock_cost_value[captype] = round(float(value_cost))
 
-            if captype in self.demat_summary_captype_stock_market_value:
-                self.demat_summary_captype_stock_market_value[captype] += round(float(value_market))
+            if captype in self.demat_sum_captype_stock_market_value:
+                self.demat_sum_captype_stock_market_value[captype] += round(float(value_market))
             else:
-                self.demat_summary_captype_stock_market_value[captype] = round(float(value_market))
+                self.demat_sum_captype_stock_market_value[captype] = round(float(value_market))
 
-            if captype in self.demat_summary_captype_unrealized_pl:
-                self.demat_summary_captype_unrealized_pl[captype] += round(float(unrealized_pl))
+            if captype in self.demat_sum_captype_unrealized_pl:
+                self.demat_sum_captype_unrealized_pl[captype] += round(float(unrealized_pl))
             else:
-                self.demat_summary_captype_unrealized_pl[captype] = round(float(unrealized_pl))
+                self.demat_sum_captype_unrealized_pl[captype] = round(float(unrealized_pl))
 
         except:
-            print("demat_summary_load_row Unexpected error:", sys.exc_info(), row)
+            print("demat_sum_load_row Unexpected error:", sys.exc_info(), row)
 
     def demat_txn_load_data(self, in_filename):
-        table = "demat_txn"
+        table = self.demat_txn_table_name
         if self.demat_table_truncate:
             self.db_table_truncate(table)
 
@@ -239,19 +244,62 @@ class Demat(Amfi):
         print('display db data')
         self.demat_txn_load_db()
 
-
-    def demat_summary_load_data(self, in_filename):
-        table = "demat_summary"
+    def demat_sum_load_data(self, in_filename):
+        table = self.demat_sum_table_name
         if self.demat_table_truncate:
             self.db_table_truncate(table)
 
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.demat_summary_insert_data(in_filename)
+            self.demat_sum_insert_data(in_filename)
         else:
-            print('demat_summary data already loaded in db', row_count)
+            print('demat_sum data already loaded in db', row_count)
         print('display db data')
-        self.demat_summary_load_db()
+        self.demat_sum_load_db()
+
+    def demat_txn_get_insert_row(self, line, row_bank):
+
+        # split on comma
+        row_list = line.split(',')
+
+        if self.debug_level > 1:
+            print('row_list', row_list)
+            print('len row_list', len(row_list))
+
+        (stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty, segment,
+         stt, remarks, txn_date, exchange, unused1) = row_list
+
+        if self.debug_level > 1:
+            print('stock symbol', stock_symbol)
+
+        # bypass header
+        if stock_symbol.strip() == 'Stock Symbol':
+            print('bypassed stock symbol', stock_symbol)
+            return
+
+        try:
+            # dd-mmm-yy
+            txn_date_arr = txn_date.split('-')
+            txn_day = txn_date_arr[0].strip()
+            txn_month = txn_date_arr[1].strip()
+            txn_year = txn_date_arr[2].strip()
+            if txn_month.isdigit():
+                # get rid of leading 0 in month number
+                txn_month = str(int(txn_month))
+            else:
+                # month name to number
+                txn_month = str(self.demat_abbr_to_num_dict[txn_month])
+            txn_date_iso = txn_year + "-" + txn_month + "-" + txn_day
+            # ignore rest
+        except ValueError:
+            print('ValueError ', txn_date, row_list)
+        except IndexError:
+            print('IndexError ', txn_date, row_list, )
+
+        new_row = (
+        stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty, segment,
+        stt, remarks, txn_date_iso, exchange, unused1)
+        row_bank.append(new_row)
 
     def demat_txn_insert_data(self, in_filename):
 
@@ -260,18 +308,19 @@ class Demat(Amfi):
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
-            # future
-            csv_reader = csv.reader(csvfile)
+            row_bank = []
+            for line in csvfile:
+                self.demat_txn_get_insert_row(line, row_bank)
+            print('loaded dividends : ', len(row_bank))
             # insert row
-            cursor.executemany(insert_sql, csv_reader)
+            cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
 
+    def demat_sum_insert_data(self, in_filename):
 
-    def demat_summary_insert_data(self, in_filename):
-
-        create_sql = cutil.cutil.get_create_sql(self.demat_summary_table_name, self.demat_summary_table_dict)
-        insert_sql = cutil.cutil.get_insert_sql(self.demat_summary_table_name, self.demat_summary_table_dict)
+        create_sql = cutil.cutil.get_create_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
@@ -283,7 +332,7 @@ class Demat(Amfi):
             self.db_conn.commit()
 
     def demat_txn_load_db(self):
-        table = "demat_txn"
+        table = self.demat_txn_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1 :
@@ -291,14 +340,13 @@ class Demat(Amfi):
             self.demat_txn_load_row(row)
         # self.demat_txn_prepare_data()
 
-
-    def demat_summary_load_db(self):
-        table = "demat_summary"
+    def demat_sum_load_db(self):
+        table = self.demat_sum_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1 :
                 print(row)
-            self.demat_summary_load_row(row)
+            self.demat_sum_load_row(row)
         # self.prepare_demat_data()
 
     def demat_dump_txn_detailed(self, out_filename):
@@ -347,11 +395,11 @@ class Demat(Amfi):
 
     def demat_dump_txn_summary(self, out_filename, positive_holdings=None):
 
-        # print(self.demat_summary_sku)
+        # print(self.demat_sum_sku)
 
         fh = open(out_filename,"w")
         fh.write(
-            'stock_symbol, isin_code, comp_name, demat_summary_qty, demat_summary_acp, demat_summary_sku, demat_txn_last_type, demat_txn_last_date\n')
+            'stock_symbol, isin_code, comp_name, demat_sum_qty, demat_sum_acp, demat_sum_sku, demat_txn_last_type, demat_txn_last_date\n')
         for stock_symbol in sorted(self.demat_txn_list):
             if stock_symbol == 'Stock Symbol':
                 continue
@@ -362,12 +410,12 @@ class Demat(Amfi):
             p_str += ','
             p_str += self.company_name[stock_symbol]
             p_str += ','
-            p_str += str(self.demat_summary_qty[stock_symbol])
+            p_str += str(self.demat_sum_qty[stock_symbol])
             p_str += ','
-            p_str += str(self.demat_summary_acp[stock_symbol])
+            p_str += str(self.demat_sum_acp[stock_symbol])
             p_str += ','
-            if stock_symbol in self.demat_summary_sku:
-                p_str += str(self.demat_summary_sku[stock_symbol])
+            if stock_symbol in self.demat_sum_sku:
+                p_str += str(self.demat_sum_sku[stock_symbol])
             else:
                 p_str += '0'
                 # print(":",stock_symbol,":")
@@ -377,7 +425,7 @@ class Demat(Amfi):
             p_str += self.demat_txn_last_date[stock_symbol]
             p_str += '\n'
             if positive_holdings:
-                if int(self.demat_summary_qty[stock_symbol]) > 0:
+                if int(self.demat_sum_qty[stock_symbol]) > 0:
                     fh.write(p_str)
             else:
                 fh.write(p_str)
@@ -385,12 +433,12 @@ class Demat(Amfi):
 
     def demat_dump_summary_ticker_only(self, out_filename):
         fh = open(out_filename, "w")
-        for stock_symbol in sorted(self.demat_summary_rw_list):
+        for stock_symbol in sorted(self.demat_sum_rw_list):
             p_str = stock_symbol
             p_str += '\n'
             if stock_symbol == 'Stock Symbol':
                 continue
-            if int(self.demat_summary_qty[stock_symbol]) > 0:
+            if int(self.demat_sum_qty[stock_symbol]) > 0:
                 fh.write(p_str)
             else:
                 if self.debug_level > 0:
@@ -403,13 +451,13 @@ class Demat(Amfi):
         for captype in sorted(self.amfi_captype_list):
             p_str = captype
             p_str += ','
-            p_str += str(self.demat_summary_captype_stock_count[captype])
+            p_str += str(self.demat_sum_captype_stock_count[captype])
             p_str += ','
-            p_str += str(self.demat_summary_captype_stock_cost_value[captype])
+            p_str += str(self.demat_sum_captype_stock_cost_value[captype])
             p_str += ','
-            p_str += str(self.demat_summary_captype_stock_market_value[captype])
+            p_str += str(self.demat_sum_captype_stock_market_value[captype])
             p_str += ','
-            p_str += str(self.demat_summary_captype_unrealized_pl[captype])
+            p_str += str(self.demat_sum_captype_unrealized_pl[captype])
             p_str += '\n'
             fh.write(p_str)
         fh.close()
@@ -426,8 +474,8 @@ class Demat(Amfi):
             p_str += self.amfi_cname[ticker]
             p_str += ', '
 
-            if ticker in self.demat_summary_sku:
-                cur_sku = self.demat_summary_sku[ticker]
+            if ticker in self.demat_sum_sku:
+                cur_sku = self.demat_sum_sku[ticker]
             else:
                 cur_sku = 0
                 if rank <= 250:
@@ -460,27 +508,27 @@ class Demat(Amfi):
                 fh.write(p_str)
         fh.close()
 
-    def demat_summary_get_upl_pct_by_ticker(self, ticker):
-        if ticker in self.demat_summary_upl_pct:
-            return self.demat_summary_upl_pct[ticker]
+    def demat_sum_get_upl_pct_by_ticker(self, ticker):
+        if ticker in self.demat_sum_upl_pct:
+            return self.demat_sum_upl_pct[ticker]
         return 0
 
-    def demat_summary_get_acp_by_ticker(self, ticker):
-        if ticker in self.demat_summary_acp:
-            return self.demat_summary_acp[ticker]
+    def demat_sum_get_acp_by_ticker(self, ticker):
+        if ticker in self.demat_sum_acp:
+            return self.demat_sum_acp[ticker]
         return 0
 
-    def demat_summary_get_qty_by_ticker(self, ticker):
-        if ticker in self.demat_summary_qty:
-            return self.demat_summary_qty[ticker]
+    def demat_sum_get_qty_by_ticker(self, ticker):
+        if ticker in self.demat_sum_qty:
+            return self.demat_sum_qty[ticker]
         return 0
 
-    def demat_summary_get_holding_value(self, ticker):
-        return self.demat_summary_get_qty_by_ticker(ticker) * self.demat_summary_get_acp_by_ticker(ticker)
+    def demat_sum_get_holding_value(self, ticker):
+        return self.demat_sum_get_qty_by_ticker(ticker) * self.demat_sum_get_acp_by_ticker(ticker)
 
-    def demat_summary_get_units_by_ticker(self, ticker):
-        if ticker in self.demat_summary_sku:
-            return self.demat_summary_sku[ticker]
+    def demat_sum_get_units_by_ticker(self, ticker):
+        if ticker in self.demat_sum_sku:
+            return self.demat_sum_sku[ticker]
         return 0
 
     def demat_txn_get_last_date_by_ticker(self, ticker):

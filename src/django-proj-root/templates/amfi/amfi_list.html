@@ -4,19 +4,38 @@
 <table>
     <tr>
         <td>
-
+            comp rank
         </td>
+        <td>
+            comp name
+        </td>
+        <td>
+            comp ISIN
+        </td>
+        <td>
+            BSE symbol
+        </td>
+        <td>
+            NSE symbol
+        </td>
+        <td>
+            avg mcap
+        </td>
+        <td>
+            cap type
+        </td>
+
     </tr>
     {% for amfi_row in object_list %}
     <tr>
         <td>
-            {{ amfi_row.sno }}
+            {{ amfi_row.comp_rank }}
         </td>
         <td>
-            {{ amfi_row.company_name }}
+            {{ amfi_row.comp_name }}
         </td>
         <td>
-            {{ amfi_row.isin }}
+            {{ amfi_row.comp_isin }}
         </td>
         <td>
             {{ amfi_row.bse_symbol }}

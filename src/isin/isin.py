@@ -13,8 +13,8 @@ from database.database import *
 class Isin(Database):
     def __init__(self):
         super(Isin, self).__init__()
-        self.isin_table_name = "isin"
-        self.isin_table_columns = ["company_name", "industry_name", "symbol_ticker", "series", "isin_code"]
+        self.isin_table_name = "global_isin"
+        self.isin_table_columns = ["comp_name", "comp_industry", "comp_ticker", "series", "comp_isin"]
         self.isin_code_both = []
         self.isin_symbol = {}
         self.isin_name_bse = {}
@@ -70,7 +70,7 @@ class Isin(Database):
             traceback.print_exc()
 
     def isin_load_data(self, in_filename, bse_nse):
-        table = "isin"
+        table = self.isin_table_name
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
             self.insert_isin_data(in_filename)

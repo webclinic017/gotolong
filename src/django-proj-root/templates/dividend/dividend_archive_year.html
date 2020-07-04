@@ -2,16 +2,68 @@
 
 <h1>Dividend Archive Year List </h1>
 
+<br/>
+
+<br/>
+
+{{ date|date:"Y" }}  Total Dividend: {{ total_amount }}
+
+<br/>
+
+<table>
+
+    <tr>
+        <td>
+            month
+        </td>
+        <td>
+            amount
+        </td>
+    </tr>
+
+    {% for year_summary in summary_list %}
+
+    {% comment %}
+    {{ year_summary }}
+    {% endcomment %}
+
+    {% for key, value in year_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value}}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+</table>
+
+
+<br/>
 
 
 {% for date in date_list %}
 {% if forloop.first %}
 
+
 <a href=/dividend/list/> Go Up </a>
 
 <br>
 
-{{ date|date:"Y" }} Monthly Archive :
+Monthly Archive :
 
 {% endif %}
 

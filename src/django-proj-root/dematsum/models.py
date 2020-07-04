@@ -7,11 +7,14 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+from amfi.models import Amfi
 
-class DematSummary(models.Model):
+
+class DematSum(models.Model):
     stock_symbol = models.TextField(blank=True, null=True)
     company_name = models.TextField(primary_key=True)
-    isin_code = models.TextField(blank=True, null=True)
+    # isin_code = models.TextField(blank=True, null=True)
+    isin_code = models.ForeignKey(Amfi, on_delete=models.DO_NOTHING)
     qty = models.TextField(blank=True, null=True)
     acp = models.TextField(blank=True, null=True)
     cmp = models.TextField(blank=True, null=True)
@@ -25,6 +28,7 @@ class DematSummary(models.Model):
     unrealized_pl_pct = models.TextField(blank=True, null=True)
     unused1 = models.TextField(blank=True, null=True)
 
+    # amfis = models.ManyToManyField(Amfi)
+
     class Meta:
-        managed = False
-        db_table = 'demat_summary'
+        db_table = 'user_demat_sum'

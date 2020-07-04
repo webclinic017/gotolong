@@ -1,4 +1,22 @@
 
+
+0> dividend year wise
+
+MariaDB [gotolong]> select year(div_date), round(sum(amount)) from user_dividend group by year(div_date);
++----------------+--------------------+
+| year(div_date) | round(sum(amount)) |
++----------------+--------------------+
+|           2016 |                914 |
+|           2017 |               4790 |
+|           2018 |              10505 |
+|           2019 |              17605 |
+|           2020 |              16664 |
++----------------+--------------------+
+5 rows in set, 965 warnings (0.012 sec)
+
+MariaDB [gotolong]>
+
+
 1> sorted by dividend frequency
 
 select ticker, count(ticker) from dividend group by ticker order by count(ticker) asc;

@@ -8,5 +8,4 @@ class Nach(models.Model):
     ticker = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'nach'
+        db_table = 'global_nach'
