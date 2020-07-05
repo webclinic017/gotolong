@@ -13,8 +13,15 @@ from database.database import *
 class Isin(Database):
     def __init__(self):
         super(Isin, self).__init__()
+        self.isin_table_truncate = False
         self.isin_table_name = "global_isin"
-        self.isin_table_columns = ["comp_name", "comp_industry", "comp_ticker", "series", "comp_isin"]
+        self.isin_table_dict = {
+            "comp_name": "text",
+            "comp_industry": "text",
+            "comp_ticker": "text",
+            "series": "text",
+            "comp_isin": "text"
+        }
         self.isin_code_both = []
         self.isin_symbol = {}
         self.isin_name_bse = {}
@@ -25,6 +32,9 @@ class Isin(Database):
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
+
+    def isin_table_reload(self, truncate=False):
+        self.isin_table_truncate = truncate
 
     def isin_load_row(self, row, bse_nse):
         try:
@@ -71,61 +81,51 @@ class Isin(Database):
 
     def isin_load_data(self, in_filename, bse_nse):
         table = self.isin_table_name
+
+        if self.isin_table_truncate:
+            self.db_table_truncate(table)
+
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.insert_isin_data(in_filename)
+            self.isin_insert_data(in_filename)
         else:
             print('isin data already loaded in db', row_count)
         print('display db data')
         self.isin_load_db()
 
+    def isin_get_insert_row(self, line, row_bank):
+
+        # split on comma
+        row_list = line.split(',')
+
+        if self.debug_level > 1:
+            print('row_list', row_list)
+            print('len row_list', len(row_list))
+
+        (comp_name, comp_industry, comp_ticker, series, comp_isin) = row_list
+
+        if comp_ticker == 'Symbol' or comp_industry == "Industry":
+            if self.debug_level > 0:
+                print('skipped header line', row_list)
+            return
+
+        # remove any un-required stuff
+        new_row = (comp_name, comp_industry, comp_ticker, series, comp_isin)
+        row_bank.append(new_row)
+
     def isin_insert_data(self, in_filename):
-        table_name = self.isin_table_name
-        table_columns = self.isin_table_columns
-
-        insert_sql = "insert into "
-        insert_sql += table_name
-        insert_sql += "("
-
-        iter = 0
-        for column_name in table_columns:
-            insert_sql += column_name
-            if iter != len(table_columns) - 1:
-                insert_sql += ","
-            iter += 1
-
-        insert_sql += ") values("
-
-        iter = 0
-        for column_name in table_columns:
-            insert_sql += ":"
-            insert_sql += column_name
-            if iter != len(table_columns) - 1:
-                insert_sql += ","
-            iter += 1
-        insert_sql += ")"
-
-        print(insert_sql)
-
-        create_sql = "create table if not exists "
-        create_sql += table_name
-        create_sql += "("
-
-        iter = 0
-        for column_name in table_columns:
-            create_sql += column_name
-            if iter != len(table_columns) - 1:
-                create_sql += " text,"
-            iter += 1
-        create_sql += " text)"
-        print(create_sql)
+        create_sql = cutil.cutil.get_create_sql(self.isin_table_name, self.isin_table_dict)
+        insert_sql = cutil.cutil.get_insert_sql(self.isin_table_name, self.isin_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
-            # future
-            csv_reader = csv.reader(csvfile)
             # insert row
-            cursor.executemany(insert_sql, csv_reader)
+            row_bank = []
+            for line in csvfile:
+                self.isin_get_insert_row(line, row_bank)
+            print('loaded isin : ', len(row_bank))
+            # insert row
+            cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
 

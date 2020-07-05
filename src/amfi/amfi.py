@@ -136,15 +136,17 @@ class Amfi(Database):
         # split on comma
         row_list = line.split(',')
 
-        if self.debug_level > 1:
-            print('row_list', row_list)
-            print('len row_list', len(row_list))
+
 
         (comp_rank, comp_name, comp_isin, bse_symbol, nse_symbol, avg_mcap, cap_type) = row_list
+
+        # remove new line character from end
+        cap_type = cap_type.strip('\n')
 
         if comp_rank == 'Sr. No.' or comp_rank == "sr_no":
             if self.debug_level > 0:
                 print('skipped header line', row_list)
+                print('len row_list', len(row_list))
             return
 
         # remove any un-required stuff
@@ -163,7 +165,7 @@ class Amfi(Database):
             row_bank = []
             for line in csvfile:
                 self.amfi_get_insert_row(line, row_bank)
-            print('loaded amfi : ', len(row_bank))
+            print('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
             cursor.executemany(insert_sql, row_bank)
             # commit db changes

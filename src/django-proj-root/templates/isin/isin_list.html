@@ -1,6 +1,20 @@
 {% include "top.html" %}
 
 <h1>ISIN List </h1>
+
+<br>
+
+<a href="/isin/list/"> ISIN (List) </a>
+<br>
+
+<a href="/isin/industry/"> ISIN (Industries Count & Companies Count by Industries) </a>
+
+<br>
+
+Industries Count : {{industries_count}}
+
+<br>
+
 <table>
     <tr>
         <td>
@@ -29,6 +43,9 @@
         </td>
         <td>
             {{ isin_row.comp_isin }}
+        </td>
+        <td>
+            {{ isin_row.comp_count }}
         </td>
 
     </tr>

@@ -274,7 +274,7 @@ class Demat(Amfi):
 
         # bypass header
         if stock_symbol.strip() == 'Stock Symbol':
-            print('bypassed stock symbol', stock_symbol)
+            print('bypassed header line', row_list)
             return
 
         try:
@@ -311,11 +311,32 @@ class Demat(Amfi):
             row_bank = []
             for line in csvfile:
                 self.demat_txn_get_insert_row(line, row_bank)
-            print('loaded dividends : ', len(row_bank))
+            print('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
             cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
+
+    def demat_sum_get_insert_row(self, line, row_bank):
+
+        # split on comma
+        row_list = line.split(',')
+
+        (stock_symbol, company_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
+         days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1) = row_list
+
+        if self.debug_level > 1:
+            print('row_list', row_list)
+            print('len row_list', len(row_list))
+
+        # bypass header
+        if stock_symbol.strip() == 'Stock Symbol':
+            print('bypassed header line', row_list)
+            return
+
+        new_row = (stock_symbol, company_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
+                   days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1)
+        row_bank.append(new_row)
 
     def demat_sum_insert_data(self, in_filename):
 
@@ -325,9 +346,12 @@ class Demat(Amfi):
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
-            csv_reader = csv.reader(csvfile)
+            row_bank = []
+            for line in csvfile:
+                self.demat_sum_get_insert_row(line, row_bank)
+            print('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
-            cursor.executemany(insert_sql, csv_reader)
+            cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
 

@@ -1,31 +1,14 @@
 {% include "top.html" %}
 
 <h1>AMFI List </h1>
-<table>
-    <tr>
-        <td>
-            comp rank
-        </td>
-        <td>
-            comp name
-        </td>
-        <td>
-            comp ISIN
-        </td>
-        <td>
-            BSE symbol
-        </td>
-        <td>
-            NSE symbol
-        </td>
-        <td>
-            avg mcap
-        </td>
-        <td>
-            cap type
-        </td>
 
-    </tr>
+<br>
+<a href="/amfi/list/"> AMFI (list) </a>
+<br>
+<a href="/amfi/rank/"> AMFI (Deficit by rank) </a>
+<br>
+
+<table>
     {% for amfi_row in object_list %}
     <tr>
         <td>
@@ -49,7 +32,15 @@
         <td>
             {{ amfi_row.cap_type }}
         </td>
-
+        <td>
+            {{ amfi_row.value_cost }}
+        </td>
+        <td>
+            Weight {{ amfi_row.cap_weight }}
+        </td>
+        <td>
+            Deficit {{ amfi_row.deficit }}
+        </td>
     </tr>
     {% empty %}
     <tr>No amfi yet.</tr>
