@@ -5,7 +5,11 @@
 <br>
 <a href="/amfi/list/"> AMFI (list) </a>
 <br>
-<a href="/amfi/rank/"> AMFI (Deficit by rank) </a>
+<a href="/amfi/amount/"> AMFI (Amount & Deficit by rank) </a>
+<br>
+<a href="/amfi/deficit/"> AMFI (Deficit by amount) </a>
+<br>
+<a href="/amfi/missing/"> AMFI (Notable exclusions from Large cap & mid cap) </a>
 <br>
 
 <table>
@@ -36,10 +40,10 @@
             {{ amfi_row.value_cost }}
         </td>
         <td>
-            Weight {{ amfi_row.cap_weight }}
+            {{ amfi_row.cap_weight }}
         </td>
         <td>
-            Deficit {{ amfi_row.deficit }}
+            {{ amfi_row.deficit }}
         </td>
     </tr>
     {% empty %}

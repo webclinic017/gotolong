@@ -13,9 +13,13 @@ git clone https://github.com/surinder432/gotolong
 
 ## Configuration
 
-Modify top level config.ini
-
 For DB name, user and password
+
+1. Modify top level : config.ini
+Currently, it is used by non django loaders of most modules.
+
+2. Modify django config file for DB : src/django-proj-root/mysite/settings.py
+Currently, it is used by django for viewing/browsing the data.
 
 ## Generating reports
 

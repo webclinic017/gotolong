@@ -76,7 +76,7 @@ class Weight(Amfi):
             traceback.print_exc()
 
     def weight_load_data(self, in_filename):
-        table = "weight"
+        table = "user_weight"
         # put this truncate under some other condition
         if self.debug_level > 0:
             self.db_table_truncate(table)
@@ -134,7 +134,7 @@ class Weight(Amfi):
             self.db_conn.commit()
 
     def weight_load_db(self):
-        table = "weight"
+        table = "user_weight"
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1:
