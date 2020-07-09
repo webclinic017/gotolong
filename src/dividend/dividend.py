@@ -351,7 +351,7 @@ class Dividend(Amfi, Nach):
                 row_bank = []
                 for line in csvfile:
                     self.dividend_get_insert_row(line, row_bank)
-                    print('loaded entries', len(row_bank), 'from', in_filename)
+                print('loaded entries', len(row_bank), 'from', in_filename)
                 # insert row
                 cursor.executemany(insert_sql, row_bank)
         # commit db changes

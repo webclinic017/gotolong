@@ -30,7 +30,10 @@ provide input-global-data
 provide input-user-data
 
 ### generate report for all modules
-./all_reports.sh
+# source config.sh
+cd {GOTOLONG_HOME}/
+./config.sh
+{GOTOLONG_HOME}/src/all_reports.sh
 
 ### check output data
 check output-global-data

@@ -8,6 +8,8 @@
 <a href="/demat/sum/ticker/"> Demat Summary (Ticker Only) </a>
 <br>
 <a href="/demat/sum/rank/"> Demat Summary (By Company Rank) </a>
+<br>
+<a href="/demat/sum/captype/"> Demat Summary (Companies Distribution - By captype) </a>
 
 <br>
 
@@ -87,6 +89,11 @@
         <td>
             {{ dematsum_row.cap_weight }}
         </td>
+
+        <td>
+            {{ dematsum_row.cap_count }}
+        </td>
+
 
     </tr>
     {% empty %}

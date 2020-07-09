@@ -4,8 +4,7 @@ ADANIGAS, profit5, missing data
 APOLLOHOSP, d2e, 0.83
 APOLLOTYRE, roce3, 10.98
 AUROPHARMA, dp3, 6.2
-BAJAJHLDNG, sales5, 0.17
-BAJFINANCE, dp3, 9.63
+BAJAJHLDNG, roce3, 10.2
 BALRAMCHIN, d2e, 0.83
 BASF, d2e, 0.65
 BDL, profit5, missing data
@@ -22,6 +21,7 @@ DRREDDY, roce3, 9.9
 EIHOTEL, roce3, 6.99
 FLFL, d2e, 0.52
 FRETAIL, d2e, 0.69
+GICRE, roce3, 6.1
 GLENMARK, d2e, 0.79
 GODFRYPHLP, sales5, 0.0
 HAL, profit5, missing data
@@ -30,8 +30,6 @@ HDFCLIFE, icr, missing data
 HINDALCO, d2e, 0.91
 HINDPETRO, d2e, 0.97
 HONAUT, dp3, 9.21
-HUDCO, roe3, 10.41
-ICICIBANK, roe3, 6.94
 ICICIGI, icr, missing data
 INDHOTEL, d2e, 0.53
 IOC, d2e, 0.86
@@ -47,13 +45,11 @@ NILKAMAL, rank, 548.0
 NMDC, sales5, 0.16
 OIL, roce3, 11.86
 PETRONET, sales5, 0.34
-PFC, roe3, 11.92
 PGHL, icr, missing data
 QUESS, icr, 3.29
 RALLIS, profit5, 0.42
 RELIANCE, d2e, 0.79
 SBILIFE, icr, missing data
-SRTRANSFIN, dp3, 9.33
 TATACOFFEE, d2e, 0.98
 TATAGLOBAL, roce3, 10.03
 TIINDIA, profit5, missing data

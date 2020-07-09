@@ -3,13 +3,13 @@
 <h1>DematTxn List</h1>
 
 <br>
-
 <a href="/demat/txn/list/"> Demat Txn (List) </a>
-
 <br>
-
 <a href="/demat/txn/gap/"> Demat Txn (Gap Months) </a>
-
+<br>
+<a href="/demat/txn/stat/"> Demat Txn (statistics - cumulative) </a>
+<br>
+<a href="/demat/txn/stat/buy_sell/"> Demat Txn (statistics - buy & sell) </a>
 <br>
 
 <table>
@@ -84,6 +84,13 @@
         <td>
             {{ demattxn_row.days }}
         </td>
+        <td>
+            {{ demattxn_row.txn_year }}
+        </td>
+        <td>
+            {{ demattxn_row.txn_amount }}
+        </td>
+
     </tr>
     {% empty %}
     <tr>

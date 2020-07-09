@@ -13,6 +13,10 @@ ib_logfile1
 ibdata1
 ibtmp1
 multi-master.info
+SURIKUMA-LAP.err
+SURIKUMA-LAP.pid
 *.err
 *.pid
+*.ibd
+*.frm
 
