@@ -11,39 +11,54 @@ Pull the github repository
 
 git clone https://github.com/surinder432/gotolong
 
+
+## Install Database schema
+The db schema is in {GOTOLONG_HOME}/db-schema/ directory.
+
+Create the database schema.
+
 ## Configuration
 
 For DB name, user and password
 
-1. Modify top level : config.ini
+Modify top level : 
+
+config.ini
+
 Currently, it is used by non django loaders of most modules.
 
-2. Modify django config file for DB : src/django-proj-root/mysite/settings.py
-Currently, it is used by django for viewing/browsing the data.
 
-## Generating reports
-
-### global scope
-provide input-global-data 
+## Input Data 
 
 ### user scope
-provide input-user-data
+Gather and store files like bank statement, demat summary and
+demat detailed data in input-user-data
 
-### Create Database schema
-The db schema is in {GOTOLONG_HOME}/db-schema/ directory.
-Install this.
-
-### generate report for all modules
-# source config.sh
+## Generate report for all modules
 cd {GOTOLONG_HOME}/
+
 ./config.sh
+
 {GOTOLONG_HOME}/src/all_reports.sh
 
-### check output data
-check output-global-data
-check output-user-data
+## Explore the reports using web browser
 
-## Modules Description
+### Django DB config
+Modify django config file for DB name, user name and password : 
+${GOTOLONG_HOME}/src/django-proj-root/mysite/settings.py
+
+### Django Web Server
+The django project is capable of browsing the data stored
+in 'gotolong' database. The migration from offline files to the
+web interface is still in progress
+
+cd ${GOTOLONG_HOME}/src/django-proj-root/
+
+python manage.py runserver
+
+Use the URL given here to browse the reports.
+
+## Code Modules Description
 
 ## amfi module
 
