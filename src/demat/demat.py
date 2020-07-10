@@ -44,7 +44,7 @@ class Demat(Amfi):
         self.demat_txn_table_name = "user_demat_txn"
         self.demat_txn_table_dict = {
             "stock_symbol": "text",
-            "company_name": "text",
+            "comp_name": "text",
             "isin_code": "text",
             "action": "text",
             "quantity": "int",
@@ -62,14 +62,14 @@ class Demat(Amfi):
         self.demat_sum_table_name = "user_demat_sum"
         self.demat_sum_table_dict = {
             "stock_symbol": "text",
-            "company_name": "text",
+            "comp_name": "text",
             "isin_code_id": "text",
-            "qty": "text",
-            "acp": "text",
+            "qty": "int",
+            "acp": "float",
             "cmp": "text",
             "pct_change": "text",
-            "value_cost": "text",
-            "value_market": "text",
+            "value_cost": "float",
+            "value_market": "float",
             "days_gain": "text",
             "days_gain_pct": "text",
             "realized_pl": "text",
@@ -322,7 +322,7 @@ class Demat(Amfi):
         # split on comma
         row_list = line.split(',')
 
-        (stock_symbol, company_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
+        (stock_symbol, comp_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
          days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1) = row_list
 
         if self.debug_level > 1:
@@ -334,7 +334,7 @@ class Demat(Amfi):
             print('bypassed header line', row_list)
             return
 
-        new_row = (stock_symbol, company_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
+        new_row = (stock_symbol, comp_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
                    days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1)
         row_bank.append(new_row)
 

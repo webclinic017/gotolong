@@ -29,6 +29,10 @@ provide input-global-data
 ### user scope
 provide input-user-data
 
+### Create Database schema
+The db schema is in {GOTOLONG_HOME}/db-schema/ directory.
+Install this.
+
 ### generate report for all modules
 # source config.sh
 cd {GOTOLONG_HOME}/

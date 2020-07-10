@@ -5,7 +5,7 @@ from django.db import models
 
 class DematTxn(models.Model):
     stock_symbol = models.TextField(blank=True, null=True)
-    company_name = models.TextField(primary_key=True)
+    comp_name = models.TextField(primary_key=True)
     isin_code = models.TextField(blank=True, null=True)
     action = models.TextField(blank=True, null=True)
     quantity = models.IntegerField(blank=True, null=True)
@@ -22,4 +22,4 @@ class DematTxn(models.Model):
 
     class Meta:
         db_table = 'user_demat_txn'
-        unique_together = (('company_name', 'txn_date'),)
+        unique_together = (('comp_name', 'txn_date'),)

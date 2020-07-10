@@ -9,8 +9,9 @@
 <br>
 <a href="/demat/sum/rank/"> Demat Summary (By Company Rank) </a>
 <br>
-<a href="/demat/sum/captype/"> Demat Summary (Companies Distribution - By captype) </a>
-
+<a href="/demat/sum/amount/"> Demat Summary (By amount invested) </a>
+<br>
+<a href="/demat/sum/captype/"> Demat Summary (Distribution - count of companies & amount - captype) </a>
 <br>
 
 <table>
@@ -23,7 +24,7 @@
         </td>
 
         <td>
-            {{ dematsum_row.company_name }}
+            {{ dematsum_row.comp_name }}
         </td>
 
         <td>
@@ -93,7 +94,9 @@
         <td>
             {{ dematsum_row.cap_count }}
         </td>
-
+        <td>
+            {{ dematsum_row.cap_cost }}
+        </td>
 
     </tr>
     {% empty %}

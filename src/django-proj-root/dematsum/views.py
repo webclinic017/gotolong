@@ -8,8 +8,8 @@ from django.utils import timezone
 
 from django.views.generic.list import ListView
 
-from django.db.models import OuterRef, Subquery, Count, Case, When, Value, IntegerField, CharField
-from django.db.models.functions import Trim, Lower
+from django.db.models import OuterRef, Subquery, Count, Sum, Case, When, Value, IntegerField, CharField
+from django.db.models.functions import Trim, Lower, Round
 
 from amfi.models import Amfi
 
@@ -53,8 +53,27 @@ class DematSumRankView(ListView):
     queryset = DematSum.objects.all(). \
         annotate(comp_rank=Subquery(amfi_qs.values('comp_rank')[:1])). \
         annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
-        values('stock_symbol', 'company_name', 'value_cost', 'comp_rank', 'cap_type'). \
+        values('stock_symbol', 'comp_name', 'value_cost', 'comp_rank', 'cap_type'). \
         order_by('comp_rank')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        return context
+
+
+class DematSumAmountView(ListView):
+    # model = DematSum
+
+    # if pagination is desired
+    # paginate_by = 300
+
+    # amfi_qset = Amfi.objects.filter(comp_isin=OuterRef('pk'))
+    # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank'))).order_by('comp_rank')
+    # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank')))
+    queryset = DematSum.objects.all(). \
+        values('comp_name', 'value_cost'). \
+        order_by('-value_cost')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -77,6 +96,7 @@ class DematSumCapTypeView(ListView):
         annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
         values('cap_type'). \
         annotate(cap_count=Count('cap_type')). \
+        annotate(cap_cost=Round(Sum('value_cost'))). \
         order_by('cap_type')
 
     def get_context_data(self, **kwargs):

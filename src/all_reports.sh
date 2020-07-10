@@ -41,7 +41,7 @@ do
 done
 
 
-for TARGET in anomanly
+for TARGET in anomaly
 do
   cd $PROJ_SOURCE_LOC/$TARGET
   ./*.sh
