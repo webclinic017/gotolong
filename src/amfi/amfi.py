@@ -136,8 +136,6 @@ class Amfi(Database):
         # split on comma
         row_list = line.split(',')
 
-
-
         (comp_rank, comp_name, comp_isin, bse_symbol, nse_symbol, avg_mcap, cap_type) = row_list
 
         # remove new line character from end

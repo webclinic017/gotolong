@@ -45,18 +45,23 @@ cd {GOTOLONG_HOME}/
 
 ### Django DB config
 Modify django config file for DB name, user name and password : 
-${GOTOLONG_HOME}/src/django-proj-root/mysite/settings.py
+${GOTOLONG_HOME}/src-django-proj-root/mysite/settings.py
 
 ### Django Web Server
 The django project is capable of browsing the data stored
 in 'gotolong' database. The migration from offline files to the
 web interface is still in progress
 
-cd ${GOTOLONG_HOME}/src/django-proj-root/
+cd ${GOTOLONG_HOME}/src-django-proj-root/
 
 python manage.py runserver
+Starting development server at http://127.0.0.1:8000/
 
-Use the URL given here to browse the reports.
+### Web browser : URL
+
+Use the following URL to browse the reports
+
+http://127.0.0.1:8000/
 
 ## Code Modules Description
 

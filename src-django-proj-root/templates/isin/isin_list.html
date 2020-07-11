@@ -1,0 +1,57 @@
+{% include "top.html" %}
+
+<h1>ISIN List </h1>
+
+<br>
+
+<a href="/isin/list/"> ISIN (List) </a>
+<br>
+
+<a href="/isin/industry/"> ISIN (Industries Count & Companies Count by Industries) </a>
+
+<br>
+
+Industries Count : {{industries_count}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Company Name
+        </td>
+        <td>
+            Company Industry
+        </td>
+        <td>
+            Company Ticker
+        </td>
+        <td>
+            Company ISIN
+        </td>
+    </tr>
+    {% for isin_row in object_list %}
+    <tr>
+        <td>
+            {{ isin_row.comp_name }}
+        </td>
+        <td>
+            {{ isin_row.comp_industry }}
+        </td>
+        <td>
+            {{ isin_row.comp_ticker }}
+        </td>
+        <td>
+            {{ isin_row.comp_isin }}
+        </td>
+        <td>
+            {{ isin_row.comp_count }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No ISIN yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

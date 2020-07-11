@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=0
+DEBUG_LEVEL=1
 
 # DEBUG_OPTION=-m pdb
 

@@ -21,30 +21,53 @@ class Trendlyne(Amfi, Isin):
         self.tl_nsecode_industry = {}
         # margin of safety
         self.tl_table_truncate = False
+        self.tl_table_name = "global_trendlyne"
         self.debug_level = 0
         self.tl_ratio_name = {
-            "Stock": "name",
+            "Stock": "comp_name",
             "ISIN": "isin",
             "Broker Average Target Rs": "bat",
-            "Broker Average Rating": "bar",
             "Total Debt to Total Equity Annual": "der",
             "ROCE Annual 3Yr Avg %": "roce3",
+            "ROE Annual 3Yr Avg %": "roe3",
             "Dividend payout ratio 2Yr %": "dpr2",
-            "Promoter holding pledge percentage % Qtr": "pledge"
+            "Revenue Annual 2Yr Growth %": "sales2",
+            "Net Profit 5Yr Growth %": "profit5",
+            "Interest Coverage Ratio Annual": "icr",
+            "Promoter holding pledge percentage % Qtr": "pledge",
+            "3Yr Low Rs": "low_3y",
+            "5Yr Low Rs": "low_5y",
+            "My Notes": "notes"
         }
-
-        self.tl_ratio_loc = {'ticker': -1, 'name': -1, 'isin': -1, 'bat': -1, 'bar': -1}
-
-        self.tl_table_name = "trendlyne"
+        self.tl_ratio_loc = {
+            'stock_name': -1,
+            'isin': -1,
+            'bat': -1,
+            'der': -1,
+            'roce3': -1,
+            'roe3': -1,
+            'dpr2': -1,
+            'sales2': -1,
+            'profit5': -1,
+            'icr': -1,
+            'pledge': -1,
+            'low_3y': -1,
+            'low_5y': -1
+        }
         self.tl_table_dict = {
-            "comp_name": "text",
-            "comp_isin": "text",
-            "comp_bat": "text",
-            "comp_bar": "text",
-            "comp_der": "text",
-            "comp_roce3": "text",
-            "comp_dpr2": "text",
-            "comp_pledge": "text"
+            "stock_name": "text",
+            "isin": "text",
+            "bat": "float",
+            "der": "float",
+            "roce3": "float",
+            "roe3": "float",
+            "dpr2": "float",
+            "sales2": "float",
+            "profit5": "float",
+            "icr": "float",
+            "pledge": "float",
+            "low_3y": "float",
+            "low_5y": "float"
         }
 
     def set_debug_level(self, debug_level):
@@ -116,7 +139,6 @@ class Trendlyne(Amfi, Isin):
                         print('ticker: ', tl_nsecode, 'ratio: ', ratio, 'value: ',
                               self.tl_ratio_values[tl_nsecode, ratio])
 
-
         except IndexError:
             print('except ', row)
             traceback.print_exc()
@@ -128,7 +150,12 @@ class Trendlyne(Amfi, Isin):
             traceback.print_exc()
 
     def trendlyne_load_data(self, in_filename):
-        table = "trendlyne"
+        table = self.tl_table_name
+
+        create_sql = cutil.cutil.get_create_sql(self.tl_table_name, self.tl_table_dict)
+        if self.debug_level > 0:
+            print(create_sql)
+
         if self.tl_table_truncate:
             self.db_table_truncate(table)
 
@@ -140,22 +167,69 @@ class Trendlyne(Amfi, Isin):
         print('display db data')
         self.trendlyne_load_db()
 
+    def trendlyne_get_insert_row(self, line, row_bank):
+
+        try:
+
+            # remove , comma in double-quoted numbers
+            if False:
+                new_line = re.sub(r'(?!(([^"]*"){2})*[^"]*$),', '', line)
+                if line != new_line:
+                    if self.debug_level > 1:
+                        print('old', line)
+                        print('new - without comma', new_line)
+                    line = new_line
+            # split on comma
+            # row_list = line.split(',')
+
+            row_list = line
+
+            # replace ',' with nothing
+            for index in range(len(row_list)):
+                row_list[index] = row_list[index].replace(',', '')
+                # fix for numbers
+                if row_list[index] == '-':
+                    row_list[index] = 0
+
+            (stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y,
+             notes) = row_list
+
+            # double quoted "Stock"
+            if stock_name == 'Stock' or stock_name == '"Stock"':
+                if self.debug_level > 0:
+                    print('skipped header line', row_list)
+                    print('len row_list', len(row_list))
+                return
+
+            # remove any un-required stuff
+            new_row = (
+            stock_name, isin, float(bat), der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y)
+            row_bank.append(new_row)
+
+        except:
+            print('except ', line)
+            print('len row_list', len(row_list))
+            traceback.print_exc()
+
     def trendlyne_insert_data(self, in_filename):
 
-        create_sql = cutil.cutil.get_create_sql(self.tl_table_name, self.tl_table_dict)
         insert_sql = cutil.cutil.get_insert_sql(self.tl_table_name, self.tl_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
             # future
+            row_bank = []
             csv_reader = csv.reader(csvfile)
+            for line in csv_reader:
+                self.trendlyne_get_insert_row(line, row_bank)
+            print('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
-            cursor.executemany(insert_sql, csv_reader)
+            cursor.executemany(insert_sql, row_bank)
             # commit db changes
             self.db_conn.commit()
 
     def trendlyne_load_db(self):
-        table = "trendlyne"
+        table = self.tl_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
             if self.debug_level > 1:
