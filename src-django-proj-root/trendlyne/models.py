@@ -16,6 +16,8 @@ class Trendlyne(models.Model):
     pledge = models.FloatField(blank=True, null=True)
     low_3y = models.FloatField(blank=True, null=True)
     low_5y = models.FloatField(blank=True, null=True)
+    reco_type = models.TextField(blank=True, null=True)
+    reco_cause = models.TextField(blank=True, null=True)
 
     class Meta:
         db_table = 'global_trendlyne'

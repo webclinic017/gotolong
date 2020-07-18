@@ -24,9 +24,14 @@ class Config(object):
         self.config_roce3_hold = float(parser.get('DEFAULT', 'roce3_hold'))
         self.config_dpr3_buy = float(parser.get('DEFAULT', 'dpr3_buy'))
         self.config_dpr3_hold = float(parser.get('DEFAULT', 'dpr3_hold'))
+        self.config_dpr2_buy = float(parser.get('DEFAULT', 'dpr2_buy'))
+        self.config_dpr2_hold = float(parser.get('DEFAULT', 'dpr2_hold'))
 
         self.config_sales5_buy = float(parser.get('DEFAULT', 'sales5_buy'))
         self.config_sales5_hold = float(parser.get('DEFAULT', 'sales5_hold'))
+
+        self.config_sales2_buy = float(parser.get('DEFAULT', 'sales2_buy'))
+        self.config_sales2_hold = float(parser.get('DEFAULT', 'sales2_hold'))
 
         self.config_profit5_buy = float(parser.get('DEFAULT', 'profit5_buy'))
         self.config_profit5_hold = float(parser.get('DEFAULT', 'profit5_hold'))

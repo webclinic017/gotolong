@@ -1,4 +1,7 @@
 To Do Items
+* Trendlyne - add industry clause for DER to pick up bank/nbfc (similar to screener)
+ ** use a dictionary instead of the long list of arguments for _reco
+
 * Django - add support for amfi, demat txn and dividend data
 * allow multi broker configuration like user have account in both icicidirect and zerodha
 * allow multi-user configuration : different user support with different broker configuration.

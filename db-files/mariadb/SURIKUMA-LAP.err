@@ -4406,3 +4406,351 @@ Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2020-07-11 22:46:09 148 [Warning] Aborted connection 148 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-07-11 22:47:13 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-07-11 22:47:14 150 [Warning] Aborted connection 150 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-11 22:50:43 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-11 22:50:43 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-11 22:50:43 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-11 22:50:44 0 [Note] InnoDB: Starting shutdown...
+2020-07-11 22:50:44 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-11 22:50:44 0 [Note] InnoDB: Buffer pool(s) dump completed at 200711 22:50:44
+2020-07-11 22:50:45 0 [Note] InnoDB: Shutdown completed; log sequence number 65111164; transaction id 12565
+2020-07-11 22:50:45 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-11 22:50:45 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-12 13:24:04 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-12 13:24:04 0 [Note] InnoDB: Uses event mutexes
+2020-07-12 13:24:04 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-12 13:24:04 0 [Note] InnoDB: Number of pools: 1
+2020-07-12 13:24:04 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-12 13:24:04 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-12 13:24:04 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-12 13:24:05 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-12 13:24:05 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-12 13:24:05 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-12 13:24:05 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-12 13:24:05 0 [Note] InnoDB: Waiting for purge to start
+2020-07-12 13:24:05 0 [Note] InnoDB: 10.4.11 started; log sequence number 65111164; transaction id 12554
+2020-07-12 13:24:05 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-12 13:24:05 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-12 13:24:05 0 [Note] Server socket created on IP: '::'.
+2020-07-12 13:24:05 0 [Note] Reading of all Master_info entries succeeded
+2020-07-12 13:24:05 0 [Note] Added new Master_info '' to hash table
+2020-07-12 13:24:05 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-12 13:24:05 0 [Note] InnoDB: Buffer pool(s) load completed at 200712 13:24:05
+2020-07-12 13:30:09 11 [Warning] Aborted connection 11 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:30:28 16 [Warning] Aborted connection 16 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:30:56 19 [Warning] Aborted connection 19 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:31:33 22 [Warning] Aborted connection 22 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:33:23 26 [Warning] Aborted connection 26 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:34:55 34 [Warning] Aborted connection 34 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:35:30 36 [Warning] Aborted connection 36 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:37:17 39 [Warning] Aborted connection 39 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:37:54 42 [Warning] Aborted connection 42 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:46:26 44 [Warning] Aborted connection 44 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:49:06 46 [Warning] Aborted connection 46 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:51:24 52 [Warning] Aborted connection 52 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:52:23 58 [Warning] Aborted connection 58 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:54:33 61 [Warning] Aborted connection 61 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:54:38 64 [Warning] Aborted connection 64 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 13:55:54 66 [Warning] Aborted connection 66 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:16:24 69 [Warning] Aborted connection 69 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:16:46 72 [Warning] Aborted connection 72 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:17:18 76 [Warning] Aborted connection 76 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:33:28 78 [Warning] Aborted connection 78 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:41:50 83 [Warning] Aborted connection 83 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:43:14 86 [Warning] Aborted connection 86 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:44:56 91 [Warning] Aborted connection 91 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:45:50 94 [Warning] Aborted connection 94 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:46:18 97 [Warning] Aborted connection 97 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 14:47:20 100 [Warning] Aborted connection 100 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:36:30 103 [Warning] Aborted connection 103 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:38:35 107 [Warning] Aborted connection 107 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:38:57 108 [Warning] Aborted connection 108 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:41:49 109 [Warning] Aborted connection 109 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:49:09 110 [Warning] Aborted connection 110 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 18:50:48 111 [Warning] Aborted connection 111 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 19:19:34 116 [Warning] Aborted connection 116 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 19:20:15 117 [Warning] Aborted connection 117 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 19:22:27 120 [Warning] Aborted connection 120 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 22:45:44 113 [Warning] Aborted connection 113 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 22:45:46 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-12 22:45:53 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-12 22:45:53 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-12 22:45:53 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-12 22:45:53 0 [Note] InnoDB: Starting shutdown...
+2020-07-12 22:45:53 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-12 22:45:53 0 [Note] InnoDB: Buffer pool(s) dump completed at 200712 22:45:53
+2020-07-12 22:45:55 0 [Note] InnoDB: Shutdown completed; log sequence number 65631878; transaction id 12650
+2020-07-12 22:45:55 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-12 22:45:55 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-13  9:43:29 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-13  9:43:29 0 [Note] InnoDB: Uses event mutexes
+2020-07-13  9:43:29 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-13  9:43:29 0 [Note] InnoDB: Number of pools: 1
+2020-07-13  9:43:29 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-13  9:43:29 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-13  9:43:29 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-13  9:43:30 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-13  9:43:30 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-13  9:43:30 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-13  9:43:30 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-13  9:43:30 0 [Note] InnoDB: Waiting for purge to start
+2020-07-13  9:43:30 0 [Note] InnoDB: 10.4.11 started; log sequence number 65631878; transaction id 12652
+2020-07-13  9:43:30 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-13  9:43:30 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-13  9:43:30 0 [Note] Server socket created on IP: '::'.
+2020-07-13  9:43:30 0 [Note] InnoDB: Buffer pool(s) load completed at 200713  9:43:30
+2020-07-13  9:43:30 0 [Note] Reading of all Master_info entries succeeded
+2020-07-13  9:43:30 0 [Note] Added new Master_info '' to hash table
+2020-07-13  9:43:30 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+InnoDB: using atomic writes.
+2020-07-13 22:36:08 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-13 22:36:08 0 [Note] InnoDB: Uses event mutexes
+2020-07-13 22:36:08 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-13 22:36:08 0 [Note] InnoDB: Number of pools: 1
+2020-07-13 22:36:08 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-13 22:36:08 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-13 22:36:08 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-13 22:36:08 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=65631878
+2020-07-13 22:36:09 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-13 22:36:09 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-13 22:36:09 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-13 22:36:09 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-13 22:36:09 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-13 22:36:09 0 [Note] InnoDB: Waiting for purge to start
+2020-07-13 22:36:09 0 [Note] InnoDB: 10.4.11 started; log sequence number 65631887; transaction id 12652
+2020-07-13 22:36:09 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-13 22:36:09 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-13 22:36:09 0 [Note] Server socket created on IP: '::'.
+2020-07-13 22:36:09 0 [Note] Reading of all Master_info entries succeeded
+2020-07-13 22:36:09 0 [Note] Added new Master_info '' to hash table
+2020-07-13 22:36:09 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-13 22:36:09 0 [Note] InnoDB: Buffer pool(s) load completed at 200713 22:36:09
+2020-07-13 22:53:19 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-13 22:53:19 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-13 22:53:19 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-13 22:53:20 0 [Note] InnoDB: Starting shutdown...
+2020-07-13 22:53:20 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-13 22:53:20 0 [Note] InnoDB: Buffer pool(s) dump completed at 200713 22:53:20
+2020-07-13 22:53:21 0 [Note] InnoDB: Shutdown completed; log sequence number 65631905; transaction id 12653
+2020-07-13 22:53:21 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-13 22:53:21 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-14 10:07:55 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-14 10:07:55 0 [Note] InnoDB: Uses event mutexes
+2020-07-14 10:07:55 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-14 10:07:55 0 [Note] InnoDB: Number of pools: 1
+2020-07-14 10:07:55 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-14 10:07:55 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-14 10:07:55 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-14 10:07:56 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-14 10:07:56 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-14 10:07:56 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-14 10:07:56 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-14 10:07:56 0 [Note] InnoDB: Waiting for purge to start
+2020-07-14 10:07:56 0 [Note] InnoDB: 10.4.11 started; log sequence number 65631905; transaction id 12652
+2020-07-14 10:07:56 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-14 10:07:56 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-14 10:07:56 0 [Note] Server socket created on IP: '::'.
+2020-07-14 10:07:56 0 [Note] InnoDB: Buffer pool(s) load completed at 200714 10:07:56
+2020-07-14 10:07:56 0 [Note] Reading of all Master_info entries succeeded
+2020-07-14 10:07:56 0 [Note] Added new Master_info '' to hash table
+2020-07-14 10:07:56 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-14 21:14:33 10 [Warning] Aborted connection 10 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:19:08 23 [Warning] Aborted connection 23 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:19:17 28 [Warning] Aborted connection 28 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:21:08 30 [Warning] Aborted connection 30 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:29:37 34 [Warning] Aborted connection 34 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:42:54 36 [Warning] Aborted connection 36 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 21:57:58 41 [Warning] Aborted connection 41 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:00:08 45 [Warning] Aborted connection 45 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:00:52 48 [Warning] Aborted connection 48 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:13:04 52 [Warning] Aborted connection 52 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:16:41 55 [Warning] Aborted connection 55 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:18:47 58 [Warning] Aborted connection 58 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:19:20 63 [Warning] Aborted connection 63 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:20:20 66 [Warning] Aborted connection 66 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:20:38 69 [Warning] Aborted connection 69 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:22:04 71 [Warning] Aborted connection 71 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:35:37 73 [Warning] Aborted connection 73 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:35:44 76 [Warning] Aborted connection 76 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 22:44:51 79 [Warning] Aborted connection 79 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:00:14 83 [Warning] Aborted connection 83 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:03:46 89 [Warning] Aborted connection 89 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:05:57 92 [Warning] Aborted connection 92 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:09:59 95 [Warning] Aborted connection 95 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:10:40 100 [Warning] Aborted connection 100 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:12:27 103 [Warning] Aborted connection 103 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:13:35 106 [Warning] Aborted connection 106 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:14:01 109 [Warning] Aborted connection 109 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:16:02 112 [Warning] Aborted connection 112 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:16:30 115 [Warning] Aborted connection 115 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:16:52 119 [Warning] Aborted connection 119 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:23:43 122 [Warning] Aborted connection 122 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:23:44 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-14 23:23:54 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-14 23:23:54 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-14 23:23:54 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-14 23:23:54 0 [Note] InnoDB: Starting shutdown...
+2020-07-14 23:23:54 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-14 23:23:54 0 [Note] InnoDB: Buffer pool(s) dump completed at 200714 23:23:54
+2020-07-14 23:23:56 0 [Note] InnoDB: Shutdown completed; log sequence number 65633772; transaction id 12660
+2020-07-14 23:23:56 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-14 23:23:56 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-15 10:13:27 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-15 10:13:27 0 [Note] InnoDB: Uses event mutexes
+2020-07-15 10:13:27 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-15 10:13:27 0 [Note] InnoDB: Number of pools: 1
+2020-07-15 10:13:27 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-15 10:13:27 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-15 10:13:27 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-15 10:13:28 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-15 10:13:28 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-15 10:13:28 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-15 10:13:28 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-15 10:13:28 0 [Note] InnoDB: Waiting for purge to start
+2020-07-15 10:13:28 0 [Note] InnoDB: 10.4.11 started; log sequence number 65633772; transaction id 12652
+2020-07-15 10:13:28 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-15 10:13:28 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-15 10:13:28 0 [Note] Server socket created on IP: '::'.
+2020-07-15 10:13:29 0 [Note] Reading of all Master_info entries succeeded
+2020-07-15 10:13:29 0 [Note] Added new Master_info '' to hash table
+2020-07-15 10:13:29 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-15 10:13:29 0 [Note] InnoDB: Buffer pool(s) load completed at 200715 10:13:29
+2020-07-15 22:58:35 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-15 22:58:35 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-15 22:58:35 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-15 22:58:35 0 [Note] InnoDB: Starting shutdown...
+2020-07-15 22:58:35 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-15 22:58:35 0 [Note] InnoDB: Buffer pool(s) dump completed at 200715 22:58:35
+2020-07-15 22:58:37 0 [Note] InnoDB: Shutdown completed; log sequence number 65633781; transaction id 12653
+2020-07-15 22:58:37 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-15 22:58:37 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-16 10:47:00 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-16 10:47:00 0 [Note] InnoDB: Uses event mutexes
+2020-07-16 10:47:00 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-16 10:47:00 0 [Note] InnoDB: Number of pools: 1
+2020-07-16 10:47:00 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-16 10:47:00 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-16 10:47:00 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-16 10:47:01 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-16 10:47:01 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-16 10:47:01 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-16 10:47:01 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-16 10:47:01 0 [Note] InnoDB: Waiting for purge to start
+2020-07-16 10:47:01 0 [Note] InnoDB: 10.4.11 started; log sequence number 65633781; transaction id 12652
+2020-07-16 10:47:01 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-16 10:47:01 0 [Note] Server socket created on IP: '::'.
+2020-07-16 10:47:01 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-16 10:47:01 0 [Note] Reading of all Master_info entries succeeded
+2020-07-16 10:47:01 0 [Note] Added new Master_info '' to hash table
+2020-07-16 10:47:01 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-16 10:47:02 0 [Note] InnoDB: Buffer pool(s) load completed at 200716 10:47:02
+2020-07-16 22:27:11 10 [Warning] Aborted connection 10 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:28:47 16 [Warning] Aborted connection 16 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:29:34 20 [Warning] Aborted connection 20 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:31:10 24 [Warning] Aborted connection 24 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:31:56 30 [Warning] Aborted connection 30 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:32:23 35 [Warning] Aborted connection 35 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:33:51 38 [Warning] Aborted connection 38 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:34:10 41 [Warning] Aborted connection 41 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:34:45 44 [Warning] Aborted connection 44 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:35:01 48 [Warning] Aborted connection 48 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:36:43 50 [Warning] Aborted connection 50 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:36:59 55 [Warning] Aborted connection 55 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:38:35 59 [Warning] Aborted connection 59 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:39:22 62 [Warning] Aborted connection 62 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:40:31 65 [Warning] Aborted connection 65 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:41:25 68 [Warning] Aborted connection 68 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:41:41 70 [Warning] Aborted connection 70 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:43:48 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:43:49 74 [Warning] Aborted connection 74 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-16 22:44:02 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-07-16 22:44:02 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-07-16 22:44:02 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-07-16 22:44:03 0 [Note] InnoDB: Starting shutdown...
+2020-07-16 22:44:03 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-16 22:44:03 0 [Note] InnoDB: Buffer pool(s) dump completed at 200716 22:44:03
+2020-07-16 22:44:04 0 [Note] InnoDB: Shutdown completed; log sequence number 65633815; transaction id 12657
+2020-07-16 22:44:04 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-07-16 22:44:04 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-07-17 10:09:25 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-07-17 10:09:25 0 [Note] InnoDB: Uses event mutexes
+2020-07-17 10:09:25 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-07-17 10:09:25 0 [Note] InnoDB: Number of pools: 1
+2020-07-17 10:09:25 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-07-17 10:09:25 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-07-17 10:09:25 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-07-17 10:09:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-07-17 10:09:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-07-17 10:09:26 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-07-17 10:09:26 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-07-17 10:09:26 0 [Note] InnoDB: Waiting for purge to start
+2020-07-17 10:09:26 0 [Note] InnoDB: 10.4.11 started; log sequence number 65633815; transaction id 12652
+2020-07-17 10:09:26 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-07-17 10:09:26 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-07-17 10:09:26 0 [Note] Server socket created on IP: '::'.
+2020-07-17 10:09:26 0 [Note] InnoDB: Buffer pool(s) load completed at 200717 10:09:26
+2020-07-17 10:09:26 0 [Note] Reading of all Master_info entries succeeded
+2020-07-17 10:09:26 0 [Note] Added new Master_info '' to hash table
+2020-07-17 10:09:26 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-07-18 12:56:16 11 [Warning] Aborted connection 11 to db: 'gotolong' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2020-07-18 12:56:16 9 [Warning] Aborted connection 9 to db: 'unconnected' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2020-07-18 14:03:12 57 [Warning] Aborted connection 57 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:08:38 63 [Warning] Aborted connection 63 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:15:09 66 [Warning] Aborted connection 66 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:15:36 70 [Warning] Aborted connection 70 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:15:40 73 [Warning] Aborted connection 73 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:15:51 75 [Warning] Aborted connection 75 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:16:31 78 [Warning] Aborted connection 78 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:17:47 80 [Warning] Aborted connection 80 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:19:29 82 [Warning] Aborted connection 82 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:24:39 84 [Warning] Aborted connection 84 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:25:14 86 [Warning] Aborted connection 86 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:25:24 90 [Warning] Aborted connection 90 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 14:30:22 92 [Warning] Aborted connection 92 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 15:25:02 97 [Warning] Aborted connection 97 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 15:32:21 100 [Warning] Aborted connection 100 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 15:41:32 105 [Warning] Aborted connection 105 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 15:42:45 110 [Warning] Aborted connection 110 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 15:50:45 113 [Warning] Aborted connection 113 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:00:21 118 [Warning] Aborted connection 118 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:03:20 121 [Warning] Aborted connection 121 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:04:00 124 [Warning] Aborted connection 124 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:08:24 127 [Warning] Aborted connection 127 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:10:27 130 [Warning] Aborted connection 130 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:11:06 133 [Warning] Aborted connection 133 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:11:20 136 [Warning] Aborted connection 136 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:11:35 139 [Warning] Aborted connection 139 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:12:58 142 [Warning] Aborted connection 142 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:13:10 145 [Warning] Aborted connection 145 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:15:16 148 [Warning] Aborted connection 148 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:53:02 150 [Warning] Aborted connection 150 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:53:14 161 [Warning] Aborted connection 161 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:53:56 163 [Warning] Aborted connection 163 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 16:54:11 166 [Warning] Aborted connection 166 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 17:13:26 169 [Warning] Aborted connection 169 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 17:19:59 178 [Warning] Aborted connection 178 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 17:57:50 180 [Warning] Aborted connection 180 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 18:00:30 192 [Warning] Aborted connection 192 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 18:03:14 194 [Warning] Aborted connection 194 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 18:04:42 199 [Warning] Aborted connection 199 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 21:03:30 207 [Warning] Aborted connection 207 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 21:07:42 208 [Warning] Aborted connection 208 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-07-18 22:44:32 203 [Warning] Aborted connection 203 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)

@@ -8,8 +8,10 @@ from django.utils import timezone
 
 from django.views.generic.list import ListView
 
-from django.db.models import DateTimeField, DateField, IntegerField, F, ExpressionWrapper, fields, Max, Min, Sum
-from django.db.models.functions import ExtractYear, Round, Trunc, ExtractDay
+from django.db.models import DateField, IntegerField, F, ExpressionWrapper, fields, Max, Min, Sum, CharField
+from django.db.models.functions import ExtractYear, Round, Trunc, ExtractDay, Cast, TruncSecond, TruncDay
+from django.db.models.expressions import RawSQL
+
 from django.db.models.expressions import Func
 
 from datetime import datetime
@@ -33,16 +35,28 @@ class DematTxnGapView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-
-    # now = timezone.now()
-    date_now = datetime.today().strftime('%Y-%m-%d')
-    # time_diff = ExpressionWrapper(date_now - F('txn_date'), output_field=fields.DurationField())
+    date_now = timezone.now()
+    # date_now = datetime.today().strftime('%Y-%m-%d')
+    time_diff = ExpressionWrapper(- F('txn_date'), output_field=fields.DurationField())
     # time_diff = ExpressionWrapper(F('due_date'')-Now())
     # ,min_txn_date = Min('txn_date')
     # days=ExpressionWrapper(date_now - F('txn_date'), output_field=fields.DurationField())
-    queryset = DematTxn.objects.values('stock_symbol').annotate(max_txn_date=Max('txn_date')).order_by('max_txn_date')
+    # date_fmt = '%Y-%m-%d'
+    # annotate(txn_date_fmt=RawSQL('DATE_FORMAT(txn_date, "%Y-%m-%d")',())).\
+    # annotate(str_datetime=Cast('txn_date', CharField())). \
+    #         annotate(str_datetime=Cast('txn_date', CharField())). \
 
-    # annotate(time_diff=time_diff).order_by('time_diff')
+    queryset = DematTxn.objects. \
+        values('stock_symbol'). \
+        annotate(max_txn_date=Max('txn_date')). \
+        order_by('max_txn_date'). \
+        annotate(months_gap=Min(RawSQL('TIMESTAMPDIFF(month, txn_date, curdate())', ()))). \
+        order_by('-months_gap')
+
+    # annotate(first_time_diff=RawSQL('TIMESTAMPDIFF(month, txn_date, curdate())', ())). \
+    # annotate(time_diff=Max('first_time_diff')).\
+    # annotate(max_txn_date=Cast('txn_date', CharField())).\
+    # order_by('time_diff')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

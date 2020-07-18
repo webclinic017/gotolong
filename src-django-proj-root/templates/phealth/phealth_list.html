@@ -1,0 +1,96 @@
+{% include "top.html" %}
+
+<h1>Phealth List </h1>
+
+{% if debug %}
+{{object_list}}
+{% endif %}
+
+<br/>
+
+<a href="/phealth/list/csv/"> Phealth List (CSV) </a>
+
+<br/>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            nse_symbol
+        </td>
+        <td>
+            comp_name
+        </td>
+        <td>
+            bat
+        </td>
+        <td>
+            txn_date
+        </td>
+        <td>
+            txn_gap
+        </td>
+
+        <td>
+            plan_oku
+        </td>
+        <td>
+            cur_oku
+        </td>
+        <td>
+            tbd_oku
+        </td>
+        <td>
+            reco_type
+        </td>
+        <td>
+            reco_cause
+        </td>
+
+    </tr>
+    {% for phealth_row in object_list %}
+    <tr>
+        <td>
+            {{ phealth_row.nse_symbol }}
+        </td>
+        <td>
+            {{ phealth_row.comp_name }}
+        </td>
+        <td>
+            {{ phealth_row.bat }}
+        </td>
+        <td>
+            {{ phealth_row.txn_date }}
+        </td>
+        <td>
+            {{ phealth_row.txn_date|timesince }}
+        </td>
+
+        <td>
+            {{ phealth_row.plan_oku}}
+        </td>
+        <td>
+            {{ phealth_row.cur_oku }}
+        </td>
+        <td>
+            {{ phealth_row.tbd_oku }}
+        </td>
+        <td>
+            {{ phealth_row.reco_type }}
+        </td>
+        <td>
+            {{ phealth_row.reco_cause }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No phealth yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

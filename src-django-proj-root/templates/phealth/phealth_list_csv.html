@@ -1,0 +1,50 @@
+{% include "top.html" %}
+
+{% if debug %}
+{{object_list}}
+{% endif %}
+
+<br/>
+
+nse_symbol
+&nbsp;&nbsp;&nbsp;&nbsp; comp_name
+&nbsp;&nbsp;&nbsp;&nbsp; bat
+&nbsp;&nbsp;&nbsp;&nbsp; cmp
+&nbsp;&nbsp;&nbsp;&nbsp; low_52w
+&nbsp;&nbsp;&nbsp;&nbsp; high_52w
+&nbsp;&nbsp;&nbsp;&nbsp; up_52w_low
+&nbsp;&nbsp;&nbsp;&nbsp; mos
+&nbsp;&nbsp;&nbsp;&nbsp; txn_date
+&nbsp;&nbsp;&nbsp;&nbsp; txn_gap
+&nbsp;&nbsp;&nbsp;&nbsp; plan_oku
+&nbsp;&nbsp;&nbsp;&nbsp; cur_oku
+&nbsp;&nbsp;&nbsp;&nbsp; tbd_oku
+&nbsp;&nbsp;&nbsp;&nbsp; reco_type
+&nbsp;&nbsp;&nbsp;&nbsp; reco_cause <br/>
+
+{% for phealth_row in object_list %}
+
+{{ phealth_row.nse_symbol }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.comp_name }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.bat }}
+&nbsp;&nbsp;&nbsp;&nbsp;=ROUND(GOOGLEFINANCE(CONCATENATE("NSE:",A{{forloop.counter|add:1}}),"price"))
+&nbsp;&nbsp;&nbsp;&nbsp;=ROUND(GOOGLEFINANCE(CONCATENATE("NSE:",A{{forloop.counter|add:1}}),"low52"))
+&nbsp;&nbsp;&nbsp;&nbsp;=ROUND(GOOGLEFINANCE(CONCATENATE("NSE:",A{{forloop.counter|add:1}}),"high52"))
+&nbsp;&nbsp;&nbsp;&nbsp;=IFERROR(ROUND((D{{forloop.counter|add:1}}-E{{forloop.counter|add:1}})*100/E{{forloop.counter|add:1}}),"-")
+&nbsp;&nbsp;&nbsp;&nbsp;=IFERROR(ROUND((C{{forloop.counter|add:1}}-D{{forloop.counter|add:1}})*100/D{{forloop.counter|add:1}}),"-")
+&nbsp;&nbsp;&nbsp;&nbsp; "{{ phealth_row.txn_date }}"
+&nbsp;&nbsp;&nbsp;&nbsp; "{{ phealth_row.txn_date|timesince }}"
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.plan_oku }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.cur_oku }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.tbd_oku }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.reco_type }}
+&nbsp;&nbsp;&nbsp;&nbsp; {{ phealth_row.reco_cause }}
+
+
+<br/>
+
+{% empty %}
+No phealth yet.
+{% endfor %}
+
+{% include "bottom.html" %}

@@ -5,7 +5,7 @@
 <br>
 <a href="/demat/txn/list/"> Demat Txn (List) </a>
 <br>
-<a href="/demat/txn/gap/"> Demat Txn (Gap Months) </a>
+<a href="/demat/txn/gap/"> Demat Txn (Gap in Months) </a>
 <br>
 <a href="/demat/txn/stat/"> Demat Txn (statistics - cumulative) </a>
 <br>
@@ -13,6 +13,11 @@
 <br>
 
 <table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
 
     {% for demattxn_row in object_list %}
     <tr>
@@ -79,10 +84,7 @@
             {{ demattxn_row.max_txn_date }}
         </td>
         <td>
-            {{ demattxn_row.min_txn_date }}
-        </td>
-        <td>
-            {{ demattxn_row.days }}
+            {{ demattxn_row.months_gap }}
         </td>
         <td>
             {{ demattxn_row.txn_year }}
