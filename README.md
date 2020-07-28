@@ -5,6 +5,28 @@ An Indian Stock Screener can be used to identify stocks for buy and sale.
 ## Support
 http://www.gotolong.in/
 
+## Installation - steps
+
+Download Python 3.*
+
+Download mariadb (for DB)
+
+Install Django
+
+python -m pip install Django
+
+Download GitHub (includes Git-Bash)
+
+## Installation - for development
+
+Download PyCharm
+
+Download HeidiSQL (crashes sometimes) : DB browser
+
+Download VIM 
+
+Download DropBox/OneDrive/GoogleDrive or something else to store the input data and output reports.
+
 ## Pull the github repository
 
 Pull the github repository
