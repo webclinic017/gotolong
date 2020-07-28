@@ -63,6 +63,12 @@ cd {GOTOLONG_HOME}/
 
 {GOTOLONG_HOME}/src/all_reports.sh
 
+## Explore the reports (.csv files)
+
+Check following directory
+
+{GOTOLONG_HOME}/output-user-reports
+
 ## Explore the reports using web browser
 
 ### Django DB config
