@@ -8,7 +8,11 @@ import operator
 
 import sqlite3
 
+import logging
+
 import cutil.cutil
+
+from prettytable import PrettyTable
 
 from database.database import *
 
@@ -39,8 +43,9 @@ class Amfi(Database):
             "cap_type": "text",
         }
 
-    def set_debug_level(self, debug_level):
-        self.debug_level = debug_level
+    def set_log_level(self, log_level):
+        log_level_number = getattr(logging, log_level.upper(), None)
+        logging.basicConfig(level=log_level_number)
 
     def amfi_table_reload(self, truncate=False):
         self.amfi_table_truncate = truncate
@@ -49,13 +54,12 @@ class Amfi(Database):
         try:
             row_list = row
             if len(row_list) == 0:
-                print('ignored empty row', row_list)
+                logging.info('ignored empty row %s', row_list)
                 return
 
             comp_rank = row_list[0]
             if comp_rank == 'Sr. No.' or comp_rank == "sr_no":
-                if self.debug_level > 0:
-                    print('skipped header line', row_list)
+                logging.info('skipped header line %s', row_list)
                 return
 
             # mysql - automatically number
@@ -74,14 +78,13 @@ class Amfi(Database):
 
             comp_name = cutil.cutil.normalize_comp_name(comp_name)
 
-            if self.debug_level > 1:
-                print('comp_rank : ', comp_rank)
-                print('isin_number: ', isin_number)
-                print('bse_ticker : ', bse_ticker)
-                print('nse_ticker : ', nse_ticker)
-                print('avg_mcap : ', avg_mcap )
-                print('captype : ', captype )
-                print('comp_name : ', comp_name)
+            logging.debug('comp_rank : %s', comp_rank)
+            logging.debug('isin_number: %s', isin_number)
+            logging.debug('bse_ticker : %s', bse_ticker)
+            logging.debug('nse_ticker : %s', nse_ticker)
+            logging.debug('avg_mcap : %s', avg_mcap)
+            logging.debug('captype : %s', captype)
+            logging.debug('comp_name : %s', comp_name)
 
             if nse_ticker == '':
                 if bse_ticker != '':
@@ -106,17 +109,16 @@ class Amfi(Database):
             if captype not in self.amfi_captype_list:
                 self.amfi_captype_list.append(captype)
 
-            if self.debug_level > 1:
-                print('comp_name : ', comp_name , '\n')
-                print('isin_number: ', isin_number, '\n')
+            logging.debug('comp_name : %s', comp_name, '\n')
+            logging.debug('isin_number: %s', isin_number, '\n')
 
         except IndexError:
-            print('except ', row)
+            logging.error('except %s', row)
         except:
-            print('except ', row)
+            logging.error('except %s', row)
             traceback.print_exc()
 
-    def amfi_load_data(self, in_filename):
+    def amfi_store_data_to_db(self, in_filename):
         table = self.amfi_table_name
 
         if self.amfi_table_truncate:
@@ -127,9 +129,7 @@ class Amfi(Database):
         if row_count == 0:
             self.amfi_insert_data(in_filename)
         else:
-            print('amfi data already loaded in db', row_count)
-        print('display db data')
-        self.amfi_load_db()
+            logging.info('amfi data already loaded in db %d', row_count)
 
     def amfi_get_insert_row(self, line, row_bank):
 
@@ -142,9 +142,8 @@ class Amfi(Database):
         cap_type = cap_type.strip('\n')
 
         if comp_rank == 'Sr. No.' or comp_rank == "sr_no":
-            if self.debug_level > 0:
-                print('skipped header line', row_list)
-                print('len row_list', len(row_list))
+            logging.info('skipped header line %s', row_list)
+            logging.info('len row_list %d', len(row_list))
             return
 
         # remove any un-required stuff
@@ -169,36 +168,68 @@ class Amfi(Database):
             # commit db changes
             self.db_conn.commit()
 
-    def amfi_load_db(self):
+    def amfi_load_data_from_db(self):
         table = self.amfi_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
-            if self.debug_level > 1 :
-                print(row)
+            logging.debug('%s', row)
             self.amfi_load_row(row)
 
-    def amfi_dump_phase1(self, out_filename):
-        if self.debug_level > 0:
-            print('output filename ', out_filename)
+    def amfi_dump(self, pretty_dump, out_filename):
+
+        logging.info('output filename %s', out_filename)
+
+        pt = PrettyTable()
+        pt.field_names = ["amfi_rank", "amfi_cname", "amfi_isin", "amfi_ticker", "amfi_mcap", "amfi_captype"]
+
         fh = open(out_filename, "w")
-        fh.write('amfi_rank, amfi_cname, amfi_isin, amfi_ticker, amfi_mcap, amfi_captype\n')
+
         for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
-            if self.debug_level > 1:
-                print('ticker  ', ticker)
-            p_str = str(self.amfi_rank[ticker])
-            p_str += ', '
-            p_str += self.amfi_cname[ticker]
-            p_str += ', '
-            p_str += self.amfi_ticker_isin_dict[ticker]
-            p_str += ', '
-            p_str += ticker
-            p_str += ', '
-            p_str += str(self.amfi_mcap[ticker])
-            p_str += ', '
-            p_str += self.amfi_captype[ticker]
+            logging.debug('ticker  ', ticker)
+            row_list = [str(self.amfi_rank[ticker])]
+            row_list.append(self.amfi_cname[ticker])
+            row_list.append(self.amfi_ticker_isin_dict[ticker])
+            row_list.append(ticker)
+            row_list.append(str(self.amfi_mcap[ticker]))
+            row_list.append(self.amfi_captype[ticker])
+
+            pt.add_row(row_list)
+
+        if pretty_dump:
+            fh.write(str(pt))
+            fh.close()
+
+    def amfi_export(self, export_to_file, out_filename):
+
+        logging.info('output filename %s', out_filename)
+
+        field_names = ["amfi_rank", "amfi_cname", "amfi_isin", "amfi_ticker", "amfi_mcap", "amfi_captype"]
+
+        if export_to_file:
+            fh = open(out_filename, "w")
+            p_hdr = ','.join(field_names)
+            p_hdr += '\n'
+            fh.write(p_hdr)
+
+        for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
+
+            logging.debug('ticker  ', ticker)
+
+            row_list = [str(self.amfi_rank[ticker])]
+            row_list.append(self.amfi_cname[ticker])
+            row_list.append(self.amfi_ticker_isin_dict[ticker])
+            row_list.append(ticker)
+            row_list.append(str(self.amfi_mcap[ticker]))
+            row_list.append(self.amfi_captype[ticker])
+
+            p_str = ','.join(row_list)
             p_str += '\n'
-            fh.write(p_str);
-        fh.close()
+
+            if export_to_file:
+                fh.write(p_str);
+
+        if export_to_file:
+            fh.close()
 
     def amfi_get_ticker_by_name(self, req_name):
         req_name = re.sub('\s+', ' ', req_name).strip()

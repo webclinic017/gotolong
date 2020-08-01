@@ -16,8 +16,9 @@ CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 # figure this out automatically
 IN_FILE=$CONFIG_DATA_LOC/amfi-data/out-csv/2019/amfi-mcap-jan-jun-2019.csv
 OUT_FILE_1=$CONFIG_REPORTS_LOC/amfi-reports/amfi-reports-phase-1.csv
+OUT_FILE_2=$CONFIG_REPORTS_LOC/amfi-reports/amfi-reports-phase-1.txt
 
 # python amfi_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE} --out_files ${OUT_FILE_1}
-python amfi_invoke.py -d ${DEBUG_LEVEL} -i ${IN_FILE} -o ${OUT_FILE_1}
+python amfi_invoke.py -d ${DEBUG_LEVEL} -i ${IN_FILE} -o ${OUT_FILE_1} ${OUT_FILE_2}
 
 # csv2html -o test.html test/test.csv
