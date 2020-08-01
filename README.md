@@ -5,6 +5,28 @@ An Indian Stock Screener can be used to identify stocks for buy and sale.
 ## Support
 http://www.gotolong.in/
 
+## Installation - steps
+
+Download Python 3.*
+
+Download mariadb (for DB)
+
+Install Django
+
+python -m pip install Django
+
+Download GitHub (includes Git-Bash)
+
+## Installation - for development
+
+Download PyCharm
+
+Download HeidiSQL (crashes sometimes) : DB browser
+
+Download VIM 
+
+Download DropBox/OneDrive/GoogleDrive or something else to store the input data and output reports.
+
 ## Pull the github repository
 
 Pull the github repository
@@ -41,20 +63,30 @@ cd {GOTOLONG_HOME}/
 
 {GOTOLONG_HOME}/src/all_reports.sh
 
+## Explore the reports (.csv files)
+
+Check following directory
+
+{GOTOLONG_HOME}/output-user-reports
+
 ## Explore the reports using web browser
 
 ### Django DB config
-Modify django config file for DB name, user name and password : 
+
+Modify django config file for DB name, user name and password :
+
 ${GOTOLONG_HOME}/src-django-proj-root/mysite/settings.py
 
 ### Django Web Server
-The django project is capable of browsing the data stored
-in 'gotolong' database. The migration from offline files to the
-web interface is still in progress
+
+The django project is capable of browsing the data stored in 'gotolong' database. 
+
+The migration from offline files to the web interface is still work-in-progress
 
 cd ${GOTOLONG_HOME}/src-django-proj-root/
 
 python manage.py runserver
+
 Starting development server at http://127.0.0.1:8000/
 
 ### Web browser : URL
