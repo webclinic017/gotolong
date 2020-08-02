@@ -19,4 +19,4 @@ SURIKUMA-LAP.pid
 *.pid
 *.ibd
 *.frm
-
+mariadb

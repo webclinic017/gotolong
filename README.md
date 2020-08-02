@@ -14,6 +14,7 @@ Download mariadb (for DB)
 Install Django
 
 python -m pip install Django
+pip3 install Ptable
 
 Download GitHub (includes Git-Bash)
 
