@@ -9,7 +9,7 @@ http://www.gotolong.in/
 
 Download Python 3.*
 
-Download mariadb (for DB)
+Download mariadb (for DB) - used mariadb10.4
 
 Install Django
 
