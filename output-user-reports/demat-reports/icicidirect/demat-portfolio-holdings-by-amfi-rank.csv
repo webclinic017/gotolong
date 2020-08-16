@@ -6,7 +6,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 5, ITC, Itc, 20.0, 42, 0
 6, HDFC, Housing development finance co, 20.0, 25, 0
 7, INFY, Infosys, 20.0, 31, 0
-8, SBIN, State bank, 20.0, 6, 14.0
+8, SBIN, State bank, 20.0, 16, 4.0
 9, KOTAKBANK, Kotak mahindra bank, 20.0, 6, 14.0
 10, ICICIBANK, Icici bank, 20.0, 12, 8.0
 11, MARUTI, Maruti suzuki, 20.0, 26, 0
@@ -22,7 +22,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 21, ASIANPAINT, Asian paints, 20.0, 15, 5.0
 22, NTPC, Ntpc, 20.0, 23, 0
 23, BAJAJFINSV, Bajaj finserv, 20.0, 6, 14.0
-24, ULTRACEMCO, Ultratech cement, 20.0, 15, 5.0
+24, ULTRACEMCO, Ultratech cement, 20.0, 19, 1.0
 25, HINDZINC, Hindustan zinc, 20.0, 20, 0
 26, NESTLEIND, Nestle, 20.0, 0, 20.0
 27, SUNPHARMA, Sun pharmaceutical industries, 20.0, 21, 0
@@ -53,7 +53,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 52, BOSCHLTD, Bosch, 20.0, 30, 0
 53, HEROMOTOCO, Hero motocorp, 20.0, 33, 0
 54, INFRATEL, Bharti infratel, 20.0, 6, 14.0
-55, INDIGO, Interglobe aviation, 20.0, 3, 17.0
+55, INDIGO, Interglobe aviation, 20.0, 11, 9.0
 56, ICICIPRULI, Icici prudential life insurance company, 20.0, 11, 9.0
 57, MARICO, Marico, 20.0, 11, 9.0
 58, HAVELLS, Havells, 20.0, 11, 9.0
@@ -78,7 +78,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 77, LUPIN, Lupin, 20.0, 10, 10.0
 78, BIOCON, Biocon, 20.0, 1, 19.0
 79, BANKBARODA, Bankbaroda, 20.0, 0, 20.0
-80, DLF, Dlf, 20.0, 2, 18.0
+80, DLF, Dlf, 20.0, 10, 10.0
 81, IDEA, Vodafone idea, 20.0, 0, 20.0
 82, PETRONET, Petronet lng, 20.0, 14, 6.0
 83, PGHH, Procter gamble hygiene hea, 20.0, 20, 0
@@ -244,7 +244,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 243, AJANTPHARM, Ajanta pharma, 10.0, 0, 10.0
 244, MGL, Mahanagar gas, 10.0, 0, 10.0
 245, CHOLAHLDNG, Cholamandalam financial holdin, 10.0, 4, 6.0
-246, PRESTIGE, Prestige estates projects, 10.0, 2, 8.0
+246, PRESTIGE, Prestige estates projects, 10.0, 11, 0
 247, VINATIORGA, Vinati organics, 10.0, 0, 10.0
 248, AAVAS, Aavas financiers, 10.0, 0, 10.0
 249, SYMPHONY, Symphony, 10.0, 6, 4.0
@@ -256,7 +256,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 257, THOMASCOOK, Thomas cook, 5.0, 10, 0
 259, HUDCO, Housing &urban development cor, 5.0, 5, 0
 267, KRBL, Krbl, 5.0, 7, 0
-269, PVR, Pvr, 5.0, 5, 0
+269, PVR, Pvr, 5.0, 6, 0
 273, BLUEDART, Blue dart express, 5.0, 10, 0
 274, ENGINERSIN, Engineers, 5.0, 20, 0
 275, ISEC, Icici securities, 5.0, 2, 3.0
@@ -266,14 +266,14 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 282, AEGISCHEM, Aegis logistics, 5.0, 2, 3.0
 286, FINCABLES, Finolex cables, 5.0, 4, 1.0
 288, ZYDUSWELL, Zydus wellness, 5.0, 1, 4.0
-290, BLUESTARCO, Blue star, 5.0, 5, 0
+290, BLUESTARCO, Blue star, 5.0, 6, 0
 292, VIPIND, Vipindustries, 5.0, 11, 0
-294, SFL, Sheela foam, 5.0, 2, 3.0
+294, SFL, Sheela foam, 5.0, 6, 0
 296, GRINDWELL, Grindwell norton, 5.0, 5, 0
 300, DELTACORP, Delta corp, 5.0, 6, 0
 301, DISHTV, Dish tv, 5.0, 4, 1.0
 308, ASAHIINDIA, Asahi glass, 5.0, 5, 0
-309, BASF, Basf, 5.0, 3, 2.0
+309, BASF, Basf, 5.0, 6, 0
 310, PGHL, Procter gamble health limite, 5.0, 5, 0
 311, LEMONTREE, Lemon tree hotels, 5.0, 4, 1.0
 313, NCC, Ncc, 5.0, 2, 3.0
@@ -287,8 +287,8 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 335, COCHINSHIP, Cochin shipyard, 5.0, 6, 0
 339, ASTRAZEN, Astrazeneca pharma, 5.0, 2, 3.0
 355, CEATLTD, Ceat, 5.0, 7, 0
-364, NH, Narayana hrudayalaya, 5.0, 3, 2.0
-385, HEIDELBERG, Heidelbergcement, 5.0, 1, 4.0
+364, NH, Narayana hrudayalaya, 5.0, 6, 0
+385, HEIDELBERG, Heidelbergcement, 5.0, 6, 0
 387, CENTURYPLY, Century plyboards, 5.0, 11, 0
 393, ESSELPACK, Essel propack, 5.0, 2, 3.0
 406, NETWORK18, Network18 media investments, 5.0, 5, 0
@@ -321,7 +321,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 583, UFLEX, Uflex, 5.0, 2, 3.0
 592, TVSSRICHAK, Tvs srichakra, 5.0, 5, 0
 595, TATACOFFEE, Tata coffee, 5.0, 9, 0
-599, WONDERLA, Wonderla holidays, 5.0, 9, 0
+599, WONDERLA, Wonderla holidays, 5.0, 10, 0
 609, PAPERPROD, Huhtamaki ppl, 5.0, 1, 4.0
 688, VSTTILLERS, Vsttillers tractors, 5.0, 6, 0
 694, EVEREADY, Eveready industries, 5.0, 5, 0

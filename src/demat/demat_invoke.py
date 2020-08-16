@@ -62,7 +62,7 @@ demat.set_debug_level(debug_level)
 if truncate_table:
     demat.demat_table_reload(truncate_table)
 
-demat.amfi_load_db()
+demat.amfi_load_data_from_db()
 demat.demat_txn_load_data(txn_file)
 demat.demat_sum_load_data(summary_file)
 demat.demat_dump_txn_detailed(out_filename_phase[0])

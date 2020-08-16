@@ -68,9 +68,15 @@ then
 fi
 
 # icicidirect portfolio summary
-if [ -e *Summary*.csv ];
+if [ -e *PortFolioEqtSummary*.csv ];
 then
     mv *PortFolioEqtSummary*.csv ${CONFIG_PROFILE_DATA_LOC}/demat-data/icicidirect/demat-summary-data.csv
+fi
+
+# icicidirect portfolio all txn
+if [ -e *PortFolioEqtAll*.csv ];
+then
+    mv *PortFolioEqtAll*.csv ${CONFIG_PROFILE_DATA_LOC}/demat-data/icicidirect/demat-txn-data.csv
 fi
 
 # trendlyne prefix
