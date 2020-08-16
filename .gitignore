@@ -20,3 +20,4 @@ SURIKUMA-LAP.pid
 *.ibd
 *.frm
 mariadb
+download-data

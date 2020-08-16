@@ -14,13 +14,13 @@ from database.database import *
 class Gweight(Database):
     def __init__(self):
         super(Gweight, self).__init__()
+        self.gweight_captype_dict = {}
         self.gweight_table_truncate = False
         self.gweight_table_name = "global_weight"
         self.gweight_table_dict = {
             "cap_type": "text",
             "cap_weight": "int"
         }
-        self.gweight_captype_dict = {}
         self.debug_level = 0
 
     def set_debug_level(self, debug_level):

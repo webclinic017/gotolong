@@ -96,27 +96,40 @@ class Trendlyne(Amfi, Isin):
                 tl_nsecode = self.amfi_get_value_by_isin(tl_isin, "ticker")
                 self.tl_nsecode_list.append(tl_nsecode)
 
-                for ratio in self.tl_ratio_loc:
-                    if ratio == 'ticker':
-                        self.tl_ratio_values[tl_nsecode, ratio] = tl_nsecode
-                    elif ratio == 'captype':
-                        self.tl_ratio_values[tl_nsecode, ratio] = self.amfi_get_value_by_ticker(tl_nsecode, "captype")
-                    elif ratio == 'rank':
-                        self.tl_ratio_values[tl_nsecode, ratio] = str(self.amfi_get_value_by_ticker(tl_nsecode, "rank"))
-                        if self.debug_level > 0:
-                            print('ticker', tl_nsecode, 'rank', self.tl_ratio_values[tl_nsecode, ratio])
-                    elif ratio == 'bat':
-                        ratio_value = bat
-                        self.tl_ratio_values[tl_nsecode, ratio] = str(cutil.cutil.get_number(ratio_value))
-                    else:
-                        ratio_value = row_list[self.tl_ratio_loc[ratio]]
-                        if ratio == 'industry':
-                            self.tl_nsecode_industry[tl_nsecode] = ratio_value
-                        self.tl_ratio_values[tl_nsecode, ratio] = ratio_value
+                for ratio in self.tl_table_dict:
+                    if ratio == 'stock_name':
+                        self.tl_ratio_values[tl_nsecode, ratio] = stock_name
+                    if ratio == 'isin':
+                        self.tl_ratio_values[tl_nsecode, ratio] = isin
+                    if ratio == 'bat':
+                        self.tl_ratio_values[tl_nsecode, ratio] = bat
+                    if ratio == 'der':
+                        self.tl_ratio_values[tl_nsecode, ratio] = der
+                    if ratio == 'roce3':
+                        self.tl_ratio_values[tl_nsecode, ratio] = roce3
+                    if ratio == 'roe3':
+                        self.tl_ratio_values[tl_nsecode, ratio] = roe3
+                    if ratio == 'dpr2':
+                        self.tl_ratio_values[tl_nsecode, ratio] = dpr2
+                    if ratio == 'sales2':
+                        self.tl_ratio_values[tl_nsecode, ratio] = sales2
+                    if ratio == 'profit5':
+                        self.tl_ratio_values[tl_nsecode, ratio] = profit5
+                    if ratio == 'icr':
+                        self.tl_ratio_values[tl_nsecode, ratio] = icr
+                    if ratio == 'pledge':
+                        self.tl_ratio_values[tl_nsecode, ratio] = pledge
+                    if ratio == 'low_3y':
+                        self.tl_ratio_values[tl_nsecode, ratio] = low_3y
+                    if ratio == 'low_5y':
+                        self.tl_ratio_values[tl_nsecode, ratio] = low_5y
+                    if ratio == 'reco_type':
+                        self.tl_ratio_values[tl_nsecode, ratio] = reco_type
+                    if ratio == 'reco_cause':
+                        self.tl_ratio_values[tl_nsecode, ratio] = reco_cause
                     if self.debug_level > 1:
                         print('ticker: ', tl_nsecode, 'ratio: ', ratio, 'value: ',
                               self.tl_ratio_values[tl_nsecode, ratio])
-
         except IndexError:
             print('except ', row)
             traceback.print_exc()

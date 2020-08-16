@@ -42,7 +42,7 @@ trendlyne.set_debug_level(debug_level)
 if truncate_table:
     trendlyne.trendlyne_table_reload(truncate_table)
 
-trendlyne.amfi_load_db()
+trendlyne.amfi_load_data_from_db()
 
 trendlyne.trendlyne_load_data(in_filename_phase[0])
 trendlyne.trendlyne_dump(out_filename_phase[0])

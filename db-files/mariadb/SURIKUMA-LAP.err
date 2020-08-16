@@ -5249,3 +5249,1058 @@ InnoDB: using atomic writes.
 2020-08-02 18:33:38 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
 Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
 2020-08-02 18:33:38 0 [Note] InnoDB: Buffer pool(s) load completed at 200802 18:33:38
+2020-08-02 22:18:49 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-02 22:18:49 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-02 22:18:49 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-02 22:18:49 0 [Note] InnoDB: Starting shutdown...
+2020-08-02 22:18:50 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-02 22:18:50 0 [Note] InnoDB: Buffer pool(s) dump completed at 200802 22:18:50
+2020-08-02 22:18:51 0 [Note] InnoDB: Shutdown completed; log sequence number 70156842; transaction id 12817
+2020-08-02 22:18:51 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-02 22:18:51 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-03 10:16:37 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-03 10:16:37 0 [Note] InnoDB: Uses event mutexes
+2020-08-03 10:16:37 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-03 10:16:37 0 [Note] InnoDB: Number of pools: 1
+2020-08-03 10:16:37 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-03 10:16:37 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-03 10:16:37 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-03 10:16:38 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-03 10:16:38 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-03 10:16:38 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-03 10:16:38 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-03 10:16:38 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-03 10:16:38 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-03 10:16:38 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-03 10:16:38 0 [Note] InnoDB: Waiting for purge to start
+2020-08-03 10:16:38 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156842; transaction id 12816
+2020-08-03 10:16:38 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-03 10:16:38 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-03 10:16:38 0 [Note] Server socket created on IP: '::'.
+2020-08-03 10:16:39 0 [Note] Reading of all Master_info entries succeeded
+2020-08-03 10:16:39 0 [Note] Added new Master_info '' to hash table
+2020-08-03 10:16:39 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-03 10:16:39 0 [Note] InnoDB: Buffer pool(s) load completed at 200803 10:16:39
+2020-08-04 22:29:12 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-04 22:29:12 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-04 22:29:12 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-04 22:29:12 0 [Note] InnoDB: Starting shutdown...
+2020-08-04 22:29:12 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-04 22:29:12 0 [Note] InnoDB: Buffer pool(s) dump completed at 200804 22:29:12
+2020-08-04 22:29:14 0 [Note] InnoDB: Shutdown completed; log sequence number 70156851; transaction id 12817
+2020-08-04 22:29:14 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-04 22:29:14 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-05  9:38:21 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-05  9:38:21 0 [Note] InnoDB: Uses event mutexes
+2020-08-05  9:38:21 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-05  9:38:21 0 [Note] InnoDB: Number of pools: 1
+2020-08-05  9:38:21 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-05  9:38:21 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-05  9:38:21 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-05  9:38:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-05  9:38:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-05  9:38:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-05  9:38:22 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-05  9:38:22 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-05  9:38:22 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-05  9:38:22 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-05  9:38:22 0 [Note] InnoDB: Waiting for purge to start
+2020-08-05  9:38:22 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156851; transaction id 12816
+2020-08-05  9:38:22 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-05  9:38:22 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-05  9:38:22 0 [Note] Server socket created on IP: '::'.
+2020-08-05  9:38:23 0 [Note] InnoDB: Buffer pool(s) load completed at 200805  9:38:23
+2020-08-05  9:38:23 0 [Note] Reading of all Master_info entries succeeded
+2020-08-05  9:38:23 0 [Note] Added new Master_info '' to hash table
+2020-08-05  9:38:23 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-05 22:43:26 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-05 22:43:26 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-05 22:43:26 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-05 22:43:26 0 [Note] InnoDB: Starting shutdown...
+2020-08-05 22:43:26 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-05 22:43:26 0 [Note] InnoDB: Buffer pool(s) dump completed at 200805 22:43:26
+2020-08-05 22:43:27 0 [Note] InnoDB: Shutdown completed; log sequence number 70156860; transaction id 12817
+2020-08-05 22:43:27 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-05 22:43:27 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-06  9:00:22 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-06  9:00:22 0 [Note] InnoDB: Uses event mutexes
+2020-08-06  9:00:22 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-06  9:00:22 0 [Note] InnoDB: Number of pools: 1
+2020-08-06  9:00:22 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-06  9:00:22 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-06  9:00:22 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-06  9:00:23 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-06  9:00:23 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-06  9:00:23 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-06  9:00:23 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-06  9:00:23 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-06  9:00:23 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-06  9:00:23 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-06  9:00:23 0 [Note] InnoDB: Waiting for purge to start
+2020-08-06  9:00:23 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156860; transaction id 12816
+2020-08-06  9:00:23 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-06  9:00:23 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-06  9:00:23 0 [Note] Server socket created on IP: '::'.
+2020-08-06  9:00:23 0 [Note] InnoDB: Buffer pool(s) load completed at 200806  9:00:23
+2020-08-06  9:00:23 0 [Note] Reading of all Master_info entries succeeded
+2020-08-06  9:00:23 0 [Note] Added new Master_info '' to hash table
+2020-08-06  9:00:23 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-08 22:51:23 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-08 22:51:23 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-08 22:51:23 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-08 22:51:23 0 [Note] InnoDB: Starting shutdown...
+2020-08-08 22:51:23 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-08 22:51:23 0 [Note] InnoDB: Buffer pool(s) dump completed at 200808 22:51:23
+2020-08-08 22:51:25 0 [Note] InnoDB: Shutdown completed; log sequence number 70156869; transaction id 12817
+2020-08-08 22:51:25 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-08 22:51:25 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-09 11:34:56 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-09 11:34:56 0 [Note] InnoDB: Uses event mutexes
+2020-08-09 11:34:56 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-09 11:34:56 0 [Note] InnoDB: Number of pools: 1
+2020-08-09 11:34:56 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-09 11:34:56 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-09 11:34:57 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:57 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:57 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-09 11:34:57 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:58 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:58 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:58 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:58 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:58 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:58 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-09 11:34:58 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-09 11:34:58 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-09 11:34:58 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-09 11:34:58 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-09 11:34:58 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-09 11:34:58 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-09 11:34:58 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-09 11:34:58 0 [Note] InnoDB: Waiting for purge to start
+2020-08-09 11:34:58 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156869; transaction id 12816
+2020-08-09 11:34:58 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-09 11:34:58 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-09 11:34:58 0 [Note] Server socket created on IP: '::'.
+2020-08-09 11:34:58 0 [Note] Reading of all Master_info entries succeeded
+2020-08-09 11:34:58 0 [Note] Added new Master_info '' to hash table
+2020-08-09 11:34:58 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-09 11:34:58 0 [Note] InnoDB: Buffer pool(s) load completed at 200809 11:34:58
+2020-08-10 22:42:19 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-10 22:42:19 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-10 22:42:19 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-10 22:42:19 0 [Note] InnoDB: Starting shutdown...
+2020-08-10 22:42:19 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-10 22:42:19 0 [Note] InnoDB: Buffer pool(s) dump completed at 200810 22:42:19
+2020-08-10 22:42:21 0 [Note] InnoDB: Shutdown completed; log sequence number 70156878; transaction id 12817
+2020-08-10 22:42:21 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-10 22:42:21 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-11 10:11:55 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-11 10:11:55 0 [Note] InnoDB: Uses event mutexes
+2020-08-11 10:11:55 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-11 10:11:55 0 [Note] InnoDB: Number of pools: 1
+2020-08-11 10:11:55 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-11 10:11:55 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-11 10:11:55 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-11 10:11:56 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-11 10:11:56 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-11 10:11:56 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-11 10:11:56 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-11 10:11:56 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-11 10:11:56 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-11 10:11:56 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-11 10:11:56 0 [Note] InnoDB: Waiting for purge to start
+2020-08-11 10:11:56 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156878; transaction id 12816
+2020-08-11 10:11:56 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-11 10:11:56 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-11 10:11:56 0 [Note] Server socket created on IP: '::'.
+2020-08-11 10:11:57 0 [Note] Reading of all Master_info entries succeeded
+2020-08-11 10:11:57 0 [Note] Added new Master_info '' to hash table
+2020-08-11 10:11:57 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-11 10:11:57 0 [Note] InnoDB: Buffer pool(s) load completed at 200811 10:11:57
+2020-08-11 23:39:42 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-11 23:39:42 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-11 23:39:42 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-11 23:39:42 0 [Note] InnoDB: Starting shutdown...
+2020-08-11 23:39:42 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-11 23:39:42 0 [Note] InnoDB: Buffer pool(s) dump completed at 200811 23:39:42
+2020-08-11 23:39:43 0 [Note] InnoDB: Shutdown completed; log sequence number 70156887; transaction id 12817
+2020-08-11 23:39:43 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-11 23:39:43 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-12  9:29:07 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-12  9:29:07 0 [Note] InnoDB: Uses event mutexes
+2020-08-12  9:29:07 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-12  9:29:07 0 [Note] InnoDB: Number of pools: 1
+2020-08-12  9:29:07 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-12  9:29:07 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-12  9:29:07 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:08 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:08 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:08 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:08 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-12  9:29:08 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-12  9:29:08 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-12  9:29:08 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-12  9:29:08 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-12  9:29:08 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-12  9:29:08 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-12  9:29:08 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-12  9:29:08 0 [Note] InnoDB: Waiting for purge to start
+2020-08-12  9:29:08 0 [Note] InnoDB: 10.4.11 started; log sequence number 70156887; transaction id 12816
+2020-08-12  9:29:08 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-12  9:29:08 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-12  9:29:08 0 [Note] Server socket created on IP: '::'.
+2020-08-12  9:29:08 0 [Note] InnoDB: Buffer pool(s) load completed at 200812  9:29:08
+2020-08-12  9:29:08 0 [Note] Reading of all Master_info entries succeeded
+2020-08-12  9:29:08 0 [Note] Added new Master_info '' to hash table
+2020-08-12  9:29:08 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-13 21:53:23 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 21:55:01 10 [Warning] Aborted connection 10 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 21:55:44 11 [Warning] Aborted connection 11 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 21:57:45 12 [Warning] Aborted connection 12 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 22:03:30 13 [Warning] Aborted connection 13 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 22:04:01 14 [Warning] Aborted connection 14 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-13 23:35:50 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-13 23:35:50 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-13 23:35:50 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-13 23:35:51 0 [Note] InnoDB: Starting shutdown...
+2020-08-13 23:35:51 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-13 23:35:51 0 [Note] InnoDB: Buffer pool(s) dump completed at 200813 23:35:51
+2020-08-13 23:35:52 0 [Note] InnoDB: Shutdown completed; log sequence number 72404471; transaction id 12930
+2020-08-13 23:35:52 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-13 23:35:52 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-14 10:21:21 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-14 10:21:21 0 [Note] InnoDB: Uses event mutexes
+2020-08-14 10:21:21 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-14 10:21:21 0 [Note] InnoDB: Number of pools: 1
+2020-08-14 10:21:21 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-14 10:21:21 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-14 10:21:21 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:21 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:21 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:21 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:21 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:21 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-14 10:21:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-14 10:21:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-14 10:21:22 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-14 10:21:22 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-14 10:21:22 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-14 10:21:22 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-14 10:21:22 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-14 10:21:22 0 [Note] InnoDB: Waiting for purge to start
+2020-08-14 10:21:22 0 [Note] InnoDB: 10.4.11 started; log sequence number 72404471; transaction id 12932
+2020-08-14 10:21:22 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-14 10:21:22 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-14 10:21:22 0 [Note] Server socket created on IP: '::'.
+2020-08-14 10:21:22 0 [Note] Reading of all Master_info entries succeeded
+2020-08-14 10:21:22 0 [Note] Added new Master_info '' to hash table
+2020-08-14 10:21:22 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-14 10:21:22 0 [Note] InnoDB: Buffer pool(s) load completed at 200814 10:21:22
+2020-08-14 23:05:32 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-14 23:05:32 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-14 23:05:32 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-14 23:05:32 0 [Note] InnoDB: Starting shutdown...
+2020-08-14 23:05:32 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-14 23:05:32 0 [Note] InnoDB: Buffer pool(s) dump completed at 200814 23:05:32
+2020-08-14 23:05:33 0 [Note] InnoDB: Shutdown completed; log sequence number 72404505; transaction id 12933
+2020-08-14 23:05:33 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-14 23:05:33 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-15  9:57:41 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-15  9:57:41 0 [Note] InnoDB: Uses event mutexes
+2020-08-15  9:57:41 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-15  9:57:41 0 [Note] InnoDB: Number of pools: 1
+2020-08-15  9:57:41 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-15  9:57:41 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-15  9:57:41 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-15  9:57:42 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-15  9:57:42 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-15  9:57:42 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-15  9:57:42 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-15  9:57:42 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-15  9:57:42 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-15  9:57:42 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-15  9:57:42 0 [Note] InnoDB: Waiting for purge to start
+2020-08-15  9:57:42 0 [Note] InnoDB: 10.4.11 started; log sequence number 72404505; transaction id 12932
+2020-08-15  9:57:42 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-15  9:57:42 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-15  9:57:42 0 [Note] Server socket created on IP: '::'.
+2020-08-15  9:57:43 0 [Note] InnoDB: Buffer pool(s) load completed at 200815  9:57:43
+2020-08-15  9:57:43 0 [Note] Reading of all Master_info entries succeeded
+2020-08-15  9:57:43 0 [Note] Added new Master_info '' to hash table
+2020-08-15  9:57:43 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-15 17:36:36 9 [Warning] Aborted connection 9 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:37:21 10 [Warning] Aborted connection 10 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:39:18 11 [Warning] Aborted connection 11 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:39:47 12 [Warning] Aborted connection 12 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:48:35 13 [Warning] Aborted connection 13 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:48:55 14 [Warning] Aborted connection 14 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 17:49:35 15 [Warning] Aborted connection 15 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 22:50:39 16 [Warning] Aborted connection 16 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 22:51:21 17 [Warning] Aborted connection 17 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 22:53:57 18 [Warning] Aborted connection 18 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 22:54:50 19 [Warning] Aborted connection 19 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 22:55:21 20 [Warning] Aborted connection 20 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 23:03:12 21 [Warning] Aborted connection 21 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 23:04:46 22 [Warning] Aborted connection 22 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 23:06:36 23 [Warning] Aborted connection 23 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-15 23:07:26 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2020-08-15 23:07:26 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-15 23:07:26 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-15 23:07:26 0 [Note] InnoDB: Starting shutdown...
+2020-08-15 23:07:26 0 [Note] InnoDB: Dumping buffer pool(s) to D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-15 23:07:26 0 [Note] InnoDB: Buffer pool(s) dump completed at 200815 23:07:26
+2020-08-15 23:07:27 0 [Note] InnoDB: Shutdown completed; log sequence number 73051749; transaction id 12987
+2020-08-15 23:07:27 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-15 23:07:27 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: Shutdown complete
+
+InnoDB: using atomic writes.
+2020-08-16 13:08:05 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-08-16 13:08:05 0 [Note] InnoDB: Uses event mutexes
+2020-08-16 13:08:05 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-16 13:08:05 0 [Note] InnoDB: Number of pools: 1
+2020-08-16 13:08:05 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-08-16 13:08:05 0 [Note] InnoDB: Initializing buffer pool, total size = 2G, instances = 8, chunk size = 128M
+2020-08-16 13:08:05 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_group_permissions.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_group_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_group_permissions` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_permission.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_permission``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_permission` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_groups.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_groups``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_groups` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\auth_user_user_permissions.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`auth_user_user_permissions``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`auth_user_user_permissions` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_admin_log.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_admin_log``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_admin_log` because it could not be opened.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_content_type.ibd' OS error: 203
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:06 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:06 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_content_type``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:06 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_content_type` because it could not be opened.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_migrations.ibd' OS error: 203
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_migrations``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_migrations` because it could not be opened.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\polls\django_session.ibd' OS error: 203
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2020-08-16 13:08:07 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2020-08-16 13:08:07 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``polls`.`django_session``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2020-08-16 13:08:07 0 [Warning] InnoDB: Ignoring tablespace for `polls`.`django_session` because it could not be opened.
+2020-08-16 13:08:07 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-08-16 13:08:07 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-16 13:08:07 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-16 13:08:07 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2020-08-16 13:08:07 0 [Note] InnoDB: Waiting for purge to start
+2020-08-16 13:08:07 0 [Note] InnoDB: 10.4.11 started; log sequence number 73051749; transaction id 12989
+2020-08-16 13:08:07 0 [Note] InnoDB: Loading buffer pool(s) from D:\GoogleDrive\my_github\GitHub\gotolong\db-files\mariadb\ib_buffer_pool
+2020-08-16 13:08:07 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-08-16 13:08:07 0 [Note] Server socket created on IP: '::'.
+2020-08-16 13:08:07 0 [Note] Reading of all Master_info entries succeeded
+2020-08-16 13:08:07 0 [Note] Added new Master_info '' to hash table
+2020-08-16 13:08:07 0 [Note] C:\Program Files\MariaDB 10.4\bin\mysqld.exe: ready for connections.
+Version: '10.4.11-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2020-08-16 13:08:07 0 [Note] InnoDB: Buffer pool(s) load completed at 200816 13:08:07
+2020-08-16 13:25:03 8 [Warning] Aborted connection 8 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:31:51 9 [Warning] Aborted connection 9 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:32:31 10 [Warning] Aborted connection 10 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:35:06 11 [Warning] Aborted connection 11 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:41:50 12 [Warning] Aborted connection 12 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:43:42 13 [Warning] Aborted connection 13 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:44:50 14 [Warning] Aborted connection 14 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:45:07 15 [Warning] Aborted connection 15 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:46:16 16 [Warning] Aborted connection 16 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:48:47 17 [Warning] Aborted connection 17 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:49:32 18 [Warning] Aborted connection 18 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:51:07 19 [Warning] Aborted connection 19 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:51:27 20 [Warning] Aborted connection 20 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:59:23 21 [Warning] Aborted connection 21 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 13:59:47 22 [Warning] Aborted connection 22 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:00:00 23 [Warning] Aborted connection 23 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:00:31 24 [Warning] Aborted connection 24 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:00:46 25 [Warning] Aborted connection 25 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:02:27 26 [Warning] Aborted connection 26 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:03:00 27 [Warning] Aborted connection 27 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:03:09 28 [Warning] Aborted connection 28 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 14:10:28 29 [Warning] Aborted connection 29 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 17:25:03 30 [Warning] Aborted connection 30 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 17:25:48 31 [Warning] Aborted connection 31 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 17:26:34 32 [Warning] Aborted connection 32 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2020-08-16 17:27:29 33 [Warning] Aborted connection 33 to db: 'gotolong' user: 'root' host: 'localhost' (Got an error reading communication packets)
