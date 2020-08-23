@@ -21,7 +21,21 @@ else
     ECHO=echo
 fi
 
+CONFIG_DATA_LOC=`python -m config data`
+CONFIG_REPORTS_LOC=`python -m config reports`
+CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
+
+
+AMFI_DATA_DIR=$CONFIG_DATA_LOC/amfi-data/
+
+cd $AMFI_DATA_DIR
+
+
 OUT_DIR=in-xls
+
+# new format
+# https://www.amfiindia.com/Themes/Theme1/downloads/Average%20Market%20Capitalization%20of%20Listed%20Companies%20during%20Jan%20-%20Jun%202020_Final.xlsx
 
 for YEAR in ${PREV_YEAR} ${CUR_YEAR}
 do

@@ -13,10 +13,12 @@ if [ -n "$1" ]
 then
   CMD=$1
 else
-  CMD="move"
+  CMD="download"
 fi
 
 echo "CMD = $CMD"
+
+mkdir -p ${DOWNLOAD_DIR}
 
 if [ "${CMD}" == "download" ];
 then
@@ -32,25 +34,35 @@ then
     # 11082020 - 11 aug 2020
     last_working_date=`date -d "$look_back day ago" +'%d%m%Y'`
 
-    # 52-week low and high
-    # https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
+    if [ -e ${DOWNLOAD_DIR}/nse_fetch_date.txt ]; then
+        nse_fetch_date=`cat ${DOWNLOAD_DIR}/nse_fetch_date.txt`
+    else
+        nse_fetch_date=""
+    fi
 
-    DOWNLOAD_DIR=${PROJECT_ROOT}/download-data
+    # do not fetch again if data has been already fetched for previous day
+    if [ ${last_working_date} != "$nse_fetch_date" ] ;
+    then
+        echo ${last_working_date} > ${DOWNLOAD_DIR}/nse_fetch_date.txt
+        # 52-week low and high
+        # https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
 
-    curl --output ${DOWNLOAD_DIR}/CM_52_wk_High_low_${last_working_date}.csv https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
+        curl --output ${DOWNLOAD_DIR}/CM_52_wk_High_low_${last_working_date}.csv https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
 
-    # Bhavcopy for CMP
-    # https://archives.nseindia.com/content/historical/EQUITIES/2020/AUG/cm12AUG2020bhav.csv.zip
+        # Bhavcopy for CMP
+        # https://archives.nseindia.com/content/historical/EQUITIES/2020/AUG/cm12AUG2020bhav.csv.zip
 
-    # last working date, year, month
-    # month must be converted to upper case
-    LW_DATE_2=`date -d "$look_back day ago" +'%d%b%Y'|tr '[:lower:]' '[:upper:]'`
-    LW_YEAR=`date -d "$look_back day ago" +'%Y'`
-    LW_MONTH=`date -d "$look_back day ago" +'%b'|tr '[:lower:]' '[:upper:]'`
-    BHAV_FILE=cm-bhav.csv.zip
-    curl --output  ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip https://archives.nseindia.com/content/historical/EQUITIES/${LW_YEAR}/${LW_MONTH}/cm${LW_DATE_2}bhav.csv.zip
-    unzip ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
-    rm ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
+        # last working date, year, month
+        # month must be converted to upper case
+        LW_DATE_2=`date -d "$look_back day ago" +'%d%b%Y'|tr '[:lower:]' '[:upper:]'`
+        LW_YEAR=`date -d "$look_back day ago" +'%Y'`
+        LW_MONTH=`date -d "$look_back day ago" +'%b'|tr '[:lower:]' '[:upper:]'`
+        BHAV_FILE=cm-bhav.csv.zip
+        curl --output  ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip https://archives.nseindia.com/content/historical/EQUITIES/${LW_YEAR}/${LW_MONTH}/cm${LW_DATE_2}bhav.csv.zip
+        unzip ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
+        rm ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
+    fi
+
 fi
 
 # lets experiment in download directory

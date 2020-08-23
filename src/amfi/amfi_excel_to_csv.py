@@ -25,9 +25,10 @@ if debug_level > 0:
 # single worksheet - Data 
 sheet_name = xl.sheet_names[0]
 
+# can be 'Data'
+# can be 'Average MCap Jan Jun 2020'
 if sheet_name != 'Data':
-    print("sheet name Data not found changed to", sheet_name)
-    sys.exit(1)
+    print("sheet name changed to", sheet_name)
 
 df = xl.parse(sheet_name)
 
