@@ -7,7 +7,7 @@ TARGET_LIST=$1
 if [ ${TARGET_LIST} = "daily" ];
 then
 
-    for TARGET in demat bhav ftwhfl phealth
+    for TARGET in demat bhav ftwhl phealth
     do
       cd $PROJ_SOURCE_LOC/$TARGET
       ./*.sh

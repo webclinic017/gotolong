@@ -140,11 +140,17 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
                 p_str += str(tbd_units)
                 p_str += ','
 
-                reco_type = self.tl_ratio_values[ticker, "reco_type"]
+                if (ticker, "reco_type") in self.tl_ratio_values:
+                    reco_type = self.tl_ratio_values[ticker, "reco_type"]
+                else:
+                    reco_type = '-'
                 p_str += reco_type
                 p_str += ','
 
-                reco_cause = self.tl_ratio_values[ticker, "reco_cause"]
+                if (ticker, "reco_cause") in self.tl_ratio_values:
+                    reco_cause = self.tl_ratio_values[ticker, "reco_cause"]
+                else:
+                    reco_cause = '-'
                 p_str += reco_cause
                 p_str += '\n'
 
@@ -153,10 +159,10 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
                 fh.write(p_str)
 
             except ValueError:
-                logging.error('except : ValueError :', ticker)
+                logging.error('except : ValueError : %s', ticker)
                 traceback.print_exc()
             except KeyError:
-                logging.error('except : KeyError :', ticker)
+                logging.error('except : KeyError : %s', ticker)
                 traceback.print_exc()
 
         logging.debug("Tickers with bat missing : ", len(bat_missing_list))

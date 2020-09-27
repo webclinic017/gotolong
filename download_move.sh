@@ -60,6 +60,8 @@ then
         BHAV_FILE=cm-bhav.csv.zip
         curl --output  ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip https://archives.nseindia.com/content/historical/EQUITIES/${LW_YEAR}/${LW_MONTH}/cm${LW_DATE_2}bhav.csv.zip
         unzip ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
+        # unzip will unzip .csv to current directory
+        mv cm${LW_DATE_2}bhav.csv ${DOWNLOAD_DIR}
         rm ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
     fi
 

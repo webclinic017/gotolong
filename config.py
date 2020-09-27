@@ -10,39 +10,39 @@ class Config(object):
 
     def __init__(self):
         super(Config, self).__init__()
-        parser = ConfigParser()
-        parser.read(self.get_config_file())
-        self.config_db_type = parser.get('DEFAULT', 'db_type')
-        self.config_db_name = parser.get('DEFAULT', 'db_name')
-        self.config_db_user = parser.get('DEFAULT', 'db_user')
-        self.config_db_pass = parser.get('DEFAULT', 'db_pass')
-        self.config_der_hold = float(parser.get('DEFAULT', 'der_hold'))
-        self.config_der_buy = float(parser.get('DEFAULT', 'der_buy'))
-        self.config_icr_hold = float(parser.get('DEFAULT', 'icr_hold'))
-        self.config_icr_buy = float(parser.get('DEFAULT', 'icr_buy'))
-        self.config_roce3_buy = float(parser.get('DEFAULT', 'roce3_buy'))
-        self.config_roce3_hold = float(parser.get('DEFAULT', 'roce3_hold'))
-        self.config_dpr3_buy = float(parser.get('DEFAULT', 'dpr3_buy'))
-        self.config_dpr3_hold = float(parser.get('DEFAULT', 'dpr3_hold'))
-        self.config_dpr2_buy = float(parser.get('DEFAULT', 'dpr2_buy'))
-        self.config_dpr2_hold = float(parser.get('DEFAULT', 'dpr2_hold'))
+        self.cp = ConfigParser(os.environ)
+        self.cp.read(self.get_config_file())
+        self.config_db_type = self.cp.get('DEFAULT', 'db_type')
+        self.config_db_name = self.cp.get('DEFAULT', 'db_name')
+        self.config_db_user = self.cp.get('DEFAULT', 'db_user')
+        self.config_db_pass = self.cp.get('DEFAULT', 'db_pass')
+        self.config_der_hold = float(self.cp.get('DEFAULT', 'der_hold'))
+        self.config_der_buy = float(self.cp.get('DEFAULT', 'der_buy'))
+        self.config_icr_hold = float(self.cp.get('DEFAULT', 'icr_hold'))
+        self.config_icr_buy = float(self.cp.get('DEFAULT', 'icr_buy'))
+        self.config_roce3_buy = float(self.cp.get('DEFAULT', 'roce3_buy'))
+        self.config_roce3_hold = float(self.cp.get('DEFAULT', 'roce3_hold'))
+        self.config_dpr3_buy = float(self.cp.get('DEFAULT', 'dpr3_buy'))
+        self.config_dpr3_hold = float(self.cp.get('DEFAULT', 'dpr3_hold'))
+        self.config_dpr2_buy = float(self.cp.get('DEFAULT', 'dpr2_buy'))
+        self.config_dpr2_hold = float(self.cp.get('DEFAULT', 'dpr2_hold'))
 
-        self.config_sales5_buy = float(parser.get('DEFAULT', 'sales5_buy'))
-        self.config_sales5_hold = float(parser.get('DEFAULT', 'sales5_hold'))
+        self.config_sales5_buy = float(self.cp.get('DEFAULT', 'sales5_buy'))
+        self.config_sales5_hold = float(self.cp.get('DEFAULT', 'sales5_hold'))
 
-        self.config_sales2_buy = float(parser.get('DEFAULT', 'sales2_buy'))
-        self.config_sales2_hold = float(parser.get('DEFAULT', 'sales2_hold'))
+        self.config_sales2_buy = float(self.cp.get('DEFAULT', 'sales2_buy'))
+        self.config_sales2_hold = float(self.cp.get('DEFAULT', 'sales2_hold'))
 
-        self.config_profit5_buy = float(parser.get('DEFAULT', 'profit5_buy'))
-        self.config_profit5_hold = float(parser.get('DEFAULT', 'profit5_hold'))
+        self.config_profit5_buy = float(self.cp.get('DEFAULT', 'profit5_buy'))
+        self.config_profit5_hold = float(self.cp.get('DEFAULT', 'profit5_hold'))
 
-        self.config_pledge_buy = float(parser.get('DEFAULT', 'pledge_buy'))
-        self.config_pledge_hold = float(parser.get('DEFAULT', 'pledge_hold'))
-        self.config_rank_buy = float(parser.get('DEFAULT', 'rank_buy'))
-        self.config_rank_hold = float(parser.get('DEFAULT', 'rank_hold'))
-        self.config_lc_weight = float(parser.get('DEFAULT', 'lc_weight'))
-        self.config_mc_weight = float(parser.get('DEFAULT', 'mc_weight'))
-        self.config_sc_weight = float(parser.get('DEFAULT', 'sc_weight'))
+        self.config_pledge_buy = float(self.cp.get('DEFAULT', 'pledge_buy'))
+        self.config_pledge_hold = float(self.cp.get('DEFAULT', 'pledge_hold'))
+        self.config_rank_buy = float(self.cp.get('DEFAULT', 'rank_buy'))
+        self.config_rank_hold = float(self.cp.get('DEFAULT', 'rank_hold'))
+        self.config_lc_weight = float(self.cp.get('DEFAULT', 'lc_weight'))
+        self.config_mc_weight = float(self.cp.get('DEFAULT', 'mc_weight'))
+        self.config_sc_weight = float(self.cp.get('DEFAULT', 'sc_weight'))
         self.DB_FILENAME = 'equity.sqlite3'
         # started investment in year 2017
         start_date = datetime.date(2017, 1, 1)
@@ -88,7 +88,7 @@ class Config(object):
 if __name__ == "__main__":
     import config
 
-    config = config.Config();
+    config = config.Config()
 
     cmd = sys.argv[1]
     if cmd == "root":

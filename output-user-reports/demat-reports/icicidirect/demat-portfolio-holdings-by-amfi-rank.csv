@@ -1,328 +1,329 @@
 amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 1, RELIANCE, Reliance industries, 20.0, 16, 4.0
 2, TCS, Tata consultancy services, 20.0, 31, 0
-3, HDFCBANK, Hdfc bank, 20.0, 0, 20.0
+3, HDFCBANK, Hdfc bank, 20.0, 32, 0
 4, HINDUNILVR, Hindustan unilever, 20.0, 27, 0
-5, ITC, Itc, 20.0, 42, 0
-6, HDFC, Housing development finance co, 20.0, 25, 0
-7, INFY, Infosys, 20.0, 31, 0
-8, SBIN, State bank, 20.0, 16, 4.0
-9, KOTAKBANK, Kotak mahindra bank, 20.0, 6, 14.0
-10, ICICIBANK, Icici bank, 20.0, 12, 8.0
-11, MARUTI, Maruti suzuki, 20.0, 26, 0
-12, ONGC, Oil natural gas corporatio, 20.0, 25, 0
-13, LT, Larsen toubro, 20.0, 32, 0
-14, AXISBANK, Axis bank, 20.0, 0, 20.0
-15, BAJFINANCE, Bajaj finance, 20.0, 3, 17.0
-16, WIPRO, Wipro, 20.0, 7, 13.0
-17, COALINDIA, Coal, 20.0, 25, 0
-18, BHARTIARTL, Bharti airtel, 20.0, 17, 3.0
-19, HCLTECH, Hcl technologies, 20.0, 6, 14.0
-20, IOC, Indian oil corporation, 20.0, 22, 0
-21, ASIANPAINT, Asian paints, 20.0, 15, 5.0
-22, NTPC, Ntpc, 20.0, 23, 0
+5, HDFC, Housing development finance corplt, 20.0, 25, 0
+6, INFY, Infosys, 20.0, 31, 0
+7, BHARTIARTL, Bharti airtel, 20.0, 17, 3.0
+8, KOTAKBANK, Kotak mahindra bank, 20.0, 6, 14.0
+9, ICICIBANK, Icici bank, 20.0, 12, 8.0
+10, ITC, Itc, 20.0, 42, 0
+11, SBIN, State bank, 20.0, 16, 4.0
+12, BAJFINANCE, Bajaj finance, 20.0, 3, 17.0
+13, MARUTI, Maruti suzuki, 20.0, 26, 0
+14, ASIANPAINT, Asian paints, 20.0, 15, 5.0
+15, NESTLEIND, Nestle, 20.0, 0, 20.0
+16, AXISBANK, Axis bank, 20.0, 0, 20.0
+17, HCLTECH, Hcl technologies, 20.0, 6, 14.0
+18, LT, Larsen toubro, 20.0, 32, 0
+19, DMART, Avenue supermarts, 20.0, 5, 15.0
+20, WIPRO, Wipro, 20.0, 7, 13.0
+21, ONGC, Oil natural gas corporation, 20.0, 25, 0
+22, ULTRACEMCO, Ultratech cement, 20.0, 19, 1.0
 23, BAJAJFINSV, Bajaj finserv, 20.0, 6, 14.0
-24, ULTRACEMCO, Ultratech cement, 20.0, 19, 1.0
-25, HINDZINC, Hindustan zinc, 20.0, 20, 0
-26, NESTLEIND, Nestle, 20.0, 0, 20.0
-27, SUNPHARMA, Sun pharmaceutical industries, 20.0, 21, 0
-28, POWERGRID, Power grid corporationindi, 20.0, 22, 0
-29, TITAN, Titan company, 20.0, 8, 12.0
-30, INDUSINDBK, Indusind bank, 20.0, 0, 20.0
-31, DMART, Avenue supermarts, 20.0, 5, 15.0
-32, BAJAJ-AUTO, Bajaj auto, 20.0, 12, 8.0
-33, M&M, Mahindra mahindra, 20.0, 19, 1.0
-34, BPCL, Bharat petroleum corporation l, 20.0, 6, 14.0
-35, HDFCLIFE, Hdfc life insurance company li, 20.0, 10, 10.0
-36, ADANIPORTS, Adani ports special econom, 20.0, 2, 18.0
-37, GAIL, Gail, 20.0, 21, 0
-38, TECHM, Tech mahindra, 20.0, 11, 9.0
-39, DABUR, Dabur, 20.0, 5, 15.0
-40, BRITANNIA, Britannia industries, 20.0, 12, 8.0
-41, GODREJCP, Godrej consumer products, 20.0, 2, 18.0
-42, JSWSTEEL, Jsw steel, 20.0, 7, 13.0
-43, VEDL, Vedanta, 20.0, 22, 0
-44, SHREECEM, Shree cement, 20.0, 18, 2.0
-45, SBILIFE, Sbi life insurance company, 20.0, 10, 10.0
-46, BANDHANBNK, Bandhan bank, 20.0, 3, 17.0
-47, PIDILITIND, Pidilite industries, 20.0, 5, 15.0
-48, TATAMOTORS, Tata motors, 20.0, 8, 12.0
-49, TATASTEEL, Tata steel, 20.0, 18, 2.0
-50, EICHERMOT, Eicher motors, 20.0, 23, 0
-51, GRASIM, Grasim industries, 20.0, 3, 17.0
-52, BOSCHLTD, Bosch, 20.0, 30, 0
-53, HEROMOTOCO, Hero motocorp, 20.0, 33, 0
-54, INFRATEL, Bharti infratel, 20.0, 6, 14.0
-55, INDIGO, Interglobe aviation, 20.0, 11, 9.0
-56, ICICIPRULI, Icici prudential life insurance company, 20.0, 11, 9.0
-57, MARICO, Marico, 20.0, 11, 9.0
-58, HAVELLS, Havells, 20.0, 11, 9.0
-59, ICICIGI, Icici lombard general insurance company, 20.0, 11, 9.0
-60, UPL, Upl, 20.0, 8, 12.0
-61, HINDALCO, Hindalco industries, 20.0, 6, 14.0
-62, YESBANK, Yes bank, 20.0, 0, 20.0
-63, MOTHERSUMI, Motherson sumi systems, 20.0, 7, 13.0
-64, DRREDDY, Drreddys laboratories, 20.0, 5, 15.0
-65, CIPLA, Cipla, 20.0, 3, 17.0
-66, AMBUJACEM, Ambuja cements, 20.0, 12, 8.0
-67, PEL, Piramal enterprises, 20.0, 14, 6.0
-68, DIVISLAB, Divis laboratories, 20.0, 0, 20.0
-69, AUROPHARMA, Aurobindo pharma, 20.0, 3, 17.0
-70, GICRE, General insurance corporation, 20.0, 15, 5.0
-71, MCDOWELL-N, United spirits, 20.0, 14, 6.0
-72, HINDPETRO, Hindustan petroleum corporatio, 20.0, 14, 6.0
-73, SIEMENS, Siemens, 20.0, 5, 15.0
-74, ZEEL, Zee entertainment enterprises, 20.0, 11, 9.0
-75, UBL, United breweries, 20.0, 11, 9.0
-76, BAJAJHLDNG, Bajaj holdings investment lt, 20.0, 5, 15.0
-77, LUPIN, Lupin, 20.0, 10, 10.0
-78, BIOCON, Biocon, 20.0, 1, 19.0
-79, BANKBARODA, Bankbaroda, 20.0, 0, 20.0
-80, DLF, Dlf, 20.0, 10, 10.0
-81, IDEA, Vodafone idea, 20.0, 0, 20.0
-82, PETRONET, Petronet lng, 20.0, 14, 6.0
-83, PGHH, Procter gamble hygiene hea, 20.0, 20, 0
-84, PNB, Punjab national bank, 20.0, 0, 20.0
-85, COLPAL, Colgate palmolive, 20.0, 10, 10.0
-86, HDFCAMC, Hdfc asset management company, 20.0, 14, 6.0
-87, IDBI, Idbi bank, 20.0, 0, 20.0
-88, CADILAHC, Cadila healthcare, 20.0, 5, 15.0
-89, NMDC, Nmdc, 20.0, 13, 7.0
-90, CONCOR, Container corporation, 20.0, 5, 15.0
-91, IBULHSGFIN, Indiabulls housing finance, 20.0, 0, 20.0
-92, GSKCONS, Glaxosmithkline consumer healt, 20.0, 0, 20.0
-93, BERGEPAINT, Berger paints, 20.0, 6, 14.0
-94, PFC, Power finance corporation, 20.0, 14, 6.0
-95, OFSS, Oracle financial services soft, 20.0, 0, 20.0
-96, LTI, Larsen toubro infotech, 20.0, 7, 13.0
-97, TORNTPHARM, Torrent pharmaceuticals, 20.0, 0, 20.0
-98, ABB, Abb, 20.0, 6, 14.0
-99, NIACL, The new assurance company, 20.0, 0, 20.0
-100, ACC, Acc, 20.0, 11, 9.0
-101, RECLTD, Rec, 10.0, 16, 0
-102, RBLBANK, Rbl bank, 10.0, 0, 10.0
-103, L&TFH, L&t finance holdings, 10.0, 5, 5.0
-104, ASHOKLEY, Ashok leyland, 10.0, 5, 5.0
-105, SRTRANSFIN, Shriram transport finance col, 10.0, 4, 6.0
-106, M&MFIN, Mahindra mahindra financial, 10.0, 6, 4.0
-107, 3MINDIA, 3m, 10.0, 0, 10.0
-108, LICHSGFIN, Lic housing finance, 10.0, 14, 0
-109, PAGEIND, Page industries, 10.0, 24, 0
-110, NHPC, Nhpc, 10.0, 13, 0
-111, MRF, Mrf, 10.0, 0, 10.0
-112, KANSAINER, Kansai nerolac paints, 10.0, 5, 5.0
-113, BHEL, Bharat heavy electricals, 10.0, 18, 0
-114, ADANITRANS, Adani transmission, 10.0, 0, 10.0
+24, HDFCLIFE, Hdfc life insurance company, 20.0, 10, 10.0
+25, SUNPHARMA, Sun pharmaceutical industries, 20.0, 21, 0
+26, NTPC, Ntpc, 20.0, 23, 0
+27, COALINDIA, Coal, 20.0, 25, 0
+28, TITAN, Titan company, 20.0, 8, 12.0
+29, POWERGRID, Power grid corporation, 20.0, 22, 0
+30, IOC, Indian oil corporation, 20.0, 22, 0
+31, BPCL, Bharat petroleum, 20.0, 6, 14.0
+32, DABUR, Dabur, 20.0, 5, 15.0
+33, SBILIFE, Sbi life insurance company, 20.0, 10, 10.0
+34, BAJAJ-AUTO, Bajaj auto, 20.0, 12, 8.0
+35, SHREECEM, Shree cements, 20.0, 18, 2.0
+36, HINDZINC, Hindustan zinc, 20.0, 20, 0
+37, PIDILITIND, Pidilite industries, 20.0, 5, 15.0
+38, BRITANNIA, Britannia industries, 20.0, 12, 8.0
+39, ADANIPORTS, Adani ports special economic zone, 20.0, 2, 18.0
+40, GODREJCP, Godrej consumer products, 20.0, 2, 18.0
+41, TECHM, Tech mahindra, 20.0, 11, 9.0
+42, ICICIPRULI, Icici prudential life insurance company, 20.0, 11, 9.0
+43, HDFCAMC, Hdfc asset management company, 20.0, 14, 6.0
+44, DRREDDY, Dr reddys laboratories, 20.0, 5, 15.0
+45, DIVISLAB, Divis laboratories, 20.0, 0, 20.0
+46, ICICIGI, Icici lombard general insurance company, 20.0, 11, 9.0
+47, M&M, Mahindra mahindra, 20.0, 19, 1.0
+48, SBICARD, Sbi cards payment services, 20.0, 6, 14.0
+49, INDUSINDBK, Indusind bank, 20.0, 0, 20.0
+50, BANDHANBNK, Bandhan bank, 20.0, 3, 17.0
+51, JSWSTEEL, Jsw steel, 20.0, 7, 13.0
+52, BERGEPAINT, Berger paints, 20.0, 6, 14.0
+53, EICHERMOT, Eicher motors, 20.0, 23, 0
+54, GAIL, Gail, 20.0, 21, 0
+55, DLF, Dlf, 20.0, 10, 10.0
+56, INDIGO, Interglobe aviation, 20.0, 11, 9.0
+57, SIEMENS, Siemens, 20.0, 5, 15.0
+58, HEROMOTOCO, Hero motocorp, 20.0, 33, 0
+59, MCDOWELL-N, United spirits, 20.0, 14, 6.0
+60, CIPLA, Cipla, 20.0, 3, 17.0
+61, GRASIM, Grasim industries, 20.0, 3, 17.0
+62, VEDL, Vedanta, 20.0, 22, 0
+63, TATASTEEL, Tata steel, 20.0, 18, 2.0
+64, MARICO, Marico, 20.0, 11, 9.0
+65, TATAMOTORS, Tata motors, 20.0, 8, 12.0
+66, BIOCON, Biocon, 20.0, 1, 19.0
+67, INFRATEL, Bharti infratel, 20.0, 6, 14.0
+68, AMBUJACEM, Ambuja cements, 20.0, 12, 8.0
+69, TORNTPHARM, Torrent pharmaceuticals, 20.0, 0, 20.0
+70, COLPAL, Colgate palmolive, 20.0, 10, 10.0
+71, PETRONET, Petronet lng, 20.0, 14, 6.0
+72, HAVELLS, Havells, 20.0, 11, 9.0
+73, BOSCHLTD, Bosch, 20.0, 30, 0
+74, LUPIN, Lupin, 20.0, 10, 10.0
+75, UPL, Upl, 20.0, 8, 12.0
+76, PGHH, Procter gamble hygiene health care, 20.0, 20, 0
+77, ADANIGREEN, Adani green energy, 20.0, 0, 20.0
+78, HINDALCO, Hindalco industries, 20.0, 6, 14.0
+79, AUROPHARMA, Aurobindo pharma, 20.0, 3, 17.0
+80, HINDPETRO, Hindustan petroleum corporation, 20.0, 14, 6.0
+81, MUTHOOTFIN, Muthoot finance, 20.0, 5, 15.0
+82, ABBOTINDIA, Abbott, 20.0, 0, 20.0
+83, IGL, Indraprashtha gas, 20.0, 1, 19.0
+84, MOTHERSUMI, Motherson sumi systems, 20.0, 7, 13.0
+85, PNB, Punjab national bank, 20.0, 0, 20.0
+86, NAUKRI, Info edge, 20.0, 6, 14.0
+87, CADILAHC, Cadila healthcare, 20.0, 5, 15.0
+88, LTI, Larsen toubro infotech, 20.0, 7, 13.0
+89, BAJAJHLDNG, Bajaj holdings investment, 20.0, 5, 15.0
+90, GICRE, General insurance corporation, 20.0, 15, 5.0
+91, BANKBARODA, Bankbaroda, 20.0, 0, 20.0
+92, IDBI, Idbi bank, 20.0, 0, 20.0
+93, ALKEM, Alkem laboratories, 20.0, 0, 20.0
+94, UBL, United breweries, 20.0, 11, 9.0
+95, NMDC, Nmdc, 20.0, 13, 7.0
+96, ADANITRANS, Adani transmission, 20.0, 0, 20.0
+97, MRF, Mrf, 20.0, 0, 20.0
+98, PEL, Piramal enterprises, 20.0, 14, 6.0
+99, TATACONSUM, Tata consumer products, 20.0, 7, 13.0
+100, CONCOR, Container corporation, 20.0, 5, 15.0
+101, WHIRLPOOL, Whirlpool, 10.0, 3, 7.0
+102, PFC, Power finance corporation, 10.0, 14, 0
+103, HONAUT, Honeywell automation, 10.0, 23, 0
+104, ACC, Acc, 10.0, 11, 0
+105, GLAXO, Glaxosmithkline pharmaceuticals, 10.0, 3, 7.0
+106, KANSAINER, Kansai nerolac paints, 10.0, 5, 5.0
+107, YESBANK, Yes bank, 10.0, 0, 10.0
+108, PAGEIND, Page industries, 10.0, 24, 0
+109, 3MINDIA, 3m, 10.0, 0, 10.0
+110, RECLTD, Rec, 10.0, 16, 0
+111, ABB, Abb, 10.0, 6, 4.0
+112, JUBLFOOD, Jubilant foodworks, 10.0, 6, 4.0
+113, NHPC, Nhpc, 10.0, 13, 0
+114, OFSS, Oracle financial services software, 10.0, 0, 10.0
 115, HAL, Hindustan aeronautics, 10.0, 12, 0
-116, TVSMOTOR, Tvs motor company, 10.0, 0, 10.0
-117, MUTHOOTFIN, Muthoot finance, 10.0, 5, 5.0
-118, NAUKRI, Info edge, 10.0, 6, 4.0
-119, BEL, Bharat electronics, 10.0, 20, 0
-120, BHARATFORG, Bharat forge, 10.0, 5, 5.0
-121, BANKINDIA, Bank, 10.0, 0, 10.0
-122, GLAXO, Glaxosmithkline pharmaceutical, 10.0, 3, 7.0
-123, GILLETTE, Gillette, 10.0, 12, 0
-124, SUNTV, Sun tv network, 10.0, 3, 7.0
-125, FRETAIL, Future retail, 10.0, 6, 4.0
-126, IDFCFIRSTB, Idfc first bank, 10.0, 0, 10.0
-127, ALKEM, Alkem laboratories, 10.0, 0, 10.0
-128, SAIL, Steel authority, 10.0, 0, 10.0
-129, IGL, Indraprastha gas, 10.0, 1, 9.0
-130, CUMMINSIND, Cummins, 10.0, 11, 0
-131, CHOLAFIN, Cholamandalam investment f, 10.0, 3, 7.0
-132, ABCAPITAL, Aditya birla capital, 10.0, 0, 10.0
-133, HONAUT, Honeywell automation, 10.0, 23, 0
-134, GRUH, Gruh finance, 10.0, 0, 10.0
-135, OIL, Oil, 10.0, 13, 0
-136, CANBK, Canara bank, 10.0, 0, 10.0
-137, VOLTAS, Voltas, 10.0, 5, 5.0
-138, EXIDEIND, Exide industries, 10.0, 10, 0
-139, TATAPOWER, Tata power co, 10.0, 10, 0
-140, FEDERALBNK, Federal bank, 10.0, 0, 10.0
+116, AUBANK, Au small finance bank, 10.0, 0, 10.0
+117, GODREJPROP, Godrej properties, 10.0, 0, 10.0
+118, IRCTC, Indian railway catering tourism corporation, 10.0, 0, 10.0
+119, SRF, Srf, 10.0, 0, 10.0
+120, NIACL, The new assurance company, 10.0, 0, 10.0
+121, PIIND, Pi industries, 10.0, 5, 5.0
+122, APOLLOHOSP, Apollo hospitals enterprises, 10.0, 8, 2.0
+123, BALKRISIND, Balkrishna industries, 10.0, 5, 5.0
+124, VBL, Varun beverages, 10.0, 3, 7.0
+125, TRENT, Trent [lakme ], 10.0, 5, 5.0
+126, ADANIENT, Adani enterprises, 10.0, 3, 7.0
+127, SRTRANSFIN, Shriram transport finance co, 10.0, 4, 6.0
+128, VOLTAS, Voltas, 10.0, 5, 5.0
+129, PFIZER, Pfizer, 10.0, 5, 5.0
+130, BAYERCROP, Bayer cropscience, 10.0, 0, 10.0
+131, BEL, Bharat electronics, 10.0, 20, 0
+132, BATAINDIA, Bata, 10.0, 6, 4.0
+133, ZEEL, Zee entertainment enterprises, 10.0, 11, 0
+134, NAM-INDIA, Nippon life asset management, 10.0, 2, 8.0
+135, GUJGASLTD, Gujarat gas, 10.0, 0, 10.0
+136, TVSMOTOR, Tvs motor company, 10.0, 0, 10.0
+137, IPCALAB, Ipca laboratories, 10.0, 0, 10.0
+138, GILLETTE, Gillette, 10.0, 12, 0
+139, ASHOKLEY, Ashok leyland, 10.0, 5, 5.0
+140, CHOLAFIN, Cholamandalam investment finance company, 10.0, 3, 7.0
 141, RAJESHEXPO, Rajesh exports, 10.0, 0, 10.0
-142, DALBHARAT, Dalmia bharat, 10.0, 0, 10.0
-143, GODREJPROP, Godrej properties, 10.0, 0, 10.0
-144, WHIRLPOOL, Whirlpool, 10.0, 3, 7.0
-145, OBEROIRLTY, Oberoi realty, 10.0, 0, 10.0
-146, MPHASIS, Mphasis, 10.0, 0, 10.0
-147, AUBANK, Au small finance bank, 10.0, 0, 10.0
-148, ADANIPOWER, Adani power, 10.0, 0, 10.0
-149, INDHOTEL, Indian hotels co, 10.0, 11, 0
-150, EMAMILTD, Emami, 10.0, 12, 0
-151, IBVENTURES, Indiabulls ventures, 10.0, 0, 10.0
-152, JUBLFOOD, Jubilant foodworks, 10.0, 6, 4.0
-153, APOLLOHOSP, Apollo hospitals enterprise lt, 10.0, 8, 2.0
-154, GLENMARK, Glenmark pharmaceuticals, 10.0, 4, 6.0
-155, LTTS, L&t technology services limite, 10.0, 6, 4.0
-156, GODREJIND, Godrej industries, 10.0, 3, 7.0
-157, BATAINDIA, Bata, 10.0, 6, 4.0
-158, RAMCOCEM, The ramco cements, 10.0, 0, 10.0
-159, SUNDARMFIN, Sundaram finance, 10.0, 2, 8.0
-160, ENDURANCE, Endurance technologies, 10.0, 0, 10.0
-161, BALKRISIND, Balkrishna industries, 10.0, 5, 5.0
-162, ABFRL, Aditya birla fashion retai, 10.0, 0, 10.0
-163, ABBOTINDIA, Abbott, 10.0, 0, 10.0
-164, AIAENG, Aia engineering, 10.0, 0, 10.0
-165, EDELWEISS, Edelweiss financial services l, 10.0, 0, 10.0
-166, TATACHEM, Tata chemicals, 10.0, 8, 2.0
-167, VBL, Varun beverages, 10.0, 3, 7.0
-168, TATACOMM, Tata communications, 10.0, 0, 10.0
-169, ADANIENT, Adani enterprises, 10.0, 3, 7.0
-170, JINDALSTEL, Jindal steel power, 10.0, 0, 10.0
-171, MINDTREE, Mindtree, 10.0, 7, 3.0
-172, CASTROLIND, Castrol, 10.0, 11, 0
-173, CUB, City union bank, 10.0, 0, 10.0
-174, PNBHOUSING, Pnb housing finance, 10.0, 0, 10.0
-175, ASTRAL, Astral poly technik, 10.0, 0, 10.0
-176, BAYERCROP, Bayer cropscience, 10.0, 0, 10.0
-177, PFIZER, Pfizer, 10.0, 5, 5.0
-178, CROMPTON, Crompton greaves consumer elec, 10.0, 0, 10.0
-179, SRF, Srf, 10.0, 0, 10.0
-180, BHARATFIN, Bharat financial inclusion lim, 10.0, 0, 10.0
-181, PIIND, Piindustries, 10.0, 5, 5.0
-182, ADANIGAS, Adani gas, 10.0, 1, 9.0
-183, SUPREMEIND, Supreme industries, 10.0, 2, 8.0
-184, TATAGLOBAL, Tata global beverages, 10.0, 7, 3.0
-185, SANOFI, Sanofi, 10.0, 4, 6.0
-186, AARTIIND, Aarti industries, 10.0, 0, 10.0
-187, COROMANDEL, Coromandel international, 10.0, 5, 5.0
-188, THERMAX, Thermax, 10.0, 0, 10.0
-189, TRENT, Trent, 10.0, 5, 5.0
-190, TORNTPOWER, Torrent power, 10.0, 0, 10.0
-191, INDIANB, Indian bank, 10.0, 0, 10.0
-192, IIFL, Iifl finance, 10.0, 0, 10.0
-193, SYNGENE, Syngene international, 10.0, 0, 10.0
-194, WABCOINDIA, Wabco, 10.0, 0, 10.0
-195, AMARAJABAT, Amara raja batteries, 10.0, 10, 0
-196, APOLLOTYRE, Apollo tyres, 10.0, 17, 0
-197, MRPL, Mangalore refinery petrochem, 10.0, 0, 10.0
-198, RNAM, Reliance nippon life asset man, 10.0, 2, 8.0
-199, MFSL, Max financial services, 10.0, 0, 10.0
-200, JSWENERGY, Jsw energy, 10.0, 0, 10.0
-201, SUNDRMFAST, Sundram fasteners, 10.0, 3, 7.0
-202, IPCALAB, Ipca laboratories, 10.0, 0, 10.0
+142, COROMANDEL, Coromandel international, 10.0, 5, 5.0
+143, BHARATFORG, Bharat forge, 10.0, 5, 5.0
+144, SANOFI, Sanofi, 10.0, 4, 6.0
+145, L&TFH, L&t finance holdings, 10.0, 5, 5.0
+146, ADANIPOWER, Adani power, 10.0, 0, 10.0
+147, RELAXO, Relaxo footwears, 10.0, 6, 4.0
+148, AARTIIND, Aarti industries, 10.0, 0, 10.0
+149, SUNTV, Sun tv network, 10.0, 3, 7.0
+150, ABCAPITAL, Aditya birla capital, 10.0, 0, 10.0
+151, LICHSGFIN, Lic housing finance, 10.0, 14, 0
+152, IDEA, Vodafone idea, 10.0, 0, 10.0
+153, SUNDARMFIN, Sundaram finance, 10.0, 2, 8.0
+154, BANKINDIA, Bank, 10.0, 0, 10.0
+155, RAMCOCEM, The ramco cements, 10.0, 0, 10.0
+156, UNIONBANK, Union bank, 10.0, 0, 10.0
+157, OBEROIRLTY, Oberoi realty, 10.0, 0, 10.0
+158, AIAENG, Aia engineering, 10.0, 0, 10.0
+159, MPHASIS, Mphasis, 10.0, 0, 10.0
+160, ASTRAL, Astral poly technik, 10.0, 0, 10.0
+161, M&MFIN, Mahindra mahindra financial services, 10.0, 6, 4.0
+162, CANBK, Canara bank, 10.0, 0, 10.0
+163, CROMPTON, Crompton greaves consumer electricals, 10.0, 0, 10.0
+164, TORNTPOWER, Torrent power, 10.0, 0, 10.0
+165, ADANIGAS, Adani gas, 10.0, 1, 9.0
+166, IDFCFIRSTB, Idfc first bank, 10.0, 0, 10.0
+167, MINDTREE, Mindtree, 10.0, 7, 3.0
+168, LTTS, L&t technology services, 10.0, 6, 4.0
+169, SUPREMEIND, Supreme industries, 10.0, 2, 8.0
+170, SAIL, Steel authority, 10.0, 0, 10.0
+171, ABFRL, Aditya birla fashion retail, 10.0, 0, 10.0
+172, EXIDEIND, Exide industries, 10.0, 10, 0
+173, JINDALSTEL, Jindal steel power, 10.0, 0, 10.0
+174, ATUL, Atul, 10.0, 0, 10.0
+175, LALPATHLAB, Dr lal pathlabs, 10.0, 5, 5.0
+176, APLLTD, Alembic pharmaceuticals, 10.0, 0, 10.0
+177, IOB, Indian overseas bank, 10.0, 0, 10.0
+178, ISEC, Icici securities, 10.0, 2, 8.0
+179, MFSL, Max financial services, 10.0, 0, 10.0
+180, POLYCAB, Polycab, 10.0, 0, 10.0
+181, CUB, City union bank, 10.0, 0, 10.0
+182, DALBHARAT, Dalmia bharat, 10.0, 0, 10.0
+183, FEDERALBNK, Federal bank, 10.0, 0, 10.0
+184, SYNGENE, Syngene international, 10.0, 0, 10.0
+185, CASTROLIND, Castrol, 10.0, 11, 0
+186, CUMMINSIND, Cummins, 10.0, 11, 0
+187, WABCOINDIA, Wabco, 10.0, 0, 10.0
+188, SCHAEFFLER, Schaeffler, 10.0, 10, 0
+189, INDHOTEL, Indian hotels co, 10.0, 11, 0
+190, GSPL, Gujarat state petronet, 10.0, 0, 10.0
+191, MANAPPURAM, Manappuram finance, 10.0, 2, 8.0
+192, GMRINFRA, Gmr infrastructure, 10.0, 0, 10.0
+193, GODREJIND, Godrej industries, 10.0, 3, 7.0
+194, UCOBANK, Uco bank, 10.0, 0, 10.0
+195, ENDURANCE, Endurance technologies, 10.0, 0, 10.0
+196, SUMICHEM, Sumitomo chemical, 10.0, 6, 4.0
+197, TATAPOWER, Tata power co, 10.0, 10, 0
+198, AAVAS, Aavas financiers, 10.0, 0, 10.0
+199, AJANTPHARM, Ajanta pharma, 10.0, 0, 10.0
+200, TATACOMM, Tata communications, 10.0, 0, 10.0
+201, OIL, Oil, 10.0, 13, 0
+202, RUCHI, Ruchi soya industries, 10.0, 0, 10.0
 203, CRISIL, Crisil, 10.0, 11, 0
 204, NATCOPHARM, Natco pharma, 10.0, 0, 10.0
-205, GUJFLUORO, Gujarat fluorochemicals, 10.0, 0, 10.0
-206, UNIONBANK, Union bank, 10.0, 0, 10.0
-207, SHRIRAMCIT, Shriram city union finance, 10.0, 0, 10.0
-208, HATSUN, Hatsun agro product, 10.0, 2, 8.0
-209, EIHOTEL, Eih, 10.0, 5, 5.0
-210, ATUL, Atul, 10.0, 0, 10.0
-211, NBCC, Nbcc, 10.0, 19, 0
-212, JUBILANT, Jubilant life sciences, 10.0, 0, 10.0
-213, HEXAWARE, Hexaware technologies, 10.0, 0, 10.0
-214, CENTRALBK, Central bank, 10.0, 0, 10.0
-215, GUJGASLTD, Gujarat gas, 10.0, 0, 10.0
-216, CORPBANK, corporation bank, 10.0, 0, 10.0
-217, APLLTD, Alembic pharmaceuticals, 10.0, 0, 10.0
-218, NATIONALUM, National aluminium co, 10.0, 20, 0
-219, ALBK, Allahabad bank, 10.0, 0, 10.0
-220, GSPL, Gujarat state petronet, 10.0, 0, 10.0
-221, CENTURYTEX, Century textiles industries, 10.0, 0, 10.0
-222, QUESS, Quess corp, 10.0, 13, 0
-223, FORTIS, Fortis healthcare, 10.0, 0, 10.0
-224, ORIENTBANK, Oriental bankcommerce, 10.0, 0, 10.0
-225, GMRINFRA, Gmr infrastructure, 10.0, 0, 10.0
-226, SKFINDIA, Skf, 10.0, 9, 1.0
-227, MANAPPURAM, Manappuram finance, 10.0, 2, 8.0
-228, RELAXO, Relaxo footwears, 10.0, 6, 4.0
-229, SJVN, Sjvn, 10.0, 0, 10.0
-230, IOB, Indian overseas bank, 10.0, 0, 10.0
-231, MOTILALOFS, Motilal oswal financial servic, 10.0, 0, 10.0
-232, SOLARINDS, Solar industries, 10.0, 2, 8.0
-233, GODREJAGRO, Godrej agrovet, 10.0, 6, 4.0
-234, PHOENIXLTD, The phoenix mills, 10.0, 0, 10.0
-235, TTKPRESTIG, Ttk prestige, 10.0, 12, 0
-236, NLCINDIA, Nlc, 10.0, 12, 0
-237, UCOBANK, Uco bank, 10.0, 0, 10.0
-238, POLYCAB, Polycab, 10.0, 0, 10.0
-239, VGUARD, V guard industries, 10.0, 11, 0
-240, GRAPHITE, Graphite, 10.0, 0, 10.0
-241, CESC, Cesc, 10.0, 0, 10.0
-242, KAJARIACER, Kajaria ceramics, 10.0, 14, 0
-243, AJANTPHARM, Ajanta pharma, 10.0, 0, 10.0
-244, MGL, Mahanagar gas, 10.0, 0, 10.0
-245, CHOLAHLDNG, Cholamandalam financial holdin, 10.0, 4, 6.0
-246, PRESTIGE, Prestige estates projects, 10.0, 11, 0
-247, VINATIORGA, Vinati organics, 10.0, 0, 10.0
-248, AAVAS, Aavas financiers, 10.0, 0, 10.0
-249, SYMPHONY, Symphony, 10.0, 6, 4.0
-250, STRTECH, Sterlite technologies, 10.0, 6, 4.0
-251, SCHAEFFLER, Schaeffler, 5.0, 10, 0
-252, MAHINDCIE, Mahindra cie automotive limite, 5.0, 3, 2.0
-253, FLFL, Future lifestyle fashions, 5.0, 3, 2.0
-255, LALPATHLAB, Dr lal pathlabs, 5.0, 5, 0
-257, THOMASCOOK, Thomas cook, 5.0, 10, 0
-259, HUDCO, Housing &urban development cor, 5.0, 5, 0
-267, KRBL, Krbl, 5.0, 7, 0
-269, PVR, Pvr, 5.0, 6, 0
-273, BLUEDART, Blue dart express, 5.0, 10, 0
-274, ENGINERSIN, Engineers, 5.0, 20, 0
-275, ISEC, Icici securities, 5.0, 2, 3.0
-278, DCMSHRIRAM, Dcm shriram, 5.0, 6, 0
-279, TIINDIA, Tube investments, 5.0, 2, 3.0
-280, CARBORUNIV, Carborundum universal, 5.0, 7, 0
-282, AEGISCHEM, Aegis logistics, 5.0, 2, 3.0
-286, FINCABLES, Finolex cables, 5.0, 4, 1.0
-288, ZYDUSWELL, Zydus wellness, 5.0, 1, 4.0
-290, BLUESTARCO, Blue star, 5.0, 6, 0
-292, VIPIND, Vipindustries, 5.0, 11, 0
-294, SFL, Sheela foam, 5.0, 6, 0
-296, GRINDWELL, Grindwell norton, 5.0, 5, 0
-300, DELTACORP, Delta corp, 5.0, 6, 0
-301, DISHTV, Dish tv, 5.0, 4, 1.0
-308, ASAHIINDIA, Asahi glass, 5.0, 5, 0
-309, BASF, Basf, 5.0, 6, 0
-310, PGHL, Procter gamble health limite, 5.0, 5, 0
-311, LEMONTREE, Lemon tree hotels, 5.0, 4, 1.0
-313, NCC, Ncc, 5.0, 2, 3.0
-314, TATAELXSI, Tata elxsi, 5.0, 1, 4.0
-324, VSTIND, Vst industries, 5.0, 12, 0
-326, BDL, Bharat dynamics, 5.0, 6, 0
-327, GODFRYPHLP, Godfrey phillips, 5.0, 1, 4.0
-329, ARVINDFASN, Arvind fashions, 5.0, 3, 2.0
-332, AVANTIFEED, Avanti feeds, 5.0, 11, 0
-334, JCHAC, Johnson controls hitachi air c, 5.0, 2, 3.0
-335, COCHINSHIP, Cochin shipyard, 5.0, 6, 0
-339, ASTRAZEN, Astrazeneca pharma, 5.0, 2, 3.0
-355, CEATLTD, Ceat, 5.0, 7, 0
-364, NH, Narayana hrudayalaya, 5.0, 6, 0
-385, HEIDELBERG, Heidelbergcement, 5.0, 6, 0
-387, CENTURYPLY, Century plyboards, 5.0, 11, 0
-393, ESSELPACK, Essel propack, 5.0, 2, 3.0
-406, NETWORK18, Network18 media investments, 5.0, 5, 0
-409, MAHLOG, Mahindra logistics, 5.0, 3, 2.0
-412, CERA, Cera sanitaryware, 5.0, 8, 0
-413, EIDPARRY, Eid parry, 5.0, 6, 0
-436, KSCL, Kaveri seed company, 5.0, 2, 3.0
-437, BSE, Bse, 5.0, 14, 0
-439, BRIGADE, Brigade enterprises, 5.0, 3, 2.0
-444, RALLIS, Rallis, 5.0, 4, 1.0
-446, BALRAMCHIN, Balrampur chini mills, 5.0, 2, 3.0
-453, ICRA, Icra, 5.0, 10, 0
-455, MHRIL, Mahindra holidays resorts in, 5.0, 11, 0
-456, VENKEYS, Venkys, 5.0, 7, 0
-458, CARERATING, Care ratings, 5.0, 14, 0
-462, JISLJALEQS, Jain irrigation systems, 5.0, 2, 3.0
-470, THYROCARE, Thyrocare technologies, 5.0, 6, 0
-475, ALLCARGO, Allcargo logistics, 5.0, 5, 0
-490, ENIL, Entertainment network, 5.0, 4, 1.0
-493, VRLLOG, Vrl logistics, 5.0, 6, 0
-494, FSC, Future supply chain solutions, 5.0, 3, 2.0
-498, KSB, Ksb, 5.0, 6, 0
-501, CDSL, Central depository services, 5.0, 2, 3.0
-510, LAOPALA, La opala rg, 5.0, 2, 3.0
-535, GREENLAM, Greenlam industries, 5.0, 3, 2.0
-540, RENUKA, Shree renuka sugars, 5.0, 5, 0
-548, NILKAMAL, Nilkamal, 5.0, 11, 0
-554, BOROSIL, Borosil glass works, 5.0, 2, 3.0
-561, GREENPLY, Greenply industries, 5.0, 5, 0
-583, UFLEX, Uflex, 5.0, 2, 3.0
-592, TVSSRICHAK, Tvs srichakra, 5.0, 5, 0
-595, TATACOFFEE, Tata coffee, 5.0, 9, 0
-599, WONDERLA, Wonderla holidays, 5.0, 10, 0
-609, PAPERPROD, Huhtamaki ppl, 5.0, 1, 4.0
-688, VSTTILLERS, Vsttillers tractors, 5.0, 6, 0
-694, EVEREADY, Eveready industries, 5.0, 5, 0
-763, ZEELEARN, Zee learn, 5.0, 12, 0
+205, AMARAJABAT, Amara raja batteries, 10.0, 10, 0
+206, BHEL, Bharat heavy electricals, 10.0, 18, 0
+207, RBLBANK, Rbl bank, 10.0, 0, 10.0
+208, EMAMILTD, Emami, 10.0, 12, 0
+209, PHOENIXLTD, The phoenix mills, 10.0, 0, 10.0
+210, THERMAX, Thermax, 10.0, 0, 10.0
+211, FORTIS, Fortis healthcare, 10.0, 0, 10.0
+212, FRETAIL, Future retail, 10.0, 6, 4.0
+213, MGL, Mahanagar gas, 10.0, 0, 10.0
+214, VINATIORGA, Vinati organics, 10.0, 0, 10.0
+215, IIFLWAM, Iifl wealth management, 10.0, 0, 10.0
+216, PRESTIGE, Prestige estates projects, 10.0, 11, 0
+217, ESCORTS, Escorts, 10.0, 0, 10.0
+218, MOTILALOFS, Motilal oswal financial services, 10.0, 0, 10.0
+219, AKZOINDIA, Akzo nobel, 10.0, 0, 10.0
+220, JKCEMENT, Jk cement, 10.0, 0, 10.0
+221, NIITTECH, Niit technologies, 10.0, 0, 10.0
+222, HATSUN, Hatsun agro products, 10.0, 2, 8.0
+223, SOLARINDS, Solar industries, 10.0, 2, 8.0
+224, GLENMARK, Glenmark pharmaceuticals, 10.0, 4, 6.0
+225, HEXAWARE, Hexaware technologies, 10.0, 0, 10.0
+226, CENTRALBK, Central bank, 10.0, 0, 10.0
+227, SJVN, Sjvn, 10.0, 0, 10.0
+228, CREDITACC, Creditaccess grameen, 10.0, 0, 10.0
+229, IBULHSGFIN, Indiabulls housing finance, 10.0, 0, 10.0
+230, GODREJAGRO, Godrej agrovet, 10.0, 6, 4.0
+231, SKFINDIA, Skf, 10.0, 9, 1.0
+232, JSWENERGY, Jsw energy, 10.0, 0, 10.0
+233, MINDAIND, Minda industries, 10.0, 0, 10.0
+234, VGUARD, V guard industries, 10.0, 11, 0
+235, TIINDIA, Tube investments, 10.0, 2, 8.0
+236, CESC, Cesc, 10.0, 0, 10.0
+237, SUNDRMFAST, Sundram fasteners, 10.0, 3, 7.0
+238, ZYDUSWELL, Zydus wellness, 10.0, 1, 9.0
+239, JUBILANT, Jubilant life sciences, 10.0, 0, 10.0
+240, METROPOLIS, Metropolis healthcare, 10.0, 0, 10.0
+241, ITI, Iti, 10.0, 0, 10.0
+242, CHOLAHLDNG, Cholamandalam financial holdings, 10.0, 4, 6.0
+243, TTKPRESTIG, Ttk prestige, 10.0, 12, 0
+244, SYMPHONY, Symphony, 10.0, 6, 4.0
+245, PVR, Pvr, 10.0, 6, 4.0
+246, TATACHEM, Tata chemicals, 10.0, 8, 2.0
+247, IBVENTURES, Indiabulls ventures, 10.0, 0, 10.0
+248, JMFINANCIL, Jm financial, 10.0, 0, 10.0
+249, KAJARIACER, Kajaria ceramics, 10.0, 14, 0
+250, APOLLOTYRE, Apollo tyres, 10.0, 17, 0
+251, SFL, Sheela foam, 5.0, 6, 0
+252, ASTRAZEN, Astrazeneca pharma, 5.0, 2, 3.0
+254, PGHL, Procter gamble health, 5.0, 5, 0
+255, NLCINDIA, Nlc, 5.0, 12, 0
+263, SIS, Security intelligence services, 5.0, 1, 4.0
+264, AVANTIFEED, Avanti feeds, 5.0, 11, 0
+265, NATIONALUM, National aluminium co, 5.0, 20, 0
+266, JCHAC, Johnson controls hitachi air conditioning, 5.0, 2, 3.0
+269, AEGISCHEM, Aegis logistics, 5.0, 2, 3.0
+273, BLUESTARCO, Blue star, 5.0, 6, 0
+274, NH, Narayana hrudayalaya, 5.0, 6, 0
+278, GRINDWELL, Grindwell norton, 5.0, 5, 0
+281, HUDCO, Housing &urban development corporation, 5.0, 5, 0
+283, GODFRYPHLP, Godfrey phillips, 5.0, 1, 4.0
+284, EIHOTEL, Eih, 5.0, 5, 0
+285, BLUEDART, Blue dart express, 5.0, 10, 0
+287, QUESS, Quess corp, 5.0, 13, 0
+288, VSTIND, Vst industries, 5.0, 12, 0
+289, ESSELPACK, Essel propack, 5.0, 2, 3.0
+290, KRBL, Krbl, 5.0, 7, 0
+291, TATAELXSI, Tata elxsi, 5.0, 1, 4.0
+293, CARBORUNIV, Carborundum universal, 5.0, 7, 0
+296, FLFL, Future lifestyle fashions, 5.0, 3, 2.0
+301, DCMSHRIRAM, Dcm shriram, 5.0, 6, 0
+304, ASAHIINDIA, Asahi glass, 5.0, 5, 0
+305, ENGINERSIN, Engineers, 5.0, 20, 0
+311, BDL, Bharat dynamics, 5.0, 6, 0
+312, VIPIND, Vip industries, 5.0, 11, 0
+315, MAHINDCIE, Mahindra cie automotive, 5.0, 3, 2.0
+317, BASF, Basf, 5.0, 6, 0
+320, FINCABLES, Finolex cables, 5.0, 4, 1.0
+322, NBCC, Nbcc, 5.0, 19, 0
+328, RALLIS, Rallis, 5.0, 4, 1.0
+335, STRTECH, Sterlite technologies, 5.0, 6, 0
+338, COCHINSHIP, Cochin shipyard, 5.0, 6, 0
+343, HEIDELBERG, Heidelbergcement, 5.0, 6, 0
+360, CEATLTD, Ceat, 5.0, 7, 0
+368, BRIGADE, Brigade enterprises, 5.0, 3, 2.0
+371, EIDPARRY, Eid parry, 5.0, 6, 0
+382, DELTACORP, Delta corp, 5.0, 6, 0
+386, CERA, Cera sanitaryware, 5.0, 8, 0
+398, CENTURYPLY, Century plyboards, 5.0, 11, 0
+401, BALRAMCHIN, Balrampur chini mills, 5.0, 2, 3.0
+405, THYROCARE, Thyrocare technologies, 5.0, 6, 0
+410, LEMONTREE, Lemon tree hotels, 5.0, 4, 1.0
+414, KSCL, Kaveri seed company, 5.0, 2, 3.0
+418, NETWORK18, Network 18 media investments, 5.0, 5, 0
+426, CDSL, Central depository services, 5.0, 2, 3.0
+431, ICRA, Icra, 5.0, 10, 0
+439, MHRIL, Mahindra holidays resorts, 5.0, 11, 0
+449, MAHLOG, Mahindra logistics, 5.0, 3, 2.0
+460, ALLCARGO, Allcargo logistics, 5.0, 5, 0
+465, NCC, Ncc, 5.0, 2, 3.0
+473, KSB, Ksb, 5.0, 6, 0
+476, BSE, Bse, 5.0, 14, 0
+479, LAOPALA, La opala rg, 5.0, 2, 3.0
+490, GREENLAM, Greenlam industries, 5.0, 3, 2.0
+491, VRLLOG, Vrl logistics, 5.0, 6, 0
+492, NILKAMAL, Nilkamal, 5.0, 11, 0
+496, VENKEYS, Venkys, 5.0, 7, 0
+499, PAPERPROD, Huhtamaki ppl, 5.0, 1, 4.0
+505, ARVINDFASN, Arvind fashions, 5.0, 3, 2.0
+516, TATACOFFEE, Tata coffee, 5.0, 9, 0
+525, DISHTV, Dish tv, 5.0, 4, 1.0
+528, THOMASCOOK, Thomas cook, 5.0, 10, 0
+537, GREENPLY, Greenply industries, 5.0, 5, 0
+543, UFLEX, Uflex, 5.0, 2, 3.0
+548, CARERATING, Care ratings, 5.0, 14, 0
+575, RENUKA, Shree renuka sugars, 5.0, 5, 0
+599, FSC, Future supply chain solutions, 5.0, 3, 2.0
+611, TVSSRICHAK, Tvs srichakra, 5.0, 5, 0
+622, WONDERLA, Wonderla holidays, 5.0, 10, 0
+638, VSTTILLERS, Vsttillers tractors, 5.0, 6, 0
+664, ENIL, Entertainment network, 5.0, 4, 1.0
+688, BORORENEW, Borosil renewables, 5.0, 2, 3.0
+842, ZEELEARN, Zee learn, 5.0, 12, 0
+865, EVEREADY, Eveready industries, 5.0, 5, 0
+954, JISLJALEQS, Jain irrigation systems, 5.0, 2, 3.0

@@ -6,11 +6,11 @@ import csv
 import traceback
 import operator
 import calendar
+import logging
 
 import cutil.cutil
 
 from amfi.amfi import *
-
 
 class Demat(Amfi):
 
@@ -77,8 +77,13 @@ class Demat(Amfi):
             "unrealized_pl_pct": "text",
             "unused1": "text"
         }
+        self.demat_printed_ignored_isin = {}
 
-        print('init : Demat')
+        logging.info('init : Demat')
+
+    def set_log_level(self, log_level):
+        log_level_number = getattr(logging, log_level.upper(), None)
+        logging.basicConfig(level=log_level_number)
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
@@ -101,7 +106,9 @@ class Demat(Amfi):
             stock_symbol = self.amfi_get_value_by_isin(isin_code, "ticker")
             # ignore Gold ETF : Kotak, HDFC etc
             if stock_symbol == 'UNK_TICKER' and comp_name.find("GOLD") == -1:
-                print("isin", isin_code, "symbol", stock_symbol, "company", comp_name)
+                if isin_code not in self.demat_printed_ignored_isin:
+                    self.demat_printed_ignored_isin[isin_code] = 'yes'
+                    logging.info("isin", isin_code, "symbol", stock_symbol, "company", comp_name)
 
             txn_type = row_list[3]
             txn_qty = row_list[4]
@@ -124,8 +131,7 @@ class Demat(Amfi):
             p_str += txn_date
             p_str += '\n'
 
-            if self.debug_level > 1:
-                print(p_str)
+            logging.debug('%s', p_str)
 
             if stock_symbol in self.demat_txn_list:
                 self.demat_txn_list[stock_symbol] += p_str
@@ -161,10 +167,10 @@ class Demat(Amfi):
                     if stock_symbol in self.demat_txn_first_buy_date:
                         del self.demat_txn_first_buy_date[stock_symbol]
         except KeyError:
-            print("demat key error:", sys.exc_info())
+            logging.error("demat key error:", sys.exc_info())
             traceback.print_exc()
         except:
-            print("demat unexpected error:", sys.exc_info())
+            logging.error("demat unexpected error:", sys.exc_info())
             traceback.print_exc()
 
     def demat_sum_load_row(self, row):
@@ -197,11 +203,9 @@ class Demat(Amfi):
             self.demat_sum_upl_pct[stock_symbol] = unrealized_pl_pct
             if int(qty) > 0:
                 sku = int(round(float(qty) * float(acp) / 1000))
-                if self.debug_level > 1:
-                    print(stock_symbol, "qty", qty, "acp", acp, "sku", sku)
+                logging.debug(stock_symbol, "qty", qty, "acp", acp, "sku", sku)
             else:
-                if self.debug_level > 0:
-                    print("unexpected: qty 0")
+                logging.debug("unexpected: qty 0")
                 sku = 0
             # store
             self.demat_sum_sku[stock_symbol] = sku
@@ -229,7 +233,7 @@ class Demat(Amfi):
                 self.demat_sum_captype_unrealized_pl[captype] = round(float(unrealized_pl))
 
         except:
-            print("demat_sum_load_row Unexpected error:", sys.exc_info(), row)
+            logging.error("demat_sum_load_row Unexpected error:", sys.exc_info(), row)
 
     def demat_txn_load_data(self, in_filename):
         table = self.demat_txn_table_name
@@ -240,8 +244,8 @@ class Demat(Amfi):
         if row_count == 0:
             self.demat_txn_insert_data(in_filename)
         else:
-            print('demat_txn data already loaded in db', row_count)
-        print('display db data')
+            logging.info('demat_txn data already loaded in db', row_count)
+        logging.info('display db data')
         self.demat_txn_load_db()
 
     def demat_sum_load_data(self, in_filename):
@@ -253,8 +257,8 @@ class Demat(Amfi):
         if row_count == 0:
             self.demat_sum_insert_data(in_filename)
         else:
-            print('demat_sum data already loaded in db', row_count)
-        print('display db data')
+            logging.info('demat_sum data already loaded in db', row_count)
+        logging.info('display db data')
         self.demat_sum_load_db()
 
     def demat_txn_get_insert_row(self, line, row_bank):
@@ -262,19 +266,17 @@ class Demat(Amfi):
         # split on comma
         row_list = line.split(',')
 
-        if self.debug_level > 1:
-            print('row_list', row_list)
-            print('len row_list', len(row_list))
+        logging.debug('row_list', row_list)
+        logging.debug('len row_list', len(row_list))
 
         (stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty, segment,
          stt, remarks, txn_date, exchange, unused1) = row_list
 
-        if self.debug_level > 1:
-            print('stock symbol', stock_symbol)
+        logging.debug('stock symbol', stock_symbol)
 
         # bypass header
         if stock_symbol.strip() == 'Stock Symbol':
-            print('bypassed header line', row_list)
+            logging.info('bypassed header line', row_list)
             return
 
         try:
@@ -292,9 +294,9 @@ class Demat(Amfi):
             txn_date_iso = txn_year + "-" + txn_month + "-" + txn_day
             # ignore rest
         except ValueError:
-            print('ValueError ', txn_date, row_list)
+            logging.error('ValueError ', txn_date, row_list)
         except IndexError:
-            print('IndexError ', txn_date, row_list, )
+            logging.error('IndexError ', txn_date, row_list)
 
         new_row = (
         stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty, segment,
@@ -311,7 +313,7 @@ class Demat(Amfi):
             row_bank = []
             for line in csvfile:
                 self.demat_txn_get_insert_row(line, row_bank)
-            print('loaded entries', len(row_bank), 'from', in_filename)
+            logging.info('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
             cursor.executemany(insert_sql, row_bank)
             # commit db changes
@@ -325,13 +327,12 @@ class Demat(Amfi):
         (stock_symbol, comp_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
          days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1) = row_list
 
-        if self.debug_level > 1:
-            print('row_list', row_list)
-            print('len row_list', len(row_list))
+        logging.debug('row_list', row_list)
+        logging.debug('len row_list', len(row_list))
 
         # bypass header
         if stock_symbol.strip() == 'Stock Symbol':
-            print('bypassed header line', row_list)
+            logging.info('bypassed header line', row_list)
             return
 
         new_row = (stock_symbol, comp_name, isin_code_id, qty, acp, cmp, pct_change, value_cost, value_market, \
@@ -349,7 +350,7 @@ class Demat(Amfi):
             row_bank = []
             for line in csvfile:
                 self.demat_sum_get_insert_row(line, row_bank)
-            print('loaded entries', len(row_bank), 'from', in_filename)
+            logging.info('loaded entries', len(row_bank), 'from', in_filename)
             # insert row
             cursor.executemany(insert_sql, row_bank)
             # commit db changes
@@ -359,8 +360,7 @@ class Demat(Amfi):
         table = self.demat_txn_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
-            if self.debug_level > 1 :
-                print(row)
+            logging.debug(row)
             self.demat_txn_load_row(row)
         # self.demat_txn_prepare_data()
 
@@ -368,8 +368,7 @@ class Demat(Amfi):
         table = self.demat_sum_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
-            if self.debug_level > 1 :
-                print(row)
+            logging.debug(row)
             self.demat_sum_load_row(row)
         # self.prepare_demat_data()
 
@@ -377,8 +376,7 @@ class Demat(Amfi):
         fh = open(out_filename, "w")
         fh.write('stock_symbol, isin_code, comp_name, action, qty, price, txn_date\n')
         for stock_symbol in sorted(self.demat_txn_list):
-            if self.debug_level > 1:
-                print('dumping stock', stock_symbol)
+            logging.debug('dumping stock', stock_symbol)
             fh.write(self.demat_txn_list[stock_symbol])
         fh.close()
 
@@ -465,8 +463,7 @@ class Demat(Amfi):
             if int(self.demat_sum_qty[stock_symbol]) > 0:
                 fh.write(p_str)
             else:
-                if self.debug_level > 0:
-                    print('stock qty 0', stock_symbol)
+                logging.debug('stock qty 0', stock_symbol)
         fh.close()
 
     def demat_dump_summary_captype(self, out_filename):
@@ -503,7 +500,7 @@ class Demat(Amfi):
             else:
                 cur_sku = 0
                 if rank <= 250:
-                    print("ticker", ticker, "with rank", rank, " doesn't have holdings")
+                    logging.info("ticker", ticker, "with rank", rank, " doesn't have holdings")
             # large cap
             if rank <= 100:
                 plan_sku = self.demat_lc_weight
@@ -569,3 +566,70 @@ class Demat(Amfi):
         if ticker in self.demat_txn_last_type:
             return self.demat_txn_last_type[ticker]
         return '-'
+
+
+if __name__ == "__main__":
+
+    def main():
+        print('in main')
+
+        parser = argparse.ArgumentParser(description='Process arguments')
+        # dest= not required as option itself is the destination in args
+        parser.add_argument('-l', '--log_level', default='INFO', help='DEBUG|INFO|WARNING|ERROR|CRITICAL', type=str,
+                            choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
+        parser.add_argument('-d', '--debug_level', default='0', help='debug level 0|1|2|3', type=int,
+                            choices=[0, 1, 2, 3])
+        parser.add_argument('-t', '--truncate_table', default='False', help='truncate table', action='store_true')
+        parser.add_argument('-i', '--in_files', required=True, nargs='+', dest='in_files', help='in files')
+        parser.add_argument('-o', '--out_files', required=True, nargs='+', dest='out_files', help='out files')
+
+        args = parser.parse_args()
+
+        log_level = args.log_level
+        debug_level = args.debug_level
+        truncate_table = args.truncate_table
+
+        # dummy assignment
+        in_filename_phase = []
+        out_filename_phase = []
+        # use the argument as pattern
+        for index, filename in enumerate(args.in_files):
+            print('index = ', index, filename);
+            in_filename_phase.append(filename)
+
+        for index, filename in enumerate(args.out_files):
+            print('index = ', index, filename);
+            out_filename_phase.append(filename)
+
+        # Main caller
+        program_name = sys.argv[0]
+
+        txn_file = in_filename_phase[0]
+        summary_file = in_filename_phase[1]
+
+        if debug_level > 1:
+            print('args :', len(sys.argv))
+
+        demat = Demat()
+
+        demat.set_log_level(log_level)
+        demat.set_debug_level(debug_level)
+
+        if truncate_table:
+            demat.demat_table_reload(truncate_table)
+
+        demat.amfi_load_data_from_db()
+        demat.demat_txn_load_data(txn_file)
+        demat.demat_sum_load_data(summary_file)
+        demat.demat_dump_txn_detailed(out_filename_phase[0])
+        demat.demat_dump_txn_compressed(out_filename_phase[1])
+        demat.demat_dump_txn_summary(out_filename_phase[2])
+        # positive holdings
+        demat.demat_dump_txn_summary(out_filename_phase[3], True)
+        demat.demat_dump_summary_ticker_only(out_filename_phase[4])
+        demat.demat_dump_summary_captype(out_filename_phase[5])
+        demat.demat_dump_holdings_by_rank(out_filename_phase[6])
+
+
+    # execute only if run as a script
+    main()

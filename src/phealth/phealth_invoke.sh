@@ -23,3 +23,8 @@ mkdir -p ${OUT_DIR_1}
 #python plan_invoke.py --truncate_table --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
 # python plan_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE_PLAN} --out_files ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5}
 python ${MODULE_NAME}_invoke.py -l DEBUG -d ${DEBUG_LEVEL} -o ${OUT_FILE_1} ${OUT_FILE_2}
+
+if test -n "${GOTOLONG_EXCEL}"
+then
+  excel ${OUT_FILE_1} &
+fi

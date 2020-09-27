@@ -10,6 +10,10 @@ import sqlite3
 
 import logging
 
+import traceback
+
+import argparse
+
 import cutil.cutil
 
 from prettytable import PrettyTable
@@ -78,13 +82,9 @@ class Amfi(Database):
 
             comp_name = cutil.cutil.normalize_comp_name(comp_name)
 
-            logging.debug('comp_rank : %s', comp_rank)
-            logging.debug('isin_number: %s', isin_number)
-            logging.debug('bse_ticker : %s', bse_ticker)
-            logging.debug('nse_ticker : %s', nse_ticker)
-            logging.debug('avg_mcap : %s', avg_mcap)
-            logging.debug('captype : %s', captype)
-            logging.debug('comp_name : %s', comp_name)
+            logging.debug('comp_rank : %s isin_number: %s bse_ticker : %s nse_ticker : %s avg_mcap : %s captype : %s'
+                          'comp_name : %s', comp_rank, isin_number, bse_ticker, nse_ticker, avg_mcap, captype,
+                          comp_name)
 
             if nse_ticker == '':
                 if bse_ticker != '':
@@ -109,8 +109,7 @@ class Amfi(Database):
             if captype not in self.amfi_captype_list:
                 self.amfi_captype_list.append(captype)
 
-            logging.debug('comp_name : %s', comp_name, '\n')
-            logging.debug('isin_number: %s', isin_number, '\n')
+            logging.debug('comp_name : %s isin_number: %s', comp_name, isin_number)
 
         except IndexError:
             logging.error('except %s', row)
@@ -134,7 +133,12 @@ class Amfi(Database):
     def amfi_get_insert_row(self, line, row_bank):
 
         # split on comma
+        line = re.sub(',",', ',', line)
+        line = re.sub('"', '', line)
         row_list = line.split(',')
+
+        logging.debug('row_list %s', row_list)
+        logging.debug('len row_list %d', len(row_list))
 
         (comp_rank, comp_name, comp_isin, bse_symbol, nse_symbol, avg_mcap, cap_type) = row_list
 
@@ -162,7 +166,8 @@ class Amfi(Database):
             row_bank = []
             for line in csvfile:
                 self.amfi_get_insert_row(line, row_bank)
-            print('loaded entries', len(row_bank), 'from', in_filename)
+            logging.info('loaded entries %s', len(row_bank))
+            logging.info('from %s', in_filename)
             # insert row
             cursor.executemany(insert_sql, row_bank)
             # commit db changes
@@ -184,8 +189,12 @@ class Amfi(Database):
 
         fh = open(out_filename, "w")
 
+        dump_first_rec = True
         for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
-            logging.debug('ticker  ', ticker)
+            if dump_first_rec:
+                dump_first_rec = False
+                logging.debug('ticker  %s', ticker)
+
             row_list = [str(self.amfi_rank[ticker])]
             row_list.append(self.amfi_cname[ticker])
             row_list.append(self.amfi_ticker_isin_dict[ticker])
@@ -211,9 +220,11 @@ class Amfi(Database):
             p_hdr += '\n'
             fh.write(p_hdr)
 
+        dump_first_rec = True
         for ticker in sorted(self.amfi_rank, key=self.amfi_rank.__getitem__):
-
-            logging.debug('ticker  ', ticker)
+            if dump_first_rec:
+                logging.debug('ticker  %s', ticker)
+                dump_first_rec = False
 
             row_list = [str(self.amfi_rank[ticker])]
             row_list.append(self.amfi_cname[ticker])
@@ -238,11 +249,10 @@ class Amfi(Database):
             comp_name = self.amfi_cname[amfi_ticker]
             comp_name = comp_name.strip()
             if re.match(req_name, comp_name) or req_name.upper() == amfi_ticker:
-                if self.debug_level > 1:
-                    print('found match : name : ', req_name)
+                logging.debug('found match : name : %s', req_name)
                 return amfi_ticker
-        if self.debug_level > 1:
-            print('amfi : comp not found : req_name :',req_name,':')
+
+        logging.debug('amfi : comp not found : req_name : %s', req_name)
         return ''
 
     def amfi_get_value_by_isin(self, isin, value_name):
@@ -254,21 +264,35 @@ class Amfi(Database):
             if ticker:
                 self.amfi_get_value_by_ticker(self, isin, value_name)
         except KeyError:
-            print('KeyError ', isin)
+            logging.error('KeyError ', isin)
             traceback.print_exc()
         return 'UNK_COMP_2'
 
     def amfi_get_value_by_ticker(self, ticker, value_name):
         try:
             if ticker:
+                if ticker == 'UNK_TICKER':
+                    return 'UNK'
                 if value_name == "cname":
-                    return self.amfi_cname[ticker]
+                    if ticker in self.amfi_cname:
+                        return self.amfi_cname[ticker]
+                    else:
+                        return 'UNK_cname'
                 if value_name == "mcap":
-                    return self.amfi_mcap[ticker]
+                    if ticker in self.amfi_mcap:
+                        return self.amfi_mcap[ticker]
+                    else:
+                        return 0
                 if value_name == "rank":
-                    return self.amfi_rank[ticker]
+                    if ticker in self.amfi_rank:
+                        return self.amfi_rank[ticker]
+                    else:
+                        return 0
                 if value_name == "captype":
-                    return self.amfi_captype[ticker]
+                    if ticker in self.amfi_captype:
+                        return self.amfi_captype[ticker]
+                    else:
+                        return 'UNK_captype'
                 if value_name == "isin":
                     return self.amfi_get_isin_by_ticker(ticker)
         except KeyError:
@@ -289,10 +313,78 @@ class Amfi(Database):
 
     def amfi_get_isin_by_ticker(self, ticker):
         try:
-            amfi_isin = self.amfi_ticker_isin_dict[ticker]
-            if amfi_isin:
+            if ticker in self.amfi_ticker_isin_dict:
+                amfi_isin = self.amfi_ticker_isin_dict[ticker]
                 return amfi_isin
         except KeyError:
             print('KeyError ', ticker)
             traceback.print_exc()
         return 'UNK_ISIN'
+
+
+if __name__ == "__main__":
+
+    def main():
+        print('in main')
+
+        parser = argparse.ArgumentParser(description='Process arguments')
+        # dest= not required as option itself is the destination in args
+        parser.add_argument('-l', '--log_level', default='INFO', help='DEBUG|INFO|WARNING|ERROR|CRITICAL', type=str,
+                            choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
+        parser.add_argument('-d', '--debug_level', default='0', help='debug level 0|1|2|3', type=int,
+                            choices=[0, 1, 2, 3])
+        parser.add_argument('-t', '--truncate_table', default='False', help='specify to truncate', action='store_true')
+        parser.add_argument('-i', '--in_files', required=True, nargs='+', dest='in_files', help='in files')
+        parser.add_argument('-o', '--out_files', required=True, nargs='+', dest='out_files', help='out files')
+        parser.add_argument('-s', '--save_to_db', default='True', help='save data to db', action='store_true')
+        parser.add_argument('-x', '--export_to_file', default='True', help='export data to file', action='store_true')
+        parser.add_argument('-p', '--pretty_dump', default='True', help='pretty dump', action='store_true')
+        args = parser.parse_args()
+
+        log_level = args.log_level
+        truncate_table = args.truncate_table
+        save_to_db = args.save_to_db
+        export_to_file = args.export_to_file
+        pretty_dump = args.pretty_dump
+
+        # dummy assignment
+        in_filename_phase = []
+        out_filename_phase = []
+        # use the argument as pattern
+        for index, filename in enumerate(args.in_files):
+            print('index = ', index, filename);
+            in_filename_phase.append(filename)
+
+        for index, filename in enumerate(args.out_files):
+            print('index = ', index, filename);
+            out_filename_phase.append(filename)
+
+        # Main caller
+        program_name = sys.argv[0]
+
+        if len(sys.argv) < 4:
+            print("usage: " + program_name + " <debug_level : 1-4> <amfi.csv> ... ")
+            sys.exit(1)
+
+        print('args :', len(sys.argv))
+
+        amfi = Amfi()
+
+        amfi.set_log_level(log_level)
+
+        if truncate_table:
+            amfi.amfi_table_reload(truncate_table)
+
+        if save_to_db:
+            amfi.amfi_store_data_to_db(in_filename_phase[0])
+
+        amfi.amfi_load_data_from_db()
+
+        amfi.amfi_export(export_to_file, out_filename_phase[0])
+
+        amfi.amfi_dump(pretty_dump, out_filename_phase[1])
+
+        print('end of main')
+
+
+    main()
