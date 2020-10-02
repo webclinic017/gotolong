@@ -1,4 +1,5 @@
 nach_name, nach_ticker
+Accltd, ACC
 Adani ports and spec, ADANIPORTS
 All cargo logistics, ALLCARGO
 Amararajaint, AMARAJABAT
@@ -8,7 +9,7 @@ Apollo hospitals ent, APOLLOHOSP
 Asahi india glass li, ASAHIINDIA
 Asian pnt, ASIANPAINT
 Asianpaints, ASIANPAINT
-Bajaj holdings & inv, BAJAJHLDNG
+Bajaj holdings &, BAJAJHLDNG
 Balkrishna industris, BALKRISIND
 Balkrishnaindustries, BALKRISIND
 Balrampurchinimills, BALRAMCHIN
@@ -30,14 +31,17 @@ Cox & kings, COX&KINGS
 Cox & kings limited, COX&KINGS
 Cox & kings ltd, COX&KINGS
 Cox and kings ltd, COX&KINGS
+Dabur india, DABUR
 Dr lal pathlabs, LALPATHLAB
 Dr lal pathlabs lim, LALPATHLAB
 Dr reddy's laborato, DRREDDY
+Elxsi, TATAELXSI
 Future lifestyle fas, FLFL
 Glaxo consumer, GSKCONS
 Glaxo pharma, GLAXO
 Hat int, HATSUN
 Hcil, HEIDELBERG
+Hdfc amcl, HDFCAMC
 Hdfc bank ltd, HDFCBANK
 Hdfc interim, HDFC
 Hdfc life insurance, HDFCLIFE
@@ -45,9 +49,11 @@ Hdfc standard life, HDFCLIFE
 Hdfcasset management, HDFCAMC
 Hindustan unilever l, HINDUNILVR
 Hindustanaeronautics, HAL
+Hindustanunileverltd, HINDUNILVR
 Hppl, PAPERPROD
 Icici pru, ICICIPRULI
-Iifl holdings limite, IIFL
+Ihfl, IBULHSGFIN
+Iifl holdings, IIFL
 Iifl securities, IIFLSEC
 Iifl wealth manageme, IIFLWAM
 Indiabulls housing, IBULHSGFIN
@@ -55,14 +61,17 @@ Indian oil corpn, IOC
 Indian oil corpn ltd, IOC
 Indianulls housing, IBULHSGFIN
 Indraprastha gas lim, IGL
+Infoedge, NAUKRI
 Infoedge india limi, NAUKRI
-Jk tyre and industri, JKTYRE
+Infosys, INFY
+Jk tyre and, JKTYRE
 Johnson controlshit, JCHAC
-Jubliant foodworks l, JUBLFOOD
-Ksb pumps limited, KSB
+Jubliant foodworks, JUBLFOOD
+Ksb pumps, KSB
 L&t finance holdings, L&TFH
 L&t technology serv, LTTS
 L&t technology servi, LTTS
+Larsen & toubro, LT
 Larsen & toubro info, LTI
 Larsen & toubro limi, LT
 Larsen & toubro ltd, LT
@@ -72,8 +81,8 @@ Mahindra & mahindra, M&M
 Mahindra and mahindr, M&M
 Mahindra holidays &, MHRIL
 Mahindra logistics l, MAHLOG
-Mfl q fy, MANAPPURAM
-Mfl th fy, MANAPPURAM
+Mfl q, MANAPPURAM
+Mfl th, MANAPPURAM
 Motherson sumi syste, MOTHERSUMI
 Muthoot fin ltd, MUTHOOTFIN
 Name_alias, TICKER_REAL
@@ -87,9 +96,10 @@ Power grid corpn, POWERGRID
 Power grid corporati, POWERGRID
 Power grid corppowergrid corporatio, POWERGRID
 Powergrid corp ltd, POWERGRID
-Praxis home retail l, PRAXIS
+Praxis home retail, PRAXIS
 Prestige estates pro, PRESTIGE
 Procter & gamble hyg, PGHH
+Puravankara projects, PURVA
 Rajesh expo, RAJESHEXPO
 Rural eletrification, RECLTD
 Sbi life insurance c, SBILIFE
@@ -102,15 +112,18 @@ Sun pharmaceutical i, SUNPHARMA
 T power, TATAPOWER
 Talwalkars better va, TALWALKARS
 Talwalkars lifestyle, TALWGYM
+Tata consumer frac, TATACONSUM
 Tata steel fp, TATASTEEL
+Tatacof, TATACOFFEE
 Tatacoffe, TATACOFFEE
+Tatasteel fp, TATASTEEL
 Tatasteelfp, TATASTEEL
 Tcl, TATACHEM
 Tcoffee, TATACOFFEE
 Tcook, THOMASCOOK
 Tcs interim, TCS
 Tcs sp, TCS
-Tgbl, TATAGLOBAL
+Tgbl, TATACONSUM
 The indian hotels co, INDHOTEL
 The new india assura, NIACL
 Ti financial holding, CHOLAHLDNG
@@ -119,11 +132,13 @@ Tmotorsos f, TATAMOTORS
 Tp hdfc std lifins, HDFCLIFE
 Tpl, TATAPOWER
 Tpower, TATAPOWER
+Tpowerf, TATAPOWER
 Tube investments of, TIINDIA
 Tvs motor company l, TVSMOTOR
 Tvssrii, TVSSRICHAK
 Ubl, UBL
 Usl, UNITDSPR
+Venky's, VENKEYS
 Venky's india ltd, VENKEYS
 Vguard industries l, VGUARD
 Vip industries limit, VIPIND

@@ -59,7 +59,7 @@ dividend.set_debug_level(debug_level)
 if truncate_table:
     dividend.dividend_table_reload(truncate_table)
 
-dividend.amfi_load_db()
+dividend.amfi_load_data_from_db()
 
 dividend.nach_load_db()
 
@@ -75,3 +75,4 @@ dividend.dividend_print_phase3(out_filename_phase[3])
 dividend.dividend_print_phase4(out_filename_phase[4])
 dividend.dividend_print_phase5(out_filename_phase[5])
 dividend.dividend_print_phase6(out_filename_phase[6])
+dividend.dividend_print_phase7(out_filename_phase[7])

@@ -20,8 +20,8 @@ IN_FILE_ALIASES=$CONFIG_DATA_LOC/nach-data/nach-aliases.csv
 
 # excluded all : as it doesn't work on windows
 # for FY in fy1617 fy1718 fy1819 fy1920 all
-# for FY in fy1617 fy1718 fy1819 fy1920 fy2021 all
-for FY in all 
+# for FY in all 
+for FY in fy1617 fy1718 fy1819 fy1920 fy2021 all
 do
     mkdir -p ${OUT_DIR}/${FY}
 
@@ -40,12 +40,13 @@ do
     OUT_FILE_4=$OUT_DIR/${FY}/${FY}-sort_amount.csv
     OUT_FILE_5=$OUT_DIR/${FY}/${FY}-monthly_dividend.csv
     OUT_FILE_6=$OUT_DIR/${FY}/${FY}-comp_monthly_dividend.csv
+    OUT_FILE_7=$OUT_DIR/${FY}/${FY}-missing-nach-aliases.csv
 
     if test ! -e ${IN_FILE_1}
     then
         echo "error: file doesn't exist : ${IN_FILE_1}"
     fi
 
-    python dividend_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_BANK_STMT} -a ${IN_FILE_ALIASES} -o ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6}
+    python dividend_invoke.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_BANK_STMT} -a ${IN_FILE_ALIASES} -o ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7}
 
 done

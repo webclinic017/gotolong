@@ -33,6 +33,7 @@ class Dividend(Amfi, Nach):
         self.dividend_cumm_comp_kv = {}
         self.company_orig={}
         self.company_name_pre_alias = {}
+        self.add_nach_ticker = {}
         self.dividend_year_list = []
         self.total_dividend = 0
         self.dividend_records = []
@@ -100,18 +101,25 @@ class Dividend(Amfi, Nach):
     def dividend_company_name_normalize(self, company_name):
         # old orig name
         orig_name = company_name
+
+        company_name = company_name.upper()
+
         # capitalize
         company_name = company_name.capitalize()
+
         # remove . (TCS.) and hyphen (2017-2018), Lupin$
         company_name = re.sub('\.|-|\$','', company_name)
         # remove 1STINTDIV, 2NDINTDIV, 3RDINTDIV
-        company_name = re.sub('1st|2nd|3rd','', company_name)
+        company_name = re.sub('1st|2nd|3rd', '', company_name, flags=re.IGNORECASE)
         # remove FINALDIV etc
-        company_name = re.sub('final div|final','', company_name)
-        company_name = re.sub('fin div|findiv','', company_name)
-        company_name = re.sub('int div|intdiv','', company_name)
+        company_name = re.sub('final div|final', '', company_name, flags=re.IGNORECASE)
+        company_name = re.sub('fin div|findiv', '', company_name, flags=re.IGNORECASE)
+        company_name = re.sub('int div|intdiv', '', company_name, flags=re.IGNORECASE)
         # remove words like DIV, DIVIDEND
-        company_name = re.sub('div\.|dividend|div','', company_name)
+        company_name = re.sub('div\.|dividend|div', '', company_name, flags=re.IGNORECASE)
+
+        # remove payout by
+        company_name = re.sub('Payout by', '', company_name)
         # remove any numbers like year 2017, 2018 etc
         company_name = re.sub('\d*','', company_name)
         # remove any characters after (  : colgatepalomolive (india)
@@ -121,23 +129,39 @@ class Dividend(Amfi, Nach):
         # remove leading and trailing space
         company_name = company_name.strip()
 
+        # remove of india
+        company_name = re.sub(' of ', ' ', company_name, flags=re.IGNORECASE)
+        # remove india - from end
+        company_name = re.sub(' india$', ' ', company_name, flags=re.IGNORECASE)
+        # remove india in the middle
+        company_name = re.sub(' india ', ' ', company_name, flags=re.IGNORECASE)
+
+        # special payment
+        company_name = re.sub(' SP$', '', company_name, flags=re.IGNORECASE)
+
+        # INTERIM
+        company_name = re.sub(' INTERIM$', '', company_name, flags=re.IGNORECASE)
+        company_name = re.sub(' INT$', '', company_name, flags=re.IGNORECASE)
+
+        company_name = re.sub(' FY$', '', company_name, flags=re.IGNORECASE)
+
+        # removed LIMITED, LTD, LIMITE etc
+        company_name = re.sub(' LIMITED$| LTD$| LIMITE$', '', company_name, flags=re.IGNORECASE)
+
+        # LIMIT$, LIMI$, LIM$, LI$, L$
+        company_name = re.sub(' LIMIT$| LIMI$| LIM$| LI$| L$', '', company_name, flags=re.IGNORECASE)
+
+        # cor$, corp.*$
+        company_name = re.sub(' COR$| CORP.*$', '', company_name, flags=re.IGNORECASE)
+
+        # in.*$ industries
+        company_name = re.sub(' IN.*$', '', company_name, flags=re.IGNORECASE)
+
+        # remove &
+        # company_name = re.sub('&', '', company_name, flags=re.IGNORECASE)
+
         name_before_resolve_alias = company_name
         company_name = self.dividend_resolve_alias(company_name)
-
-
-        # remove limited, ltd etc
-        company_name = re.sub('limited|ltd','', company_name)
-
-        # remove incomplete word
-        # remove last word which will be mostly incomplete
-        if len(company_name) == 20:
-            company_name = company_name.rsplit(' ', 1)[0]
-
-        # remove of india
-        company_name = re.sub(' of india','', company_name)
-        # remove india
-        company_name = re.sub(' india','', company_name)
-
 
         self.company_orig[company_name] = orig_name
         self.company_name_pre_alias[company_name] = name_before_resolve_alias
@@ -223,7 +247,13 @@ class Dividend(Amfi, Nach):
                     print('company is ticker', ticker)
                 company_name = ticker
             else:
-                print('add ticker alias for', company_name, ':', self.company_name_pre_alias[company_name], ':')
+                pre_alias_name = self.company_name_pre_alias[company_name]
+                if pre_alias_name in self.add_nach_ticker:
+                    pass
+                else:
+                    self.add_nach_ticker[pre_alias_name] = 'yes'
+                    if self.debug_level > 1:
+                        print('add nach ticker alias for', company_name, ':', pre_alias_name, ':')
 
             new_row = (div_date_iso, txn_remarks, deposit_amount, ticker, isin)
             row_bank.append(new_row)
@@ -570,6 +600,16 @@ class Dividend(Amfi, Nach):
         fh.writelines(lines)
         return
 
+    def dividend_print_missing_nach_alises(self, out_filename):
+        lines = []
+        fh = open(out_filename, "w")
+        for comp_name in sorted(self.add_nach_ticker.keys()):
+            p_str = comp_name
+            p_str += '\n'
+            lines.append(p_str)
+        fh.writelines(lines)
+        return
+
     # name_only
     def dividend_print_phase1(self, out_filename):
         self.dividend_print_phase0(out_filename, "name_only")
@@ -593,3 +633,7 @@ class Dividend(Amfi, Nach):
     # comp monthly dividend
     def dividend_print_phase6(self, out_filename):
         self.dividend_print_phase0(out_filename, "comp_monthly_dividend")
+
+    # missing nach ticker aliases
+    def dividend_print_phase7(self, out_filename):
+        self.dividend_print_missing_nach_alises(out_filename)
