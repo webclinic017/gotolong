@@ -7,6 +7,8 @@ CONFIG_REPORTS_LOC=`python -m config reports`
 CONFIG_PROFILE_DATA_LOC=`python -m config profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m config profile_reports`
 
+NSE_HOLIDAY_LIST=$CONFIG_REPORTS_LOC/nse-reports/nse-reports-holiday-list.txt
+
 DOWNLOAD_DIR=${PROJECT_ROOT}/download-data
 
 if [ -n "$1" ]
@@ -33,6 +35,35 @@ then
 
     # 11082020 - 11 aug 2020
     last_working_date=`date -d "$look_back day ago" +'%d%m%Y'`
+    last_working_day=`date -d "$look_back day ago" +'%d%m'`
+    last_working_year=`date -d "$look_back day ago" +'%Y'`
+
+    grep -q $last_working_year $NSE_HOLIDAY_LIST
+    if test $? -ne 0;
+    then
+        echo "please upload the holiday list of 2020"
+        exit 1
+    fi
+
+    grep -q $last_working_day $NSE_HOLIDAY_LIST
+    if test $? -eq 0;
+    then
+        echo "holiday found... adjusting last working day"
+    fi
+    # better to check it against holiday list - 2 Oct 2020
+    # TODO  - handle entire holiday list - year wise
+    # 2nd oct, 15th aug, 26 jan
+    if [ $last_working_day == "0210" -o $last_working_day == "2601" -o $last_working_day == "1508" ];
+    then
+        # Today is Tuesday and holiday on monday (last working date)
+        # TODO - handle multiple holidays clubbed together
+        if [ $day_or_week -eq 2 ] ; then
+            look_back=`expr $look_back + 3`
+        else
+            look_back=`expr $look_back + 1`
+        fi
+        last_working_date=`date -d "$look_back day ago" +'%d%m%Y'`
+    fi
 
     if [ -e ${DOWNLOAD_DIR}/nse_fetch_date.txt ]; then
         nse_fetch_date=`cat ${DOWNLOAD_DIR}/nse_fetch_date.txt`
@@ -43,7 +74,6 @@ then
     # do not fetch again if data has been already fetched for previous day
     if [ ${last_working_date} != "$nse_fetch_date" ] ;
     then
-        echo ${last_working_date} > ${DOWNLOAD_DIR}/nse_fetch_date.txt
         # 52-week low and high
         # https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
 
@@ -63,6 +93,7 @@ then
         # unzip will unzip .csv to current directory
         mv cm${LW_DATE_2}bhav.csv ${DOWNLOAD_DIR}
         rm ${DOWNLOAD_DIR}/cm${LW_DATE_2}bhav.csv.zip
+        echo ${last_working_date} > ${DOWNLOAD_DIR}/nse_fetch_date.txt
     fi
 
 fi

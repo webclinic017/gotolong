@@ -1,249 +1,249 @@
 ticker,comp_name,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,reco_type,reco_cause
-RELIANCE,Reliance industries,1656.6,2218.0,866.98,2369.35,156,-25,4,15,16,-1,HOLD, der
-TCS,Tata consultancy services,2145.7,2429.0,1506.05,2555.0,61,-12,7,15,31,-16,BUY,ALL
-HDFCBANK,Hdfc bank,1250.1,1058.0,738.75,1305.5,43,18,7,15,32,-17,SALE, der
-HINDUNILVR,Hindustan unilever,2216.2,2068.0,1757.3,2614.3,18,7,6,15,27,-12,BUY,ALL
-HDFC,Housing development finance corplt,2163.9,1685.0,1473.45,2499.9,14,28,5,15,25,-10,SALE, der
-INFY,Infosys,782.6,1010.9,509.25,1037.0,99,-23,6,15,31,-16,BUY,ALL
-BHARTIARTL,Bharti airtel,656.9,442.4,325.5,612.0,36,48,4,15,17,-2,SALE, der roce3 dpr2 profit5
-KOTAKBANK,Kotak mahindra bank,1521.9,1282.0,1001.0,1740.0,28,19,3,15,6,9,SALE, dpr2
-ICICIBANK,Icici bank,492.5,363.05,268.3,552.2,35,36,4,15,12,3,SALE, der profit5
-ITC,Itc,251.4,173.65,134.6,266.3,29,45,6,15,42,-27,BUY,ALL
-SBIN,State bank,295.2,187.45,149.45,351.0,25,58,2,15,16,-1,SALE, der dpr2
-BAJFINANCE,Bajaj finance,2910.2,3340.0,1783.0,4923.4,87,-13,25,15,3,12,SALE, der
-MARUTI,Maruti suzuki,5671.5,6711.9,4001.1,7758.7,68,-15,6,15,26,-11,SALE, sales2
-ASIANPAINT,Asian paints,1822.0,1953.0,1431.2,2069.95,36,-7,4,15,15,0,BUY,ALL
-NESTLEIND,Nestle,-,15719.0,12200.0,18369.9,29,-,-,15,0,15,-,-
-AXISBANK,Axis bank,597.6,438.05,286.0,765.85,53,36,-,15,0,15,SALE, der dpr2 profit5
-HCLTECH,Hcl technologies,608.8,834.0,375.25,849.9,122,-27,9,15,6,9,BUY,ALL
-LT,Larsen toubro,1361.3,905.0,661.0,1496.45,37,50,6,15,32,-17,SALE, der
-DMART,Avenue supermarts,2065.9,2100.0,1700.0,2560.0,24,-2,3,15,5,10,SALE, dpr2
-WIPRO,Wipro,230.3,311.55,159.4,324.5,95,-26,18,15,7,8,HOLD, roce3 dpr2
-ONGC,Oil natural gas corporation,109.7,72.1,50.0,149.65,44,51,6,15,25,-10,SALE, profit5
-ULTRACEMCO,Ultratech cement,4366.9,3938.0,2910.0,4754.1,35,11,2,15,19,-4,SALE, dpr2
-BAJAJFINSV,Bajaj finserv,8476.0,5991.3,3985.3,9950.0,50,41,36,15,6,9,SALE, der dpr2
-HDFCLIFE,Hdfc life insurance company,588.8,582.65,340.0,647.6,71,1,3,15,10,5,SALE, roce3
-SUNPHARMA,Sun pharmaceutical industries,509.6,509.9,312.0,564.75,63,0,6,15,21,-6,SALE, profit5
-NTPC,Ntpc,128.0,87.75,73.2,125.0,20,47,6,15,23,-8,SALE, der
-COALINDIA,Coal,222.7,120.0,113.9,217.55,5,85,6,15,25,-10,BUY,ALL
-TITAN,Titan company,1054.6,1136.0,720.9,1389.95,58,-7,3,15,8,7,BUY,ALL
-POWERGRID,Power grid corporation,218.8,168.0,122.15,211.0,38,30,6,15,22,-7,SALE, der
-IOC,Indian oil corporation,130.3,75.85,71.15,156.0,7,73,6,15,22,-7,SALE, profit5
-BPCL,Bharat petroleum,446.6,384.45,252.0,549.0,53,16,6,15,6,9,SALE, der profit5
-DABUR,Dabur,488.4,503.05,386.05,528.0,30,-3,4,15,5,10,BUY,ALL
-SBILIFE,Sbi life insurance company,911.5,815.9,519.4,1030.0,57,12,3,15,10,5,SALE, roce3
-BAJAJ-AUTO,Bajaj auto,2875.0,2964.0,1788.65,3315.15,66,-3,6,15,12,3,BUY,ALL
-SHREECEM,Shree cements,19658.4,19640.0,15410.0,25355.0,27,0,18,15,18,-3,SALE, roce3
-HINDZINC,Hindustan zinc,228.2,210.25,116.05,258.95,81,9,6,15,20,-5,SALE, sales2 profit5
-PIDILITIND,Pidilite industries,1412.8,1435.0,1185.55,1709.9,21,-2,4,15,5,10,BUY,ALL
-BRITANNIA,Britannia industries,3613.0,3731.05,2100.0,4010.0,78,-3,3,15,12,3,BUY,ALL
-ADANIPORTS,Adani ports special economic zone,380.0,340.8,203.0,428.85,68,12,27,15,2,13,SALE, der pledge
-GODREJCP,Godrej consumer products,589.8,713.5,425.1,772.0,68,-17,24,15,2,13,HOLD, roce3 sales2
-TECHM,Tech mahindra,654.5,778.0,471.4,845.9,65,-16,3,15,11,4,BUY,ALL
-ICICIPRULI,Icici prudential life insurance company,438.4,421.0,226.1,537.3,86,4,3,15,11,4,SALE, roce3 profit5
-HDFCAMC,Hdfc asset management company,2999.3,2273.0,1962.0,3844.0,16,32,26,15,14,1,BUY,ALL
-DRREDDY,Dr reddys laboratories,3930.7,5125.0,2495.05,5512.65,105,-23,30,15,5,10,SALE, profit5
-DIVISLAB,Divis laboratories,2059.0,3089.0,1595.05,3389.0,94,-33,-,15,0,15,BUY,ALL
-ICICIGI,Icici lombard general insurance company,1172.7,1267.0,805.0,1440.4,57,-7,3,15,11,4,BUY,ALL
-M&M,Mahindra mahindra,580.0,614.2,245.4,666.6,150,-6,6,15,19,-4,SALE, der profit5
-SBICARD,Sbi cards payment services,643.0,840.65,495.0,868.0,70,-23,3,15,6,9,SALE, der
-INDUSINDBK,Indusind bank,1088.9,556.0,235.55,1596.55,136,96,-,15,0,15,SALE, der
-BANDHANBNK,Bandhan bank,458.5,281.5,152.2,650.0,85,63,3,15,3,12,SALE, der
-JSWSTEEL,Jsw steel,209.4,276.2,132.5,296.75,108,-24,6,15,7,8,HOLD, der roce3 pledge
-BERGEPAINT,Berger paints,490.0,588.5,389.35,597.0,51,-17,3,15,6,9,BUY,ALL
-EICHERMOT,Eicher motors,19028.3,2182.0,1245.01,2387.25,75,772,18,15,23,-8,BUY,ALL
-GAIL,Gail,130.8,88.15,65.0,139.75,36,48,6,15,21,-6,BUY,ALL
-DLF,Dlf,219.0,157.7,114.55,266.55,38,39,2,15,10,5,SALE, dpr2 sales2 profit5
-INDIGO,Interglobe aviation,855.3,1270.9,771.3,1898.85,65,-33,2,15,11,4,SALE, dpr2
-SIEMENS,Siemens,1512.7,1246.1,947.9,1717.45,31,21,4,15,5,10,HOLD, roce3 sales2 profit5
-HEROMOTOCO,Hero motocorp,2634.1,3087.0,1475.0,3181.35,109,-15,6,15,33,-18,SALE, sales2
-MCDOWELL-N,United spirits,-,528.05,442.65,742.7,19,-,22,15,14,1,-,-
-CIPLA,Cipla,624.1,773.0,355.3,819.3,118,-19,21,15,3,12,HOLD,
-GRASIM,Grasim industries,682.0,735.0,385.05,836.9,91,-7,5,15,3,12,SALE, der
-VEDL,Vedanta,128.0,139.5,60.2,167.0,132,-8,6,15,22,-7,SALE, sales2
-TATASTEEL,Tata steel,373.1,361.25,250.85,506.0,44,3,6,15,18,-3,SALE, der dpr2
-MARICO,Marico,329.4,361.05,234.0,400.9,54,-9,10,15,11,4,BUY,ALL
-TATAMOTORS,Tata motors,116.7,133.1,63.5,201.7,110,-13,6,15,8,7,SALE, der roce3 dpr2 sales2 profit5
-BIOCON,Biocon,332.3,450.0,212.2,463.9,112,-26,15,15,1,14,HOLD, dpr2
-INFRATEL,Bharti infratel,186.0,185.8,120.05,296.5,55,1,6,15,6,9,SALE, profit5
-AMBUJACEM,Ambuja cements,199.0,211.9,136.55,231.85,55,-6,11,15,12,3,HOLD, profit5
-TORNTPHARM,Torrent pharmaceuticals,2046.8,2698.5,1555.0,3031.2,74,-24,-,15,0,15,HOLD, der roce3 pledge
-COLPAL,Colgate palmolive,1423.5,1442.2,1065.0,1642.6,35,-1,3,15,10,5,BUY,ALL
-PETRONET,Petronet lng,309.1,222.15,170.4,297.75,30,39,6,15,14,1,BUY,ALL
-HAVELLS,Havells,607.1,685.0,447.05,738.6,53,-11,11,15,11,4,BUY,ALL
-BOSCHLTD,Bosch,11431.3,13421.1,7850.0,17260.3,71,-15,6,15,30,-15,SALE, sales2
-LUPIN,Lupin,918.0,1004.75,504.75,1122.3,99,-9,23,15,10,5,SALE, sales2 profit5
-UPL,Upl,555.2,508.2,240.15,617.75,112,9,6,15,8,7,SALE, der
-PGHH,Procter gamble hygiene health care,9995.0,9877.0,8400.0,12774.9,18,1,9,15,20,-5,BUY,ALL
-ADANIGREEN,Adani green energy,-,680.1,52.1,697.9,1205,-,-,15,0,15,-,-
-HINDALCO,Hindalco industries,174.8,167.85,84.9,221.2,98,4,6,15,6,9,HOLD, der dpr2
-AUROPHARMA,Aurobindo pharma,775.8,803.0,288.85,967.5,178,-3,17,15,3,12,HOLD, roce3 dpr2
-HINDPETRO,Hindustan petroleum corporation,280.6,183.75,150.0,328.75,22,53,6,15,14,1,HOLD, der roce3
-MUTHOOTFIN,Muthoot finance,1106.8,1089.05,476.8,1405.75,128,2,6,15,5,10,SALE, der
-ABBOTINDIA,Abbott,-,16350.0,10350.0,18679.8,58,-,-,15,0,15,-,-
-IGL,Indraprashtha gas,492.0,402.75,284.05,534.2,42,22,25,15,1,14,BUY,ALL
-MOTHERSUMI,Motherson sumi systems,118.7,112.7,48.65,151.0,132,5,6,15,7,8,SALE, profit5
-PNB,Punjab national bank,64.7,30.15,26.3,69.65,15,113,-,15,0,15,SALE, dpr2 profit5
-NAUKRI,Info edge,2510.4,3614.6,1581.1,3618.05,129,-31,3,15,6,9,BUY,ALL
-CADILAHC,Cadila healthcare,352.0,390.05,202.0,423.0,93,-10,6,15,5,10,SALE, profit5
-LTI,Larsen toubro infotech,2048.6,2494.6,1210.0,2794.35,106,-18,10,15,7,8,BUY,ALL
-BAJAJHLDNG,Bajaj holdings investment,4654.0,2495.45,1460.15,3950.0,71,87,5,15,5,10,SALE, roce3 profit5
-GICRE,General insurance corporation,185.0,125.05,81.5,334.05,53,48,6,15,15,0,SALE, sales2 profit5
-BANKBARODA,Bankbaroda,85.7,43.35,36.0,108.25,20,98,-,15,0,15,SALE, der dpr2 profit5
-IDBI,Idbi bank,-,35.05,17.25,56.2,103,-,-,15,0,15,-,-
-ALKEM,Alkem laboratories,2494.7,2750.0,1871.0,3090.0,47,-9,-,15,0,15,BUY,ALL
-UBL,United breweries,1192.2,968.35,749.5,1366.05,29,23,10,15,11,4,BUY,ALL
-NMDC,Nmdc,103.7,81.85,61.55,139.7,33,27,6,15,13,2,SALE, profit5
-ADANITRANS,Adani transmission,-,251.15,147.5,366.4,70,-,-,15,0,15,-,-
-MRF,Mrf,-,59110.0,49915.1,73565.7,18,-,-,15,0,15,-,-
-PEL,Piramal enterprises,1859.5,1280.0,606.85,1837.45,111,45,6,15,14,1,SALE, der profit5
-TATACONSUM,Tata consumer products,388.0,516.3,213.7,591.95,142,-25,3,15,7,8,HOLD,
-CONCOR,Container corporation,538.9,381.0,263.4,666.0,45,41,7,15,5,10,SALE, sales2 profit5
-WHIRLPOOL,Whirlpool,2185.0,2106.0,1343.8,2555.0,57,4,30,10,3,7,HOLD, roce3 profit5
-PFC,Power finance corporation,-,88.15,74.15,133.4,19,-,6,10,14,-4,-,-
-HONAUT,Honeywell automation,-,33000.0,20148.6,39524.9,64,-,18,10,23,-13,-,-
-ACC,Acc,1512.9,1375.5,895.15,1654.5,54,10,9,10,11,-1,BUY,ALL
-GLAXO,Glaxosmithkline pharmaceuticals,1391.0,1573.85,962.65,1807.5,63,-12,24,10,3,7,SALE, profit5
-KANSAINER,Kansai nerolac paints,450.5,480.1,293.7,573.0,63,-6,4,10,5,5,BUY,ALL
-YESBANK,Yes bank,-,13.55,5.65,87.3,140,-,-,10,0,10,-,-
-PAGEIND,Page industries,20597.0,20613.8,16254.0,26882.6,27,0,18,10,24,-14,BUY,ALL
-3MINDIA,3m,-,18420.0,15700.0,25200.0,17,-,-,10,0,10,-,-
-RECLTD,Rec,-,101.85,78.75,156.5,29,-,6,10,16,-6,-,-
-ABB,Abb,977.0,864.0,722.0,1583.9,20,13,3,10,6,4,BUY,ALL
-JUBLFOOD,Jubilant foodworks,1516.3,2422.05,1138.25,2423.6,113,-37,3,10,6,4,BUY,ALL
-NHPC,Nhpc,25.0,20.5,15.1,29.1,36,25,6,10,13,-3,HOLD, der
-OFSS,Oracle financial services software,3100.0,3045.0,1506.0,3240.0,102,2,-,10,0,10,BUY,ALL
-HAL,Hindustan aeronautics,-,778.5,470.0,1423.0,66,-,6,10,12,-2,-,-
-AUBANK,Au small finance bank,761.3,668.3,366.0,1218.0,83,14,-,10,0,10,SALE, der roce3 dpr2
-GODREJPROP,Godrej properties,-,890.0,505.0,1189.25,76,-,-,10,0,10,-,-
-IRCTC,Indian railway catering tourism corporation,1428.0,1364.8,625.0,1994.0,118,5,-,10,0,10,BUY,ALL
-SRF,Srf,4073.5,4197.6,2467.65,4475.0,70,-3,-,10,0,10,HOLD, der roce3 dpr2
-NIACL,The new assurance company,111.0,106.4,74.1,179.15,44,5,-,10,0,10,SALE, roce3
-PIIND,Pi industries,1727.3,1945.0,970.1,2160.0,100,-11,3,10,5,5,BUY,ALL
-APOLLOHOSP,Apollo hospitals enterprises,1407.0,2062.0,1047.05,2047.0,97,-32,23,10,8,2,HOLD, der pledge
-BALKRISIND,Balkrishna industries,1276.3,1443.0,679.0,1431.9,113,-12,8,10,5,5,BUY,ALL
-VBL,Varun beverages,712.7,712.2,482.2,870.0,48,0,13,10,3,7,HOLD, der roce3 profit5
-TRENT,Trent [lakme ],544.7,670.0,365.0,804.7,84,-19,3,10,5,5,HOLD,
-ADANIENT,Adani enterprises,140.0,300.3,116.4,322.4,158,-53,23,10,3,7,SALE, profit5
-SRTRANSFIN,Shriram transport finance co,1038.5,614.2,431.37,1340.2,42,69,5,10,4,6,SALE, der
-VOLTAS,Voltas,539.6,693.0,427.45,741.0,62,-22,4,10,5,5,BUY,ALL
-PFIZER,Pfizer,4960.7,5019.0,3095.0,5239.0,62,-1,17,10,5,5,BUY,ALL
-BAYERCROP,Bayer cropscience,-,5914.0,2925.0,6601.25,102,-,-,10,0,10,-,-
-BEL,Bharat electronics,102.6,97.75,56.0,122.1,75,5,6,10,20,-10,BUY,ALL
-BATAINDIA,Bata,1361.8,1349.0,1000.0,1895.45,35,1,3,10,6,4,BUY,ALL
-ZEEL,Zee entertainment enterprises,297.2,207.6,114.0,364.0,82,43,6,10,11,-1,BUY,ALL
-NAM-INDIA,Nippon life asset management,284.3,263.45,207.7,452.9,27,8,4,10,2,8,SALE, sales2
-GUJGASLTD,Gujarat gas,320.4,302.0,167.6,334.4,80,6,-,10,0,10,HOLD, der roce3 dpr2
-TVSMOTOR,Tvs motor company,363.8,474.0,240.1,504.0,97,-23,-,10,0,10,SALE, der
-IPCALAB,Ipca laboratories,1721.9,2075.0,844.65,2236.1,146,-17,-,10,0,10,BUY,ALL
-GILLETTE,Gillette,6373.3,5390.0,4450.0,8140.0,21,18,10,10,12,-2,BUY,ALL
-ASHOKLEY,Ashok leyland,68.7,76.65,33.7,87.5,127,-11,6,10,5,5,SALE, der sales2
-CHOLAFIN,Cholamandalam investment finance company,233.3,249.0,117.4,349.0,112,-6,5,10,3,7,SALE, der
-RAJESHEXPO,Rajesh exports,-,462.75,441.0,780.5,5,-,-,10,0,10,-,-
-COROMANDEL,Coromandel international,781.4,803.05,399.95,838.95,101,-3,3,10,5,5,HOLD, der roce3
-BHARATFORG,Bharat forge,372.7,452.0,207.5,533.9,118,-18,8,10,5,5,SALE, sales2 profit5
-SANOFI,Sanofi,7696.3,8489.9,5681.05,8989.0,49,-9,36,10,4,6,BUY,ALL
-L&TFH,L&t finance holdings,62.3,62.45,45.9,134.0,36,0,6,10,5,5,SALE, der
-ADANIPOWER,Adani power,-,37.25,23.0,73.8,62,-,-,10,0,10,-,-
-RELAXO,Relaxo footwears,749.4,661.95,480.0,830.0,38,13,3,10,6,4,BUY,ALL
-AARTIIND,Aarti industries,1004.8,1025.0,668.0,1229.0,53,-2,-,10,0,10,HOLD, der roce3
-SUNTV,Sun tv network,528.7,464.75,259.55,551.3,79,14,5,10,3,7,BUY,ALL
-ABCAPITAL,Aditya birla capital,84.0,64.35,37.35,115.35,72,31,-,10,0,10,SALE, der roce3 dpr2
-LICHSGFIN,Lic housing finance,379.9,282.9,185.25,486.75,53,34,6,10,14,-4,SALE, der
-IDEA,Vodafone idea,8.5,10.25,2.4,13.5,327,-20,-,10,0,10,SALE, der roce3 dpr2 profit5
-SUNDARMFIN,Sundaram finance,-,1310.0,982.05,1784.95,33,-,25,10,2,8,-,-
-BANKINDIA,Bank,67.0,42.35,30.4,79.8,39,60,-,10,0,10,SALE, roce3 dpr2 profit5
-RAMCOCEM,The ramco cements,677.9,740.0,455.0,884.25,63,-9,-,10,0,10,BUY,ALL
-UNIONBANK,Union bank,-,24.95,22.65,65.8,10,-,-,10,0,10,-,-
-OBEROIRLTY,Oberoi realty,517.2,405.0,290.0,584.0,40,28,-,10,0,10,HOLD, roce3 dpr2
-AIAENG,Aia engineering,1756.5,1726.95,1102.2,1989.95,57,2,-,10,0,10,BUY,ALL
-MPHASIS,Mphasis,945.1,1345.55,630.0,1419.85,114,-30,-,10,0,10,BUY,ALL
-ASTRAL,Astral poly technik,904.7,1150.0,745.65,1314.7,54,-21,-,10,0,10,HOLD, roce3 dpr2
-M&MFIN,Mahindra mahindra financial services,190.0,125.4,76.46,245.91,64,52,6,10,6,4,SALE, der
-CANBK,Canara bank,114.0,91.1,73.65,234.25,24,25,-,10,0,10,SALE, dpr2 profit5
-CROMPTON,Crompton greaves consumer electricals,260.5,258.5,177.3,301.45,46,1,-,10,0,10,SALE, pledge
-TORNTPOWER,Torrent power,4.0,316.4,231.95,368.9,36,-99,-,10,0,10,HOLD, der pledge
-ADANIGAS,Adani gas,130.0,192.6,76.6,215.0,151,-32,23,10,1,9,HOLD, roce3 dpr2 profit5
-IDFCFIRSTB,Idfc first bank,22.5,30.55,17.65,47.95,73,-27,-,10,0,10,SALE, der dpr2
-MINDTREE,Mindtree,883.4,1288.0,675.0,1342.0,91,-31,10,10,7,3,BUY,ALL
-LTTS,L&t technology services,1124.0,1640.0,995.0,1780.0,65,-31,10,10,6,4,BUY,ALL
-SUPREMEIND,Supreme industries,1205.0,1430.0,773.3,1474.0,85,-16,30,10,2,8,BUY,ALL
-SAIL,Steel authority,52.0,35.6,20.15,51.9,77,49,-,10,0,10,SALE, profit5
-ABFRL,Aditya birla fashion retail,151.3,131.15,96.04,282.67,37,15,-,10,0,10,SALE, roce3 dpr2
-EXIDEIND,Exide industries,199.6,164.1,124.7,208.25,32,21,11,10,10,0,HOLD,
-JINDALSTEL,Jindal steel power,176.7,184.3,62.0,238.75,197,-4,-,10,0,10,SALE, der roce3 dpr2 pledge
-ATUL,Atul,4663.0,6010.0,2923.2,7019.75,106,-22,-,10,0,10,BUY,ALL
-LALPATHLAB,Dr lal pathlabs,1314.0,1893.0,1179.55,2029.0,60,-31,3,10,5,5,BUY,ALL
-APLLTD,Alembic pharmaceuticals,870.3,984.1,434.8,1128.9,126,-12,-,10,0,10,BUY,ALL
-IOB,Indian overseas bank,-,9.6,6.05,13.75,59,-,-,10,0,10,-,-
-ISEC,Icici securities,507.3,473.6,203.6,568.9,133,7,6,10,2,8,SALE, sales2
-MFSL,Max financial services,555.8,622.7,276.35,641.75,125,-11,-,10,0,10,SALE, roce3 dpr2 profit5 pledge
-POLYCAB,Polycab,927.3,842.0,570.0,1182.0,48,10,-,10,0,10,BUY,ALL
-CUB,City union bank,200.3,136.25,110.0,249.35,24,47,-,10,0,10,HOLD, dpr2
-DALBHARAT,Dalmia bharat,778.3,775.25,402.7,919.0,93,0,-,10,0,10,SALE, roce3
-FEDERALBNK,Federal bank,77.1,50.5,35.7,96.95,41,54,-,10,0,10,HOLD, der
-SYNGENE,Syngene international,345.0,589.0,212.55,596.7,177,-41,-,10,0,10,SALE, dpr2
-CASTROLIND,Castrol,154.8,109.6,89.55,162.2,22,41,15,10,11,-1,BUY,ALL
-CUMMINSIND,Cummins,459.5,446.8,280.0,652.8,60,3,11,10,11,-1,SALE, profit5
-WABCOINDIA,Wabco,6282.0,5845.0,5011.0,7670.0,17,7,-,10,0,10,SALE, sales2
-SCHAEFFLER,Schaeffler,-,3615.0,3025.25,4959.85,19,-,11,10,10,0,-,-
-INDHOTEL,Indian hotels co,149.4,95.85,62.1,161.9,54,57,4,10,11,-1,HOLD,
-GSPL,Gujarat state petronet,271.9,196.25,146.15,263.8,34,38,-,10,0,10,HOLD, der roce3 dpr2
-MANAPPURAM,Manappuram finance,149.1,157.05,74.25,194.8,112,-5,17,10,2,8,SALE, der
-GMRINFRA,Gmr infrastructure,-,23.75,14.1,28.25,68,-,-,10,0,10,-,-
-GODREJIND,Godrej industries,500.0,413.0,233.4,479.0,77,21,5,10,3,7,SALE, der
-UCOBANK,Uco bank,-,12.7,8.4,22.4,51,-,-,10,0,10,-,-
-ENDURANCE,Endurance technologies,1098.7,1089.0,564.5,1204.95,93,1,-,10,0,10,BUY,ALL
-SUMICHEM,Sumitomo chemical,315.0,296.1,151.05,317.0,96,6,8,10,6,4,SALE, dpr2
-TATAPOWER,Tata power co,32.0,54.0,27.0,64.25,100,-41,6,10,10,0,SALE, der profit5
-AAVAS,Aavas financiers,-,1399.0,849.05,2101.0,65,-,-,10,0,10,-,-
-AJANTPHARM,Ajanta pharma,1693.3,1586.7,903.4,1759.95,76,7,-,10,0,10,BUY,ALL
-TATACOMM,Tata communications,595.0,860.3,200.0,935.0,330,-31,-,10,0,10,SALE, dpr2 profit5
-OIL,Oil,129.5,89.45,63.5,174.95,41,45,6,10,13,-3,HOLD, profit5
-CRISIL,Crisil,2023.0,1753.0,1052.7,2068.0,67,15,15,10,11,-1,BUY,ALL
-NATCOPHARM,Natco pharma,682.8,939.2,402.55,929.8,133,-27,-,10,0,10,SALE, sales2
-AMARAJABAT,Amara raja batteries,739.2,748.0,348.55,813.85,115,-1,6,10,10,0,HOLD, roce3 sales2 profit5
-BHEL,Bharat heavy electricals,33.3,31.9,18.4,61.1,73,6,6,10,18,-8,SALE, roce3 dpr2 sales2 profit5
-RBLBANK,Rbl bank,219.1,173.95,101.55,401.6,71,27,-,10,0,10,SALE, der
-EMAMILTD,Emami,250.9,355.0,130.95,407.55,171,-30,6,10,12,-2,SALE, profit5 pledge
-PHOENIXLTD,The phoenix mills,728.4,599.7,465.05,979.0,29,22,-,10,0,10,SALE, der
-THERMAX,Thermax,898.9,729.5,570.0,1171.1,28,23,-,10,0,10,BUY,ALL
-FORTIS,Fortis healthcare,-,137.05,113.1,169.0,21,-,-,10,0,10,-,-
-FRETAIL,Future retail,419.7,90.8,60.7,404.0,50,366,6,10,6,4,SALE, roce3 dpr2 pledge
-MGL,Mahanagar gas,1104.3,853.0,663.9,1246.2,28,29,-,10,0,10,BUY,ALL
-VINATIORGA,Vinati organics,896.6,1370.0,651.3,1355.0,110,-35,-,10,0,10,BUY,ALL
-IIFLWAM,Iifl wealth management,-,984.0,720.0,1663.95,37,-,-,10,0,10,-,-
-PRESTIGE,Prestige estates projects,311.0,248.95,133.65,426.0,86,25,2,10,11,-1,SALE, der
-ESCORTS,Escorts,941.9,1293.95,526.05,1280.7,146,-27,-,10,0,10,HOLD, roce3 dpr2
-MOTILALOFS,Motilal oswal financial services,741.5,639.4,426.0,905.4,50,16,-,10,0,10,SALE, der sales2
-AKZOINDIA,Akzo nobel,-,2067.0,1750.0,2500.0,18,-,-,10,0,10,-,-
-JKCEMENT,Jk cement,1412.6,1525.0,795.25,1615.0,92,-7,-,10,0,10,HOLD, der roce3
-HATSUN,Hatsun agro products,-,784.3,380.0,878.0,106,-,25,10,2,8,-,-
-SOLARINDS,Solar industries,1151.6,1046.5,773.05,1349.0,35,10,9,10,2,8,BUY,ALL
-GLENMARK,Glenmark pharmaceuticals,441.8,494.9,161.65,573.05,206,-11,6,10,4,6,HOLD, der roce3 dpr2
-HEXAWARE,Hexaware technologies,355.1,468.05,202.25,468.9,131,-24,-,10,0,10,BUY,ALL
-CENTRALBK,Central bank,-,16.0,10.1,25.5,58,-,-,10,0,10,-,-
+RELIANCE,Reliance industries,1656.6,2229.05,866.98,2369.35,157,-26,5,15,16,-1,HOLD, der
+TCS,Tata consultancy services,2145.7,2540.0,1506.05,2555.0,69,-16,8,15,31,-16,BUY,ALL
+HDFCBANK,Hdfc bank,1250.1,1108.0,738.75,1305.5,50,13,8,15,32,-17,SALE, der
+HINDUNILVR,Hindustan unilever,2216.2,2094.0,1757.3,2614.3,19,6,6,15,27,-12,BUY,ALL
+HDFC,Housing development finance corplt,2163.9,1787.8,1473.45,2499.9,21,21,5,15,25,-10,SALE, der
+INFY,Infosys,782.6,1018.7,509.25,1037.0,100,-23,6,15,31,-16,BUY,ALL
+BHARTIARTL,Bharti airtel,656.9,430.2,325.5,612.0,32,53,5,15,17,-2,SALE, der roce3 dpr2 profit5
+KOTAKBANK,Kotak mahindra bank,1521.9,1306.0,1001.0,1740.0,30,16,3,15,6,9,SALE, dpr2
+ICICIBANK,Icici bank,492.5,368.5,268.3,552.2,37,34,5,15,12,3,SALE, der profit5
+ITC,Itc,251.4,170.9,134.6,266.3,27,48,6,15,42,-27,BUY,ALL
+SBIN,State bank,295.2,190.2,149.45,351.0,27,55,2,15,16,-1,SALE, der dpr2
+BAJFINANCE,Bajaj finance,2910.2,3444.0,1783.0,4923.4,93,-16,25,15,3,12,SALE, der
+MARUTI,Maruti suzuki,5671.5,6795.0,4001.1,7758.7,70,-17,6,15,26,-11,SALE, sales2
+ASIANPAINT,Asian paints,1822.0,2044.05,1431.2,2069.95,43,-11,5,15,15,0,BUY,ALL
+NESTLEIND,Nestle,-,16000.0,12200.0,18369.9,31,-,-,15,0,15,-,-
+AXISBANK,Axis bank,597.6,442.05,286.0,765.85,55,35,-,15,0,15,SALE, der dpr2 profit5
+HCLTECH,Hcl technologies,608.8,813.7,375.25,849.9,117,-25,9,15,6,9,BUY,ALL
+LT,Larsen toubro,1361.3,901.5,661.0,1496.45,36,51,6,15,32,-17,SALE, der
+DMART,Avenue supermarts,2065.9,2175.0,1700.0,2560.0,28,-5,3,15,5,10,SALE, dpr2
+WIPRO,Wipro,230.3,313.3,159.4,324.5,97,-27,19,15,7,8,HOLD, roce3 dpr2
+ONGC,Oil natural gas corporation,109.7,68.9,50.0,149.65,38,60,6,15,25,-10,SALE, profit5
+ULTRACEMCO,Ultratech cement,4366.9,4100.0,2910.0,4754.1,41,6,2,15,19,-4,SALE, dpr2
+BAJAJFINSV,Bajaj finserv,8476.0,6050.0,3985.3,9950.0,52,40,37,15,6,9,SALE, der dpr2
+HDFCLIFE,Hdfc life insurance company,588.8,571.35,340.0,647.6,68,3,3,15,10,5,SALE, roce3
+SUNPHARMA,Sun pharmaceutical industries,509.6,507.55,312.0,564.75,63,0,6,15,21,-6,SALE, profit5
+NTPC,Ntpc,128.0,84.75,73.2,125.0,16,52,6,15,23,-8,SALE, der
+COALINDIA,Coal,222.7,117.0,113.9,217.55,3,90,6,15,25,-10,BUY,ALL
+TITAN,Titan company,1054.6,1196.55,720.9,1389.95,66,-12,3,15,8,7,BUY,ALL
+POWERGRID,Power grid corporation,218.8,164.25,122.15,211.0,34,33,6,15,22,-7,SALE, der
+IOC,Indian oil corporation,130.3,73.95,71.15,156.0,4,78,6,15,22,-7,SALE, profit5
+BPCL,Bharat petroleum,446.6,352.4,252.0,549.0,40,27,6,15,6,9,SALE, der profit5
+DABUR,Dabur,488.4,513.7,386.05,528.0,33,-5,4,15,5,10,BUY,ALL
+SBILIFE,Sbi life insurance company,911.5,819.5,519.4,1030.0,58,11,3,15,10,5,SALE, roce3
+BAJAJ-AUTO,Bajaj auto,2875.0,2999.0,1788.65,3315.15,68,-4,6,15,12,3,BUY,ALL
+SHREECEM,Shree cements,19658.4,20600.0,15410.0,25355.0,34,-5,19,15,18,-3,SALE, roce3
+HINDZINC,Hindustan zinc,228.2,208.2,116.05,258.95,79,10,6,15,20,-5,SALE, sales2 profit5
+PIDILITIND,Pidilite industries,1412.8,1464.0,1185.55,1709.9,23,-4,4,15,5,10,BUY,ALL
+BRITANNIA,Britannia industries,3613.0,3810.0,2100.0,4010.0,81,-5,3,15,12,3,BUY,ALL
+ADANIPORTS,Adani ports special economic zone,380.0,353.95,203.0,428.85,74,8,27,15,2,13,SALE, der pledge
+GODREJCP,Godrej consumer products,589.8,735.5,425.1,772.0,73,-20,24,15,2,13,HOLD, roce3 sales2
+TECHM,Tech mahindra,654.5,821.85,471.4,845.9,74,-20,3,15,11,4,BUY,ALL
+ICICIPRULI,Icici prudential life insurance company,438.4,424.95,226.1,537.3,88,3,3,15,11,4,SALE, roce3 profit5
+HDFCAMC,Hdfc asset management company,2999.3,2280.0,1962.0,3844.0,16,32,26,15,14,1,BUY,ALL
+DRREDDY,Dr reddys laboratories,3930.7,5120.0,2495.05,5512.65,105,-23,30,15,5,10,SALE, profit5
+DIVISLAB,Divis laboratories,2059.0,3068.05,1595.05,3389.0,92,-33,-,15,0,15,BUY,ALL
+ICICIGI,Icici lombard general insurance company,1172.7,1301.85,805.0,1440.4,62,-10,3,15,11,4,BUY,ALL
+M&M,Mahindra mahindra,580.0,609.1,245.4,666.6,148,-5,6,15,19,-4,SALE, der profit5
+SBICARD,Sbi cards payment services,643.0,838.0,495.0,868.0,69,-23,3,15,6,9,SALE, der
+INDUSINDBK,Indusind bank,1088.9,593.0,235.55,1596.55,152,83,-,15,0,15,SALE, der
+BANDHANBNK,Bandhan bank,458.5,286.8,152.2,650.0,88,60,3,15,3,12,SALE, der
+JSWSTEEL,Jsw steel,209.4,282.2,132.5,296.75,113,-26,6,15,7,8,HOLD, der roce3 pledge
+BERGEPAINT,Berger paints,490.0,589.15,389.35,599.85,51,-17,3,15,6,9,BUY,ALL
+EICHERMOT,Eicher motors,19028.3,2200.0,1245.01,2387.25,77,765,19,15,23,-8,BUY,ALL
+GAIL,Gail,130.8,88.55,65.0,139.75,36,48,6,15,21,-6,BUY,ALL
+DLF,Dlf,219.0,155.65,114.55,266.55,36,41,2,15,10,5,SALE, dpr2 sales2 profit5
+INDIGO,Interglobe aviation,855.3,1270.6,771.3,1888.85,65,-33,2,15,11,4,SALE, dpr2
+SIEMENS,Siemens,1512.7,1259.35,947.9,1717.45,33,20,4,15,5,10,HOLD, roce3 sales2 profit5
+HEROMOTOCO,Hero motocorp,2634.1,3155.05,1475.0,3222.05,114,-17,6,15,33,-18,SALE, sales2
+MCDOWELL-N,United spirits,-,521.5,442.65,742.7,18,-,22,15,14,1,-,-
+CIPLA,Cipla,624.1,775.8,355.3,819.3,118,-19,21,15,3,12,HOLD,
+GRASIM,Grasim industries,682.0,751.7,385.05,836.9,95,-9,5,15,3,12,SALE, der
+VEDL,Vedanta,128.0,136.95,60.2,166.1,127,-6,6,15,22,-7,SALE, sales2
+TATASTEEL,Tata steel,373.1,364.9,250.85,506.0,45,2,6,15,18,-3,SALE, der dpr2
+MARICO,Marico,329.4,365.0,234.0,400.9,56,-10,10,15,11,4,BUY,ALL
+TATAMOTORS,Tata motors,116.7,133.85,63.5,201.7,111,-13,6,15,8,7,SALE, der roce3 dpr2 sales2 profit5
+BIOCON,Biocon,332.3,454.0,220.6,463.9,106,-27,15,15,1,14,HOLD, dpr2
+INFRATEL,Bharti infratel,186.0,178.55,120.05,296.5,49,4,6,15,6,9,SALE, profit5
+AMBUJACEM,Ambuja cements,199.0,221.45,136.55,231.85,62,-10,12,15,12,3,HOLD, profit5
+TORNTPHARM,Torrent pharmaceuticals,2046.8,2829.75,1555.0,3031.2,82,-28,-,15,0,15,HOLD, der roce3 pledge
+COLPAL,Colgate palmolive,1423.5,1441.0,1065.0,1642.6,35,-1,3,15,10,5,BUY,ALL
+PETRONET,Petronet lng,309.1,220.75,170.4,297.75,30,40,6,15,14,1,BUY,ALL
+HAVELLS,Havells,607.1,667.4,447.05,731.8,49,-9,11,15,11,4,BUY,ALL
+BOSCHLTD,Bosch,11431.3,13598.0,7850.0,17260.3,73,-16,6,15,30,-15,SALE, sales2
+LUPIN,Lupin,918.0,1028.15,504.75,1122.3,104,-11,23,15,10,5,SALE, sales2 profit5
+UPL,Upl,555.2,507.0,240.15,617.75,111,9,6,15,8,7,SALE, der
+PGHH,Procter gamble hygiene health care,9995.0,9865.0,8400.0,12774.9,17,1,9,15,20,-5,BUY,ALL
+ADANIGREEN,Adani green energy,-,747.0,55.0,749.8,1258,-,-,15,0,15,-,-
+HINDALCO,Hindalco industries,174.8,174.55,84.9,221.2,106,0,6,15,6,9,HOLD, der dpr2
+AUROPHARMA,Aurobindo pharma,775.8,821.95,288.85,967.5,185,-6,17,15,3,12,HOLD, roce3 dpr2
+HINDPETRO,Hindustan petroleum corporation,280.6,175.3,150.0,328.75,17,60,6,15,14,1,HOLD, der roce3
+MUTHOOTFIN,Muthoot finance,1106.8,1154.15,476.8,1405.75,142,-4,6,15,5,10,SALE, der
+ABBOTINDIA,Abbott,-,16395.1,10350.0,18679.8,58,-,-,15,0,15,-,-
+IGL,Indraprashtha gas,492.0,400.2,284.05,534.2,41,23,25,15,1,14,BUY,ALL
+MOTHERSUMI,Motherson sumi systems,118.7,116.0,48.65,151.0,138,2,6,15,7,8,SALE, profit5
+PNB,Punjab national bank,64.7,28.0,26.3,69.65,6,129,-,15,0,15,SALE, dpr2 profit5
+NAUKRI,Info edge,2510.4,3596.05,1581.1,3703.1,127,-30,3,15,6,9,BUY,ALL
+CADILAHC,Cadila healthcare,352.0,398.7,202.0,423.0,97,-12,6,15,5,10,SALE, profit5
+LTI,Larsen toubro infotech,2048.6,2527.0,1210.0,2794.35,109,-19,10,15,7,8,BUY,ALL
+BAJAJHLDNG,Bajaj holdings investment,4654.0,2450.05,1460.15,3950.0,68,90,5,15,5,10,SALE, roce3 profit5
+GICRE,General insurance corporation,185.0,121.7,81.5,334.05,49,53,6,15,15,0,SALE, sales2 profit5
+BANKBARODA,Bankbaroda,85.7,41.8,36.0,108.25,16,107,-,15,0,15,SALE, der dpr2 profit5
+IDBI,Idbi bank,-,34.7,17.25,56.2,101,-,-,15,0,15,-,-
+ALKEM,Alkem laboratories,2494.7,2745.0,1873.0,3090.0,47,-9,-,15,0,15,BUY,ALL
+UBL,United breweries,1192.2,961.55,749.5,1365.0,28,24,11,15,11,4,BUY,ALL
+NMDC,Nmdc,103.7,82.65,61.55,139.7,34,26,6,15,13,2,SALE, profit5
+ADANITRANS,Adani transmission,-,247.5,147.5,366.4,68,-,-,15,0,15,-,-
+MRF,Mrf,-,60510.0,49915.1,73565.7,21,-,-,15,0,15,-,-
+PEL,Piramal enterprises,1859.5,1293.5,606.85,1837.45,113,44,6,15,14,1,SALE, der profit5
+TATACONSUM,Tata consumer products,388.0,508.8,213.7,591.95,138,-24,3,15,7,8,HOLD,
+CONCOR,Container corporation,538.9,356.2,263.4,666.0,35,51,8,15,5,10,SALE, sales2 profit5
+WHIRLPOOL,Whirlpool,2185.0,2199.0,1343.8,2555.0,64,-1,30,10,3,7,HOLD, roce3 profit5
+PFC,Power finance corporation,-,88.65,74.15,133.4,20,-,6,10,14,-4,-,-
+HONAUT,Honeywell automation,-,32570.0,20148.6,39524.9,62,-,19,10,23,-13,-,-
+ACC,Acc,1512.9,1415.35,895.15,1627.4,58,7,10,10,11,-1,BUY,ALL
+GLAXO,Glaxosmithkline pharmaceuticals,1391.0,1565.0,962.65,1807.5,63,-11,24,10,3,7,SALE, profit5
+KANSAINER,Kansai nerolac paints,450.5,490.0,293.7,573.0,67,-8,4,10,5,5,BUY,ALL
+YESBANK,Yes bank,-,13.35,5.65,87.3,136,-,-,10,0,10,-,-
+PAGEIND,Page industries,20597.0,21425.0,16254.0,26882.6,32,-4,19,10,24,-14,BUY,ALL
+3MINDIA,3m,-,18259.9,15700.0,25200.0,16,-,-,10,0,10,-,-
+RECLTD,Rec,-,102.25,78.75,156.5,30,-,6,10,16,-6,-,-
+ABB,Abb,977.0,867.0,722.0,1580.0,20,13,4,10,6,4,BUY,ALL
+JUBLFOOD,Jubilant foodworks,1516.3,2370.45,1138.25,2457.8,108,-36,3,10,6,4,BUY,ALL
+NHPC,Nhpc,25.0,20.3,15.1,29.1,34,25,6,10,13,-3,HOLD, der
+OFSS,Oracle financial services software,3100.0,3046.95,1506.0,3240.0,102,2,-,10,0,10,BUY,ALL
+HAL,Hindustan aeronautics,-,799.0,470.0,1423.0,70,-,6,10,12,-2,-,-
+AUBANK,Au small finance bank,761.3,663.9,366.0,1218.0,81,15,-,10,0,10,SALE, der roce3 dpr2
+GODREJPROP,Godrej properties,-,868.15,505.0,1189.25,72,-,-,10,0,10,-,-
+IRCTC,Indian railway catering tourism corporation,1428.0,1382.0,625.0,1994.0,121,3,-,10,0,10,BUY,ALL
+SRF,Srf,4073.5,4115.0,2467.65,4475.0,67,-1,-,10,0,10,HOLD, der roce3 dpr2
+NIACL,The new assurance company,111.0,105.9,74.1,179.15,43,6,-,10,0,10,SALE, roce3
+PIIND,Pi industries,1727.3,1956.0,970.1,2160.0,102,-12,3,10,5,5,BUY,ALL
+APOLLOHOSP,Apollo hospitals enterprises,1407.0,2098.0,1047.05,2168.0,100,-33,23,10,8,2,HOLD, der pledge
+BALKRISIND,Balkrishna industries,1276.3,1463.0,679.0,1514.7,115,-13,8,10,5,5,BUY,ALL
+VBL,Varun beverages,712.7,697.1,482.2,870.0,45,2,14,10,3,7,HOLD, der roce3 profit5
+TRENT,Trent [lakme ],544.7,676.0,365.0,804.7,85,-20,3,10,5,5,HOLD,
+ADANIENT,Adani enterprises,140.0,310.0,116.4,322.4,166,-55,23,10,3,7,SALE, profit5
+SRTRANSFIN,Shriram transport finance co,1038.5,658.5,431.37,1340.2,53,58,5,10,4,6,SALE, der
+VOLTAS,Voltas,539.6,678.0,427.45,741.0,59,-21,4,10,5,5,BUY,ALL
+PFIZER,Pfizer,4960.7,4919.25,3095.0,5239.0,59,1,17,10,5,5,BUY,ALL
+BAYERCROP,Bayer cropscience,-,5850.0,2925.0,6601.25,100,-,-,10,0,10,-,-
+BEL,Bharat electronics,102.6,96.0,56.0,122.1,71,6,6,10,20,-10,BUY,ALL
+BATAINDIA,Bata,1361.8,1342.15,1000.0,1895.45,34,1,3,10,6,4,BUY,ALL
+ZEEL,Zee entertainment enterprises,297.2,214.7,114.0,364.0,88,39,6,10,11,-1,BUY,ALL
+NAM-INDIA,Nippon life asset management,284.3,266.0,207.7,452.9,28,7,4,10,2,8,SALE, sales2
+GUJGASLTD,Gujarat gas,320.4,311.05,167.6,334.4,86,3,-,10,0,10,HOLD, der roce3 dpr2
+TVSMOTOR,Tvs motor company,363.8,480.4,240.1,504.0,100,-24,-,10,0,10,SALE, der
+IPCALAB,Ipca laboratories,1721.9,2264.9,844.65,2236.1,168,-24,-,10,0,10,BUY,ALL
+GILLETTE,Gillette,6373.3,5387.95,4450.0,8140.0,21,18,10,10,12,-2,BUY,ALL
+ASHOKLEY,Ashok leyland,68.7,76.25,33.7,87.5,126,-11,6,10,5,5,SALE, der sales2
+CHOLAFIN,Cholamandalam investment finance company,233.3,256.8,117.4,349.0,119,-9,6,10,3,7,SALE, der
+RAJESHEXPO,Rajesh exports,-,456.5,441.0,780.5,4,-,-,10,0,10,-,-
+COROMANDEL,Coromandel international,781.4,793.35,399.95,838.95,98,-2,3,10,5,5,HOLD, der roce3
+BHARATFORG,Bharat forge,372.7,448.0,207.5,533.9,116,-17,8,10,5,5,SALE, sales2 profit5
+SANOFI,Sanofi,7696.3,8679.95,5681.05,8989.0,53,-11,37,10,4,6,BUY,ALL
+L&TFH,L&t finance holdings,62.3,64.4,45.9,134.0,40,-3,6,10,5,5,SALE, der
+ADANIPOWER,Adani power,-,37.05,23.0,73.8,61,-,-,10,0,10,-,-
+RELAXO,Relaxo footwears,749.4,659.9,480.0,830.0,37,14,3,10,6,4,BUY,ALL
+AARTIIND,Aarti industries,1004.8,1024.0,668.0,1229.0,53,-2,-,10,0,10,HOLD, der roce3
+SUNTV,Sun tv network,528.7,466.9,259.55,551.3,80,13,6,10,3,7,BUY,ALL
+ABCAPITAL,Aditya birla capital,84.0,63.2,37.35,115.35,69,33,-,10,0,10,SALE, der roce3 dpr2
+LICHSGFIN,Lic housing finance,379.9,280.4,185.25,486.75,51,35,6,10,14,-4,SALE, der
+IDEA,Vodafone idea,8.5,9.2,2.4,13.5,283,-11,-,10,0,10,SALE, der roce3 dpr2 profit5
+SUNDARMFIN,Sundaram finance,-,1390.0,982.05,1784.95,42,-,25,10,2,8,-,-
+BANKINDIA,Bank,67.0,40.75,30.4,79.8,34,68,-,10,0,10,SALE, roce3 dpr2 profit5
+RAMCOCEM,The ramco cements,677.9,745.8,455.0,884.25,64,-9,-,10,0,10,BUY,ALL
+UNIONBANK,Union bank,-,24.35,22.65,65.8,8,-,-,10,0,10,-,-
+OBEROIRLTY,Oberoi realty,517.2,409.0,290.0,584.0,41,26,-,10,0,10,HOLD, roce3 dpr2
+AIAENG,Aia engineering,1756.5,1833.1,1102.2,1989.95,66,-4,-,10,0,10,BUY,ALL
+MPHASIS,Mphasis,945.1,1345.0,630.0,1419.85,113,-30,-,10,0,10,BUY,ALL
+ASTRAL,Astral poly technik,904.7,1207.6,745.65,1314.7,62,-25,-,10,0,10,HOLD, roce3 dpr2
+M&MFIN,Mahindra mahindra financial services,190.0,129.65,76.46,245.91,70,47,6,10,6,4,SALE, der
+CANBK,Canara bank,114.0,89.5,73.65,234.25,22,28,-,10,0,10,SALE, dpr2 profit5
+CROMPTON,Crompton greaves consumer electricals,260.5,290.05,177.3,301.45,64,-10,-,10,0,10,SALE, pledge
+TORNTPOWER,Torrent power,4.0,309.1,231.95,368.9,33,-99,-,10,0,10,HOLD, der pledge
+ADANIGAS,Adani gas,130.0,193.5,76.6,215.0,153,-33,23,10,1,9,HOLD, roce3 dpr2 profit5
+IDFCFIRSTB,Idfc first bank,22.5,30.25,17.65,47.95,71,-27,-,10,0,10,SALE, der dpr2
+MINDTREE,Mindtree,883.4,1339.8,675.0,1367.0,98,-34,10,10,7,3,BUY,ALL
+LTTS,L&t technology services,1124.0,1584.0,995.0,1780.0,59,-29,10,10,6,4,BUY,ALL
+SUPREMEIND,Supreme industries,1205.0,1415.0,773.3,1474.0,83,-15,30,10,2,8,BUY,ALL
+SAIL,Steel authority,52.0,34.2,20.15,51.9,70,53,-,10,0,10,SALE, profit5
+ABFRL,Aditya birla fashion retail,151.3,132.5,96.04,282.67,38,14,-,10,0,10,SALE, roce3 dpr2
+EXIDEIND,Exide industries,199.6,163.05,124.7,208.25,31,22,11,10,10,0,HOLD,
+JINDALSTEL,Jindal steel power,176.7,190.0,62.0,238.75,206,-7,-,10,0,10,SALE, der roce3 dpr2 pledge
+ATUL,Atul,4663.0,6120.0,2923.2,7019.75,109,-24,-,10,0,10,BUY,ALL
+LALPATHLAB,Dr lal pathlabs,1314.0,1859.9,1179.55,2029.0,58,-29,3,10,5,5,BUY,ALL
+APLLTD,Alembic pharmaceuticals,870.3,931.0,434.8,1128.9,114,-7,-,10,0,10,BUY,ALL
+IOB,Indian overseas bank,-,9.35,6.05,13.75,55,-,-,10,0,10,-,-
+ISEC,Icici securities,507.3,462.6,203.6,568.9,127,10,6,10,2,8,SALE, sales2
+MFSL,Max financial services,555.8,617.5,276.35,641.75,123,-10,-,10,0,10,SALE, roce3 dpr2 profit5 pledge
+POLYCAB,Polycab,927.3,821.5,570.0,1182.0,44,13,-,10,0,10,BUY,ALL
+CUB,City union bank,200.3,141.0,110.0,249.35,28,42,-,10,0,10,HOLD, dpr2
+DALBHARAT,Dalmia bharat,778.3,769.1,402.7,919.0,91,1,-,10,0,10,SALE, roce3
+FEDERALBNK,Federal bank,77.1,50.35,35.7,96.95,41,54,-,10,0,10,HOLD, der
+SYNGENE,Syngene international,345.0,562.4,212.55,596.7,165,-39,-,10,0,10,SALE, dpr2
+CASTROLIND,Castrol,154.8,109.85,89.55,162.2,23,41,15,10,11,-1,BUY,ALL
+CUMMINSIND,Cummins,459.5,449.0,280.0,652.8,60,2,11,10,11,-1,SALE, profit5
+WABCOINDIA,Wabco,6282.0,5646.0,5011.0,7670.0,13,11,-,10,0,10,SALE, sales2
+SCHAEFFLER,Schaeffler,-,3623.0,3025.25,4959.85,20,-,11,10,10,0,-,-
+INDHOTEL,Indian hotels co,149.4,97.0,62.1,160.1,56,54,4,10,11,-1,HOLD,
+GSPL,Gujarat state petronet,271.9,204.0,146.15,263.8,40,33,-,10,0,10,HOLD, der roce3 dpr2
+MANAPPURAM,Manappuram finance,149.1,166.3,74.25,194.8,124,-10,17,10,2,8,SALE, der
+GMRINFRA,Gmr infrastructure,-,23.8,14.1,28.25,69,-,-,10,0,10,-,-
+GODREJIND,Godrej industries,500.0,408.5,233.4,479.0,75,23,5,10,3,7,SALE, der
+UCOBANK,Uco bank,-,12.2,8.4,22.4,45,-,-,10,0,10,-,-
+ENDURANCE,Endurance technologies,1098.7,1135.1,564.5,1204.95,101,-3,-,10,0,10,BUY,ALL
+SUMICHEM,Sumitomo chemical,315.0,291.7,151.05,317.0,93,8,8,10,6,4,SALE, dpr2
+TATAPOWER,Tata power co,32.0,54.25,27.0,63.4,101,-41,6,10,10,0,SALE, der profit5
+AAVAS,Aavas financiers,-,1396.0,849.05,2101.0,64,-,-,10,0,10,-,-
+AJANTPHARM,Ajanta pharma,1693.3,1604.0,903.4,1759.95,78,6,-,10,0,10,BUY,ALL
+TATACOMM,Tata communications,595.0,838.6,200.0,935.0,319,-29,-,10,0,10,SALE, dpr2 profit5
+OIL,Oil,129.5,88.4,63.5,174.95,39,47,6,10,13,-3,HOLD, profit5
+CRISIL,Crisil,2023.0,1800.0,1052.7,2068.0,71,12,15,10,11,-1,BUY,ALL
+NATCOPHARM,Natco pharma,682.8,932.05,402.55,996.0,132,-27,-,10,0,10,SALE, sales2
+AMARAJABAT,Amara raja batteries,739.2,754.0,348.55,813.85,116,-2,6,10,10,0,HOLD, roce3 sales2 profit5
+BHEL,Bharat heavy electricals,33.3,29.65,18.4,61.1,61,14,6,10,18,-8,SALE, roce3 dpr2 sales2 profit5
+RBLBANK,Rbl bank,219.1,177.25,101.55,391.2,75,24,-,10,0,10,SALE, der
+EMAMILTD,Emami,250.9,351.05,130.95,407.55,168,-29,6,10,12,-2,SALE, profit5 pledge
+PHOENIXLTD,The phoenix mills,728.4,599.6,465.05,979.0,29,22,-,10,0,10,SALE, der
+THERMAX,Thermax,898.9,718.0,570.0,1171.1,26,25,-,10,0,10,BUY,ALL
+FORTIS,Fortis healthcare,-,135.5,113.1,169.0,20,-,-,10,0,10,-,-
+FRETAIL,Future retail,419.7,89.8,60.7,404.0,48,371,6,10,6,4,SALE, roce3 dpr2 pledge
+MGL,Mahanagar gas,1104.3,862.0,663.9,1246.2,30,28,-,10,0,10,BUY,ALL
+VINATIORGA,Vinati organics,896.6,1330.0,651.3,1419.0,104,-33,-,10,0,10,BUY,ALL
+IIFLWAM,Iifl wealth management,-,991.0,720.0,1663.95,38,-,-,10,0,10,-,-
+PRESTIGE,Prestige estates projects,311.0,253.1,133.65,426.0,89,23,2,10,11,-1,SALE, der
+ESCORTS,Escorts,941.9,1283.2,526.05,1342.75,144,-27,-,10,0,10,HOLD, roce3 dpr2
+MOTILALOFS,Motilal oswal financial services,741.5,629.5,426.0,905.4,48,18,-,10,0,10,SALE, der sales2
+AKZOINDIA,Akzo nobel,-,2157.0,1750.0,2500.0,23,-,-,10,0,10,-,-
+JKCEMENT,Jk cement,1412.6,1530.0,795.25,1615.0,92,-8,-,10,0,10,HOLD, der roce3
+HATSUN,Hatsun agro products,-,780.6,380.0,878.0,105,-,25,10,2,8,-,-
+SOLARINDS,Solar industries,1151.6,1045.0,773.05,1349.0,35,10,10,10,2,8,BUY,ALL
+GLENMARK,Glenmark pharmaceuticals,441.8,490.0,161.65,573.05,203,-10,6,10,4,6,HOLD, der roce3 dpr2
+HEXAWARE,Hexaware technologies,355.1,465.9,202.25,468.9,130,-24,-,10,0,10,BUY,ALL
+CENTRALBK,Central bank,-,14.0,10.1,25.5,39,-,-,10,0,10,-,-
 SJVN,Sjvn,-,21.9,17.25,27.35,27,-,-,10,0,10,-,-
-CREDITACC,Creditaccess grameen,577.0,700.9,305.2,1000.0,130,-18,-,10,0,10,SALE, der dpr2
-IBULHSGFIN,Indiabulls housing finance,-,155.5,81.0,436.65,92,-,-,10,0,10,-,-
-GODREJAGRO,Godrej agrovet,452.0,508.1,265.05,598.0,92,-11,6,10,6,4,BUY,ALL
-SKFINDIA,Skf,1390.0,1444.7,1230.0,2317.95,17,-4,3,10,9,1,BUY,ALL
-JSWENERGY,Jsw energy,64.0,57.65,34.75,80.0,66,12,-,10,0,10,SALE, profit5 pledge
-MINDAIND,Minda industries,316.4,337.4,206.25,425.9,64,-6,-,10,0,10,HOLD, der roce3 dpr2
-VGUARD,V guard industries,193.1,166.6,149.0,259.2,12,16,7,10,11,-1,HOLD, roce3 profit5
-TIINDIA,Tube investments,425.0,620.0,254.0,681.95,144,-31,21,10,2,8,SALE, sales2
-CESC,Cesc,754.0,623.1,365.25,846.0,71,21,-,10,0,10,SALE, der
-SUNDRMFAST,Sundram fasteners,-,400.7,248.5,533.35,61,-,5,10,3,7,-,-
+CREDITACC,Creditaccess grameen,577.0,739.95,305.2,1000.0,142,-22,-,10,0,10,SALE, der dpr2
+IBULHSGFIN,Indiabulls housing finance,-,156.25,81.0,376.7,93,-,-,10,0,10,-,-
+GODREJAGRO,Godrej agrovet,452.0,509.5,265.05,598.0,92,-11,6,10,6,4,BUY,ALL
+SKFINDIA,Skf,1390.0,1466.0,1230.0,2317.95,19,-5,4,10,9,1,BUY,ALL
+JSWENERGY,Jsw energy,64.0,56.2,34.75,80.0,62,14,-,10,0,10,SALE, profit5 pledge
+MINDAIND,Minda industries,316.4,331.7,206.25,425.9,61,-5,-,10,0,10,HOLD, der roce3 dpr2
+VGUARD,V guard industries,193.1,168.5,149.0,259.2,13,15,7,10,11,-1,HOLD, roce3 profit5
+TIINDIA,Tube investments,425.0,630.0,254.0,681.95,148,-33,21,10,2,8,SALE, sales2
+CESC,Cesc,754.0,618.2,365.25,846.0,69,22,-,10,0,10,SALE, der
+SUNDRMFAST,Sundram fasteners,-,410.6,248.5,533.35,65,-,5,10,3,7,-,-
 ZYDUSWELL,Zydus wellness,1525.0,1847.0,1100.5,1950.0,68,-17,17,10,1,9,HOLD,
-JUBILANT,Jubilant life sciences,606.4,726.6,234.35,909.0,210,-17,-,10,0,10,HOLD, der roce3
-METROPOLIS,Metropolis healthcare,2200.0,1846.2,998.05,2109.0,85,19,-,10,0,10,HOLD, roce3 pledge
-ITI,Iti,-,128.55,44.8,151.65,187,-,-,10,0,10,-,-
-CHOLAHLDNG,Cholamandalam financial holdings,-,401.45,222.35,569.85,81,-,5,10,4,6,-,-
-TTKPRESTIG,Ttk prestige,6382.3,6296.0,3901.1,6650.0,61,1,9,10,12,-2,HOLD, roce3 profit5
-SYMPHONY,Symphony,960.5,910.1,690.7,1408.95,32,5,9,10,6,4,HOLD, roce3 profit5
-PVR,Pvr,1481.9,1223.75,711.19,2103.96,72,21,3,10,6,4,HOLD, der roce3
-TATACHEM,Tata chemicals,421.3,297.3,197.0,779.8,51,42,6,10,8,2,HOLD, dpr2
-IBVENTURES,Indiabulls ventures,-,239.0,63.5,240.95,276,-,-,10,0,10,-,-
-JMFINANCIL,Jm financial,65.0,77.4,55.45,124.7,40,-16,-,10,0,10,SALE, der
-KAJARIACER,Kajaria ceramics,514.7,523.8,295.55,595.95,77,-2,4,10,14,-4,BUY,ALL
-APOLLOTYRE,Apollo tyres,145.7,128.0,73.4,196.75,74,13,6,10,17,-7,SALE, profit5
+JUBILANT,Jubilant life sciences,606.4,737.4,234.35,909.0,215,-18,-,10,0,10,HOLD, der roce3
+METROPOLIS,Metropolis healthcare,2200.0,1770.0,998.05,2109.0,77,24,-,10,0,10,HOLD, roce3 pledge
+ITI,Iti,-,124.7,44.8,151.65,178,-,-,10,0,10,-,-
+CHOLAHLDNG,Cholamandalam financial holdings,-,399.45,222.35,569.85,80,-,5,10,4,6,-,-
+TTKPRESTIG,Ttk prestige,6382.3,6181.3,3901.1,6575.0,58,3,9,10,12,-2,HOLD, roce3 profit5
+SYMPHONY,Symphony,960.5,915.0,690.7,1408.95,32,5,10,10,6,4,HOLD, roce3 profit5
+PVR,Pvr,1481.9,1308.0,711.19,2103.96,84,13,3,10,6,4,HOLD, der roce3
+TATACHEM,Tata chemicals,421.3,301.35,197.0,779.8,53,40,6,10,8,2,HOLD, dpr2
+IBVENTURES,Indiabulls ventures,-,265.0,63.5,253.5,317,-,-,10,0,10,-,-
+JMFINANCIL,Jm financial,65.0,76.9,55.45,124.7,39,-14,-,10,0,10,SALE, der
+KAJARIACER,Kajaria ceramics,514.7,545.3,295.55,595.95,85,-6,4,10,14,-4,BUY,ALL
+APOLLOTYRE,Apollo tyres,145.7,132.7,73.4,196.75,81,10,6,10,17,-7,SALE, profit5
