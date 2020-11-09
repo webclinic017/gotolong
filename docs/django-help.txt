@@ -10,9 +10,9 @@ python django-admin.py startproject mysite
 
 python manage.py runserver
 
-cd D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root
+cd D:\GoogleDrive\my_github\GitHub\gotolong\src-django-proj-root
 
-cd d:/GoogleDrive/my_github/GitHub/gotolong/src/django-proj-root
+cd d:/GoogleDrive/my_github/GitHub/gotolong/src-django-proj-root
 
 d:
 

@@ -2,8 +2,8 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 1, RELIANCE, Reliance industries, 20.0, 16, 4.0
 2, TCS, Tata consultancy services, 20.0, 31, 0
 3, HDFCBANK, Hdfc bank, 20.0, 32, 0
-4, HINDUNILVR, Hindustan unilever, 20.0, 27, 0
-5, HDFC, Housing development finance corplt, 20.0, 25, 0
+4, HINDUNILVR, Hindustan unilever, 20.0, 31, 0
+5, HDFC, Housing development finance corplt, 20.0, 31, 0
 6, INFY, Infosys, 20.0, 31, 0
 7, BHARTIARTL, Bharti airtel, 20.0, 17, 3.0
 8, KOTAKBANK, Kotak mahindra bank, 20.0, 6, 14.0
@@ -51,7 +51,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 50, BANDHANBNK, Bandhan bank, 20.0, 3, 17.0
 51, JSWSTEEL, Jsw steel, 20.0, 7, 13.0
 52, BERGEPAINT, Berger paints, 20.0, 6, 14.0
-53, EICHERMOT, Eicher motors, 20.0, 23, 0
+53, EICHERMOT, Eicher motors, 20.0, 0, 20.0
 54, GAIL, Gail, 20.0, 21, 0
 55, DLF, Dlf, 20.0, 10, 10.0
 56, INDIGO, Interglobe aviation, 20.0, 11, 9.0
@@ -107,7 +107,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 106, KANSAINER, Kansai nerolac paints, 10.0, 5, 5.0
 107, YESBANK, Yes bank, 10.0, 0, 10.0
 108, PAGEIND, Page industries, 10.0, 24, 0
-109, 3MINDIA, 3m, 10.0, 0, 10.0
+109, 3MINDIA, 3m, 10.0, 19, 0
 110, RECLTD, Rec, 10.0, 16, 0
 111, ABB, Abb, 10.0, 6, 4.0
 112, JUBLFOOD, Jubilant foodworks, 10.0, 6, 4.0
@@ -132,7 +132,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 131, BEL, Bharat electronics, 10.0, 20, 0
 132, BATAINDIA, Bata, 10.0, 6, 4.0
 133, ZEEL, Zee entertainment enterprises, 10.0, 11, 0
-134, NAM-INDIA, Nippon life asset management, 10.0, 2, 8.0
+134, NAM-INDIA, Nippon life asset management, 10.0, 11, 0
 135, GUJGASLTD, Gujarat gas, 10.0, 0, 10.0
 136, TVSMOTOR, Tvs motor company, 10.0, 0, 10.0
 137, IPCALAB, Ipca laboratories, 10.0, 0, 10.0
@@ -143,7 +143,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 142, COROMANDEL, Coromandel international, 10.0, 5, 5.0
 143, BHARATFORG, Bharat forge, 10.0, 5, 5.0
 144, SANOFI, Sanofi, 10.0, 4, 6.0
-145, L&TFH, L&t finance holdings, 10.0, 5, 5.0
+145, L&TFH, L&t finance holdings, 10.0, 11, 0
 146, ADANIPOWER, Adani power, 10.0, 0, 10.0
 147, RELAXO, Relaxo footwears, 10.0, 6, 4.0
 148, AARTIIND, Aarti industries, 10.0, 0, 10.0
@@ -159,7 +159,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 158, AIAENG, Aia engineering, 10.0, 0, 10.0
 159, MPHASIS, Mphasis, 10.0, 0, 10.0
 160, ASTRAL, Astral poly technik, 10.0, 0, 10.0
-161, M&MFIN, Mahindra mahindra financial services, 10.0, 6, 4.0
+161, M&MFIN, Mahindra mahindra financial services, 10.0, 10, 0
 162, CANBK, Canara bank, 10.0, 0, 10.0
 163, CROMPTON, Crompton greaves consumer electricals, 10.0, 0, 10.0
 164, TORNTPOWER, Torrent power, 10.0, 0, 10.0
@@ -306,7 +306,7 @@ amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku
 476, BSE, Bse, 5.0, 14, 0
 479, LAOPALA, La opala rg, 5.0, 2, 3.0
 490, GREENLAM, Greenlam industries, 5.0, 3, 2.0
-491, VRLLOG, Vrl logistics, 5.0, 6, 0
+491, VRLLOG, Vrl logistics, 5.0, 10, 0
 492, NILKAMAL, Nilkamal, 5.0, 11, 0
 496, VENKEYS, Venkys, 5.0, 7, 0
 499, PAPERPROD, Huhtamaki ppl, 5.0, 1, 4.0

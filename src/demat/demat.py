@@ -29,6 +29,8 @@ class Demat(Amfi):
         self.demat_sum_qty = {}
         self.demat_sum_acp = {}
         self.demat_sum_upl_pct = {}
+        self.demat_sum_captype_upl_pos_stock_count_dict = {}
+        self.demat_sum_captype_upl_neg_stock_count_dict = {}
         self.demat_sum_captype_stock_count = {}
         self.demat_sum_captype_stock_cost_value = {}
         self.demat_sum_captype_stock_market_value = {}
@@ -198,6 +200,7 @@ class Demat(Amfi):
             unrealized_pl = row_list[12]
             unrealized_pl_pct = row_list[13]
             unused1 = row_list[14]
+
             self.demat_sum_qty[stock_symbol] = qty
             self.demat_sum_acp[stock_symbol] = acp
             self.demat_sum_upl_pct[stock_symbol] = unrealized_pl_pct
@@ -211,6 +214,17 @@ class Demat(Amfi):
             self.demat_sum_sku[stock_symbol] = sku
 
             captype = self.amfi_get_value_by_ticker(stock_symbol, "captype")
+
+            if round(float(unrealized_pl)) > 0:
+                if captype in self.demat_sum_captype_upl_pos_stock_count_dict:
+                    self.demat_sum_captype_upl_pos_stock_count_dict[captype] += 1
+                else:
+                    self.demat_sum_captype_upl_pos_stock_count_dict[captype] = 1
+            else:
+                if captype in self.demat_sum_captype_upl_neg_stock_count_dict:
+                    self.demat_sum_captype_upl_neg_stock_count_dict[captype] += 1
+                else:
+                    self.demat_sum_captype_upl_neg_stock_count_dict[captype] = 1
 
             if captype in self.demat_sum_captype_stock_count:
                 self.demat_sum_captype_stock_count[captype] += 1
@@ -483,6 +497,28 @@ class Demat(Amfi):
             fh.write(p_str)
         fh.close()
 
+    def demat_dump_summary_hitrate(self, out_filename):
+        fh = open(out_filename, "w")
+        fh.write("captype, total stocks, stocks with +(pos) returns, stocks with -(neg) returns, hit rate(%)\n")
+
+        for captype in sorted(self.amfi_captype_list):
+            pos_stock_count = self.demat_sum_captype_upl_pos_stock_count_dict[captype]
+            neg_stock_count = self.demat_sum_captype_upl_neg_stock_count_dict[captype]
+            tot_stock_count = pos_stock_count + neg_stock_count
+
+            p_str = captype
+            p_str += ','
+            p_str += str(tot_stock_count)
+            p_str += ','
+            p_str += str(pos_stock_count)
+            p_str += ','
+            p_str += str(neg_stock_count)
+            p_str += ','
+            p_str += str(int(float(pos_stock_count * 100.0 / tot_stock_count)))
+            p_str += '\n'
+            fh.write(p_str)
+        fh.close()
+
     def demat_dump_holdings_by_rank(self, out_filename):
         fh = open(out_filename, "w")
         fh.write('amfi_rank, amfi_ticker, amfi_cname, plan_sku, cur_sku, tbd_sku\n')
@@ -628,7 +664,8 @@ if __name__ == "__main__":
         demat.demat_dump_txn_summary(out_filename_phase[3], True)
         demat.demat_dump_summary_ticker_only(out_filename_phase[4])
         demat.demat_dump_summary_captype(out_filename_phase[5])
-        demat.demat_dump_holdings_by_rank(out_filename_phase[6])
+        demat.demat_dump_summary_hitrate(out_filename_phase[6])
+        demat.demat_dump_holdings_by_rank(out_filename_phase[7])
 
 
     # execute only if run as a script

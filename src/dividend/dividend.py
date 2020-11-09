@@ -7,6 +7,7 @@ import traceback
 
 import glob
 import argparse
+import logging
 
 from collections import Counter
 from operator import itemgetter
@@ -24,7 +25,6 @@ class Dividend(Amfi, Nach):
     def __init__(self):
         super(Dividend, self).__init__()
         self.multiplier = 0
-        self.debug_level = 0
         self.last_row = ""
         self.companies=[]
         self.company_real_name_db=[]
@@ -54,10 +54,11 @@ class Dividend(Amfi, Nach):
 
         # conglomerate name db
         self.cong_name_db=[]
-        print('init : Dividend')
+        logging.info('init : Dividend')
 
-    def set_debug_level(self, debug_level):
-        self.debug_level = debug_level
+    def set_log_level(self, log_level):
+        log_level_number = getattr(logging, log_level.upper(), None)
+        logging.basicConfig(level=log_level_number)
 
     def dividend_table_reload(self, truncate=False):
         self.dividend_table_truncate = truncate
@@ -77,26 +78,22 @@ class Dividend(Amfi, Nach):
         # match for search at begining
         # NEFT or RTGS or MMT - Mobile money Transfer
         if re.match('NEFT-|RTGS-|MMT/', txn_remarks):
-            if self.debug_level > 2:
-                print('NEFT-/RTGS-/MMT skipped' + line)
+            logging.info('NEFT-/RTGS-/MMT skipped' + line)
             return True
 
         # CASH deposit
         if re.match('BY CASH.*', txn_remarks):
-            if self.debug_level > 2:
-                print('CASH skipped' + line)
+            logging.info('CASH skipped' + line)
             return True
 
         # Interest paid - anywhere in string
         if re.search('.*:Int\.Pd:.*', txn_remarks):
-            if self.debug_level > 2:
-                print('Int.Pd skipped' + line)
+            logging.info('Int.Pd skipped' + line)
             return True
 
         # APBS / BLPGCM : Aadhaar Payment Bridge System for LPG Subsidy
         if re.match('APBS/.*', txn_remarks):
-            if self.debug_level > 2:
-                print('APBS skipped' + line)
+            logging.info('APBS skipped' + line)
             return True
 
         return False
@@ -105,6 +102,7 @@ class Dividend(Amfi, Nach):
         # old orig name
         orig_name = company_name
 
+        # NOTE: ensure that aliases are also in upper case
         company_name = company_name.upper()
         # capitalize
         # company_name = company_name.capitalize()
@@ -154,10 +152,11 @@ class Dividend(Amfi, Nach):
         company_name = re.sub(' LIMIT$| LIMI$| LIM$| LI$| L$', '', company_name, flags=re.IGNORECASE)
 
         # cor$, corp.*$
-        company_name = re.sub(' COR$| CORP.*$', '', company_name, flags=re.IGNORECASE)
+        company_name = re.sub(' CO$| COR$| CORP.*$', '', company_name, flags=re.IGNORECASE)
 
         # in.*$ industries
-        company_name = re.sub(' IN.*$', '', company_name, flags=re.IGNORECASE)
+        # VST (tillers) vs VST Industries
+        # company_name = re.sub(' IN.*$', '', company_name, flags=re.IGNORECASE)
 
         # remove &
         # company_name = re.sub('&', '', company_name, flags=re.IGNORECASE)
@@ -168,14 +167,18 @@ class Dividend(Amfi, Nach):
         self.company_orig[company_name] = orig_name
         self.company_name_pre_alias[company_name] = name_before_resolve_alias
 
-        if self.debug_level > 1:
-            print('orig name', orig_name, 'new name', company_name)
+        logging.info('orig name %s new name %s', orig_name, company_name)
         return company_name
 
-    def dividend_resolve_alias(self, company_name):
-        if company_name in self.nach_aliases.keys():
-            company_name = self.nach_aliases[company_name]
-        return company_name
+    def dividend_resolve_alias(self, alias_name):
+        if alias_name in self.nach_aliases:
+            ticker = self.nach_aliases[alias_name]
+            return ticker
+        else:
+            logging.info('alias_name not found %s', alias_name)
+            # print('dividend_resolve_alias not found', alias_name)
+            # print(self.nach_aliases_uc)
+            return alias_name
 
     def dividend_get_insert_row(self, line, row_bank):
         # Replace Limited, with just Limited to avoid split error : ValueError
@@ -185,30 +188,26 @@ class Dividend(Amfi, Nach):
         try:
             txn_date, txn_remarks, deposit_amount = line.split(",")
         except ValueError:
-            print('ValueError ', line)
+            logging.error('ValueError %s', line)
 
         # avoid cases where txn_remarks itself is double quoted
         txn_remarks = re.sub(r'"','', txn_remarks);
 
         if txn_remarks == "":
             if line != "":
-                if debug_level > 1:
-                    print('empty ' + line)
+                logging.info('empty %s', line)
             return
 
-        if self.debug_level > 1:
-            print('txn_remarks '+ txn_remarks)
-            # pass
+        logging.info('txn_remarks %s', txn_remarks)
+        # pass
 
         if self.dividend_txn_ignore(line, txn_remarks):
-            if self.debug_level > 2:
-                print('ignored ', txn_remarks)
+            logging.info('ignored %s', txn_remarks)
             return
 
         if re.match('ACH/.*|CMS/.*', txn_remarks):
 
-            if self.debug_level > 1:
-                print(txn_date, txn_remarks, deposit_amount)
+            logging.info('extract of txn_remarks %s %s %s', txn_date, txn_remarks, deposit_amount)
 
             try:
                 # dd/mm/yyyy
@@ -232,21 +231,17 @@ class Dividend(Amfi, Nach):
                 div_date_iso = txn_year + "-" + txn_month + "-" + txn_day
                 # ignore rest
             except ValueError:
-                print('ValueError ' + txn_remarks)
+                logging.error('ValueError ' + txn_remarks)
 
             # print company_name, deposit_amount
             company_name = self.dividend_company_name_normalize(company_name)
-            if self.debug_level > 1:
-                print('normalized :', company_name)
+            logging.info('normalized :', company_name)
             ticker = self.amfi_get_ticker_by_name(company_name)
-            if self.debug_level > 1:
-                print(' ticker :', ticker)
+            logging.info(' ticker :', ticker)
             isin = self.amfi_get_value_by_ticker(ticker, "isin")
-            if self.debug_level > 1:
-                print(' isin :', isin)
+            logging.info(' isin :', isin)
             if ticker != '' and ticker != "UNK_TICKER":
-                if self.debug_level > 1:
-                    print('company is ticker', ticker)
+                logging.info('company is ticker', ticker)
                 company_name = ticker
             else:
                 pre_alias_name = self.company_name_pre_alias[company_name]
@@ -254,22 +249,19 @@ class Dividend(Amfi, Nach):
                     pass
                 else:
                     self.add_nach_ticker[pre_alias_name] = 'yes'
-                    if self.debug_level > 1:
-                        print('add nach ticker alias for', company_name, ':', pre_alias_name, ':')
+                    logging.error('add nach ticker alias for %s :%s:', company_name, pre_alias_name)
 
             new_row = (div_date_iso, txn_remarks, deposit_amount, ticker, isin)
             row_bank.append(new_row)
 
-            if self.debug_level > 1:
-                print(company_name, 'from', txn_remarks)
+            logging.info(company_name, 'from', txn_remarks)
 
             # allow duplicate for dividend frequency
             self.companies.append(company_name)
 
             if company_name in self.dividend_amount.keys():
-                if self.debug_level > 1:
-                    print('dividend amount :', self.dividend_amount[company_name])
-                    print('deposit amount :', deposit_amount)
+                logging.info('dividend amount :', self.dividend_amount[company_name])
+                logging.info('deposit amount :', deposit_amount)
                 self.dividend_amount[company_name] = int(self.dividend_amount[company_name]) + int(float(deposit_amount))
             else:
                 self.dividend_amount[company_name] = int(float(deposit_amount))
@@ -297,8 +289,7 @@ class Dividend(Amfi, Nach):
                 else:
                     self.dividend_cumm_comp_kv[company_name] = int(float(deposit_amount))
 
-                if self.debug_level > 1:
-                    print(txn_year, txn_month, 'set div amount : ', int(float(deposit_amount)))
+                logging.info(txn_year, txn_month, 'set div amount : ', int(float(deposit_amount)))
             else:
                 self.dividend_amount_ym_kv[txn_year, txn_month] += int(float(deposit_amount))
                 if txn_year in self.dividend_cumm_year_kv:
@@ -321,34 +312,27 @@ class Dividend(Amfi, Nach):
                 else:
                     self.dividend_cumm_comp_kv[company_name] = int(float(deposit_amount))
 
-                if self.debug_level > 1:
-                    print(txn_year, txn_month, 'added div amount : ', int(float(deposit_amount)))
-                    print(txn_year, txn_month, 'accumulated div amount : ',
+                logging.info(txn_year, txn_month, 'added div amount : ', int(float(deposit_amount)))
+                logging.info(txn_year, txn_month, 'accumulated div amount : ',
                           self.dividend_amount_ym_kv[txn_year, txn_month])
 
             if txn_year not in self.dividend_year_list:
-                if self.debug_level > 0:
-                    print('added dividend year', txn_year)
+                logging.info('added dividend year', txn_year)
                 self.dividend_year_list.append(txn_year)
 
             return
 
-        if self.debug_level > 1:
-            print('Unknown skipped' + line)
+        logging.warning('Unknown skipped' + line)
         return
 
     def dividend_insert_data_core(self, in_filenames):
         for in_filename in in_filenames:
-            if self.debug_level > 1:
-                print('div file', in_filename)
+            logging.info('div file', in_filename)
             file_obj = open (in_filename, "r")
             for line in file_obj:
-                if self.debug_level > 1:
-                    print('div line', line)
+                logging.info('div line', line)
                 self.dividend_get_insert_row(line)
-        print('loaded dividend', len (self.dividend_amount))
-
-
+        logging.info('loaded dividend', len(self.dividend_amount))
 
     def dividend_load_data(self, in_filenames):
         table = self.dividend_table_name
@@ -359,8 +343,8 @@ class Dividend(Amfi, Nach):
         if row_count == 0:
             self.dividend_insert_data(in_filenames)
         else:
-            print('dividend data already loaded in db', row_count)
-        print('display db data')
+            logging.info('dividend data already loaded in db', row_count)
+        logging.info('display db data')
         self.dividend_load_db()
 
     def dividend_insert_data(self, in_filenames):
@@ -368,14 +352,12 @@ class Dividend(Amfi, Nach):
         create_sql = cutil.cutil.get_create_sql(self.dividend_table_name, self.dividend_table_dict)
         insert_sql = cutil.cutil.get_insert_sql(self.dividend_table_name, self.dividend_table_dict)
 
-        if self.debug_level > 0:
-            print(create_sql)
+        logging.info(create_sql)
 
         cursor = self.db_conn.cursor()
 
         for in_filename in in_filenames:
-            if self.debug_level > 1:
-                print('div file', in_filename)
+            logging.info('div file', in_filename)
 
             with open(in_filename, 'rt') as csvfile:
                 # future
@@ -383,7 +365,7 @@ class Dividend(Amfi, Nach):
                 row_bank = []
                 for line in csvfile:
                     self.dividend_get_insert_row(line, row_bank)
-                print('loaded entries', len(row_bank), 'from', in_filename)
+                logging.info('loaded entries', len(row_bank), 'from', in_filename)
                 # insert row
                 cursor.executemany(insert_sql, row_bank)
         # commit db changes
@@ -393,13 +375,11 @@ class Dividend(Amfi, Nach):
         table = self.dividend_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
-            if self.debug_level > 1:
-                print(row)
+            logging.info(row)
             self.dividend_load_row(row)
 
     def dividend_dump_orig(self, out_filename):
-        if self.debug_level > 2:
-            print(self.company_orig)
+        logging.info(self.company_orig)
         lines = []
         fh = open(out_filename, "w")
         for comp_name in self.company_orig.keys():
@@ -423,8 +403,7 @@ class Dividend(Amfi, Nach):
         # calculate frequency of occurence of each company
         comp_freq = Counter(self.companies)
 
-        if self.debug_level > 1:
-            print(comp_freq)
+        logging.info(comp_freq)
 
         lines = []
         fh = open(out_filename, "w")
@@ -583,7 +562,7 @@ class Dividend(Amfi, Nach):
                 p_str += '\n'
                 lines.append(p_str)
         elif sort_type == "sort_frequency" :
-            for key, value in sorted(comp_freq.items(), key=itemgetter(1)):
+            for key, value in sorted(comp_freq.items(), key=itemgetter(1), reverse=True):
                 p_str = key
                 p_str += ','
                 p_str += str(value)
@@ -592,7 +571,7 @@ class Dividend(Amfi, Nach):
                 p_str += '\n'
                 lines.append(p_str)
         elif sort_type == "sort_amount":
-            for key, value in sorted(self.dividend_amount.items(), key=itemgetter(1)) :
+            for key, value in sorted(self.dividend_amount.items(), key=itemgetter(1), reverse=True):
                 p_str = key
                 p_str += ','
                 p_str += str(comp_freq[key])
@@ -649,8 +628,8 @@ if __name__ == "__main__":
 
         parser = argparse.ArgumentParser(description='Process arguments')
         # dest= not required as option itself is the destination in args
-        parser.add_argument('-d', '--debug_level', default='0', help='debug level 0|1|2|3', type=int,
-                            choices=[0, 1, 2, 3])
+        parser.add_argument('-l', '--log_level', default='INFO', help='DEBUG|INFO|WARNING|ERROR|CRITICAL', type=str,
+                            choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
         parser.add_argument('-t', '--truncate_table', default='False', help='truncate table', action='store_true')
         parser.add_argument('-i', '--in_files', required=True, nargs='+', dest='in_files', help='in files')
         parser.add_argument('-a', '--alias_files', required=True, nargs='+', dest='alias_files', help='alias files')
@@ -658,7 +637,7 @@ if __name__ == "__main__":
 
         args = parser.parse_args()
 
-        debug_level = args.debug_level
+        log_level = args.log_level
         truncate_table = args.truncate_table
 
         # dummy assignment
@@ -681,16 +660,12 @@ if __name__ == "__main__":
         # Main caller
         program_name = sys.argv[0]
 
-        if debug_level > 1:
-            print('args :', len(sys.argv))
-            print('in_dividend_filenames :' + in_dividend_filenames)
-
-        if debug_level > 1:
-            print('args :', len(sys.argv))
+        print('args :', len(sys.argv))
+        print('in_filename_phase :', in_filename_phase)
 
         dividend = Dividend()
 
-        dividend.set_debug_level(debug_level)
+        dividend.set_log_level(log_level)
 
         if truncate_table:
             dividend.dividend_table_reload(truncate_table)

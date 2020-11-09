@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEBUG_LEVEL=1
+LOGGING_LEVEL=INFO
 
 CONFIG_DATA_LOC=`python -m config data`
 CONFIG_REPORTS_LOC=`python -m config reports`
@@ -47,6 +47,6 @@ do
         echo "error: file doesn't exist : ${IN_FILE_1}"
     fi
 
-    python dividend.py -t -d ${DEBUG_LEVEL} -i ${IN_FILE_BANK_STMT} -a ${IN_FILE_ALIASES} -o ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7}
+    python dividend.py -t -l ${LOGGING_LEVEL} -i ${IN_FILE_BANK_STMT} -a ${IN_FILE_ALIASES} -o ${OUT_FILE_0} ${OUT_FILE_1} ${OUT_FILE_2} ${OUT_FILE_3} ${OUT_FILE_4} ${OUT_FILE_5} ${OUT_FILE_6} ${OUT_FILE_7}
 
 done

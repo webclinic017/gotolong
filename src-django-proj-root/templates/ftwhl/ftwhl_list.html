@@ -1,0 +1,36 @@
+{% include "top.html" %}
+
+<h1>FTWHL List </h1>
+<table>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    {% for ftwhl_row in object_list %}
+    <tr>
+        <td>
+            {{ ftwhl_row.id }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_ticker }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_high }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_high_dt }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_low }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_low_dt }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No ftwhl yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

@@ -243,6 +243,10 @@ class Amfi(Database):
             fh.close()
 
     def amfi_get_ticker_by_name(self, req_name):
+        if req_name is None:
+            print('req_name', ':', req_name, ':')
+            return '-none-'
+
         req_name = re.sub('\s+', ' ', req_name).strip()
         for amfi_ticker in sorted(self.amfi_cname):
             # try to find a matching company

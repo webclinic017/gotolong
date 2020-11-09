@@ -17,6 +17,7 @@ class Nach(Database):
     def __init__(self):
         super(Nach, self).__init__()
         self.nach_aliases = {}
+        self.nach_aliases_uc = {}
         self.debug_level = 0
         self.nach_table_truncate = False
         self.nach_table_name = "global_nach"
@@ -37,7 +38,7 @@ class Nach(Database):
                 print('row : ', row);
 
             name_alias, ticker = row
-            name_alias = name_alias.strip().capitalize()
+            name_alias = name_alias.strip().upper()
             ticker = ticker.strip().upper()
             if self.debug_level > 1:
                 print('alias ', name_alias, 'ticker ', ticker)
@@ -90,6 +91,9 @@ class Nach(Database):
                 print(row)
             self.nach_load_row(row)
         print('loaded aliases count ', len(self.nach_aliases))
+        # create an upper case list
+        for k, v in self.nach_aliases.items():
+            self.nach_aliases_uc[k.upper()] = v.upper()
 
     def nach_dump_phase1(self, out_filename):
         if self.debug_level > 0:
