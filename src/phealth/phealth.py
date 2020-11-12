@@ -47,7 +47,7 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
         fh = open(out_filename, "w")
 
         # oku - one k units
-        p_str = "ticker,comp_name,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,reco_type,reco_cause"
+        p_str = "ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,reco_type,reco_cause"
         p_str += '\n'
 
         fh.write(p_str)
@@ -59,8 +59,10 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
             rank = self.amfi_rank[ticker]
             logging.debug(ticker, 'rank', self.amfi_rank[ticker])
 
+            captype = self.amfi_captype[ticker]
+
             # capture only large cap and mid cap
-            if rank > 250:
+            if rank > 500:
                 continue
 
             try:
@@ -71,6 +73,9 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
                 p_str += self.amfi_cname[ticker]
                 p_str += ','
 
+                p_str += captype
+                p_str += ','
+                    
                 if self.tl_ratio_values.get((ticker, "bat")):
                     bat = self.tl_ratio_values[ticker, "bat"]
                     p_str += str(bat)
@@ -124,7 +129,6 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
                 p_str += months
                 p_str += ','
 
-                captype = self.amfi_captype[ticker]
                 weight = self.gweight_captype_dict[captype]
 
                 plan_units = int(weight)

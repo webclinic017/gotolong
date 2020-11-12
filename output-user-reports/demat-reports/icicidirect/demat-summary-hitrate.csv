@@ -1,0 +1,4 @@
+captype, total stocks, stocks with +(pos) returns, stocks with -(neg) returns, hit rate(%)
+Large Cap,86,65,21,75
+Mid Cap,76,49,27,64
+Small Cap,80,38,42,47

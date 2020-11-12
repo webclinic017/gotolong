@@ -11,18 +11,48 @@ NSE_HOLIDAY_LIST=$CONFIG_REPORTS_LOC/nse-reports/nse-reports-holiday-list.txt
 
 DOWNLOAD_DIR=${PROJECT_ROOT}/download-data
 
-if [ -n "$1" ]
+# set defaults
+DOWNLOAD_Q=no
+REMOVE_Q=yes
+
+if test $# -lt 4;
 then
-  CMD=$1
-else
-  CMD="download"
+          echo "usage: $0 download <yes|no> remove <yes|no>" 
+          echo "usage: $0 download <yes> remove <no>" 
+          exit 1
+fi        
+
+
+if [ -n "$2" ]
+then
+  DOWNLOAD_Q=$2
+
+  if [ "${DOWNLOAD_Q}" != "yes" -a "${DOWNLOAD_Q}" != "no" ];
+  then
+          echo "usage: $0 download <yes|no> remove <yes|no>" 
+          echo "usage: $0 download <yes> remove <no>" 
+          exit 1
+  fi
 fi
 
-echo "CMD = $CMD"
+if [ -n "$4" ]
+then
+  REMOVE_Q=$4
+
+  if [ "${REMOVE_Q}" != "yes" -a "${REMOVE_Q}" != "no" ];
+  then
+          echo "usage: $0 download <yes|no> remove <yes|no>" 
+          echo "usage: $0 download <yes> remove <no>" 
+          exit 1
+  fi
+fi
+
+echo "DOWNLOAD_Q = $DOWNLOAD_Q"
+echo "REMOVE_Q = $REMOVE_Q"
 
 mkdir -p ${DOWNLOAD_DIR}
 
-if [ "${CMD}" == "download" ];
+if [ "${DOWNLOAD_Q}" == "yes" ];
 then
     day_or_week=`date +%w`
     if [ $day_or_week == 1 ] ; then
@@ -96,6 +126,8 @@ then
         echo ${last_working_date} > ${DOWNLOAD_DIR}/nse_fetch_date.txt
     fi
 
+else
+    echo 'skipped download'
 fi
 
 # lets experiment in download directory
@@ -126,20 +158,36 @@ fi
 
 # trendlyne prefix
 TL_SCREEN_NAME="GOTOLONG"
-TL_FILE_FOUND="no"
-for tl_filename in `ls *${TL_SCREEN_NAME}*`
+TL_FILE_LIST=trendlyne-flist.txt
+> ${TL_FILE_LIST} 
+# for tl_filename in `ls *${TL_SCREEN_NAME}*`
+ls *${TL_SCREEN_NAME}* | while read tl_filename
 do
-    TL_FILE_FOUND="yes"
+    echo "tl_filename : ${tl_filename}"
 
-    if [ "${TL_FILE_FOUND}" = "yes" ];
-    then
-        break
-    fi
-
+    # NOTE: it still doesn't help
+    # add empty new line
+    echo "" >> "${tl_filename}"
+    echo ${tl_filename} >> ${TL_FILE_LIST} 
 done
 
-if [ "${TL_FILE_FOUND}" = "yes" ];
+echo 'suri1'
+
+if [ -s  ${TL_FILE_LIST} ];
 then
-        cat *${TL_SCREEN_NAME}*.csv > ${CONFIG_DATA_LOC}/trendlyne-data/trendlyne-data.csv
-        rm *${TL_SCREEN_NAME}*.csv
+        echo 'suri2'
+
+        # quite to suppress filename: put header first
+        head -q -n 1 *${TL_SCREEN_NAME}*.csv | sort -u > ${CONFIG_DATA_LOC}/trendlyne-data/trendlyne-data.csv
+        # supress header 
+        tail -q -n +2 *${TL_SCREEN_NAME}*.csv >> ${CONFIG_DATA_LOC}/trendlyne-data/trendlyne-data.csv
+
+        # let dummy header be around second time
+        # cat *${TL_SCREEN_NAME}*.csv > ${CONFIG_DATA_LOC}/trendlyne-data/trendlyne-data.csv
+
+        if [ "${REMOVE_Q}" = "yes" ];
+        then
+            rm *${TL_SCREEN_NAME}*.csv
+            rm ${TL_FILE_LIST}
+        fi
 fi
