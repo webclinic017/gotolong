@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import UploadDoc
+from .models import UploadDocModel
 
 # ...
-admin.site.register(UploadDoc)
+admin.site.register(UploadDocModel)

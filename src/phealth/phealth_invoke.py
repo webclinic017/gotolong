@@ -57,5 +57,6 @@ phealth.demat_sum_load_db()
 phealth.gweight_load_db()
 phealth.bhav_load_data_from_db()
 phealth.ftwhl_load_data_from_db()
+phealth.corpact_load_data_from_db()
 
 phealth.phealth_dump_report(out_filename_phase[0], out_filename_phase[1])

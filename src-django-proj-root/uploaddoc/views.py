@@ -1,13 +1,32 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 
-from uploaddoc.models import UploadDoc
+from uploaddoc.models import UploadDocModel
 from uploaddoc.forms import UploadDocForm
 
 
+# delete view for details
+def delete_view(request, id):
+    # dictionary for initial data with
+    # field names as keys
+    context = {}
+
+    # fetch the object related to passed id
+    obj = get_object_or_404(UploadDocModel, uploaddoc_id=id)
+
+    if request.method == "POST":
+        # delete object
+        obj.delete()
+        # after deleting redirect to
+        # home page
+        return HttpResponseRedirect("/")
+
+    return render(request, "uploaddoc/uploaddoc_delete.html", context)
+
 def list(request):
-    documents = UploadDoc.objects.all()
+    documents = UploadDocModel.objects.all().order_by('uploaddoc_fpath')
     return render(request, 'uploaddoc/uploaddoc_list.html', {'documents': documents})
 
 

@@ -22,8 +22,10 @@ from global_weight.gweight import *
 from bhav.bhav import *
 from ftwhl.ftwhl import *
 
+from corpact.corpact import *
 
-class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
+
+class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl, Corpact):
 
     def __init__(self):
         super(Phealth, self).__init__()
@@ -47,7 +49,7 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
         fh = open(out_filename, "w")
 
         # oku - one k units
-        p_str = "ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,reco_type,reco_cause"
+        p_str = "ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,gb_score,reco_type,reco_cause"
         p_str += '\n'
 
         fh.write(p_str)
@@ -142,6 +144,13 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl):
                 p_str += ','
 
                 p_str += str(tbd_units)
+                p_str += ','
+
+                if ticker in self.corpact_total:
+                    giveback_score = self.corpact_total[ticker]
+                else:
+                    giveback_score = '-'
+                p_str += str(giveback_score)
                 p_str += ','
 
                 if (ticker, "reco_type") in self.tl_ratio_values:

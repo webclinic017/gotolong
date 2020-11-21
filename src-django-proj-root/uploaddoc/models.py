@@ -5,7 +5,7 @@ from django.db import models
 from datetime import date
 
 
-class UploadDoc(models.Model):
+class UploadDocModel(models.Model):
 
     def file_rename(instance, filename):
         ext = filename.split('.')[-1]

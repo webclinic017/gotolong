@@ -12,7 +12,11 @@ import csv
 from collections import Counter
 from operator import itemgetter
 
+from datetime import date
+
 import glob
+
+import traceback
 
 import argparse
 
@@ -25,7 +29,7 @@ parser.add_argument('--debug_level', default='0', help='debug level 0|1|2|3', ty
 parser.add_argument('--dividend_file', nargs='+', dest='dividend_file', help='dividend file')
 parser.add_argument('--bonus_file', nargs='+', dest='bonus_file', help='bonus file')
 parser.add_argument('--buyback_file', nargs='+', dest='buyback_file', help='buyback file')
-parser.add_argument('--split_file', nargs='+', dest='split_file', help='split file')
+parser.add_argument('--out_file', dest='out_file', help='out file')
 
 args = parser.parse_args()
 
@@ -53,128 +57,83 @@ debug_level = args.debug_level
 bonus_filenames = glob.glob(args.bonus_file[0])
 dividend_filenames = glob.glob(args.dividend_file[0])
 buyback_filenames = glob.glob(args.buyback_file[0])
-split_filenames = glob.glob(args.split_file[0])
+output_filename = args.out_file
+
+print('out file :', output_filename)
 
 # print('bonus_filenames', bonus_filenames)
 # print('dividend_filenames', dividend_filenames)
 
 # Error-1, Warn-2, Log-3
-companies = []
-industries = []
-sectors = []
-dividend_count = {}
-dividend_amount = {}
-bonus_share = {}
-split_share = {}
-bonus_count = {}
-buyback_share = {}
-buyback_count = {}
-split_count = {}
-company_aliases = {}
-total_dividend = 0
+current_date = date.today()
+current_year = current_date.year
+
+corp_act_stock_list = []
+corp_act_dividend_stock_year_dict = {}
+corp_act_bonus_stock_year_dict = {}
+corp_act_buyback_stock_year_dict = {}
+
+corp_act_year_list = []
+
+total_giveback_score = {}
+bonus_score = {}
+buyback_score = {}
+dividend_score = {}
 
 
-def bse_load_dividend(row, security_name, purpose):
+def bse_load_any(row, security_name, ex_date, purpose):
     try:
-        m = re.search("(.*)(Dividend - Rs. -)(.*)", purpose)
-        if m.group(2) != "Dividend - Rs. -":
-            if debug_level > 1:
-                print('no dividend match', row)
+        if purpose == '-' or purpose == 'Purpose':
             return
-        else:
-            companies.append(security_name)
 
-        if security_name in dividend_count.keys():
-            dividend_count[security_name] += 1
-            dividend_amount[security_name] = dividend_amount[security_name] + ' & ' + str(round(float(m.group(3)), 1))
-        else:
-            dividend_count[security_name] = 1
-            dividend_amount[security_name] = str(round(float(m.group(3)), 1))
+        if ex_date != 'Ex Date':
+            # sometime the space is separator and sometime hyphen is separator
+            if re.search('-', ex_date):
+                split_char = "-"
+            else:
+                split_char = " "
+            date_arr = ex_date.split(split_char)
+            if debug_level > 2:
+                print('date: ', date_arr)
+            current_year = int(date_arr[2])
+            # note: sometime date is stored as 17 and sometime as 2017
+            # to fix the year.
+            if current_year >= 2000:
+                current_year = current_year - 2000
+            if debug_level > 2:
+                print('year : ', current_year)
+
+            if security_name not in corp_act_stock_list:
+                corp_act_stock_list.append(security_name)
+            if current_year not in corp_act_year_list:
+                corp_act_year_list.append(current_year)
+
+            if re.search('Bonus', purpose):
+                if (security_name, current_year) not in corp_act_bonus_stock_year_dict:
+                    corp_act_bonus_stock_year_dict[security_name, current_year] = 1
+            elif re.search('Buy Back', purpose):
+                if (security_name, current_year) not in corp_act_buyback_stock_year_dict:
+                    corp_act_buyback_stock_year_dict[security_name, current_year] = 1
+            elif re.search('Dividend', purpose):
+                if (security_name, current_year) not in corp_act_dividend_stock_year_dict:
+                    corp_act_dividend_stock_year_dict[security_name, current_year] = 1
+            else:
+                print('wrong purpose', purpose)
+
+    except IndexError:
+        if debug_level > 1:
+            print('IndexError', row)
+        traceback.print_exc()
+        traceback.print_exc()
     except NameError:
         if debug_level > 1:
             print('NameError', row)
+        traceback.print_exc()
     except AttributeError:
         if debug_level > 1:
             print('AttributeError', row)
+        traceback.print_exc()
 
-
-def bse_load_bonus(row, security_name, purpose):
-    try:
-        m = re.search("(Bonus issue)(.*)", purpose)
-        if m.group(1) != "Bonus issue":
-            if debug_level > 1:
-                print('no bonus match', row)
-            return
-        else:
-            companies.append(security_name)
-
-        if security_name in bonus_share.keys():
-            bonus_count[security_name] += 1
-            bonus_share[security_name] = bonus_share[security_name] + ' & ' + m.group(2)
-        else:
-            bonus_count[security_name] = 1
-            bonus_share[security_name] = m.group(2)
-
-    except NameError:
-        if debug_level > 1:
-            print('NameError', row)
-    except AttributeError:
-        if debug_level > 1:
-            print('AttributeError', row)
-
-
-def bse_load_split(row, security_name, purpose):
-    try:
-        m = re.search("(Stock  Split From)(.*)", purpose)
-        if m.group(1) != "Stock  Split From":
-            if debug_level > 1:
-                print('no stock split match', row)
-            return
-        else:
-            companies.append(security_name)
-
-        fv_new_to_old = m.group(2)
-        fv_new_to_old = fv_new_to_old.replace('Rs.', '')
-        fv_new_to_old = fv_new_to_old.replace('/-', '')
-        fv_new_to_old = fv_new_to_old.replace(' to ', ':')
-
-        if security_name in split_share.keys():
-            split_count[security_name] += 1
-            split_share[security_name] = split_share[security_name] + ' & ' + fv_new_to_old
-        else:
-            # fv_new_to_old = 'FV (Old : New)' + fv_new_to_old
-            split_count[security_name] = 1
-            split_share[security_name] = fv_new_to_old
-
-    except NameError:
-        if debug_level > 1:
-            print('NameError', row)
-    except AttributeError:
-        if debug_level > 1:
-            print('AttributeError', row)
-
-
-def bse_load_buyback(row, security_name, purpose):
-    try:
-        m = re.search("(Buy Back of Shares)(.*)", purpose)
-        if m.group(1) != "Buy Back of Shares":
-            if debug_level > 1:
-                print('no buyback match', row)
-            return
-        else:
-            companies.append(security_name)
-
-        if security_name in buyback_count.keys():
-            buyback_count[security_name] += 1
-        else:
-            buyback_count[security_name] = 1
-
-    except NameError:
-        if debug_level > 1:
-            print('NameError', row)
-    except AttributeError:
-        if debug_level > 1:
-            print('AttributeError', row)
 
 
 def bse_load_row(data_type, row):
@@ -183,15 +142,10 @@ def bse_load_row(data_type, row):
     # company_name = company_name.capitalize()
     # company_name = company_name.strip()
     security_name = security_name.strip()
-    if data_type == "d":
-        bse_load_dividend(row, security_name, purpose)
-    if data_type == "b":
-        bse_load_bonus(row, security_name, purpose)
-    if data_type == "bb":
-        bse_load_buyback(row, security_name, purpose)
-    if data_type == "ss":
-        # stock split
-        bse_load_split(row, security_name, purpose)
+    purpose = purpose.strip()
+    ex_date = ex_date.strip()
+
+    bse_load_any(row, security_name, ex_date, purpose)
 
 
 def bse_load_data(data_type, in_filenames):
@@ -205,100 +159,55 @@ def bse_load_data(data_type, in_filenames):
 bse_load_data('d', dividend_filenames)
 bse_load_data('b', bonus_filenames)
 bse_load_data('bb', buyback_filenames)
-bse_load_data('ss', split_filenames)
+# stock split is not giving back
+# bse_load_data('ss', split_filenames)
 
-companies.sort()
+if sort_type == "corpact":
 
-if sort_type == "company_name_only":
-    for cname in sorted(set(companies)):
-        print(cname)
+    print('year list: ', sorted(set(corp_act_year_list)))
 
-# calculate frequency of occurrence of each company
-comp_freq = Counter(companies)
+    for security_name in sorted(set(corp_act_stock_list)):
+        buyback_found = 0
+        bonus_found = 0
+        dividend_found = 0
 
-if debug_level > 1:
-    print(comp_freq)
+        for current_year in sorted(set(corp_act_year_list), key=int):
+            try:
+                if (security_name, current_year) in corp_act_buyback_stock_year_dict:
+                    buyback_found += 1
+                if (security_name, current_year) in corp_act_bonus_stock_year_dict:
+                    bonus_found += 1
+                if (security_name, current_year) in corp_act_dividend_stock_year_dict:
+                    dividend_found += 1
+                    if debug_level > 2:
+                        print(security_name, current_year)
 
-if sort_type == "sort_frequency_name_only":
-    for key, value in sorted(comp_freq.items()):
-        print(key)
+            except KeyError:
+                print('KeyError failed lookup :', security_name, current_year)
+        # do not include stock split as that doesn't mean giving back
+        total_give_back = buyback_found + bonus_found + dividend_found
+        bonus_score[security_name] = bonus_found
+        buyback_score[security_name] = buyback_found
+        dividend_score[security_name] = dividend_found
+        total_giveback_score[security_name] = total_give_back
 
-try:
-    if sort_type == "total_count":
-        items = comp_freq.items()
-        print('security_name, split_count, bonus_count, buyback_count, dividend_count, total_count')
-    if sort_type == "bonus_count":
-        items = bonus_count.items()
-        print('security_name, bonus_share, bonus_count')
-    if sort_type == "buyback_count":
-        items = buyback_count.items()
-        print('security_name, buyback_share, buyback_count')
-    if sort_type == "dividend_count":
-        items = dividend_count.items()
-        print('security_name, dividend_amount, dividend_count')
-    if sort_type == "split_count":
-        items = split_count.items()
-        print('security_name, split_share, split_count')
+    fh = open(output_filename, "w")
+    p_str = 'security_name, total_score, bonus_score, buyback_score, dividend_score\n'
+    fh.write(p_str)
 
-    for key, value in sorted(items, key=itemgetter(1)):
-        if key in bonus_share.keys():
-            bonus_share_column = bonus_share[key]
-        else:
-            bonus_share_column = "-"
-
-        if key in bonus_count.keys():
-            bonus_count_column = bonus_count[key]
-        else:
-            bonus_count_column = "-"
-
-        if key in buyback_count.keys():
-            buyback_count_column = buyback_count[key]
-        else:
-            buyback_count_column = "-"
-
-        if key in buyback_share.keys():
-            buyback_share_column = buyback_share[key]
-        else:
-            buyback_share_column = "-"
-
-        if key in dividend_amount.keys():
-            dividend_amount_column = dividend_amount[key]
-        else:
-            dividend_amount_column = "-"
-
-        if key in dividend_count.keys():
-            dividend_count_column = dividend_count[key]
-        else:
-            dividend_count_column = "-"
-
-        if key in split_share.keys():
-            split_share_column = split_share[key]
-        else:
-            split_share_column = "-"
-
-        if key in split_count.keys():
-            split_count_column = split_count[key]
-        else:
-            split_count_column = "-"            
-
-        if debug_level > 0:
-            print(key, split_share_column, bonus_share_column, dividend_amount_column, bonus_count_column,
-                  buyback_count_column,
-                  dividend_count_column,
-                  comp_freq[key])
-
-        if sort_type == "total_count":
-            print(key, ',', split_count_column, ',', bonus_count_column, ',', buyback_count_column, ',',
-                  dividend_count_column, ',',
-                  comp_freq[key])
-        if sort_type == "bonus_count":
-            print(key, ',', bonus_share_column, ',', bonus_count_column)
-        if sort_type == "buyback_count":
-            print(key, ',', buyback_share_column, ',', buyback_count_column)
-        if sort_type == "dividend_count":
-            print(key, ',', dividend_amount_column, ',', dividend_count_column)
-        if sort_type == "split_count":
-            print(key, ',', split_share_column, ',', split_count_column)
-
-except KeyError:
-    print('failed key :', key)
+    try:
+        for security_name in sorted(total_giveback_score, key=lambda i: int(total_giveback_score[i]), reverse=True):
+            p_str = security_name
+            p_str += ','
+            p_str += str(total_giveback_score[security_name])
+            p_str += ','
+            p_str += str(bonus_score[security_name])
+            p_str += ','
+            p_str += str(buyback_score[security_name])
+            p_str += ','
+            p_str += str(dividend_score[security_name])
+            p_str += '\n'
+            fh.write(p_str)
+    except KeyError:
+        print('KeyError failed lookup 2:', security_name, current_year)
+    fh.close()

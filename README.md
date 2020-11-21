@@ -1,6 +1,10 @@
 # GotoLong
 
-An Indian Stock Screener can be used to identify stocks for buy and sale.
+GotoLong is an Indian Stock Advisor (ISA) that can be used to identify stocks for buy and sale.
+It relies on (a) investor's existing portfolio of stocks and (b) financial data of BSE-500/Nifty-500 stocks.
+
+It is still in Beta phase and developers can experiment with it. Once it can be used by any user with basic knowledge of
+computer, it will be tagged as v1.0
 
 ## Support
 http://www.gotolong.in/
@@ -54,8 +58,7 @@ Currently, it is used by non django loaders of most modules.
 ## Input Data 
 
 ### user scope
-Gather and store files like bank statement, demat summary and
-demat detailed data in input-user-data
+Gather and store files like demat summary and demat detailed data in input-user-data
 
 ## Generate report for all modules
 cd {GOTOLONG_HOME}/
