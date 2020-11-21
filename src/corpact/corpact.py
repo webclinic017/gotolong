@@ -156,7 +156,7 @@ class Corpact(Database):
         fh = open(out_filename, "w")
 
         dump_first_rec = True
-        for ticker in sorted(self.corpact_total, key=self.corpact_total.__getitem__):
+        for ticker in sorted(self.corpact_total, key=self.corpact_total.__getitem__, reverse=True):
             if dump_first_rec:
                 dump_first_rec = False
                 logging.debug('ticker  %s', ticker)
@@ -186,7 +186,7 @@ class Corpact(Database):
             fh.write(p_hdr)
 
         dump_first_rec = True
-        for ticker in sorted(self.corpact_total, key=self.corpact_total.__getitem__):
+        for ticker in sorted(self.corpact_total, key=self.corpact_total.__getitem__, reverse=True):
             if dump_first_rec:
                 logging.debug('ticker  %s', ticker)
                 dump_first_rec = False
