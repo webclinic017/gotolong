@@ -21,6 +21,7 @@ SURIKUMA-LAP.pid
 *.frm
 mariadb
 download-data
+download
 db-files
 db-data
 build
