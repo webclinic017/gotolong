@@ -1,0 +1,56 @@
+To Do Items
+
+* Add whitnoise support for serving static files inside django
+  *
+* Make it work with Heroku
+* Generate requirements.txt
+  * python freeze > requirements.txt
+
+
+* Trendlyne - add industry clause for DER to pick up bank/nbfc (similar to screener)
+ ** use a dictionary instead of the long list of arguments for _reco
+
+* Django - add support for amfi, demat txn and dividend data
+* allow multi broker configuration like user have account in both icicidirect and zerodha
+* allow multi-user configuration : different user support with different broker configuration.
+
+* Port it for windows
+* Port it for Python 3* from Python 2*
+* Fix the dividend in bse-data as we should know the CMP on that day to normalize over 1K of investment.
+  * Is the dividend value of any use otherwise (if it is per share) ?
+
+* Ensure that NSE stock symbol is used as an index for reference everywhere.
+* The mos (margin of safety) should be by cap wise similar to ICICI direct recommendation. 
+  * Strong Buy :
+    ** > 15 % - Large
+    ** > 20% - Midcap
+  * Buy : 
+     **  10% to 15%  - Large
+     **  10% to 20% - MidCap
+  * Hold : +/- 10%
+  * Sale : -10% or more
+* Integrate it with SQLlite Relational DB and no-sql Db.
+  * push the data once and load it in other dependent classes.
+* Fix the tbd data where screener data is shown as 0
+  ** Fix the name to isin code / stock code translation for screener
+* Fix the dividend report from bank txn stmt
+  ** Bank Txn Stmt -> Dividend -> Company name -> convert to name/stock code.
+  ** Otherwise. comparison doesn't work well.
+** Include AMFI as a dependency and convert name to ISIN name
+* Generate different target companies list for buy and sale.
+* Include Zerodha demat data also apart from icicidirect
+* Identify companies which have missing data or unable to fetch using ISIN, screener or mstar.
+* Add support for top 100 companies with maximum mutual funds holdings
+* Generate dividend paying companies list for last 3 years from moneycontrol
+* Identify stressed sectors (struggling with profits)
+* Identify companies to be dropped
+* Identify companies to be included
+* Use machine learning tools to reduce the list of companies/sectors from top 250.
+
+
+Jan 2020
+
+* added mariadb support as sqlite has basic features like column rename also missing.
+  ** wanted to try mysql but it was asking for registration. opted for mariadb
+
+*

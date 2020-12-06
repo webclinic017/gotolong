@@ -23,3 +23,5 @@ mariadb
 download-data
 db-files
 db-data
+build
+dist

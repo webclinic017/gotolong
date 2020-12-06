@@ -1,18 +1,8 @@
 
 setenv PROJECT_ROOT `pwd` 
 
-setenv PROJ_SOURCE_LOC $PROJECT_ROOT/src
-#setenv PROJ_DATA_LOC  $PROJECT_ROOT/input-global-data
-#setenv PROJ_REPORTS_LOC $PROJECT_ROOT/output-global-reports
-
-#setenv PROJ_LOCAL_DATA_LOC  $PROJECT_ROOT/input-local-data
-#setenv PROJ_LOCAL_REPORTS_LOC $PROJECT_ROOT/output-local-reports
-
-# use later
-#setenv PROJ_PROFILE default 
-
-#setenv PROJ_PROFILE_DATA_LOC  $PROJECT_ROOT/input-user-data
-#setenv PROJ_PROFILE_REPORTS_LOC $PROJECT_ROOT/output-user-reports
+setenv PROJ_SOURCE_LOC $PROJECT_ROOT/gotolong-loader/src
+setenv PROJ_DATA_LOC $PROJECT_ROOT/gotolong-loader/data
 
 setenv PATH ${PROJ_SOURCE_LOC}:${PROJECT_ROOT}:.:${PATH}
 

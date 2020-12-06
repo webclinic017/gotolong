@@ -109,31 +109,46 @@ mapping of ticker and mcap and captype
 
 mapping of ticker and ISIN
 
-## demat module
+## Giving Back Score
+
+Module : bse -> corpact
+
+## 52-week high and low and CMP (yesterday)
+
+Modules : bhav, ftwhl, nse
+
+## demat module (icici direct portfolio)
 
 demat transaction details
+
 demat summary details
+
+Module name : demat 
 
 ## screener module
 
-screener data of bse 500
-
-## chealth module
-
-recommendation based on healthy companies 
+financial data of bse 500 for 10 years
 
 ## trendlyne module
 
 for broker average target of healthy stocks
 
-## weight module
+## global weight module
 
-assign weight to each company
+assign weight by captype
+
+user weight is not used right now
+
+Name : global_weight
 
 ## phealth module
 
 identify companies at healthy price
 
+Dependency : 
+
 ## dividend module
 
 create dividend matrix by company and month.
+
+Dependency : nach -> dividend

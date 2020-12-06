@@ -1,0 +1,143 @@
+{% include "top.html" %}
+
+<h1>Dividend </h1>
+
+
+Total Dividend: {{ total_amount }}
+
+<br>
+
+Annual and Monthly Distribution
+
+<br>
+
+<table>
+
+
+    <tr>
+        <td>
+            key
+        </td>
+        <td>
+            value
+        </td>
+    </tr>
+
+    {% for year_summary in summary_list %}
+
+    {% comment %}
+    {{ year_summary }}
+    {% endcomment %}
+
+    {% for key, value in year_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value}}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+
+
+    <br/>
+
+
+    {% for month_summary in month_summary_list %}
+
+    {% comment %}
+    {{ month_summary }}
+    {% endcomment %}
+
+    {% for key, value in month_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value }}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+
+</table>
+
+
+<br/>
+
+Dividend Archives :
+
+{% for year in year_list %}
+<a href=/dividend/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
+{% endfor %}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+        <td>
+            Ticker
+        </td>
+        <td>
+            ISIN
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.div_date }}
+        </td>
+        <td>
+            {{ dividend_row.remarks }}
+        </td>
+        <td>
+            {{ dividend_row.amount }}
+        </td>
+        <td>
+            {{ dividend_row.ticker }}
+        </td>
+        <td>
+            {{ dividend_row.isin }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}
