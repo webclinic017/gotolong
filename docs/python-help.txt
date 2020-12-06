@@ -176,3 +176,15 @@ XYZ_2d[row, column] = 1
 
 pip install mysql
 pip install mysql-connector-python
+
+
+23. pip freeze (get the list of packages already installed)
+ 23.1 pip freeze > requirements.txt
+ 23.2
+
+24. uninstall packages
+  24.1 pip uninstall gunicorn
+
+25. Generate wheel package
+  25.1 pip install wheel
+  25.2 python setup.py bdist_wheel
