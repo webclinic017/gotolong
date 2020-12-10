@@ -1,5 +1,7 @@
 To Do Items
 
+* use .json file for storing input-files and output-files for each module.
+
 * Add whitnoise support for serving static files inside django
   *
 * Make it work with Heroku

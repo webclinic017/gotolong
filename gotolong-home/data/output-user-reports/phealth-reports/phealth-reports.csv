@@ -2,7 +2,7 @@ ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_o
 RELIANCE,Reliance industries,Large Cap,1960.3,1999.8,866.98,2369.35,131,-2,7,15,16,-1,6,HOLD, der dpr2
 TCS,Tata consultancy services,Large Cap,2823.62,2687.5,1506.05,2885.0,78,5,10,15,31,-16,8,BUY,ALL
 HDFCBANK,Hdfc bank,Large Cap,1377.17,1390.15,738.75,1395.0,88,-1,10,15,32,-17,5,SALE, der
-HINDUNILVR,Hindustan unilever,Large Cap,2419.75,2135.0,1757.3,2614.3,21,13,0,15,35,-20,5,BUY,ALL
+HINDUNILVR,Hindustan unilever,Large Cap,2419.75,2135.0,1757.3,2614.3,21,13,1,15,35,-20,5,BUY,ALL
 HDFC,Housing development finance corplt,Large Cap,2204.38,2318.0,1473.45,2499.9,57,-5,2,15,31,-16,5,SALE, der
 INFY,Infosys,Large Cap,1191.43,1123.5,509.25,1186.0,121,6,8,15,31,-16,8,BUY,ALL
 BHARTIARTL,Bharti airtel,Large Cap,666.56,477.5,350.3,612.0,36,40,7,15,17,-2,4,SALE, der roce3 dpr2 profit5
@@ -30,12 +30,12 @@ TITAN,Titan company,Large Cap,1145.73,1279.25,720.9,1341.05,77,-10,5,15,8,7,5,BU
 POWERGRID,Power grid corporation,Large Cap,211.33,189.9,122.15,211.0,55,12,9,15,22,-7,5,SALE, der
 IOC,Indian oil corporation,Large Cap,128.22,84.9,71.15,140.0,19,52,9,15,22,-7,8,SALE, der profit5
 BPCL,Bharat petroleum,Large Cap,446.0,394.0,252.0,549.0,56,13,8,15,6,9,7,SALE, der profit5
-DABUR,Dabur,Large Cap,544.91,510.25,386.05,535.95,32,7,0,15,11,4,5,BUY,ALL
+DABUR,Dabur,Large Cap,544.91,510.25,386.05,535.95,32,7,1,15,11,4,5,BUY,ALL
 SBILIFE,Sbi life insurance company,Large Cap,1001.27,840.0,519.4,1026.0,62,19,5,15,10,5,2,SALE, roce3
-BAJAJ-AUTO,Bajaj auto,Large Cap,3250.53,3016.4,1788.65,3315.15,69,8,8,15,12,3,5,BUY,ALL
+BAJAJ-AUTO,Bajaj auto,Large Cap,3250.53,3016.4,1788.65,3315.15,69,8,9,15,12,3,5,BUY,ALL
 SHREECEM,Shree cements,Large Cap,20435.0,22941.1,15410.0,25355.0,49,-11,21,15,18,-3,5,BUY,ALL
 HINDZINC,Hindustan zinc,Large Cap,233.33,225.05,116.05,258.95,94,4,9,15,20,-5,4,SALE, sales2 profit5
-PIDILITIND,Pidilite industries,Large Cap,1619.5,1564.85,1185.55,1709.9,32,4,0,15,12,3,6,BUY,ALL
+PIDILITIND,Pidilite industries,Large Cap,1619.5,1564.85,1185.55,1709.9,32,4,1,15,12,3,6,BUY,ALL
 BRITANNIA,Britannia industries,Large Cap,3801.73,3492.0,2100.0,4010.0,66,9,5,15,12,3,5,BUY,ALL
 ADANIPORTS,Adani ports special economic zone,Large Cap,380.0,371.75,203.0,394.6,83,2,29,15,2,13,6,SALE, der
 GODREJCP,Godrej consumer products,Large Cap,742.5,689.2,425.1,772.0,62,8,26,15,2,13,7,HOLD, roce3 sales2
@@ -63,29 +63,29 @@ GRASIM,Grasim industries,Large Cap,682.0,807.0,385.05,836.9,110,-15,7,15,3,12,5,
 VEDL,Vedanta,Large Cap,-,101.95,60.2,166.1,69,-,8,15,22,-7,5,-,-
 TATASTEEL,Tata steel,Large Cap,396.33,476.0,250.85,506.0,90,-17,9,15,18,-3,5,SALE, der
 MARICO,Marico,Large Cap,389.36,376.1,234.0,389.75,61,3,12,15,11,4,6,BUY,ALL
-TATAMOTORS,Tata motors,Large Cap,168.43,151.1,63.5,201.7,138,11,8,15,8,7,1,SALE, der roce3 dpr2 sales2 profit5
+TATAMOTORS,Tata motors,Large Cap,168.43,151.1,63.5,201.7,138,11,9,15,8,7,1,SALE, der roce3 dpr2 sales2 profit5
 BIOCON,Biocon,Large Cap,425.4,416.25,235.55,478.0,77,2,17,15,1,14,7,SALE, dpr2
-INFRATEL,Bharti infratel,Large Cap,231.17,177.85,120.05,296.5,48,31,8,15,6,9,6,SALE, profit5
+INFRATEL,Bharti infratel,Large Cap,231.17,177.85,120.05,296.5,48,31,9,15,6,9,6,SALE, profit5
 AMBUJACEM,Ambuja cements,Large Cap,245.5,260.0,136.55,265.8,90,-6,14,15,12,3,5,HOLD,
 TORNTPHARM,Torrent pharmaceuticals,Large Cap,2855.57,2536.15,1583.25,3031.2,60,13,-,15,0,15,5,HOLD, der roce3
 COLPAL,Colgate palmolive,Large Cap,1596.6,1500.0,1065.0,1611.75,41,6,5,15,10,5,6,BUY,ALL
 PETRONET,Petronet lng,Large Cap,313.45,241.2,170.4,285.0,42,30,9,15,14,1,6,BUY,ALL
 HAVELLS,Havells,Large Cap,604.56,815.3,447.05,844.3,82,-26,13,15,11,4,5,BUY,ALL
-BOSCHLTD,Bosch,Large Cap,13083.5,12266.0,7850.0,17260.3,56,7,8,15,30,-15,7,SALE, sales2
+BOSCHLTD,Bosch,Large Cap,13083.5,12266.0,7850.0,17260.3,56,7,9,15,30,-15,7,SALE, sales2
 LUPIN,Lupin,Large Cap,1031.91,907.0,504.75,1122.3,80,14,25,15,10,5,2,SALE, sales2 profit5
 UPL,Upl,Large Cap,633.71,436.5,240.15,614.9,82,45,8,15,8,7,6,SALE, der
 PGHH,Procter gamble hygiene health care,Large Cap,11700.0,11100.0,8400.0,12388.8,32,5,11,15,20,-5,5,BUY,ALL
 ADANIGREEN,Adani green energy,Large Cap,-,897.55,85.2,919.0,953,-,-,15,0,15,-,-,-
-HINDALCO,Hindalco industries,Large Cap,198.67,207.3,84.9,221.2,144,-4,8,15,6,9,5,SALE, der
+HINDALCO,Hindalco industries,Large Cap,198.67,207.3,84.9,221.2,144,-4,9,15,6,9,5,SALE, der
 AUROPHARMA,Aurobindo pharma,Large Cap,951.82,814.45,288.85,967.5,182,17,19,15,3,12,6,HOLD, roce3 dpr2
 HINDPETRO,Hindustan petroleum corporation,Large Cap,289.22,214.6,150.0,302.5,43,35,9,15,14,1,7,SALE, der
 MUTHOOTFIN,Muthoot finance,Large Cap,1247.8,1167.95,476.8,1405.75,145,7,8,15,5,10,5,SALE, der
 ABBOTINDIA,Abbott,Large Cap,-,15410.0,11350.0,18679.8,36,-,-,15,0,15,5,-,-
 IGL,Indraprashtha gas,Large Cap,477.14,448.75,284.05,534.2,58,6,27,15,1,14,5,BUY,ALL
-MOTHERSUMI,Motherson sumi systems,Large Cap,125.33,131.7,48.65,151.0,171,-5,8,15,7,8,8,SALE, der profit5
+MOTHERSUMI,Motherson sumi systems,Large Cap,125.33,131.7,48.65,151.0,171,-5,9,15,7,8,8,SALE, der profit5
 PNB,Punjab national bank,Large Cap,35.33,29.35,26.3,67.7,12,21,-,15,0,15,1,SALE, der dpr2 profit5
 NAUKRI,Info edge,Large Cap,3117.2,3550.0,1581.1,3785.9,125,-12,5,15,6,9,5,HOLD, roce3 dpr2
-CADILAHC,Cadila healthcare,Large Cap,429.5,415.95,202.0,464.0,106,3,8,15,5,10,5,SALE, profit5
+CADILAHC,Cadila healthcare,Large Cap,429.5,415.95,202.0,464.0,106,3,9,15,5,10,5,SALE, profit5
 LTI,Larsen toubro infotech,Large Cap,2786.14,2990.3,1210.0,3512.7,147,-7,12,15,7,8,4,BUY,ALL
 BAJAJHLDNG,Bajaj holdings investment,Large Cap,4654.0,2665.0,1460.15,3950.0,83,75,7,15,5,10,5,SALE, roce3 profit5
 GICRE,General insurance corporation,Large Cap,165.0,123.7,81.5,291.0,52,34,8,15,15,0,3,SALE, sales2 profit5
@@ -103,17 +103,17 @@ WHIRLPOOL,Whirlpool,Mid Cap,2355.0,2128.2,1343.8,2555.0,58,11,32,10,3,7,3,HOLD, 
 PFC,Power finance corporation,Mid Cap,-,99.2,74.15,133.4,34,-,9,10,14,-4,5,-,-
 HONAUT,Honeywell automation,Mid Cap,36310.0,29180.0,20148.6,39524.9,45,24,21,10,23,-13,5,BUY,ALL
 ACC,Acc,Mid Cap,1744.83,1675.25,895.15,1703.2,87,4,12,10,11,-1,5,BUY,ALL
-GLAXO,Glaxosmithkline pharmaceuticals,Mid Cap,1279.5,1437.95,962.65,1807.5,49,-11,26,10,3,7,6,SALE, profit5
+GLAXO,Glaxosmithkline pharmaceuticals,Mid Cap,1279.5,1437.95,962.65,1807.5,49,-11,27,10,3,7,6,SALE, profit5
 KANSAINER,Kansai nerolac paints,Mid Cap,553.33,519.8,293.7,557.45,77,7,6,10,5,5,5,BUY,ALL
 YESBANK,Yes bank,Mid Cap,12.0,14.15,5.65,87.3,150,-14,-,10,0,10,5,SALE, der dpr2 profit5
 PAGEIND,Page industries,Mid Cap,21339.6,21825.2,16254.0,26882.6,34,-2,21,10,24,-14,5,BUY,ALL
-3MINDIA,3m,Mid Cap,-,20100.0,15700.0,25200.0,28,-,1,10,19,-9,-,-,-
+3MINDIA,3m,Mid Cap,-,20100.0,15700.0,25200.0,28,-,2,10,19,-9,-,-,-
 RECLTD,Rec,Mid Cap,-,116.45,78.75,156.5,48,-,9,10,16,-6,6,-,-
 ABB,Abb,Mid Cap,921.2,943.0,722.0,1538.0,31,-2,6,10,6,4,5,BUY,ALL
 JUBLFOOD,Jubilant foodworks,Mid Cap,1973.38,2333.0,1138.25,2457.8,105,-15,5,10,6,4,6,BUY,ALL
 NHPC,Nhpc,Mid Cap,23.0,20.95,15.1,29.1,39,15,9,10,13,-3,7,HOLD, der
 OFSS,Oracle financial services software,Mid Cap,4000.0,3080.0,1506.0,3400.0,105,30,-,10,0,10,4,BUY,ALL
-HAL,Hindustan aeronautics,Mid Cap,-,733.5,470.0,1423.0,56,-,8,10,12,-2,1,-,-
+HAL,Hindustan aeronautics,Mid Cap,-,733.5,470.0,1423.0,56,-,9,10,12,-2,1,-,-
 AUBANK,Au small finance bank,Mid Cap,908.0,858.95,366.0,1218.0,135,6,-,10,0,10,2,SALE, der dpr2
 GODREJPROP,Godrej properties,Mid Cap,-,989.6,505.0,1189.25,96,-,-,10,0,10,1,-,-
 IRCTC,Indian railway catering tourism corporation,Mid Cap,1200.0,1367.55,774.65,1994.0,77,-12,-,10,0,10,-,BUY,ALL
@@ -121,35 +121,35 @@ SRF,Srf,Mid Cap,5128.57,4990.2,2467.65,5122.0,102,3,-,10,0,10,5,HOLD, der roce3 
 NIACL,The new assurance company,Mid Cap,111.0,104.5,74.1,172.0,41,7,-,10,0,10,4,SALE, roce3
 PIIND,Pi industries,Mid Cap,2265.44,2286.0,970.1,2360.05,136,-1,5,10,5,5,5,HOLD, roce3 dpr2
 APOLLOHOSP,Apollo hospitals enterprises,Mid Cap,1575.0,2183.25,1047.05,2333.0,109,-28,25,10,8,2,5,SALE, der
-BALKRISIND,Balkrishna industries,Mid Cap,1615.86,1510.2,679.0,1514.7,122,7,10,10,5,5,6,BUY,ALL
+BALKRISIND,Balkrishna industries,Mid Cap,1615.86,1510.2,679.0,1514.7,122,7,11,10,5,5,6,BUY,ALL
 VBL,Varun beverages,Mid Cap,808.67,736.0,482.2,870.0,53,10,16,10,3,7,4,HOLD, der roce3 profit5
 TRENT,Trent [lakme ],Mid Cap,663.75,698.0,365.0,804.7,91,-5,5,10,5,5,5,SALE, dpr2
 ADANIENT,Adani enterprises,Mid Cap,-,361.0,116.4,364.7,210,-,25,10,3,7,5,-,-
 SRTRANSFIN,Shriram transport finance co,Mid Cap,1007.63,884.0,431.37,1340.2,105,14,7,10,4,6,5,SALE, der
-VOLTAS,Voltas,Mid Cap,702.89,764.5,427.45,803.9,79,-8,6,10,5,5,5,BUY,ALL
+VOLTAS,Voltas,Mid Cap,702.89,764.5,427.45,803.9,79,-8,7,10,5,5,5,BUY,ALL
 PFIZER,Pfizer,Mid Cap,5482.33,5205.0,3461.0,5900.0,50,5,19,10,5,5,5,BUY,ALL
 BAYERCROP,Bayer cropscience,Mid Cap,-,5230.05,2925.0,6601.25,79,-,-,10,0,10,7,-,-
 BEL,Bharat electronics,Mid Cap,113.17,95.85,56.0,118.45,71,19,9,10,20,-10,9,BUY,ALL
-BATAINDIA,Bata,Mid Cap,1324.88,1328.0,1000.0,1895.45,33,0,0,10,10,0,5,BUY,ALL
-ZEEL,Zee entertainment enterprises,Mid Cap,248.57,196.0,114.0,364.0,72,27,8,10,11,-1,5,SALE, profit5
+BATAINDIA,Bata,Mid Cap,1324.88,1328.0,1000.0,1895.45,33,0,1,10,10,0,5,BUY,ALL
+ZEEL,Zee entertainment enterprises,Mid Cap,248.57,196.0,114.0,364.0,72,27,9,10,11,-1,5,SALE, profit5
 NAM-INDIA,Nippon life asset management,Mid Cap,298.38,285.4,207.7,452.9,37,5,2,10,11,-1,-,SALE, sales2
 GUJGASLTD,Gujarat gas,Mid Cap,365.83,308.4,189.0,334.4,63,19,-,10,0,10,-,HOLD, der roce3 dpr2
 TVSMOTOR,Tvs motor company,Mid Cap,394.73,476.55,240.1,499.5,98,-17,-,10,0,10,5,SALE, der
 IPCALAB,Ipca laboratories,Mid Cap,2062.29,2030.0,1051.0,2460.0,93,2,-,10,0,10,4,HOLD, roce3 dpr2
 GILLETTE,Gillette,Mid Cap,6172.5,5511.7,4450.0,7395.0,24,12,12,10,12,-2,5,HOLD, roce3 sales2
-ASHOKLEY,Ashok leyland,Mid Cap,75.66,89.25,33.7,91.95,165,-16,8,10,5,5,5,SALE, der sales2
+ASHOKLEY,Ashok leyland,Mid Cap,75.66,89.25,33.7,91.95,165,-16,9,10,5,5,5,SALE, der sales2
 CHOLAFIN,Cholamandalam investment finance company,Mid Cap,254.17,304.65,117.4,349.0,159,-16,8,10,3,7,2,SALE, der
 RAJESHEXPO,Rajesh exports,Mid Cap,-,452.85,441.0,780.5,3,-,-,10,0,10,5,-,-
 COROMANDEL,Coromandel international,Mid Cap,835.17,712.1,443.2,838.95,61,17,5,10,5,5,5,BUY,ALL
 BHARATFORG,Bharat forge,Mid Cap,447.75,498.3,207.5,539.65,140,-10,10,10,5,5,6,SALE, sales2 profit5
-SANOFI,Sanofi,Mid Cap,9065.0,8000.0,5900.0,8989.0,36,13,0,10,12,-2,5,BUY,ALL
+SANOFI,Sanofi,Mid Cap,9065.0,8000.0,5900.0,8989.0,36,13,1,10,12,-2,5,BUY,ALL
 L&TFH,L&t finance holdings,Mid Cap,70.67,68.8,45.9,134.0,50,3,2,10,11,-1,5,SALE, der
 ADANIPOWER,Adani power,Mid Cap,-,36.45,23.0,68.5,58,-,-,10,0,10,-,-,-
-RELAXO,Relaxo footwears,Mid Cap,739.6,694.0,500.0,830.0,39,6,0,10,11,-1,7,BUY,ALL
+RELAXO,Relaxo footwears,Mid Cap,739.6,694.0,500.0,830.0,39,6,1,10,11,-1,7,BUY,ALL
 AARTIIND,Aarti industries,Mid Cap,1130.83,1052.0,668.0,1229.0,57,7,-,10,0,10,8,HOLD, der roce3
 SUNTV,Sun tv network,Mid Cap,526.25,446.5,259.55,531.85,72,18,8,10,3,7,5,BUY,ALL
 ABCAPITAL,Aditya birla capital,Mid Cap,83.0,72.45,37.35,115.35,94,15,-,10,0,10,-,SALE, der dpr2
-LICHSGFIN,Lic housing finance,Mid Cap,328.33,322.55,185.25,486.75,74,2,8,10,14,-4,5,SALE, der
+LICHSGFIN,Lic housing finance,Mid Cap,328.33,322.55,185.25,486.75,74,2,9,10,14,-4,5,SALE, der
 IDEA,Vodafone idea,Mid Cap,6.0,8.45,2.4,13.5,252,-25,-,10,0,10,2,SALE, der roce3 dpr2 profit5
 SUNDARMFIN,Sundaram finance,Mid Cap,1774.67,1588.95,982.05,1784.95,62,12,27,10,2,8,5,SALE, der sales2
 BANKINDIA,Bank,Mid Cap,54.0,41.0,30.4,79.8,35,32,-,10,0,10,1,SALE, der roce3 dpr2 profit5
@@ -187,7 +187,7 @@ CASTROLIND,Castrol,Mid Cap,145.6,113.85,89.55,162.2,27,28,17,10,11,-1,6,BUY,ALL
 CUMMINSIND,Cummins,Mid Cap,447.67,457.95,280.0,652.8,64,-2,13,10,11,-1,5,SALE, profit5
 WABCOINDIA,Wabco,Mid Cap,6142.0,4800.0,4784.0,7670.0,0,28,-,10,0,10,5,SALE, sales2
 SCHAEFFLER,Schaeffler,Mid Cap,-,3764.15,3025.25,4959.85,24,-,13,10,10,0,4,-,-
-INDHOTEL,Indian hotels co,Mid Cap,139.14,109.75,62.1,157.9,77,28,6,10,11,-1,4,HOLD, der
+INDHOTEL,Indian hotels co,Mid Cap,139.14,109.75,62.1,157.9,77,28,7,10,11,-1,4,HOLD, der
 GSPL,Gujarat state petronet,Mid Cap,286.0,187.0,146.15,263.8,28,53,-,10,0,10,5,HOLD, roce3 dpr2
 MANAPPURAM,Manappuram finance,Mid Cap,189.38,158.3,74.25,194.8,113,20,19,10,2,8,5,SALE, der
 GMRINFRA,Gmr infrastructure,Mid Cap,-,24.3,14.1,28.25,72,-,-,10,0,10,-,-,-
@@ -195,7 +195,7 @@ GODREJIND,Godrej industries,Mid Cap,500.0,381.9,233.4,479.0,64,31,7,10,3,7,5,SAL
 UCOBANK,Uco bank,Mid Cap,-,12.0,8.4,22.4,43,-,-,10,0,10,1,-,-
 ENDURANCE,Endurance technologies,Mid Cap,1129.5,1054.0,564.5,1204.95,87,7,-,10,0,10,3,BUY,ALL
 SUMICHEM,Sumitomo chemical,Mid Cap,315.0,271.3,151.05,317.0,80,16,10,10,6,4,-,HOLD, roce3 dpr2 profit5
-TATAPOWER,Tata power co,Mid Cap,62.5,57.15,27.0,63.4,112,9,8,10,10,0,5,SALE, der profit5
+TATAPOWER,Tata power co,Mid Cap,62.5,57.15,27.0,63.4,112,9,9,10,10,0,5,SALE, der profit5
 AAVAS,Aavas financiers,Mid Cap,-,1498.0,849.05,2101.0,76,-,-,10,0,10,-,-,-
 AJANTPHARM,Ajanta pharma,Mid Cap,1829.0,1555.0,942.25,1759.95,65,18,-,10,0,10,5,BUY,ALL
 TATACOMM,Tata communications,Mid Cap,977.5,1009.1,200.0,1064.05,405,-3,-,10,0,10,5,SALE, profit5
@@ -205,7 +205,7 @@ NATCOPHARM,Natco pharma,Mid Cap,841.75,895.4,402.55,996.0,122,-6,-,10,0,10,4,SAL
 AMARAJABAT,Amara raja batteries,Mid Cap,818.22,822.1,348.55,836.0,136,0,8,10,10,0,5,HOLD, roce3 sales2 profit5
 BHEL,Bharat heavy electricals,Mid Cap,33.67,27.9,18.4,57.85,52,22,9,10,18,-8,7,SALE, roce3 dpr2 sales2 profit5
 RBLBANK,Rbl bank,Mid Cap,208.86,205.35,101.55,391.2,102,1,-,10,0,10,3,SALE, der
-EMAMILTD,Emami,Mid Cap,370.13,381.0,130.95,407.55,191,-3,8,10,12,-2,6,SALE, profit5
+EMAMILTD,Emami,Mid Cap,370.13,381.0,130.95,407.55,191,-3,9,10,12,-2,6,SALE, profit5
 PHOENIXLTD,The phoenix mills,Mid Cap,765.0,598.0,465.05,979.0,29,28,-,10,0,10,5,SALE, der
 THERMAX,Thermax,Mid Cap,856.88,773.1,570.0,1119.9,36,11,-,10,0,10,5,BUY,ALL
 FORTIS,Fortis healthcare,Mid Cap,-,131.45,113.1,169.0,16,-,-,10,0,10,-,-,-
@@ -229,7 +229,7 @@ GODREJAGRO,Godrej agrovet,Mid Cap,500.5,501.5,265.05,598.0,89,0,8,10,6,4,2,BUY,A
 SKFINDIA,Skf,Mid Cap,1615.0,1501.0,1230.0,2317.95,22,8,6,10,9,1,7,BUY,ALL
 JSWENERGY,Jsw energy,Mid Cap,65.0,60.1,34.75,79.05,73,8,-,10,0,10,4,SALE, profit5
 MINDAIND,Minda industries,Mid Cap,376.2,370.0,206.25,425.9,79,2,-,10,0,10,6,HOLD, der roce3
-VGUARD,V guard industries,Mid Cap,184.0,167.15,149.0,239.5,12,10,9,10,11,-1,6,HOLD, roce3 profit5
+VGUARD,V guard industries,Mid Cap,184.0,167.15,149.0,239.5,12,10,10,10,11,-1,6,HOLD, roce3 profit5
 TIINDIA,Tube investments,Mid Cap,425.0,708.85,254.0,714.0,179,-40,23,10,2,8,2,SALE, sales2
 CESC,Cesc,Mid Cap,740.75,585.0,365.25,783.55,60,26,-,10,0,10,5,SALE, der
 SUNDRMFAST,Sundram fasteners,Mid Cap,-,468.5,248.5,533.35,89,-,7,10,3,7,5,-,-
@@ -243,7 +243,7 @@ SYMPHONY,Symphony,Mid Cap,936.75,829.5,690.7,1408.95,20,13,12,10,6,4,6,BUY,ALL
 PVR,Pvr,Mid Cap,1443.0,1281.0,711.19,2103.96,80,13,5,10,6,4,5,SALE, dpr2
 TATACHEM,Tata chemicals,Mid Cap,324.25,318.8,197.0,779.8,62,2,8,10,8,2,5,HOLD, dpr2
 JMFINANCIL,Jm financial,Mid Cap,65.0,77.0,55.45,124.7,39,-16,-,10,0,10,5,SALE, der
-KAJARIACER,Kajaria ceramics,Mid Cap,629.29,582.05,295.55,598.8,97,8,6,10,14,-4,5,BUY,ALL
+KAJARIACER,Kajaria ceramics,Mid Cap,629.29,582.05,295.55,598.8,97,8,7,10,14,-4,5,BUY,ALL
 APOLLOTYRE,Apollo tyres,Mid Cap,154.83,161.4,73.4,182.35,120,-4,9,10,17,-7,5,SALE, profit5
 SFL,Sheela foam,Small Cap,1643.0,1330.0,1151.85,1779.95,15,24,4,5,6,-1,-,SALE, dpr2
 ASTRAZEN,Astrazeneca pharma,Small Cap,-,4195.0,1885.0,4970.0,123,-,14,5,2,3,1,-,-
@@ -257,8 +257,8 @@ RITES,Rites,Small Cap,347.67,248.0,190.65,331.0,30,40,-,5,0,5,3,BUY,ALL
 UJJIVANSFB,Ujjivan small finance bank,Small Cap,34.5,32.45,23.1,62.8,40,6,-,5,0,5,-,SALE, der dpr2
 KEC,Kec international,Small Cap,358.38,333.5,154.05,359.5,116,8,-,5,0,5,5,HOLD, der roce3
 INDIAMART,Indiamart intermesh,Small Cap,4753.33,4988.8,1641.05,5487.5,204,-5,-,5,0,5,-,HOLD, dpr2 profit5
-SIS,Security intelligence services,Small Cap,450.0,377.0,322.1,1037.35,17,19,18,5,1,4,2,HOLD, der roce3
-AVANTIFEED,Avanti feeds,Small Cap,565.0,504.0,250.5,770.0,101,12,8,5,11,-6,-,BUY,ALL
+SIS,Security intelligence services,Small Cap,450.0,377.0,322.1,1037.35,17,19,19,5,1,4,2,HOLD, der roce3
+AVANTIFEED,Avanti feeds,Small Cap,565.0,504.0,250.5,770.0,101,12,9,5,11,-6,-,BUY,ALL
 NATIONALUM,National aluminium co,Small Cap,39.0,34.4,24.4,48.75,41,15,9,5,20,-15,7,SALE, sales2 profit5
 JCHAC,Johnson controls hitachi air conditioning,Small Cap,2500.0,2174.0,1811.05,3484.4,20,15,38,5,2,3,5,HOLD, roce3 dpr2 sales2
 ERIS,Eris lifesciences,Small Cap,459.0,505.0,321.0,595.0,57,-9,-,5,0,5,1,BUY,ALL
@@ -275,7 +275,7 @@ EDELWEISS,Edelweiss financial services,Small Cap,-,53.35,30.15,134.6,77,-,-,5,0,
 GRINDWELL,Grindwell norton,Small Cap,622.5,539.7,373.55,698.0,44,15,5,5,5,0,6,BUY,ALL
 FINPIPE,Finolex industries,Small Cap,584.5,593.6,289.95,602.85,105,-2,-,5,0,5,-,HOLD, roce3 profit5
 CHAMBLFERT,Chambal fertilisers chemicals,Small Cap,-,167.8,93.8,185.0,79,-,-,5,0,5,5,-,-
-HUDCO,Housing &urban development corporation,Small Cap,38.0,32.35,18.0,45.8,80,19,8,5,5,0,3,SALE, der
+HUDCO,Housing &urban development corporation,Small Cap,38.0,32.35,18.0,45.8,80,19,9,5,5,0,3,SALE, der
 KIOCL,Kiocl,Small Cap,-,109.6,44.7,169.5,145,-,-,5,0,5,4,-,-
 GODFRYPHLP,Godfrey phillips,Small Cap,-,884.0,732.0,1481.75,21,-,29,5,1,4,5,-,-
 EIHOTEL,Eih,Small Cap,105.0,80.7,54.21,160.05,49,31,8,5,5,0,5,SALE, sales2
@@ -351,7 +351,7 @@ STAR,Strides pharma science,Small Cap,713.0,624.9,268.0,764.4,133,14,-,5,0,5,5,S
 MIDHANI,Mishra dhatu nigam,Small Cap,260.0,189.6,135.0,278.8,40,38,-,5,0,5,2,BUY,ALL
 VARROC,Varroc engineering,Small Cap,-,296.7,120.0,524.0,147,-,-,5,0,5,1,-,-
 GESHIP,Great eastern shipping co,Small Cap,-,228.5,162.0,369.4,41,-,-,5,0,5,3,-,-
-CEATLTD,Ceat,Small Cap,1130.5,1110.6,600.0,1249.0,85,2,8,5,7,-2,5,SALE, profit5
+CEATLTD,Ceat,Small Cap,1130.5,1110.6,600.0,1249.0,85,2,9,5,7,-2,5,SALE, profit5
 KPRMILL,Kpr mill,Small Cap,-,786.0,312.35,788.0,152,-,-,5,0,5,8,-,-
 MAHSCOOTER,Maharashtra scooters,Small Cap,-,3260.85,1813.0,4949.0,80,-,-,5,0,5,5,-,-
 WELSPUNIND,Welspun,Small Cap,45.0,63.9,18.45,78.0,246,-29,-,5,0,5,5,SALE, der profit5
@@ -362,7 +362,7 @@ TEAMLEASE,Teamlease services,Small Cap,2386.67,2390.0,1415.35,2880.0,69,0,-,5,0,
 BRIGADE,Brigade enterprises,Small Cap,203.6,194.7,90.5,254.9,115,5,15,5,3,2,6,SALE, der profit5
 GPPL,Gujarat pipavav port,Small Cap,90.0,89.25,45.5,99.4,96,1,-,5,0,5,4,HOLD, roce3 profit5
 HEG,Heg,Small Cap,750.0,712.4,409.6,1299.95,74,5,-,5,0,5,4,SALE, sales2
-EIDPARRY,Eid parry,Small Cap,272.0,283.6,102.15,325.0,178,-4,8,5,6,-1,4,SALE, der dpr2
+EIDPARRY,Eid parry,Small Cap,272.0,283.6,102.15,325.0,178,-4,9,5,6,-1,4,SALE, der dpr2
 INFIBEAM,Infibeam avenues,Small Cap,-,83.75,26.4,94.0,217,-,-,5,0,5,1,-,-
 KEI,Kei industries,Small Cap,404.5,341.2,208.3,580.0,64,18,-,5,0,5,5,HOLD, roce3 dpr2
 GULFOILLUB,Gulf oil lubricants,Small Cap,750.0,677.0,455.0,883.15,49,11,-,5,0,5,5,BUY,ALL
@@ -388,7 +388,7 @@ GARFIBRES,Garware technical fibres,Small Cap,-,1985.0,885.0,2250.0,124,-,-,5,0,5
 WELCORP,Welspun corp,Small Cap,-,101.4,55.0,233.95,84,-,-,5,0,5,3,-,-
 HINDCOPPER,Hindustan copper,Small Cap,-,34.5,18.25,51.0,89,-,-,5,0,5,4,-,-
 WOCKPHARMA,Wockhardt,Small Cap,-,290.05,146.7,411.65,98,-,-,5,0,5,1,-,-
-CENTURYPLY,Century plyboards,Small Cap,176.0,185.15,95.15,196.65,95,-5,6,5,11,-6,5,SALE, profit5
+CENTURYPLY,Century plyboards,Small Cap,176.0,185.15,95.15,196.65,95,-5,7,5,11,-6,5,SALE, profit5
 IBREALEST,Indiabulls real estate,Small Cap,-,48.4,36.8,113.0,32,-,-,5,0,5,-,-,-
 BEML,Beml,Small Cap,-,621.6,369.5,1070.0,68,-,-,5,0,5,5,-,-
 BALRAMCHIN,Balrampur chini mills,Small Cap,210.0,150.1,68.95,195.0,118,40,23,5,2,3,6,HOLD, der roce3 dpr2
@@ -429,7 +429,7 @@ GUJALKALI,Gujarat alkalis chemicals,Small Cap,-,310.0,180.1,450.0,72,-,-,5,0,5,5
 MMTC,Mmtc,Small Cap,-,16.7,9.9,24.35,69,-,-,5,0,5,6,-,-
 EQUITAS,Equitas holdings,Small Cap,95.0,46.8,32.5,120.7,44,107,-,5,0,5,-,SALE, der
 PRSMJOHNSN,Prism johnson,Small Cap,-,77.05,25.7,77.8,200,-,-,5,0,5,2,-,-
-MHRIL,Mahindra holidays resorts,Small Cap,-,180.15,121.8,244.9,48,-,8,5,11,-6,5,-,-
+MHRIL,Mahindra holidays resorts,Small Cap,-,180.15,121.8,244.9,48,-,9,5,11,-6,5,-,-
 TATASTLBSL,Tata steel bsl,Small Cap,-,28.6,15.1,32.55,89,-,-,5,0,5,-,-,-
 DEN,Den networks,Small Cap,-,69.35,25.5,115.05,172,-,-,5,0,5,-,-,-
 GNFC,Gujarat narmada valley fertco,Small Cap,-,189.8,95.55,232.5,99,-,-,5,0,5,4,-,-
@@ -459,7 +459,7 @@ INGERRAND,Ingersoll rand,Small Cap,-,586.75,555.0,729.85,6,-,-,5,0,5,5,-,-
 VESUVIUS,Vesuvius,Small Cap,-,907.5,750.0,1228.1,21,-,-,5,0,5,5,-,-
 SCHNEIDER,Schneider electric infrastructure,Small Cap,-,72.0,58.0,114.0,24,-,-,5,0,5,-,-,-
 KSB,Ksb,Small Cap,795.0,508.0,386.0,764.0,32,56,5,5,6,-1,2,HOLD, roce3 profit5
-BSE,Bse,Small Cap,680.0,492.0,275.0,608.0,79,38,8,5,14,-9,-,SALE, sales2 profit5
+BSE,Bse,Small Cap,680.0,492.0,275.0,608.0,79,38,9,5,14,-9,-,SALE, sales2 profit5
 LAOPALA,La opala rg,Small Cap,233.0,208.95,130.5,251.85,60,12,14,5,2,3,6,BUY,ALL
 GRSE,Garden reach shipbuilders engineers,Small Cap,233.0,189.0,102.0,243.0,85,23,-,5,0,5,1,BUY,ALL
 MAHSEAMLES,Maharashtra seamless,Small Cap,265.0,241.0,184.65,447.65,31,10,-,5,0,5,5,HOLD,
@@ -472,12 +472,12 @@ IFBIND,Ifb industries,Small Cap,925.0,744.0,219.15,793.8,239,24,-,5,0,5,-,SALE, 
 ITDC,India tourism development corporati,Small Cap,-,252.8,104.7,416.6,141,-,-,5,0,5,5,-,-
 MINDACORP,Minda corporation,Small Cap,90.0,69.2,52.75,122.0,31,30,-,5,0,5,5,SALE, dpr2 profit5
 GREENLAM,Greenlam industries,Small Cap,-,756.55,441.9,1049.0,71,-,8,5,3,2,-,-,-
-VRLLOG,Vrl logistics,Small Cap,205.0,159.55,130.0,295.0,23,29,1,5,10,-5,4,SALE, profit5
+VRLLOG,Vrl logistics,Small Cap,205.0,159.55,130.0,295.0,23,29,2,5,10,-5,4,SALE, profit5
 NILKAMAL,Nilkamal,Small Cap,1321.0,1350.0,912.0,1543.7,48,-2,6,5,11,-6,5,BUY,ALL
 BALMLAWRIE,Balmer lawrie co,Small Cap,-,100.6,69.0,138.93,46,-,-,5,0,5,6,-,-
 NAVNETEDUL,Navneet education,Small Cap,104.5,79.0,45.0,102.45,76,32,-,5,0,5,7,BUY,ALL
 ADVENZYMES,Advanced enzyme technologies,Small Cap,-,308.2,98.1,384.7,214,-,-,5,0,5,3,-,-
-VENKEYS,Venkys,Small Cap,-,1561.1,580.1,1919.15,169,-,8,5,7,-2,-,-,-
+VENKEYS,Venkys,Small Cap,-,1561.1,580.1,1919.15,169,-,9,5,7,-2,-,-,-
 KIRLOSENG,Kirloskar oil engines,Small Cap,-,100.0,76.05,174.8,31,-,-,5,0,5,5,-,-
 SHARDACROP,Sharda cropchem,Small Cap,-,268.0,99.4,329.0,170,-,-,5,0,5,5,-,-
 PAPERPROD,Huhtamaki ppl,Small Cap,-,272.4,161.9,337.6,68,-,30,5,1,4,5,-,-

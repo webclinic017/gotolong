@@ -1,0 +1,7 @@
+{
+  "module": "config",
+  "GLOBAL_DATA": "data/input-global-data",
+  "GLOBAL_REPORTS": "data/output-global-reports",
+  "PROFILE_DATA": "data/input-user-data",
+  "PROFILE_REPORTS": "data/output-user-reports"
+}

@@ -1,0 +1,17 @@
+{
+  "module": "phealth",
+  "logging-level": "INFO",
+  "truncate-table": "No",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "output-files": [
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "phealth-reports/phealth-reports.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "phealth-reports/phealth-reports.txt"
+    }
+  ]
+}
