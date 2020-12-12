@@ -1,2 +1,1 @@
-gotolong-django
-gotolong-loader
+gotolong

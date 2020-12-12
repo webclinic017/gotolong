@@ -1,0 +1,8 @@
+{
+  "module": "config",
+  "GLOBAL_DATA": "input-output/input-global-data",
+  "GLOBAL_REPORTS": "input-output/output-global-reports",
+  "PROFILE_DATA": "input-output/input-user-data",
+  "PROFILE_REPORTS": "input-output/output-user-reports",
+  "DB_LOC": "db"
+}

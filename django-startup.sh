@@ -1,7 +1,7 @@
 
 1. Run django server
 d:
-cd d:/GoogleDrive/my_github/GitHub/gotolong/gotolong-django
+cd d:/GoogleDrive/my_github/GitHub/gotolong/django
 python manage.py runserver
 
 

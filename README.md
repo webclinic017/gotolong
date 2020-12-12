@@ -40,7 +40,7 @@ git clone https://github.com/surinder432/gotolong
 
 
 ## Install Database schema
-The db schema is in {GOTOLONG_HOME}/db-schema/ directory.
+The db schema is in {GOTOLONG_DATA}/db-schema/ directory.
 
 Create the database schema.
 
@@ -50,7 +50,7 @@ For DB name, user and password
 
 Modify top level : 
 
-config.ini
+gotolong-filter.ini
 
 Currently, it is used by non django loaders of most modules.
 
@@ -61,17 +61,17 @@ Currently, it is used by non django loaders of most modules.
 Gather and store files like demat summary and demat detailed data in input-user-data
 
 ## Generate report for all modules
-cd {GOTOLONG_HOME}/
+cd {GOTOLONG_DATA}/
 
 ./config.sh
 
-{GOTOLONG_HOME}/src/all_reports.sh
+{GOTOLONG_DATA}/src/all_reports.sh
 
 ## Explore the reports (.csv files)
 
 Check following directory
 
-{GOTOLONG_HOME}/output-user-reports
+{GOTOLONG_DATA}/output-user-reports
 
 ## Explore the reports using web browser
 
@@ -79,7 +79,7 @@ Check following directory
 
 Modify django config file for DB name, user name and password :
 
-${GOTOLONG_HOME}/src-django-proj-root/mysite/settings.py
+${GOTOLONG_DATA}/src-django-proj-root/mysite/settings.py
 
 ### Django Web Server
 
@@ -87,7 +87,7 @@ The django project is capable of browsing the data stored in 'gotolong' database
 
 The migration from offline files to the web interface is still work-in-progress
 
-cd ${GOTOLONG_HOME}/src-django-proj-root/
+cd ${GOTOLONG_DATA}/src-django-proj-root/
 
 python manage.py runserver
 

@@ -5,7 +5,7 @@ Tools -> Export database as SQL - > select database on left -> export
 
 2. Directly through command line
 
-GOTOLONG_HOME=/d/GoogleDrive/my_github/GitHub/gotolong
-DB_SCHEMA_LOC=${GOTOLONG_HOME}/db-schema/
+GOTOLONG_DATA=/d/GoogleDrive/my_github/GitHub/gotolong
+DB_SCHEMA_LOC=${GOTOLONG_DATA}/db-schema/
 MARIA_DB_HOME="/c/Program Files/MariaDB 10.4/"
 ${MARIA_DB_HOME}/bin/mysqldump.exe -u root -p root --no-data gotolong > ${DB_SCHEMA_LOC}/gotolong_schema.sql

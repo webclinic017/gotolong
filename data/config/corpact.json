@@ -1,0 +1,23 @@
+{
+  "module": "corpact",
+  "logging-level": "INFO",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "bse-reports/all/bse-all-corpact.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "corpact-reports/corpact-reports-phase-1.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "corpact-reports/corpact-reports-phase-1.txt"
+    }
+  ]
+}

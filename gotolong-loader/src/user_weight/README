@@ -1,8 +1,0 @@
-
-The user level weight module is no longer used.
-
-In new design, the weight is assigned by captype
-
-We may support it back in near future.
-
-It would require us to maintain global_weight table and user_weight table.

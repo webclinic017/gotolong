@@ -8,6 +8,13 @@ To Do Items
 * Generate requirements.txt
   * python freeze > requirements.txt
 
+* add a filter module
+  * to store filters in db instead of gotolong-config.ini
+* add a reco module
+  * that uses things like screener and trendlyne for global recommendation
+
+* add a moudle that counts rows in each table.
+  * to ensure that none of the table exceeds 10K row (heroku free tier limitation)
 
 * Trendlyne - add industry clause for DER to pick up bank/nbfc (similar to screener)
  ** use a dictionary instead of the long list of arguments for _reco
