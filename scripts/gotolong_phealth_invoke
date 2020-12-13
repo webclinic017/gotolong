@@ -2,12 +2,12 @@
 
 import sys
 
-import phealth.phealth
+import gotolong.phealth.phealth
 
-import cutil.config_json
+import gotolong.config.config_json
 
 sys.argv = ['config_json.py', 'phealth']
-cmd_line = cutil.config_json.main()
+cmd_line = gotolong.config.config_json.main()
 print(cmd_line)
 
 cmd_line_list = cmd_line.split(' ')
@@ -17,4 +17,4 @@ cmd_line_list.insert(0, 'phealth.py')
 
 # NOTE: Is it good to modify the sys.argv
 sys.argv = cmd_line_list
-phealth.phealth.main()
+gotolong.phealth.phealth.main()

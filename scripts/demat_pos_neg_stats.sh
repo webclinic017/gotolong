@@ -2,8 +2,8 @@
 
 # This is to know count of stocks in positive and negative.
 
-CONFIG_PROFILE_DATA_LOC=`python -m gotolong_config profile_data`
-CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong_config profile_reports`
+CONFIG_PROFILE_DATA_LOC=`python -m gotolong.config.config_ini profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong.config.config_ini profile_reports`
 IN_FILE_SUM=$CONFIG_PROFILE_DATA_LOC/demat-data/icicidirect/demat-summary-data.csv
 OUT_FILE_SUM=$CONFIG_PROFILE_REPORTS_LOC/demat-sum-stat-reports/demat-pos-neg-stat-reports.csv
 

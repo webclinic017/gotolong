@@ -1,7 +1,7 @@
 #!/bin/sh
 
-CONFIG_PROFILE_DATA_LOC=`python -m gotolong_config profile_data`
-CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong_config profile_reports`
+CONFIG_PROFILE_DATA_LOC=`python -m gotolong.config.config_ini profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong.config.config_ini profile_reports`
 
 MODULE=demat-txn-stat
 

@@ -2,7 +2,7 @@ MANIFEST.in
 README.md
 setup.py
 gotolong/__init__.py
-gotolong/gotolong_config.py
+gotolong/gotolong.config.config_ini.py
 gotolong-home/data/input-global-data/bhav-data/bhav.csv
 gotolong-home/data/input-global-data/bhav-data/nse-holiday-list.txt
 gotolong-home/data/input-global-data/bhav-data/readme.txt

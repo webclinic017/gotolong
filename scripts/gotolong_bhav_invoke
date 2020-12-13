@@ -2,12 +2,12 @@
 
 import sys
 
-import bhav.bhav
+import gotolong.bhav.bhav
 
-import cutil.config_json
+import gotolong.config.config_json
 
 sys.argv = ['config_json.py', 'bhav']
-cmd_line = cutil.config_json.main()
+cmd_line = gotolong.config.config_json.main()
 print(cmd_line)
 
 cmd_line_list = cmd_line.split(' ')
@@ -17,4 +17,4 @@ cmd_line_list.insert(0, 'bhav.py')
 
 # NOTE: Is it good to modify the sys.argv
 sys.argv = cmd_line_list
-bhav.bhav.main()
+gotolong.bhav.bhav.main()

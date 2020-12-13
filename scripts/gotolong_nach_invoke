@@ -2,19 +2,19 @@
 
 import sys
 
-import gotolong.global_weight.gweight
+import gotolong.nach.nach
 
 import gotolong.config.config_json
 
-sys.argv = ['config_json.py', 'gweight']
+sys.argv = ['config_json.py', 'nach']
 cmd_line = gotolong.config.config_json.main()
 print(cmd_line)
 
 cmd_line_list = cmd_line.split(' ')
 print(cmd_line_list)
 
-cmd_line_list.insert(0, 'gweight.py')
+cmd_line_list.insert(0, 'nach.py')
 
 # NOTE: Is it good to modify the sys.argv
 sys.argv = cmd_line_list
-gotolong.global_weight.gweight.main()
+gotolong.nach.nach.main()
