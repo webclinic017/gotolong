@@ -8,9 +8,9 @@ import operator
 import calendar
 import logging
 
-import cutil.cutil
+import gotolong.cutil.cutil
 
-from amfi.amfi import *
+from gotolong.amfi.amfi import *
 
 
 class Demat(Amfi):
@@ -141,7 +141,7 @@ class Demat(Amfi):
             else:
                 self.demat_txn_list[stock_symbol] = p_str
 
-            self.company_name[stock_symbol] = cutil.cutil.normalize_comp_name(comp_name)
+            self.company_name[stock_symbol] = gotolong.cutil.cutil.normalize_comp_name(comp_name)
             if txn_type == "Buy":
                 if stock_symbol in self.demat_txn_buy_qty:
                     self.demat_txn_buy_qty[stock_symbol] += int(txn_qty)
@@ -321,8 +321,8 @@ class Demat(Amfi):
 
     def demat_txn_insert_data(self, in_filename):
 
-        create_sql = cutil.cutil.get_create_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
-        insert_sql = cutil.cutil.get_insert_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+        create_sql = gotolong.cutil.cutil.get_create_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:
@@ -357,8 +357,8 @@ class Demat(Amfi):
 
     def demat_sum_insert_data(self, in_filename):
 
-        create_sql = cutil.cutil.get_create_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
-        insert_sql = cutil.cutil.get_insert_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
+        create_sql = gotolong.cutil.cutil.get_create_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
+        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:

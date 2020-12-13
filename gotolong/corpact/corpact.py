@@ -14,11 +14,11 @@ import traceback
 
 import argparse
 
-import cutil.cutil
+import gotolong.cutil.cutil
 
 from prettytable import PrettyTable
 
-from database.database import *
+from gotolong.database.database import *
 
 
 class Corpact(Database):
@@ -122,8 +122,8 @@ class Corpact(Database):
 
     def corpact_insert_data(self, in_filename):
 
-        create_sql = cutil.cutil.get_create_sql(self.corpact_table_name, self.corpact_table_dict)
-        insert_sql = cutil.cutil.get_insert_sql(self.corpact_table_name, self.corpact_table_dict)
+        create_sql = gotolong.cutil.cutil.get_create_sql(self.corpact_table_name, self.corpact_table_dict)
+        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.corpact_table_name, self.corpact_table_dict)
 
         cursor = self.db_conn.cursor()
         with open(in_filename, 'rt') as csvfile:

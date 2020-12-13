@@ -7,10 +7,10 @@ else
     LOGGING_LEVEL=INFO
 fi
 
-CONFIG_GLOBAL_DATA_LOC=`python -m gotolong_config global_data`
-CONFIG_GLOBAL_REPORTS_LOC=`python -m gotolong_config global_reports`
-CONFIG_PROFILE_DATA_LOC=`python -m gotolong_config profile_data`
-CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong_config profile_reports`
+CONFIG_GLOBAL_DATA_LOC=`python -m gotolong.config.config_ini global_data`
+CONFIG_GLOBAL_REPORTS_LOC=`python -m gotolong.config.config_ini global_reports`
+CONFIG_PROFILE_DATA_LOC=`python -m gotolong.config.config_ini profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong.config.config_ini profile_reports`
 
 # figure this out automatically
 IN_FILE_1=$CONFIG_GLOBAL_REPORTS_LOC/bse-reports/all/bse-all-corpact.csv

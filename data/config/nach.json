@@ -1,0 +1,19 @@
+{
+  "module": "nach",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "nach-data/nach-aliases.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "nach-reports/nach-reports.csv"
+    }
+  ]
+}
+

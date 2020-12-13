@@ -5,9 +5,9 @@ import re
 import csv
 import traceback
 
-import cutil.cutil
+import gotolong.cutil.cutil
 
-from amfi.amfi import *
+from gotolong.amfi.amfi import *
 
 
 class Plan(Amfi):
@@ -42,7 +42,7 @@ class Plan(Amfi):
             comp_industry = row_list[0]
             comp_name = row_list[1]
             ticker = row_list[2]
-            comp_selected = cutil.cutil.get_number(row_list[3])
+            comp_selected = gotolong.cutil.cutil.get_number(row_list[3])
             comp_desc = row_list[4]
             if comp_industry in self.plan_indu_units.keys():
                 self.plan_indu_units[comp_industry] = self.plan_indu_units[comp_industry] + comp_selected

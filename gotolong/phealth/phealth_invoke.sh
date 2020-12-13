@@ -9,10 +9,10 @@ fi
 
 MODULE_NAME=phealth
 
-CONFIG_GLOBAL_DATA_LOC=`python -m gotolong_config global_data`
-CONFIG_GLOBAL_REPORTS_LOC=`python -m gotolong_config global_reports`
-CONFIG_PROFILE_DATA_LOC=`python -m gotolong_config profile_data`
-CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong_config profile_reports`
+CONFIG_GLOBAL_DATA_LOC=`python -m gotolong.config.config_ini global_data`
+CONFIG_GLOBAL_REPORTS_LOC=`python -m gotolong.config.config_ini global_reports`
+CONFIG_PROFILE_DATA_LOC=`python -m gotolong.config.config_ini profile_data`
+CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong.config.config_ini profile_reports`
 
 OUT_DIR_1=$CONFIG_PROFILE_REPORTS_LOC/${MODULE_NAME}-reports
 OUT_FILE_1=${OUT_DIR_1}/${MODULE_NAME}-reports.csv
@@ -28,3 +28,4 @@ if test -n "${GOTOLONG_EXCEL}"
 then
   excel ${OUT_FILE_1} &
 fi
+
