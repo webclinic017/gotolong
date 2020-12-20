@@ -1,93 +1,124 @@
 # GotoLong
 
 GotoLong is an Indian Stock Advisor (ISA) that can be used to identify stocks for buy and sale.
-It relies on (a) investor's existing portfolio of stocks and (b) financial data of BSE-500/Nifty-500 stocks.
 
+It relies on 
+
+(a) Financial data (last 10 year) of Top 500 (BSE-500/Nifty-500) stocks
+
+(b) investor's existing portfolio of stocks
+ 
 It is still in Beta phase and developers can experiment with it. Once it can be used by any user with basic knowledge of
 computer, it will be tagged as v1.0
 
 ## Support
 http://www.gotolong.in/
 
-## Installation - steps
+## Repository
+
+git clone https://github.com/surinder432/gotolong
+
+## Quick Installation - steps
+
+Download *.whl and *.tar.gz from dist directory.
+
+1> Install Software
+
+pip install gotolong*.whl
+
+2> Install required data files
+ 
+cd $HOME/gotolong-data
+
+tar -xvzf gotolong-data.tar.gz
+
+3> Add following to ~/.profile
+
+export GOTOLONG_DATA=$HOME/gotolong-data
+
+##  Software Installation Pre-Req
+
+### Installation - for end use
 
 Download Python 3.*
 
 Download mariadb (for DB) - used mariadb10.4
 
+Download PostgreSQL (v13) - for validation with Heroku 
+
 Install Django
 
 python -m pip install Django
+
 pip3 install Ptable
 
-Download GitHub (includes Git-Bash)
 
-## Installation - for development
+### Installation - additional for development
 
 Download PyCharm
 
-Download HeidiSQL (crashes sometimes) : DB browser
+Download HeidiSQL : DB browser
 
 Download VIM 
 
-Download DropBox/OneDrive/GoogleDrive or something else to store the input data and output reports.
+Download GoogleDrive to store the input data and output reports.
 
-## Pull the github repository
+Download GitHub (includes Git-Bash)
 
-Pull the github repository
+## Software Configuration
+ 
+###  Install Database schema
 
-git clone https://github.com/surinder432/gotolong
+#### Create Schema
+gotolong_db_schema_install.sh create_mysql
 
+#### Install Schema for MySQL
+gotolong_db_schema_install.sh import_mysql
 
-## Install Database schema
-The db schema is in {GOTOLONG_DATA}/db-schema/ directory.
+#### Install Schema for PgSQL
 
-Create the database schema.
+gotolong_db_schema_install.sh import_pgsql
 
-## Configuration
+### Share Configuration
+
+#### setup DATABASE_URL (explorer)
+
+For MySQL
+
+export DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+
+For PgSQL
+
+export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+
+#### gotolong-config.ini (loader)
 
 For DB name, user and password
 
-Modify top level : 
+For recommendation filters
+ 
+## Data Loader 
+ 
+### Input Data 
 
-gotolong-filter.ini
-
-Currently, it is used by non django loaders of most modules.
-
-
-## Input Data 
-
-### user scope
+#### user scope
 Gather and store files like demat summary and demat detailed data in input-user-data
-
-## Generate report for all modules
-cd {GOTOLONG_DATA}/
-
-./config.sh
-
-{GOTOLONG_DATA}/src/all_reports.sh
-
-## Explore the reports (.csv files)
 
 Check following directory
 
-{GOTOLONG_DATA}/output-user-reports
+{GOTOLONG_DATA}/data/input-output/
 
-## Explore the reports using web browser
+### Load data for all modules
 
-### Django DB config
+gotolong_all_report.sh
 
-Modify django config file for DB name, user name and password :
-
-${GOTOLONG_DATA}/src-django-proj-root/mysite/settings.py
-
+## Data Explorer
+ 
 ### Django Web Server
 
 The django project is capable of browsing the data stored in 'gotolong' database. 
 
-The migration from offline files to the web interface is still work-in-progress
-
-cd ${GOTOLONG_DATA}/src-django-proj-root/
+cd gotolong/django/
 
 python manage.py runserver
 
@@ -99,7 +130,7 @@ Use the following URL to browse the reports
 
 http://127.0.0.1:8000/
 
-## Code Modules Description
+## For Developers : Module Description
 
 ## amfi module
 
