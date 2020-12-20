@@ -18,9 +18,10 @@ import gotolong.cutil.cutil
 from prettytable import PrettyTable
 
 from gotolong.database.database import *
+from gotolong.amfi.amfi import *
 
 
-class Ftwhl(Database):
+class Ftwhl(Amfi):
     def __init__(self):
         super(Ftwhl, self).__init__()
         # isin number
@@ -135,7 +136,12 @@ class Ftwhl(Database):
                 logging.info('low_52 changed to 0 for %s', SYMBOL)
 
             new_row = (SYMBOL, high_52, high_52_dt, low_52, low_52_dt)
-            row_bank.append(new_row)
+
+            # avoid keeping records larger than top 500
+            if SYMBOL in self.amfi_rank and self.amfi_rank[SYMBOL] <= 500:
+                row_bank.append(new_row)
+            else:
+                logging.debug('ticker %s rank exceeds 500 or not tracked', SYMBOL)
 
         except ValueError:
             logging.error('except %s: skipped this row', row_list)
@@ -266,6 +272,8 @@ def main():
     ftwhl = Ftwhl()
 
     ftwhl.set_log_level(log_level)
+
+    ftwhl.amfi_load_data_from_db()
 
     if truncate_table:
         ftwhl.ftwhl_table_reload(truncate_table)

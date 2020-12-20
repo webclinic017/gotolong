@@ -465,7 +465,7 @@ CREATE TABLE `user_dividend` (
   `ticker` text DEFAULT NULL,
   `isin` text DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=197543 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=210623 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -508,4 +508,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-12 16:47:27
+-- Dump completed on 2020-12-20 16:09:41

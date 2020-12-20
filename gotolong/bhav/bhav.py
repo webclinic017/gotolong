@@ -16,9 +16,10 @@ import gotolong.cutil.cutil
 from prettytable import PrettyTable
 
 from gotolong.database.database import *
+from gotolong.amfi.amfi import *
 
 
-class Bhav(Database):
+class Bhav(Amfi):
     def __init__(self):
         super(Bhav, self).__init__()
         # isin number
@@ -112,7 +113,13 @@ class Bhav(Database):
             return
         # remove any un-required stuff
         new_row = (SYMBOL, LAST, ISIN)
-        row_bank.append(new_row)
+
+        # avoid keeping records larger than top 500
+        if SYMBOL in self.amfi_rank and self.amfi_rank[SYMBOL] <= 500:
+            row_bank.append(new_row)
+        else:
+            logging.debug('ticker %s rank exceeds 500 or not tracked', SYMBOL)
+
 
     def bhav_insert_data(self, in_filename):
 
@@ -237,6 +244,8 @@ def main():
     bhav = Bhav()
 
     bhav.set_log_level(log_level)
+
+    bhav.amfi_load_data_from_db()
 
     if truncate_table:
         bhav.bhav_table_reload(truncate_table)

@@ -19,9 +19,10 @@ import gotolong.cutil.cutil
 from prettytable import PrettyTable
 
 from gotolong.database.database import *
+from gotolong.amfi.amfi import *
 
 
-class Corpact(Database):
+class Corpact(Amfi):
     def __init__(self):
         super(Corpact, self).__init__()
         # isin number
@@ -118,7 +119,12 @@ class Corpact(Database):
 
         # remove any un-required stuff
         new_row = (security_name, total_score, bonus_score, buyback_score, dividend_score)
-        row_bank.append(new_row)
+
+        # avoid keeping records larger than top 500
+        if security_name in self.amfi_rank and self.amfi_rank[security_name] <= 500:
+            row_bank.append(new_row)
+        else:
+            logging.debug('ticker %s rank exceeds 500 or not tracked', security_name)
 
     def corpact_insert_data(self, in_filename):
 
@@ -187,6 +193,7 @@ class Corpact(Database):
 
         dump_first_rec = True
         for ticker in sorted(self.corpact_total, key=self.corpact_total.__getitem__, reverse=True):
+
             if dump_first_rec:
                 logging.debug('ticker  %s', ticker)
                 dump_first_rec = False
@@ -254,6 +261,8 @@ def main():
         corpact = Corpact()
 
         corpact.set_log_level(log_level)
+
+        corpact.amfi_load_data_from_db()
 
         if truncate_table:
             corpact.corpact_table_reload(truncate_table)

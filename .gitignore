@@ -28,3 +28,4 @@ build
 dist
 gotolong.egg-info
 input-output
+heroku-db-config.txt

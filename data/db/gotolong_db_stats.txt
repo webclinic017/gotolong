@@ -1,14 +1,14 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| global_corpact             |       1891 |
-| global_bhav                |       1616 |
-| global_ftwhl               |       1610 |
 | user_demat_txn             |       1482 |
 | user_dividend              |       1090 |
-| global_amfi                |       1010 |
+| global_amfi                |       1000 |
 | global_isin                |        501 |
 | screener                   |        498 |
+| global_ftwhl               |        483 |
+| global_bhav                |        483 |
+| global_corpact             |        421 |
 | global_trendlyne           |        382 |
 | plan                       |        354 |
 | user_demat_sum             |        260 |
@@ -19,11 +19,11 @@
 | django_content_type        |         10 |
 | global_weight              |          3 |
 | django_session             |          2 |
-| auth_group_permissions     |          0 |
-| auth_group                 |          0 |
 | user_doc                   |          0 |
 | django_admin_log           |          0 |
 | auth_user_user_permissions |          0 |
 | auth_user_groups           |          0 |
 | auth_user                  |          0 |
+| auth_group_permissions     |          0 |
+| auth_group                 |          0 |
 +----------------------------+------------+
