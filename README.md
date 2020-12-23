@@ -49,7 +49,7 @@ Download PostgreSQL (v13) - for validation with Heroku
 Install Django
 
 python -m pip install Django
-
+pip install django-developer-panel
 pip3 install Ptable
 
 

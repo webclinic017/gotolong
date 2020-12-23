@@ -188,3 +188,11 @@ pip install mysql-connector-python
 25. Generate wheel package
   25.1 pip install wheel
   25.2 python setup.py bdist_wheel
+
+26. year, month, day, timestamp
+   26.1 current_date = date.today()
+   26.2 current_year = current_date.year
+
+  27.
+    txn_month_abre = current_date.strftime('%b')
+

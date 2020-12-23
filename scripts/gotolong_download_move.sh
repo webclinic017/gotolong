@@ -105,7 +105,7 @@ then
     if [ ${last_working_date} != "$nse_fetch_date" ] ;
     then
         # 52-week low and high
-        # https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
+        # https://archives.nseindia.com/content/CM_52_wk_High_low_<ddmmYYYY>.csv
 
         curl --output ${DOWNLOAD_DIR}/CM_52_wk_High_low_${last_working_date}.csv https://archives.nseindia.com/content/CM_52_wk_High_low_${last_working_date}.csv
 

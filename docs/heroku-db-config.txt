@@ -1,0 +1,70 @@
+
+
+1> add PostgreSQL DB
+ heroku addons:create heroku-postgresql:hobby-dev
+
+$ heroku addons:create heroku-postgresql:hobby-dev
+Creating heroku-postgresql:hobby-dev on gotolong... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-vertical-29671 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+
+2> Heroku PG CLI
+
+heroku pg:psql postgresql-vertical-29671 --app gotolong
+$ heroku pg:psql postgresql-vertical-29671 --app gotolong
+ !    ERR_SOCKET_BAD_PORT: Port should be >= 0 and < 65536. Received null.
+
+$ unset HTTP_PROXY
+
+$ heroku pg:psql postgresql-vertical-29671 --app gotolong
+--> Connecting to postgresql-vertical-29671
+
+
+3>
+
+$ heroku pg:info
+=== DATABASE_URL
+Plan:                  Hobby-dev
+Status:                Available
+Connections:           0/20
+PG Version:            12.5
+Created:               2020-12-18 14:13 UTC
+Data Size:             8.0 MB
+Tables:                0
+Rows:                  0/10000 (In compliance) - refreshing
+Fork/Follow:           Unsupported
+Rollback:              Unsupported
+Continuous Protection: Off
+Add-on:                postgresql-vertical-29671
+
+4>
+
+$ heroku config
+=== gotolong Config Vars
+DATABASE_URL: postgres://wsnyyzduraaxai:d86bf679278fab8ceb8b69ff852117e460855a15c72009e05e809cff6d327ba7@ec2-54-211-99-192.compute-1.amazonaws.com:5432/ddff5gqmhhri6l
+
+$
+
+5>
+
+$ heroku pg:credentials:url DATABASE
+Connection information for default credential.
+Connection info string:
+   "dbname=ddff5gqmhhri6l host=ec2-54-211-99-192.compute-1.amazonaws.com port=5432 user=wsnyyzduraaxai password=d86bf679278fab8ceb8b69ff852117e460855a15c72009e05e809cff6d327ba7 sslmode=require"
+Connection URL:
+   postgres://wsnyyzduraaxai:d86bf679278fab8ceb8b69ff852117e460855a15c72009e05e809cff6d327ba7@ec2-54-211-99-192.compute-1.amazonaws.com:5432/ddff5gqmhhri6l
+
+$
+
+
+6> psql : store db
+
+$ psql -U wsnyyzduraaxai -h ec2-54-211-99-192.compute-1.amazonaws.com -d ddff5gqmhhri6l < ./gotolong_dump_pg.psql
+
+
+7> download and install posgresql (local box)
+
+https://www.postgresql.org/

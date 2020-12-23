@@ -1,12 +1,7 @@
 #!/usr/bin/python
 
 import sys
-import re
-import csv
-import traceback
-import weight
-
-from operator import itemgetter
+from django_gotolong import weight
 
 # Main caller
 program_name = sys.argv[0]
