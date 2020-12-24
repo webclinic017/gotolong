@@ -166,7 +166,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -250,6 +250,21 @@ CREATE TABLE `global_corpact` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `global_fratio`
+--
+
+DROP TABLE IF EXISTS `global_fratio`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `global_fratio` (
+  `fratio_name` text DEFAULT NULL,
+  `fratio_buy` float DEFAULT NULL,
+  `fratio_hold` float DEFAULT NULL,
+  `fratio_enabled` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `global_ftwhl`
 --
 
@@ -291,6 +306,21 @@ DROP TABLE IF EXISTS `global_nach`;
 CREATE TABLE `global_nach` (
   `name` text DEFAULT NULL,
   `ticker` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `global_reco`
+--
+
+DROP TABLE IF EXISTS `global_reco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `global_reco` (
+  `reco_ticker` text DEFAULT NULL,
+  `reco_isin` text DEFAULT NULL,
+  `reco_type` text DEFAULT NULL,
+  `reco_cause` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -508,4 +538,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-20 16:09:41
+-- Dump completed on 2020-12-24 22:24:14
