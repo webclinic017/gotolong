@@ -8,7 +8,9 @@ fi
 
 COMMAND=$1
 
-cd 'C:\Program Files\MariaDB 10.4\bin'
+# add following to PATH
+# C:\Program Files\MariaDB 10.5\bin'
+
 DB_NAME=`python -m gotolong.config.config_ini db_name`
 
 DB_SCHEMA_SQL=${GOTOLONG_DATA}/db/${DB_NAME}_schema.sql

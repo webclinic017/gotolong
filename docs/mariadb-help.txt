@@ -22,7 +22,7 @@ plugin-dir=C:/Program Files/MariaDB 10.4/lib/plugin
 
 4. Fix datadir
 
-datadir=D:/GoogleDrive/my_github/GitHub/gotolong/db-data/
+datadir=D:/GoogleDrive/my_github/GitHub/gotolong/db-files/mariadb/
 
 
 5. server status
