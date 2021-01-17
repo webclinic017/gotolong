@@ -18,6 +18,8 @@ http://www.gotolong.in/
 
 git clone https://github.com/surinder432/gotolong
 
+git clone https://github.com/surinder432/gotolong-webapp
+
 ## Quick Installation - steps
 
 Download *.whl and *.tar.gz from dist directory.
