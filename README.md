@@ -18,8 +18,6 @@ http://www.gotolong.in/
 
 git clone https://github.com/surinder432/gotolong
 
-git clone https://github.com/surinder432/gotolong-webapp
-
 ## Quick Installation - steps
 
 Download *.whl and *.tar.gz from dist directory.
@@ -46,14 +44,15 @@ Download Python 3.*
 
 Download mariadb (for DB) - used mariadb10.4
 
-Download PostgreSQL (v13) - for validation with Heroku 
+Download PostgreSQL (v13) - for validation with Heroku
 
 Install Django
 
-python -m pip install Django
-pip install django-developer-panel
-pip3 install Ptable
+python -m pip install Django pip install django-developer-panel pip3 install Ptable
 
+Dev Env pip -r requirements/requirements_full.txt
+
+Heroku Env pip -r requirements/requirements_heroku.txt
 
 ### Installation - additional for development
 
@@ -61,11 +60,11 @@ Download PyCharm
 
 Download HeidiSQL : DB browser
 
-Download VIM 
+Download VIM
 
 Download GoogleDrive to store the input data and output reports.
 
-Download GitHub (includes Git-Bash)
+Download Git (includes Git-Bash)
 
 ## Software Configuration
  
@@ -93,17 +92,24 @@ For PgSQL
 
 export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
-#### gotolong-config.ini (loader)
+#### data/config/gotolong-config.ini (loader)
+
+Switched this also to DATABASE_URL.
 
 For DB name, user and password
 
-For recommendation filters
- 
-## Data Loader 
- 
-### Input Data 
+### Filter Section
+
+No longer used.
+
+Switched to Filter Ratio table.
+
+## Data Loader
+
+### Input Data
 
 #### user scope
+
 Gather and store files like demat summary and demat detailed data in input-user-data
 
 Check following directory
@@ -118,9 +124,9 @@ gotolong_all_report.sh
  
 ### Django Web Server
 
-The django project is capable of browsing the data stored in 'gotolong' database. 
+The django project is capable of browsing the data stored in 'gotolong' database.
 
-cd gotolong/django/
+cd django_gotolong/
 
 python manage.py runserver
 
@@ -156,7 +162,9 @@ demat transaction details
 
 demat summary details
 
-Module name : demat 
+Module name : demat
+
+NOTE: add support for any broker.
 
 ## screener module
 
@@ -166,7 +174,9 @@ financial data of bse 500 for 10 years
 
 for broker average target of healthy stocks
 
-## global weight module
+## gweight module
+
+global weight module
 
 assign weight by captype
 
@@ -174,11 +184,23 @@ user weight is not used right now
 
 Name : global_weight
 
+## fratio module
+
+Financial Ratio module
+
+You can specify financial ratio filters like debt to equity ratio (der)
+
+## greco module
+
+Global recommendation module
+
+Uses trendlyne module and fratio module
+
 ## phealth module
 
 identify companies at healthy price
 
-Dependency : 
+Dependency :
 
 ## dividend module
 
