@@ -46,6 +46,7 @@ class Demat(Amfi):
         self.debug_level = 0
         self.demat_txn_table_name = "user_demat_txn"
         self.demat_txn_table_dict = {
+            "dt_id": "int",
             "stock_symbol": "text",
             "comp_name": "text",
             "isin_code": "text",
@@ -98,14 +99,16 @@ class Demat(Amfi):
         try:
             row_list = row
             # skip header
-            if row_list[0] == 'Stock Symbol':
+            if row_list[1] == 'Stock Symbol':
                 return
             else:
                 # this is not used as ICICI direct uses different names
-                stock_symbol = row_list[0].strip()
+                stock_symbol = row_list[1].strip()
 
-            comp_name = row_list[1]
-            isin_code = (row_list[2]).upper().strip()
+            dt_id = row_list[0]
+
+            comp_name = row_list[2]
+            isin_code = (row_list[3]).upper().strip()
             stock_symbol = self.amfi_get_value_by_isin(isin_code, "ticker")
             # ignore Gold ETF : Kotak, HDFC etc
             if stock_symbol == 'UNK_TICKER' and comp_name.find("GOLD") == -1:
@@ -113,13 +116,15 @@ class Demat(Amfi):
                     self.demat_printed_ignored_isin[isin_code] = 'yes'
                     logging.info("isin", isin_code, "symbol", stock_symbol, "company", comp_name)
 
-            txn_type = row_list[3]
-            txn_qty = row_list[4]
-            txn_price = str(int(round(float(row_list[5]))))
+            txn_type = row_list[4]
+            txn_qty = row_list[5]
+            txn_price = str(int(round(float(row_list[6]))))
             # convert datetime.date to str
-            txn_date = str(row_list[12])
+            txn_date = str(row_list[13])
 
-            p_str = stock_symbol
+            p_str = dt_id
+            p_str += ','
+            p_str += stock_symbol
             p_str += ','
             p_str += isin_code
             p_str += ','
@@ -261,7 +266,7 @@ class Demat(Amfi):
         else:
             logging.info('demat_txn data already loaded in db', row_count)
         logging.info('display db data')
-        self.demat_txn_load_db()
+        self.demat_txn_load_data_from_db()
 
     def demat_sum_load_data(self, in_filename):
         table = self.demat_sum_table_name
@@ -274,7 +279,7 @@ class Demat(Amfi):
         else:
             logging.info('demat_sum data already loaded in db', row_count)
         logging.info('display db data')
-        self.demat_sum_load_db()
+        self.demat_sum_load_data_from_db()
 
     def demat_txn_get_insert_row(self, line, row_bank):
 
@@ -313,27 +318,13 @@ class Demat(Amfi):
         except IndexError:
             logging.error('IndexError ', txn_date, row_list)
 
+        dt_id += 1
         new_row = (
-            stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty,
+            dt_id, stock_symbol, comp_name, isin_code, txn_type, txn_qty, txn_price, brokerage, txn_charges, stamp_duty,
             segment,
             stt, remarks, txn_date_iso, exchange, unused1)
         row_bank.append(new_row)
 
-    def demat_txn_insert_data(self, in_filename):
-
-        create_sql = gotolong.cutil.cutil.get_create_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
-        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
-
-        cursor = self.db_conn.cursor()
-        with open(in_filename, 'rt') as csvfile:
-            row_bank = []
-            for line in csvfile:
-                self.demat_txn_get_insert_row(line, row_bank)
-            logging.info('loaded entries', len(row_bank), 'from', in_filename)
-            # insert row
-            cursor.executemany(insert_sql, row_bank)
-            # commit db changes
-            self.db_conn.commit()
 
     def demat_sum_get_insert_row(self, line, row_bank):
 
@@ -355,6 +346,23 @@ class Demat(Amfi):
                    days_gain, days_gain_pct, realized_pl, unrealized_pl, unrealzied_pl_pct, unused1)
         row_bank.append(new_row)
 
+    def demat_txn_insert_data(self, in_filename):
+
+        create_sql = gotolong.cutil.cutil.get_create_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.demat_txn_table_name, self.demat_txn_table_dict)
+
+        dt_id = 0
+        cursor = self.db_conn.cursor()
+        with open(in_filename, 'rt') as csvfile:
+            row_bank = []
+            for line in csvfile:
+                self.demat_txn_get_insert_row(line, row_bank)
+            logging.info('loaded entries', len(row_bank), 'from', in_filename)
+            # insert row
+            cursor.executemany(insert_sql, row_bank)
+            # commit db changes
+            self.db_conn.commit()
+
     def demat_sum_insert_data(self, in_filename):
 
         create_sql = gotolong.cutil.cutil.get_create_sql(self.demat_sum_table_name, self.demat_sum_table_dict)
@@ -372,7 +380,7 @@ class Demat(Amfi):
             # commit db changes
             self.db_conn.commit()
 
-    def demat_txn_load_db(self):
+    def demat_txn_load_data_from_db(self):
         table = self.demat_txn_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():
@@ -380,7 +388,7 @@ class Demat(Amfi):
             self.demat_txn_load_row(row)
         # self.demat_txn_prepare_data()
 
-    def demat_sum_load_db(self):
+    def demat_sum_load_data_from_db(self):
         table = self.demat_sum_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():

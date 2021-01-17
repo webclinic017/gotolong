@@ -1,0 +1,47 @@
+{% include "top.html" %}
+
+{% include "global_top.html" %}
+
+<h1>BHAV List </h1>
+
+Click here to <a href="/bhav/fetch/"> Fetch Bhav Data directly from NSE site (url) </a>
+<br>
+{{ refresh_url }}
+<br>
+<br>
+
+<form action="/bhav/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+<br>
+
+Number of object: {{ object_list|length }}
+<br>
+
+<table>
+
+    {% for bhav_row in object_list %}
+    <tr>
+        <td>
+            {{ bhav_row.id }}
+        </td>
+        <td>
+            {{ bhav_row.bhav_ticker }}
+        </td>
+        <td>
+            {{ bhav_row.bhav_price }}
+        </td>
+        <td>
+            {{ bhav_row.bhav_isin }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No bhav yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

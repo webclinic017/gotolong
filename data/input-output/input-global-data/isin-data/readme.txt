@@ -3,6 +3,8 @@
 1> NSE 
 Download following
 
+https://www1.nseindia.com/content/indices/ind_nifty500list.csv
+
 https://www.nseindia.com/content/indices/ind_nifty500list.csv
 
 https://www.nseindia.com/products/content/equities/indices/nifty_500.htm

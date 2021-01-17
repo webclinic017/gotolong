@@ -49,6 +49,8 @@ class Isin(Database):
             if bse_nse == "bse":
                 comp_name = row_list[1]
                 isin_code = row_list[2]
+                isin_symbol = 'Unknown'
+                isin_industry = 'Unknown'
             else:
                 comp_name = row_list[0]
                 isin_industry = row_list[1]
@@ -94,7 +96,7 @@ class Isin(Database):
         else:
             print('isin data already loaded in db', row_count)
         print('display db data')
-        self.isin_load_db()
+        self.isin_load_data_from_db()
 
     def isin_get_insert_row(self, line, row_bank):
 
@@ -132,7 +134,7 @@ class Isin(Database):
             # commit db changes
             self.db_conn.commit()
 
-    def isin_load_db(self):
+    def isin_load_data_from_db(self):
         table_name = self.isin_table_name
         cursor = self.db_table_load(table_name)
         for row in cursor.fetchall():
@@ -170,7 +172,7 @@ class Isin(Database):
                 p_str += ', '
                 p_str += '-'
             p_str += '\n'
-            fh.write(p_str);
+            fh.write(p_str)
         fh.close()
 
     def isin_dump_report_industry_only(self, out_filename):
@@ -251,11 +253,11 @@ def main():
     out_filename_phase = []
     # use the argument as pattern
     for index, filename in enumerate(args.in_files):
-        print('index = ', index, filename);
+        print('index = ', index, filename)
         in_filename_phase.append(filename)
 
     for index, filename in enumerate(args.out_files):
-        print('index = ', index, filename);
+        print('index = ', index, filename)
         out_filename_phase.append(filename)
 
     # Main caller

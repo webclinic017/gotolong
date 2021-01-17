@@ -121,3 +121,10 @@ replaced (blank=True,null=True) with (primary_key=True)
 10.
 
 python manage.py collectstatic
+
+11. Django debug
+
+import pdb; pdb.set_trace()
+or
+
+breakpoint()  #from Python3.7

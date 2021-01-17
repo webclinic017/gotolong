@@ -1,0 +1,28 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>NACH List </h1>
+<table>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    {% for nach_row in object_list %}
+    <tr>
+        <td>
+            {{ nach_row.id }}
+        </td>
+        <td>
+            {{ nach_row.name }}
+        </td>
+        <td>
+            {{ nach_row.ticker }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No nach yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

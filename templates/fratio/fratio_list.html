@@ -1,0 +1,41 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1> Filter Ratio List </h1>
+
+<table>
+    <tr>
+        <td>
+            fratio_name
+        </td>
+        <td>
+            fratio_buy
+        </td>
+        <td>
+            fratio_hold
+        </td>
+        <td>
+            fratio_enabled
+        </td>
+    </tr>
+    {% for fratio_row in object_list %}
+    <tr>
+        <td>
+            {{ fratio_row.fratio_name }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_buy }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_hold }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_enabled}}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No fratio yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

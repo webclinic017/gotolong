@@ -1,0 +1,104 @@
+"""mysite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+from django.views.generic import TemplateView
+
+from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, AmfiMissingView, amfi_upload
+from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
+
+from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, DematSumTickerView, DematSumAmountView, \
+    DematSumCapTypeView, DematSumRecoView, dematsum_upload
+from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
+    DematTxnStatBuySellView, demattxn_upload
+
+from django_gotolong.dividend.views import DividendListView
+from django_gotolong.dividend.views import DividendYearArchiveView, DividendMonthArchiveView, DividendAmountView, \
+    DividendFrequencyView
+
+from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
+from django_gotolong.fratio.views import FratioListView
+from django_gotolong.greco.views import GrecoListView, GrecoRefreshView
+from django_gotolong.gweight.views import GweightListView
+from django_gotolong.isin.views import IsinListView, IsinIndustryView
+from django_gotolong.nach.views import NachListView
+from django_gotolong.phealth.views import PhealthListView, PhealthListView_CSV
+from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
+
+from django_gotolong.uploaddoc import views
+
+urlpatterns = [
+                  path('', PhealthListView.as_view(), name='index'),
+                  path('admin/', admin.site.urls),
+                  path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
+                  path('amfi/upload/', amfi_upload, name='amfi-upload'),
+                  path('amfi/amount/', AmfiAmountView.as_view(), name='amfi-amount-list'),
+                  path('amfi/deficit/', AmfiDeficitView.as_view(), name='amfi-deficit-list'),
+                  path('amfi/missing/', AmfiMissingView.as_view(), name='amfi-missing-list'),
+                  path('bhav/list/', BhavListView.as_view(), name='bhav-list'),
+                  path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
+                  path('bhav/upload/', bhav_upload, name='bhav-upload'),
+                  path('demat/sum/list/', DematSumListView.as_view(), name='dematsum-list'),
+                  path('demat/sum/upload/', dematsum_upload, name='dematsum-upload'),
+                  path('demat/sum/ticker/', DematSumTickerView.as_view(), name='dematsum-ticker-list'),
+                  path('demat/sum/rank/', DematSumRankView.as_view(), name='dematsum-rank-list'),
+                  path('demat/sum/amount/', DematSumAmountView.as_view(), name='dematsum-amount-list'),
+                  path('demat/sum/captype/', DematSumCapTypeView.as_view(), name='dematsum-rank-list'),
+                  path('demat/sum/reco/', DematSumRecoView.as_view(), name='dematsum-reco-list'),
+                  path('demat/txn/list/', DematTxnListView.as_view(), name='demattxn-list'),
+                  path('demat/txn/gap/', DematTxnGapView.as_view(), name='demattxn-gap-list'),
+                  path('demat/txn/stat/', DematTxnStatView.as_view(), name='demattxn-stat-list'),
+                  path('demat/txn/stat/buy_sell/', DematTxnStatBuySellView.as_view(),
+                       name='demattxn-stat-buysell-list'),
+                  path('demat/txn/upload/', demattxn_upload, name='demattxn-upload'),
+                  path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
+                  path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
+                  path('dividend/list/<str:year>/', DividendYearArchiveView.as_view(), name='dividend_archive_year'),
+                  path('dividend/list/<int:year>/<int:month>/', DividendMonthArchiveView.as_view(month_format='%m'),
+                       name='dividend_archive_month_numeric'),
+                  path('dividend/list/<int:year>/<str:month>/', DividendMonthArchiveView.as_view(),
+                       name='dividend_archive_month'),
+                  path('dividend/amount/', DividendAmountView.as_view(), name='dividend-amount-list'),
+                  path('dividend/frequency/', DividendFrequencyView.as_view(), name='dividend-frequency-list'),
+                  path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
+                  path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
+                  path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
+                  path('ftwhl/upload/', ftwhl_upload, name='ftwhl-upload'),
+                  path('greco/list/', GrecoListView.as_view(), name='greco-list'),
+                  path('greco/refresh/', GrecoRefreshView.as_view(), name='greco-refresh'),
+                  path('gweight/list/', GweightListView.as_view(), name='gweight-list'),
+                  path('isin/list/', IsinListView.as_view(), name='isin-list'),
+                  path('isin/industry/', IsinIndustryView.as_view(), name='isin-industry-list'),
+                  path('nach/list/', NachListView.as_view(), name='nach-list'),
+                  path('page/about/', TemplateView.as_view(template_name="about.html")),
+                  path('page/global-data/', TemplateView.as_view(template_name="global_data.html")),
+                  path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
+                  path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
+                  path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
+                  path('phealth/list/', PhealthListView.as_view(), name='phealth-list'),
+                  path('phealth/list/csv/', PhealthListView_CSV.as_view(), name='phealth-list-csv'),
+                  path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
+                  path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
+                  path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),
+                  path('uploaddoc/simple/', views.simple_upload, name='uploaddoc-simple'),
+                  path('uploaddoc/model-form/', views.model_form_upload, name='uploaddoc-model-form'),
+                  path('uploaddoc/list/', views.list, name='uploaddoc-list'),
+                  path('uploaddoc/delete/<int:id>/', views.delete_view, name='uploaddoc-delete'),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

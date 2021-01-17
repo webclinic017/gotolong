@@ -13,19 +13,19 @@ import logging
 
 from gotolong.amfi.amfi import *
 from gotolong.isin.isin import *
+from gotolong.bhav.bhav import *
+from gotolong.corpact.corpact import *
+from gotolong.demat.demat import *
+from gotolong.ftwhl.ftwhl import *
+from gotolong.greco.greco import *
+from gotolong.gweight.gweight import *
+
 from gotolong.screener.screener import *
 from gotolong.trendlyne.trendlyne import *
-from gotolong.demat.demat import *
-
-from gotolong.global_weight.gweight import *
-
-from gotolong.bhav.bhav import *
-from gotolong.ftwhl.ftwhl import *
-
-from gotolong.corpact.corpact import *
 
 
-class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl, Corpact):
+# greco - includes fratio and trendlyne
+class Phealth(Screener, Greco, Demat, Gweight, Bhav, Ftwhl, Corpact):
 
     def __init__(self):
         super(Phealth, self).__init__()
@@ -153,15 +153,15 @@ class Phealth(Screener, Trendlyne, Demat, Gweight, Bhav, Ftwhl, Corpact):
                 p_str += str(giveback_score)
                 p_str += ','
 
-                if (ticker, "reco_type") in self.tl_ratio_values:
-                    reco_type = self.tl_ratio_values[ticker, "reco_type"]
+                if ticker in self.greco_type:
+                    reco_type = self.greco_type[ticker]
                 else:
                     reco_type = '-'
                 p_str += reco_type
                 p_str += ','
 
-                if (ticker, "reco_cause") in self.tl_ratio_values:
-                    reco_cause = self.tl_ratio_values[ticker, "reco_cause"]
+                if ticker in self.greco_cause:
+                    reco_cause = self.greco_cause[ticker]
                 else:
                     reco_cause = '-'
                 p_str += reco_cause
@@ -226,12 +226,13 @@ def main():
     phealth.set_debug_level(debug_level)
 
     phealth.amfi_load_data_from_db()
-    phealth.isin_load_db()
+    phealth.isin_load_data_from_db()
+    phealth.demat_txn_load_data_from_db()
+    phealth.demat_sum_load_data_from_db()
     phealth.screener_load_db()
-    phealth.trendlyne_load_db()
-    phealth.demat_txn_load_db()
-    phealth.demat_sum_load_db()
-    phealth.gweight_load_db()
+    phealth.trendlyne_load_data_from_db()
+    phealth.greco_load_data_from_db()
+    phealth.gweight_load_data_from_db()
     phealth.bhav_load_data_from_db()
     phealth.ftwhl_load_data_from_db()
     phealth.corpact_load_data_from_db()

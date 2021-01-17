@@ -3,6 +3,10 @@ import mysql.connector as mariadb
 
 from gotolong.config.config_ini import *
 
+from urllib.parse import urlparse
+
+import os
+
 
 class Database(GotoLong_Config):
     def __init__(self):
@@ -17,9 +21,19 @@ class Database(GotoLong_Config):
         # else:
         #    print('db new')
 
-        self.db_conn = mariadb.connect(user=self.config_db_user, password=self.config_db_pass,
-                                       database=self.config_db_name)
-
+        if os.getenv('DATABASE_URL'):
+            print('using DATABASE_URL')
+            url = urlparse(os.getenv('DATABASE_URL'))
+            db_user = url.username
+            db_password = url.password
+            db_name = url.path.lstrip('/')
+        else:
+            print('NOT using DATABASE_URL')
+            db_user = self.config_db_user
+            db_password = self.config_db_pass
+            db_name = self.config_db_name
+        self.db_conn = mariadb.connect(user=db_user, password=db_password,
+                                       database=db_name)
         # self.db_conn = sqlite3.connect(self.db_filepath)
 
         # sqlite3.ProgrammingError: You must not use 8-bit bytestrings unless you use a text_factory

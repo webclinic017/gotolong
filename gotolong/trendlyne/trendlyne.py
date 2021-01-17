@@ -40,38 +40,34 @@ class Trendlyne(Amfi, Isin):
             "My Notes": "notes"
         }
         self.tl_ratio_loc = {
-            'stock_name': -1,
-            'isin': -1,
-            'bat': -1,
-            'der': -1,
-            'roce3': -1,
-            'roe3': -1,
-            'dpr2': -1,
-            'sales2': -1,
-            'profit5': -1,
-            'icr': -1,
-            'pledge': -1,
-            'low_3y': -1,
-            'low_5y': -1,
-            'reco_type': -1,
-            'reco_cause': -1
+            'tl_stock_name': -1,
+            'tl_isin': -1,
+            'tl_bat': -1,
+            'tl_der': -1,
+            'tl_roce3': -1,
+            'tl_roe3': -1,
+            'tl_dpr2': -1,
+            'tl_sales2': -1,
+            'tl_profit5': -1,
+            'tl_icr': -1,
+            'tl_pledge': -1,
+            'tl_low_3y': -1,
+            'tl_low_5y': -1
         }
         self.tl_table_dict = {
-            "stock_name": "text",
-            "isin": "text",
-            "bat": "float",
-            "der": "float",
-            "roce3": "float",
-            "roe3": "float",
-            "dpr2": "float",
-            "sales2": "float",
-            "profit5": "float",
-            "icr": "float",
-            "pledge": "float",
-            "low_3y": "float",
-            "low_5y": "float",
-            'reco_type': "text",
-            'reco_cause': "text"
+            "tl_stock_name": "text",
+            "tl_isin": "text",
+            "tl_bat": "float",
+            "tl_der": "float",
+            "tl_roce3": "float",
+            "tl_roe3": "float",
+            "tl_dpr2": "float",
+            "tl_sales2": "float",
+            "tl_profit5": "float",
+            "tl_icr": "float",
+            "tl_pledge": "float",
+            "tl_low_3y": "float",
+            "tl_low_5y": "float"
         }
 
     def set_debug_level(self, debug_level):
@@ -88,8 +84,7 @@ class Trendlyne(Amfi, Isin):
                     print('ignored empty row', row_list)
                 return
 
-            (stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y, reco_type,
-             reco_cause) = row_list
+            (stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y) = row_list
 
             if True:
                 tl_isin = isin
@@ -97,36 +92,32 @@ class Trendlyne(Amfi, Isin):
                 self.tl_nsecode_list.append(tl_nsecode)
 
                 for ratio in self.tl_table_dict:
-                    if ratio == 'stock_name':
+                    if ratio == 'tl_stock_name':
                         self.tl_ratio_values[tl_nsecode, ratio] = stock_name
-                    if ratio == 'isin':
+                    if ratio == 'tl_isin':
                         self.tl_ratio_values[tl_nsecode, ratio] = isin
-                    if ratio == 'bat':
+                    if ratio == 'tl_bat':
                         self.tl_ratio_values[tl_nsecode, ratio] = bat
-                    if ratio == 'der':
+                    if ratio == 'tl_der':
                         self.tl_ratio_values[tl_nsecode, ratio] = der
-                    if ratio == 'roce3':
+                    if ratio == 'tl_roce3':
                         self.tl_ratio_values[tl_nsecode, ratio] = roce3
-                    if ratio == 'roe3':
+                    if ratio == 'tl_roe3':
                         self.tl_ratio_values[tl_nsecode, ratio] = roe3
-                    if ratio == 'dpr2':
+                    if ratio == 'tl_dpr2':
                         self.tl_ratio_values[tl_nsecode, ratio] = dpr2
-                    if ratio == 'sales2':
+                    if ratio == 'tl_sales2':
                         self.tl_ratio_values[tl_nsecode, ratio] = sales2
-                    if ratio == 'profit5':
+                    if ratio == 'tl_profit5':
                         self.tl_ratio_values[tl_nsecode, ratio] = profit5
-                    if ratio == 'icr':
+                    if ratio == 'tl_icr':
                         self.tl_ratio_values[tl_nsecode, ratio] = icr
-                    if ratio == 'pledge':
+                    if ratio == 'tl_pledge':
                         self.tl_ratio_values[tl_nsecode, ratio] = pledge
-                    if ratio == 'low_3y':
+                    if ratio == 'tl_low_3y':
                         self.tl_ratio_values[tl_nsecode, ratio] = low_3y
-                    if ratio == 'low_5y':
+                    if ratio == 'tl_low_5y':
                         self.tl_ratio_values[tl_nsecode, ratio] = low_5y
-                    if ratio == 'reco_type':
-                        self.tl_ratio_values[tl_nsecode, ratio] = reco_type
-                    if ratio == 'reco_cause':
-                        self.tl_ratio_values[tl_nsecode, ratio] = reco_cause
                     if self.debug_level > 1:
                         print('ticker: ', tl_nsecode, 'ratio: ', ratio, 'value: ',
                               self.tl_ratio_values[tl_nsecode, ratio])
@@ -156,86 +147,8 @@ class Trendlyne(Amfi, Isin):
         else:
             print('trendlyne data already loaded in db', row_count)
         print('display db data')
-        self.trendlyne_load_db()
+        self.trendlyne_load_data_from_db()
 
-    def trendlyne_get_reco(self, stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge,
-                           low_3y, low_5y, notes):
-
-        b_c1 = der <= self.config_der_buy
-        b_c2 = roce3 >= self.config_roce3_buy
-        b_c3 = dpr2 >= self.config_dpr2_buy
-        b_c4 = sales2 >= self.config_sales2_buy
-        b_c5 = profit5 >= self.config_profit5_buy
-        b_c6 = pledge <= self.config_pledge_buy
-
-        reco_type = 'NONE'
-        reco_cause = 'NONE'
-
-        if (b_c1 and b_c2 and b_c3 and b_c4 and b_c5 and b_c6):
-            reco_type = "BUY"
-            reco_cause = "ALL"
-            return (reco_type, reco_cause)
-        else:
-            s_c1 = der > self.config_der_hold
-            s_c2 = roce3 < self.config_roce3_hold
-            s_c3 = dpr2 < self.config_dpr2_hold
-            s_c4 = sales2 < self.config_sales2_hold
-            s_c5 = profit5 < self.config_profit5_hold
-            s_c6 = pledge > self.config_pledge_hold
-            reco_cause = ''
-            if s_c1:
-                reco_cause += " "
-                reco_cause += "der"
-            if s_c2:
-                reco_cause += " "
-                reco_cause += "roce3"
-            if s_c3:
-                reco_cause += " "
-                reco_cause += "dpr2"
-            if s_c4:
-                reco_cause += " "
-                reco_cause += "sales2"
-            if s_c5:
-                reco_cause += " "
-                reco_cause += "profit5"
-            if s_c6:
-                reco_cause += " "
-                reco_cause += "pledge"
-
-            if reco_cause == '':
-                reco_type = "HOLD"
-            else:
-                reco_type = "SALE"
-
-        if reco_type == 'HOLD':
-            h_c1 = (der > self.config_der_buy and der <= self.config_der_hold)
-            h_c2 = (roce3 > self.config_roce3_buy and roce3 >= self.config_roce3_hold)
-            h_c3 = (dpr2 < self.config_dpr2_buy and dpr2 >= self.config_dpr2_hold)
-            h_c4 = (sales2 < self.config_sales2_buy and sales2 >= self.config_sales2_hold)
-            h_c5 = (profit5 < self.config_profit5_buy and profit5 >= self.config_profit5_hold)
-            h_c6 = (pledge > self.config_pledge_buy and pledge <= self.config_pledge_hold)
-
-            reco_cause = ''
-            if h_c1:
-                reco_cause += " "
-                reco_cause += "der"
-            if h_c2:
-                reco_cause += " "
-                reco_cause += "roce3"
-            if h_c3:
-                reco_cause += " "
-                reco_cause += "dpr2"
-            if h_c4:
-                reco_cause += " "
-                reco_cause += "sales2"
-            if h_c5:
-                reco_cause += " "
-                reco_cause += "profit5"
-            if h_c6:
-                reco_cause += " "
-                reco_cause += "pledge"
-
-        return (reco_type, reco_cause)
 
     def trendlyne_get_insert_row(self, line, row_bank):
 
@@ -282,13 +195,12 @@ class Trendlyne(Amfi, Isin):
             pledge = float(pledge)
             low_3y = float(low_3y)
             low_5y = float(low_5y)
-            (reco_type, reco_cause) = self.trendlyne_get_reco(stock_name, isin, bat, der, roce3, roe3, dpr2, sales2,
-                                                              profit5, icr, pledge, low_3y, low_5y, notes)
+            # (reco_type, reco_cause) = self.trendlyne_get_reco(stock_name, isin, bat, der, roce3, roe3, dpr2, sales2,
+            #                                                  profit5, icr, pledge, low_3y, low_5y, notes)
 
             # remove any un-required stuff
             new_row = (
-                stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y, reco_type,
-                reco_cause)
+                stock_name, isin, bat, der, roce3, roe3, dpr2, sales2, profit5, icr, pledge, low_3y, low_5y)
             row_bank.append(new_row)
 
         except:
@@ -313,7 +225,7 @@ class Trendlyne(Amfi, Isin):
             # commit db changes
             self.db_conn.commit()
 
-    def trendlyne_load_db(self):
+    def trendlyne_load_data_from_db(self):
         table = self.tl_table_name
         cursor = self.db_table_load(table)
         for row in cursor.fetchall():

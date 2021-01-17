@@ -1,0 +1,117 @@
+{% include "top.html" %}
+{% include "user_top.html" %}
+
+<h1>Dividend Archive Year List </h1>
+
+<br/>
+
+<br/>
+
+{{ date|date:"Y" }}  Total Dividend: {{ total_amount }}
+
+<br/>
+
+<table>
+
+    <tr>
+        <td>
+            month
+        </td>
+        <td>
+            amount
+        </td>
+    </tr>
+
+    {% for year_summary in summary_list %}
+
+    {% comment %}
+    {{ year_summary }}
+    {% endcomment %}
+
+    {% for key, value in year_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value}}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+</table>
+
+
+<br/>
+
+
+{% for date in date_list %}
+{% if forloop.first %}
+
+
+<a href=/dividend/list/> Go Up </a>
+
+<br>
+
+Monthly Archive :
+
+{% endif %}
+
+<a href=/dividend/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+{% endfor %}
+
+
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+        <td>
+            Ticker
+        </td>
+        <td>
+            ISIN
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.div_date }}
+        </td>
+        <td>
+            {{ dividend_row.remarks }}
+        </td>
+        <td>
+            {{ dividend_row.amount }}
+        </td>
+        <td>
+            {{ dividend_row.ticker }}
+        </td>
+        <td>
+            {{ dividend_row.isin }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

@@ -1,0 +1,125 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>Trendlyne List </h1>
+
+<br>
+
+<form action="/trendlyne/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+<br>
+
+<table>
+    {% if object_list %}
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            stock_name
+        </td>
+        <td>
+            isin
+        </td>
+        <td>
+            bat
+        </td>
+        <td>
+            der
+        </td>
+        <td>
+            roce3
+        </td>
+        <td>
+            roe3
+        </td>
+        <td>
+            dpr2
+        </td>
+        <td>
+            sales2
+        </td>
+        <td>
+            profit5
+        </td>
+        <td>
+            icr
+        </td>
+        <td>
+            pledge
+        </td>
+        <td>
+            low_3y
+        </td>
+        <td>
+            low_5y
+        </td>
+    </tr>
+
+
+    {% for tl_row in object_list %}
+    <tr>
+        <td>
+            {{ tl_row.tl_stock_name }}
+        </td>
+        <td>
+            {{ tl_row.tl_isin }}
+        </td>
+        <td>
+            {{ tl_row.tl_bat }}
+        </td>
+        <td>
+            {{ tl_row.tl_der }}
+        </td>
+        <td>
+            {{ tl_row.tl_roce3 }}
+        </td>
+        <td>
+            {{ tl_row.tl_roe3 }}
+        </td>
+        <td>
+            {{ tl_row.tl_dpr2 }}
+        </td>
+        <td>
+            {{ tl_row.tl_sales2 }}
+        </td>
+        <td>
+            {{ tl_row.tl_profit5 }}
+        </td>
+        <td>
+            {{ tl_row.tl_icr }}
+        </td>
+        <td>
+            {{ tl_row.tl_pledge }}
+        </td>
+        <td>
+            {{ tl_row.tl_low_3y }}
+        </td>
+        <td>
+            {{ tl_row.tl_low_5y }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td> No amfi yet.</td>
+    </tr>
+    {% endfor %}
+
+    {% else %}
+
+    <tr>
+        <td> No objects</td>
+    </tr>
+    {% endif %}
+
+</table>
+
+{% include "bottom.html" %}

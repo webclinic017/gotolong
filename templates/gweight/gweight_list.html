@@ -1,0 +1,25 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>Global Weight List </h1>
+<table>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    {% for weight_row in object_list %}
+    <tr>
+        <td>
+            {{ weight_row.gw_cap_type }}
+        </td>
+        <td>
+            {{ weight_row.gw_cap_weight }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No Weight yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

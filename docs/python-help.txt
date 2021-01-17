@@ -196,3 +196,17 @@ pip install mysql-connector-python
   27.
     txn_month_abre = current_date.strftime('%b')
 
+
+28. Django debug
+
+import pdb; pdb.set_trace()
+or
+
+breakpoint()  #from Python3.7
+
+29. get rid of newline etc at end : chomp equivalent on python.
+
+str.rstrip()
+
+30.
+

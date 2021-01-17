@@ -1,0 +1,49 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>FTWHL List </h1>
+
+Click here to <a href="/ftwhl/fetch/"> Fetch Ftwhl Data directly from NSE site </a>
+<br>
+{{ refresh_url }}
+<br>
+<form action="/ftwhl/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+<table>
+
+    {% for ftwhl_row in object_list %}
+    <tr>
+        <td>
+            {{ ftwhl_row.id }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_ticker }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_high }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_high_dt }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_low }}
+        </td>
+        <td>
+            {{ ftwhl_row.ftwhl_low_dt }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No ftwhl yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}
