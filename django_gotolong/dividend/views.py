@@ -1,10 +1,9 @@
 # Create your views here.
 
 # To address, NameError: name 'Sum' is not defined
-from django.db.models import Sum
+from django.db.models import (Sum, Count)
 
 from django.db.models.functions import (ExtractYear, Round, ExtractMonth)
-from django.db.models import (Count)
 
 from django.views.generic.list import ListView
 from django.views.generic.dates import YearArchiveView, MonthArchiveView

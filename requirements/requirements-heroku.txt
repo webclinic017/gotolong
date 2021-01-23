@@ -1,7 +1,10 @@
 django
 django_heroku
+dj-database-url
 gunicorn
 mysqlclient
+mysql-connector
+openpyxl
 pandas
 python-dateutil
 urllib3

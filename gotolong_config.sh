@@ -10,7 +10,7 @@ export PATH=${PROJ_SCRIPTS_LOC}:${PROJECT_ROOT}:.:${PATH}:$(dirname `which pytho
 export PATH=${PATH}:/c/'Program Files (x86)'/'Microsoft Office'/Office16
 # add mysql PATH
 export PATH=${PATH}:/c/'Program Files'/'MariaDB 10.5'/bin
-# add psql (PostgreSQL) PATH
+# add psql (PostgreSQL) PATH, createdb
 export PATH=${PATH}:/C/'Program Files'/PostgreSQL/13/bin
 
 export PYTHONPATH=${PKG_ROOT}:${PROJ_SCRIPTS_LOC}:.:
@@ -20,7 +20,7 @@ export PYTHONPATH=${PKG_ROOT}:${PROJ_SCRIPTS_LOC}:.:
 # export DATABASE_URL=mysql://USER:PASSWORD@HOST:PORT/NAME
 export DATABASE_URL=mysql://root:root@localhost:3306/gotolong
 # postgres://USER:PASSWORD@HOST:PORT/NAME
-# export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
 # set the home : contains variable data : to be used by the package by user
 export GOTOLONG_DATA=$PROJECT_ROOT/data

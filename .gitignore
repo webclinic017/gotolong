@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # txt files
-*.txt
+*.secret.txt
 
 awkvars.out
 *.xls

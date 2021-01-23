@@ -6,7 +6,6 @@ import re
 # 10k
 heroku_db_row_limits = 10000
 
-
 def main():
     debug = 0
     total_db_rows_count = 0

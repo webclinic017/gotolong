@@ -1,8 +1,8 @@
--- MariaDB dump 10.17  Distrib 10.4.11-MariaDB, for Win64 (AMD64)
+-- MariaDB dump 10.18  Distrib 10.5.8-MariaDB, for Win64 (AMD64)
 --
 -- Host: localhost    Database: gotolong
 -- ------------------------------------------------------
--- Server version	10.4.11-MariaDB
+-- Server version	10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -332,21 +332,19 @@ DROP TABLE IF EXISTS `global_trendlyne`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `global_trendlyne` (
-  `stock_name` text DEFAULT NULL,
-  `isin` text DEFAULT NULL,
-  `bat` float DEFAULT NULL,
-  `der` float DEFAULT NULL,
-  `roce3` float DEFAULT NULL,
-  `roe3` float DEFAULT NULL,
-  `dpr2` float DEFAULT NULL,
-  `sales2` float DEFAULT NULL,
-  `profit5` float DEFAULT NULL,
-  `icr` float DEFAULT NULL,
-  `pledge` float DEFAULT NULL,
-  `low_3y` float DEFAULT NULL,
-  `low_5y` float DEFAULT NULL,
-  `reco_type` text DEFAULT NULL,
-  `reco_cause` text DEFAULT NULL
+  `tl_stock_name` text DEFAULT NULL,
+  `tl_isin` text DEFAULT NULL,
+  `tl_bat` float DEFAULT NULL,
+  `tl_der` float DEFAULT NULL,
+  `tl_roce3` float DEFAULT NULL,
+  `tl_roe3` float DEFAULT NULL,
+  `tl_dpr2` float DEFAULT NULL,
+  `tl_sales2` float DEFAULT NULL,
+  `tl_profit5` float DEFAULT NULL,
+  `tl_icr` float DEFAULT NULL,
+  `tl_pledge` float DEFAULT NULL,
+  `tl_low_3y` float DEFAULT NULL,
+  `tl_low_5y` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -358,8 +356,8 @@ DROP TABLE IF EXISTS `global_weight`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `global_weight` (
-  `cap_type` text DEFAULT NULL,
-  `cap_weight` int(11) DEFAULT NULL
+  `gw_cap_type` text DEFAULT NULL,
+  `gw_cap_weight` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -462,6 +460,7 @@ DROP TABLE IF EXISTS `user_demat_txn`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_demat_txn` (
+  `dt_id` text DEFAULT NULL,
   `stock_symbol` text DEFAULT NULL,
   `comp_name` text DEFAULT NULL,
   `isin_code` text DEFAULT NULL,
@@ -538,4 +537,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-24 22:24:14
+-- Dump completed on 2021-01-19 17:54:45

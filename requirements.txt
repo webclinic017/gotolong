@@ -1,7 +1,1 @@
-django
-django_heroku
-gunicorn
-mysqlclient
-pandas
-python-dateutil
-urllib3
+-r requirements/requirements-heroku.txt

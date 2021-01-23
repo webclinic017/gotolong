@@ -88,8 +88,11 @@ class GotoLong_Config(object):
     def get_db_name(self):
         return self.config_db_name
 
-    def get_db_schema(self):
-        return os.path.join(self.get_data(), self.config_loc_db_schema)
+    def get_db_user(self):
+        return self.config_db_user
+
+    def get_db_pass(self):
+        return self.config_db_pass
 
     def get_db_schema(self):
         return os.path.join(self.get_data(), self.config_loc_db_schema)
@@ -123,6 +126,10 @@ def main():
         print(config.get_profile_reports())
     elif cmd == "db_name":
         print(config.get_db_name())
+    elif cmd == "db_user":
+        print(config.get_db_user())
+    elif cmd == "db_pass":
+        print(config.get_db_pass())
     elif cmd == "db_schema":
         print(config.get_db_schema())
 

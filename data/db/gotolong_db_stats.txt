@@ -9,8 +9,8 @@
 | global_ftwhl               |        483 |
 | global_bhav                |        483 |
 | global_corpact             |        421 |
+| global_reco                |        382 |
 | global_trendlyne           |        382 |
-| global_reco                |        380 |
 | plan                       |        354 |
 | user_demat_sum             |        260 |
 | user_weight                |        246 |
@@ -19,13 +19,13 @@
 | django_migrations          |         21 |
 | django_content_type        |         12 |
 | global_fratio              |          6 |
-| django_session             |          3 |
 | global_weight              |          3 |
-| user_doc                   |          0 |
-| django_admin_log           |          0 |
-| auth_user_user_permissions |          0 |
-| auth_user_groups           |          0 |
-| auth_user                  |          0 |
+| django_session             |          3 |
 | auth_group_permissions     |          0 |
+| auth_user                  |          0 |
+| auth_user_user_permissions |          0 |
 | auth_group                 |          0 |
+| user_doc                   |          0 |
+| auth_user_groups           |          0 |
+| django_admin_log           |          0 |
 +----------------------------+------------+

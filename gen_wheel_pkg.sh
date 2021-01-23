@@ -8,7 +8,7 @@ python setup.py clean --all
 python setup.py bdist_wheel
 
 # first dump the db schema and db dump
-gotolong_db_gen.sh
+gotolong_db_schema_gen.sh
 
 # generate .tar.gz for data
 tar -cvf ${PROJECT_ROOT}/dist/gotolong-data.tar data
