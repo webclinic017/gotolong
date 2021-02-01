@@ -21,13 +21,23 @@ On Heroku, the clone of repository can be connected using github.
 
 Attach postgresql database to the heroku app.
 
-heroku login heroku addons:create heroku-postgresql:hobby-dev heroku pg:info heroku pg:credentials:url DATABASE heroku
-config gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+heroku login
 
-To reset the database in PostgreSQL heroku login heroku pg:reset --app <appname>
+heroku addons:create heroku-postgresql:hobby-dev
+
+heroku pg:info
+
+heroku pg:credentials:url DATABASE
+
+heroku config
+
 gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
 
-##  
+To reset the database in PostgreSQL heroku login heroku pg:reset --app <appname>
+
+gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+
+##   
 
 ## Quick Installation - steps
 
@@ -59,23 +69,19 @@ Download PostgreSQL (v13) - for validation with Heroku
 
 Install Django
 
-python -m pip install Django pip install django-developer-panel pip3 install Ptable
+python -m pip install Django
 
-Dev Env pip -r requirements/requirements_full.txt
+pip install django-developer-panel
 
-Heroku Env pip -r requirements/requirements_heroku.txt
+pip3 install Ptable
 
-### Installation - additional for development
+Dev Env
 
-Download PyCharm
+pip -r requirements/requirements_full.txt
 
-Download HeidiSQL : DB browser
+Heroku Env
 
-Download VIM
-
-Download GoogleDrive to store the input data and output reports.
-
-Download Git (includes Git-Bash)
+pip -r requirements/requirements_heroku.txt
 
 ## Software Configuration
  
@@ -105,15 +111,9 @@ export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
 #### data/config/gotolong-config.ini (loader)
 
-Switched this also to DATABASE_URL.
+Switch this also to DATABASE_URL.
 
 For DB name, user and password
-
-### Filter Section
-
-No longer used.
-
-Switched to Filter Ratio table.
 
 ## Data Loader
 
@@ -127,12 +127,14 @@ Check following directory
 
 {GOTOLONG_DATA}/data/input-output/
 
-### Load data for all modules
+### One step load data for all modules
 
 gotolong_all_report.sh
 
-## Data Explorer
- 
+NOTE: This may be out of sync as the focus is to load the data directly through web browser.
+
+## Data Loader & Explorer
+
 ### Django Web Server
 
 The django project is capable of browsing the data stored in 'gotolong' database.
@@ -219,3 +221,14 @@ create dividend matrix by company and month.
 
 Dependency : nach -> dividend
 
+# Installation - additional for development
+
+Download PyCharm
+
+Download HeidiSQL : DB browser
+
+Download VIM
+
+Download GoogleDrive to store the input data and output reports.
+
+Download Git (includes Git-Bash)
