@@ -33,11 +33,13 @@ heroku config
 
 gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
 
-To reset the database in PostgreSQL heroku login heroku pg:reset --app <appname>
+To reset the database in PostgreSQL
+
+heroku login heroku pg:reset --app <appname>
 
 gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
 
-##   
+##    
 
 ## Quick Installation - steps
 
@@ -67,19 +69,11 @@ Download mariadb (for DB) - used mariadb10.4
 
 Download PostgreSQL (v13) - for validation with Heroku
 
-Install Django
-
-python -m pip install Django
-
-pip install django-developer-panel
-
-pip3 install Ptable
-
-Dev Env
+Dev Env:
 
 pip -r requirements/requirements_full.txt
 
-Heroku Env
+Heroku Env:
 
 pip -r requirements/requirements_heroku.txt
 
@@ -88,9 +82,11 @@ pip -r requirements/requirements_heroku.txt
 ###  Install Database schema
 
 #### Create Schema
+
 gotolong_db_schema_install.sh create_mysql
 
 #### Install Schema for MySQL
+
 gotolong_db_schema_install.sh import_mysql
 
 #### Install Schema for PgSQL
@@ -115,25 +111,7 @@ Switch this also to DATABASE_URL.
 
 For DB name, user and password
 
-## Data Loader
-
-### Input Data
-
-#### user scope
-
-Gather and store files like demat summary and demat detailed data in input-user-data
-
-Check following directory
-
-{GOTOLONG_DATA}/data/input-output/
-
-### One step load data for all modules
-
-gotolong_all_report.sh
-
-NOTE: This may be out of sync as the focus is to load the data directly through web browser.
-
-## Data Loader & Explorer
+## Browser based Data Loader & Explorer
 
 ### Django Web Server
 
@@ -150,6 +128,24 @@ Starting development server at http://127.0.0.1:8000/
 Use the following URL to browse the reports
 
 http://127.0.0.1:8000/
+
+## Non-Browser Data Loader & Explorer
+
+### Input Data
+
+#### user scope
+
+Gather and store files like demat summary and demat detailed data in input-user-data
+
+Check following directory
+
+{GOTOLONG_DATA}/data/input-output/
+
+### One step load data for all modules
+
+gotolong_all_report.sh
+
+NOTE: This may be out of sync as the focus is to load the data directly through web browser.
 
 ## For Developers : Module Description
 
