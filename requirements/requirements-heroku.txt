@@ -6,5 +6,8 @@ mysqlclient
 mysql-connector
 openpyxl
 pandas
+pyexcel
+pyexcel-xls
 python-dateutil
+xlrd
 urllib3

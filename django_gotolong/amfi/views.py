@@ -7,13 +7,11 @@ from django.views.generic.list import ListView
 # from django_filters.rest_framework import DjangoFilterBackend, FilterSet, OrderingFilter
 
 import pandas as pd
-
 import csv, io
 import openpyxl
 
 from django.contrib import messages
 from django.urls import reverse
-
 from django.http import HttpResponseRedirect
 
 from django.db.models import OuterRef, Subquery
@@ -23,7 +21,6 @@ from django_gotolong.amfi.models import Amfi
 
 from django_gotolong.dematsum.models import DematSum
 from django_gotolong.gweight.models import Gweight
-
 
 class AmfiListView(ListView):
     model = Amfi

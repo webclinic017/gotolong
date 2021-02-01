@@ -14,7 +14,7 @@ from django_gotolong.trendlyne.models import Trendlyne
 from django_gotolong.gweight.models import Gweight
 from django_gotolong.greco.models import Greco
 
-from django.db.models import OuterRef, Subquery, ExpressionWrapper, F, IntegerField
+from django.db.models import OuterRef, Subquery, ExpressionWrapper, F, IntegerField, Count
 
 
 class GrecoListView(ListView):
@@ -27,6 +27,10 @@ class GrecoListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        reco_list = (Greco.objects.all().values('reco_type').annotate(reco_count=Count('reco_type')).
+                     order_by('reco_count'))
+
+        context["reco_list"] = reco_list
         return context
 
 
@@ -61,7 +65,7 @@ class GrecoRefreshView(View):
     fr_buy = {}
     fr_hold = {}
     fr_enabled = {}
-    isin_industry = {}
+    isin_industry_dict = {}
     debug_level = 1
 
     def get(self, request):
@@ -244,7 +248,7 @@ class GrecoRefreshView(View):
             if amfi_obj:
                 if debug_level > 1:
                     print(amfi_obj.nse_symbol)
-                if tl.isin == 'INE745G01035':
+                if tl.tl_isin == 'INE745G01035':
                     print('nse symbol', amfi_obj.nse_symbol)
                 if amfi_obj.nse_symbol != '':
                     _, created = Greco.objects.update_or_create(

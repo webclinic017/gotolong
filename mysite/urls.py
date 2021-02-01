@@ -24,14 +24,16 @@ from django.views.generic import TemplateView
 from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, AmfiMissingView, amfi_upload
 from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
 
+from django_gotolong.corpact.views import CorpactListView, corpact_upload
+
 from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, DematSumTickerView, DematSumAmountView, \
     DematSumCapTypeView, DematSumRecoView, dematsum_upload
 from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
     DematTxnStatBuySellView, demattxn_upload
 
-from django_gotolong.dividend.views import DividendListView
-from django_gotolong.dividend.views import DividendYearArchiveView, DividendMonthArchiveView, DividendAmountView, \
-    DividendFrequencyView
+from django_gotolong.bstmtdiv.views import BstmtDivListView, bstmtdiv_upload
+from django_gotolong.bstmtdiv.views import BstmtDivYearArchiveView, BstmtDivMonthArchiveView, BstmtDivAmountView, \
+    BstmtDivFrequencyView
 
 from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
 from django_gotolong.fratio.views import FratioListView
@@ -39,13 +41,13 @@ from django_gotolong.greco.views import GrecoListView, GrecoRefreshView
 from django_gotolong.gweight.views import GweightListView
 from django_gotolong.isin.views import IsinListView, IsinIndustryView
 from django_gotolong.nach.views import NachListView
-from django_gotolong.phealth.views import PhealthListView, PhealthListView_CSV
+from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy, PhealthListView_Sale
 from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
 
 from django_gotolong.uploaddoc import views
 
 urlpatterns = [
-                  path('', PhealthListView.as_view(), name='index'),
+                  path('', PhealthListView_All.as_view(), name='index'),
                   path('admin/', admin.site.urls),
                   path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
                   path('amfi/upload/', amfi_upload, name='amfi-upload'),
@@ -55,6 +57,19 @@ urlpatterns = [
                   path('bhav/list/', BhavListView.as_view(), name='bhav-list'),
                   path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
                   path('bhav/upload/', bhav_upload, name='bhav-upload'),
+                  path('bstmtdiv/list/', BstmtDivListView.as_view(), name='bstmtdiv-list'),
+                  path('bstmtdiv/list/<str:year>/', BstmtDivYearArchiveView.as_view(),
+                       name='bstmtdiv_archive_year'),
+                  path('bstmtdiv/list/<int:year>/<int:month>/',
+                       BstmtDivMonthArchiveView.as_view(month_format='%m'),
+                       name='bstmtdiv_archive_month_numeric'),
+                  path('bstmtdiv/list/<int:year>/<str:month>/', BstmtDivMonthArchiveView.as_view(),
+                       name='bstmtdiv_archive_month'),
+                  path('bstmtdiv/amount/', BstmtDivAmountView.as_view(),
+                       name='bstmtdiv-amount-list'),
+                  path('bstmtdiv/frequency/', BstmtDivFrequencyView.as_view(),
+                       name='bstmtdiv-frequency-list'),
+                  path('bstmtdiv/upload/', bstmtdiv_upload, name='bstmt-upload'),
                   path('demat/sum/list/', DematSumListView.as_view(), name='dematsum-list'),
                   path('demat/sum/upload/', dematsum_upload, name='dematsum-upload'),
                   path('demat/sum/ticker/', DematSumTickerView.as_view(), name='dematsum-ticker-list'),
@@ -69,14 +84,9 @@ urlpatterns = [
                        name='demattxn-stat-buysell-list'),
                   path('demat/txn/upload/', demattxn_upload, name='demattxn-upload'),
                   path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
-                  path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
-                  path('dividend/list/<str:year>/', DividendYearArchiveView.as_view(), name='dividend_archive_year'),
-                  path('dividend/list/<int:year>/<int:month>/', DividendMonthArchiveView.as_view(month_format='%m'),
-                       name='dividend_archive_month_numeric'),
-                  path('dividend/list/<int:year>/<str:month>/', DividendMonthArchiveView.as_view(),
-                       name='dividend_archive_month'),
-                  path('dividend/amount/', DividendAmountView.as_view(), name='dividend-amount-list'),
-                  path('dividend/frequency/', DividendFrequencyView.as_view(), name='dividend-frequency-list'),
+                  path('corpact/list/', CorpactListView.as_view(), name='corpact-list'),
+                  path('corpact/upload/', corpact_upload, name='corpact-upload'),
+
                   path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
                   path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
                   path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
@@ -92,8 +102,9 @@ urlpatterns = [
                   path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
                   path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
                   path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
-                  path('phealth/list/', PhealthListView.as_view(), name='phealth-list'),
-                  path('phealth/list/csv/', PhealthListView_CSV.as_view(), name='phealth-list-csv'),
+                  path('phealth/list/all/', PhealthListView_All.as_view(), name='phealth-list-all'),
+                  path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
+                  path('phealth/list/sale/', PhealthListView_Sale.as_view(), name='phealth-list-sale'),
                   path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
                   path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
                   path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),

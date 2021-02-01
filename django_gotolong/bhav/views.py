@@ -15,10 +15,9 @@ import csv
 import io
 
 from datetime import date, timedelta
+import pandas as pd
 
 from django_gotolong.bhav.models import Bhav
-
-import pandas as pd
 
 
 class BhavListView(ListView):
@@ -83,14 +82,32 @@ def bhav_fetch(request):
     io_string = io.StringIO(data_set)
     next(io_string)
     print('first record', io_string)
+    skipped_records = 0
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
-        column[0] = column[0].strip()
+        bhav_ticker = column[0].strip()
+        bhav_series = column[1].strip()
+        bhav_open = column[2].strip()
+        bhav_high = column[3].strip()
+        bhav_low = column[4].strip()
+        bhav_close = column[5].strip()
+        bhav_last = column[6].strip()
+        bhav_prevclose = column[7].strip()
+        bhav_tottrdqty = column[8].strip()
+        bhav_tottrdval = column[9].strip()
+        bhav_timestamp = column[10].strip()
+        bhav_totaltrades = column[11].strip()
+        bhav_isin = column[12].strip()
 
-        _, created = Bhav.objects.update_or_create(
-            bhav_ticker=column[0],
-            bhav_price=column[6],
-            bhav_isin=column[12]
-        )
+        if bhav_series == 'EQ':
+            _, created = Bhav.objects.update_or_create(
+                bhav_ticker=bhav_ticker,
+                bhav_price=bhav_last,
+                bhav_isin=bhav_isin
+            )
+        else:
+            skipped_records += 1
+
+    print('Skipped records ', skipped_records)
     print('Completed updating Bhav data')
     # context = {}
     # render(request, template, context)
@@ -121,7 +138,7 @@ def bhav_upload(request):
     req_file = request.FILES['file']
 
     # let's check if it is a csv file
-
+    skipped_records = 0
     if req_file.name.endswith('.xls') or req_file.name.endswith('.xlsx'):
         # get worksheet name
         # print('temporary file path:', req_file.temporary_file_path)
@@ -198,15 +215,36 @@ def bhav_upload(request):
     next(io_string)
 
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
-        column[0] = column[0].strip()
+        bhav_ticker = column[0].strip()
+        bhav_series = column[1].strip()
+        bhav_open = column[2].strip()
+        bhav_high = column[3].strip()
+        bhav_low = column[4].strip()
+        bhav_close = column[5].strip()
+        bhav_last = column[6].strip()
+        bhav_prevclose = column[7].strip()
+        bhav_tottrdqty = column[8].strip()
+        bhav_tottrdval = column[9].strip()
+        bhav_timestamp = column[10].strip()
+        bhav_totaltrades = column[11].strip()
+        bhav_isin = column[12].strip()
 
-        _, created = Bhav.objects.update_or_create(
-            bhav_ticker=column[0],
-            bhav_price=column[6],
-            bhav_isin=column[12]
-        )
+        # skip some rows
+        # retail investors series : EQ and BE
+        # EQ - intra day trade allowed (normal trading)
+        # BE - trade to trade/T-segment : (no intra day squaring allowed : (accept/give delivery)
+        if bhav_series == 'EQ':
+            _, created = Bhav.objects.update_or_create(
+                bhav_ticker=bhav_ticker,
+                bhav_price=bhav_last,
+                bhav_isin=bhav_isin
+            )
+        else:
+            skipped_records += 1
+
     # context = {}
     # render(request, template, context)
+    print('skipped records: ', skipped_records)
     print('Completed loading new Bhav data')
     return HttpResponseRedirect(reverse("bhav-list"))
 

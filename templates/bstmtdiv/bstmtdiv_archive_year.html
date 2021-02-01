@@ -1,5 +1,5 @@
 {% include "top.html" %}
-{% include "user_top.html" %}
+{% include "bstmtdiv_top.html" %}
 
 <h1>Dividend Archive Year List </h1>
 
@@ -60,7 +60,7 @@
 {% if forloop.first %}
 
 
-<a href=/dividend/list/> Go Up </a>
+<a href=/bstmtdiv/list/> Go Up </a>
 
 <br>
 
@@ -68,7 +68,7 @@ Monthly Archive :
 
 {% endif %}
 
-<a href=/dividend/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+<a href=/bstmtdiv/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
 {% endfor %}
 
 
@@ -83,29 +83,17 @@ Monthly Archive :
         <td>
             Amount
         </td>
-        <td>
-            Ticker
-        </td>
-        <td>
-            ISIN
-        </td>
     </tr>
     {% for dividend_row in object_list %}
     <tr>
         <td>
-            {{ dividend_row.div_date }}
+            {{ dividend_row.bsdiv_date }}
         </td>
         <td>
-            {{ dividend_row.remarks }}
+            {{ dividend_row.bsdiv_remarks }}
         </td>
         <td>
-            {{ dividend_row.amount }}
-        </td>
-        <td>
-            {{ dividend_row.ticker }}
-        </td>
-        <td>
-            {{ dividend_row.isin }}
+            {{ dividend_row.bsdiv_amount }}
         </td>
 
     </tr>

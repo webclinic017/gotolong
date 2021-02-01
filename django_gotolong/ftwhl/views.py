@@ -210,23 +210,32 @@ def ftwhl_upload(request):
     next(io_string)
     next(io_string)
 
+    skip_records = 0
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
-        column[0] = column[0].strip()
-        # ignore column[1] Series : EQ
-        column[2] = column[2].strip()
-        column[3] = column[3].strip()
-        column[4] = column[4].strip()
-        column[5] = column[5].strip()
+        ftwhl_ticker = column[0].strip()
+        ftwhl_series = column[1].strip()
+        ftwhl_high = column[2].strip()
+        ftwhl_high_dt = column[3].strip()
+        ftwhl_low = column[4].strip()
+        ftwhl_low_dt = column[5].strip()
 
-        _, created = Ftwhl.objects.update_or_create(
-            ftwhl_ticker=column[0],
-            ftwhl_high=column[2],
-            ftwhl_high_dt=column[3],
-            ftwhl_low=column[4],
-            ftwhl_low_dt=column[5]
-        )
+        # skip some rows
+        # retail investors series : EQ and BE
+        # EQ - intra day trade allowed (normal trading)
+        # BE - trade to trade/T-segment : (no intra day squaring allowed : (accept/give delivery)
+        if ftwhl_series == 'EQ':
+            _, created = Ftwhl.objects.update_or_create(
+                ftwhl_ticker=ftwhl_ticker,
+                ftwhl_high=ftwhl_high,
+                ftwhl_high_dt=ftwhl_high_dt,
+                ftwhl_low=ftwhl_low,
+                ftwhl_low_dt=ftwhl_low_dt
+            )
+        else:
+            skip_records += 1
     # context = {}
     # render(request, template, context)
+    print('Skipped records', skip_records)
     print('Completed loading new Ftwhl data')
     return HttpResponseRedirect(reverse("ftwhl-list"))
 

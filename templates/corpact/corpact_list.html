@@ -1,0 +1,77 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>Corpact List </h1>
+
+<br>
+
+<form action="/corpact/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="files1"> Upload files</label>
+    <input type="file" id="files1" name="files" multiple>
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+<br>
+
+<table>
+    {% if object_list %}
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            ca_ticker
+        </td>
+        <td>
+            ca_total
+        </td>
+        <td>
+            ca_bonus
+        </td>
+        <td>
+            ca_buyback
+        </td>
+        <td>
+            ca_dividend
+        </td>
+    </tr>
+
+
+    {% for ca_row in object_list %}
+    <tr>
+        <td>
+            {{ ca_row.ca_ticker }}
+        </td>
+        <td>
+            {{ ca_row.ca_total }}
+        </td>
+        <td>
+            {{ ca_row.ca_bonus }}
+        </td>
+        <td>
+            {{ ca_row.ca_buyback }}
+        </td>
+        <td>
+            {{ ca_row.ca_dividend }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td> No corpact yet.</td>
+    </tr>
+    {% endfor %}
+
+    {% else %}
+
+    <tr>
+        <td> No objects</td>
+    </tr>
+    {% endif %}
+
+</table>
+
+{% include "bottom.html" %}

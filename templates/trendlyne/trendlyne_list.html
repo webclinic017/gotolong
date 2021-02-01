@@ -7,8 +7,8 @@
 
 <form action="/trendlyne/upload/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <label for="file1"> Upload a file</label>
-    <input type="file" id="file1" name="file">
+    <label for="files1"> Upload files</label>
+    <input type="file" id="files1" name="files" multiple>
     <small>Only accepts CSV/XLS/XLSX files</small>
     <button type="submit">Upload</button>
 </form>

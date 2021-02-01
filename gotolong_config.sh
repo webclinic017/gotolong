@@ -18,9 +18,11 @@ export PYTHONPATH=${PKG_ROOT}:${PROJ_SCRIPTS_LOC}:.:
 # set DATABASE_URL for django
 # check django/mysite/settings.py
 # export DATABASE_URL=mysql://USER:PASSWORD@HOST:PORT/NAME
-export DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
 # postgres://USER:PASSWORD@HOST:PORT/NAME
-export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+
+export DATABASE_URL=${MY_DATABASE_URL}
 
 # set the home : contains variable data : to be used by the package by user
 export GOTOLONG_DATA=$PROJECT_ROOT/data

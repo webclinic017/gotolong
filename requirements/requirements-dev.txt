@@ -19,9 +19,12 @@ prettytable
 psycopg2
 python-dateutil
 pytz
+pyexcel
+pyexcel-xls
 requests
 six
 sqlparse
+xlrd
 urllib3
 wcwidth
 whitenoise

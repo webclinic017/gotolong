@@ -1,8 +1,26 @@
 {% include "top.html" %}
-{% include "user_top.html" %}
+{% include "bstmtdiv_top.html" %}
 
 <h1>Dividend </h1>
 
+<form action="/bstmtdiv/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label for="bank">Choose a Bank:</label>
+
+    <select id="bank" name="bank">
+        <option value="icici">ICICI</option>
+        <option value="sbi">SBI</option>
+        <option value="hdfc">HDFC</option>
+        <option value="axis">Axis</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="files1"> Upload files</label>
+    <input type="file" id="files1" name="files" multiple>
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
 
 Total Dividend: {{ total_amount }}
 
@@ -94,7 +112,7 @@ Annual and Monthly Distribution
 Dividend Archives :
 
 {% for year in year_list %}
-<a href=/dividend/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
+<a href=/bstmtdiv/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
 {% endfor %}
 
 <br>
@@ -110,29 +128,17 @@ Dividend Archives :
         <td>
             Amount
         </td>
-        <td>
-            Ticker
-        </td>
-        <td>
-            ISIN
-        </td>
     </tr>
     {% for dividend_row in object_list %}
     <tr>
         <td>
-            {{ dividend_row.div_date }}
+            {{ dividend_row.bsdiv_date }}
         </td>
         <td>
-            {{ dividend_row.remarks }}
+            {{ dividend_row.bsdiv_remarks }}
         </td>
         <td>
-            {{ dividend_row.amount }}
-        </td>
-        <td>
-            {{ dividend_row.ticker }}
-        </td>
-        <td>
-            {{ dividend_row.isin }}
+            {{ dividend_row.bsdiv_amount }}
         </td>
 
     </tr>

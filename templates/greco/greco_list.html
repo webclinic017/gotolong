@@ -13,6 +13,14 @@
 <br/>
 <br/>
 Number of object: {{ object_list|length }}
+<br/>
+
+{% for reco_row in reco_list %}
+{{ reco_row.reco_type }} : {{ reco_row.reco_count }}
+<br/>
+{% endfor %}
+
+<br/>
 
 <table>
 

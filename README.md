@@ -7,16 +7,27 @@ It relies on
 (a) Financial data (last 10 year) of Top 500 (BSE-500/Nifty-500) stocks
 
 (b) investor's existing portfolio of stocks
- 
+
 It is still in Beta phase and developers can experiment with it. Once it can be used by any user with basic knowledge of
 computer, it will be tagged as v1.0
-
-## Support
-http://www.gotolong.in/
 
 ## Repository
 
 git clone https://github.com/surinder432/gotolong
+
+## Heroku Deployment
+
+On Heroku, the clone of repository can be connected using github.
+
+Attach postgresql database to the heroku app.
+
+heroku login heroku addons:create heroku-postgresql:hobby-dev heroku pg:info heroku pg:credentials:url DATABASE heroku
+config gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+
+To reset the database in PostgreSQL heroku login heroku pg:reset --app <appname>
+gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+
+##  
 
 ## Quick Installation - steps
 

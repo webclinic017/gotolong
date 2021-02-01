@@ -25,7 +25,7 @@ mkdir -p ${OUTPUT_DIR}
 #
 # -1 -> suppresses column 1 (unique to file1)
 # -2 -> suppresses column 2 (unique to file2)
-# -3 -> suppresses column 3 (common to both file1 and file2)
+# -3 -> suppresses column 3 (comutil to both file1 and file2)
 
 # display only unique values present in file 1 (column 1)
 # suppress column 2 and column 3

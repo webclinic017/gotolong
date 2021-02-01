@@ -241,11 +241,11 @@ DROP TABLE IF EXISTS `global_corpact`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `global_corpact` (
-  `security_name` text DEFAULT NULL,
-  `total_score` int(11) DEFAULT NULL,
-  `bonus_score` int(11) DEFAULT NULL,
-  `buyback_score` int(11) DEFAULT NULL,
-  `dividend_score` int(11) DEFAULT NULL
+  `ca_ticker` text DEFAULT NULL,
+  `ca_total` int(11) DEFAULT NULL,
+  `ca_bonus` int(11) DEFAULT NULL,
+  `ca_buyback` int(11) DEFAULT NULL,
+  `ca_dividend` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -427,6 +427,22 @@ CREATE TABLE `screener` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `user_bstmt_div`
+--
+
+DROP TABLE IF EXISTS `user_bstmt_div`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_bstmt_div` (
+  `bsdiv_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bsdiv_date` date DEFAULT NULL,
+  `bsdiv_remarks` text DEFAULT NULL,
+  `bsdiv_amount` float DEFAULT NULL,
+  UNIQUE KEY `id` (`bsdiv_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=210623 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `user_demat_sum`
 --
 
@@ -480,24 +496,6 @@ CREATE TABLE `user_demat_txn` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `user_dividend`
---
-
-DROP TABLE IF EXISTS `user_dividend`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_dividend` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `div_date` date DEFAULT NULL,
-  `remarks` text DEFAULT NULL,
-  `amount` text DEFAULT NULL,
-  `ticker` text DEFAULT NULL,
-  `isin` text DEFAULT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=210623 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `user_doc`
 --
 
@@ -537,4 +535,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-19 17:54:45
+-- Dump completed on 2021-02-01 22:13:39

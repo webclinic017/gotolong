@@ -1,18 +1,18 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| user_demat_txn             |       1482 |
-| user_dividend              |       1090 |
+| global_corpact             |       2164 |
+| user_demat_txn             |       1501 |
+| global_bhav                |       1454 |
+| global_ftwhl               |       1323 |
+| user_bstmt_div             |       1246 |
 | global_amfi                |       1000 |
 | global_isin                |        501 |
 | screener                   |        498 |
-| global_ftwhl               |        483 |
-| global_bhav                |        483 |
-| global_corpact             |        421 |
-| global_reco                |        382 |
 | global_trendlyne           |        382 |
+| global_reco                |        374 |
 | plan                       |        354 |
-| user_demat_sum             |        260 |
+| user_demat_sum             |        263 |
 | user_weight                |        246 |
 | global_nach                |        177 |
 | auth_permission            |         40 |
