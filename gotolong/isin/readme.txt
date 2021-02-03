@@ -3,6 +3,10 @@
 1> NSE 
 Download following
 
+New URL
+https://archives.nseindia.com/content/indices/ind_nifty500list.csv
+
+Old URL
 https://www.nseindia.com/content/indices/ind_nifty500list.csv
 https://www1.nseindia.com/content/indices/ind_nifty500list.csv
 

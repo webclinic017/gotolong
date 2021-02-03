@@ -8,11 +8,13 @@ from django.views import View
 from django.urls import reverse
 
 from django_gotolong.amfi.models import Amfi
-from django_gotolong.isin.models import Isin
+from django_gotolong.indices.models import Indices
 from django_gotolong.fratio.models import Fratio
 from django_gotolong.trendlyne.models import Trendlyne
 from django_gotolong.gweight.models import Gweight
 from django_gotolong.greco.models import Greco
+
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 from django.db.models import OuterRef, Subquery, ExpressionWrapper, F, IntegerField, Count
 
@@ -211,12 +213,12 @@ class GrecoRefreshView(View):
             self.fr_hold[fr.fratio_name] = fr.fratio_hold
             self.fr_enabled[fr.fratio_name] = fr.fratio_enabled
 
-        for isin in Isin.objects.all():
+        for ind in Indices.objects.all():
             # strip unwanted new line
-            isin.comp_isin = isin.comp_isin.rstrip()
+            ind.ind_isin = ind.ind_isin.rstrip()
             if debug_level > 1:
-                print(isin.comp_isin, isin.comp_industry)
-            self.isin_industry_dict[isin.comp_isin] = isin.comp_industry
+                print(ind.ind_isin, ind.ind_industry)
+            self.isin_industry_dict[ind.ind_isin] = ind.ind_industry
 
         # breakpoint()
 
@@ -240,7 +242,7 @@ class GrecoRefreshView(View):
             if debug_level > 1:
                 print(tl.tl_stock_name, tl.tl_isin, reco_type, reco_cause)
 
-            # isin_obj = Isin.objects.get(comp_isin=tl.isin)
+            # isin_obj = Indices.objects.get(comp_isin=tl.isin)
             # print(isin_obj.comp_ticker)
 
             # to avoid DoesNotExist exception
@@ -259,5 +261,6 @@ class GrecoRefreshView(View):
                     )
             else:
                 print('amfi obj failed for isin', tl.tl_isin, 'stock_name', tl.tl_stock_name)
-        # context = {}
-        # render(request, template, context)
+
+        # Updated Greco objects
+        lastrefd_update("greco")

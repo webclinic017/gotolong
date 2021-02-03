@@ -2,19 +2,20 @@
 
 # Create your views here.
 
+# Create your views here.
+
 from django.views.generic.list import ListView
 
-# from django_filters.rest_framework import DjangoFilterBackend, FilterSet, OrderingFilter
+from django_gotolong.lastrefd.models import Lastrefd
 
-from django_gotolong.nach.models import Nach
 
-class NachListView(ListView):
-    model = Nach
+class LastrefdListView(ListView):
+    model = Lastrefd
     # if pagination is desired
     # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
+    # filter_backends = [filters.OrderingLastrefd,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Nach.objects.all()
+    queryset = Lastrefd.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

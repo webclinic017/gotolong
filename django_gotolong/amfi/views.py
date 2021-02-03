@@ -22,6 +22,9 @@ from django_gotolong.amfi.models import Amfi
 from django_gotolong.dematsum.models import DematSum
 from django_gotolong.gweight.models import Gweight
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
+
 class AmfiListView(ListView):
     model = Amfi
     # if pagination is desired
@@ -192,8 +195,9 @@ def amfi_upload(request):
             avg_mcap=column[5],
             cap_type=column[6]
         )
-    # context = {}
-    # render(request, template, context)
+
+    lastrefd_update("amfi")
+
     print('Completed loading new Amfi data')
     return HttpResponseRedirect(reverse("amfi-list"))
 

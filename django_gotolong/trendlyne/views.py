@@ -11,6 +11,7 @@ from datetime import date, timedelta
 import pandas as pd
 
 from django_gotolong.trendlyne.models import Trendlyne
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 
 class TrendlyneListView(ListView):
@@ -200,8 +201,9 @@ def trendlyne_upload(request):
                 tl_low_3y=tl_low_3y,
                 tl_low_5y=tl_low_5y
             )
-    # context = {}
-    # render(request, template, context)
+
+    lastrefd_update("trendlyne")
+
     print('Completed loading new Trendlyne data')
     return HttpResponseRedirect(reverse("trendlyne-list"))
 

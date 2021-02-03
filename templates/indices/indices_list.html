@@ -1,0 +1,77 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>Indices </h1>
+
+<a href="/indices/list/"> Indices List </a> | <a href="/indices/industry/"> Industries </a>
+
+<br>
+
+Click here to <a href="/indices/fetch/"> Fetch Indices Data directly from NSE site </a>
+<br>
+{{ refresh_url }}
+<br>
+<form action="/indices/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+<br>
+
+Industries Count : {{industries_count}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Company Name
+        </td>
+        <td>
+            Company Industry
+        </td>
+        <td>
+            Company Ticker
+        </td>
+        <td>
+            Company ISIN
+        </td>
+    </tr>
+    {% for ind_row in object_list %}
+    <tr>
+        <td>
+            {{ ind_row.ind_name }}
+        </td>
+        <td>
+            {{ ind_row.ind_industry }}
+        </td>
+        <td>
+            {{ ind_row.ind_ticker }}
+        </td>
+        <td>
+            {{ ind_row.ind_isin }}
+        </td>
+        <td>
+            {{ ind_row.ind_count }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No Indices yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

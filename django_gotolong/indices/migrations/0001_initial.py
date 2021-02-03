@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Isin',
+            name='Indices',
             fields=[
                 ('comp_name', models.TextField(primary_key=True, serialize=False)),
                 ('comp_industry', models.TextField(blank=True, null=True)),

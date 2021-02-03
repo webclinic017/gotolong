@@ -1,0 +1,34 @@
+{% include "top.html" %}
+
+<h1> Last Refresh Date List </h1>
+
+<table>
+    <tr>
+        <td>
+            lastrefd_module
+        </td>
+        <td>
+            lastrefd_date
+        </td>
+        <td>
+            Refresh Gap (Derived)
+        </td>
+    </tr>
+    {% for lastrefd_row in object_list %}
+    <tr>
+        <td>
+            {{ lastrefd_row.lastrefd_module }}
+        </td>
+        <td>
+            {{ lastrefd_row.lastrefd_date }}
+        </td>
+        <td>
+            {{ lastrefd_row.lastrefd_date |timesince }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No lastrefd yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

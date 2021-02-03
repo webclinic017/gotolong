@@ -18,6 +18,8 @@ from django.contrib import messages
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
 
 class DematTxnListView(ListView):
     model = DematTxn
@@ -248,6 +250,9 @@ def demattxn_upload(request):
         )
     # context = {}
     # render(request, template, context)
+    #
+    lastrefd_update("demattxn")
+    #
     print('Completed loading new DematTxn data')
     return HttpResponseRedirect(reverse("demattxn-list"))
 

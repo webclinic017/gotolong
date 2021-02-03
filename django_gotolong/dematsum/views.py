@@ -17,6 +17,8 @@ from django.contrib import messages
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
 
 class DematSumListView(ListView):
     model = DematSum
@@ -253,6 +255,8 @@ def dematsum_upload(request):
         )
     # context = {}
     # render(request, template, context)
+    lastrefd_update("dematsum")
+    #
     print('Completed loading new Dematsum data')
     return HttpResponseRedirect(reverse("dematsum-list"))
 

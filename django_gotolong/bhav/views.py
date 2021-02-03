@@ -19,6 +19,7 @@ import pandas as pd
 
 from django_gotolong.bhav.models import Bhav
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 class BhavListView(ListView):
     model = Bhav
@@ -107,10 +108,14 @@ def bhav_fetch(request):
         else:
             skipped_records += 1
 
+    lastrefd_update("bhav")
+
     print('Skipped records ', skipped_records)
     print('Completed updating Bhav data')
     # context = {}
     # render(request, template, context)
+
+    #
     return HttpResponseRedirect(reverse("bhav-list"))
 
 
@@ -244,6 +249,9 @@ def bhav_upload(request):
 
     # context = {}
     # render(request, template, context)
+    lastrefd_update("bhav")
+    #
+
     print('skipped records: ', skipped_records)
     print('Completed loading new Bhav data')
     return HttpResponseRedirect(reverse("bhav-list"))

@@ -14,6 +14,8 @@ import re
 
 from django_gotolong.corpact.models import Corpact
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
 
 class CorpactListView(ListView):
     model = Corpact
@@ -241,6 +243,8 @@ def corpact_upload(request):
         )
     # context = {}
     # render(request, template, context)
+    lastrefd_update("corpact")
+    #
     print('Completed loading new Corpact data')
     return HttpResponseRedirect(reverse("corpact-list"))
 

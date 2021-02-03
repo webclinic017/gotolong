@@ -22,7 +22,11 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, AmfiMissingView, amfi_upload
+
 from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
+from django_gotolong.bstmtdiv.views import BstmtDivListView, bstmtdiv_upload
+from django_gotolong.bstmtdiv.views import BstmtDivYearArchiveView, BstmtDivMonthArchiveView, BstmtDivAmountView, \
+    BstmtDivFrequencyView
 
 from django_gotolong.corpact.views import CorpactListView, corpact_upload
 
@@ -31,17 +35,18 @@ from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, D
 from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
     DematTxnStatBuySellView, demattxn_upload
 
-from django_gotolong.bstmtdiv.views import BstmtDivListView, bstmtdiv_upload
-from django_gotolong.bstmtdiv.views import BstmtDivYearArchiveView, BstmtDivMonthArchiveView, BstmtDivAmountView, \
-    BstmtDivFrequencyView
-
 from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
 from django_gotolong.fratio.views import FratioListView
 from django_gotolong.greco.views import GrecoListView, GrecoRefreshView
 from django_gotolong.gweight.views import GweightListView
-from django_gotolong.isin.views import IsinListView, IsinIndustryView
+
+from django_gotolong.indices.views import IndicesListView, IndicesIndustryView
+from django_gotolong.indices.views import Indices_fetch, Indices_upload
+
+from django_gotolong.lastrefd.views import LastrefdListView
 from django_gotolong.nach.views import NachListView
-from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy, PhealthListView_Sale
+from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy
+from django_gotolong.phealth.views import PhealthListView_Sale, PhealthListView_Hold
 from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
 
 from django_gotolong.uploaddoc import views
@@ -94,8 +99,11 @@ urlpatterns = [
                   path('greco/list/', GrecoListView.as_view(), name='greco-list'),
                   path('greco/refresh/', GrecoRefreshView.as_view(), name='greco-refresh'),
                   path('gweight/list/', GweightListView.as_view(), name='gweight-list'),
-                  path('isin/list/', IsinListView.as_view(), name='isin-list'),
-                  path('isin/industry/', IsinIndustryView.as_view(), name='isin-industry-list'),
+                  path('indices/list/', IndicesListView.as_view(), name='indices-list'),
+                  path('indices/industry/', IndicesIndustryView.as_view(), name='indices-industry-list'),
+                  path('indices/fetch/', Indices_fetch, name='indices-fetch'),
+                  path('indices/upload/', Indices_upload, name='indices-upload'),
+                  path('lastrefd/list/', LastrefdListView.as_view(), name='lastrefd-list'),
                   path('nach/list/', NachListView.as_view(), name='nach-list'),
                   path('page/about/', TemplateView.as_view(template_name="about.html")),
                   path('page/global-data/', TemplateView.as_view(template_name="global_data.html")),
@@ -104,6 +112,7 @@ urlpatterns = [
                   path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
                   path('phealth/list/all/', PhealthListView_All.as_view(), name='phealth-list-all'),
                   path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
+                  path('phealth/list/hold/', PhealthListView_Hold.as_view(), name='phealth-list-hold'),
                   path('phealth/list/sale/', PhealthListView_Sale.as_view(), name='phealth-list-sale'),
                   path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
                   path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),

@@ -11,7 +11,6 @@ from django.views.generic.list import ListView
 
 from django_gotolong.fratio.models import Fratio
 
-
 class FratioListView(ListView):
     model = Fratio
     # if pagination is desired

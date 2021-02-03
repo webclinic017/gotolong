@@ -10,6 +10,8 @@ from django.views.generic.dates import YearArchiveView, MonthArchiveView
 
 from django_gotolong.bstmtdiv.models import BstmtDiv
 
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
 import pandas as pd
 import csv, io
 # works only with .xlsx
@@ -399,6 +401,9 @@ def bstmtdiv_upload(request):
             )
     # context = {}
     # render(request, template, context)
+    #
+    lastrefd_update("bstmtdiv")
+    #
     print('Completed loading new BstmtDiv data')
     return HttpResponseRedirect(reverse("bstmtdiv-list"))
 
