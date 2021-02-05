@@ -17,6 +17,10 @@ git clone https://github.com/surinder432/gotolong
 
 ## Heroku Deployment
 
+Check Sample demployment (maybe bit older)
+
+https://gotolong.herokuapp.com/
+
 On Heroku, the clone of repository can be connected using github.
 
 Attach postgresql database to the heroku app.
