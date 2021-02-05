@@ -12,8 +12,10 @@ import pandas as pd
 import traceback
 import re
 
+from django_gotolong.amfi.models import Amfi, amfi_load_rank
+from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
+from django_gotolong.comm.func import comm_func_ticker_match
 from django_gotolong.corpact.models import Corpact
-
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 
@@ -43,7 +45,10 @@ def corpact_upload(request):
     #
     # breakpoint()
 
+    amfi_rank_dict = {}
+    dematsum_list = []
     debug_level = 1
+
     # declaring template
     template = "corpact/corpact_list.html"
     data = Corpact.objects.all()
@@ -51,6 +56,13 @@ def corpact_upload(request):
     # GET request returns the value of the data with the specified key.
     if request.method == "GET":
         return render(request, template)
+
+    print("load amfi")
+    # load rank
+    amfi_load_rank(amfi_rank_dict)
+
+    print("load dematsum")
+    dematsum_load_stocks(dematsum_list)
 
     print('Deleted existing Corpact data for years: ')
     # delete existing records
@@ -234,13 +246,16 @@ def corpact_upload(request):
         ca_score[security_name, 'total'] = total_give_back
 
     for security_name in corp_act_stock_list:
-        _, created = Corpact.objects.update_or_create(
-            ca_ticker=security_name,
-            ca_total=ca_score[security_name, 'total'],
-            ca_bonus=ca_score[security_name, 'bonus'],
-            ca_buyback=ca_score[security_name, 'buyback'],
-            ca_dividend=ca_score[security_name, 'dividend']
-        )
+        # only top 500 to meet heroku limits of total 10k rows
+        # also cover any additional non top 500 stocks holding
+        if comm_func_ticker_match(security_name, amfi_rank_dict, dematsum_list):
+            _, created = Corpact.objects.update_or_create(
+                ca_ticker=security_name,
+                ca_total=ca_score[security_name, 'total'],
+                ca_bonus=ca_score[security_name, 'bonus'],
+                ca_buyback=ca_score[security_name, 'buyback'],
+                ca_dividend=ca_score[security_name, 'dividend']
+            )
     # context = {}
     # render(request, template, context)
     lastrefd_update("corpact")

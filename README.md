@@ -31,15 +31,23 @@ heroku pg:credentials:url DATABASE
 
 heroku config
 
-gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+gotolong_db_schema_install.sh pgsql import "${DATABASE_URL}"
 
 To reset the database in PostgreSQL
 
-heroku login heroku pg:reset --app <appname>
+heroku login
 
-gotolong_db_schema_install.sh import_pgsql "${DATABASE_URL}"
+heroku pg:reset --confirm \<appname\> --app \<appname\>
 
-##    
+Local
+
+gotolong_db_schema_install.sh pgsql import "${PG_DATABASE_URL}"
+
+Remote
+
+gotolong_db_schema_install.sh pgsql import \`heroku config --app gotolong | grep DATABASE_URL | awk '{print $2}'`
+
+##     
 
 ## Quick Installation - steps
 

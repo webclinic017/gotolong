@@ -18,6 +18,9 @@ import io
 
 from django_gotolong.ftwhl.models import Ftwhl
 
+from django_gotolong.amfi.models import Amfi, amfi_load_rank
+from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
+from django_gotolong.comm.func import comm_func_ticker_match
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 
@@ -60,6 +63,16 @@ def ftwhl_fetch(request):
     # breakpoint()
 
     debug_level = 1
+    amfi_rank_dict = {}
+    dematsum_list = []
+
+    print("load amfi")
+    # load rank
+    amfi_load_rank(amfi_rank_dict)
+
+    print("load dematsum")
+    dematsum_load_stocks(dematsum_list)
+
     # declaring template
     template = "ftwhl/ftwhl_list.html"
     data = Ftwhl.objects.all()
@@ -98,13 +111,14 @@ def ftwhl_fetch(request):
         column[4] = column[4].strip()
         column[5] = column[5].strip()
 
-        _, created = Ftwhl.objects.update_or_create(
-            ftwhl_ticker=column[0],
-            ftwhl_high=column[2],
-            ftwhl_high_dt=column[3],
-            ftwhl_low=column[4],
-            ftwhl_low_dt=column[5]
-        )
+        if comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
+            _, created = Ftwhl.objects.update_or_create(
+                ftwhl_ticker=column[0],
+                ftwhl_high=column[2],
+                ftwhl_high_dt=column[3],
+                ftwhl_low=column[4],
+                ftwhl_low_dt=column[5]
+            )
 
     #
     lastrefd_update("Ftwhl")
@@ -132,6 +146,16 @@ def ftwhl_upload(request):
     # GET request returns the value of the data with the specified key.
     if request.method == "GET":
         return render(request, template)
+
+    amfi_rank_dict = {}
+    dematsum_list = []
+
+    print("load amfi")
+    # load rank
+    amfi_load_rank(amfi_rank_dict)
+
+    print("load dematsum")
+    dematsum_load_stocks(dematsum_list)
 
     req_file = request.FILES['file']
 
@@ -227,13 +251,14 @@ def ftwhl_upload(request):
         # EQ - intra day trade allowed (normal trading)
         # BE - trade to trade/T-segment : (no intra day squaring allowed : (accept/give delivery)
         if ftwhl_series == 'EQ':
-            _, created = Ftwhl.objects.update_or_create(
-                ftwhl_ticker=ftwhl_ticker,
-                ftwhl_high=ftwhl_high,
-                ftwhl_high_dt=ftwhl_high_dt,
-                ftwhl_low=ftwhl_low,
-                ftwhl_low_dt=ftwhl_low_dt
-            )
+            if comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
+                _, created = Ftwhl.objects.update_or_create(
+                    ftwhl_ticker=ftwhl_ticker,
+                    ftwhl_high=ftwhl_high,
+                    ftwhl_high_dt=ftwhl_high_dt,
+                    ftwhl_low=ftwhl_low,
+                    ftwhl_low_dt=ftwhl_low_dt
+                )
         else:
             skip_records += 1
     # context = {}

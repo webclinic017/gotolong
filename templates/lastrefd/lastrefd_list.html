@@ -1,5 +1,7 @@
 {% include "top.html" %}
 
+{% load humanize %}
+
 <h1> Last Refresh Date List </h1>
 
 <table>
@@ -23,7 +25,7 @@
             {{ lastrefd_row.lastrefd_date }}
         </td>
         <td>
-            {{ lastrefd_row.lastrefd_date |timesince }}
+            {{ lastrefd_row.lastrefd_date |naturaltime }}
         </td>
     </tr>
     {% empty %}

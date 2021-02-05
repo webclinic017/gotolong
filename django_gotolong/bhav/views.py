@@ -19,7 +19,12 @@ import pandas as pd
 
 from django_gotolong.bhav.models import Bhav
 
+from django_gotolong.amfi.models import Amfi, amfi_load_rank
+from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
+from django_gotolong.comm.func import comm_func_ticker_match
+
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
 
 class BhavListView(ListView):
     model = Bhav
@@ -60,6 +65,16 @@ def bhav_fetch(request):
     # breakpoint()
 
     debug_level = 1
+    amfi_rank_dict = {}
+    dematsum_list = []
+
+    print("load amfi")
+    # load rank
+    amfi_load_rank(amfi_rank_dict)
+
+    print("load dematsum")
+    dematsum_load_stocks(dematsum_list)
+
     # declaring template
     template = "bhav/bhav_list.html"
 
@@ -100,11 +115,12 @@ def bhav_fetch(request):
         bhav_isin = column[12].strip()
 
         if bhav_series == 'EQ':
-            _, created = Bhav.objects.update_or_create(
-                bhav_ticker=bhav_ticker,
-                bhav_price=bhav_last,
-                bhav_isin=bhav_isin
-            )
+            if comm_func_ticker_match(bhav_ticker, amfi_rank_dict, dematsum_list):
+                _, created = Bhav.objects.update_or_create(
+                    bhav_ticker=bhav_ticker,
+                    bhav_price=bhav_last,
+                    bhav_isin=bhav_isin
+                )
         else:
             skipped_records += 1
 
@@ -131,6 +147,8 @@ def bhav_upload(request):
     #
     # breakpoint()
 
+    amfi_rank_dict = {}
+    dematsum_list = []
     debug_level = 1
     # declaring template
     template = "bhav/bhav_list.html"
@@ -139,6 +157,13 @@ def bhav_upload(request):
     # GET request returns the value of the data with the specified key.
     if request.method == "GET":
         return render(request, template)
+
+    print("load amfi")
+    # load rank
+    amfi_load_rank(amfi_rank_dict)
+
+    print("load dematsum")
+    dematsum_load_stocks(dematsum_list)
 
     req_file = request.FILES['file']
 
@@ -239,11 +264,12 @@ def bhav_upload(request):
         # EQ - intra day trade allowed (normal trading)
         # BE - trade to trade/T-segment : (no intra day squaring allowed : (accept/give delivery)
         if bhav_series == 'EQ':
-            _, created = Bhav.objects.update_or_create(
-                bhav_ticker=bhav_ticker,
-                bhav_price=bhav_last,
-                bhav_isin=bhav_isin
-            )
+            if comm_func_ticker_match(bhav_ticker, amfi_rank_dict, dematsum_list):
+                _, created = Bhav.objects.update_or_create(
+                    bhav_ticker=bhav_ticker,
+                    bhav_price=bhav_last,
+                    bhav_isin=bhav_isin
+                )
         else:
             skipped_records += 1
 

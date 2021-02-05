@@ -130,6 +130,19 @@ CREATE TABLE `auth_user_user_permissions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `both_lastrefd`
+--
+
+DROP TABLE IF EXISTS `both_lastrefd`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `both_lastrefd` (
+  `lastrefd_module` varchar(50) DEFAULT NULL,
+  `lastrefd_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `django_admin_log`
 --
 
@@ -281,18 +294,18 @@ CREATE TABLE `global_ftwhl` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `global_isin`
+-- Table structure for table `global_indices`
 --
 
-DROP TABLE IF EXISTS `global_isin`;
+DROP TABLE IF EXISTS `global_indices`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `global_isin` (
-  `comp_name` text DEFAULT NULL,
-  `comp_industry` text DEFAULT NULL,
-  `comp_ticker` text DEFAULT NULL,
-  `series` text DEFAULT NULL,
-  `comp_isin` text DEFAULT NULL
+CREATE TABLE `global_indices` (
+  `ind_name` text DEFAULT NULL,
+  `ind_industry` text DEFAULT NULL,
+  `ind_ticker` text DEFAULT NULL,
+  `ind_series` text DEFAULT NULL,
+  `ind_isin` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -535,4 +548,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-01 22:13:39
+-- Dump completed on 2021-02-05 17:34:52

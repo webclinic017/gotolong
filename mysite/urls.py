@@ -30,6 +30,8 @@ from django_gotolong.bstmtdiv.views import BstmtDivYearArchiveView, BstmtDivMont
 
 from django_gotolong.corpact.views import CorpactListView, corpact_upload
 
+from django_gotolong.dbstat.views import DbstatListView
+
 from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, DematSumTickerView, DematSumAmountView, \
     DematSumCapTypeView, DematSumRecoView, dematsum_upload
 from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
@@ -75,6 +77,7 @@ urlpatterns = [
                   path('bstmtdiv/frequency/', BstmtDivFrequencyView.as_view(),
                        name='bstmtdiv-frequency-list'),
                   path('bstmtdiv/upload/', bstmtdiv_upload, name='bstmt-upload'),
+                  path('dbstat/list/', DbstatListView.as_view(), name='dbstat-list'),
                   path('demat/sum/list/', DematSumListView.as_view(), name='dematsum-list'),
                   path('demat/sum/upload/', dematsum_upload, name='dematsum-upload'),
                   path('demat/sum/ticker/', DematSumTickerView.as_view(), name='dematsum-ticker-list'),

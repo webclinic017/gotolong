@@ -1,0 +1,47 @@
+{% include "top.html" %}
+
+<h1>DB Stat List </h1>
+
+Number of rows inside DB : {{ db_rows }}
+
+<br>
+
+<br>
+
+{% if db_rows <= 10000 %}
+Within Heroku Free Limits: OK
+{% else %}
+EXCEEDED Heroku Free Limits
+{% endif %}
+
+<br>
+<br>
+
+<table>
+
+    <tr>
+        <td>
+            table name
+        </td>
+        <td>
+            table rows
+        </td>
+    </tr>
+
+
+    {% for key, value in db_stat.items|dictsortreversed:1 %}
+    <tr>
+        <td>
+            {{ key }}
+        </td>
+        <td>
+            {{ value }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No db_stat yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

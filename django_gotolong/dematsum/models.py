@@ -32,3 +32,8 @@ class DematSum(models.Model):
 
     class Meta:
         db_table = 'user_demat_sum'
+
+def dematsum_load_stocks(dematsum_list):
+    # load list of demat symbols
+    for dematsum in DematSum.objects.all():
+        dematsum_list.append(dematsum.stock_symbol)

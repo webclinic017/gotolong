@@ -14,3 +14,11 @@ class Amfi(models.Model):
 
     class Meta:
         db_table = 'global_amfi'
+
+
+def amfi_load_rank(amfi_rank_dict):
+    # load amfi ranks
+    for amfi in Amfi.objects.all():
+        amfi_rank_dict[amfi.nse_symbol] = amfi.comp_rank
+        if amfi.nse_symbol != amfi.bse_symbol:
+            amfi_rank_dict[amfi.bse_symbol] = amfi.comp_rank

@@ -1,14 +1,14 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| global_corpact             |       2164 |
 | user_demat_txn             |       1501 |
-| global_bhav                |       1454 |
-| global_ftwhl               |       1323 |
 | user_bstmt_div             |       1246 |
 | global_amfi                |       1000 |
-| global_isin                |        501 |
+| global_indices             |        499 |
 | screener                   |        498 |
+| global_ftwhl               |        485 |
+| global_bhav                |        485 |
+| global_corpact             |        451 |
 | global_trendlyne           |        382 |
 | global_reco                |        374 |
 | plan                       |        354 |
@@ -18,14 +18,15 @@
 | auth_permission            |         40 |
 | django_migrations          |         21 |
 | django_content_type        |         12 |
+| both_lastrefd              |          8 |
 | global_fratio              |          6 |
 | global_weight              |          3 |
 | django_session             |          3 |
+| auth_user_groups           |          0 |
 | auth_group_permissions     |          0 |
+| user_doc                   |          0 |
 | auth_user                  |          0 |
 | auth_user_user_permissions |          0 |
-| auth_group                 |          0 |
-| user_doc                   |          0 |
-| auth_user_groups           |          0 |
 | django_admin_log           |          0 |
+| auth_group                 |          0 |
 +----------------------------+------------+
