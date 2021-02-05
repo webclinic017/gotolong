@@ -2,7 +2,7 @@
 
 GotoLong is an Indian Stock Advisor (ISA) that can be used to identify stocks for buy and sale.
 
-It relies on 
+It relies on
 
 (a) Financial data (last 10 year) of Top 500 (BSE-500/Nifty-500) stocks
 
@@ -11,13 +11,69 @@ It relies on
 It is still in Beta phase and developers can experiment with it. Once it can be used by any user with basic knowledge of
 computer, it will be tagged as v1.0
 
-## Repository
+## Sample Deployment
+
+Check Sample deployment on heroku.
+
+https://gotolong.herokuapp.com/
+
+# Quick setup on local box
+
+## Clone repository
 
 git clone https://github.com/surinder432/gotolong
 
-## Heroku Deployment
+## Software  Pre-Req
 
-Check Sample demployment (maybe bit older)
+Download Python 3.*
+
+Download mariadb (for DB) - used mariadb10.4
+
+Download PostgreSQL (v13) - for validation with Heroku
+
+## Install Python packages
+
+pip -r requirements/requirements_full.txt
+
+## Configure DATABASE_URL
+
+Add following to ~/.profile
+
+export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+
+export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+
+export DATABASE_URL=$MY_DATABASE_URL
+
+## Create DB
+
+gotolong_db_schema_install.sh mysql create
+
+gotolong_db_schema_install.sh pgsql create
+
+## Import Sample Data
+
+gotolong_db_schema_install.sh mysql import
+
+gotolong_db_schema_install.sh pgsql import "${PG_DATABASE_URL}"
+
+## Start using App
+
+The django project is capable of browsing the data stored in 'gotolong' database.
+
+cd django_gotolong/
+
+python manage.py runserver
+
+Starting development server at http://127.0.0.1:8000/
+
+Use the following URL to access the stuff
+
+http://127.0.0.1:8000/
+
+# Heroku Deployment
+
+Check Sample deployment
 
 https://gotolong.herokuapp.com/
 
@@ -29,137 +85,13 @@ heroku login
 
 heroku addons:create heroku-postgresql:hobby-dev
 
-heroku pg:info
-
-heroku pg:credentials:url DATABASE
-
-heroku config
-
 gotolong_db_schema_install.sh pgsql import "${DATABASE_URL}"
-
-To reset the database in PostgreSQL
-
-heroku login
 
 heroku pg:reset --confirm \<appname\> --app \<appname\>
 
-Local
-
-gotolong_db_schema_install.sh pgsql import "${PG_DATABASE_URL}"
-
-Remote
-
 gotolong_db_schema_install.sh pgsql import \`heroku config --app gotolong | grep DATABASE_URL | awk '{print $2}'`
 
-##     
-
-## Quick Installation - steps
-
-Download *.whl and *.tar.gz from dist directory.
-
-1> Install Software
-
-pip install gotolong*.whl
-
-2> Install required data files
- 
-cd $HOME/gotolong-data
-
-tar -xvzf gotolong-data.tar.gz
-
-3> Add following to ~/.profile
-
-export GOTOLONG_DATA=$HOME/gotolong-data
-
-##  Software Installation Pre-Req
-
-### Installation - for end use
-
-Download Python 3.*
-
-Download mariadb (for DB) - used mariadb10.4
-
-Download PostgreSQL (v13) - for validation with Heroku
-
-Dev Env:
-
-pip -r requirements/requirements_full.txt
-
-Heroku Env:
-
-pip -r requirements/requirements_heroku.txt
-
-## Software Configuration
- 
-###  Install Database schema
-
-#### Create Schema
-
-gotolong_db_schema_install.sh create_mysql
-
-#### Install Schema for MySQL
-
-gotolong_db_schema_install.sh import_mysql
-
-#### Install Schema for PgSQL
-
-gotolong_db_schema_install.sh import_pgsql
-
-### Share Configuration
-
-#### setup DATABASE_URL (explorer)
-
-For MySQL
-
-export DATABASE_URL=mysql://root:root@localhost:3306/gotolong
-
-For PgSQL
-
-export DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
-
-#### data/config/gotolong-config.ini (loader)
-
-Switch this also to DATABASE_URL.
-
-For DB name, user and password
-
-## Browser based Data Loader & Explorer
-
-### Django Web Server
-
-The django project is capable of browsing the data stored in 'gotolong' database.
-
-cd django_gotolong/
-
-python manage.py runserver
-
-Starting development server at http://127.0.0.1:8000/
-
-### Web browser : URL
-
-Use the following URL to browse the reports
-
-http://127.0.0.1:8000/
-
-## Non-Browser Data Loader & Explorer
-
-### Input Data
-
-#### user scope
-
-Gather and store files like demat summary and demat detailed data in input-user-data
-
-Check following directory
-
-{GOTOLONG_DATA}/data/input-output/
-
-### One step load data for all modules
-
-gotolong_all_report.sh
-
-NOTE: This may be out of sync as the focus is to load the data directly through web browser.
-
-## For Developers : Module Description
+# Modules Information
 
 ## amfi module
 
@@ -173,7 +105,9 @@ mapping of ticker and ISIN
 
 Module : bse -> corpact
 
-## 52-week high and low and CMP (yesterday)
+## 52-week high and low and CMP
+
+We are ok with data of yesterday as it is for investment and not for trading.
 
 Modules : bhav, ftwhl, nse
 
@@ -229,7 +163,7 @@ create dividend matrix by company and month.
 
 Dependency : nach -> dividend
 
-# Installation - additional for development
+# Additional Softwares
 
 Download PyCharm
 
