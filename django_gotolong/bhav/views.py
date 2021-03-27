@@ -25,6 +25,10 @@ from django_gotolong.comm.func import comm_func_ticker_match
 
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
+from apscheduler.schedulers.background import BackgroundScheduler
+
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update, lastrefd_same
+
 
 class BhavListView(ListView):
     model = Bhav
@@ -44,7 +48,19 @@ class BhavListView(ListView):
 def bhav_url():
     # last working day
     # how about 3 based on today's day
-    current_date = date.today() - timedelta(days=1)
+    # weekday as a number
+    # current_week_day = date.today().strftime('%W')
+    current_week_day = date.today().weekday()
+    if current_week_day == 6:
+        # sunday
+        days_diff = 2
+    elif current_week_day == 0:
+        # monday
+        days_diff = 3
+    else:
+        days_diff = 1
+    print('days_diff ', days_diff)
+    current_date = date.today() - timedelta(days=days_diff)
     cur_year = current_date.year
     # abbreviation in upper case
     cur_month = current_date.strftime('%b').upper()
@@ -65,6 +81,12 @@ def bhav_fetch(request):
     # breakpoint()
 
     debug_level = 1
+
+    # last refresh date is same
+    if lastrefd_same("bhav"):
+        print('bhav_fetch: skipped as last refresh date is same')
+        return HttpResponseRedirect(reverse("bhav-list"))
+
     amfi_rank_dict = {}
     dematsum_list = []
 
@@ -286,3 +308,4 @@ def bhav_upload(request):
 # def index(request):
 #    return HttpResponse("Hello, world. You're at the polls index.")
 #
+

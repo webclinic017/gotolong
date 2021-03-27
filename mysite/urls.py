@@ -37,6 +37,8 @@ from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, D
 from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
     DematTxnStatBuySellView, demattxn_upload
 
+from django_gotolong.dividend.views import DividendListView, DividendRefreshView, DividendTickerListView
+
 from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
 from django_gotolong.fratio.views import FratioListView
 from django_gotolong.greco.views import GrecoListView, GrecoRefreshView
@@ -48,10 +50,12 @@ from django_gotolong.indices.views import Indices_fetch, Indices_upload
 from django_gotolong.lastrefd.views import LastrefdListView
 from django_gotolong.nach.views import NachListView
 from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy
-from django_gotolong.phealth.views import PhealthListView_Sale, PhealthListView_Hold
+from django_gotolong.phealth.views import PhealthListView_Sell, PhealthListView_Hold
 from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
 
 from django_gotolong.uploaddoc import views
+
+from django_gotolong.jsched.tasks import jsched_task_startup
 
 urlpatterns = [
                   path('', PhealthListView_All.as_view(), name='index'),
@@ -77,6 +81,9 @@ urlpatterns = [
                   path('bstmtdiv/frequency/', BstmtDivFrequencyView.as_view(),
                        name='bstmtdiv-frequency-list'),
                   path('bstmtdiv/upload/', bstmtdiv_upload, name='bstmt-upload'),
+                  path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
+                  path('corpact/list/', CorpactListView.as_view(), name='corpact-list'),
+                  path('corpact/upload/', corpact_upload, name='corpact-upload'),
                   path('dbstat/list/', DbstatListView.as_view(), name='dbstat-list'),
                   path('demat/sum/list/', DematSumListView.as_view(), name='dematsum-list'),
                   path('demat/sum/upload/', dematsum_upload, name='dematsum-upload'),
@@ -91,10 +98,10 @@ urlpatterns = [
                   path('demat/txn/stat/buy_sell/', DematTxnStatBuySellView.as_view(),
                        name='demattxn-stat-buysell-list'),
                   path('demat/txn/upload/', demattxn_upload, name='demattxn-upload'),
-                  path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
-                  path('corpact/list/', CorpactListView.as_view(), name='corpact-list'),
-                  path('corpact/upload/', corpact_upload, name='corpact-upload'),
-
+                  path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
+                  path('dividend/refresh/', DividendRefreshView.as_view(), name='dividend-refresh'),
+                  path('dividend/ticker/', DividendTickerListView.as_view(),
+                       name='dividend-ticker-list'),
                   path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
                   path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
                   path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
@@ -109,6 +116,7 @@ urlpatterns = [
                   path('lastrefd/list/', LastrefdListView.as_view(), name='lastrefd-list'),
                   path('nach/list/', NachListView.as_view(), name='nach-list'),
                   path('page/about/', TemplateView.as_view(template_name="about.html")),
+                  path('page/contact/', TemplateView.as_view(template_name="contact.html")),
                   path('page/global-data/', TemplateView.as_view(template_name="global_data.html")),
                   path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
                   path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
@@ -116,7 +124,7 @@ urlpatterns = [
                   path('phealth/list/all/', PhealthListView_All.as_view(), name='phealth-list-all'),
                   path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
                   path('phealth/list/hold/', PhealthListView_Hold.as_view(), name='phealth-list-hold'),
-                  path('phealth/list/sale/', PhealthListView_Sale.as_view(), name='phealth-list-sale'),
+                  path('phealth/list/sell/', PhealthListView_Sell.as_view(), name='phealth-list-sell'),
                   path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
                   path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
                   path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),
@@ -125,3 +133,5 @@ urlpatterns = [
                   path('uploaddoc/list/', views.list, name='uploaddoc-list'),
                   path('uploaddoc/delete/<int:id>/', views.delete_view, name='uploaddoc-delete'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+jsched_task_startup()

@@ -1,6 +1,10 @@
+apscheduler
 django
+django-background-tasks
 django_heroku
 dj-database-url
+fuzzymatcher
+fuzzywuzzy
 gunicorn
 mysqlclient
 mysql-connector

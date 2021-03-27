@@ -24,6 +24,10 @@ export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
 export DATABASE_URL=${MY_DATABASE_URL}
 
+# uses heroku cli
+# echo Trying to get DATABASE_URL ... timeout of 1 minute
+# export HEROKU_DATABASE_URL=`heroku config:get --app gotolong DATABASE_URL`
+
 # set the home : contains variable data : to be used by the package by user
 export GOTOLONG_DATA=$PROJECT_ROOT/data
 

@@ -2,7 +2,6 @@
 
 # To address, NameError: name 'Sum' is not defined
 from django.db.models import (Sum, Count)
-
 from django.db.models.functions import (ExtractYear, Round, ExtractMonth)
 
 from django.views.generic.list import ListView

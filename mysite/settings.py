@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'background_task',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,11 +49,13 @@ INSTALLED_APPS = [
     'django_gotolong.dbstat',
     'django_gotolong.dematsum',
     'django_gotolong.demattxn',
+    'django_gotolong.dividend',
     'django_gotolong.fratio',
     'django_gotolong.ftwhl',
     'django_gotolong.greco',
     'django_gotolong.gweight',
     'django_gotolong.indices',
+    'django_gotolong.jsched',
     'django_gotolong.lastrefd',
     'django_gotolong.nach',
     'django_gotolong.phealth',

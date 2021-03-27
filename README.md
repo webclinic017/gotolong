@@ -43,6 +43,8 @@ export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
 
 export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
+export HEROKU_DATABASE_URL=`heroku config:get --app gotolong DATABASE_URL`
+
 export DATABASE_URL=$MY_DATABASE_URL
 
 ## Create DB
@@ -85,11 +87,10 @@ heroku login
 
 heroku addons:create heroku-postgresql:hobby-dev
 
-gotolong_db_schema_install.sh pgsql import "${DATABASE_URL}"
+gotolong_db_schema_install.sh pgsql import "${HEROKU_DATABASE_URL}"
 
 heroku pg:reset --confirm \<appname\> --app \<appname\>
 
-gotolong_db_schema_install.sh pgsql import \`heroku config --app gotolong | grep DATABASE_URL | awk '{print $2}'`
 
 # Modules Information
 

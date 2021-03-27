@@ -20,8 +20,16 @@ from django_gotolong.trendlyne.models import Trendlyne
 
 from django.db.models import OuterRef, Subquery, ExpressionWrapper, F, IntegerField, Count
 
+from django_gotolong.jsched.tasks import jsched_task_bg, jsched_task_daily
+from django.utils import timezone
+
+
+# from django_gotolong.ftwhl.views import ftwhl_fetch
 
 class PhealthListView_All(ListView):
+    # crete task
+    # jsched_task_bg(schedule=timezone.now())
+    jsched_task_daily()
     # model = Phealth
     # if pagination is desired
     # paginate_by = 300
@@ -126,7 +134,7 @@ class PhealthListView_Buy(ListView):
         return template_names_list
 
 
-class PhealthListView_Sale(ListView):
+class PhealthListView_Sell(ListView):
     # model = Phealth
     # if pagination is desired
     # paginate_by = 300
@@ -157,7 +165,7 @@ class PhealthListView_Sale(ListView):
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         filter(cur_oku__isnull=False). \
-        filter(reco_type='Sale'). \
+        filter(reco_type='Sell'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
                'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'reco_type', 'reco_cause'). \
         order_by('safety_margin')

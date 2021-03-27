@@ -1,11 +1,15 @@
+apscheduler
 asgiref
 certifi
 chardet
 dj-database-url
 Django
+django-background-tasks
 django-heroku
 docopt
 et-xmlfile
+fuzzymatcher
+fuzzywuzzy
 gotolong
 gunicorn
 idna

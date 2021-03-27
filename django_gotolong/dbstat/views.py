@@ -8,6 +8,7 @@ from django_gotolong.bstmtdiv.models import BstmtDiv
 from django_gotolong.corpact.models import Corpact
 from django_gotolong.dematsum.models import DematSum
 from django_gotolong.demattxn.models import DematTxn
+from django_gotolong.dividend.models import Dividend
 from django_gotolong.fratio.models import Fratio
 from django_gotolong.ftwhl.models import Ftwhl
 from django_gotolong.greco.models import Greco
@@ -32,6 +33,7 @@ class DbstatListView(ListView):
     db_stat['corpact'] = Corpact.objects.count()
     db_stat['dematsum'] = DematSum.objects.count()
     db_stat['demattxn'] = DematTxn.objects.count()
+    db_stat['dividend'] = Dividend.objects.count()
     db_stat['fratio'] = Fratio.objects.count()
     db_stat['ftwhl'] = Ftwhl.objects.count()
     db_stat['greco'] = Greco.objects.count()

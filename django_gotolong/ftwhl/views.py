@@ -21,8 +21,7 @@ from django_gotolong.ftwhl.models import Ftwhl
 from django_gotolong.amfi.models import Amfi, amfi_load_rank
 from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
 from django_gotolong.comm.func import comm_func_ticker_match
-from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
-
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update, lastrefd_same
 
 class FtwhlListView(ListView):
     model = Ftwhl
@@ -42,7 +41,19 @@ class FtwhlListView(ListView):
 def ftwhl_url():
     # last working day
     # how about 3 based on today's day
-    current_date = date.today() - timedelta(days=1)
+    # weekday as a number
+    # current_week_day = date.today().strftime('%W')
+    current_week_day = date.today().weekday()
+    if current_week_day == 6:
+        # sunday
+        days_diff = 2
+    elif current_week_day == 0:
+        # monday
+        days_diff = 3
+    else:
+        days_diff = 1
+    current_date = date.today() - timedelta(days=days_diff)
+
     cur_year = current_date.year
     # month name
     cur_month = current_date.strftime('%m')
@@ -63,6 +74,12 @@ def ftwhl_fetch(request):
     # breakpoint()
 
     debug_level = 1
+
+    # last refresh date is same
+    if lastrefd_same("ftwhl"):
+        print('ftwhl_fetch: skipped as last refresh date is same')
+        return HttpResponseRedirect(reverse("ftwhl-list"))
+
     amfi_rank_dict = {}
     dematsum_list = []
 
@@ -104,7 +121,7 @@ def ftwhl_fetch(request):
         if debug_level > 1:
             print(column)
 
-        column[0] = column[0].strip()
+        ftwhl_ticker = column[0].strip()
         # ignore column[1] Series : EQ
         column[2] = column[2].strip()
         column[3] = column[3].strip()
@@ -113,7 +130,7 @@ def ftwhl_fetch(request):
 
         if comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
             _, created = Ftwhl.objects.update_or_create(
-                ftwhl_ticker=column[0],
+                ftwhl_ticker=ftwhl_ticker,
                 ftwhl_high=column[2],
                 ftwhl_high_dt=column[3],
                 ftwhl_low=column[4],
@@ -121,7 +138,7 @@ def ftwhl_fetch(request):
             )
 
     #
-    lastrefd_update("Ftwhl")
+    lastrefd_update("ftwhl")
     return HttpResponseRedirect(reverse("ftwhl-list"))
 
 

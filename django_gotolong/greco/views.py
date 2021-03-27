@@ -165,7 +165,7 @@ class GrecoRefreshView(View):
             if reco_cause == '':
                 reco_type = "HOLD"
             else:
-                reco_type = "SALE"
+                reco_type = "SELL"
 
         if reco_type == 'HOLD':
             h_c1 = (der > self.fr_buy['der'] and der <= self.fr_hold['der'])
