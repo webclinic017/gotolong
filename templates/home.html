@@ -1,0 +1,45 @@
+{% include "top.html" %}
+
+<h2>Home </h2>
+
+<br>
+<pre>
+The product has several manual steps right now.
+
+These steps will be automated slowly.
+
+Daily Basis
+1. Fetch 52-week High & Low data
+   <a href="/ftwhl/fetch/">ftwhl</a>
+2. Fetch Bhav data
+   <a href="/bhav/fetch/">bhav</a>
+
+Whenever portfolio has been updated (bought/sold)
+3. Demat data
+ 3.1 Upload the demat data
+   <a href="/demat/sum/list/">demat summary</a>
+ 3.2 Upload demat txn data
+  <a href="/demat/txn/list/">demat txn</a>
+
+ 3.3 add support for others like zerodha
+
+Quarterly/Monthly Basis
+4. Upload the bank stmt that has dividend data.
+ 4.1 <a href="/bstmtdiv/list/">Bank Statement Dividend</a>
+ 4.2 Refresh dividend table (currently it is not automated)
+    4.2.1 <a href="/dividend/list/">Dividend</a>
+
+Before any buy/sell decision - once on that day
+5. Upload BAT data - Trendlyne (get rid of dependency slowly)
+ 5.1 <a href="/trendlyne/list/">Trendlyne</a>
+ 5.2 Refresh the global recommendation (currently it is not automated)
+    5.2.1 <a href="/greco/list/">Greco</a>
+
+Take a buy/sell call
+7. Get stock with healthy margin
+ 7.1 <a href="/phealth/list/all/">Phealth</a>
+
+</pre>
+<br>
+
+{% include "bottom.html" %}

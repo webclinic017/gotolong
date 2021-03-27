@@ -13,5 +13,6 @@ pandas
 pyexcel
 pyexcel-xls
 python-dateutil
+requests
 xlrd
 urllib3

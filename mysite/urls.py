@@ -58,7 +58,7 @@ from django_gotolong.uploaddoc import views
 from django_gotolong.jsched.tasks import jsched_task_startup
 
 urlpatterns = [
-                  path('', PhealthListView_All.as_view(), name='index'),
+                  path('', TemplateView.as_view(template_name="home.html"), name='index'),
                   path('admin/', admin.site.urls),
                   path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
                   path('amfi/upload/', amfi_upload, name='amfi-upload'),
@@ -118,6 +118,7 @@ urlpatterns = [
                   path('page/about/', TemplateView.as_view(template_name="about.html")),
                   path('page/contact/', TemplateView.as_view(template_name="contact.html")),
                   path('page/global-data/', TemplateView.as_view(template_name="global_data.html")),
+                  path('page/home/', TemplateView.as_view(template_name="home.html")),
                   path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
                   path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
                   path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
