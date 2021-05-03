@@ -5,9 +5,10 @@ from django_gotolong.demattxn.models import DematTxn
 from django.utils import timezone
 
 from django.views.generic.list import ListView
+from django.views.generic.dates import YearArchiveView, MonthArchiveView
 
-from django.db.models import IntegerField, F, ExpressionWrapper, fields, Max, Min, Sum
-from django.db.models.functions import ExtractYear, Round
+from django.db.models import IntegerField, F, ExpressionWrapper, fields, Max, Min, Sum, Count
+from django.db.models.functions import (ExtractYear, Round, ExtractMonth)
 from django.db.models.expressions import RawSQL
 
 import calendar
@@ -21,16 +22,64 @@ from django.http import HttpResponseRedirect
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 
+class DematTxnYearArchiveView(YearArchiveView):
+    queryset = DematTxn.objects.all()
+    date_field = "txn_date"
+    make_object_list = True
+    allow_future = True
+
+    year_list = DematTxn.objects.dates('txn_date', 'year')
+    month_list = DematTxn.objects.dates('txn_date', 'month')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["year_list"] = self.year_list
+        context["month_list"] = self.month_list
+        txn_amount = ExpressionWrapper(F('quantity') * F('txn_price'), output_field=IntegerField())
+        total_amount = round(DematTxn.objects.all().filter(txn_date__year=self.get_year()).
+                             aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        summary_list = (
+            DematTxn.objects.all().filter(txn_date__year=self.get_year()).
+                annotate(
+                month=ExtractMonth('txn_date')).values('month').annotate(
+                Total=Round(Sum(txn_amount)))).order_by('month')
+        context["total_amount"] = total_amount
+        context["summary_list"] = summary_list
+        return context
+
+
+class DematTxnMonthArchiveView(MonthArchiveView):
+    queryset = DematTxn.objects.all()
+    date_field = "txn_date"
+    make_object_list = True
+    allow_future = True
+
+
 class DematTxnListView(ListView):
     model = DematTxn
 
     # if pagination is desired
     # paginate_by = 300
-
     queryset = DematTxn.objects.all()
+
+    year_list = DematTxn.objects.dates('txn_date', 'year')
+
+    # month_list = DematTxn.objects.dates('txn_date', 'month')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["year_list"] = self.year_list
+        #  context["month_list"] = self.month_list
+        txn_amount = ExpressionWrapper(F('quantity') * F('txn_price'), output_field=IntegerField())
+        total_amount = round(DematTxn.objects.all().aggregate(txn_amount=Sum(txn_amount))[
+                                 'txn_amount'])
+        summary_list = (
+            DematTxn.objects.all().annotate(
+                year=ExtractYear('txn_date')).values('year').annotate(
+                Total=Round(Sum(txn_amount)))).order_by('year')
+        context["total_amount"] = total_amount
+        context["summary_list"] = summary_list
         return context
 
 
@@ -65,7 +114,6 @@ class DematTxnGapView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
-
 
 class DematTxnStatView(ListView):
     model = DematTxn

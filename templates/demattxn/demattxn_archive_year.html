@@ -13,22 +13,24 @@
 
 Number of object: {{ object_list|length }}
 <br>
+
+Year {{ date|date:"Y" }}
+
+<br/>
+
 Total Amount: {{ total_amount }}
 <br>
 
-Annual Distribution
-
-<br>
+<br/>
 
 <table>
 
-
     <tr>
         <td>
-            key
+            month
         </td>
         <td>
-            value
+            amount
         </td>
     </tr>
 
@@ -60,45 +62,10 @@ Annual Distribution
 
 
     {% endfor %}
-
-
-    <br/>
-
-
-    {% for month_summary in month_summary_list %}
-
-    {% comment %}
-    {{ month_summary }}
-    {% endcomment %}
-
-    {% for key, value in month_summary.items %}
-
-    {% if forloop.counter|divisibleby:2 %}
-    {% comment %}
-    {{ starting index 1 }}
-    {% endcomment %}
-    {% else %}
-    <tr>
-        {% endif %}
-
-        <td>
-            {{ value }}
-        </td>
-
-        {% if forloop.counter|divisibleby:2 %}
-    </tr>
-    {% endif %}
-
-    {% endfor %}
-
-
-    {% endfor %}
-
 </table>
 
-{% for year in year_list %}
-<a href=/demat/txn/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
-{% endfor %}
+
+<br/>
 
 
 {% for date in date_list %}
@@ -108,6 +75,7 @@ Annual Distribution
 <a href=/demat/txn/list/> Go Up </a>
 
 <br>
+
 
 Monthly Archive :
 

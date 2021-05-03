@@ -79,6 +79,24 @@ class DividendRefreshView(View):
         left_on = ["bsdiv_remarks", ]
         right_on = ["comp_name", "nse_symbol"]
 
+        # get the header
+        bstmtdiv_top = df_bstmtdiv.head()
+        print('df_bstmtdiv: columns')
+        print(bstmtdiv_top)
+
+        # Most of these were matching to CANFINHOMES due to FIN in it
+
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='FINDIV', value='DIV', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='FIN DIV', value='DIV', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='FINALDIV', value='DIV', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='FINAL DIV', value='DIV', inplace=True, regex=True)
+
+        # most of these were matching with M&M for mahindra and mahindra ltd
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='LTD', value='', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='Ltd', value='', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='LIMITED', value='', inplace=True, regex=True)
+        df_bstmtdiv['bsdiv_remarks'].replace(to_replace='Limited', value='', inplace=True, regex=True)
+
         matched_results = fuzzymatcher.fuzzy_left_join(df_bstmtdiv,
                                                        df_amfi,
                                                        left_on,
@@ -86,6 +104,9 @@ class DividendRefreshView(View):
                                                        left_id_col='bsdiv_id',
                                                        right_id_col='comp_rank')
 
+        # drop NaN
+        matched_results.dropna(inplace=True)
+        print("matched_results")
         print(matched_results)
 
         cols = [
@@ -94,6 +115,10 @@ class DividendRefreshView(View):
         ]
 
         df = matched_results[cols].sort_values(by=['best_match_score'], ascending=False)
+
+        # drop NaN entries
+        df.dropna(inplace=True)
+        print("df")
         print(df)
 
         # breakpoint()

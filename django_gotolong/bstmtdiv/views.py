@@ -52,7 +52,6 @@ class BstmtDivMonthArchiveView(MonthArchiveView):
     make_object_list = True
     allow_future = True
 
-
 class BstmtDivListView(ListView):
     model = BstmtDiv
     # if pagination is desired
@@ -73,14 +72,14 @@ class BstmtDivListView(ListView):
         summary_list = (
             BstmtDiv.objects.all().annotate(
                 year=ExtractYear('bsdiv_date')).values('year').annotate(
-                Total=Round(Sum('bsdiv_amount'))))
+                Total=Round(Sum('bsdiv_amount')))).order_by('year')
         month_summary_list = (
             BstmtDiv.objects.all().annotate(
                 month=ExtractMonth('bsdiv_date')).values('month').annotate(
                 Total=Round(Sum('bsdiv_amount')))).order_by('month')
         context["total_amount"] = total_amount
         context["summary_list"] = summary_list
-        context["month_summary_list"] = month_summary_list
+        # context["month_summary_list"] = month_summary_list
         return context
 
 

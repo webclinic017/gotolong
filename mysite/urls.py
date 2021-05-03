@@ -37,6 +37,8 @@ from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, D
 from django_gotolong.demattxn.views import DematTxnListView, DematTxnGapView, DematTxnStatView, \
     DematTxnStatBuySellView, demattxn_upload
 
+from django_gotolong.demattxn.views import DematTxnYearArchiveView, DematTxnMonthArchiveView
+
 from django_gotolong.dividend.views import DividendListView, DividendRefreshView, DividendTickerListView
 
 from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
@@ -97,6 +99,13 @@ urlpatterns = [
                   path('demat/txn/stat/', DematTxnStatView.as_view(), name='demattxn-stat-list'),
                   path('demat/txn/stat/buy_sell/', DematTxnStatBuySellView.as_view(),
                        name='demattxn-stat-buysell-list'),
+                  path('demat/txn/list/<str:year>/', DematTxnYearArchiveView.as_view(),
+                       name='demattxn_archive_year'),
+                  path('demat/txn/list/<int:year>/<int:month>/',
+                       DematTxnMonthArchiveView.as_view(month_format='%m'),
+                       name='demattxn_archive_month_numeric'),
+                  path('demat/txn/list/<int:year>/<str:month>/', DematTxnMonthArchiveView.as_view(),
+                       name='demattxn_archive_month'),
                   path('demat/txn/upload/', demattxn_upload, name='demattxn-upload'),
                   path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
                   path('dividend/refresh/', DividendRefreshView.as_view(), name='dividend-refresh'),

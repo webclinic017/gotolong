@@ -13,107 +13,30 @@
 
 Number of object: {{ object_list|length }}
 <br>
-Total Amount: {{ total_amount }}
-<br>
 
-Annual Distribution
+{{ date|date:"M" }}  Total Amount: {{ total_amount }}
 
 <br>
 
-<table>
-
-
-    <tr>
-        <td>
-            key
-        </td>
-        <td>
-            value
-        </td>
-    </tr>
-
-    {% for year_summary in summary_list %}
-
-    {% comment %}
-    {{ year_summary }}
-    {% endcomment %}
-
-    {% for key, value in year_summary.items %}
-
-    {% if forloop.counter|divisibleby:2 %}
-    {% comment %}
-    {{ starting index 1 }}
-    {% endcomment %}
-    {% else %}
-    <tr>
-        {% endif %}
-
-        <td>
-            {{ value}}
-        </td>
-
-        {% if forloop.counter|divisibleby:2 %}
-    </tr>
-    {% endif %}
-
-    {% endfor %}
-
-
-    {% endfor %}
-
-
-    <br/>
-
-
-    {% for month_summary in month_summary_list %}
-
-    {% comment %}
-    {{ month_summary }}
-    {% endcomment %}
-
-    {% for key, value in month_summary.items %}
-
-    {% if forloop.counter|divisibleby:2 %}
-    {% comment %}
-    {{ starting index 1 }}
-    {% endcomment %}
-    {% else %}
-    <tr>
-        {% endif %}
-
-        <td>
-            {{ value }}
-        </td>
-
-        {% if forloop.counter|divisibleby:2 %}
-    </tr>
-    {% endif %}
-
-    {% endfor %}
-
-
-    {% endfor %}
-
-</table>
-
-{% for year in year_list %}
-<a href=/demat/txn/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
-{% endfor %}
+<h1>Demat Txn Archive Monthly List </h1>
 
 
 {% for date in date_list %}
+
 {% if forloop.first %}
 
-
-<a href=/demat/txn/list/> Go Up </a>
+<a href=/demat/txn/list/> Go Top </a>
 
 <br>
 
-Monthly Archive :
+<a href=/demat/txn/list/{{ date|date:"Y" }}/> {{ date|date:"Y" }} </a> |
+<a href=/demat/txn/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
 
+<br>
+Days  Archive :
 {% endif %}
 
-<a href=/demat/txn/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+{{ date|date:"d" }} |
 {% endfor %}
 
 

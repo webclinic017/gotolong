@@ -213,6 +213,8 @@ str.rstrip()
         df_bstmtdiv = pd.DataFrame.from_records(BstmtDiv.objects.all().values())
         df_amfi = pd.DataFrame.from_records(Amfi.objects.all().values())
 
-31.
+31. Record Linking and Fuzzy Matching
 
+https://pbpython.com/record-linking.html
 
+32.
