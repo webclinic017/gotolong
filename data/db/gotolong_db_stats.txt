@@ -1,9 +1,9 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| user_demat_txn             |       1501 |
-| user_bstmt_div             |       1246 |
-| user_dividend              |       1102 |
+| user_demat_txn             |       1538 |
+| user_bstmt_div             |       1311 |
+| user_dividend              |       1075 |
 | global_amfi                |       1000 |
 | global_indices             |        499 |
 | screener                   |        498 |
@@ -13,21 +13,22 @@
 | global_trendlyne           |        382 |
 | global_reco                |        374 |
 | plan                       |        354 |
-| user_demat_sum             |        263 |
+| user_demat_sum             |        258 |
 | user_weight                |        246 |
 | global_nach                |        177 |
+| global_mfund               |        120 |
 | auth_permission            |         48 |
 | django_migrations          |         25 |
+| both_lastrefd              |         12 |
 | django_content_type        |         12 |
-| both_lastrefd              |          9 |
 | global_fratio              |          6 |
-| django_session             |          4 |
+| django_session             |          5 |
 | global_weight              |          3 |
 | auth_user_groups           |          0 |
 | auth_group_permissions     |          0 |
 | auth_user                  |          0 |
+| user_doc                   |          0 |
 | auth_user_user_permissions |          0 |
 | django_admin_log           |          0 |
 | auth_group                 |          0 |
-| user_doc                   |          0 |
 +----------------------------+------------+
