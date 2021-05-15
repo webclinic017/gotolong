@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django_gotolong.indices',
     'django_gotolong.jsched',
     'django_gotolong.lastrefd',
+    'django_gotolong.mfund',
     'django_gotolong.nach',
     'django_gotolong.phealth',
     'django_gotolong.screener',

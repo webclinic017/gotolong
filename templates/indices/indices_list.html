@@ -49,6 +49,9 @@ Industries Count : {{industries_count}}
         <td>
             Company ISIN
         </td>
+        <td>
+            Companies count
+        </td>
     </tr>
     {% for ind_row in object_list %}
     <tr>
@@ -65,7 +68,7 @@ Industries Count : {{industries_count}}
             {{ ind_row.ind_isin }}
         </td>
         <td>
-            {{ ind_row.ind_count }}
+            {{ ind_row.comp_count }}
         </td>
 
     </tr>

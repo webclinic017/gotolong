@@ -63,7 +63,7 @@ class PhealthListView_All(ListView):
         filter(bat__isnull=False). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
                'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'reco_type', 'reco_cause'). \
-        order_by('-safety_margin')
+        order_by('low_margin')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -1,0 +1,85 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1>Mutual Fund </h1>
+
+<a href="/mfund/list/"> Mfund List </a> |
+<a href="/mfund/list/aum/"> Mfund List (by aum) </a> |
+<a href="/mfund/list/type/"> Mfund List (by Type) </a> |
+<a href="/mfund/list/benchmark/"> Mfund List (by Benchmark) </a> |
+<a href="/mfund/industry/"> Benchmark Count </a> |
+
+<br>
+
+Download the .xls file from here and convert that to .xlsx before uploading
+<br>
+<a href="https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details">
+    https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details
+</a>
+
+<br>
+
+<form action="/mfund/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+Benchmarks Count : {{benchmarks_count}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Scheme Name
+        </td>
+        <td>
+            Type
+        </td>
+        <td>
+            Benchmark
+        </td>
+        <td>
+            AUM (Cr)
+        </td>
+        <td>
+            Count
+        </td>
+    </tr>
+    {% for mfund_row in object_list %}
+    <tr>
+        <td>
+            {{ mfund_row.mfund_scheme }}
+        </td>
+        <td>
+            {{ mfund_row.mfund_type }}
+        </td>
+        <td>
+            {{ mfund_row.mfund_benchmark }}
+        </td>
+        <td>
+            {{ mfund_row.mfund_aum }}
+        </td>
+        <td>
+            {{ mfund_row.scheme_count }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No Mutual Funds yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

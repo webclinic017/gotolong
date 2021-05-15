@@ -86,7 +86,7 @@ def trendlyne_upload(request):
 
             # ignore top two line : Average Market Capitalization of listed companies during the six months ended
             # remove top two line from dataframe
-            df = df.iloc[2:]
+            # df = df.iloc[2:]
 
             if debug_level > 0:
                 print("old columns : ")

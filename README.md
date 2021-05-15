@@ -91,6 +91,11 @@ gotolong_db_schema_install.sh pgsql import "${HEROKU_DATABASE_URL}"
 
 heroku pg:reset --confirm \<appname\> --app \<appname\>
 
+## Heroku DB Refresh
+
+Refresh the DB on Heroku
+
+gotolong_db_heroku_refresh.sh
 
 # Modules Information
 
