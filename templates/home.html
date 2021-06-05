@@ -3,17 +3,33 @@
 <h2>Home </h2>
 
 <br>
+Manual Steps.... automation work in progress.
+
+<br>
+
+<h3>
+    Today
+</h3>
+
 <pre>
-The product has several manual steps right now.
-
-These steps will be automated slowly.
-
-Daily Basis
-1. Fetch 52-week High & Low data
+Daily Basis (last day's data - ok for investment)
+1. Fetch Bhav and 52-week high and low
+ 1.1. Fetch 52-week High & Low data
    <a href="/ftwhl/fetch/">ftwhl</a>
-2. Fetch Bhav data
+ 1.2. Fetch Bhav data
    <a href="/bhav/fetch/">bhav</a>
 
+Take a buy/sell call
+2. Get stock with healthy margin
+ 2.1 <a href="/phealth/list/all/">Phealth</a>
+
+</pre>
+
+<h3>
+    Monthly/Quarterly
+</h3>
+
+<pre>
 Whenever portfolio has been updated (bought/sold)
 3. Demat data
  3.1 Upload the demat data
@@ -29,15 +45,11 @@ Quarterly/Monthly Basis
  4.2 Refresh dividend table (currently it is not automated)
     4.2.1 <a href="/dividend/list/">Dividend</a>
 
-Before any buy/sell decision - once on that day
+Quarterly/Monthly Basis
 5. Upload BAT data - Trendlyne (get rid of dependency slowly)
  5.1 <a href="/trendlyne/list/">Trendlyne</a>
  5.2 Refresh the global recommendation (currently it is not automated)
     5.2.1 <a href="/greco/list/">Greco</a>
-
-Take a buy/sell call
-7. Get stock with healthy margin
- 7.1 <a href="/phealth/list/all/">Phealth</a>
 
 </pre>
 <br>

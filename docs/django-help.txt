@@ -135,3 +135,9 @@ breakpoint()  #from Python3.7
 To activate these filters, add 'django.contrib.humanize' to your INSTALLED_APPS setting.
 Once you’ve done that,  use {% load humanize %} in a template, and you’ll have access
 to the following filter
+
+12. bootstrap in django templates
+
+https://www.fullstackpython.com/blog/bootstrap-4-django-template.html
+
+13.
