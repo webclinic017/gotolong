@@ -97,7 +97,7 @@ heroku pg:reset --confirm \<appname\> --app \<appname\>
 
 gotolong_db_heroku_refresh.sh
 
-## App : Refresh on Heroku from github
+## App : Refresh on Heroku
 
 https://www.heroku.com/
 
