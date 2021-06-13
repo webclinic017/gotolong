@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django_gotolong.dividend',
     'django_gotolong.fratio',
     'django_gotolong.ftwhl',
-    'django_gotolong.greco',
+    'django_gotolong.gfundareco',
     'django_gotolong.gweight',
     'django_gotolong.indices',
     'django_gotolong.jsched',

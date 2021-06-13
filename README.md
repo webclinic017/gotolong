@@ -151,7 +151,7 @@ Financial Ratio module
 
 You can specify financial ratio filters like debt to equity ratio (der)
 
-## greco module
+## gfundareco module
 
 Global recommendation module
 

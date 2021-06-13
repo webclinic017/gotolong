@@ -67,7 +67,7 @@ class Screener(Amfi, Isin):
                               }
         self.sc_ratio_loc = {'rank': -1, 'name': -1, 'bse_code': -1, 'nse_code': -1, 'isin': -1, 'industry': -1,
                              'captype': -1,
-                             'reco_type': -1, 'reco_cause': -1,
+                             'funda_reco_type': -1, 'funda_reco_cause': -1,
                              'cmp': -1, 'mcap': -1, 'sales': -1, 'np': -1,
                              'd2e': -1, 'icr': -1, 'roe3': -1, 'roce3': -1, 'dp3': -1, 'dp': -1, 'dy': -1,
                              'pe': -1, 'pe5': -1, 'peg': -1, 'p2bv': -1,
@@ -127,7 +127,7 @@ class Screener(Amfi, Isin):
                 # delete columns that doesn't have values 
                 for ratio in loc_dup:
                     if loc_dup[ratio] == -1:
-                        if ratio != 'captype' and ratio != 'rank' and ratio != 'isin' and ratio != 'reco_type' and ratio != 'reco_cause':
+                        if ratio != 'captype' and ratio != 'rank' and ratio != 'isin' and ratio != 'funda_reco_type' and ratio != 'funda_reco_cause':
                             # remove the ratio name from original dictionary
                             self.sc_ratio_loc.pop(ratio)
                             print('removed ratio', ratio)
@@ -160,10 +160,10 @@ class Screener(Amfi, Isin):
                     if self.debug_level > 1:
                         print('ticker: ', sc_nsecode, 'ratio: ', ratio, 'value: ',
                               self.sc_ratio_values[sc_nsecode, ratio])
-                # figure out reco_type and reco_cause
-                reco_type = "BUY"
-                reco_cause = "tp, ?"
-                missing_reco_cause = ""
+                # figure out funda_reco_type and funda_reco_cause
+                funda_reco_type = "BUY"
+                funda_reco_cause = "tp, ?"
+                missing_funda_reco_cause = ""
                 ratio = 'd2e'
                 value = self.sc_ratio_values[sc_nsecode, ratio]
                 # know industry
@@ -171,7 +171,7 @@ class Screener(Amfi, Isin):
 
                 # handle missing values
                 if value == '':
-                    missing_reco_cause = ratio + ', ' + 'missing data'
+                    missing_funda_reco_cause = ratio + ', ' + 'missing data'
                 else:
                     if industry == 'FINANCIAL SERVICES':
                         # allow more debt/equity for Bank and NBFC
@@ -182,18 +182,18 @@ class Screener(Amfi, Isin):
                         value = float(value)
                         if value > self.sc_filter_d2e_buy:
                             if value > self.sc_filter_d2e_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'icr'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         # check ICR only for non Financial services
                         # LT : also has LTFS - causing lower IC
@@ -202,30 +202,30 @@ class Screener(Amfi, Isin):
                             value = float(value)
                             if value < self.sc_filter_icr_buy:
                                 if value < self.sc_filter_icr_hold:
-                                    reco_type = "SALE"
+                                    funda_reco_type = "SALE"
                                 else:
-                                    reco_type = "HOLD"
-                                reco_cause = ratio + ', ' + str(value)
+                                    funda_reco_type = "HOLD"
+                                funda_reco_cause = ratio + ', ' + str(value)
                                 if self.debug_level > 1:
-                                    print(reco_cause)
+                                    print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'dp3'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_dp3_buy:
                             if value < self.sc_filter_dp3_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     if industry == 'FINANCIAL SERVICES':
                         # bank: too much debt : don't consider debt
                         ratio = 'roe3'
@@ -233,90 +233,90 @@ class Screener(Amfi, Isin):
                         ratio = 'roce3'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_roce3_buy:
                             if value < self.sc_filter_roce3_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'sales5'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_sales5_buy:
                             if value < self.sc_filter_sales5_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'profit5'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value < self.sc_filter_profit5_buy:
                             if value < self.sc_filter_profit5_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'pledge'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value > self.sc_filter_pledge_buy:
                             if value > self.sc_filter_pledge_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = ratio + ', ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = ratio + ', ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
-                if reco_type == "BUY":
+                if funda_reco_type == "BUY":
                     ratio = 'rank'
                     value = self.sc_ratio_values[sc_nsecode, ratio]
                     if value == '':
-                        missing_reco_cause = ratio + ', ' + 'missing data'
+                        missing_funda_reco_cause = ratio + ', ' + 'missing data'
                     else:
                         value = float(value)
                         if value > self.sc_filter_rank_buy:
                             if value > self.sc_filter_rank_hold:
-                                reco_type = "SALE"
+                                funda_reco_type = "SALE"
                             else:
-                                reco_type = "HOLD"
-                            reco_cause = 'rank, ' + str(value)
+                                funda_reco_type = "HOLD"
+                            funda_reco_cause = 'rank, ' + str(value)
                             if self.debug_level > 1:
-                                print(reco_cause)
+                                print(funda_reco_cause)
 
                 # skipping due to misisng data
-                if reco_type == "BUY" and missing_reco_cause != '':
-                    reco_type = "HOLD"
-                    reco_cause = missing_reco_cause
+                if funda_reco_type == "BUY" and missing_funda_reco_cause != '':
+                    funda_reco_type = "HOLD"
+                    funda_reco_cause = missing_funda_reco_cause
 
                 # store recommendation
-                self.sc_ratio_values[sc_nsecode, "reco_type"] = reco_type
-                self.sc_ratio_values[sc_nsecode, "reco_cause"] = reco_cause
+                self.sc_ratio_values[sc_nsecode, "funda_reco_type"] = funda_reco_type
+                self.sc_ratio_values[sc_nsecode, "funda_reco_cause"] = funda_reco_cause
 
         except IndexError:
             print('except ', row)
@@ -411,7 +411,7 @@ class Screener(Amfi, Isin):
             self.screener_load_row(row)
 
     def screener_dump_phase1(self, out_filename, filter_rows=False, ticker_only=False, hold_filename=False,
-                             sale_filename=False, reco_filename=False, gotolong_filename=False):
+                             sale_filename=False, funda_reco_filename=False, gotolong_filename=False):
 
         fh = open(out_filename, "w")
 
@@ -421,8 +421,8 @@ class Screener(Amfi, Isin):
         if sale_filename:
             fh_sale = open(sale_filename, "w")
 
-        if reco_filename:
-            fh_reco = open(reco_filename, "w")
+        if funda_reco_filename:
+            fh_reco = open(funda_reco_filename, "w")
 
         if gotolong_filename:
             fh_gotolong = open(gotolong_filename, "w")
@@ -446,23 +446,23 @@ class Screener(Amfi, Isin):
                 p_str += str(self.sc_ratio_values[sc_nsecode, ratio])
                 p_str += ', '
 
-            reco_type = self.sc_ratio_values[sc_nsecode, "reco_type"]
-            reco_cause = self.sc_ratio_values[sc_nsecode, "reco_cause"]
+            funda_reco_type = self.sc_ratio_values[sc_nsecode, "funda_reco_type"]
+            funda_reco_cause = self.sc_ratio_values[sc_nsecode, "funda_reco_cause"]
 
-            reco_str_with_cause = sc_nsecode + ',' + reco_type + ',' + reco_cause + '\n'
-            reco_str_without_cause = sc_nsecode + ', ' + reco_type + '\n'
+            funda_reco_str_with_cause = sc_nsecode + ',' + funda_reco_type + ',' + funda_reco_cause + '\n'
+            funda_reco_str_without_cause = sc_nsecode + ', ' + funda_reco_type + '\n'
 
-            if reco_filename:
-                fh_reco.write(reco_str_with_cause)
+            if funda_reco_filename:
+                fh_reco.write(funda_reco_str_with_cause)
 
             if gotolong_filename:
-                fh_gotolong.write(reco_str_without_cause)
+                fh_gotolong.write(funda_reco_str_without_cause)
 
-            if reco_type == "HOLD" or reco_type == "SALE":
-                if reco_type == "HOLD" and hold_filename:
-                    fh_hold.write(reco_str_with_cause)
-                elif reco_type == "SALE" and sale_filename:
-                    fh_sale.write(reco_str_with_cause)
+            if funda_reco_type == "HOLD" or funda_reco_type == "SALE":
+                if funda_reco_type == "HOLD" and hold_filename:
+                    fh_hold.write(funda_reco_str_with_cause)
+                elif funda_reco_type == "SALE" and sale_filename:
+                    fh_sale.write(funda_reco_str_with_cause)
             else:
                 if ticker_only:
                     fh.write(sc_nsecode)
@@ -478,7 +478,7 @@ class Screener(Amfi, Isin):
         if sale_filename:
             fh_sale.close()
 
-        if reco_filename:
+        if funda_reco_filename:
             fh_reco.close()
 
         if gotolong_filename:
@@ -487,8 +487,8 @@ class Screener(Amfi, Isin):
     def screener_dump_phase2(self, out_filename):
         self.screener_dump_phase1(out_filename, True)
 
-    def screener_dump_phase3(self, out_filename, hold_filename, sale_filename, reco_filename, gotolong_filename):
-        self.screener_dump_phase1(out_filename, True, True, hold_filename, sale_filename, reco_filename,
+    def screener_dump_phase3(self, out_filename, hold_filename, sale_filename, funda_reco_filename, gotolong_filename):
+        self.screener_dump_phase1(out_filename, True, True, hold_filename, sale_filename, funda_reco_filename,
                                   gotolong_filename)
 
 

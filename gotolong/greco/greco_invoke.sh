@@ -8,9 +8,9 @@ CONFIG_PROFILE_DATA_LOC=`python -m gotolong.config.config_ini profile_data`
 CONFIG_PROFILE_REPORTS_LOC=`python -m gotolong.config.config_ini profile_reports`
 
 #IN_FILE_BSE=$CONFIG_GLOBAL_DATA_LOC/isin-data/isin-bse-500.csv
-# IN_FILE_NSE=$CONFIG_GLOBAL_DATA_LOC/greco-data/greco-data.csv
-OUT_FILE_1=$CONFIG_GLOBAL_REPORTS_LOC/greco-reports/greco-reports.csv
+# IN_FILE_NSE=$CONFIG_GLOBAL_DATA_LOC/gfundareco-data/gfundareco-data.csv
+OUT_FILE_1=$CONFIG_GLOBAL_REPORTS_LOC/gfundareco-reports/gfundareco-reports.csv
 
 # python isin_invoke.py ${DEBUG_LEVEL} ${IN_FILE_BSE} ${IN_FILE_NSE} ${OUT_FILE_1} ${OUT_FILE_2}
 # python isin_invoke.py --debug_level ${DEBUG_LEVEL} --in_files ${IN_FILE} --out_files ${OUT_FILE_1}
-python greco.py -d ${DEBUG_LEVEL} -o ${OUT_FILE_1}
+python gfundareco.py -d ${DEBUG_LEVEL} -o ${OUT_FILE_1}

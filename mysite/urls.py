@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 
 from django.views.generic import TemplateView
 
-from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, AmfiMissingView, amfi_upload
+from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, \
+    AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload
 
 from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
 from django_gotolong.bstmtdiv.views import BstmtDivListView, bstmtdiv_upload
@@ -43,7 +44,7 @@ from django_gotolong.dividend.views import DividendListView, DividendRefreshView
 
 from django_gotolong.ftwhl.views import FtwhlListView, ftwhl_fetch, ftwhl_upload
 from django_gotolong.fratio.views import FratioListView
-from django_gotolong.greco.views import GrecoListView, GrecoRefreshView
+from django_gotolong.gfundareco.views import GfundarecoListView, GfundarecoRefreshView
 from django_gotolong.gweight.views import GweightListView
 
 from django_gotolong.indices.views import IndicesListView, IndicesIndustryView
@@ -72,7 +73,10 @@ urlpatterns = [
                   path('amfi/upload/', amfi_upload, name='amfi-upload'),
                   path('amfi/amount/', AmfiAmountView.as_view(), name='amfi-amount-list'),
                   path('amfi/deficit/', AmfiDeficitView.as_view(), name='amfi-deficit-list'),
-                  path('amfi/missing/', AmfiMissingView.as_view(), name='amfi-missing-list'),
+                  path('amfi/notable-exclusion/', AmfiNotableExclusionView.as_view(),
+                       name='amfi-notable-exclusion-list'),
+                  path('amfi/notable-inclusion/', AmfiNotableInclusionView.as_view(),
+                       name='amfi-notable-inclusion-list'),
                   path('bhav/list/', BhavListView.as_view(), name='bhav-list'),
                   path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
                   path('bhav/upload/', bhav_upload, name='bhav-upload'),
@@ -121,8 +125,8 @@ urlpatterns = [
                   path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
                   path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
                   path('ftwhl/upload/', ftwhl_upload, name='ftwhl-upload'),
-                  path('greco/list/', GrecoListView.as_view(), name='greco-list'),
-                  path('greco/refresh/', GrecoRefreshView.as_view(), name='greco-refresh'),
+                  path('gfundareco/list/', GfundarecoListView.as_view(), name='gfundareco-list'),
+                  path('gfundareco/refresh/', GfundarecoRefreshView.as_view(), name='gfundareco-refresh'),
                   path('gweight/list/', GweightListView.as_view(), name='gweight-list'),
                   path('indices/list/', IndicesListView.as_view(), name='indices-list'),
                   path('indices/industry/', IndicesIndustryView.as_view(), name='indices-industry-list'),

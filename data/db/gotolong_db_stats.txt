@@ -1,7 +1,7 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| user_demat_txn             |       1538 |
+| user_demat_txn             |       1526 |
 | user_bstmt_div             |       1311 |
 | user_dividend              |       1075 |
 | global_amfi                |       1000 |
@@ -11,9 +11,9 @@
 | global_bhav                |        482 |
 | global_corpact             |        451 |
 | global_trendlyne           |        382 |
-| global_reco                |        374 |
+| global_funda_reco          |        374 |
 | plan                       |        354 |
-| user_demat_sum             |        258 |
+| user_demat_sum             |        252 |
 | user_weight                |        246 |
 | global_nach                |        177 |
 | global_mfund               |        120 |
@@ -23,7 +23,7 @@
 | django_content_type        |         12 |
 | global_fratio              |          6 |
 | django_session             |          5 |
-| global_weight              |          3 |
+| global_weight              |          5 |
 | auth_user_groups           |          0 |
 | auth_group_permissions     |          0 |
 | auth_user                  |          0 |

@@ -8,7 +8,7 @@ from django.db.models import OuterRef, Subquery, Count, Sum
 from django.db.models.functions import Trim, Lower, Round
 
 from django_gotolong.amfi.models import Amfi
-from django_gotolong.greco.models import Greco
+from django_gotolong.gfundareco.models import Gfundareco
 
 import pandas as pd
 import csv, io
@@ -79,14 +79,14 @@ class DematSumRecoView(ListView):
     # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank'))).order_by('comp_rank')
     # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank')))
     amfi_qs = Amfi.objects.filter(comp_isin=OuterRef("isin_code_id"))
-    greco_qs = Greco.objects.filter(reco_isin=OuterRef("isin_code_id"))
+    gfunda_reco_qs = Gfundareco.objects.filter(funda_reco_isin=OuterRef("isin_code_id"))
     queryset = DematSum.objects.all(). \
         annotate(comp_rank=Subquery(amfi_qs.values('comp_rank')[:1])). \
         annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
-        annotate(reco_type=Subquery(greco_qs.values('reco_type')[:1])). \
-        annotate(reco_cause=Subquery(greco_qs.values('reco_cause')[:1])). \
-        values('stock_symbol', 'comp_name', 'value_cost', 'comp_rank', 'cap_type', 'reco_type',
-               'reco_cause'). \
+        annotate(funda_reco_type=Subquery(gfunda_reco_qs.values('funda_reco_type')[:1])). \
+        annotate(funda_reco_cause=Subquery(gfunda_reco_qs.values('funda_reco_cause')[:1])). \
+        values('stock_symbol', 'comp_name', 'value_cost', 'comp_rank', 'cap_type', 'funda_reco_type',
+               'funda_reco_cause'). \
         order_by('comp_rank')
 
     def get_context_data(self, **kwargs):

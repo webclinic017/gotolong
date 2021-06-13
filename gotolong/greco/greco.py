@@ -16,53 +16,53 @@ from gotolong.fratio.fratio import *
 from gotolong.isin.isin import *
 
 
-class Greco(Fratio, Trendlyne, Isin):
+class Gfundareco(Fratio, Trendlyne, Isin):
     def __init__(self):
-        super(Greco, self).__init__()
-        self.greco_ticker_list = []
-        self.greco_isin = {}
-        self.greco_type = {}
-        self.greco_cause = {}
-        self.greco_table_truncate = False
-        self.greco_table_name = "global_reco"
-        self.greco_table_dict = {
-            "reco_ticker": "text",
-            "reco_isin": "text",
-            "reco_type": "text",
-            "reco_cause": "text"
+        super(Gfundareco, self).__init__()
+        self.gfunda_reco_ticker_list = []
+        self.gfunda_reco_isin = {}
+        self.gfunda_reco_type = {}
+        self.gfunda_reco_cause = {}
+        self.gfunda_reco_table_truncate = False
+        self.gfunda_reco_table_name = "global_funda_reco"
+        self.gfunda_reco_table_dict = {
+            "funda_reco_ticker": "text",
+            "funda_reco_isin": "text",
+            "funda_reco_type": "text",
+            "funda_reco_cause": "text"
         }
         self.debug_level = 0
 
     def set_debug_level(self, debug_level):
         self.debug_level = debug_level
 
-    def greco_table_reload(self, truncate=False):
-        self.greco_table_truncate = truncate
+    def gfunda_reco_table_reload(self, truncate=False):
+        self.gfunda_reco_table_truncate = truncate
 
-    def greco_table_create(self):
+    def gfunda_reco_table_create(self):
         # dump the sql for creation of table
-        create_sql = gotolong.cutil.cutil.get_create_sql(self.greco_table_name, self.greco_table_dict)
+        create_sql = gotolong.cutil.cutil.get_create_sql(self.gfunda_reco_table_name, self.gfunda_reco_table_dict)
         if self.debug_level > 0:
             print(create_sql)
 
-    def greco_load_row(self, row):
+    def gfunda_reco_load_row(self, row):
         try:
             row_list = row
             if len(row_list) == 0:
                 print('ignored empty row', row_list)
                 return
 
-            (reco_ticker, reco_isin, reco_type, reco_cause) = row_list
+            (funda_reco_ticker, funda_reco_isin, funda_reco_type, funda_reco_cause) = row_list
 
-            self.greco_ticker_list.append(reco_ticker)
-            self.greco_isin[reco_ticker] = reco_isin
-            self.greco_type[reco_ticker] = reco_type
-            self.greco_cause[reco_ticker] = reco_cause
+            self.gfunda_reco_ticker_list.append(funda_reco_ticker)
+            self.gfunda_reco_isin[funda_reco_ticker] = funda_reco_isin
+            self.gfunda_reco_type[funda_reco_ticker] = funda_reco_type
+            self.gfunda_reco_cause[funda_reco_ticker] = funda_reco_cause
 
             if self.debug_level > 1:
-                print('ticker : ', reco_ticker, '\n')
-                print('reco_type : ', reco_type, '\n')
-                print('reco_cause : ', reco_cause, '\n')
+                print('ticker : ', funda_reco_ticker, '\n')
+                print('funda_reco_type : ', funda_reco_type, '\n')
+                print('funda_reco_cause : ', funda_reco_cause, '\n')
 
         except IndexError:
             print('except ', row)
@@ -70,21 +70,21 @@ class Greco(Fratio, Trendlyne, Isin):
             print('except ', row)
             traceback.print_exc()
 
-    def greco_load_data(self):
-        table = self.greco_table_name
+    def gfunda_reco_load_data(self):
+        table = self.gfunda_reco_table_name
 
-        if self.greco_table_truncate:
+        if self.gfunda_reco_table_truncate:
             self.db_table_truncate(table)
 
         row_count = self.db_table_count_rows(table)
         if row_count == 0:
-            self.greco_fill_data()
+            self.gfunda_reco_fill_data()
         else:
-            print('greco data already loaded in db', row_count)
+            print('gfundareco data already loaded in db', row_count)
         print('display db data')
-        self.greco_load_data_from_db()
+        self.gfunda_reco_load_data_from_db()
 
-    def greco_get_insert_row(self, line, row_bank):
+    def gfunda_reco_get_insert_row(self, line, row_bank):
 
         # split on comma
         row_list = line.split(',')
@@ -93,17 +93,17 @@ class Greco(Fratio, Trendlyne, Isin):
             print('row_list', row_list)
             print('len row_list', len(row_list))
 
-        if reco_type == 'Reco Type' or reco_cause == "Reco Cause":
+        if funda_reco_type == 'Reco Type' or funda_reco_cause == "Reco Cause":
             if self.debug_level > 0:
                 print('skipped header line', row_list)
             return
 
         # remove any un-required stuff
-        new_row = (reco_ticker, reco_isin, reco_type, reco_cause)
+        new_row = (funda_reco_ticker, funda_reco_isin, funda_reco_type, funda_reco_cause)
         row_bank.append(new_row)
 
-    def greco_fill_data(self):
-        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.greco_table_name, self.greco_table_dict)
+    def gfunda_reco_fill_data(self):
+        insert_sql = gotolong.cutil.cutil.get_insert_sql(self.gfunda_reco_table_name, self.gfunda_reco_table_dict)
 
         cursor = self.db_conn.cursor()
 
@@ -116,7 +116,7 @@ class Greco(Fratio, Trendlyne, Isin):
         # breakpoint()
 
         for tl_nsecode in sorted_input:
-            (reco_type, reco_cause) = self.greco_get_reco(
+            (funda_reco_type, funda_reco_cause) = self.gfunda_reco_get_reco(
                 self.tl_ratio_values[tl_nsecode, 'tl_stock_name'], self.tl_ratio_values[tl_nsecode, 'tl_isin'],
                 self.tl_ratio_values[tl_nsecode, 'tl_bat'], self.tl_ratio_values[tl_nsecode, 'tl_der'],
                 self.tl_ratio_values[tl_nsecode, 'tl_roce3'], self.tl_ratio_values[tl_nsecode, 'tl_roe3'],
@@ -125,28 +125,28 @@ class Greco(Fratio, Trendlyne, Isin):
                 self.tl_ratio_values[tl_nsecode, 'tl_pledge'], self.tl_ratio_values[tl_nsecode, 'tl_low_3y'],
                 self.tl_ratio_values[tl_nsecode, 'tl_low_5y'], 'notes')
 
-            reco_ticker = tl_nsecode
-            reco_isin = self.tl_ratio_values[tl_nsecode, 'tl_isin']
-            new_row = (reco_ticker, reco_isin, reco_type, reco_cause)
+            funda_reco_ticker = tl_nsecode
+            funda_reco_isin = self.tl_ratio_values[tl_nsecode, 'tl_isin']
+            new_row = (funda_reco_ticker, funda_reco_isin, funda_reco_type, funda_reco_cause)
             row_bank.append(new_row)
 
-        print('loaded greco : ', len(row_bank))
+        print('loaded gfundareco : ', len(row_bank))
         # insert row
         cursor.executemany(insert_sql, row_bank)
         # commit db changes
         self.db_conn.commit()
 
-    def greco_load_data_from_db(self):
-        table_name = self.greco_table_name
+    def gfunda_reco_load_data_from_db(self):
+        table_name = self.gfunda_reco_table_name
         cursor = self.db_table_load(table_name)
         for row in cursor.fetchall():
             if self.debug_level > 1:
                 print(row)
-            self.greco_load_row(row)
+            self.gfunda_reco_load_row(row)
 
-    def greco_get_reco(self, stock_name, isin, bat, der, roce3,
-                       roe3, dpr2, sales2, profit5, icr,
-                       pledge, low_3y, low_5y, notes):
+    def gfunda_reco_get_reco(self, stock_name, isin, bat, der, roce3,
+                             roe3, dpr2, sales2, profit5, icr,
+                             pledge, low_3y, low_5y, notes):
         ignore_der = False
         # skip debt for Financial Services like Bank/NBFC.
         if isin in self.isin_industry_dict:
@@ -157,8 +157,8 @@ class Greco(Fratio, Trendlyne, Isin):
         else:
             print(isin, 'not found in isin db')
 
-        reco_type = 'NONE'
-        reco_cause = ''
+        funda_reco_type = 'NONE'
+        funda_reco_cause = ''
 
         if ignore_der:
             b_c1 = True
@@ -175,28 +175,28 @@ class Greco(Fratio, Trendlyne, Isin):
         #    breakpoint()
 
         if not b_c1:
-            reco_cause += " "
-            reco_cause = "-B(der)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(der)"
         if not b_c2:
-            reco_cause += " "
-            reco_cause = "-B(roce3)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(roce3)"
         if not b_c3:
-            reco_cause += " "
-            reco_cause = "-B(dpr2)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(dpr2)"
         if not b_c4:
-            reco_cause += " "
-            reco_cause = "-B(sales)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(sales)"
         if not b_c5:
-            reco_cause += " "
-            reco_cause = "-B(profit5)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(profit5)"
         if not b_c6:
-            reco_cause += " "
-            reco_cause = "-B(pledge)"
+            funda_reco_cause += " "
+            funda_reco_cause = "-B(pledge)"
 
         if (b_c1 and b_c2 and b_c3 and b_c4 and b_c5 and b_c6):
-            reco_type = "BUY"
-            reco_cause = "ALL"
-            return (reco_type, reco_cause)
+            funda_reco_type = "BUY"
+            funda_reco_cause = "ALL"
+            return (funda_reco_type, funda_reco_cause)
         else:
             s_c1 = der > self.fratio_hold['der']
             s_c2 = roce3 < self.fratio_hold['roce3']
@@ -205,35 +205,35 @@ class Greco(Fratio, Trendlyne, Isin):
             s_c5 = profit5 < self.fratio_hold['profit5']
             s_c6 = pledge > self.fratio_hold['pledge']
             # avoid NONE
-            reco_cause_buy = reco_cause
-            reco_cause = ''
+            funda_reco_cause_buy = funda_reco_cause
+            funda_reco_cause = ''
 
             if s_c1:
                 if not ignore_der:
-                    reco_cause += " "
-                    reco_cause += "S(der)"
+                    funda_reco_cause += " "
+                    funda_reco_cause += "S(der)"
             if s_c2:
-                reco_cause += " "
-                reco_cause += "S(roce3)"
+                funda_reco_cause += " "
+                funda_reco_cause += "S(roce3)"
             if s_c3:
-                reco_cause += " "
-                reco_cause += "S(dpr2)"
+                funda_reco_cause += " "
+                funda_reco_cause += "S(dpr2)"
             if s_c4:
-                reco_cause += " "
-                reco_cause += "S(sales2)"
+                funda_reco_cause += " "
+                funda_reco_cause += "S(sales2)"
             if s_c5:
-                reco_cause += " "
-                reco_cause += "S(profit5)"
+                funda_reco_cause += " "
+                funda_reco_cause += "S(profit5)"
             if s_c6:
-                reco_cause += " "
-                reco_cause += "S(pledge)"
+                funda_reco_cause += " "
+                funda_reco_cause += "S(pledge)"
 
-            if reco_cause == '':
-                reco_type = "HOLD"
+            if funda_reco_cause == '':
+                funda_reco_type = "HOLD"
             else:
-                reco_type = "SALE"
+                funda_reco_type = "SALE"
 
-        if reco_type == 'HOLD':
+        if funda_reco_type == 'HOLD':
             h_c1 = (der > self.fratio_buy['der'] and der <= self.fratio_hold['der'])
             # fixed the bug here to get the cause for HOLD
             h_c2 = (roce3 < self.fratio_buy['roce3'] and roce3 >= self.fratio_hold['roce3'])
@@ -244,42 +244,42 @@ class Greco(Fratio, Trendlyne, Isin):
 
             if h_c1:
                 if not ignore_der:
-                    reco_cause += " "
-                    reco_cause += "H(der)"
+                    funda_reco_cause += " "
+                    funda_reco_cause += "H(der)"
             if h_c2:
-                reco_cause += " "
-                reco_cause += "H(roce3)"
+                funda_reco_cause += " "
+                funda_reco_cause += "H(roce3)"
             if h_c3:
-                reco_cause += " "
-                reco_cause += "H(dpr2)"
+                funda_reco_cause += " "
+                funda_reco_cause += "H(dpr2)"
             if h_c4:
-                reco_cause += " "
-                reco_cause += "H(sales2)"
+                funda_reco_cause += " "
+                funda_reco_cause += "H(sales2)"
             if h_c5:
-                reco_cause += " "
-                reco_cause += "H(profit5)"
+                funda_reco_cause += " "
+                funda_reco_cause += "H(profit5)"
             if h_c6:
-                reco_cause += " "
-                reco_cause += "H(pledge)"
+                funda_reco_cause += " "
+                funda_reco_cause += "H(pledge)"
 
             # for debugging
-            if reco_cause == '':
-                reco_cause = reco_cause_buy
+            if funda_reco_cause == '':
+                funda_reco_cause = funda_reco_cause_buy
 
-        return (reco_type, reco_cause)
+        return (funda_reco_type, funda_reco_cause)
 
-    def greco_dump_report_full(self, out_filename):
+    def gfunda_reco_dump_report_full(self, out_filename):
 
         fh = open(out_filename, "w")
-        fh.write('reco_ticker, reco_isin, reco_type, reco_cause\n')
-        for reco_ticker in self.greco_ticker_list:
-            p_str = reco_ticker
+        fh.write('funda_reco_ticker, funda_reco_isin, funda_reco_type, funda_reco_cause\n')
+        for funda_reco_ticker in self.gfunda_reco_ticker_list:
+            p_str = funda_reco_ticker
             p_str += ', '
-            p_str += self.greco_isin[reco_ticker]
+            p_str += self.gfunda_reco_isin[funda_reco_ticker]
             p_str += ', '
-            p_str += self.greco_type[reco_ticker]
+            p_str += self.gfunda_reco_type[funda_reco_ticker]
             p_str += ', '
-            p_str += self.greco_cause[reco_ticker]
+            p_str += self.gfunda_reco_cause[funda_reco_ticker]
             p_str += '\n'
             fh.write(p_str);
         fh.close()
@@ -318,23 +318,23 @@ def main():
     if debug_level > 1:
         print('args :', len(sys.argv))
 
-    greco = Greco()
+    gfundareco = Gfundareco()
 
-    greco.set_debug_level(debug_level)
+    gfundareco.set_debug_level(debug_level)
 
     if truncate_table:
-        greco.greco_table_reload(truncate_table)
+        gfundareco.gfunda_reco_table_reload(truncate_table)
 
-    greco.amfi_load_data_from_db()
-    greco.isin_load_data_from_db()
+    gfundareco.amfi_load_data_from_db()
+    gfundareco.isin_load_data_from_db()
 
-    greco.trendlyne_load_data_from_db()
+    gfundareco.trendlyne_load_data_from_db()
 
-    greco.fratio_load_data_from_db()
+    gfundareco.fratio_load_data_from_db()
 
-    greco.greco_load_data()
+    gfundareco.gfunda_reco_load_data()
 
-    greco.greco_dump_report_full(out_filename_phase[0])
+    gfundareco.gfunda_reco_dump_report_full(out_filename_phase[0])
 
 
 if __name__ == "__main__":

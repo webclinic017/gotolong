@@ -294,6 +294,21 @@ CREATE TABLE `global_ftwhl` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `global_funda_reco`
+--
+
+DROP TABLE IF EXISTS `global_funda_reco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `global_funda_reco` (
+  `funda_reco_ticker` text DEFAULT NULL,
+  `funda_reco_isin` text DEFAULT NULL,
+  `funda_reco_type` text DEFAULT NULL,
+  `funda_reco_cause` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `global_indices`
 --
 
@@ -334,21 +349,6 @@ DROP TABLE IF EXISTS `global_nach`;
 CREATE TABLE `global_nach` (
   `name` text DEFAULT NULL,
   `ticker` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `global_reco`
---
-
-DROP TABLE IF EXISTS `global_reco`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `global_reco` (
-  `reco_ticker` text DEFAULT NULL,
-  `reco_isin` text DEFAULT NULL,
-  `reco_type` text DEFAULT NULL,
-  `reco_cause` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -582,4 +582,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-15 22:21:54
+-- Dump completed on 2021-06-13 18:36:25

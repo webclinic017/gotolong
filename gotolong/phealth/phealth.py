@@ -17,15 +17,15 @@ from gotolong.bhav.bhav import *
 from gotolong.corpact.corpact import *
 from gotolong.demat.demat import *
 from gotolong.ftwhl.ftwhl import *
-from gotolong.greco.greco import *
+from gotolong.gfundareco.gfundareco import *
 from gotolong.gweight.gweight import *
 
 from gotolong.screener.screener import *
 from gotolong.trendlyne.trendlyne import *
 
 
-# greco - includes fratio and trendlyne
-class Phealth(Screener, Greco, Demat, Gweight, Bhav, Ftwhl, Corpact):
+# gfundareco - includes fratio and trendlyne
+class Phealth(Screener, Gfundareco, Demat, Gweight, Bhav, Ftwhl, Corpact):
 
     def __init__(self):
         super(Phealth, self).__init__()
@@ -49,7 +49,7 @@ class Phealth(Screener, Greco, Demat, Gweight, Bhav, Ftwhl, Corpact):
         fh = open(out_filename, "w")
 
         # oku - one k units
-        p_str = "ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,gb_score,reco_type,reco_cause"
+        p_str = "ticker,comp_name,cap_type,bat,cmp,low_52w,high_52w,up_52w_low,mos,txn_gap,plan_oku,cur_oku,tbd_oku,gb_score,funda_reco_type,funda_reco_cause"
         p_str += '\n'
 
         fh.write(p_str)
@@ -153,18 +153,18 @@ class Phealth(Screener, Greco, Demat, Gweight, Bhav, Ftwhl, Corpact):
                 p_str += str(giveback_score)
                 p_str += ','
 
-                if ticker in self.greco_type:
-                    reco_type = self.greco_type[ticker]
+                if ticker in self.gfunda_reco_type:
+                    funda_reco_type = self.gfunda_reco_type[ticker]
                 else:
-                    reco_type = '-'
-                p_str += reco_type
+                    funda_reco_type = '-'
+                p_str += funda_reco_type
                 p_str += ','
 
-                if ticker in self.greco_cause:
-                    reco_cause = self.greco_cause[ticker]
+                if ticker in self.gfunda_reco_cause:
+                    funda_reco_cause = self.gfunda_reco_cause[ticker]
                 else:
-                    reco_cause = '-'
-                p_str += reco_cause
+                    funda_reco_cause = '-'
+                p_str += funda_reco_cause
                 p_str += '\n'
 
                 logging.debug(p_str)
@@ -231,7 +231,7 @@ def main():
     phealth.demat_sum_load_data_from_db()
     phealth.screener_load_db()
     phealth.trendlyne_load_data_from_db()
-    phealth.greco_load_data_from_db()
+    phealth.gfunda_reco_load_data_from_db()
     phealth.gweight_load_data_from_db()
     phealth.bhav_load_data_from_db()
     phealth.ftwhl_load_data_from_db()

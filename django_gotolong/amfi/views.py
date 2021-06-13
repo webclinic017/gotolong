@@ -71,7 +71,7 @@ class AmfiDeficitView(ListView):
         return context
 
 
-class AmfiMissingView(ListView):
+class AmfiNotableExclusionView(ListView):
     dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     # missing large cap and mid cap : top 250 only
@@ -87,6 +87,22 @@ class AmfiMissingView(ListView):
 
         return context
 
+
+class AmfiNotableInclusionView(ListView):
+    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
+    gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
+    # included nano cap and micro cop > 500 only
+    queryset = Amfi.objects.all(). \
+        annotate(value_cost=Subquery(dematsum_qs.values('value_cost')[:1])). \
+        annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
+        annotate(deficit=ExpressionWrapper(F('cap_weight') * 1000 - F('value_cost'), output_field=IntegerField())). \
+        values('comp_rank', 'comp_name', 'value_cost', 'deficit'). \
+        filter(value_cost__isnull=False).filter(comp_rank__gte=500).order_by('-comp_rank')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        return context
 
 # one parameter named request
 def amfi_upload(request):
@@ -186,14 +202,22 @@ def amfi_upload(request):
         column[0] = column[0].strip()
         column[1] = column[1].strip()
 
+        comp_rank = int(column[0])
+        cap_type = column[6]
+        if comp_rank > 500 and cap_type == 'Small Cap':
+            if comp_rank > 750:
+                cap_type = 'Nano Cap'
+            else:
+                cap_type = 'Micro Cap'
+
         _, created = Amfi.objects.update_or_create(
-            comp_rank=column[0],
+            comp_rank=comp_rank,
             comp_name=column[1],
             comp_isin=column[2],
             bse_symbol=column[3],
             nse_symbol=column[4],
             avg_mcap=column[5],
-            cap_type=column[6]
+            cap_type=cap_type
         )
 
     lastrefd_update("amfi")

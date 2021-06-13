@@ -50,7 +50,9 @@ Number of object: {{ object_list|length }}
         <td>
             txn gap
         </td>
-
+        <td>
+            cap type
+        </td>
         <td>
             plan oku
         </td>
@@ -61,11 +63,12 @@ Number of object: {{ object_list|length }}
             tbd oku
         </td>
         <td>
-            reco type
+            funda reco type
         </td>
         <td>
-            reco cause
+            funda reco cause
         </td>
+
 
     </tr>
     {% for phealth_row in object_list %}
@@ -102,6 +105,10 @@ Number of object: {{ object_list|length }}
         </td>
 
         <td>
+            {{ phealth_row.cap_type }}
+        </td>
+
+        <td>
             {{ phealth_row.plan_oku}}
         </td>
         <td>
@@ -111,10 +118,10 @@ Number of object: {{ object_list|length }}
             {{ phealth_row.tbd_oku }}
         </td>
         <td>
-            {{ phealth_row.reco_type }}
+            {{ phealth_row.funda_reco_type }}
         </td>
         <td>
-            {{ phealth_row.reco_cause }}
+            {{ phealth_row.funda_reco_cause }}
         </td>
 
     </tr>

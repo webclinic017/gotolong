@@ -195,7 +195,7 @@ class Trendlyne(Amfi, Isin):
             pledge = float(pledge)
             low_3y = float(low_3y)
             low_5y = float(low_5y)
-            # (reco_type, reco_cause) = self.trendlyne_get_reco(stock_name, isin, bat, der, roce3, roe3, dpr2, sales2,
+            # (funda_reco_type, funda_reco_cause) = self.trendlyne_get_reco(stock_name, isin, bat, der, roce3, roe3, dpr2, sales2,
             #                                                  profit5, icr, pledge, low_3y, low_5y, notes)
 
             # remove any un-required stuff

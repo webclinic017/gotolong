@@ -11,7 +11,7 @@ from django_gotolong.demattxn.models import DematTxn
 from django_gotolong.dividend.models import Dividend
 from django_gotolong.fratio.models import Fratio
 from django_gotolong.ftwhl.models import Ftwhl
-from django_gotolong.greco.models import Greco
+from django_gotolong.gfundareco.models import Gfundareco
 from django_gotolong.gweight.models import Gweight
 from django_gotolong.indices.models import Indices
 from django_gotolong.lastrefd.models import Lastrefd
@@ -36,7 +36,7 @@ class DbstatListView(ListView):
     db_stat['dividend'] = Dividend.objects.count()
     db_stat['fratio'] = Fratio.objects.count()
     db_stat['ftwhl'] = Ftwhl.objects.count()
-    db_stat['greco'] = Greco.objects.count()
+    db_stat['gfundareco'] = Gfundareco.objects.count()
     db_stat['gweight'] = Gweight.objects.count()
     db_stat['indices'] = Indices.objects.count()
     db_stat['lastrefd'] = Lastrefd.objects.count()

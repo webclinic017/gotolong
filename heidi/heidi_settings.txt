@@ -106,7 +106,7 @@ Servers\gotolong_maria\ConnectCount<|||>3<|||>6
 Servers\gotolong_maria\ServerVersion<|||>3<|||>100508
 Servers\gotolong_maria\LastConnect<|||>1<|||>2021-01-17 15:49:24
 Servers\gotolong_maria\lastUsedDB<|||>1<|||>gotolong
-Servers\gotolong_maria\gotolong|global_reco\Sort<|||>1<|||>0_reco_ticker|
+Servers\gotolong_maria\gotolong|global_funda_reco\Sort<|||>1<|||>0_funda_reco_ticker|
 Servers\gotolong_pg\SessionCreated<|||>1<|||>2021-01-19 20:14:39
 Servers\gotolong_pg\Host<|||>1<|||>127.0.0.1
 Servers\gotolong_pg\WindowsAuth<|||>3<|||>0
