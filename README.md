@@ -91,11 +91,27 @@ gotolong_db_schema_install.sh pgsql import "${HEROKU_DATABASE_URL}"
 
 heroku pg:reset --confirm \<appname\> --app \<appname\>
 
-## Heroku DB Refresh
+# Quick Redeployment from github
 
-Refresh the DB on Heroku
+## DB : Refresh on Heroku
 
 gotolong_db_heroku_refresh.sh
+
+## App : Refresh on Heroku from github
+
+https://www.heroku.com/
+
+https://dashboard.heroku.com/apps
+
+personal : gotolong (1 app)
+
+Pipeline : Production : gotolong (github link)
+
+Deploy : https://dashboard.heroku.com/apps/gotolong/deploy/github
+
+Manual Deploy : Deploy a github branch (master) : Deploy Branch
+
+Your app was successfully deployed : View.
 
 # Modules Information
 
