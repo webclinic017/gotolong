@@ -3,28 +3,34 @@
 
 <h1>DematTxn</h1>
 
-<br>
-<a href="/demat/txn/refresh"> Refresh DematTxn </a>
-<br>
+<form action="/demat/txn/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
 
 Number of object: {{ object_list|length }}
 <br>
+
+Year {{ date|date:"Y" }}
+
+<br/>
+
 Total Amount: {{ total_amount }}
 <br>
 
-Annual Distribution
-
-<br>
+<br/>
 
 <table>
 
-
     <tr>
         <td>
-            key
+            month
         </td>
         <td>
-            value
+            amount
         </td>
     </tr>
 
@@ -56,45 +62,10 @@ Annual Distribution
 
 
     {% endfor %}
-
-
-    <br/>
-
-
-    {% for month_summary in month_summary_list %}
-
-    {% comment %}
-    {{ month_summary }}
-    {% endcomment %}
-
-    {% for key, value in month_summary.items %}
-
-    {% if forloop.counter|divisibleby:2 %}
-    {% comment %}
-    {{ starting index 1 }}
-    {% endcomment %}
-    {% else %}
-    <tr>
-        {% endif %}
-
-        <td>
-            {{ value }}
-        </td>
-
-        {% if forloop.counter|divisibleby:2 %}
-    </tr>
-    {% endif %}
-
-    {% endfor %}
-
-
-    {% endfor %}
-
 </table>
 
-{% for year in year_list %}
-<a href=/demat/txn/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
-{% endfor %}
+
+<br/>
 
 
 {% for date in date_list %}
@@ -104,6 +75,7 @@ Annual Distribution
 <a href=/demat/txn/list/> Go Up </a>
 
 <br>
+
 
 Monthly Archive :
 
@@ -117,41 +89,64 @@ Monthly Archive :
     {% for demattxn_row in object_list %}
     <tr>
         <td>
-            {{ demattxn_row.dt_id }}
+            {{ demattxn_row.stock_symbol }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_broker }}
+            {{ demattxn_row.comp_name }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_ticker }}
+            {{ demattxn_row.isin_code }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_isin }}
+            {{ demattxn_row.action }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_action }}
+            {{ demattxn_row.quantity }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_quantity }}
+            {{ demattxn_row.txn_price }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_price }}
+            {{ demattxn_row.brokerage }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_amount }}
+            {{ demattxn_row.txn_charges }}
         </td>
 
         <td>
-            {{ demattxn_row.dt_date }}
+            {{ demattxn_row.stamp_duty }}
         </td>
 
+        <td>
+            {{ demattxn_row.segment }}
+        </td>
+
+        <td>
+            {{ demattxn_row.stt }}
+        </td>
+
+        <td>
+            {{ demattxn_row.remarks }}
+        </td>
+
+        <td>
+            {{ demattxn_row.txn_date }}
+        </td>
+
+        <td>
+            {{ demattxn_row.exchange }}
+        </td>
+
+        <td>
+            {{ demattxn_row.unused1 }}
+        </td>
         <td>
             {{ demattxn_row.max_txn_date }}
         </td>

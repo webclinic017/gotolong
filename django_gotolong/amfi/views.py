@@ -39,10 +39,10 @@ class AmfiListView(ListView):
 
 
 class AmfiAmountView(ListView):
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
-        annotate(value_cost=Subquery(dematsum_qs.values('value_cost')[:1])). \
+        annotate(value_cost=Subquery(dematsum_qs.values('ds_costvalue')[:1])). \
         annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(deficit=ExpressionWrapper(F('cap_weight') * 1000 - F('value_cost'), output_field=IntegerField())). \
         values('comp_rank', 'comp_name', 'value_cost', 'deficit'). \
@@ -55,10 +55,10 @@ class AmfiAmountView(ListView):
 
 
 class AmfiDeficitView(ListView):
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
-        annotate(value_cost=Subquery(dematsum_qs.values('value_cost')[:1])). \
+        annotate(value_cost=Subquery(dematsum_qs.values('ds_costvalue')[:1])). \
         annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(deficit=ExpressionWrapper(F('cap_weight') * 1000 - F('value_cost'), output_field=IntegerField())). \
         values('comp_rank', 'comp_name', 'value_cost', 'deficit'). \
@@ -72,11 +72,11 @@ class AmfiDeficitView(ListView):
 
 
 class AmfiNotableExclusionView(ListView):
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     # missing large cap and mid cap : top 250 only
     queryset = Amfi.objects.all(). \
-        annotate(value_cost=Subquery(dematsum_qs.values('value_cost')[:1])). \
+        annotate(value_cost=Subquery(dematsum_qs.values('ds_costvalue')[:1])). \
         annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(deficit=ExpressionWrapper(F('cap_weight') * 1000 - F('value_cost'), output_field=IntegerField())). \
         values('comp_rank', 'comp_name', 'value_cost', 'deficit'). \
@@ -89,11 +89,11 @@ class AmfiNotableExclusionView(ListView):
 
 
 class AmfiNotableInclusionView(ListView):
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     # included nano cap and micro cop > 500 only
     queryset = Amfi.objects.all(). \
-        annotate(value_cost=Subquery(dematsum_qs.values('value_cost')[:1])). \
+        annotate(value_cost=Subquery(dematsum_qs.values('ds_costvalue')[:1])). \
         annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(deficit=ExpressionWrapper(F('cap_weight') * 1000 - F('value_cost'), output_field=IntegerField())). \
         values('comp_rank', 'comp_name', 'value_cost', 'deficit'). \

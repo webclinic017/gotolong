@@ -2,15 +2,9 @@
 {% include "user_top.html" %}
 
 <h1>DematSummary </h1>
-
-<form action="/demat/sum/upload/" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <label for="file1"> Upload a file</label>
-    <input type="file" id="file1" name="file">
-    <small>Only accepts CSV/XLS/XLSX files</small>
-    <button type="submit">Upload</button>
-</form>
-
+<br>
+<a href="/demat/sum/refresh"> Refresh DematSummary </a>
+<br>
 Number of object: {{ object_list|length }}
 <br>
 
@@ -18,63 +12,31 @@ Number of object: {{ object_list|length }}
     {% for dematsum_row in object_list %}
     <tr>
         <td>
-            {{ dematsum_row.stock_symbol }}
+            {{ dematsum_row.ds_broker }}
         </td>
 
         <td>
-            {{ dematsum_row.comp_name }}
+            {{ dematsum_row.ds_ticker }}
         </td>
 
         <td>
-            {{ dematsum_row.isin_code }}
+            {{ dematsum_row.ds_isin }}
         </td>
 
         <td>
-            {{ dematsum_row.qty }}
+            {{ dematsum_row.ds_qty }}
         </td>
 
         <td>
-            {{ dematsum_row.acp }}
+            {{ dematsum_row.ds_acp }}
         </td>
 
         <td>
-            {{ dematsum_row.cmp }}
+            {{ dematsum_row.ds_costvalue }}
         </td>
 
         <td>
-            {{ dematsum_row.pct_change }}
-        </td>
-
-        <td>
-            {{ dematsum_row.value_cost }}
-        </td>
-
-        <td>
-            {{ dematsum_row.value_market }}
-        </td>
-
-        <td>
-            {{ dematsum_row.days_gain }}
-        </td>
-
-        <td>
-            {{ dematsum_row.days_gain_pct }}
-        </td>
-
-        <td>
-            {{ dematsum_row.realized_pl }}
-        </td>
-
-        <td>
-            {{ dematsum_row.unrealized_pl }}
-        </td>
-
-        <td>
-            {{ dematsum_row.unrealized_pl_pct }}
-        </td>
-
-        <td>
-            {{ dematsum_row.unused1 }}
+            {{ dematsum_row.ds_mktvalue }}
         </td>
 
         <td>

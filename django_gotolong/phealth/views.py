@@ -40,19 +40,20 @@ class PhealthListView_All(ListView):
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
     gfunda_reco_qs = Gfundareco.objects.filter(funda_reco_isin=OuterRef("comp_isin"))
     tl_qs = Trendlyne.objects.filter(tl_isin=OuterRef("comp_isin"))
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
-    demattxn_qs = DematTxn.objects.filter(isin_code=OuterRef("comp_isin")).order_by('-txn_date').values('txn_date')
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
+    demattxn_qs = DematTxn.objects.filter(dt_isin=OuterRef("comp_isin")).order_by('-dt_date').values('dt_date')
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
         annotate(
-        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('value_cost')[:1]) / 1000, output_field=IntegerField())). \
+        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('ds_costvalue')[:1]) / 1000,
+                                  output_field=IntegerField())). \
         annotate(plan_oku=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(tbd_oku=ExpressionWrapper(F('plan_oku') - F('cur_oku'), output_field=IntegerField())). \
         annotate(bat=Subquery(tl_qs.values('tl_bat')[:1])). \
         annotate(ca_total=Subquery(ca_qs.values('ca_total')[:1])). \
         annotate(funda_reco_type=Subquery(gfunda_reco_qs.values('funda_reco_type')[:1])). \
         annotate(funda_reco_cause=Subquery(gfunda_reco_qs.values('funda_reco_cause')[:1])). \
-        annotate(txn_date=Subquery(demattxn_qs.values('txn_date')[:1])). \
+        annotate(dt_date=Subquery(demattxn_qs.values('dt_date')[:1])). \
         annotate(bhav_price=Subquery(bhav_qs.values('bhav_price')[:1])). \
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
@@ -62,7 +63,7 @@ class PhealthListView_All(ListView):
         filter(cur_oku__isnull=False). \
         filter(bat__isnull=False). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
+               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                'cap_type'). \
         order_by('low_margin')
 
@@ -94,19 +95,20 @@ class PhealthListView_Buy(ListView):
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
     gfunda_reco_qs = Gfundareco.objects.filter(funda_reco_isin=OuterRef("comp_isin"))
     tl_qs = Trendlyne.objects.filter(tl_isin=OuterRef("comp_isin"))
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
-    demattxn_qs = DematTxn.objects.filter(isin_code=OuterRef("comp_isin")).order_by('-txn_date').values('txn_date')
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
+    demattxn_qs = DematTxn.objects.filter(dt_isin=OuterRef("comp_isin")).order_by('-dt_date').values('dt_date')
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
         annotate(
-        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('value_cost')[:1]) / 1000, output_field=IntegerField())). \
+        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('ds_costvalue')[:1]) / 1000,
+                                  output_field=IntegerField())). \
         annotate(plan_oku=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(tbd_oku=ExpressionWrapper(F('plan_oku') - F('cur_oku'), output_field=IntegerField())). \
         annotate(bat=Subquery(tl_qs.values('tl_bat')[:1])). \
         annotate(ca_total=Subquery(ca_qs.values('ca_total')[:1])). \
         annotate(funda_reco_type=Subquery(gfunda_reco_qs.values('funda_reco_type')[:1])). \
         annotate(funda_reco_cause=Subquery(gfunda_reco_qs.values('funda_reco_cause')[:1])). \
-        annotate(txn_date=Subquery(demattxn_qs.values('txn_date')[:1])). \
+        annotate(dt_date=Subquery(demattxn_qs.values('dt_date')[:1])). \
         annotate(bhav_price=Subquery(bhav_qs.values('bhav_price')[:1])). \
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
@@ -117,7 +119,7 @@ class PhealthListView_Buy(ListView):
         filter(bat__isnull=False). \
         filter(funda_reco_type='Buy'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
         order_by('low_margin')
 
     def get_context_data(self, **kwargs):
@@ -148,19 +150,20 @@ class PhealthListView_Sell(ListView):
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
     gfunda_reco_qs = Gfundareco.objects.filter(funda_reco_isin=OuterRef("comp_isin"))
     tl_qs = Trendlyne.objects.filter(tl_isin=OuterRef("comp_isin"))
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
-    demattxn_qs = DematTxn.objects.filter(isin_code=OuterRef("comp_isin")).order_by('-txn_date').values('txn_date')
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
+    demattxn_qs = DematTxn.objects.filter(dt_isin=OuterRef("comp_isin")).order_by('-dt_date').values('dt_date')
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
         annotate(
-        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('value_cost')[:1]) / 1000, output_field=IntegerField())). \
+        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('ds_costvalue')[:1]) / 1000,
+                                  output_field=IntegerField())). \
         annotate(plan_oku=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(tbd_oku=ExpressionWrapper(F('plan_oku') - F('cur_oku'), output_field=IntegerField())). \
         annotate(bat=Subquery(tl_qs.values('tl_bat')[:1])). \
         annotate(ca_total=Subquery(ca_qs.values('ca_total')[:1])). \
         annotate(funda_reco_type=Subquery(gfunda_reco_qs.values('funda_reco_type')[:1])). \
         annotate(funda_reco_cause=Subquery(gfunda_reco_qs.values('funda_reco_cause')[:1])). \
-        annotate(txn_date=Subquery(demattxn_qs.values('txn_date')[:1])). \
+        annotate(dt_date=Subquery(demattxn_qs.values('dt_date')[:1])). \
         annotate(bhav_price=Subquery(bhav_qs.values('bhav_price')[:1])). \
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
@@ -170,7 +173,7 @@ class PhealthListView_Sell(ListView):
         filter(cur_oku__isnull=False). \
         filter(funda_reco_type='Sell'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
         order_by('safety_margin')
 
     def get_context_data(self, **kwargs):
@@ -200,19 +203,20 @@ class PhealthListView_Hold(ListView):
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
     gfunda_reco_qs = Gfundareco.objects.filter(funda_reco_isin=OuterRef("comp_isin"))
     tl_qs = Trendlyne.objects.filter(tl_isin=OuterRef("comp_isin"))
-    dematsum_qs = DematSum.objects.filter(isin_code=OuterRef("comp_isin"))
-    demattxn_qs = DematTxn.objects.filter(isin_code=OuterRef("comp_isin")).order_by('-txn_date').values('txn_date')
+    dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
+    demattxn_qs = DematTxn.objects.filter(dt_isin=OuterRef("comp_isin")).order_by('-dt_date').values('dt_date')
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
     queryset = Amfi.objects.all(). \
         annotate(
-        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('value_cost')[:1]) / 1000, output_field=IntegerField())). \
+        cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('ds_costvalue')[:1]) / 1000,
+                                  output_field=IntegerField())). \
         annotate(plan_oku=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
         annotate(tbd_oku=ExpressionWrapper(F('plan_oku') - F('cur_oku'), output_field=IntegerField())). \
         annotate(bat=Subquery(tl_qs.values('tl_bat')[:1])). \
         annotate(ca_total=Subquery(ca_qs.values('ca_total')[:1])). \
         annotate(funda_reco_type=Subquery(gfunda_reco_qs.values('funda_reco_type')[:1])). \
         annotate(funda_reco_cause=Subquery(gfunda_reco_qs.values('funda_reco_cause')[:1])). \
-        annotate(txn_date=Subquery(demattxn_qs.values('txn_date')[:1])). \
+        annotate(dt_date=Subquery(demattxn_qs.values('dt_date')[:1])). \
         annotate(bhav_price=Subquery(bhav_qs.values('bhav_price')[:1])). \
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
@@ -222,7 +226,7 @@ class PhealthListView_Hold(ListView):
         filter(cur_oku__isnull=False). \
         filter(funda_reco_type='Hold'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'txn_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
         order_by('-safety_margin')
 
     def get_context_data(self, **kwargs):

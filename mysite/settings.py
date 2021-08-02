@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_gotolong.amfi',
     'django_gotolong.bhav',
+    'django_gotolong.broker.icidir.sum',
+    'django_gotolong.broker.icidir.txn',
     'django_gotolong.corpact',
     'django_gotolong.bstmtdiv',
     'django_gotolong.dbstat',

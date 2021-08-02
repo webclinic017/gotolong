@@ -11,22 +11,14 @@ from django_gotolong.amfi.models import Amfi
 
 
 class DematSum(models.Model):
-    stock_symbol = models.TextField(blank=True, null=True)
-    comp_name = models.TextField(primary_key=True)
+    ds_broker = models.TextField(blank=True, null=True)
+    ds_ticker = models.TextField(primary_key=True)
     # isin_code = models.TextField(blank=True, null=True)
-    isin_code = models.ForeignKey(Amfi, on_delete=models.DO_NOTHING)
-    qty = models.IntegerField(blank=True, null=True)
-    acp = models.FloatField(blank=True, null=True)
-    cmp = models.TextField(blank=True, null=True)
-    pct_change = models.TextField(blank=True, null=True)
-    value_cost = models.FloatField(blank=True, null=True)
-    value_market = models.FloatField(blank=True, null=True)
-    days_gain = models.TextField(blank=True, null=True)
-    days_gain_pct = models.TextField(blank=True, null=True)
-    realized_pl = models.TextField(blank=True, null=True)
-    unrealized_pl = models.TextField(blank=True, null=True)
-    unrealized_pl_pct = models.TextField(blank=True, null=True)
-    unused1 = models.TextField(blank=True, null=True)
+    ds_isin = models.TextField(blank=True, null=True)
+    ds_qty = models.IntegerField(blank=True, null=True)
+    ds_acp = models.FloatField(blank=True, null=True)
+    ds_costvalue = models.FloatField(blank=True, null=True)
+    ds_mktvalue = models.FloatField(blank=True, null=True)
 
     # amfis = models.ManyToManyField(Amfi)
 
@@ -36,4 +28,4 @@ class DematSum(models.Model):
 def dematsum_load_stocks(dematsum_list):
     # load list of demat symbols
     for dematsum in DematSum.objects.all():
-        dematsum_list.append(dematsum.stock_symbol)
+        dematsum_list.append(dematsum.ds_ticker)
