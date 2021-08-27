@@ -1,0 +1,88 @@
+{% include "top.html" %}
+{% include "user_top.html" %}
+
+<h1>Broker zerodha Txn</h1>
+
+<form action="/broker/zerodha/ztxn/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+Number of object: {{ object_list|length }}
+<br>
+
+<table>
+    {% for bzt_row in object_list %}
+    <tr>
+        <td>
+            {{ bzt_row.bzt_id }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_tdate }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_tsymbol }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_exchange }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_segment }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_trade_type }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_quantity }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_price }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_order_id }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_trade_id }}
+        </td>
+
+        <td>
+            {{ bzt_row.bzt_order_exec_time }}
+        </td>
+
+        <td>
+            {{ bzt_row.max_txn_date }}
+        </td>
+        <td>
+            {{ bzt_row.months_gap }}
+        </td>
+        <td>
+            {{ bzt_row.txn_year }}
+        </td>
+        <td>
+            {{ bzt_row.txn_amount }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td>
+            No broker icidir txn yet.
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% include "bottom.html" %}

@@ -116,55 +116,7 @@ Monthly Archive :
 <table>
     {% for demattxn_row in object_list %}
     <tr>
-        <td>
-            {{ demattxn_row.dt_id }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_broker }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_ticker }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_isin }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_action }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_quantity }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_price }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_amount }}
-        </td>
-
-        <td>
-            {{ demattxn_row.dt_date }}
-        </td>
-
-        <td>
-            {{ demattxn_row.max_txn_date }}
-        </td>
-        <td>
-            {{ demattxn_row.months_gap }}
-        </td>
-        <td>
-            {{ demattxn_row.txn_year }}
-        </td>
-        <td>
-            {{ demattxn_row.txn_amount }}
-        </td>
-
+        {% include "demattxn/demattxn_fields.html" %}
     </tr>
     {% empty %}
     <tr>

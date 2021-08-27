@@ -1,9 +1,9 @@
 {% include "top.html" %}
 {% include "user_top.html" %}
 
-<h1>Broker Idirect Summary</h1>
+<h1>Broker icidir Sum</h1>
 
-<form action="/broker/icidir/sum/upload/" method="POST" enctype="multipart/form-data">
+<form action="/broker/icidir/isum/upload/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="file1"> Upload a file</label>
     <input type="file" id="file1" name="file">
@@ -15,93 +15,93 @@ Number of object: {{ object_list|length }}
 <br>
 
 <table>
-    {% for dematsum_row in object_list %}
+    {% for bis_row in object_list %}
     <tr>
         <td>
-            {{ dematsum_row.stock_symbol }}
+            {{ bis_row.bis_stock_symbol }}
         </td>
 
         <td>
-            {{ dematsum_row.comp_name }}
+            {{ bis_row.bis_company_name }}
         </td>
 
         <td>
-            {{ dematsum_row.isin_code }}
+            {{ bis_row.bis_isin_code }}
         </td>
 
         <td>
-            {{ dematsum_row.qty }}
+            {{ bis_row.bis_qty }}
         </td>
 
         <td>
-            {{ dematsum_row.acp }}
+            {{ bis_row.bis_acp }}
         </td>
 
         <td>
-            {{ dematsum_row.cmp }}
+            {{ bis_row.bis_cmp }}
         </td>
 
         <td>
-            {{ dematsum_row.pct_change }}
+            {{ bis_row.bis_pct_change }}
         </td>
 
         <td>
-            {{ dematsum_row.value_cost }}
+            {{ bis_row.bis_value_cost }}
         </td>
 
         <td>
-            {{ dematsum_row.value_market }}
+            {{ bis_row.bis_value_market }}
         </td>
 
         <td>
-            {{ dematsum_row.days_gain }}
+            {{ bis_row.bis_days_gain }}
         </td>
 
         <td>
-            {{ dematsum_row.days_gain_pct }}
+            {{ bis_row.bis_days_gain_pct }}
         </td>
 
         <td>
-            {{ dematsum_row.realized_pl }}
+            {{ bis_row.bis_realized_pl }}
         </td>
 
         <td>
-            {{ dematsum_row.unrealized_pl }}
+            {{ bis_row.bis_unrealized_pl }}
         </td>
 
         <td>
-            {{ dematsum_row.unrealized_pl_pct }}
+            {{ bis_row.bis_unrealized_pl_pct }}
         </td>
 
         <td>
-            {{ dematsum_row.unused1 }}
+            {{ bis_row.unused1 }}
         </td>
 
         <td>
-            {{ dematsum_row.comp_rank }}
+            {{ bis_row.comp_rank }}
         </td>
 
         <td>
-            {{ dematsum_row.cap_type }}
+            {{ bis_row.cap_type }}
         </td>
 
         <td>
-            {{ dematsum_row.funda_reco_type }}
+            {{ bis_row.funda_reco_type }}
         </td>
 
         <td>
-            {{ dematsum_row.funda_reco_cause }}
+            {{ bis_row.funda_reco_cause }}
         </td>
 
         <td>
-            {{ dematsum_row.cap_weight }}
+            {{ bis_row.cap_weight }}
         </td>
 
         <td>
-            {{ dematsum_row.cap_count }}
+            {{ bis_row.cap_count }}
         </td>
         <td>
-            {{ dematsum_row.cap_cost }}
+            {{ bis_row.cap_cost }}
         </td>
 
     </tr>

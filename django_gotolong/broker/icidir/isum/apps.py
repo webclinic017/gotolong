@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class BrokerIcidirSumConfig(AppConfig):
-    name = 'dematsum'
+    name = 'broker_icidir_sum'

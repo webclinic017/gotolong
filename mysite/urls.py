@@ -22,23 +22,23 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, \
-  AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload
+    AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload
 
 from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
 
-from django_gotolong.broker.icidir.sum.views import BrokerIcidirSumListView, BrokerIcidirSumUpload
-from django_gotolong.broker.icidir.txn.views import BrokerIcidirTxnListView, BrokerIcidirTxnUpload
+from django_gotolong.broker.icidir.isum.views import BrokerIcidirSumListView, BrokerIcidirSumUpload
+from django_gotolong.broker.icidir.itxn.views import BrokerIcidirTxnListView, BrokerIcidirTxnUpload
 
 from django_gotolong.bstmtdiv.views import BstmtDivListView, bstmtdiv_upload
 from django_gotolong.bstmtdiv.views import BstmtDivYearArchiveView, BstmtDivMonthArchiveView, BstmtDivAmountView, \
-  BstmtDivFrequencyView
+    BstmtDivFrequencyView
 
 from django_gotolong.corpact.views import CorpactListView, corpact_upload
 
 from django_gotolong.dbstat.views import DbstatListView
 
 from django_gotolong.dematsum.views import DematSumListView, DematSumRankView, DematSumTickerView, DematSumAmountView, \
-  DematSumCapTypeView, DematSumRecoView
+    DematSumCapTypeView, DematSumRecoView
 
 from django_gotolong.dividend.views import DividendListView, DividendRefreshView, DividendTickerListView
 
@@ -132,16 +132,18 @@ urlpatterns = [
                 path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
                 path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
                 path('phealth/list/all/', PhealthListView_All.as_view(), name='phealth-list-all'),
-                path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
-                path('phealth/list/hold/', PhealthListView_Hold.as_view(), name='phealth-list-hold'),
-                path('phealth/list/sell/', PhealthListView_Sell.as_view(), name='phealth-list-sell'),
-                path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
-                path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
-                path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),
-                path('uploaddoc/simple/', views.simple_upload, name='uploaddoc-simple'),
-                path('uploaddoc/model-form/', views.model_form_upload, name='uploaddoc-model-form'),
-                path('uploaddoc/list/', views.list, name='uploaddoc-list'),
-                path('uploaddoc/delete/<int:id>/', views.delete_view, name='uploaddoc-delete'),
+                  path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
+                  path('phealth/list/hold/', PhealthListView_Hold.as_view(), name='phealth-list-hold'),
+                  path('phealth/list/sell/', PhealthListView_Sell.as_view(), name='phealth-list-sell'),
+                  path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
+                  path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
+                  path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),
+                  path('uploaddoc/simple/', views.simple_upload, name='uploaddoc-simple'),
+                  path('uploaddoc/model-form/', views.model_form_upload, name='uploaddoc-model-form'),
+                  path('uploaddoc/list/', views.list, name='uploaddoc-list'),
+                  path('uploaddoc/delete/<int:id>/', views.delete_view, name='uploaddoc-delete'),
+                  path('users/', include('django_gotolong.users.urls')),
+                  path('accounts/', include('django.contrib.auth.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 jsched_task_startup()

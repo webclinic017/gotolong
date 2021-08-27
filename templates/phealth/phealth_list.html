@@ -17,60 +17,59 @@
 
 Number of object: {{ object_list|length }}
 
-<table>
-
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
     <tr>
-        <td>
+        <th>
             nse_symbol
-        </td>
-        <td>
+        </th>
+        <th>
             comp_name
-        </td>
-        <td>
+        </th>
+        <th>
             bhav price
-        </td>
-        <td>
+        </th>
+        <th>
             bat
-        </td>
-        <td>
+        </th>
+        <th>
             ftwhl low
-        </td>
-        <td>
+        </th>
+        <th>
             mos (%)
-        </td>
-        <td>
+        </th>
+        <th>
             +52w low (%)
-        </td>
-        <td>
+        </th>
+        <th>
             ca total
-        </td>
-        <td>
+        </th>
+        <th>
             txn date
-        </td>
-        <td>
+        </th>
+        <th>
             txn gap
-        </td>
-        <td>
+        </th>
+        <th>
             cap type
-        </td>
-        <td>
+        </th>
+        <th>
             plan oku
-        </td>
-        <td>
+        </th>
+        <th>
             cur oku
-        </td>
-        <td>
+        </th>
+        <th>
             tbd oku
-        </td>
-        <td>
+        </th>
+        <th>
             funda reco type
-        </td>
-        <td>
+        </th>
+        <th>
             funda reco cause
-        </td>
-
-
-    </tr>
+        </th>
+    </thead>
+    <tbody>
     {% for phealth_row in object_list %}
     <tr>
         <td>
@@ -128,6 +127,7 @@ Number of object: {{ object_list|length }}
     {% empty %}
     <tr>No phealth yet.</tr>
     {% endfor %}
+    </tbody>
 </table>
 
 {% include "bottom.html" %}

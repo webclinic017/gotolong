@@ -21,6 +21,8 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('icidir/sum/', include('django_gotolong.broker.icidir.sum.urls')),
-    path('icidir/txn/', include('django_gotolong.broker.icidir.txn.urls')),
+    path('icidir/isum/', include('django_gotolong.broker.icidir.isum.urls')),
+    path('icidir/itxn/', include('django_gotolong.broker.icidir.itxn.urls')),
+    path('zerodha/zsum/', include('django_gotolong.broker.zerodha.zsum.urls')),
+    path('zerodha/ztxn/', include('django_gotolong.broker.zerodha.ztxn.urls')),
 ]

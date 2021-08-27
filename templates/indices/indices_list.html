@@ -29,30 +29,29 @@ Industries Count : {{industries_count}}
 
 <br>
 
-<table>
-    <tr>
-        <td>
-            Number of object: {{ object_list|length }}
-        </td>
-    </tr>
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
 
     <tr>
-        <td>
+        <th>
             Company Name
-        </td>
-        <td>
+        </th>
+        <th>
             Company Industry
-        </td>
-        <td>
+        </th>
+        <th>
             Company Ticker
-        </td>
-        <td>
+        </th>
+        <th>
             Company ISIN
-        </td>
-        <td>
+        </th>
+        <th>
             Companies count
-        </td>
+        </th>
     </tr>
+    </thead>
+    <tbody>
+
     {% for ind_row in object_list %}
     <tr>
         <td>
@@ -75,6 +74,7 @@ Industries Count : {{industries_count}}
     {% empty %}
     <tr>No Indices yet.</tr>
     {% endfor %}
+    </tbody>
 </table>
 
 {% include "bottom.html" %}

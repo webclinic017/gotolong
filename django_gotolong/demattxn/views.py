@@ -22,7 +22,7 @@ from django.http import HttpResponseRedirect
 
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
-from django_gotolong.broker.icidir.txn.models import BrokerIcidirTxn
+from django_gotolong.broker.icidir.itxn.models import BrokerIcidirTxn
 
 class DematTxnYearArchiveView(YearArchiveView):
     queryset = DematTxn.objects.all()

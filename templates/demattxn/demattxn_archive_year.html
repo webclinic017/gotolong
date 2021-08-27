@@ -88,78 +88,7 @@ Monthly Archive :
 <table>
     {% for demattxn_row in object_list %}
     <tr>
-        <td>
-            {{ demattxn_row.stock_symbol }}
-        </td>
-
-        <td>
-            {{ demattxn_row.comp_name }}
-        </td>
-
-        <td>
-            {{ demattxn_row.isin_code }}
-        </td>
-
-        <td>
-            {{ demattxn_row.action }}
-        </td>
-
-        <td>
-            {{ demattxn_row.quantity }}
-        </td>
-
-        <td>
-            {{ demattxn_row.txn_price }}
-        </td>
-
-        <td>
-            {{ demattxn_row.brokerage }}
-        </td>
-
-        <td>
-            {{ demattxn_row.txn_charges }}
-        </td>
-
-        <td>
-            {{ demattxn_row.stamp_duty }}
-        </td>
-
-        <td>
-            {{ demattxn_row.segment }}
-        </td>
-
-        <td>
-            {{ demattxn_row.stt }}
-        </td>
-
-        <td>
-            {{ demattxn_row.remarks }}
-        </td>
-
-        <td>
-            {{ demattxn_row.txn_date }}
-        </td>
-
-        <td>
-            {{ demattxn_row.exchange }}
-        </td>
-
-        <td>
-            {{ demattxn_row.unused1 }}
-        </td>
-        <td>
-            {{ demattxn_row.max_txn_date }}
-        </td>
-        <td>
-            {{ demattxn_row.months_gap }}
-        </td>
-        <td>
-            {{ demattxn_row.txn_year }}
-        </td>
-        <td>
-            {{ demattxn_row.txn_amount }}
-        </td>
-
+        {% include "demattxn/demattxn_fields.html" %}
     </tr>
     {% empty %}
     <tr>

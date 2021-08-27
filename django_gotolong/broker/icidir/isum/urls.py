@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from django_gotolong.broker.icidir.sum.views import BrokerIcidirSumListView, BrokerIcidirSumUpload
+from django_gotolong.broker.icidir.isum.views import BrokerIcidirSumListView, BrokerIcidirSumUpload
 
 urlpatterns = [
     path('list/', BrokerIcidirSumListView.as_view(), name='broker-icidir-sum-list'),

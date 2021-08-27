@@ -20,9 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from django_gotolong.broker.icidir.txn.views import BrokerIcidirTxnListView, BrokerIcidirTxnUpload
+from django_gotolong.broker.zerodha.ztxn.views import BrokerZerodhaTxnListView, BrokerZerodhaTxnUpload
 
 urlpatterns = [
-    path('list/', BrokerIcidirTxnListView.as_view(), name='broker-icidir-txn-list'),
-    path('upload/', BrokerIcidirTxnUpload, name='broker-icidir-txn-upload'),
+    path('list/', BrokerZerodhaTxnListView.as_view(), name='broker-zerodha-txn-list'),
+    path('upload/', BrokerZerodhaTxnUpload, name='broker-zerodha-txn-upload'),
 ]

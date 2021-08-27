@@ -2,12 +2,15 @@
 {% include "global_top.html" %}
 
 <h1>Global Weight List </h1>
-<table>
-    <tr>
-        <td>
 
-        </td>
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+        <th>cap_type</th>
+        <th>cap_weight</th>
     </tr>
+    </thead>
+    <tbody>
     {% for weight_row in object_list %}
     <tr>
         <td>
@@ -20,6 +23,7 @@
     {% empty %}
     <tr>No Weight yet.</tr>
     {% endfor %}
+    </tbody>
 </table>
 
 {% include "bottom.html" %}

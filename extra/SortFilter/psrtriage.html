@@ -1,0 +1,93 @@
+<h2>Welcome to results</h2>
+
+Recent results are available in the below table<br><br>
+<style>
+    table
+    {
+    background: White;
+    border: White;
+    }
+
+</style>
+<style>
+    th {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-color: grey;
+    color: White;
+    background: #0066CC;
+    padding-left:4px;
+    padding-right:4px;
+    padding-bottom:2px;
+    margin-color: White;
+    }
+</style>
+<style>
+    td {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-color: grey;
+    color: black;
+    vertical-align:top;
+    margin-color: White;
+    }
+    tr:nth-child(even) {
+      background-color: #FFFFCC;
+    }
+
+</style>
+<link rel="Stylesheet" href="jquery.dataTables.min.css"/>
+<script type="text/javascript" src="jquery-1.12.3.js"></script>
+<script type="text/javascript" src="jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#MyTable').DataTable( {
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+                //to select and search from grid
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
+
+</script>
+<table id="MyTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+        <th>S.No</th>
+        <th>Pod</th>
+        <th>Release</th>
+        <th>Service</th>
+        <th>Result</th>
+        <th>OSS</th>
+        <th>Type</th>
+        <th>Time Stamp</th>
+        <th>Version</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+    </tr>
+    </tbody>
+</table>
