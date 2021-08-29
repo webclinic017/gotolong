@@ -9,7 +9,8 @@ from django_gotolong.users import views as users_views
 from django_gotolong.users.views import UsersListView
 
 urlpatterns = [
-    path('index/', users_views.index, name="home"),
+    path('index/', users_views.index, name="users-index"),
     path('list/', UsersListView.as_view(), name='users-list'),
-    path('sign-up/', users_views.sign_up, name="users-sign-up")
+    path('sign-up/', users_views.sign_up, name="users-sign-up"),
+    path('logout/', users_views.logout_view, name="users-logout")
 ]

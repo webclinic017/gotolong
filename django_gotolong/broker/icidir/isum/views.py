@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from django.views.generic.list import ListView
 
-from django.db.models import OuterRef, Subquery, Count, Sum
+from django.db.models import OuterRef, Subquery, Count, Sum, Max, Min
 from django.db.models.functions import Trim, Lower, Round
 
 from django_gotolong.amfi.models import Amfi
@@ -28,7 +28,8 @@ class BrokerIcidirSumListView(ListView):
     # if pagination is desired
     # paginate_by = 300
 
-    queryset = BrokerIcidirSum.objects.all()
+    def get_queryset(self):
+        return BrokerIcidirSum.objects.all().filter(bis_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -127,17 +128,27 @@ def BrokerIcidirSumUpload(request):
 
     # delete existing records
     print('Deleted existing BrokerIcidirSum data')
-    BrokerIcidirSum.objects.all().delete()
+    BrokerIcidirSum.objects.all().filter(bis_user_id=request.user.id).delete()
+
+    max_bis_id_instances = BrokerIcidirSum.objects.aggregate(max_id=Max('bis_id'))
+    try:
+        max_bis_id = max_bis_id_instances[0].max_id
+    except KeyError:
+        max_bis_id = 0
 
     # setup a stream which is when we loop through each line we are able to handle a data in a stream
 
     io_string = io.StringIO(data_set)
     next(io_string)
+    unique_id = max_bis_id
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
+        unique_id += 1
         column[0] = column[0].strip()
         column[1] = column[1].strip()
 
         _, created = BrokerIcidirSum.objects.update_or_create(
+            bis_id=unique_id,
+            bis_user_id=request.user.id,
             bis_stock_symbol=column[0],
             bis_company_name=column[1],
             bis_isin_code_id=column[2],

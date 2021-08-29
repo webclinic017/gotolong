@@ -11,7 +11,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic.list import ListView
 from django.views import View
 
-from django.db.models import OuterRef, Subquery, Count, Sum
+from django.db.models import OuterRef, Subquery, Count, Sum, Max, Min
 from django.db.models.functions import Trim, Lower, Round
 
 from django_gotolong.amfi.models import Amfi
@@ -28,14 +28,16 @@ from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 from django_gotolong.broker.icidir.isum.models import BrokerIcidirSum
 
-
 class DematSumListView(ListView):
     model = DematSum
 
     # if pagination is desired
     # paginate_by = 300
 
-    queryset = DematSum.objects.all()
+    # queryset = DematSum.objects.all()
+
+    def get_queryset(self):
+        return DematSum.objects.all().filter(ds_user_id=self.request.user.id)
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
@@ -169,19 +171,28 @@ class DematSumRefreshView(View):
         template = "gfundareco/gfunda_reco_list.html"
 
         # first delete all existing dematsum objects
-        DematSum.objects.all().delete()
+        DematSum.objects.all().filter(ds_user_id=request.user.id).delete()
+        max_id_instances = DematSum.objects.aggregate(max_id=Max('ds_id'))
+        try:
+            max_ds_id = max_id_instances[0].max_id
+        except KeyError:
+            max_ds_id = 0
 
+        unique_id = max_ds_id
         for brec in BrokerIcidirSum.objects.all():
-            print(brec.stock_symbol, brec.isin_code_id, brec.qty)
-            print(brec.acp, brec.value_cost, brec.value_market)
+            unique_id += 1
+            print(brec.bis_stock_symbol, brec.bis_isin_code_id, brec.bis_qty)
+            print(brec.bis_acp, brec.bis_value_cost, brec.bis_value_market)
             _, created = DematSum.objects.update_or_create(
+                ds_id=unique_id,
+                ds_user_id=request.user.id,
                 ds_broker='icidir',
-                ds_ticker=brec.stock_symbol,
-                ds_isin=brec.isin_code_id,
-                ds_qty=brec.qty,
-                ds_acp=brec.acp,
-                ds_costvalue=brec.value_cost,
-                ds_mktvalue=brec.value_market
+                ds_ticker=brec.bis_stock_symbol,
+                ds_isin=brec.bis_isin_code_id,
+                ds_qty=brec.bis_qty,
+                ds_acp=brec.bis_acp,
+                ds_costvalue=brec.bis_value_cost,
+                ds_mktvalue=brec.bis_value_market
             )
 
         # breakpoint()

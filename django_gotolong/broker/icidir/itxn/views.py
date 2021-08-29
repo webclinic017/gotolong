@@ -27,9 +27,11 @@ class BrokerIcidirTxnListView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-    queryset = BrokerIcidirTxn.objects.all()
-
+    # queryset = BrokerIcidirTxn.objects.all()
     # month_list = BrokerIcidirTxn.objects.dates('txn_date', 'month')
+
+    def get_queryset(self):
+        return BrokerIcidirTxn.objects.all().filter(bit_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -150,13 +152,19 @@ def BrokerIcidirTxnUpload(request):
 
     # delete existing records
     print('Deleted existing BrokerIcidirTxn data')
-    BrokerIcidirTxn.objects.all().delete()
+    BrokerIcidirTxn.objects.all().filter(bit_user_id=request.user.id).delete()
+
+    max_id_instances = BrokerIcidirTxn.objects.aggregate(max_id=Max('bit_id'))
+    try:
+        max_bit_id = max_id_instances[0].max_id
+    except KeyError:
+        max_bit_id = 0
 
     # setup a stream which is when we loop through each line we are able to handle a data in a stream
 
     io_string = io.StringIO(data_set)
     next(io_string)
-    unique_id = 0
+    unique_id = max_bit_id
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
         unique_id += 1
         column[0] = column[0].strip()
@@ -169,6 +177,7 @@ def BrokerIcidirTxnUpload(request):
 
         _, created = BrokerIcidirTxn.objects.update_or_create(
             bit_id=unique_id,
+            bit_user_id=request.user.id,
             bit_stock_symbol=column[0],
             bit_company_name=column[1],
             bit_isin_code=column[2],

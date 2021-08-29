@@ -1,10 +1,12 @@
 from django.db import models
 
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class DematTxn(models.Model):
     dt_id = models.AutoField(primary_key=True)
+    dt_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     dt_broker = models.TextField(blank=True, null=True)
     dt_ticker = models.TextField(blank=True, null=True)
     dt_isin = models.TextField(blank=True, null=True)

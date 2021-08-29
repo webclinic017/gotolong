@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 
 from django.views.generic.list import ListView
 
+from django.contrib.auth import logout
 
 class UsersListView(ListView):
     model = User
@@ -32,3 +33,8 @@ def sign_up(request):
             return HttpResponseRedirect(reverse("user-list"))
     context['form'] = form
     return render(request, 'registration/sign_up.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect(reverse("index"))

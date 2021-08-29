@@ -7,12 +7,18 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+from django.contrib.auth.models import User  # new
+
 from django_gotolong.amfi.models import Amfi
 
 
 class BrokerIcidirSum(models.Model):
+    bis_id = models.AutoField(primary_key=True)
+    bis_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    # bis_user_id = models.IntegerField(blank=True, null=True)
     bis_stock_symbol = models.TextField(blank=True, null=True)
-    bis_company_name = models.TextField(primary_key=True)
+    bis_company_name = models.TextField(blank=True, null=True)
+    # db table will have suffix of _id for foreign key
     # isin_code = models.TextField(blank=True, null=True)
     bis_isin_code = models.ForeignKey(Amfi, on_delete=models.DO_NOTHING)
     bis_qty = models.IntegerField(blank=True, null=True)
@@ -32,7 +38,7 @@ class BrokerIcidirSum(models.Model):
 
     class Meta:
         db_table = 'broker_icidir_sum'
-
+        unique_together = (('bis_user_id', 'bis_company_name'),)
 
 def broker_idirect_sum_load_stocks(brokersum_list):
     # load list of demat symbols

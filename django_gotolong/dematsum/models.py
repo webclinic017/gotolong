@@ -7,10 +7,14 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+from django.contrib.auth.models import User
+
 from django_gotolong.amfi.models import Amfi
 
 
 class DematSum(models.Model):
+    ds_id = models.IntegerField(blank=True, null=True)
+    ds_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     ds_broker = models.TextField(blank=True, null=True)
     ds_ticker = models.TextField(primary_key=True)
     # isin_code = models.TextField(blank=True, null=True)

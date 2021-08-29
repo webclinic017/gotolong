@@ -104,16 +104,19 @@ $(document).ready(function() {
 <a href="/page/quick-links/"> Quick Links </a> |
 <a href="/page/sitemap/"> Sitemap </a> |
 <a href="/admin/"> Admin console </a> |
-<a href="/page/about/"> About </a> |
+<a href="/page/about/"> About Us </a> |
 <a href="/page/contact/"> Contact Us </a> |
 
 <br>
 |
 {% if user.is_authenticated %}
-User {{ user.username }} | <a href="/accounts/logout/"> Logout </a> |
+User {{ user.username }} | <a href="/users/logout/"> Logout </a> |
+<!-- switched from /accounts/logout that takes to admin login page -->
+
 {% else %}
-<a href="/accounts/login/"> Login (WIP)</a> |
-<a href="/users/sign-up/"> Sign-Up (WIP)</a> |
+<a href="/accounts/login/"> Login </a> |
+<a href="/users/sign-up/"> Sign-Up </a> |
+Demo User/Password (demo/dummy123$)
 {% endif %}
 <br>
 <br>

@@ -31,6 +31,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# avoid going to /accounts/profile/ by default
+LOGIN_REDIRECT_URL = 'index'
+
 # Application definition
 
 INSTALLED_APPS = [
