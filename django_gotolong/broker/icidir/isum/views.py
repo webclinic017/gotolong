@@ -131,10 +131,11 @@ def BrokerIcidirSumUpload(request):
     BrokerIcidirSum.objects.all().filter(bis_user_id=request.user.id).delete()
 
     max_bis_id_instances = BrokerIcidirSum.objects.aggregate(max_id=Max('bis_id'))
-    try:
-        max_bis_id = max_bis_id_instances[0].max_id
-    except KeyError:
+    max_bis_id = max_bis_id_instances['max_id']
+    print('max_bis_id ', max_bis_id)
+    if max_bis_id is None:
         max_bis_id = 0
+        print('max_bis_id ', max_bis_id)
 
     # setup a stream which is when we loop through each line we are able to handle a data in a stream
 

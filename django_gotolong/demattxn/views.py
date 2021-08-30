@@ -140,9 +140,10 @@ class DematTxnStatView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-    txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
 
     def get_queryset(self):
+        txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
+
         return DematTxn.objects.all(). \
             filter(dt_user_id=self.request.user.id). \
             annotate(txn_year=ExtractYear('dt_date')). \
@@ -159,9 +160,10 @@ class DematTxnStatBuySellView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-    txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
+
 
     def get_queryset(self):
+        txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
         return DematTxn.objects.all(). \
             filter(dt_user_id=self.request.user.id). \
             annotate(txn_year=ExtractYear('dt_date')). \
@@ -215,17 +217,18 @@ class DematTxnRefreshView(View):
 
         # first delete all existing dematsum objects
         DematTxn.objects.all().filter(dt_user_id=self.request.user.id).delete()
-
         max_id_instances = DematTxn.objects.aggregate(max_id=Max('dt_id'))
-        try:
-            max_dt_id = max_id_instances[0].max_id
-        except KeyError:
+        max_dt_id = max_id_instances['max_id']
+        print('max_dt_id ', max_dt_id)
+        if max_dt_id is None:
             max_dt_id = 0
+            print('max_dt_id ', max_dt_id)
 
         unique_id = max_dt_id
-        for brec in BrokerIcidirTxn.objects.all():
+        for brec in BrokerIcidirTxn.objects.all().filter(bit_user_id=request.user.id):
             unique_id += 1
-            print(brec.bit_stock_symbol, brec.bit_isin_code, brec.bit_quantity)
+            print(brec.bit_user_id, brec.bit_stock_symbol, brec.bit_isin_code)
+            print(brec.bit_action, brec.bit_quantity)
             print(brec.bit_txn_price, brec.bit_txn_date)
             _, created = DematTxn.objects.update_or_create(
                 dt_id=unique_id,
@@ -233,6 +236,7 @@ class DematTxnRefreshView(View):
                 dt_broker='icidir',
                 dt_ticker=brec.bit_stock_symbol,
                 dt_isin=brec.bit_isin_code,
+                dt_action=brec.bit_action,
                 dt_quantity=brec.bit_quantity,
                 dt_price=brec.bit_txn_price,
                 dt_amount=(brec.bit_quantity * brec.bit_txn_price),

@@ -45,6 +45,11 @@ class DematSumListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        total_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
+            aggregate(mktvalue=Sum('ds_mktvalue'))['mktvalue'])
+        if total_amount:
+            total_amount = round(total_amount)
+        context["total_amount"] = total_amount
         return context
 
 class DematSumTickerView(ListView):
@@ -173,13 +178,14 @@ class DematSumRefreshView(View):
         # first delete all existing dematsum objects
         DematSum.objects.all().filter(ds_user_id=request.user.id).delete()
         max_id_instances = DematSum.objects.aggregate(max_id=Max('ds_id'))
-        try:
-            max_ds_id = max_id_instances[0].max_id
-        except KeyError:
+        max_ds_id = max_id_instances['max_id']
+        print('DS: found max id ', max_ds_id)
+        if max_ds_id is None:
             max_ds_id = 0
+            print('max_ds_id ', max_ds_id)
 
         unique_id = max_ds_id
-        for brec in BrokerIcidirSum.objects.all():
+        for brec in BrokerIcidirSum.objects.all().filter(bis_user_id=request.user.id):
             unique_id += 1
             print(brec.bis_stock_symbol, brec.bis_isin_code_id, brec.bis_qty)
             print(brec.bis_acp, brec.bis_value_cost, brec.bis_value_market)

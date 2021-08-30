@@ -153,12 +153,12 @@ def BrokerIcidirTxnUpload(request):
     # delete existing records
     print('Deleted existing BrokerIcidirTxn data')
     BrokerIcidirTxn.objects.all().filter(bit_user_id=request.user.id).delete()
-
     max_id_instances = BrokerIcidirTxn.objects.aggregate(max_id=Max('bit_id'))
-    try:
-        max_bit_id = max_id_instances[0].max_id
-    except KeyError:
+    max_bit_id = max_id_instances['max_id']
+    print('max_bit_id ', max_bit_id)
+    if max_bit_id is None:
         max_bit_id = 0
+        print('max_bit_id ', max_bit_id)
 
     # setup a stream which is when we loop through each line we are able to handle a data in a stream
 

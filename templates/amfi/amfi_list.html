@@ -56,10 +56,16 @@ Number of object: {{ object_list|length }}
             {{ amfi_row.value_cost }}
         </td>
         <td>
+            {{ amfi_row.mkt_value }}
+        </td>
+        <td>
             {{ amfi_row.cap_weight }}
         </td>
         <td>
             {{ amfi_row.deficit }}
+        </td>
+        <td>
+            {{ amfi_row.portf_weight|floatformat:2 }}
         </td>
     </tr>
     {% empty %}

@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, \
-    AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload
+    AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload, AmfiPortfWeightView
 
 from django_gotolong.bhav.views import BhavListView, bhav_fetch, bhav_upload
 
@@ -67,22 +67,23 @@ from django_gotolong.uploaddoc import views
 from django_gotolong.jsched.tasks import jsched_task_startup
 
 urlpatterns = [
-                path('', TemplateView.as_view(template_name="home.html"), name='index'),
-                path('admin/', admin.site.urls),
-                path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
-                path('amfi/upload/', amfi_upload, name='amfi-upload'),
-                path('amfi/amount/', AmfiAmountView.as_view(), name='amfi-amount-list'),
-                path('amfi/deficit/', AmfiDeficitView.as_view(), name='amfi-deficit-list'),
-                path('amfi/notable-exclusion/', AmfiNotableExclusionView.as_view(),
-                     name='amfi-notable-exclusion-list'),
-                path('amfi/notable-inclusion/', AmfiNotableInclusionView.as_view(),
-                     name='amfi-notable-inclusion-list'),
-                path('bhav/list/', BhavListView.as_view(), name='bhav-list'),
-                path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
-                path('bhav/upload/', bhav_upload, name='bhav-upload'),
-                path('bstmtdiv/list/', BstmtDivListView.as_view(), name='bstmtdiv-list'),
-                path('bstmtdiv/list/<str:year>/', BstmtDivYearArchiveView.as_view(),
-                     name='bstmtdiv_archive_year'),
+                  path('', TemplateView.as_view(template_name="home.html"), name='index'),
+                  path('admin/', admin.site.urls),
+                  path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
+                  path('amfi/upload/', amfi_upload, name='amfi-upload'),
+                  path('amfi/amount/', AmfiAmountView.as_view(), name='amfi-amount-list'),
+                  path('amfi/deficit/', AmfiDeficitView.as_view(), name='amfi-deficit-list'),
+                  path('amfi/portf-weight/', AmfiPortfWeightView.as_view(), name='amfi-portf-weight-list'),
+                  path('amfi/notable-exclusion/', AmfiNotableExclusionView.as_view(),
+                       name='amfi-notable-exclusion-list'),
+                  path('amfi/notable-inclusion/', AmfiNotableInclusionView.as_view(),
+                       name='amfi-notable-inclusion-list'),
+                  path('bhav/list/', BhavListView.as_view(), name='bhav-list'),
+                  path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
+                  path('bhav/upload/', bhav_upload, name='bhav-upload'),
+                  path('bstmtdiv/list/', BstmtDivListView.as_view(), name='bstmtdiv-list'),
+                  path('bstmtdiv/list/<str:year>/', BstmtDivYearArchiveView.as_view(),
+                       name='bstmtdiv_archive_year'),
                 path('bstmtdiv/list/<int:year>/<int:month>/',
                      BstmtDivMonthArchiveView.as_view(month_format='%m'),
                      name='bstmtdiv_archive_month_numeric'),

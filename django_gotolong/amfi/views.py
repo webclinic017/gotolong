@@ -15,7 +15,8 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 
 from django.db.models import OuterRef, Subquery
-from django.db.models import IntegerField, ExpressionWrapper, F
+from django.db.models import IntegerField, FloatField, ExpressionWrapper
+from django.db.models import F, Count, Sum, Max, Min
 
 from django_gotolong.amfi.models import Amfi
 
@@ -53,6 +54,36 @@ class AmfiAmountView(ListView):
 
         return context
 
+
+class AmfiPortfWeightView(ListView):
+
+    def get_queryset(self):
+        sum_portf_insts = DematSum.objects.filter(ds_user_id=self.request.user.id). \
+            aggregate(Sum('ds_mktvalue'))
+        print('first:', sum_portf_insts)
+        try:
+            print('second', sum_portf_insts['ds_mktvalue__sum'])
+            sum_portf = round(sum_portf_insts['ds_mktvalue__sum'])
+            print('DS: sum portf ', sum_portf)
+        except KeyError:
+            sum_portf = 0
+            print('DS: sum portf ', sum_portf)
+
+        dematsum_qs = DematSum.objects.filter(ds_user_id=self.request.user.id). \
+            filter(ds_isin=OuterRef("comp_isin"))
+        queryset = Amfi.objects.all(). \
+            annotate(mkt_value=Subquery(dematsum_qs.values('ds_mktvalue')[:1])). \
+            annotate(portf_weight=ExpressionWrapper(F('mkt_value') * 100.0 / sum_portf, output_field=FloatField())). \
+            exclude(portf_weight__isnull=True). \
+            exclude(portf_weight__lt=0). \
+            values('comp_rank', 'comp_name', 'mkt_value', 'portf_weight'). \
+            order_by('comp_rank')
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        return context
 
 class AmfiDeficitView(ListView):
     dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
