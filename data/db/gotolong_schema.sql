@@ -88,7 +88,7 @@ CREATE TABLE `auth_user` (
   `date_joined` datetime(6) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,6 +143,103 @@ CREATE TABLE `both_lastrefd` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `broker_icidir_sum`
+--
+
+DROP TABLE IF EXISTS `broker_icidir_sum`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `broker_icidir_sum` (
+  `bis_id` int(11) DEFAULT NULL,
+  `bis_user_id` int(11) DEFAULT NULL,
+  `bis_stock_symbol` text DEFAULT NULL,
+  `bis_company_name` text DEFAULT NULL,
+  `bis_isin_code_id` text DEFAULT NULL,
+  `bis_qty` int(11) DEFAULT NULL,
+  `bis_acp` float DEFAULT NULL,
+  `bis_cmp` text DEFAULT NULL,
+  `bis_pct_change` text DEFAULT NULL,
+  `bis_value_cost` float DEFAULT NULL,
+  `bis_value_market` float DEFAULT NULL,
+  `bis_days_gain` text DEFAULT NULL,
+  `bis_days_gain_pct` text DEFAULT NULL,
+  `bis_realized_pl` text DEFAULT NULL,
+  `bis_unrealized_pl` text DEFAULT NULL,
+  `bis_unrealized_pl_pct` text DEFAULT NULL,
+  `bis_unused1` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `broker_icidir_txn`
+--
+
+DROP TABLE IF EXISTS `broker_icidir_txn`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `broker_icidir_txn` (
+  `bit_id` int(11) DEFAULT NULL,
+  `bit_user_id` int(11) DEFAULT NULL,
+  `bit_stock_symbol` text DEFAULT NULL,
+  `bit_company_name` text DEFAULT NULL,
+  `bit_isin_code` text DEFAULT NULL,
+  `bit_action` text DEFAULT NULL,
+  `bit_quantity` int(11) DEFAULT NULL,
+  `bit_txn_price` float DEFAULT NULL,
+  `bit_brokerage` text DEFAULT NULL,
+  `bit_txn_charges` text DEFAULT NULL,
+  `bit_stamp_duty` text DEFAULT NULL,
+  `bit_segment` text DEFAULT NULL,
+  `bit_stt` text DEFAULT NULL,
+  `bit_remarks` text DEFAULT NULL,
+  `bit_txn_date` date DEFAULT NULL,
+  `bit_exchange` text DEFAULT NULL,
+  `bit_unused1` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `broker_zerodha_sum`
+--
+
+DROP TABLE IF EXISTS `broker_zerodha_sum`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `broker_zerodha_sum` (
+  `bzs_instrument` text DEFAULT NULL,
+  `bzs_quantity` text DEFAULT NULL,
+  `bzs_average_cost` text DEFAULT NULL,
+  `bzs_ltp` int(11) DEFAULT NULL,
+  `bzs_cur_value` float DEFAULT NULL,
+  `bzs_pnl` text DEFAULT NULL,
+  `bzs_net_chg` text DEFAULT NULL,
+  `bzs_day_chg` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `broker_zerodha_txn`
+--
+
+DROP TABLE IF EXISTS `broker_zerodha_txn`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `broker_zerodha_txn` (
+  `bzt_id` text DEFAULT NULL,
+  `bzt_tdate` date DEFAULT NULL,
+  `bzt_tsymbol` text DEFAULT NULL,
+  `bzt_exchange` text DEFAULT NULL,
+  `bzt_segment` text DEFAULT NULL,
+  `bzt_trade_type` int(11) DEFAULT NULL,
+  `bzt_quantity` float DEFAULT NULL,
+  `bzt_price` text DEFAULT NULL,
+  `bzt_order_id` text DEFAULT NULL,
+  `bzt_trade_id` text DEFAULT NULL,
+  `bzt_order_exec_time` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `django_admin_log`
 --
 
@@ -163,7 +260,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -478,21 +575,15 @@ DROP TABLE IF EXISTS `user_demat_sum`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_demat_sum` (
-  `stock_symbol` text DEFAULT NULL,
-  `comp_name` text DEFAULT NULL,
-  `isin_code_id` text DEFAULT NULL,
-  `qty` int(11) DEFAULT NULL,
-  `acp` float DEFAULT NULL,
-  `cmp` text DEFAULT NULL,
-  `pct_change` text DEFAULT NULL,
-  `value_cost` float DEFAULT NULL,
-  `value_market` float DEFAULT NULL,
-  `days_gain` text DEFAULT NULL,
-  `days_gain_pct` text DEFAULT NULL,
-  `realized_pl` text DEFAULT NULL,
-  `unrealized_pl` text DEFAULT NULL,
-  `unrealized_pl_pct` text DEFAULT NULL,
-  `unused1` text DEFAULT NULL
+  `ds_id` int(11) DEFAULT NULL,
+  `ds_user_id` int(11) DEFAULT NULL,
+  `ds_broker` text DEFAULT NULL,
+  `ds_ticker` text DEFAULT NULL,
+  `ds_isin` text DEFAULT NULL,
+  `ds_qty` text DEFAULT NULL,
+  `ds_acp` int(11) DEFAULT NULL,
+  `ds_costvalue` float DEFAULT NULL,
+  `ds_mktvalue` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -505,21 +596,15 @@ DROP TABLE IF EXISTS `user_demat_txn`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_demat_txn` (
   `dt_id` text DEFAULT NULL,
-  `stock_symbol` text DEFAULT NULL,
-  `comp_name` text DEFAULT NULL,
-  `isin_code` text DEFAULT NULL,
-  `action` text DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL,
-  `txn_price` float DEFAULT NULL,
-  `brokerage` text DEFAULT NULL,
-  `txn_charges` text DEFAULT NULL,
-  `stamp_duty` text DEFAULT NULL,
-  `segment` text DEFAULT NULL,
-  `stt` text DEFAULT NULL,
-  `remarks` text DEFAULT NULL,
-  `txn_date` date DEFAULT NULL,
-  `exchange` text DEFAULT NULL,
-  `unused1` text DEFAULT NULL
+  `dt_user_id` int(11) DEFAULT NULL,
+  `dt_broker` text DEFAULT NULL,
+  `dt_ticker` text DEFAULT NULL,
+  `dt_isin` text DEFAULT NULL,
+  `dt_action` text DEFAULT NULL,
+  `dt_quantity` int(11) DEFAULT NULL,
+  `dt_price` float DEFAULT NULL,
+  `dt_amount` float DEFAULT NULL,
+  `dt_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -582,4 +667,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-13 18:36:25
+-- Dump completed on 2021-08-30 21:46:38
