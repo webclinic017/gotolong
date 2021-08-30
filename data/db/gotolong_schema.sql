@@ -580,10 +580,10 @@ CREATE TABLE `user_demat_sum` (
   `ds_broker` text DEFAULT NULL,
   `ds_ticker` text DEFAULT NULL,
   `ds_isin` text DEFAULT NULL,
-  `ds_qty` text DEFAULT NULL,
+  `ds_qty` int(11) DEFAULT NULL,
   `ds_acp` int(11) DEFAULT NULL,
   `ds_costvalue` float DEFAULT NULL,
-  `ds_mktvalue` text DEFAULT NULL
+  `ds_mktvalue` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -667,4 +667,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-30 21:46:38
+-- Dump completed on 2021-08-30 22:46:00

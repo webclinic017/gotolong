@@ -67,8 +67,9 @@ class PhealthListView_All(ListView):
                                                   output_field=IntegerField())). \
             filter(cur_oku__isnull=False). \
             filter(bat__isnull=False). \
-            values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-                   'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
+            values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
+                   'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+                   'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                    'cap_type'). \
             order_by('low_margin')
         return queryset
@@ -127,9 +128,11 @@ class PhealthListView_Buy(ListView):
                                               output_field=IntegerField())). \
         filter(cur_oku__isnull=False). \
         filter(bat__isnull=False). \
-        filter(funda_reco_type='Buy'). \
-        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+        filter(funda_reco_type='BUY'). \
+        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
+               'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+               'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
+               'cap_type'). \
         order_by('low_margin')
 
     def get_context_data(self, **kwargs):
@@ -181,9 +184,10 @@ class PhealthListView_Sell(ListView):
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         filter(cur_oku__isnull=False). \
-        filter(funda_reco_type='Sell'). \
-        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+        filter(funda_reco_type='SELL'). \
+        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
+               'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku',
+               'tbd_oku', 'funda_reco_type', 'funda_reco_cause', 'cap_type'). \
         order_by('safety_margin')
 
     def get_context_data(self, **kwargs):
@@ -234,9 +238,10 @@ class PhealthListView_Hold(ListView):
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         filter(cur_oku__isnull=False). \
-        filter(funda_reco_type='Hold'). \
-        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin', 'low_margin',
-               'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause'). \
+        filter(funda_reco_type='HOLD'). \
+        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
+               'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku',
+               'funda_reco_type', 'funda_reco_cause', 'cap_type'). \
         order_by('-safety_margin')
 
     def get_context_data(self, **kwargs):

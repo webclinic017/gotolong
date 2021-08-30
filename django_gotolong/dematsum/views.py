@@ -46,7 +46,7 @@ class DematSumListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         total_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
-            aggregate(mktvalue=Sum('ds_mktvalue'))['mktvalue'])
+                        aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
         if total_amount:
             total_amount = round(total_amount)
         context["total_amount"] = total_amount
