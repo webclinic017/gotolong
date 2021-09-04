@@ -30,7 +30,7 @@ def sign_up(request):
             user = form.save()
             # login(request,user)
             # return render(request, 'auth/user_list.html')
-            return HttpResponseRedirect(reverse("user-list"))
+            return HttpResponseRedirect(reverse("users-list"))
     context['form'] = form
     return render(request, 'registration/sign_up.html', context)
 

@@ -140,4 +140,22 @@ to the following filter
 
 https://www.fullstackpython.com/blog/bootstrap-4-django-template.html
 
-13.
+13. Disabled validators to allow guest/welcome
+
+'''
+# disabled auth and password validators
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+'''
