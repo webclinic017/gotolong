@@ -10,6 +10,7 @@ mysqlclient
 mysql-connector
 openpyxl
 pandas
+plotly
 pyexcel
 pyexcel-xls
 python-dateutil

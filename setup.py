@@ -21,7 +21,7 @@ setup(
     url='https://github.com/surinder432/gotolong',
     description='An investor stock advisor',
     author='Surinder Kumar',
-    author_email='surinder.kumar.432@gmail.com',
+    author_email='surinder.kumar.xyz@gmail.com',
     install_requires=['Django', 'prettytable'],
     packages=find_packages(),
     scripts=['scripts/gotolong_all_report.sh',

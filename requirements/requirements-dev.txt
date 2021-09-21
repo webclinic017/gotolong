@@ -19,6 +19,7 @@ mysqlclient
 numpy
 openpyxl
 pandas
+plotly
 prettytable
 psycopg2
 python-dateutil

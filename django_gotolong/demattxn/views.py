@@ -26,6 +26,10 @@ from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 from django_gotolong.broker.icidir.itxn.models import BrokerIcidirTxn
 
+from plotly.offline import plot
+import plotly.graph_objs as go
+
+
 class DematTxnYearArchiveView(YearArchiveView):
     queryset = DematTxn.objects.all()
     date_field = "dt_date"
@@ -160,20 +164,87 @@ class DematTxnStatBuySellView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-
+    plot_div = ''
 
     def get_queryset(self):
         txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
-        return DematTxn.objects.all(). \
+        queryset = DematTxn.objects.all(). \
             filter(dt_user_id=self.request.user.id). \
             annotate(txn_year=ExtractYear('dt_date')). \
             values('txn_year', 'dt_action').annotate(txn_amount=Round(Sum(txn_amount))). \
             order_by('txn_year')
 
+        return queryset
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        return context
 
+        txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
+        queryset = DematTxn.objects.all(). \
+            filter(dt_user_id=self.request.user.id). \
+            annotate(txn_year=ExtractYear('dt_date')). \
+            values('txn_year', 'dt_action').annotate(txn_amount=Round(Sum(txn_amount))). \
+            order_by('txn_year')
+
+        buy_dict = {}
+        sell_dict = {}
+        year_list = []
+
+        for q in queryset:
+            # print('q ', q)
+            for key in ['txn_year', 'dt_action']:
+                if key == 'txn_year':
+                    cur_year = q[key]
+                    # print('year ', cur_year)
+                    if q[key] not in year_list:
+                        year_list.append(q[key])
+                if key == 'dt_action':
+                    if q[key] == 'Buy':
+                        buy_dict[cur_year] = q['txn_amount']
+                    else:
+                        sell_dict[cur_year] = q['txn_amount']
+                # print(key, q[key])
+
+        min_year = min(year_list)
+        max_year = max(year_list)
+        # range skips top most element
+        # added +1 to include data of latest year.
+        year_list = list(range(min_year, max_year + 1))
+        buy_list = []
+        sell_list = []
+        for cur_year in year_list:
+            if cur_year in buy_dict:
+                buy_list.append(buy_dict[cur_year])
+            else:
+                buy_list.append(0)
+            if cur_year in sell_dict:
+                sell_list.append(sell_dict[cur_year])
+            else:
+                sell_list.append(0)
+
+        print(year_list)
+        print(buy_list)
+        print(sell_list)
+
+        x_data = year_list
+        y_data = buy_list
+        if True:
+            fig = go.Figure(data=[
+                go.Bar(name='Buy', x=year_list, y=buy_list),
+                go.Bar(name='Sell', x=year_list, y=sell_list)
+            ])
+            # Change the bar mode
+            fig.update_layout(barmode='group')
+            # plot_div = plot([fig],output_type='div', include_plotlyjs=False)
+            plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+        else:
+            plot_div = plot([go.Scatter(x=x_data, y=y_data,
+                                        mode='lines', name='test',
+                                        opacity=0.8, marker_color='green')],
+                            output_type='div', include_plotlyjs=False)
+
+        context['plot_div'] = plot_div
+        return context
 
 def dt_date_iso(self, dt_date):
     month_name_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}

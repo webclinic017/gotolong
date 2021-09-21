@@ -122,7 +122,7 @@ class AmfiNotableExclusionView(ListView):
 class AmfiNotableInclusionView(ListView):
     dematsum_qs = DematSum.objects.filter(ds_isin=OuterRef("comp_isin"))
     gweight_qs = Gweight.objects.filter(gw_cap_type=OuterRef("cap_type"))
-    # included nano cap and micro cop > 500 only
+    # included nano cap and micro cap > 500 only
     queryset = Amfi.objects.all(). \
         annotate(value_cost=Subquery(dematsum_qs.values('ds_costvalue')[:1])). \
         annotate(cap_weight=Subquery(gweight_qs.values('gw_cap_weight')[:1])). \
@@ -235,11 +235,14 @@ def amfi_upload(request):
 
         comp_rank = int(column[0])
         cap_type = column[6]
+
+        '''
         if comp_rank > 500 and cap_type == 'Small Cap':
             if comp_rank > 750:
                 cap_type = 'Nano Cap'
             else:
                 cap_type = 'Micro Cap'
+        '''
 
         _, created = Amfi.objects.update_or_create(
             comp_rank=comp_rank,

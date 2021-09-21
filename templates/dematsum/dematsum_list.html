@@ -9,6 +9,14 @@ Number of object: {{ object_list|length }}
 <br>
 Total Amount: {{ total_amount }}
 <br>
+Gold : {{ gold_amount }}
+<br>
+ETF: {{ etf_amount }}
+<br>
+REIT: {{ reit_amount }}
+<br>
+Direct Equity: {{ direct_equity_amount }}
+<br>
 
 <table>
     {% for dematsum_row in object_list %}
@@ -67,7 +75,9 @@ Total Amount: {{ total_amount }}
         <td>
             {{ dematsum_row.cap_cost }}
         </td>
-
+        <td>
+            {% widthratio dematsum_row.cap_cost direct_equity_amount 100.0 %}
+        </td>
     </tr>
     {% empty %}
     <tr>
@@ -78,5 +88,9 @@ Total Amount: {{ total_amount }}
     {% endfor %}
 
 </table>
+
+{% autoescape off %}
+{{ plot_div }}
+{% endautoescape %}
 
 {% include "bottom.html" %}

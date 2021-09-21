@@ -159,3 +159,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 '''
+
+14. plots using plotly
+https://www.codingwithricky.com/2019/08/28/easy-django-plotly/

@@ -2,6 +2,10 @@
 
 from .models import DematSum
 
+from plotly.offline import plot
+
+from django.db.models import Q
+
 from django.conf import settings
 from django.shortcuts import redirect
 
@@ -28,6 +32,9 @@ from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 from django_gotolong.broker.icidir.isum.models import BrokerIcidirSum
 
+import plotly.graph_objects as go
+
+
 class DematSumListView(ListView):
     model = DematSum
 
@@ -45,11 +52,55 @@ class DematSumListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        total_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
+        total_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
                         aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
         if total_amount:
             total_amount = round(total_amount)
+
+        # reit list
+        filter_list = ['EMBOFF', 'MINBUS', 'BROIND']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(ds_ticker=fltr)
+
+        reit_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
+                       filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
+        reit_amount = round(reit_amount)
+
+        # etf list
+        filter_list = ['HDFRGE', 'ICINEX', 'ICINIF', 'KOTNIF', 'NIFBEE',
+                       'REL150', 'SBIN50', 'SBINIF', 'UTINIF', 'MOTNAS']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(ds_ticker=fltr)
+
+        etf_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
+                      filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
+        etf_amount = round(etf_amount)
+
+        gold_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
+                       filter(ds_ticker__icontains='GOL').aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
+        if gold_amount:
+            gold_amount = round(gold_amount)
+
+        direct_equity_amount = total_amount - reit_amount - etf_amount - gold_amount
+
         context["total_amount"] = total_amount
+        context["reit_amount"] = reit_amount
+        context["etf_amount"] = etf_amount
+        context["gold_amount"] = gold_amount
+        context["direct_equity_amount"] = direct_equity_amount
+
+        labels = ['reit_amount', 'etf_amount', 'gold_amount', 'direct_equity_amount']
+        values = [reit_amount, etf_amount, gold_amount, direct_equity_amount]
+
+        fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+        fig.update_traces(textposition='inside', textinfo='percent+label')
+        # fig.show()
+
+        plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div'] = plot_div
+
         return context
 
 class DematSumTickerView(ListView):
@@ -153,6 +204,57 @@ class DematSumCapTypeView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
+        amfi_qs = Amfi.objects.filter(comp_isin=OuterRef("ds_isin"))
+        self.queryset = DematSum.objects.all(). \
+            annotate(comp_rank=Subquery(amfi_qs.values('comp_rank')[:1])). \
+            annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
+            values('cap_type'). \
+            annotate(cap_count=Count('cap_type')). \
+            annotate(cap_cost=Round(Sum('ds_costvalue'))). \
+            order_by('cap_type')
+
+        direct_equity_amount = 0
+        cap_type_list = []
+        cap_amount_dict = {}
+        cap_pct_dict = {}
+        for q in self.queryset:
+            print('q ', q)
+            # exclude non cap_type - like gold, etf etc
+            cap_type = q['cap_type']
+            if cap_type:
+                if cap_type not in cap_type_list:
+                    cap_type_list.append(cap_type)
+                if cap_type in cap_amount_dict:
+                    cap_amount_dict[cap_type] += q['cap_cost']
+                else:
+                    cap_amount_dict[cap_type] = q['cap_cost']
+                direct_equity_amount += q['cap_cost']
+        context['direct_equity_amount'] = int(direct_equity_amount)
+
+        cap_type_list.sort()
+        print('cap_type_list ', cap_type_list)
+
+        for cap_type in cap_amount_dict:
+            cap_pct_dict[cap_type] = int(cap_amount_dict[cap_type] * 100.0 / int(direct_equity_amount))
+
+        # expected distribution - 14%, 28%, 58%
+        expected_pct_list = [58, 28, 14]
+        actual_pct_list = [cap_pct_dict['large cap'], cap_pct_dict['mid cap'], cap_pct_dict['small cap']]
+        fig = go.Figure(data=[
+            go.Bar(name='Expected', x=cap_type_list, y=expected_pct_list, text=expected_pct_list,
+                   textposition='auto', ),
+            go.Bar(name='Actual', x=cap_type_list, y=actual_pct_list, text=actual_pct_list,
+                   textposition='auto', )
+        ])
+        # Change the bar mode
+        fig.update_layout(barmode='group')
+        # fig.update_traces(textposition='inside', textinfo='percent+label')
+        # fig.show()
+
+        plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div'] = plot_div
+
         return context
 
 
