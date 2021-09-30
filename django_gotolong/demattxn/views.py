@@ -164,7 +164,7 @@ class DematTxnStatBuySellView(ListView):
 
     # if pagination is desired
     # paginate_by = 300
-    plot_div = ''
+    plot_div_1 = ''
 
     def get_queryset(self):
         txn_amount = ExpressionWrapper(F('dt_quantity') * F('dt_price'), output_field=IntegerField())
@@ -236,14 +236,14 @@ class DematTxnStatBuySellView(ListView):
             # Change the bar mode
             fig.update_layout(barmode='group')
             # plot_div = plot([fig],output_type='div', include_plotlyjs=False)
-            plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+            plot_div_1 = plot(fig, output_type='div', include_plotlyjs=False)
         else:
-            plot_div = plot([go.Scatter(x=x_data, y=y_data,
-                                        mode='lines', name='test',
-                                        opacity=0.8, marker_color='green')],
-                            output_type='div', include_plotlyjs=False)
+            plot_div_1 = plot([go.Scatter(x=x_data, y=y_data,
+                                          mode='lines', name='test',
+                                          opacity=0.8, marker_color='green')],
+                              output_type='div', include_plotlyjs=False)
 
-        context['plot_div'] = plot_div
+        context['plot_div_1'] = plot_div_1
         return context
 
 def dt_date_iso(self, dt_date):

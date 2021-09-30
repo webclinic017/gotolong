@@ -1,0 +1,85 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1> Gold/ETF : Mutual Fund </h1>
+
+<a href="/goetf/list/"> Goetf List </a> |
+<a href="/goetf/list/aum/"> Goetf List (by aum) </a> |
+<a href="/goetf/list/type/"> Goetf List (by Type) </a> |
+<a href="/goetf/list/benchmark/"> Goetf List (by Benchmark) </a> |
+<a href="/goetf/industry/"> Benchmark Count </a> |
+
+<br>
+
+Download the .xls file from here and convert that to .xlsx before uploading
+<br>
+<a href="https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details">
+    https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details
+</a>
+
+<br>
+
+<form action="/goetf/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+Benchmarks Count : {{benchmarks_count}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Scheme Name
+        </td>
+        <td>
+            Type
+        </td>
+        <td>
+            Benchmark
+        </td>
+        <td>
+            AUM (Cr)
+        </td>
+        <td>
+            Count
+        </td>
+    </tr>
+    {% for goetf_row in object_list %}
+    <tr>
+        <td>
+            {{ goetf_row.goetf_scheme }}
+        </td>
+        <td>
+            {{ goetf_row.goetf_type }}
+        </td>
+        <td>
+            {{ goetf_row.goetf_benchmark }}
+        </td>
+        <td>
+            {{ goetf_row.goetf_aum }}
+        </td>
+        <td>
+            {{ goetf_row.scheme_count }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No Mutual Funds yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

@@ -1,23 +1,7 @@
 {% include "top.html" %}
-{% include "global_top.html" %}
+{% include "user_top.html" %}
 
-<h1>Mutual Fund </h1>
-
-<a href="/mfund/list/"> Mfund List </a> |
-<a href="/mfund/list/aum/"> Mfund List (by aum) </a> |
-<a href="/mfund/list/type/"> Mfund List (by Type) </a> |
-<a href="/mfund/list/benchmark/"> Mfund List (by Benchmark) </a> |
-<a href="/mfund/industry/"> Benchmark Count </a> |
-
-<br>
-
-Download the .xls file from here and convert that to .xlsx before uploading
-<br>
-<a href="https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details">
-    https://www.amfiindia.com/research-information/other-data/mf-scheme-performance-details
-</a>
-
-<br>
+<h1> Mutual Fund </h1>
 
 <form action="/mfund/upload/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
@@ -31,7 +15,7 @@ Download the .xls file from here and convert that to .xlsx before uploading
 Number of object: {{ object_list|length }}
 <br>
 
-Benchmarks Count : {{benchmarks_count}}
+Sum total : {{sum_total}}
 
 <br>
 
@@ -42,44 +26,74 @@ Benchmarks Count : {{benchmarks_count}}
         </td>
     </tr>
 
+    {% for mf_row in object_list %}
     <tr>
         <td>
-            Scheme Name
+            {{ mf_row.mf_amc }}
         </td>
         <td>
-            Type
+            {{ mf_row.mf_name }}
         </td>
         <td>
-            Benchmark
+            {{ mf_row.mf_category }}
         </td>
         <td>
-            AUM (Cr)
+            {{ mf_row.mf_subcat }}
         </td>
         <td>
-            Count
-        </td>
-    </tr>
-    {% for mfund_row in object_list %}
-    <tr>
-        <td>
-            {{ mfund_row.mfund_scheme }}
+            {{ mf_row.mf_rating }}
         </td>
         <td>
-            {{ mfund_row.mfund_type }}
+            {{ mf_row.mf_units }}
         </td>
         <td>
-            {{ mfund_row.mfund_benchmark }}
+            {{ mf_row.mf_acp }}
         </td>
         <td>
-            {{ mfund_row.mfund_aum }}
+            {{ mf_row.mf_cost_value }}
         </td>
         <td>
-            {{ mfund_row.scheme_count }}
+            {{ mf_row.mf_nav_date }}
         </td>
+        <td>
+            {{ mf_row.mf_nav }}
+        </td>
+        <td>
+            {{ mf_row.mf_nav_value }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl_realized }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl_pct }}
+        </td>
+        <td>
+            {{ mf_row.mf_research_reco }}
+        </td>
+
+        <td>
+            {{ mf_row.scheme_sum |floatformat:0 }}
+        </td>
+
+        <td>
+            {% if sum_total %}
+            {% widthratio mf_row.scheme_sum sum_total 100.0 %} %
+            {% endif %}
+        </td>
+
     </tr>
     {% empty %}
     <tr>No Mutual Funds yet.</tr>
     {% endfor %}
 </table>
+
+{% autoescape off %}
+{{ plot_div_1 }}
+<br/>
+{{ plot_div_2 }}
+{% endautoescape %}
 
 {% include "bottom.html" %}

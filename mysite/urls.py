@@ -52,10 +52,10 @@ from django_gotolong.indices.views import Indices_fetch, Indices_upload
 
 from django_gotolong.lastrefd.views import LastrefdListView
 
-from django_gotolong.mfund.views import MfundListView, MfundIndustryView
-from django_gotolong.mfund.views import MfundListView_AUM, MfundListView_Benchmark
-from django_gotolong.mfund.views import MfundListView_Type
-from django_gotolong.mfund.views import Mfund_fetch, Mfund_upload
+from django_gotolong.goetf.views import GoetfListView, GoetfIndustryView
+from django_gotolong.goetf.views import GoetfListView_AUM, GoetfListView_Benchmark
+from django_gotolong.goetf.views import GoetfListView_Type
+from django_gotolong.goetf.views import Goetf_fetch, Goetf_upload
 
 from django_gotolong.nach.views import NachListView
 from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy
@@ -101,29 +101,27 @@ urlpatterns = [
                 path('dbstat/list/', DbstatListView.as_view(), name='dbstat-list'),
                 path('demat/sum/', include('django_gotolong.dematsum.urls')),
                 path('demat/txn/', include('django_gotolong.demattxn.urls')),
-                path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
-                path('dividend/refresh/', DividendRefreshView.as_view(), name='dividend-refresh'),
-                path('dividend/ticker/', DividendTickerListView.as_view(),
-                     name='dividend-ticker-list'),
-                path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
-                path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
-                path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
-                path('ftwhl/upload/', ftwhl_upload, name='ftwhl-upload'),
-                path('gfundareco/list/', GfundarecoListView.as_view(), name='gfundareco-list'),
-                path('gfundareco/refresh/', GfundarecoRefreshView.as_view(), name='gfundareco-refresh'),
-                path('gweight/list/', GweightListView.as_view(), name='gweight-list'),
-                path('indices/list/', IndicesListView.as_view(), name='indices-list'),
-                path('indices/industry/', IndicesIndustryView.as_view(), name='indices-industry-list'),
-                path('indices/fetch/', Indices_fetch, name='indices-fetch'),
-                path('indices/upload/', Indices_upload, name='indices-upload'),
+                  path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
+                  path('dividend/refresh/', DividendRefreshView.as_view(), name='dividend-refresh'),
+                  path('dividend/ticker/', DividendTickerListView.as_view(),
+                       name='dividend-ticker-list'),
+                  path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
+                  path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
+                  path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
+                  path('ftwhl/upload/', ftwhl_upload, name='ftwhl-upload'),
+                  path('gfundareco/list/', GfundarecoListView.as_view(), name='gfundareco-list'),
+                  path('gfundareco/refresh/', GfundarecoRefreshView.as_view(), name='gfundareco-refresh'),
+                  path('goetf/', include('django_gotolong.goetf.urls')),
+
+                  path('gweight/list/', GweightListView.as_view(), name='gweight-list'),
+                  path('indices/list/', IndicesListView.as_view(), name='indices-list'),
+                  path('indices/industry/', IndicesIndustryView.as_view(), name='indices-industry-list'),
+                  path('indices/fetch/', Indices_fetch, name='indices-fetch'),
+                  path('indices/upload/', Indices_upload, name='indices-upload'),
                   path('lastrefd/list/', LastrefdListView.as_view(), name='lastrefd-list'),
-                  path('mfund/list/', MfundListView.as_view(), name='mfund-list'),
-                  path('mfund/list/aum/', MfundListView_AUM.as_view(), name='mfund-list-aum'),
-                  path('mfund/list/type/', MfundListView_Type.as_view(), name='mfund-list-type'),
-                  path('mfund/list/benchmark/', MfundListView_Benchmark.as_view(), name='mfund-list-benchmark'),
-                  path('mfund/industry/', MfundIndustryView.as_view(), name='mfund-industry-list'),
-                  path('mfund/fetch/', Mfund_fetch, name='mfund-fetch'),
-                  path('mfund/upload/', Mfund_upload, name='mfund-upload'),
+
+                  path('mfund/', include('django_gotolong.mfund.urls')),
+
                   path('nach/list/', NachListView.as_view(), name='nach-list'),
                   path('page/about/', TemplateView.as_view(template_name="about.html")),
                   path('page/annual-report-self/', TemplateView.as_view(template_name="annual_report_self.html")),

@@ -429,10 +429,10 @@ DROP TABLE IF EXISTS `global_mfund`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `global_mfund` (
-  `mfund_scheme` text DEFAULT NULL,
-  `mfund_type` text DEFAULT NULL,
-  `mfund_benchmark` text DEFAULT NULL,
-  `mfund_aum` float DEFAULT NULL
+  `goetf_scheme` text DEFAULT NULL,
+  `goetf_type` text DEFAULT NULL,
+  `goetf_benchmark` text DEFAULT NULL,
+  `goetf_aum` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -76,7 +76,9 @@ Direct Equity: {{ direct_equity_amount }}
             {{ dematsum_row.cap_cost }}
         </td>
         <td>
-            {% widthratio dematsum_row.cap_cost direct_equity_amount 100.0 %}
+            {% if direct_equity_amount %}
+            {% widthratio dematsum_row.cap_cost direct_equity_amount 100.0 %} %
+            {% endif %}
         </td>
     </tr>
     {% empty %}
@@ -90,7 +92,10 @@ Direct Equity: {{ direct_equity_amount }}
 </table>
 
 {% autoescape off %}
-{{ plot_div }}
+{{ plot_div_1 }}
+<br/>
+{{ plot_div_2 }}
 {% endautoescape %}
+
 
 {% include "bottom.html" %}

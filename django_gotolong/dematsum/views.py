@@ -2,7 +2,9 @@
 
 from .models import DematSum
 
+import plotly.graph_objects as go
 from plotly.offline import plot
+from plotly.tools import make_subplots
 
 from django.db.models import Q
 
@@ -32,7 +34,7 @@ from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 from django_gotolong.broker.icidir.isum.models import BrokerIcidirSum
 
-import plotly.graph_objects as go
+
 
 
 class DematSumListView(ListView):
@@ -98,8 +100,8 @@ class DematSumListView(ListView):
         fig.update_traces(textposition='inside', textinfo='percent+label')
         # fig.show()
 
-        plot_div = plot(fig, output_type='div', include_plotlyjs=False)
-        context['plot_div'] = plot_div
+        plot_div_1 = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div_1'] = plot_div_1
 
         return context
 
@@ -218,6 +220,7 @@ class DematSumCapTypeView(ListView):
         cap_type_list = []
         cap_amount_dict = {}
         cap_pct_dict = {}
+        cap_count_dict = {}
         for q in self.queryset:
             print('q ', q)
             # exclude non cap_type - like gold, etf etc
@@ -229,6 +232,10 @@ class DematSumCapTypeView(ListView):
                     cap_amount_dict[cap_type] += q['cap_cost']
                 else:
                     cap_amount_dict[cap_type] = q['cap_cost']
+                if cap_type in cap_count_dict:
+                    cap_count_dict[cap_type] += q['cap_count']
+                else:
+                    cap_count_dict[cap_type] = q['cap_count']
                 direct_equity_amount += q['cap_cost']
         context['direct_equity_amount'] = int(direct_equity_amount)
 
@@ -238,25 +245,46 @@ class DematSumCapTypeView(ListView):
         for cap_type in cap_amount_dict:
             cap_pct_dict[cap_type] = int(cap_amount_dict[cap_type] * 100.0 / int(direct_equity_amount))
 
+        # fig = make_subplots(rows=2, cols=1)
+
         # expected distribution - 14%, 28%, 58%
         expected_pct_list = [58, 28, 14]
         actual_pct_list = [cap_pct_dict['large cap'], cap_pct_dict['mid cap'], cap_pct_dict['small cap']]
-        fig = go.Figure(data=[
-            go.Bar(name='Expected', x=cap_type_list, y=expected_pct_list, text=expected_pct_list,
+        fig_1 = go.Figure(data=[
+            go.Bar(name='Expected %', x=cap_type_list, y=expected_pct_list, text=expected_pct_list,
                    textposition='auto', ),
-            go.Bar(name='Actual', x=cap_type_list, y=actual_pct_list, text=actual_pct_list,
+            go.Bar(name='Actual %', x=cap_type_list, y=actual_pct_list, text=actual_pct_list,
                    textposition='auto', )
         ])
         # Change the bar mode
-        fig.update_layout(barmode='group')
-        # fig.update_traces(textposition='inside', textinfo='percent+label')
+        fig_1.update_layout(barmode='group')
+        # fig.update_layout(yaxis_tickformat='%')
+        # fig.update_traces(textposition='inside', textinfo='percent')
         # fig.show()
 
-        plot_div = plot(fig, output_type='div', include_plotlyjs=False)
-        context['plot_div'] = plot_div
+        # plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+        # context['plot_div'] = plot_div
+
+        plot_div_1 = plot(fig_1, output_type='div', include_plotlyjs=False)
+        context['plot_div_1'] = plot_div_1
+
+        # expected companies distribution - 50 L - portfolio - 28, 28, 29
+        # expected companies distribution - 1 Cr - portfolio - 58, 56, 56
+        expected_count_list = [58, 56, 56]
+        actual_count_list = [cap_count_dict['large cap'], cap_count_dict['mid cap'], cap_count_dict['small cap']]
+        fig_2 = go.Figure(data=[
+            go.Bar(name='Expected Count', x=cap_type_list, y=expected_count_list, text=expected_count_list,
+                   textposition='auto', ),
+            go.Bar(name='Actual Count', x=cap_type_list, y=actual_count_list, text=actual_count_list,
+                   textposition='auto', )
+        ])
+        # Change the bar mode
+        fig_2.update_layout(barmode='group')
+
+        plot_div_2 = plot(fig_2, output_type='div', include_plotlyjs=False)
+        context['plot_div_2'] = plot_div_2
 
         return context
-
 
 class DematSumRefreshView(View):
     fr_buy = {}
