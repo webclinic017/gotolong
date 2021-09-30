@@ -260,7 +260,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -406,6 +406,21 @@ CREATE TABLE `global_funda_reco` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `global_goetf`
+--
+
+DROP TABLE IF EXISTS `global_goetf`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `global_goetf` (
+  `goetf_scheme` text DEFAULT NULL,
+  `goetf_type` text DEFAULT NULL,
+  `goetf_benchmark` text DEFAULT NULL,
+  `goetf_aum` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `global_indices`
 --
 
@@ -419,21 +434,6 @@ CREATE TABLE `global_indices` (
   `ind_series` text DEFAULT NULL,
   `ind_isin` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `global_mfund`
---
-
-DROP TABLE IF EXISTS `global_mfund`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `global_mfund` (
-  `goetf_scheme` text DEFAULT NULL,
-  `goetf_type` text DEFAULT NULL,
-  `goetf_benchmark` text DEFAULT NULL,
-  `goetf_aum` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -645,6 +645,32 @@ CREATE TABLE `user_doc` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `user_mfund`
+--
+
+DROP TABLE IF EXISTS `user_mfund`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_mfund` (
+  `mf_amc` text DEFAULT NULL,
+  `mf_name` text DEFAULT NULL,
+  `mf_category` text DEFAULT NULL,
+  `mf_subcat` text DEFAULT NULL,
+  `mf_rating` text DEFAULT NULL,
+  `mf_units` float DEFAULT NULL,
+  `mf_acp` float DEFAULT NULL,
+  `mf_cost_value` float DEFAULT NULL,
+  `mf_nav_date` text DEFAULT NULL,
+  `mf_nav` float DEFAULT NULL,
+  `mf_nav_value` float DEFAULT NULL,
+  `mf_pnl_realized` float DEFAULT NULL,
+  `mf_pnl` float DEFAULT NULL,
+  `mf_pnl_pct` float DEFAULT NULL,
+  `mf_research_reco` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `user_weight`
 --
 
@@ -667,4 +693,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-04 14:45:03
+-- Dump completed on 2021-09-30 18:28:23
