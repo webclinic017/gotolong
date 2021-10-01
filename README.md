@@ -79,6 +79,10 @@ Check Sample deployment
 
 https://gotolong.herokuapp.com/
 
+NOTES:
+
+* wait for 15 to 30 sec initially as free dyno sleeps after 30 mins of inactivity.
+
 On Heroku, the clone of repository can be connected using github.
 
 Attach postgresql database to the heroku app.
