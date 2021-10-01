@@ -21,7 +21,7 @@ https://gotolong.herokuapp.com/
 
 ## Clone repository
 
-git clone https://github.com/surinder432/gotolong
+git clone https://github.com/gotolong/gotolong
 
 ## Software  Pre-Req
 

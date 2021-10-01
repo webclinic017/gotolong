@@ -9,7 +9,7 @@ On windows: also setup global env variable HTTP_PROXY and HTTPS_PROXY
 
 1> Clone
 
-git clone https://github.com/surinder432/gotolong.git
+git clone https://github.com/gotolong/gotolong.git
 
 1.1> If code is already present (rebase) use git pull
 
@@ -42,7 +42,7 @@ core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
 core.logallrefupdates=true
-remote.origin.url=https://github.com/surinder432/gotlong.git
+remote.origin.url=https://github.com/gotolong/gotlong.git
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
@@ -55,7 +55,6 @@ Avoid asking git username (e-mail) and password for every push. Set cache expiry
 git config credential.helper store
 
 git config --global credential.helper 'cache --timeout 86400'
-
 
 3.3> Making changes in git command line
 

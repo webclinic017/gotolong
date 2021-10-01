@@ -23,4 +23,4 @@ Installed in AppData\Local\Programs\Python\Python37\Lib\site-packages\django\app
 
 Download DropBox/OneDrive/GoogleDrive or something else to store the input data and output reports.
 
-git clone https://github.com/surinder432/gotolong.git
+git clone https://github.com/gotolong/gotolong.git

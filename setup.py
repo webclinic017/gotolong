@@ -18,7 +18,7 @@ print(len(data_files))
 setup(
     name='gotolong',
     version='0.0.1',
-    url='https://github.com/surinder432/gotolong',
+    url='https://github.com/gotolong/gotolong',
     description='An investor stock advisor',
     author='Surinder Kumar',
     author_email='surinder.kumar.xyz@gmail.com',
