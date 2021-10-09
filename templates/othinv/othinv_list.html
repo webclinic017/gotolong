@@ -1,0 +1,138 @@
+{% include "top.html" %}
+
+{% load humanize %}
+
+{% include "user_top.html" %}
+
+<h1> Other Investment List </h1>
+
+<a href="/othinv/add/"> Add </a>
+
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+        <th>
+            othinv_name
+        </th>
+        <th>
+            othinv_details
+        </th>
+        <th>
+            othinv_equity
+        </th>
+        <th>
+            othinv_debt
+        </th>
+        <th>
+            othinv_gold
+        </th>
+        <th>
+            othinv_intl
+        </th>
+        <th>
+            othinv_realty
+        </th>
+        <th>
+            Edit/Update
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for othinv_row in object_list %}
+    <tr>
+        <td>
+            {{ othinv_row.othinv_name}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_details}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_equity |default_if_none:"-" | intword}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_debt |default_if_none:"-" | intword}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_gold |default_if_none:"-" | intword}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_intl |default_if_none:"-" | intword}}
+        </td>
+        <td>
+            {{ othinv_row.othinv_realty |default_if_none:"-" | intword}}
+        </td>
+        <td>
+            <a href="{{ othinv_row.get_update_url }}"> Update </a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No othinv yet.</tr>
+    {% endfor %}
+    <tr>
+        <td>
+            All / NetWorth
+        </td>
+        <td>
+            All / Details
+        </td>
+        <td>
+            {{sum_othinv_equity | intword}}
+        </td>
+        <td>
+            {{sum_othinv_debt | intword}}
+        </td>
+        <td>
+            {{sum_othinv_gold | intword}}
+        </td>
+        <td>
+            {{sum_othinv_intl | intword}}
+        </td>
+        <td>
+            {{sum_othinv_realty | intword }}
+        </td>
+        <td>
+            {{ sum_total | intword }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            All / NetWorth %
+        </td>
+        <td>
+            All / Details %
+        </td>
+        <td>
+            {% if sum_othinv_equity %}
+            {% widthratio sum_othinv_equity sum_total 100.0 %} %
+            {% endif %}
+        </td>
+        <td>
+            {% if sum_othinv_debt %}
+            {% widthratio sum_othinv_debt sum_total 100.0 %} %
+            {% endif %}
+
+        </td>
+        <td>
+            {% if sum_othinv_gold %}
+            {% widthratio sum_othinv_gold sum_total 100.0 %} %
+            {% endif %}
+        </td>
+        <td>
+            {% if sum_othinv_intl %}
+            {% widthratio sum_othinv_intl sum_total 100.0 %} %
+            {% endif %}
+        </td>
+        <td>
+            {% if sum_othinv_realty %}
+            {% widthratio sum_othinv_realty sum_total 100.0 %} %
+            {% endif %}
+        </td>
+        <td>
+            {{ sum_total | intword }}
+        </td>
+    </tr>
+
+</table>
+
+{% include "bottom.html" %}

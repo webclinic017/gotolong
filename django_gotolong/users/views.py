@@ -21,7 +21,6 @@ class UsersListView(ListView):
 def index(request):
     return render(request, 'auth/user_list.html')
 
-
 def sign_up(request):
     context = {}
     form = UserCreationForm(request.POST or None)
@@ -30,7 +29,10 @@ def sign_up(request):
             user = form.save()
             # login(request,user)
             # return render(request, 'auth/user_list.html')
-            return HttpResponseRedirect(reverse("users-list"))
+            # return HttpResponseRedirect(reverse("users-list"))
+            # do not send user to users-list on sign-up completion
+            # accounts/login
+            return HttpResponseRedirect(reverse("login"))
     context['form'] = form
     return render(request, 'registration/sign_up.html', context)
 

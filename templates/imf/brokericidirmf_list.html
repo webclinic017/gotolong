@@ -1,0 +1,99 @@
+{% include "top.html" %}
+{% include "user_top.html" %}
+
+<h1> Mutual Fund </h1>
+
+<form action="/broker/icidir/imf/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+Sum total : {{sum_total}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    {% for bim_row in object_list %}
+    <tr>
+        <td>
+            {{ bim_row.bim_amc }}
+        </td>
+        <td>
+            {{ bim_row.bim_name }}
+        </td>
+        <td>
+            {{ bim_row.bim_category }}
+        </td>
+        <td>
+            {{ bim_row.bim_subcat }}
+        </td>
+        <td>
+            {{ bim_row.bim_rating }}
+        </td>
+        <td>
+            {{ bim_row.bim_units }}
+        </td>
+        <td>
+            {{ bim_row.bim_acp }}
+        </td>
+        <td>
+            {{ bim_row.bim_cost_value }}
+        </td>
+        <td>
+            {{ bim_row.bim_nav_date }}
+        </td>
+        <td>
+            {{ bim_row.bim_nav }}
+        </td>
+        <td>
+            {{ bim_row.bim_nav_value }}
+        </td>
+        <td>
+            {{ bim_row.bim_pnl_realized }}
+        </td>
+        <td>
+            {{ bim_row.bim_pnl }}
+        </td>
+        <td>
+            {{ bim_row.bim_pnl_pct }}
+        </td>
+        <td>
+            {{ bim_row.bim_research_reco }}
+        </td>
+
+        <td>
+            {{ mf_row.scheme_sum |floatformat:0 }}
+        </td>
+
+        <td>
+            {% if sum_total %}
+            {% widthratio mf_row.scheme_sum sum_total 100.0 %} %
+            {% endif %}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No Mutual Funds yet.</tr>
+    {% endfor %}
+</table>
+
+{% autoescape off %}
+{{ plot_div_1 }}
+<br/>
+{{ plot_div_2 }}
+{% endautoescape %}
+
+{% include "bottom.html" %}

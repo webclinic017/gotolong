@@ -23,13 +23,17 @@ from django.views.generic import TemplateView
 from django_gotolong.goetf.views import GoetfListView, \
     Goetf_upload, Goetf_fetch
 from django_gotolong.goetf.views import GoetfIndustryView, \
-    GoetfListView_Type, GoetfListView_Benchmark, GoetfListView_AUM
+    GoetfListView_Type, GoetfListView_Benchmark, GoetfListView_AUM, \
+    GoetfListView_IMF, GoetfListView_Nifty, GoetfListView_Gold
 
 urlpatterns = [
     path('list/', GoetfListView.as_view(), name='goetf-list'),
     path('list/aum/', GoetfListView_AUM.as_view(), name='goetf-list-aum'),
     path('list/type/', GoetfListView_Type.as_view(), name='goetf-list-type'),
     path('list/benchmark/', GoetfListView_Benchmark.as_view(), name='goetf-list-benchmark'),
+    path('list/index-mf/', GoetfListView_IMF.as_view(), name='goetf-list-imf'),
+    path('list/gold/', GoetfListView_Gold.as_view(), name='goetf-list-gold'),
+    path('list/nifty/', GoetfListView_Nifty.as_view(), name='goetf-list-nifty'),
     path('industry/', GoetfIndustryView.as_view(), name='goetf-industry-list'),
     path('fetch/', Goetf_fetch, name='goetf-fetch'),
     path('upload/', Goetf_upload, name='goetf-upload'),

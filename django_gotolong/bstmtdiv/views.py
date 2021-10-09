@@ -27,18 +27,23 @@ from django.http import HttpResponseRedirect
 
 
 class BstmtDivYearArchiveView(YearArchiveView):
-    queryset = BstmtDiv.objects.all()
+
     date_field = "bsdiv_date"
     make_object_list = True
     allow_future = True
 
+    def get_queryset(self):
+        return BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         total_amount = round(
-            BstmtDiv.objects.all().filter(bsdiv_date__year=self.get_year()).aggregate(Sum('bsdiv_amount'))[
+            not BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id). \
+                filter(bsdiv_date__year=self.get_year()).aggregate(Sum('bsdiv_amount'))[
                 'bsdiv_amount__sum'])
         summary_list = (
-            BstmtDiv.objects.all().filter(bsdiv_date__year=self.get_year()).annotate(
+            BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id). \
+                filter(bsdiv_date__year=self.get_year()).annotate(
                 month=ExtractMonth('bsdiv_date')).values('month').annotate(
                 Total=Round(Sum('bsdiv_amount'))))
         context["total_amount"] = total_amount
@@ -47,19 +52,24 @@ class BstmtDivYearArchiveView(YearArchiveView):
 
 
 class BstmtDivMonthArchiveView(MonthArchiveView):
-    queryset = BstmtDiv.objects.all()
     date_field = "bsdiv_date"
     make_object_list = True
     allow_future = True
 
+    def get_queryset(self):
+        return BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id)
+
+
 class BstmtDivListView(ListView):
     model = BstmtDiv
+
     # if pagination is desired
     # paginate_by = 300
-    queryset = BstmtDiv.objects.all()
 
-    year_list = BstmtDiv.objects.dates('bsdiv_date', 'year')
-    month_list = BstmtDiv.objects.dates('bsdiv_date', 'month')
+    def get_queryset(self):
+        self.year_list = BstmtDiv.objects.filter(bsdiv_user_id=self.request.user.id).dates('bsdiv_date', 'year')
+        self.month_list = BstmtDiv.objects.filter(bsdiv_user_id=self.request.user.id).dates('bsdiv_date', 'month')
+        return BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -67,14 +77,15 @@ class BstmtDivListView(ListView):
         context["month_list"] = self.month_list
         # aggregate returns dictionary
         # get value from dictionary
-        total_amount = round(BstmtDiv.objects.all().aggregate(Sum('bsdiv_amount'))[
+        total_amount = round(BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id).
+                             aggregate(Sum('bsdiv_amount'))[
                                  'bsdiv_amount__sum'])
         summary_list = (
-            BstmtDiv.objects.all().annotate(
+            BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id).annotate(
                 year=ExtractYear('bsdiv_date')).values('year').annotate(
                 Total=Round(Sum('bsdiv_amount')))).order_by('year')
         month_summary_list = (
-            BstmtDiv.objects.all().annotate(
+            BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id).annotate(
                 month=ExtractMonth('bsdiv_date')).values('month').annotate(
                 Total=Round(Sum('bsdiv_amount')))).order_by('month')
         context["total_amount"] = total_amount
@@ -85,11 +96,13 @@ class BstmtDivListView(ListView):
 
 class BstmtDivAmountView(ListView):
     model = BstmtDiv
+
     # if pagination is desired
     # paginate_by = 300
-    queryset = BstmtDiv.objects.all()
 
-    year_list = BstmtDiv.objects.dates('bsdiv_date', 'year')
+    def get_queryset(self):
+        self.year_list = BstmtDiv.objects.filter(bsdiv_user_id=self.request.user.id).dates('bsdiv_date', 'year')
+        return BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -105,11 +118,13 @@ class BstmtDivAmountView(ListView):
 
 class BstmtDivFrequencyView(ListView):
     model = BstmtDiv
+
     # if pagination is desired
     # paginate_by = 300
-    queryset = BstmtDiv.objects.all()
 
-    year_list = BstmtDiv.objects.dates('bsdiv_date', 'year')
+    def get_queryset(self):
+        self.year_list = BstmtDiv.objects.filter(bsdiv_user_id=self.request.user.id).dates('bsdiv_date', 'year')
+        return BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -170,7 +185,7 @@ def bstmtdiv_upload(request):
 
     # delete existing records
     print('Deleted existing BstmtDiv data')
-    BstmtDiv.objects.all().delete()
+    BstmtDiv.objects.all().filter(bsdiv_user_id=request.id).delete()
 
     # req_file = request.FILES['file']
     unique_id = 0
@@ -393,6 +408,7 @@ def bstmtdiv_upload(request):
 
             _, created = BstmtDiv.objects.update_or_create(
                 bsdiv_id=unique_id,
+                bsdiv_user_id=request.id,
                 bsdiv_date=bsdiv_date,
                 bsdiv_remarks=bsdiv_remarks,
                 bsdiv_amount=bsdiv_amount

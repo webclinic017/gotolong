@@ -2,36 +2,54 @@
 
 from .models import Mfund
 
-from django.views.generic.list import ListView
-
-from django.db.models import IntegerField, F, ExpressionWrapper, fields, Max, Min, Sum, Count
-
-from django.urls import reverse
-from django.http import HttpResponseRedirect
-import urllib3
-import csv
-import io
-
-import re
-
-import openpyxl
-
-import pandas as pd
-
-from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
-
 import plotly.graph_objects as go
 from plotly.offline import plot
 from plotly.tools import make_subplots
 
+from django.db.models import Q
+
+from django.conf import settings
+from django.shortcuts import redirect
+
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
+from django.views.generic.list import ListView
+from django.views import View
+
+from django.db.models import OuterRef, Subquery, Count, Sum, Max, Min
+from django.db.models.functions import Trim, Lower, Round
+
+import pandas as pd
+import csv, io
+import openpyxl
+from django.contrib import messages
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+
+from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
+
+from django_gotolong.broker.icidir.imf.models import BrokerIcidirMf
+
+
+def Mfund_url():
+    return "unused-mfund-refresh-url"
 
 class MfundListView(ListView):
     model = Mfund
+
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all()
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id)
+        return queryset
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(MfundListView, self).dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -43,11 +61,10 @@ class MfundListView(ListView):
 
 class MfundListView_Amount(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).order_by('-mf_nav_value')
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id).order_by('-mf_nav_value')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -58,11 +75,11 @@ class MfundListView_Amount(ListView):
 
 class MfundListView_AMC(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).order_by('mf_amc', 'mf_category', 'mf_subcat', '-mf_nav_value')
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            order_by('mf_amc', 'mf_category', 'mf_subcat', '-mf_nav_value')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -73,13 +90,13 @@ class MfundListView_AMC(ListView):
 
 class MfundListView_AMC_Amount(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
 
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).values('mf_amc').annotate(scheme_sum=Sum('mf_nav_value')). \
-        exclude(scheme_sum=0.0).order_by('-scheme_sum')
+    def get_queryset(self):
+        self.queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            values('mf_amc').annotate(scheme_sum=Sum('mf_nav_value')). \
+            exclude(scheme_sum=0.0).order_by('-scheme_sum')
+        print('hi ', self.queryset)
+        return self.queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -113,11 +130,11 @@ class MfundListView_AMC_Amount(ListView):
 
 class MfundListView_Category(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).order_by('mf_category', 'mf_subcat', '-mf_nav_value')
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            order_by('mf_category', 'mf_subcat', '-mf_nav_value')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -128,11 +145,11 @@ class MfundListView_Category(ListView):
 
 class MfundListView_Subcat(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).order_by('mf_subcat', '-mf_nav_value')
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            order_by('mf_subcat', '-mf_nav_value')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -140,14 +157,13 @@ class MfundListView_Subcat(ListView):
         context["refresh_url"] = refresh_url
         return context
 
-
 class MfundListView_Reco(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Mfund.objects.all().exclude(mf_units=0.0).order_by('mf_research_reco', '-mf_rating')
+
+    def get_queryset(self):
+        queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            order_by('mf_research_reco', '-mf_rating')
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -158,13 +174,12 @@ class MfundListView_Reco(ListView):
 
 class MfundListView_SubcatAmount(ListView):
     model = Mfund
-    # if pagination is desired
-    # paginate_by = 300
-    # filter_backends = [filters.OrderingFilter,]
-    # ordering_fields = ['sno', 'nse_symbol']
 
-    queryset = Mfund.objects.all().values('mf_subcat').annotate(scheme_sum=Sum('mf_nav_value')). \
-        exclude(scheme_sum=0.0).order_by('-scheme_sum')
+    def get_queryset(self):
+        self.queryset = Mfund.objects.all().filter(mf_user_id=self.request.user.id). \
+            values('mf_subcat').annotate(scheme_sum=Sum('mf_nav_value')). \
+            exclude(scheme_sum=0.0).order_by('-scheme_sum')
+        return self.queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -197,167 +212,55 @@ class MfundListView_SubcatAmount(ListView):
         return context
 
 
-def Mfund_url():
-    url = 'https://archives.nseindia.com/content/mfund/ind_nifty500list.csv'
-
-    return url
-
-
-# one parameter named request
-def Mfund_fetch(request):
-    # for quick debugging
-    #
-    # import pdb; pdb.set_trace()
-    #
-    # breakpoint()
+class MfundRefreshView(View):
     debug_level = 1
-    print('fetch not supported')
-    return HttpResponseRedirect(reverse("mfund-list"))
 
-
-# one parameter named request
-def Mfund_upload(request):
-    # for quick debugging
-    #
-    # import pdb; pdb.set_trace()
-    #
-    # breakpoint()
-
-    debug_level = 1
-    # declaring template
-    template = "mfund/mfund_list.html"
-    data = Mfund.objects.all()
-
-    # GET request returns the value of the data with the specified key.
-    if request.method == "GET":
-        return render(request, template)
-
-    req_file = request.FILES['file']
-
-    # let's check if it is a csv file
-
-    if req_file.name.endswith('.xls') or req_file.name.endswith('.xlsx'):
-        # get worksheet name
-        # print('temporary file path:', req_file.temporary_file_path)
-        print(req_file)
-
-        if True:
-            wb = openpyxl.load_workbook(req_file)
-            print(wb.sheetnames)
-            sheet_name = wb.sheetnames[0]
-            print(sheet_name)
-            ws = wb[sheet_name]
-            df = pd.DataFrame(ws.values)
-        else:
-            xl = pd.ExcelFile(req_file)
-            if debug_level > 0:
-                print(xl.sheet_names)
-            # single worksheet - Data
-            sheet_name = xl.sheet_names[0]
-            df = xl.parse(sheet_name)
-
-        # can be 'Data'
-        # can be 'Average MCap Jan Jun 2020'
-        # if sheet_name != 'fund-performance':
-        #    print("sheet name changed to", sheet_name)
-
-        # ignore top 6 line : Value Research, Fund Performance
-        # remove top six line from dataframe
-        # ignore the top 1 line
-        # df = df.iloc[1:]
-
-        if debug_level > 0:
-            print("old columns : ")
-            print(df.columns)
-
-        # change column name of data frame
-        columns_list = ["amc", "name", "category", "subcat", "rating",
-                        "units", "acp", "cost_value",
-                        "nav_date", "nav", "nav_value",
-                        "pnl_realized", "pnl", "pnl_pct",
-                        "research_reco"]
-
-        df.columns = columns_list
-
-        if debug_level > 0:
-            print("new columns : ")
-            print(df.columns)
-
-        # Keep only top 1000 entries
-        # df = df.iloc[:1000]
-
-        # round avg_mcap
-        # df = df.round({'avg_mcap' : 1})
-        # covert to numeric
-        # df[["avg_mcap"]] = df[["avg_mcap"]].apply(pd.to_numeric)
-        df[["daily_aum"]] = df[["daily_aum"]].astype(int)
-
-        # drop columns that are not required
-        skip_columns_list = ["none"]
-
-        df.drop(skip_columns_list, axis=1, inplace=True)
-
-        data_set = df.to_csv(header=True, index=False)
-
-    if req_file.name.endswith('.csv'):
-        data_set = req_file.read().decode('UTF-8')
-
-    if not (req_file.name.endswith('.csv') or req_file.name.endswith('.xls') or req_file.name.endswith('.xlsx')):
-        messages.error(request, req_file.name + ' : THIS IS NOT A XLS/XLSX/CSV FILE.')
+    def get(self, request):
+        self.mfund_refresh(request)
         return HttpResponseRedirect(reverse("mfund-list"))
 
-    # delete existing records
-    print('Deleted existing Mfund data')
-    Mfund.objects.all().delete()
+    def __init__(self):
+        super(MfundRefreshView, self).__init__()
 
-    # setup a stream which is when we loop through each line we are able to handle a data in a stream
+    def mfund_refresh(self, request):
+        debug_level = 1
+        # declaring template
 
-    io_string = io.StringIO(data_set)
-    # skip top 1 row
-    next(io_string)
+        # first delete all existing mfund objects
+        Mfund.objects.all().filter(mf_user_id=request.user.id).delete()
+        max_id_instances = Mfund.objects.aggregate(max_id=Max('mf_id'))
+        max_mf_id = max_id_instances['max_id']
+        print('DS: found max id ', max_mf_id)
+        if max_mf_id is None:
+            max_mf_id = 0
+            print('max_mf_id ', max_mf_id)
 
-    skip_records = 0
-    for column in csv.reader(io_string, delimiter=',', quotechar='"'):
-        mf_amc = column[0].strip()
-        mf_name = column[1].strip()
-        mf_category = column[2].strip()
-        mf_subcat = column[3].strip()
-        mf_rating = column[4].strip()
-        mf_units = column[5].strip()
-        mf_acp = column[6].strip()
-        mf_cost_value = column[7].strip()
-        mf_nav_date = column[8].strip()
-        mf_nav = column[9].strip()
-        mf_nav_value = column[10].strip()
-        mf_pnl_realized = column[10].strip()
-        mf_pnl = column[12].strip()
-        mf_pnl_pct = column[13].strip()
-        mf_research_reco = column[14].strip()
+        unique_id = max_mf_id
+        for brec in BrokerIcidirMf.objects.all().filter(bim_user_id=request.user.id):
+            unique_id += 1
+            print(brec.bim_amc, brec.bim_name, brec.bim_category, brec.bim_subcat)
+            print(brec.bim_rating, brec.bim_units, brec.bim_cost_value, brec.bim_nav_value)
+            print(brec.bim_research_reco)
+            # skip 0 units
+            if int(float(brec.bim_units)) != 0:
+                _, created = Mfund.objects.update_or_create(
+                    mf_id=unique_id,
+                    mf_user_id=request.user.id,
+                    mf_broker='icidir',
+                    mf_amc=brec.bim_amc,
+                    mf_name=brec.bim_name,
+                    mf_category=brec.bim_category,
+                    mf_subcat=brec.bim_subcat,
+                    mf_rating=brec.bim_rating,
+                    mf_cost_value=brec.bim_cost_value,
+                    mf_nav_value=brec.bim_nav_value,
+                    mf_research_reco=brec.bim_research_reco
+                )
 
-        # print('mf_units ', mf_units)
-        # skip mutual funds with 0 holdings
-        # if int(float(mf_units)) !=  0 :
+        # breakpoint()
 
-        _, created = Mfund.objects.update_or_create(
-            mf_amc=mf_amc,
-            mf_name=mf_name,
-            mf_category=mf_category,
-            mf_subcat=mf_subcat,
-            mf_rating=mf_rating,
-            mf_units=mf_units,
-            mf_acp=mf_acp,
-            mf_cost_value=mf_cost_value,
-            mf_nav_date=mf_nav_date,
-            mf_nav=mf_nav,
-            mf_nav_value=mf_nav_value,
-            mf_pnl_realized=mf_pnl_realized,
-            mf_pnl=mf_pnl,
-            mf_pnl_pct=mf_pnl_pct,
-            mf_research_reco=mf_research_reco
-        )
+        # import pdb
+        # pdb.set_trace()
 
-    lastrefd_update("mfund")
-
-    print('Skipped records', skip_records)
-    print('Completed loading new Mfund data')
-    return HttpResponseRedirect(reverse("mfund-list"))
+        # Updated Gfundareco objects
+        lastrefd_update("mfund")

@@ -1,0 +1,12 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+Add/Update Information
+
+<form action="{{ action }}" method="post">{% csrf_token %}
+    {% include "form_snippet.html" %}
+    <input type="submit" value="Submit"/>
+</form>
+
+
+{% include "bottom.html" %}

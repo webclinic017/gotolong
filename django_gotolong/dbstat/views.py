@@ -46,7 +46,7 @@ class DbstatListView(ListView):
     db_stat['lastrefd'] = Lastrefd.objects.count()
     # db_stat['screener'] = Screener.objects.count()
     db_stat['trendlyne'] = Trendlyne.objects.count()
-    db_stat['mfund'] = Goetf.objects.count()
+    db_stat['imf'] = Goetf.objects.count()
 
     db_stat['bis'] = BrokerIcidirSum.objects.count()
     db_stat['bit'] = BrokerIcidirTxn.objects.count()

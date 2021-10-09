@@ -30,11 +30,14 @@ import fuzzymatcher
 
 class DividendListView(ListView):
     model = Dividend
+
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Dividend.objects.all()
+
+    def get_queryset(self):
+        return Dividend.objects.all().filter(divi_user_id=self.request.user.id)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -43,11 +46,15 @@ class DividendListView(ListView):
 
 class DividendTickerListView(ListView):
     model = Dividend
+
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Dividend.objects.all().values('divi_ticker').annotate(Total=Round(Sum('divi_amount'))).order_by('-Total')
+
+    def get_queryset(self):
+        return Dividend.objects.all().filter(divi_user_id=self.request.user.id). \
+            values('divi_ticker').annotate(Total=Round(Sum('divi_amount'))).order_by('-Total')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -73,7 +80,8 @@ class DividendRefreshView(View):
         # declaring template
         template = "dividend/dividend_list.html"
 
-        df_bstmtdiv = pd.DataFrame.from_records(BstmtDiv.objects.all().values())
+        df_bstmtdiv = pd.DataFrame.from_records(BstmtDiv.objects.all().
+                                                filter(bsdiv_user_id=self.request.user.id).values())
         df_amfi = pd.DataFrame.from_records(Amfi.objects.all().values())
 
         left_on = ["bsdiv_remarks", ]
@@ -110,7 +118,7 @@ class DividendRefreshView(View):
         print(matched_results)
 
         cols = [
-            "bsdiv_id", "bsdiv_date", "bsdiv_remarks", "comp_name", "nse_symbol", "bsdiv_amount",
+            "bsdiv_id", "bsdiv_user_id", "bsdiv_date", "bsdiv_remarks", "comp_name", "nse_symbol", "bsdiv_amount",
             "best_match_score"
         ]
 
@@ -127,7 +135,7 @@ class DividendRefreshView(View):
         # pdb.set_trace()
 
         # first delete all existing dividend objects
-        Dividend.objects.all().delete()
+        Dividend.objects.all().filter(divi_user_id=self.request.user.id).delete()
 
         data_set = df.to_csv(header=False, index=False)
 
@@ -137,15 +145,17 @@ class DividendRefreshView(View):
         skipped_records = 0
         for column in csv.reader(io_string, delimiter=',', quotechar='"'):
             divi_id = column[0].strip()
-            divi_date = column[1].strip()
-            divi_remarks = column[2].strip()
-            divi_company = column[3].strip()
-            divi_ticker = column[4].strip()
-            divi_amount = column[5].strip()
-            divi_score = column[6].strip()
+            divi_user_id = column[1].strip(),
+            divi_date = column[2].strip()
+            divi_remarks = column[3].strip()
+            divi_company = column[4].strip()
+            divi_ticker = column[5].strip()
+            divi_amount = column[6].strip()
+            divi_score = column[7].strip()
 
             _, created = Dividend.objects.update_or_create(
                 divi_id=divi_id,
+                divi_user_id=divi_user_id,
                 divi_date=divi_date,
                 divi_remarks=divi_remarks,
                 divi_company=divi_company,

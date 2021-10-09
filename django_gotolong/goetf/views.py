@@ -81,6 +81,51 @@ class GoetfListView_Benchmark(ListView):
         return context
 
 
+class GoetfListView_IMF(ListView):
+    model = Goetf
+    # if pagination is desired
+    # paginate_by = 300
+    # filter_backends = [filters.OrderingFilter,]
+    # ordering_fields = ['sno', 'nse_symbol']
+    queryset = Goetf.objects.all().filter(goetf_type='Index').order_by('-goetf_aum')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        refresh_url = Goetf_url()
+        context["refresh_url"] = refresh_url
+        return context
+
+
+class GoetfListView_Gold(ListView):
+    model = Goetf
+    # if pagination is desired
+    # paginate_by = 300
+    # filter_backends = [filters.OrderingFilter,]
+    # ordering_fields = ['sno', 'nse_symbol']
+    queryset = Goetf.objects.all().filter(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        refresh_url = Goetf_url()
+        context["refresh_url"] = refresh_url
+        return context
+
+
+class GoetfListView_Nifty(ListView):
+    model = Goetf
+    # if pagination is desired
+    # paginate_by = 300
+    # filter_backends = [filters.OrderingFilter,]
+    # ordering_fields = ['sno', 'nse_symbol']
+    queryset = Goetf.objects.all().exclude(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        refresh_url = Goetf_url()
+        context["refresh_url"] = refresh_url
+        return context
+
+
 class GoetfIndustryView(ListView):
     model = Goetf
     # if pagination is desired

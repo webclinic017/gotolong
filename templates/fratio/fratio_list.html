@@ -3,6 +3,8 @@
 
 <h1> Filter Ratio List </h1>
 
+<a href="/fratio/add/"> Add </a>
+
 <table id="GoLoDataTable" class="display" cellspacing="0">
     <thead>
     <tr>
@@ -17,6 +19,10 @@
         </th>
         <th>
             fratio_enabled
+        </th>
+
+        <th>
+            Edit/Update
         </th>
     </tr>
     </thead>
@@ -35,11 +41,15 @@
         <td>
             {{ fratio_row.fratio_enabled}}
         </td>
+        <td>
+            <a href="{{ fratio_row.get_update_url }}"> Update </a> |
+        </td>
     </tr>
     {% empty %}
     <tr>No fratio yet.</tr>
     {% endfor %}
     </tbody>
 </table>
+
 
 {% include "bottom.html" %}

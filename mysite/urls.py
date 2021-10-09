@@ -58,6 +58,8 @@ from django_gotolong.goetf.views import GoetfListView_Type
 from django_gotolong.goetf.views import Goetf_fetch, Goetf_upload
 
 from django_gotolong.nach.views import NachListView
+from django_gotolong.othinv.views import OthinvListView
+
 from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy
 from django_gotolong.phealth.views import PhealthListView_Sell, PhealthListView_Hold
 from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
@@ -68,6 +70,7 @@ from django_gotolong.jsched.tasks import jsched_task_startup
 
 urlpatterns = [
                   path('', TemplateView.as_view(template_name="home.html"), name='index'),
+                  path('accounts/', include('django.contrib.auth.urls')),
                   path('admin/', admin.site.urls),
                   path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
                   path('amfi/upload/', amfi_upload, name='amfi-upload'),
@@ -95,17 +98,17 @@ urlpatterns = [
                      name='bstmtdiv-frequency-list'),
                 path('bstmtdiv/upload/', bstmtdiv_upload, name='bstmt-upload'),
                 path('bhav/fetch/', bhav_fetch, name='bhav-fetch'),
-                path('broker/', include('django_gotolong.broker.urls')),
-                path('corpact/list/', CorpactListView.as_view(), name='corpact-list'),
-                path('corpact/upload/', corpact_upload, name='corpact-upload'),
-                path('dbstat/list/', DbstatListView.as_view(), name='dbstat-list'),
-                path('demat/sum/', include('django_gotolong.dematsum.urls')),
-                path('demat/txn/', include('django_gotolong.demattxn.urls')),
+                  path('broker/', include('django_gotolong.broker.urls')),
+                  path('corpact/list/', CorpactListView.as_view(), name='corpact-list'),
+                  path('corpact/upload/', corpact_upload, name='corpact-upload'),
+                  path('dbstat/list/', DbstatListView.as_view(), name='dbstat-list'),
+                  path('demat/sum/', include('django_gotolong.dematsum.urls')),
+                  path('demat/txn/', include('django_gotolong.demattxn.urls')),
                   path('dividend/list/', DividendListView.as_view(), name='dividend-list'),
                   path('dividend/refresh/', DividendRefreshView.as_view(), name='dividend-refresh'),
                   path('dividend/ticker/', DividendTickerListView.as_view(),
                        name='dividend-ticker-list'),
-                  path('fratio/list/', FratioListView.as_view(), name='fratio-list'),
+                  path('fratio/', include('django_gotolong.fratio.urls')),
                   path('ftwhl/list/', FtwhlListView.as_view(), name='ftwhl-list'),
                   path('ftwhl/fetch/', ftwhl_fetch, name='ftwhl-fetch'),
                   path('ftwhl/upload/', ftwhl_upload, name='ftwhl-upload'),
@@ -119,10 +122,9 @@ urlpatterns = [
                   path('indices/fetch/', Indices_fetch, name='indices-fetch'),
                   path('indices/upload/', Indices_upload, name='indices-upload'),
                   path('lastrefd/list/', LastrefdListView.as_view(), name='lastrefd-list'),
-
                   path('mfund/', include('django_gotolong.mfund.urls')),
-
                   path('nach/list/', NachListView.as_view(), name='nach-list'),
+                  path('othinv/', include('django_gotolong.othinv.urls')),
                   path('page/about/', TemplateView.as_view(template_name="about.html")),
                   path('page/annual-report-self/', TemplateView.as_view(template_name="annual_report_self.html")),
                   path('page/contact/', TemplateView.as_view(template_name="contact.html")),
@@ -143,7 +145,7 @@ urlpatterns = [
                   path('uploaddoc/list/', views.list, name='uploaddoc-list'),
                   path('uploaddoc/delete/<int:id>/', views.delete_view, name='uploaddoc-delete'),
                   path('users/', include('django_gotolong.users.urls')),
-                  path('accounts/', include('django.contrib.auth.urls')),
+
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 jsched_task_startup()

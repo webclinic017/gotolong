@@ -26,5 +26,13 @@ Password: Secret pass
 
 
 5. credential configuration
+* took github token through pycharm (unlimited expiry)
 
+6. github and pycharm
+
+6.1 PyCharm -> GIT -> Git Remotes ->
+  origin	https://github.com/surinder432/gotolong.git
+  origin	https://github.com/gotolong/gotolong.git
+
+6.2
 

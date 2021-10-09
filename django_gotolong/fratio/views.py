@@ -1,15 +1,13 @@
 # Create your views here.
-
-# Create your views here.
-
-# Create your views here.
-
 from django.views.generic.list import ListView
 
-# from django_filters.rest_framework import DjangoFratioBackend, FratioSet, OrderingFratio
-
-
 from django_gotolong.fratio.models import Fratio
+from django_gotolong.fratio.forms import FratioForm
+
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render, reverse
+from django.template.context_processors import csrf
+
 
 class FratioListView(ListView):
     model = Fratio
@@ -23,7 +21,35 @@ class FratioListView(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
-# from django.http import HttpResponse
-# def index(request):
-#    return HttpResponse("Hello, world. You're at the polls index.")
-#
+
+def Fratio_update(request, id):
+    inst = get_object_or_404(Fratio, pk=id)
+    if request.method == 'POST':  # If the form has been submitted...
+        form = FratioForm(request.POST, instance=inst)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse("fratio-list"))
+    else:
+        form = FratioForm(instance=inst)  # A bound form
+        action = inst.get_update_url()
+        c = {'form': form, 'id': id, 'action': action}
+        c.update(csrf(request))
+        # desupported - render_to_response
+        # return render_to_reponse('add_update.html', c)
+        return render(request, 'add_update.html', c)
+
+
+def Fratio_add(request):
+    if request.method == 'POST':  # If the form has been submitted...
+        form = FratioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse("fratio-list"))
+        else:
+            raise RuntimeError('Form is invalid')
+    else:
+        form = FratioForm()  # An unbound form
+        action = Fratio().get_add_url()
+        c = {'form': form, 'action': action}
+        c.update(csrf(request))
+        return render(request, 'add_update.html', c)

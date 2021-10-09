@@ -16,9 +16,7 @@
 {% endif %}
 
 <p><b> NOTE: </b>
-    Please use demo user for experiment.
-    Do not register and store your data.
-    Your data will be lost in our rapid refresh cycle.
+    You can use guest/welcome for demo.
 </p>
 
 <form method="post" action="{% url 'login' %}">
@@ -27,12 +25,12 @@
         <tr>
             <td>{{ form.username.label_tag }}</td>
             <td>{{ form.username }}</td>
-            <td>(use username <b>demo</b> for demo user)</td>
+            <td>(use username <b>guest</b> to login without registration.)</td>
         </tr>
         <tr>
             <td>{{ form.password.label_tag }}</td>
             <td>{{ form.password }}</td>
-            <td>(use password <b>dummy123$</b> for demo user)</td>
+            <td>(use password <b>welcome</b> for guest user)</td>
         </tr>
     </table>
 
@@ -41,8 +39,10 @@
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="/users/sign-up/"> Sign-Up </a> |
-    <a href="{% url 'password_reset' %}">Lost password?</a></p>
+<p> | <a href="/users/sign-up/"> Sign-Up </a> |
+    <a href="{% url 'password_change' %}">Change password</a> |
+    <a href="{% url 'password_reset' %}">Lost password?</a> |
+</p>
 
 
 

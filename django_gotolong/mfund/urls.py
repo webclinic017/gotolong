@@ -20,20 +20,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from django_gotolong.mfund.views import MfundListView, \
+from .views import MfundListView, \
     MfundListView_Category, MfundListView_Amount, MfundListView_Subcat, \
     MfundListView_AMC, MfundListView_AMC_Amount, MfundListView_SubcatAmount, \
-    MfundListView_Reco, Mfund_upload, Mfund_fetch
+    MfundListView_Reco, MfundRefreshView
 
 urlpatterns = [
     path('list/', MfundListView.as_view(), name='mfund-list'),
     path('amc/list/', MfundListView_AMC.as_view(), name='mfund-list-amc'),
-    path('amc/amount/list/', MfundListView_AMC_Amount.as_view(), name='mfund-list-amc'),
+    path('amc/amount/list/', MfundListView_AMC_Amount.as_view(), name='mfund-list-amc-amount'),
     path('category/list/', MfundListView_Category.as_view(), name='mfund-list-category'),
     path('amount/list/', MfundListView_Amount.as_view(), name='mfund-list-amount'),
     path('subcat/list/', MfundListView_Subcat.as_view(), name='mfund-list-subcat'),
     path('subcat/amount/list/', MfundListView_SubcatAmount.as_view(), name='mfund-list-subcat-amount'),
     path('reco/list/', MfundListView_Reco.as_view(), name='mfund-list-reco'),
-    path('fetch/', Mfund_fetch, name='mfund-fetch'),
-    path('upload/', Mfund_upload, name='mfund-upload'),
+    path('refresh/', MfundRefreshView.as_view(), name='mfund-refresh')
 ]

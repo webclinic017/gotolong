@@ -1,6 +1,8 @@
 # GotoLong
 
-GotoLong is an Indian Stock Advisor (ISA) that can be used to identify stocks for buy and sale.
+GotoLong is being developed as a Portfolio Advisor.
+
+It has an Indian Stock Advisor (ISA) that can be used to identify stocks for buy and sale.
 
 It relies on
 
@@ -8,8 +10,9 @@ It relies on
 
 (b) investor's existing portfolio of stocks
 
-It is still in Beta phase and developers can experiment with it. Once it can be used by any user with basic knowledge of
-computer, it will be tagged as v1.0
+It is still in Beta phase and developers can experiment with it.
+
+Once it can be used by any user with basic knowledge of computer, it will be tagged as v1.0
 
 ## Sample Deployment
 
