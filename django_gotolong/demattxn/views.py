@@ -298,9 +298,9 @@ class DematTxnRefreshView(View):
         unique_id = max_dt_id
         for brec in BrokerIcidirTxn.objects.all().filter(bit_user_id=request.user.id):
             unique_id += 1
-            print(brec.bit_user_id, brec.bit_stock_symbol, brec.bit_isin_code)
-            print(brec.bit_action, brec.bit_quantity)
-            print(brec.bit_txn_price, brec.bit_txn_date)
+            if self.debug_level:
+                print(brec.bit_user_id, brec.bit_stock_symbol, brec.bit_isin_code,
+                      brec.bit_action, brec.bit_quantity, brec.bit_txn_price, brec.bit_txn_date)
             _, created = DematTxn.objects.update_or_create(
                 dt_id=unique_id,
                 dt_user_id=brec.bit_user_id,
@@ -321,8 +321,3 @@ class DematTxnRefreshView(View):
 
         # Updated Gfundareco objects
         lastrefd_update("demattxn")
-
-# from django.http import HttpResponse
-# def index(request):
-#    return HttpResponse("Hello, world. You're at the polls index.")
-#

@@ -58,6 +58,10 @@ class DematSumListView(ListView):
                         aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
         if total_amount:
             total_amount = round(total_amount)
+        else:
+            # NoneType
+            # handle case where data has not been loaded yet
+            return
 
         # reit list
         filter_list = ['EMBOFF', 'MINBUS', 'BROIND']
@@ -67,7 +71,9 @@ class DematSumListView(ListView):
 
         reit_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
                        filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
-        reit_amount = round(reit_amount)
+
+        if reit_amount:
+            reit_amount = round(int(float(reit_amount)))
 
         # etf list
         filter_list = ['HDFRGE', 'ICINEX', 'ICINIF', 'KOTNIF', 'NIFBEE',
@@ -78,7 +84,8 @@ class DematSumListView(ListView):
 
         etf_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
                       filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
-        etf_amount = round(etf_amount)
+        if etf_amount:
+            etf_amount = round(etf_amount)
 
         gold_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
                        filter(ds_ticker__icontains='GOL').aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
@@ -195,21 +202,29 @@ class DematSumCapTypeView(ListView):
     # amfi_qset = Amfi.objects.filter(comp_isin=OuterRef('pk'))
     # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank'))).order_by('comp_rank')
     # queryset = DematSum.objects.annotate(comp_rank=Subquery(amfi_qset.values('comp_rank')))
-    amfi_qs = Amfi.objects.filter(comp_isin=OuterRef("ds_isin"))
-    queryset = DematSum.objects.all(). \
-        annotate(comp_rank=Subquery(amfi_qs.values('comp_rank')[:1])). \
-        annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
-        values('cap_type'). \
-        annotate(cap_count=Count('cap_type')). \
-        annotate(cap_cost=Round(Sum('ds_costvalue'))). \
-        order_by('cap_type')
+
+    def get_queryset(self):
+        self.amfi_qs = Amfi.objects.filter(comp_isin=OuterRef("ds_isin"))
+        self.queryset = DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
+            annotate(comp_rank=Subquery(self.amfi_qs.values('comp_rank')[:1])). \
+            annotate(cap_type=Lower(Trim(Subquery(self.amfi_qs.values('cap_type')[:1])))). \
+            values('cap_type'). \
+            annotate(cap_count=Count('cap_type')). \
+            annotate(cap_cost=Round(Sum('ds_costvalue'))). \
+            order_by('cap_type')
+
+        return self.queryset
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(DematSumCapTypeView, self).dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
         amfi_qs = Amfi.objects.filter(comp_isin=OuterRef("ds_isin"))
         self.queryset = DematSum.objects.all(). \
-            annotate(comp_rank=Subquery(amfi_qs.values('comp_rank')[:1])). \
+            annotate(comp_rank=Subquery(self.amfi_qs.values('comp_rank')[:1])). \
             annotate(cap_type=Lower(Trim(Subquery(amfi_qs.values('cap_type')[:1])))). \
             values('cap_type'). \
             annotate(cap_count=Count('cap_type')). \
@@ -250,6 +265,9 @@ class DematSumCapTypeView(ListView):
         # expected distribution - 14%, 28%, 58%
         expected_pct_list = [58, 28, 14]
         actual_pct_list = [cap_pct_dict['large cap'], cap_pct_dict['mid cap'], cap_pct_dict['small cap']]
+
+        print(cap_pct_dict);
+
         fig_1 = go.Figure(data=[
             go.Bar(name='Expected %', x=cap_type_list, y=expected_pct_list, text=expected_pct_list,
                    textposition='auto', ),

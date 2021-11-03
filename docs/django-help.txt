@@ -162,3 +162,17 @@ AUTH_PASSWORD_VALIDATORS = [
 
 14. plots using plotly
 https://www.codingwithricky.com/2019/08/28/easy-django-plotly/
+
+15. Fixed Timezone issues - now() with DateTimeField in model.
+USE_TZ is active in settings.py
+
+Solution
+1. Use now from timezone and
+2. Use .%f%z in strftime.
+
+    now = timezone.now()
+    lastrefd_module = module_name
+    # fixed timezone issue
+    lastrefd_date = now.strftime("%Y-%m-%d %H:%M:%S.%f%z")
+
+16.

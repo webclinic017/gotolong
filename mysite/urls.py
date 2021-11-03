@@ -60,8 +60,7 @@ from django_gotolong.goetf.views import Goetf_fetch, Goetf_upload
 from django_gotolong.nach.views import NachListView
 from django_gotolong.othinv.views import OthinvListView
 
-from django_gotolong.phealth.views import PhealthListView_All, PhealthListView_Buy
-from django_gotolong.phealth.views import PhealthListView_Sell, PhealthListView_Hold
+
 from django_gotolong.trendlyne.views import TrendlyneListView, TrendlyneRecoView, trendlyne_upload
 
 from django_gotolong.uploaddoc import views
@@ -133,10 +132,7 @@ urlpatterns = [
                   path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
                   path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
                   path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
-                  path('phealth/list/all/', PhealthListView_All.as_view(), name='phealth-list-all'),
-                  path('phealth/list/buy/', PhealthListView_Buy.as_view(), name='phealth-list-buy'),
-                  path('phealth/list/hold/', PhealthListView_Hold.as_view(), name='phealth-list-hold'),
-                  path('phealth/list/sell/', PhealthListView_Sell.as_view(), name='phealth-list-sell'),
+                  path('phealth/', include('django_gotolong.phealth.urls')),
                   path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
                   path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),
                   path('trendlyne/upload/', trendlyne_upload, name='trendlyne-upload'),

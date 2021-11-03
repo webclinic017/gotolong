@@ -18,9 +18,11 @@ from django_gotolong.lastrefd.models import Lastrefd
 # from django_gotolong.screener.models import Screener
 from django_gotolong.trendlyne.models import Trendlyne
 from django_gotolong.goetf.models import Goetf
+from django_gotolong.mfund.models import Mfund
 
 from django_gotolong.broker.icidir.isum.models import BrokerIcidirSum
 from django_gotolong.broker.icidir.itxn.models import BrokerIcidirTxn
+from django_gotolong.broker.icidir.imf.models import BrokerIcidirMf
 
 
 class DbstatListView(ListView):
@@ -32,6 +34,9 @@ class DbstatListView(ListView):
     db_stat = {}
 
     db_stat['amfi'] = Amfi.objects.count()
+    db_stat['bim'] = BrokerIcidirMf.objects.count()
+    db_stat['bis'] = BrokerIcidirSum.objects.count()
+    db_stat['bit'] = BrokerIcidirTxn.objects.count()
     db_stat['bhav'] = Bhav.objects.count()
     db_stat['bstmtdiv'] = BstmtDiv.objects.count()
     db_stat['corpact'] = Corpact.objects.count()
@@ -42,14 +47,12 @@ class DbstatListView(ListView):
     db_stat['ftwhl'] = Ftwhl.objects.count()
     db_stat['gfundareco'] = Gfundareco.objects.count()
     db_stat['gweight'] = Gweight.objects.count()
+    db_stat['goetf'] = Goetf.objects.count()
     db_stat['indices'] = Indices.objects.count()
     db_stat['lastrefd'] = Lastrefd.objects.count()
+    db_stat['mfund'] = Mfund.objects.count()
     # db_stat['screener'] = Screener.objects.count()
     db_stat['trendlyne'] = Trendlyne.objects.count()
-    db_stat['imf'] = Goetf.objects.count()
-
-    db_stat['bis'] = BrokerIcidirSum.objects.count()
-    db_stat['bit'] = BrokerIcidirTxn.objects.count()
 
     db_rows = 0
 

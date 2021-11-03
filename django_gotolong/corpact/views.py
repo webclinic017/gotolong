@@ -14,7 +14,7 @@ import re
 
 from django_gotolong.amfi.models import Amfi, amfi_load_rank
 from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
-from django_gotolong.comm.func import comm_func_ticker_match
+from django_gotolong.comm import comfun
 from django_gotolong.corpact.models import Corpact
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
@@ -248,7 +248,7 @@ def corpact_upload(request):
     for security_name in corp_act_stock_list:
         # only top 500 to meet heroku limits of total 10k rows
         # also cover any additional non top 500 stocks holding
-        if comm_func_ticker_match(security_name, amfi_rank_dict, dematsum_list):
+        if comfun.comm_func_ticker_match(security_name, amfi_rank_dict, dematsum_list):
             _, created = Corpact.objects.update_or_create(
                 ca_ticker=security_name,
                 ca_total=ca_score[security_name, 'total'],

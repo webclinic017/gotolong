@@ -4,7 +4,7 @@ from .models import Goetf
 
 from django.views.generic.list import ListView
 
-from django.db.models import (Count)
+from django.db.models import (Count, Q)
 
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -81,6 +81,23 @@ class GoetfListView_Benchmark(ListView):
         return context
 
 
+class GoetfListView_Benchmark_Select(ListView):
+    model = Goetf
+
+    # too many variants of 'NIFTY 50'
+    queryset = Goetf.objects.all().filter(Q(goetf_benchmark__contains='Domestic Price of Gold') | \
+                                          Q(goetf_benchmark__contains='NIFTY 50 Total Return Index') | Q(
+        goetf_benchmark__contains='Next 50') |
+                                          Q(goetf_benchmark__contains='Midcap 150')). \
+        order_by('goetf_benchmark', '-goetf_aum')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        refresh_url = Goetf_url()
+        context["refresh_url"] = refresh_url
+        return context
+
+
 class GoetfListView_IMF(ListView):
     model = Goetf
     # if pagination is desired
@@ -96,13 +113,14 @@ class GoetfListView_IMF(ListView):
         return context
 
 
-class GoetfListView_Gold(ListView):
+class GoetfListView_Gold_ETF(ListView):
     model = Goetf
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().filter(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+    queryset = Goetf.objects.all().filter(goetf_type='ETF').filter(goetf_benchmark__contains='Gold').order_by(
+        '-goetf_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -111,13 +129,14 @@ class GoetfListView_Gold(ListView):
         return context
 
 
-class GoetfListView_Nifty(ListView):
+class GoetfListView_Gold_MF(ListView):
     model = Goetf
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().exclude(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+    queryset = Goetf.objects.all().filter(goetf_type='Index').filter(goetf_benchmark__contains='Gold').order_by(
+        '-goetf_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -125,6 +144,21 @@ class GoetfListView_Nifty(ListView):
         context["refresh_url"] = refresh_url
         return context
 
+
+class GoetfListView_NonGold_ETF(ListView):
+    model = Goetf
+    # if pagination is desired
+    # paginate_by = 300
+    # filter_backends = [filters.OrderingFilter,]
+    # ordering_fields = ['sno', 'nse_symbol']
+    queryset = Goetf.objects.all().filter(goetf_type='ETF'). \
+        exclude(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        refresh_url = Goetf_url()
+        context["refresh_url"] = refresh_url
+        return context
 
 class GoetfIndustryView(ListView):
     model = Goetf

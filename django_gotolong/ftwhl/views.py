@@ -20,7 +20,7 @@ from django_gotolong.ftwhl.models import Ftwhl
 
 from django_gotolong.amfi.models import Amfi, amfi_load_rank
 from django_gotolong.dematsum.models import DematSum, dematsum_load_stocks
-from django_gotolong.comm.func import comm_func_ticker_match
+from django_gotolong.comm import comfun
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update, lastrefd_same
 
 class FtwhlListView(ListView):
@@ -128,7 +128,7 @@ def ftwhl_fetch(request):
         column[4] = column[4].strip()
         column[5] = column[5].strip()
 
-        if comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
+        if comfun.comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
             _, created = Ftwhl.objects.update_or_create(
                 ftwhl_ticker=ftwhl_ticker,
                 ftwhl_high=column[2],
@@ -268,7 +268,7 @@ def ftwhl_upload(request):
         # EQ - intra day trade allowed (normal trading)
         # BE - trade to trade/T-segment : (no intra day squaring allowed : (accept/give delivery)
         if ftwhl_series == 'EQ':
-            if comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
+            if comfun.comm_func_ticker_match(ftwhl_ticker, amfi_rank_dict, dematsum_list):
                 _, created = Ftwhl.objects.update_or_create(
                     ftwhl_ticker=ftwhl_ticker,
                     ftwhl_high=ftwhl_high,

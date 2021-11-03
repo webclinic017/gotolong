@@ -9,8 +9,8 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-
 class BrokerIcidirMf(models.Model):
+    bim_id = models.IntegerField(blank=True, null=True)
     bim_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     bim_amc = models.TextField(blank=True, null=True)
     bim_name = models.TextField(primary_key=True)

@@ -88,7 +88,7 @@ CREATE TABLE `auth_user` (
   `date_joined` datetime(6) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,6 +140,34 @@ CREATE TABLE `both_lastrefd` (
   `lastrefd_module` varchar(50) DEFAULT NULL,
   `lastrefd_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `broker_icidir_mf`
+--
+
+DROP TABLE IF EXISTS `broker_icidir_mf`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `broker_icidir_mf` (
+  `bim_id` int(11) DEFAULT NULL,
+  `bim_user_id` int(11) DEFAULT NULL,
+  `bim_amc` text DEFAULT NULL,
+  `bim_name` text DEFAULT NULL,
+  `bim_category` text DEFAULT NULL,
+  `bim_subcat` text DEFAULT NULL,
+  `bim_rating` text DEFAULT NULL,
+  `bim_units` float DEFAULT NULL,
+  `bim_acp` float DEFAULT NULL,
+  `bim_cost_value` float DEFAULT NULL,
+  `bim_nav_date` text DEFAULT NULL,
+  `bim_nav` float DEFAULT NULL,
+  `bim_nav_value` float DEFAULT NULL,
+  `bim_pnl_realized` float DEFAULT NULL,
+  `bim_pnl` float DEFAULT NULL,
+  `bim_pnl_pct` float DEFAULT NULL,
+  `bim_research_reco` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -206,6 +234,8 @@ DROP TABLE IF EXISTS `broker_zerodha_sum`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `broker_zerodha_sum` (
+  `bzs_id` int(11) DEFAULT NULL,
+  `bzs_user_id` int(11) DEFAULT NULL,
   `bzs_instrument` text DEFAULT NULL,
   `bzs_quantity` text DEFAULT NULL,
   `bzs_average_cost` text DEFAULT NULL,
@@ -225,7 +255,8 @@ DROP TABLE IF EXISTS `broker_zerodha_txn`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `broker_zerodha_txn` (
-  `bzt_id` text DEFAULT NULL,
+  `bzt_id` int(11) DEFAULT NULL,
+  `bzt_user_id` int(11) DEFAULT NULL,
   `bzt_tdate` date DEFAULT NULL,
   `bzt_tsymbol` text DEFAULT NULL,
   `bzt_exchange` text DEFAULT NULL,
@@ -276,7 +307,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -560,6 +591,7 @@ DROP TABLE IF EXISTS `user_bstmt_div`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_bstmt_div` (
   `bsdiv_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bsdiv_user_id` int(11) NOT NULL DEFAULT 0,
   `bsdiv_date` date DEFAULT NULL,
   `bsdiv_remarks` text DEFAULT NULL,
   `bsdiv_amount` float DEFAULT NULL,
@@ -595,7 +627,7 @@ DROP TABLE IF EXISTS `user_demat_txn`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_demat_txn` (
-  `dt_id` text DEFAULT NULL,
+  `dt_id` int(11) DEFAULT NULL,
   `dt_user_id` int(11) DEFAULT NULL,
   `dt_broker` text DEFAULT NULL,
   `dt_ticker` text DEFAULT NULL,
@@ -617,6 +649,7 @@ DROP TABLE IF EXISTS `user_dividend`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_dividend` (
   `divi_id` int(11) NOT NULL AUTO_INCREMENT,
+  `divi_user_id` int(11) NOT NULL DEFAULT 0,
   `divi_date` date DEFAULT NULL,
   `divi_remarks` text DEFAULT NULL,
   `divi_company` text DEFAULT NULL,
@@ -652,22 +685,38 @@ DROP TABLE IF EXISTS `user_mfund`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user_mfund` (
+  `mf_id` int(11) DEFAULT NULL,
+  `mf_user_id` int(11) DEFAULT NULL,
+  `mf_broker` text DEFAULT NULL,
   `mf_amc` text DEFAULT NULL,
   `mf_name` text DEFAULT NULL,
   `mf_category` text DEFAULT NULL,
   `mf_subcat` text DEFAULT NULL,
   `mf_rating` text DEFAULT NULL,
-  `mf_units` float DEFAULT NULL,
-  `mf_acp` float DEFAULT NULL,
   `mf_cost_value` float DEFAULT NULL,
-  `mf_nav_date` text DEFAULT NULL,
-  `mf_nav` float DEFAULT NULL,
   `mf_nav_value` float DEFAULT NULL,
-  `mf_pnl_realized` float DEFAULT NULL,
-  `mf_pnl` float DEFAULT NULL,
-  `mf_pnl_pct` float DEFAULT NULL,
   `mf_research_reco` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `user_othinv`
+--
+
+DROP TABLE IF EXISTS `user_othinv`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_othinv` (
+  `othinv_id` int(11) DEFAULT NULL,
+  `othinv_user_id` int(11) DEFAULT NULL,
+  `othinv_name` text DEFAULT NULL,
+  `othinv_details` text DEFAULT NULL,
+  `othinv_equity` float DEFAULT NULL,
+  `othinv_debt` float DEFAULT NULL,
+  `othinv_gold` float DEFAULT NULL,
+  `othinv_intl` float DEFAULT NULL,
+  `othinv_realty` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -693,4 +742,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-30 18:28:23
+-- Dump completed on 2021-11-03 21:46:18

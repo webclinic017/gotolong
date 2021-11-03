@@ -9,8 +9,12 @@ from django.db import models
 
 from django_gotolong.amfi.models import Amfi
 
+from django.contrib.auth.models import User
+
 
 class BrokerZerodhaSum(models.Model):
+    bzs_id = models.IntegerField(blank=True, null=True)
+    bzs_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     bzs_instrument = models.TextField(primary_key=True)
     bzs_quantity = models.IntegerField(blank=True, null=True)
     bzs_average_cost = models.FloatField(blank=True, null=True)

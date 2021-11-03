@@ -1,10 +1,12 @@
 from django.db import models
 
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class BrokerZerodhaTxn(models.Model):
     bzt_id = models.AutoField(primary_key=True)
+    bzt_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     bzt_tdate = models.DateField(blank=True, null=True)
     bzt_tsymbol = models.TextField(blank=True, null=True)
     bzt_exchange = models.TextField(blank=True, null=True)
