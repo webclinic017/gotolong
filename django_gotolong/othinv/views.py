@@ -33,7 +33,7 @@ class OthinvListView(ListView):
             print('qs2_item ', qs2_item)
 
         sum_total = 0
-        sum_othinv_equity = (Othinv.objects.all().filter(othinv_user_id=self.request.user.id).
+        sum_othinv_equity = (Othinv.objects.filter(othinv_user_id=self.request.user.id).
                              aggregate(sum_othinv_equity=Sum('othinv_equity')))['sum_othinv_equity']
         if sum_othinv_equity:
             sum_othinv_equity = round(sum_othinv_equity)
@@ -42,7 +42,7 @@ class OthinvListView(ListView):
         sum_total += sum_othinv_equity
         context['sum_othinv_equity'] = sum_othinv_equity
 
-        sum_othinv_debt = (Othinv.objects.all().filter(othinv_user_id=self.request.user.id).
+        sum_othinv_debt = (Othinv.objects.filter(othinv_user_id=self.request.user.id).
                            aggregate(sum_othinv_debt=Sum('othinv_debt')))['sum_othinv_debt']
         if sum_othinv_debt:
             sum_othinv_debt = round(sum_othinv_debt)
@@ -51,7 +51,7 @@ class OthinvListView(ListView):
         sum_total += sum_othinv_debt
         context['sum_othinv_debt'] = sum_othinv_debt
 
-        sum_othinv_gold = (Othinv.objects.all().filter(othinv_user_id=self.request.user.id).
+        sum_othinv_gold = (Othinv.objects.filter(othinv_user_id=self.request.user.id).
                            aggregate(sum_othinv_gold=Sum('othinv_gold')))['sum_othinv_gold']
         if sum_othinv_gold:
             sum_othinv_gold = round(sum_othinv_gold)
@@ -61,7 +61,7 @@ class OthinvListView(ListView):
         sum_total += sum_othinv_gold
         context['sum_othinv_gold'] = sum_othinv_gold
 
-        sum_othinv_intl = (Othinv.objects.all().filter(othinv_user_id=self.request.user.id).
+        sum_othinv_intl = (Othinv.objects.filter(othinv_user_id=self.request.user.id).
                            aggregate(sum_othinv_intl=Sum('othinv_intl')))['sum_othinv_intl']
 
         if sum_othinv_intl:
@@ -72,7 +72,7 @@ class OthinvListView(ListView):
         sum_total += sum_othinv_intl
         context['sum_othinv_intl'] = sum_othinv_intl
 
-        sum_othinv_realty = (Othinv.objects.all().filter(othinv_user_id=self.request.user.id).
+        sum_othinv_realty = (Othinv.objects.filter(othinv_user_id=self.request.user.id).
                              aggregate(sum_othinv_realty=Sum('othinv_realty')))['sum_othinv_realty']
         if sum_othinv_realty:
             sum_othinv_realty = round(sum_othinv_realty)

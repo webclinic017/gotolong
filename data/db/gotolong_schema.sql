@@ -391,6 +391,21 @@ CREATE TABLE `global_corpact` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `global_fofeti`
+--
+
+DROP TABLE IF EXISTS `global_fofeti`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `global_fofeti` (
+  `fofeti_scheme` text DEFAULT NULL,
+  `fofeti_type` text DEFAULT NULL,
+  `fofeti_benchmark` text DEFAULT NULL,
+  `fofeti_aum` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `global_fratio`
 --
 
@@ -434,21 +449,6 @@ CREATE TABLE `global_funda_reco` (
   `funda_reco_type` text DEFAULT NULL,
   `funda_reco_cause` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `global_goetf`
---
-
-DROP TABLE IF EXISTS `global_goetf`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `global_goetf` (
-  `goetf_scheme` text DEFAULT NULL,
-  `goetf_type` text DEFAULT NULL,
-  `goetf_benchmark` text DEFAULT NULL,
-  `goetf_aum` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -742,4 +742,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-03 21:46:18
+-- Dump completed on 2021-11-09 23:31:20

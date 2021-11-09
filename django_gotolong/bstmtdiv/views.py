@@ -77,9 +77,11 @@ class BstmtDivListView(ListView):
         context["month_list"] = self.month_list
         # aggregate returns dictionary
         # get value from dictionary
-        total_amount = round(BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id).
-                             aggregate(Sum('bsdiv_amount'))[
-                                 'bsdiv_amount__sum'])
+        total_amount = BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id). \
+            aggregate(Sum('bsdiv_amount'))['bsdiv_amount__sum']
+        if total_amount:
+            total_amount = round(total_amount)
+
         summary_list = (
             BstmtDiv.objects.all().filter(bsdiv_user_id=self.request.user.id).annotate(
                 year=ExtractYear('bsdiv_date')).values('year').annotate(

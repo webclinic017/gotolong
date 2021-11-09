@@ -17,7 +17,7 @@ from django_gotolong.indices.models import Indices
 from django_gotolong.lastrefd.models import Lastrefd
 # from django_gotolong.screener.models import Screener
 from django_gotolong.trendlyne.models import Trendlyne
-from django_gotolong.goetf.models import Goetf
+from django_gotolong.fofeti.models import Fofeti
 from django_gotolong.mfund.models import Mfund
 
 from django_gotolong.broker.icidir.isum.models import BrokerIcidirSum
@@ -47,7 +47,7 @@ class DbstatListView(ListView):
     db_stat['ftwhl'] = Ftwhl.objects.count()
     db_stat['gfundareco'] = Gfundareco.objects.count()
     db_stat['gweight'] = Gweight.objects.count()
-    db_stat['goetf'] = Goetf.objects.count()
+    db_stat['fofeti'] = Fofeti.objects.count()
     db_stat['indices'] = Indices.objects.count()
     db_stat['lastrefd'] = Lastrefd.objects.count()
     db_stat['mfund'] = Mfund.objects.count()

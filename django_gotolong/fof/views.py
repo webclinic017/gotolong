@@ -1,6 +1,6 @@
 # Create your views here.
 
-from .models import Goetf
+from .models import Fof
 
 from django.views.generic.list import ListView
 
@@ -21,172 +21,173 @@ import pandas as pd
 from django_gotolong.lastrefd.models import Lastrefd, lastrefd_update
 
 
-class GoetfListView(ListView):
-    model = Goetf
+class FofListView(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all()
+    queryset = Fof.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_AUM(ListView):
-    model = Goetf
+class FofListView_AUM(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().order_by('-goetf_aum')
+    queryset = Fof.objects.all().order_by('-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_Type(ListView):
-    model = Goetf
+class FofListView_Type(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().order_by('goetf_type', '-goetf_aum')
+    queryset = Fof.objects.all().order_by('fof_type', '-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_Benchmark(ListView):
-    model = Goetf
+class FofListView_Benchmark(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().order_by('goetf_benchmark', '-goetf_aum')
+    queryset = Fof.objects.all().order_by('fof_benchmark', '-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_Benchmark_Select(ListView):
-    model = Goetf
+class FofListView_Benchmark_Select(ListView):
+    model = Fof
 
     # too many variants of 'NIFTY 50'
-    queryset = Goetf.objects.all().filter(Q(goetf_benchmark__contains='Domestic Price of Gold') | \
-                                          Q(goetf_benchmark__contains='NIFTY 50 Total Return Index') | Q(
-        goetf_benchmark__contains='Next 50') |
-                                          Q(goetf_benchmark__contains='Midcap 150')). \
-        order_by('goetf_benchmark', '-goetf_aum')
+    queryset = Fof.objects.all().filter(Q(fof_benchmark__contains='Domestic Price of Gold') | \
+                                        Q(fof_benchmark__contains='NIFTY 50 Total Return Index') | Q(
+        fof_benchmark__contains='Next 50') |
+                                        Q(fof_benchmark__contains='Midcap 150')). \
+        order_by('fof_benchmark', '-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_IMF(ListView):
-    model = Goetf
+class FofListView_IMF(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().filter(goetf_type='Index').order_by('-goetf_aum')
+    queryset = Fof.objects.all().filter(fof_type='Index').order_by('-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_Gold_ETF(ListView):
-    model = Goetf
+class FofListView_Gold_ETF(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().filter(goetf_type='ETF').filter(goetf_benchmark__contains='Gold').order_by(
-        '-goetf_aum')
+    queryset = Fof.objects.all().filter(fof_type='ETF').filter(fof_benchmark__contains='Gold').order_by(
+        '-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_Gold_MF(ListView):
-    model = Goetf
+class FofListView_Gold_MF(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().filter(goetf_type='Index').filter(goetf_benchmark__contains='Gold').order_by(
-        '-goetf_aum')
+    queryset = Fof.objects.all().filter(Q(fof_type='Index') | Q(fof_type='FoF')). \
+        filter(fof_benchmark__contains='Gold').order_by('-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
 
-class GoetfListView_NonGold_ETF(ListView):
-    model = Goetf
+class FofListView_NonGold_ETF(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
-    queryset = Goetf.objects.all().filter(goetf_type='ETF'). \
-        exclude(goetf_benchmark__contains='Gold').order_by('-goetf_aum')
+    queryset = Fof.objects.all().filter(fof_type='ETF'). \
+        exclude(fof_benchmark__contains='Gold').order_by('-fof_aum')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        refresh_url = Goetf_url()
+        refresh_url = Fof_url()
         context["refresh_url"] = refresh_url
         return context
 
-class GoetfIndustryView(ListView):
-    model = Goetf
+
+class FofIndustryView(ListView):
+    model = Fof
     # if pagination is desired
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
 
-    queryset = Goetf.objects.all().values('goetf_benchmark').annotate(scheme_count=Count('goetf_benchmark')). \
+    queryset = Fof.objects.all().values('fof_benchmark').annotate(scheme_count=Count('fof_benchmark')). \
         order_by('-scheme_count')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # get count of Industries
-        benchmarks_count = len(Goetf.objects.all().values('goetf_benchmark'). \
-                               annotate(benchmarks_count=Count('goetf_benchmark', distinct=True)))
+        benchmarks_count = len(Fof.objects.all().values('fof_benchmark'). \
+                               annotate(benchmarks_count=Count('fof_benchmark', distinct=True)))
         context['benchmarks_count'] = benchmarks_count
         return context
 
 
-def Goetf_url():
+def Fof_url():
     url = 'https://archives.nseindia.com/content/mfund/ind_nifty500list.csv'
 
     return url
 
 
 # one parameter named request
-def Goetf_fetch(request):
+def Fof_fetch(request):
     # for quick debugging
     #
     # import pdb; pdb.set_trace()
@@ -194,11 +195,11 @@ def Goetf_fetch(request):
     # breakpoint()
     debug_level = 1
     print('fetch not supported')
-    return HttpResponseRedirect(reverse("goetf-list"))
+    return HttpResponseRedirect(reverse("fof-list"))
 
 
 # one parameter named request
-def Goetf_upload(request):
+def Fof_upload(request):
     # for quick debugging
     #
     # import pdb; pdb.set_trace()
@@ -207,8 +208,8 @@ def Goetf_upload(request):
 
     debug_level = 1
     # declaring template
-    template = "goetf/mfund_list.html"
-    data = Goetf.objects.all()
+    template = "fof/mfund_list.html"
+    data = Fof.objects.all()
 
     # GET request returns the value of the data with the specified key.
     if request.method == "GET":
@@ -293,11 +294,11 @@ def Goetf_upload(request):
 
     if not (req_file.name.endswith('.csv') or req_file.name.endswith('.xls') or req_file.name.endswith('.xlsx')):
         messages.error(request, req_file.name + ' : THIS IS NOT A XLS/XLSX/CSV FILE.')
-        return HttpResponseRedirect(reverse("goetf-list"))
+        return HttpResponseRedirect(reverse("fof-list"))
 
     # delete existing records
-    print('Deleted existing Goetf data')
-    Goetf.objects.all().delete()
+    print('Deleted existing Fof data')
+    Fof.objects.all().delete()
 
     # setup a stream which is when we loop through each line we are able to handle a data in a stream
 
@@ -309,27 +310,27 @@ def Goetf_upload(request):
 
     skip_records = 0
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
-        goetf_scheme = column[0].strip()
-        if re.search('Index', goetf_scheme):
-            goetf_type = 'Index'
-        elif re.search('ETF', goetf_scheme):
-            goetf_type = 'ETF'
-        elif re.search('Fund', goetf_scheme):
-            goetf_type = 'Index'
+        fof_scheme = column[0].strip()
+        if re.search('Index', fof_scheme):
+            fof_type = 'Index'
+        elif re.search('ETF', fof_scheme):
+            fof_type = 'ETF'
+        elif re.search('Fund', fof_scheme):
+            fof_type = 'Index'
         else:
-            goetf_type = 'Unknown'
-        goetf_benchmark = column[1].strip()
-        goetf_aum = column[2].strip()
+            fof_type = 'FoF'
+        fof_benchmark = column[1].strip()
+        fof_aum = column[2].strip()
 
-        _, created = Goetf.objects.update_or_create(
-            goetf_scheme=goetf_scheme,
-            goetf_type=goetf_type,
-            goetf_benchmark=goetf_benchmark,
-            goetf_aum=goetf_aum
+        _, created = Fof.objects.update_or_create(
+            fof_scheme=fof_scheme,
+            fof_type=fof_type,
+            fof_benchmark=fof_benchmark,
+            fof_aum=fof_aum
         )
 
-    lastrefd_update("goetf")
+    lastrefd_update("fof")
 
     print('Skipped records', skip_records)
-    print('Completed loading new Goetf data')
-    return HttpResponseRedirect(reverse("goetf-list"))
+    print('Completed loading new Fof data')
+    return HttpResponseRedirect(reverse("fof-list"))
