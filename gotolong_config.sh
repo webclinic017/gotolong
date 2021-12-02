@@ -18,11 +18,11 @@ export PYTHONPATH=${PKG_ROOT}:${PROJ_SCRIPTS_LOC}:.:
 # set DATABASE_URL for django
 # check django/mysite/settings.py
 # export DATABASE_URL=mysql://USER:PASSWORD@HOST:PORT/NAME
-export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+export GOTOLONG_MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
 # postgres://USER:PASSWORD@HOST:PORT/NAME
-export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+export GOTOLONG_PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
 
-export DATABASE_URL=${MY_DATABASE_URL}
+export DATABASE_URL=${GOTOLONG_MY_DATABASE_URL}
 
 # uses heroku cli
 # echo Trying to get DATABASE_URL ... timeout of 1 minute

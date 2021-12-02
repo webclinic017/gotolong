@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 
 from django_gotolong.amfi.views import AmfiListView, AmfiAmountView, AmfiDeficitView, \
     AmfiNotableInclusionView, AmfiNotableExclusionView, amfi_upload, AmfiPortfWeightView
@@ -62,10 +62,12 @@ from django_gotolong.uploaddoc import views
 
 from django_gotolong.jsched.tasks import jsched_task_startup
 
+# path('', TemplateView.as_view(template_name="home.html"), name='index'),
 urlpatterns = [
-                  path('', TemplateView.as_view(template_name="home.html"), name='index'),
+                  path('', RedirectView.as_view(pattern_name='advisor-list-all-but-none', permanent=False)),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('admin/', admin.site.urls),
+                  path('advisor/', include('django_gotolong.advisor.urls')),
                   path('amfi/list/', AmfiListView.as_view(), name='amfi-list'),
                   path('amfi/upload/', amfi_upload, name='amfi-upload'),
                   path('amfi/amount/', AmfiAmountView.as_view(), name='amfi-amount-list'),

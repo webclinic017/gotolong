@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_gotolong.advisor',
     'django_gotolong.amfi',
     'django_gotolong.bhav',
     'django_gotolong.broker.icidir.imf',

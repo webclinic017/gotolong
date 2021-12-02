@@ -98,7 +98,7 @@ def bhav_fetch(request):
     dematsum_load_stocks(dematsum_list)
 
     # declaring template
-    template = "bhav/bhav_list.html"
+    template = "bhav/amfi_list.html"
 
     url = bhav_url()
 
@@ -173,7 +173,7 @@ def bhav_upload(request):
     dematsum_list = []
     debug_level = 1
     # declaring template
-    template = "bhav/bhav_list.html"
+    template = "bhav/amfi_list.html"
     data = Bhav.objects.all()
 
     # GET request returns the value of the data with the specified key.

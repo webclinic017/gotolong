@@ -188,7 +188,7 @@ Dependency :
 
 ## dividend module
 
-create dividend matrix by company and month.
+create dividend amfix by company and month.
 
 Dependency : nach -> dividend
 

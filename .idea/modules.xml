@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/gotolong.iml" filepath="$PROJECT_DIR$/.idea/gotolong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../minatree/.idea/minatree.iml" filepath="$PROJECT_DIR$/../minatree/.idea/minatree.iml" />
     </modules>
   </component>
 </project>

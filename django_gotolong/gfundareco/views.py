@@ -82,6 +82,16 @@ class GfundarecoRefreshView(View):
                              roe3, dpr2, sales2, profit5, icr,
                              pledge, low_3y, low_5y, notes):
 
+        bat = round(bat, 2)
+        der = round(der, 2)
+        roce3 = round(roce3, 2)
+        roe3 = round(roe3, 2)
+
+        dpr2 = round(dpr2, 2)
+        sales2 = round(sales2, 2)
+        profit5 = round(profit5, 2)
+        pledge = round(pledge, 2)
+
         ignore_der = False
         # skip debt for Financial Services like Bank/NBFC.
         if isin in self.isin_industry_dict:
@@ -146,22 +156,22 @@ class GfundarecoRefreshView(View):
             if s_c1:
                 if not ignore_der:
                     funda_reco_cause += " "
-                    funda_reco_cause += "S(der)"
+                    funda_reco_cause += "S(der/" + str(der) + ")"
             if s_c2:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(roce3)"
+                funda_reco_cause += "S(roce3/" + str(roce3) + ")"
             if s_c3:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(dpr2)"
+                funda_reco_cause += "S(dpr2/" + str(dpr2) + ")"
             if s_c4:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(sales2)"
+                funda_reco_cause += "S(sales2/" + str(sales2) + ")"
             if s_c5:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(profit5)"
+                funda_reco_cause += "S(profit5/" + str(profit5) + ")"
             if s_c6:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(pledge)"
+                funda_reco_cause += "S(pledge/" + str(pledge) + ")"
 
             if funda_reco_cause == '':
                 funda_reco_type = "HOLD"
@@ -180,22 +190,22 @@ class GfundarecoRefreshView(View):
             if h_c1:
                 if not ignore_der:
                     funda_reco_cause += " "
-                    funda_reco_cause += "H(der)"
+                    funda_reco_cause += "H(der/" + str(der) + ")"
             if h_c2:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(roce3)"
+                funda_reco_cause += "H(roce3/" + str(roce3) + ")"
             if h_c3:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(dpr2)"
+                funda_reco_cause += "H(dpr2/" + str(dpr2) + ")"
             if h_c4:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(sales2)"
+                funda_reco_cause += "H(sales2/" + str(sales2) + ")"
             if h_c5:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(profit5)"
+                funda_reco_cause += "H(profit5/" + str(profit5) + ")"
             if h_c6:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(pledge)"
+                funda_reco_cause += "H(pledge/" + str(pledge) + ")"
 
             # for debugging
             if funda_reco_cause == '':
@@ -247,7 +257,16 @@ class GfundarecoRefreshView(View):
             # print(isin_obj.comp_ticker)
 
             # to avoid DoesNotExist exception
+            first_name = tl.tl_stock_name.split(' ', 1)[0]
+            # use upper case
+            first_name = first_name.upper()
             amfi_obj = Amfi.objects.filter(comp_isin=tl.tl_isin).first()
+
+            # try lookup using name if isin has changed
+            if not amfi_obj:
+                print('amfi obj failed for isin', tl.tl_isin, 'stock_name', tl.tl_stock_name)
+                amfi_obj = Amfi.objects.filter(comp_name__contains=first_name).first()
+
             if amfi_obj:
                 if debug_level > 1:
                     print(amfi_obj.nse_symbol)
@@ -261,7 +280,7 @@ class GfundarecoRefreshView(View):
                         funda_reco_cause=funda_reco_cause
                     )
             else:
-                print('amfi obj failed for isin', tl.tl_isin, 'stock_name', tl.tl_stock_name)
+                print('amfi obj failed for stock_name', tl.tl_stock_name, 'first name', first_name)
 
         # Updated Gfundareco objects
         lastrefd_update("gfundareco")
