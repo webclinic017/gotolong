@@ -130,3 +130,9 @@ def BrokerIcidirTxnUpload(request):
 
     print('Completed loading new BrokerIcidirTxn data')
     return HttpResponseRedirect(reverse(list_url_name))
+
+def BrokerIcidirTxnReset(request):
+    # delete existing records
+    print('Cleared existing BrokerIcidirTxn data')
+    BrokerIcidirTxn.objects.all().filter(bit_user_id=request.user.id).delete()
+    return HttpResponseRedirect(reverse("broker-icidir-txn-list"))

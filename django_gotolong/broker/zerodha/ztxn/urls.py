@@ -21,8 +21,10 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from django_gotolong.broker.zerodha.ztxn.views import BrokerZerodhaTxnListView, BrokerZerodhaTxnUpload
+from django_gotolong.broker.zerodha.ztxn.views import BrokerZerodhaTxnReset
 
 urlpatterns = [
     path('list/', BrokerZerodhaTxnListView.as_view(), name='broker-zerodha-txn-list'),
     path('upload/', BrokerZerodhaTxnUpload, name='broker-zerodha-txn-upload'),
+    path('reset/', BrokerZerodhaTxnReset, name='broker-zerodha-txn-reset'),
 ]

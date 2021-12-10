@@ -1,18 +1,18 @@
 +----------------------------+------------+
 | table_name                 | table_rows |
 +----------------------------+------------+
-| user_demat_txn             |       3460 |
-| broker_icidir_txn          |       3460 |
+| broker_icidir_txn          |       3485 |
+| user_demat_txn             |       3347 |
 | user_bstmt_div             |       1311 |
-| user_dividend              |       1075 |
+| user_dividend              |       1130 |
 | global_amfi                |       1000 |
 | global_indices             |        499 |
 | screener                   |        498 |
-| global_ftwhl               |        481 |
+| global_ftwhl               |        480 |
 | global_bhav                |        478 |
 | global_corpact             |        451 |
-| global_trendlyne           |        382 |
-| global_funda_reco          |        374 |
+| global_trendlyne           |        378 |
+| global_funda_reco          |        362 |
 | plan                       |        354 |
 | broker_icidir_sum          |        321 |
 | user_demat_sum             |        321 |
@@ -24,18 +24,18 @@
 | user_mfund                 |         42 |
 | django_migrations          |         25 |
 | user_othinv                |         24 |
+| both_lastrefd              |         20 |
 | django_content_type        |         18 |
-| both_lastrefd              |         17 |
-| django_session             |         12 |
+| django_session             |         15 |
 | auth_user                  |          9 |
+| broker_zerodha_sum         |          7 |
 | global_fratio              |          6 |
 | global_weight              |          4 |
-| user_doc                   |          0 |
-| auth_group_permissions     |          0 |
-| broker_zerodha_sum         |          0 |
-| django_admin_log           |          0 |
-| auth_user_user_permissions |          0 |
 | auth_group                 |          0 |
 | broker_zerodha_txn         |          0 |
 | auth_user_groups           |          0 |
+| auth_group_permissions     |          0 |
+| user_doc                   |          0 |
+| django_admin_log           |          0 |
+| auth_user_user_permissions |          0 |
 +----------------------------+------------+

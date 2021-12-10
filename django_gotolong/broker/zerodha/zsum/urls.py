@@ -20,9 +20,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from .views import BrokerZerodhaSumListView, BrokerZerodhaSumUpload
+from .views import BrokerZerodhaSumListView, BrokerZerodhaSumUpload, BrokerZerodhaSumReset
 
 urlpatterns = [
     path('list/', BrokerZerodhaSumListView.as_view(), name='broker-zerodha-sum-list'),
-    path('upload/', BrokerZerodhaSumUpload, name='broker-zerodha-sum-upload')
+    path('upload/', BrokerZerodhaSumUpload, name='broker-zerodha-sum-upload'),
+    path('reset/', BrokerZerodhaSumReset, name='broker-zerodha-sum-reset')
 ]

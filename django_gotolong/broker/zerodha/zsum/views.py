@@ -34,7 +34,6 @@ class BrokerZerodhaSumListView(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
-
 # one parameter named request
 def BrokerZerodhaSumUpload(request):
     # for quick debugging
@@ -150,4 +149,10 @@ def BrokerZerodhaSumUpload(request):
     lastrefd_update("broker-zerodha-sum")
     #
     print('Completed loading new BrokerZerodhaSum data')
+    return HttpResponseRedirect(reverse("broker-zerodha-sum-list"))
+
+def BrokerZerodhaSumReset(request):
+    # delete existing records
+    print('Cleared existing BrokerZerodhaSum data')
+    BrokerZerodhaSum.objects.all().filter(bzs_user_id=request.user.id).delete()
     return HttpResponseRedirect(reverse("broker-zerodha-sum-list"))

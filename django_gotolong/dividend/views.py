@@ -144,8 +144,12 @@ class DividendRefreshView(View):
         print('first record', io_string)
         skipped_records = 0
         for column in csv.reader(io_string, delimiter=',', quotechar='"'):
+
+            if debug_level > 1:
+                print(column)
+
             divi_id = column[0].strip()
-            divi_user_id = column[1].strip(),
+            divi_user_id = column[1].strip()
             divi_date = column[2].strip()
             divi_remarks = column[3].strip()
             divi_company = column[4].strip()
@@ -153,16 +157,20 @@ class DividendRefreshView(View):
             divi_amount = column[6].strip()
             divi_score = column[7].strip()
 
-            _, created = Dividend.objects.update_or_create(
-                divi_id=divi_id,
-                divi_user_id=divi_user_id,
-                divi_date=divi_date,
-                divi_remarks=divi_remarks,
-                divi_company=divi_company,
-                divi_ticker=divi_ticker,
-                divi_amount=divi_amount,
-                divi_score=divi_score,
-            )
+            try:
+                _, created = Dividend.objects.update_or_create(
+                    divi_id=divi_id,
+                    divi_user_id=divi_user_id,
+                    divi_date=divi_date,
+                    divi_remarks=divi_remarks,
+                    divi_company=divi_company,
+                    divi_ticker=divi_ticker,
+                    divi_amount=divi_amount,
+                    divi_score=divi_score,
+                )
+            except Exception as e:
+                print('Exception ')
+                print(e)
 
         # Updated Dividend objects
         lastrefd_update("dividend")

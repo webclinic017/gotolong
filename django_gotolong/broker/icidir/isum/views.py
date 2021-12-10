@@ -99,3 +99,9 @@ def BrokerIcidirSumUpload(request):
 
     print('Completed loading new BrokerIcidirSum data')
     return HttpResponseRedirect(reverse(list_url_name))
+
+def BrokerIcidirSumReset(request):
+    # delete existing records
+    print('Cleared existing BrokerIcidirSum data')
+    BrokerIcidirSum.objects.all().filter(bis_user_id=request.user.id).delete()
+    return HttpResponseRedirect(reverse("broker-icidir-sum-list"))

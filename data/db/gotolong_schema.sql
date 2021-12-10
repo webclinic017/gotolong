@@ -237,12 +237,12 @@ CREATE TABLE `broker_zerodha_sum` (
   `bzs_id` int(11) DEFAULT NULL,
   `bzs_user_id` int(11) DEFAULT NULL,
   `bzs_instrument` text DEFAULT NULL,
-  `bzs_quantity` text DEFAULT NULL,
-  `bzs_average_cost` text DEFAULT NULL,
-  `bzs_ltp` int(11) DEFAULT NULL,
+  `bzs_quantity` int(11) DEFAULT NULL,
+  `bzs_average_cost` float DEFAULT NULL,
+  `bzs_ltp` float DEFAULT NULL,
   `bzs_cur_value` float DEFAULT NULL,
-  `bzs_pnl` text DEFAULT NULL,
-  `bzs_net_chg` text DEFAULT NULL,
+  `bzs_pnl` float DEFAULT NULL,
+  `bzs_net_chg` float DEFAULT NULL,
   `bzs_day_chg` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -742,4 +742,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-09 23:31:20
+-- Dump completed on 2021-12-05 16:38:32

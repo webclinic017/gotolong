@@ -74,7 +74,7 @@ class AdvisorListView_AllButNone(ListView):
             order_by('low_margin')
         return queryset
 
-    @method_decorator(login_required)
+    # @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(AdvisorListView_AllButNone, self).dispatch(*args, **kwargs)
 
@@ -139,7 +139,7 @@ class AdvisorListView_All(ListView):
             order_by('low_margin')
         return queryset
 
-    @method_decorator(login_required)
+    # @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(AdvisorListView_All, self).dispatch(*args, **kwargs)
 
@@ -206,7 +206,7 @@ class AdvisorListView_Insuf(ListView):
             order_by('low_margin')
         return queryset
 
-    @method_decorator(login_required)
+    # @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(AdvisorListView_Insuf, self).dispatch(*args, **kwargs)
 

@@ -36,15 +36,29 @@ class BrokerZerodhaTxnListView(ListView):
         return context
 
 
-def txn_date_iso(self, txn_date):
+def txn_date_iso(self, txn_date, date_format):
     month_name_abbr_to_num_dict = {name: num for num, name in enumerate(calendar.month_abbr) if num}
 
+    # zerodha - mm/dd/yyyy
     try:
-        # dd-mmm-yy
-        txn_date_arr = txn_date.split('-')
-        txn_day = txn_date_arr[0].strip()
-        txn_month = txn_date_arr[1].strip()
-        txn_year = txn_date_arr[2].strip()
+        if date_format == 'mm/dd/yyyy':
+            txn_date_arr = txn_date.split('/')
+            txn_month = txn_date_arr[0].strip()
+            txn_day = txn_date_arr[1].strip()
+            txn_year = txn_date_arr[2].strip()
+        elif date_format == 'yyyy-mm-dd':
+            txn_date_arr = txn_date.split('-')
+            txn_month = txn_date_arr[1].strip()
+            txn_day = txn_date_arr[2].strip()
+            txn_year = txn_date_arr[0].strip()
+        elif date_format == 'dd-mmm-yy':
+            txn_date_arr = txn_date.split('-')
+            txn_day = txn_date_arr[0].strip()
+            txn_month = txn_date_arr[1].strip()
+            txn_year = txn_date_arr[2].strip()
+        else:
+            print('give right format')
+
         if txn_month.isdigit():
             # get rid of leading 0 in month number
             txn_month = str(int(txn_month))
@@ -54,12 +68,11 @@ def txn_date_iso(self, txn_date):
         txn_date_iso = txn_year + "-" + txn_month + "-" + txn_day
         # ignore rest
     except ValueError:
-        logging.error('ValueError ', txn_date, row_list)
+        print('ValueError ', txn_date)
     except IndexError:
-        logging.error('IndexError ', txn_date, row_list)
+        print('IndexError ', txn_date)
 
     return txn_date_iso
-
 
 # one parameter named request
 def BrokerZerodhaTxnUpload(request):
@@ -159,31 +172,28 @@ def BrokerZerodhaTxnUpload(request):
     unique_id = 0
     for column in csv.reader(io_string, delimiter=',', quotechar='"'):
         unique_id += 1
-        column[0] = column[0].strip()
-        column[1] = column[1].strip()
-
-        # convert dd-mmm-yy to YYYY-mm-dd
-        txn_date = txn_date_iso(request, column[12])
+        txn_date = column[0].strip()
+        stock_symbol = column[1].strip()
 
         print(unique_id, column)
 
+        # convert mm/dd/yyyy to YYYY-mm-dd
+        date_format = 'yyyy-mm-dd'
+        txn_date = txn_date_iso(request, txn_date, date_format)
+
         _, created = BrokerZerodhaTxn.objects.update_or_create(
-            bit_id=unique_id,
-            bit_stock_symbol=column[0],
-            bit_company_name=column[1],
-            bit_isin_code=column[2],
-            bit_action=column[3],
-            bit_quantity=column[4],
-            bit_txn_price=column[5],
-            bit_brokerage=column[6],
-            bit_txn_charges=column[7],
-            bit_stamp_duty=column[8],
-            bit_segment=column[9],
-            bit_stt=column[10],
-            bit_remarks=column[11],
-            bit_txn_date=txn_date,
-            bit_exchange=column[13],
-            bit_unused1=column[14]
+            bzt_id=unique_id,
+            bzt_user_id=request.user.id,
+            bzt_tdate=txn_date,
+            bzt_tsymbol=stock_symbol,
+            bzt_exchange=column[2],
+            bzt_segment=column[3],
+            bzt_trade_type=column[4],
+            bzt_quantity=column[5],
+            bzt_price=column[6],
+            bzt_order_id=column[7],
+            bzt_trade_id=column[8],
+            bzt_order_exec_time=column[9]
         )
     # context = {}
     # render(request, template, context)
@@ -191,4 +201,11 @@ def BrokerZerodhaTxnUpload(request):
     lastrefd_update("broker-zerodha-txn")
     #
     print('Completed loading new BrokerZerodhaTxn data')
+    return HttpResponseRedirect(reverse("broker-zerodha-txn-list"))
+
+
+def BrokerZerodhaTxnReset(request):
+    # delete existing records
+    print('Cleared existing BrokerZerodhaTxn data')
+    BrokerZerodhaTxn.objects.all().filter(bzs_user_id=request.user.id).delete()
     return HttpResponseRedirect(reverse("broker-zerodha-txn-list"))

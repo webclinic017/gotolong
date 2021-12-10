@@ -21,8 +21,10 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
 from django_gotolong.broker.icidir.itxn.views import BrokerIcidirTxnListView, BrokerIcidirTxnUpload
+from django_gotolong.broker.icidir.itxn.views import BrokerIcidirTxnReset
 
 urlpatterns = [
     path('list/', BrokerIcidirTxnListView.as_view(), name='broker-icidir-txn-list'),
     path('upload/', BrokerIcidirTxnUpload, name='broker-icidir-txn-upload'),
+    path('reset/', BrokerIcidirTxnReset, name='broker-icidir-txn-reset'),
 ]

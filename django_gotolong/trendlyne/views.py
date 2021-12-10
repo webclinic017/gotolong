@@ -31,6 +31,16 @@ class TrendlyneRecoView(ListView):
         context = super().get_context_data(**kwargs)
         return context
 
+def tl_fix_dummy(value):
+    value_list = value.split('\n')
+    if value_list and len(value_list) > 0:
+        print('fixed newline entry' + value)
+        new_value = value_list[0]
+
+    if new_value == '-' or new_value == '0':
+        print('fixed the value')
+        return True
+    return False
 
 # one parameter named request
 def trendlyne_upload(request):
@@ -145,62 +155,74 @@ def trendlyne_upload(request):
             tl_low_5y = column[12].strip()
 
             # this should be handled somehow
+            tl_der = tl_der.strip(' \n\t%')
             if tl_der == '-':
                 # not sure what to do with it
                 tl_der = 0.432
 
             # this should be handled somehow
+            tl_roce3 = tl_roce3.strip(' \n\t%')
             if tl_roce3 == '-':
                 # not sure what to do with it
                 tl_roce3 = 0.432
 
             # this should be handled somehow
+            tl_roe3 = tl_roe3.strip(' \n\t%')
             if tl_roe3 == '-':
                 # not sure what to do with it
                 tl_roe3 = 0.432
 
             # this should be handled somehow
+            tl_dpr2 = tl_dpr2.strip(' \n\t%')
             if tl_dpr2 == '-':
                 # not sure what to do with it
                 tl_dpr2 = 0.432
 
             # this should be handled somehow
+            tl_sales2 = tl_sales2.strip(' \n\t%')
             if tl_sales2 == '-':
                 # not sure what to do with it
                 tl_sales2 = 0.432
 
             # this should be handled somehow
+            tl_profit5 = tl_profit5.strip(' \n\t%')
             if tl_profit5 == '-':
                 # not sure what to do with it
                 tl_profit5 = 0.432
 
             # this should be handled somehow
+            tl_icr = tl_icr.strip(' \n\t%')
             if tl_icr == '-':
                 # not sure what to do with it
                 tl_icr = 0.432
 
             # this should be handled somehow
+            tl_pledge = tl_pledge.strip(' \n\t%')
             if tl_pledge == '-':
                 # not sure what to do with it
                 tl_pledge = 0.432
 
             print(tl_stock_name)
 
-            _, created = Trendlyne.objects.update_or_create(
-                tl_stock_name=tl_stock_name,
-                tl_isin=tl_isin,
-                tl_bat=tl_bat,
-                tl_der=tl_der,
-                tl_roce3=tl_roce3,
-                tl_roe3=tl_roe3,
-                tl_dpr2=tl_dpr2,
-                tl_sales2=tl_sales2,
-                tl_profit5=tl_profit5,
-                tl_icr=tl_icr,
-                tl_pledge=tl_pledge,
-                tl_low_3y=tl_low_3y,
-                tl_low_5y=tl_low_5y
-            )
+            try:
+                _, created = Trendlyne.objects.update_or_create(
+                    tl_stock_name=tl_stock_name,
+                    tl_isin=tl_isin,
+                    tl_bat=tl_bat,
+                    tl_der=tl_der,
+                    tl_roce3=tl_roce3,
+                    tl_roe3=tl_roe3,
+                    tl_dpr2=tl_dpr2,
+                    tl_sales2=tl_sales2,
+                    tl_profit5=tl_profit5,
+                    tl_icr=tl_icr,
+                    tl_pledge=tl_pledge,
+                    tl_low_3y=tl_low_3y,
+                    tl_low_5y=tl_low_5y
+                )
+            except Exception as e:
+                print('exception for ' + tl_stock_name)
+                print(e)
 
     lastrefd_update("trendlyne")
 

@@ -11,7 +11,7 @@ class BrokerZerodhaTxn(models.Model):
     bzt_tsymbol = models.TextField(blank=True, null=True)
     bzt_exchange = models.TextField(blank=True, null=True)
     bzt_segment = models.TextField(blank=True, null=True)
-    bzt_trade_type = models.IntegerField(blank=True, null=True)
+    bzt_trade_type = models.TextField(blank=True, null=True)
     bzt_quantity = models.FloatField(blank=True, null=True)
     bzt_price = models.FloatField(blank=True, null=True)
     bzt_order_id = models.IntegerField(blank=True, null=True)

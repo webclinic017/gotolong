@@ -62,9 +62,9 @@ from django_gotolong.uploaddoc import views
 
 from django_gotolong.jsched.tasks import jsched_task_startup
 
-# path('', TemplateView.as_view(template_name="home.html"), name='index'),
 urlpatterns = [
-                  path('', RedirectView.as_view(pattern_name='advisor-list-all-but-none', permanent=False)),
+                  path('home/', TemplateView.as_view(template_name="home.html"), name='home'),
+                  path('', TemplateView.as_view(template_name="home.html"), name='index'),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('admin/', admin.site.urls),
                   path('advisor/', include('django_gotolong.advisor.urls')),
