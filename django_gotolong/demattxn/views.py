@@ -2,6 +2,8 @@
 
 from django_gotolong.demattxn.models import DematTxn
 
+from django.db.models import Q
+
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
@@ -56,6 +58,167 @@ class DematTxnYearArchiveView(YearArchiveView):
                 Total=Round(Sum(txn_amount)))).order_by('month')
         context["total_amount"] = total_amount
         context["summary_list"] = summary_list
+
+        total_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(dt_action='Buy').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        total_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(dt_action='Sell').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if total_buy:
+            total_buy = round(int(float(total_buy)))
+        else:
+            total_buy = 0
+
+        if total_sell:
+            total_sell = round(int(float(total_sell)))
+        else:
+            total_sell = 0
+
+        total_amount = total_sell + total_buy
+
+        # reit list
+        filter_list = ['EMBOFF', 'MINBUS', 'BROIND']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        reit_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(query).filter(dt_action='Buy').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        reit_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(query).filter(dt_action='Sell').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if reit_buy:
+            reit_buy = round(int(float(reit_buy)))
+        else:
+            reit_buy = 0
+
+        if reit_sell:
+            reit_sell = round(int(float(reit_sell)))
+        else:
+            reit_sell = 0
+
+        reit_amount = round(int(float(reit_buy)) - int(float(reit_sell)))
+
+        # domestic etf list
+        filter_list = ['HDFRGE', 'ICINEX', 'ICINIF', 'KOTNIF', 'NIFBEE',
+                       'REL150', 'SBIN50', 'SBINIF', 'UTINIF']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        dometf_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Buy').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        dometf_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Sell').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if dometf_buy:
+            dometf_buy = round(int(float(dometf_buy)))
+        else:
+            dometf_buy = 0
+
+        if dometf_sell:
+            dometf_sell = round(int(float(dometf_sell)))
+        else:
+            dometf_sell = 0
+
+        dometf_amount = round(int(float(dometf_buy)) - int(float(dometf_sell)))
+
+        # international etf list
+        filter_list = ['MOTNAS']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        intletf_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Buy').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        intletf_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Sell').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if intletf_buy:
+            intletf_buy = round(int(float(intletf_buy)))
+        else:
+            intletf_buy = 0
+
+        if intletf_sell:
+            intletf_sell = round(int(float(intletf_sell)))
+        else:
+            intletf_sell = 0
+
+        intletf_amount = round(int(float(intletf_buy)) - int(float(intletf_sell)))
+
+        # gold
+        gold_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(dt_ticker__icontains='GOL').filter(dt_action='Buy').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))[
+            'txn_amount'])
+
+        gold_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(dt_ticker__icontains='GOL').filter(dt_action='Sell').filter(dt_date__year=self.get_year()).
+            aggregate(txn_amount=Sum(txn_amount))[
+            'txn_amount'])
+
+        if gold_buy:
+            gold_buy = round(int(float(gold_buy)))
+        else:
+            gold_buy = 0
+
+        if gold_sell:
+            gold_sell = round(int(float(gold_sell)))
+        else:
+            gold_sell = 0
+
+        gold_amount = round(int(float(gold_buy)) - int(float(gold_sell)))
+
+        # Total calculation
+        direct_equity_buy = total_buy - (reit_buy + dometf_buy + intletf_buy + gold_buy)
+        direct_equity_sell = total_sell - (reit_sell + dometf_sell + intletf_sell + gold_sell)
+        direct_equity_amount = total_amount - (reit_amount + dometf_amount + intletf_amount + gold_amount)
+
+        context["total_amount"] = total_amount
+        context["reit_amount"] = reit_amount
+        context["dometf_amount"] = dometf_amount
+        context["intletf_amount"] = intletf_amount
+        context["gold_amount"] = gold_amount
+        context["direct_equity_amount"] = direct_equity_amount
+
+        context["total_buy"] = total_buy
+        context["reit_buy"] = reit_buy
+        context["dometf_buy"] = dometf_buy
+        context["intletf_buy"] = intletf_buy
+        context["gold_buy"] = gold_buy
+        context["direct_equity_buy"] = direct_equity_buy
+
+        context["total_sell"] = total_sell
+        context["reit_sell"] = reit_sell
+        context["dometf_sell"] = dometf_sell
+        context["intletf_sell"] = intletf_sell
+        context["gold_sell"] = gold_sell
+        context["direct_equity_sell"] = direct_equity_sell
+
+        labels = ['REIT', 'domestic ETF', 'international ETF', 'gold ETF',
+                  'direct equity']
+        values = [reit_amount, dometf_amount, intletf_amount, gold_amount,
+                  direct_equity_amount]
+
+        fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+        fig.update_traces(textposition='inside', textinfo='percent+label')
+        # fig.show()
+
+        plot_div_1 = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div_1'] = plot_div_1
+
         return context
 
 
@@ -101,6 +264,157 @@ class DematTxnListView(ListView):
                 Total=Round(Sum(txn_amount)))).order_by('year')
         context["total_amount"] = total_amount
         context["summary_list"] = summary_list
+
+        total_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(dt_action='Buy').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        total_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(dt_action='Sell').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if total_buy:
+            total_buy = round(int(float(total_buy)))
+        else:
+            total_buy = 0
+
+        if total_sell:
+            total_sell = round(int(float(total_sell)))
+        else:
+            total_sell = 0
+
+        total_amount = total_sell + total_buy
+
+        # reit list
+        filter_list = ['EMBOFF', 'MINBUS', 'BROIND']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        reit_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(query).filter(dt_action='Buy').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        reit_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id).
+            filter(query).filter(dt_action='Sell').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if reit_buy:
+            reit_buy = round(int(float(reit_buy)))
+        else:
+            reit_buy = 0
+
+        if reit_sell:
+            reit_sell = round(int(float(reit_sell)))
+        else:
+            reit_sell = 0
+
+        reit_amount = round(int(float(reit_buy)) - int(float(reit_sell)))
+
+        # domestic etf list
+        filter_list = ['HDFRGE', 'ICINEX', 'ICINIF', 'KOTNIF', 'NIFBEE',
+                       'REL150', 'SBIN50', 'SBINIF', 'UTINIF']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        dometf_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Buy').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        dometf_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Sell').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if dometf_buy:
+            dometf_buy = round(int(float(dometf_buy)))
+        else:
+            dometf_buy = 0
+
+        if dometf_sell:
+            dometf_sell = round(int(float(dometf_sell)))
+        else:
+            dometf_sell = 0
+
+        dometf_amount = round(int(float(dometf_buy)) - int(float(dometf_sell)))
+
+        # international etf list
+        filter_list = ['MOTNAS']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(dt_ticker=fltr)
+
+        intletf_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Buy').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        intletf_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(query).filter(dt_action='Sell').aggregate(txn_amount=Sum(txn_amount))['txn_amount'])
+
+        if intletf_buy:
+            intletf_buy = round(int(float(intletf_buy)))
+        else:
+            intletf_buy = 0
+
+        if intletf_sell:
+            intletf_sell = round(int(float(intletf_sell)))
+        else:
+            intletf_sell = 0
+
+        intletf_amount = round(int(float(intletf_buy)) - int(float(intletf_sell)))
+
+        # gold
+        gold_buy = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(dt_ticker__icontains='GOL').filter(dt_action='Buy').aggregate(txn_amount=Sum(txn_amount))[
+            'txn_amount'])
+
+        gold_sell = (DematTxn.objects.all().filter(dt_user_id=self.request.user.id). \
+            filter(dt_ticker__icontains='GOL').filter(dt_action='Sell').aggregate(txn_amount=Sum(txn_amount))[
+            'txn_amount'])
+
+        if gold_buy:
+            gold_buy = round(int(float(gold_buy)))
+        else:
+            gold_buy = 0
+
+        if gold_sell:
+            gold_sell = round(int(float(gold_sell)))
+        else:
+            gold_sell = 0
+
+        gold_amount = round(int(float(gold_buy)) - int(float(gold_sell)))
+
+        # Total calculation
+        direct_equity_buy = total_buy - (reit_buy + dometf_buy + intletf_buy + gold_buy)
+        direct_equity_sell = total_sell - (reit_sell + dometf_sell + intletf_sell + gold_sell)
+        direct_equity_amount = total_amount - (reit_amount + dometf_amount + intletf_amount + gold_amount)
+
+        context["total_amount"] = total_amount
+        context["reit_amount"] = reit_amount
+        context["dometf_amount"] = dometf_amount
+        context["intletf_amount"] = intletf_amount
+        context["gold_amount"] = gold_amount
+        context["direct_equity_amount"] = direct_equity_amount
+
+        context["total_buy"] = total_buy
+        context["reit_buy"] = reit_buy
+        context["dometf_buy"] = dometf_buy
+        context["intletf_buy"] = intletf_buy
+        context["gold_buy"] = gold_buy
+        context["direct_equity_buy"] = direct_equity_buy
+
+        context["total_sell"] = total_sell
+        context["reit_sell"] = reit_sell
+        context["dometf_sell"] = dometf_sell
+        context["intletf_sell"] = intletf_sell
+        context["gold_sell"] = gold_sell
+        context["direct_equity_sell"] = direct_equity_sell
+
+        labels = ['REIT', 'domestic ETF', 'international ETF', 'gold ETF',
+                  'direct equity']
+        values = [reit_amount, dometf_amount, intletf_amount, gold_amount,
+                  direct_equity_amount]
+
+        fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+        fig.update_traces(textposition='inside', textinfo='percent+label')
+        # fig.show()
+
+        plot_div_1 = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div_1'] = plot_div_1
+
         return context
 
 

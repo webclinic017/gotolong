@@ -75,33 +75,48 @@ class DematSumListView(ListView):
         if reit_amount:
             reit_amount = round(int(float(reit_amount)))
 
-        # etf list
+        # domestic etf list
         filter_list = ['HDFRGE', 'ICINEX', 'ICINIF', 'KOTNIF', 'NIFBEE',
-                       'REL150', 'SBIN50', 'SBINIF', 'UTINIF', 'MOTNAS']
+                       'REL150', 'SBIN50', 'SBINIF', 'UTINIF']
         query = Q()
         for fltr in filter_list:
             query = query | Q(ds_ticker=fltr)
 
-        etf_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
-                      filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
-        if etf_amount:
-            etf_amount = round(etf_amount)
+        d_etf_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
+                        filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
+        if d_etf_amount:
+            d_etf_amount = round(d_etf_amount)
+
+        # international etf list
+        filter_list = ['MOTNAS']
+        query = Q()
+        for fltr in filter_list:
+            query = query | Q(ds_ticker=fltr)
+
+        i_etf_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id).
+                        filter(query).aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
+        if i_etf_amount:
+            i_etf_amount = round(i_etf_amount)
 
         gold_amount = (DematSum.objects.all().filter(ds_user_id=self.request.user.id). \
                        filter(ds_ticker__icontains='GOL').aggregate(mktvalue=Sum('ds_mktvalue')))['mktvalue']
         if gold_amount:
             gold_amount = round(gold_amount)
 
-        direct_equity_amount = total_amount - reit_amount - etf_amount - gold_amount
+        direct_equity_amount = total_amount - reit_amount - \
+                               d_etf_amount - i_etf_amount - gold_amount
 
         context["total_amount"] = total_amount
         context["reit_amount"] = reit_amount
-        context["etf_amount"] = etf_amount
+        context["d_etf_amount"] = d_etf_amount
+        context["i_etf_amount"] = i_etf_amount
         context["gold_amount"] = gold_amount
         context["direct_equity_amount"] = direct_equity_amount
 
-        labels = ['reit_amount', 'etf_amount', 'gold_amount', 'direct_equity_amount']
-        values = [reit_amount, etf_amount, gold_amount, direct_equity_amount]
+        labels = ['REIT', 'domestic ETF', 'international ETF', 'gold ETF',
+                  'direct equity']
+        values = [reit_amount, d_etf_amount, i_etf_amount, gold_amount,
+                  direct_equity_amount]
 
         fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
         fig.update_traces(textposition='inside', textinfo='percent+label')

@@ -22,6 +22,7 @@ pandas
 plotly
 prettytable
 psycopg2
+pycryptodome
 python-dateutil
 pytz
 pyexcel

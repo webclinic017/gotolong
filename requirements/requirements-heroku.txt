@@ -11,6 +11,7 @@ mysql-connector
 openpyxl
 pandas
 plotly
+pycryptodome
 pyexcel
 pyexcel-xls
 python-dateutil

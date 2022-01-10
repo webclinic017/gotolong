@@ -261,7 +261,7 @@ CREATE TABLE `broker_zerodha_txn` (
   `bzt_tsymbol` text DEFAULT NULL,
   `bzt_exchange` text DEFAULT NULL,
   `bzt_segment` text DEFAULT NULL,
-  `bzt_trade_type` int(11) DEFAULT NULL,
+  `bzt_trade_type` text DEFAULT NULL,
   `bzt_quantity` float DEFAULT NULL,
   `bzt_price` text DEFAULT NULL,
   `bzt_order_id` text DEFAULT NULL,
@@ -742,4 +742,4 @@ CREATE TABLE `user_weight` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-05 16:38:32
+-- Dump completed on 2021-12-10 15:50:39

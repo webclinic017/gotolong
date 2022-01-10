@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'django_gotolong.mfund',
     'django_gotolong.nach',
     'django_gotolong.othinv',
+    'django_gotolong.payments',
     'django_gotolong.phealth',
     'django_gotolong.screener',
     'django_gotolong.trendlyne',
@@ -191,3 +192,11 @@ django_heroku.settings(locals())
 # we have to crete this variable also
 # if os.environ.get('ENV') == 'development':
 del DATABASES['default']['OPTIONS']['sslmode']
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('Import failed for local_settings')
+    pass
+
+# print('PAYTM_CHANNEL_ID',PAYTM_CHANNEL_ID)

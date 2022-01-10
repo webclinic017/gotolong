@@ -129,6 +129,7 @@ urlpatterns = [
                   path('page/quick-links/', TemplateView.as_view(template_name="quick_links.html")),
                   path('page/sitemap/', TemplateView.as_view(template_name="sitemap.html")),
                   path('page/user-data/', TemplateView.as_view(template_name="user_data.html")),
+                  path('payments/', include('django_gotolong.payments.urls')),
                   path('phealth/', include('django_gotolong.phealth.urls')),
                   path('trendlyne/list/', TrendlyneListView.as_view(), name='trendlyne-list'),
                   path('trendlyne/reco/', TrendlyneRecoView.as_view(), name='trendlyne-reco-list'),

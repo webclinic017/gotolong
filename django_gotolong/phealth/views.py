@@ -24,7 +24,7 @@ from django_gotolong.jsched.tasks import jsched_task_bg, jsched_task_daily
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
+from django.contrib.admin.views.decorators import staff_member_required
 
 # from django_gotolong.ftwhl.views import ftwhl_fetch
 
@@ -74,7 +74,7 @@ class PhealthListView_AllButNone(ListView):
             order_by('low_margin')
         return queryset
 
-    @method_decorator(login_required)
+    @method_decorator(staff_member_required)
     def dispatch(self, *args, **kwargs):
         return super(PhealthListView_AllButNone, self).dispatch(*args, **kwargs)
 
@@ -82,7 +82,7 @@ class PhealthListView_AllButNone(ListView):
         context = super().get_context_data(**kwargs)
         funda_reco_list = (
             Gfundareco.objects.all().values('funda_reco_type').annotate(funda_reco_count=Count('funda_reco_type')).
-                order_by('funda_reco_count'))
+                order_by(-'funda_reco_count'))
 
         context["funda_reco_list"] = funda_reco_list
 
