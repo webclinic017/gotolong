@@ -8,6 +8,8 @@ from django_gotolong.bhav.models import Bhav
 
 from django_gotolong.corpact.models import Corpact
 
+from django_gotolong.indices.models import Indices
+
 from django_gotolong.dematsum.models import DematSum
 from django_gotolong.demattxn.models import DematTxn
 
@@ -20,6 +22,8 @@ from django_gotolong.trendlyne.models import Trendlyne
 
 from django.db.models import (OuterRef, Subquery, ExpressionWrapper, F, IntegerField, Count, Q)
 
+from django.db.models import (Sum)
+
 from django_gotolong.jsched.tasks import jsched_task_bg, jsched_task_daily
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
@@ -28,10 +32,72 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 # from django_gotolong.ftwhl.views import ftwhl_fetch
 
+import plotly.graph_objects as go
+from plotly.offline import plot
+
+
+class PhealthListView_Rebalance(ListView):
+    def get_queryset(self):
+        dematsum_qs = DematSum.objects.filter(ds_user_id=self.request.user.id).filter(ds_isin=OuterRef("ind_isin"))
+        self.queryset = Indices.objects.all(). \
+            annotate(cur_oku=ExpressionWrapper(Subquery(dematsum_qs.values('ds_costvalue')[:1]) / 1000,
+                                               output_field=IntegerField())). \
+            filter(cur_oku__isnull=False). \
+            values('ind_industry'). \
+            annotate(cur_oku_sum=Sum('cur_oku')). \
+            order_by('ind_industry')
+        return self.queryset
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(PhealthListView_Rebalance, self).dispatch(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        funda_reco_list = (
+            Gfundareco.objects.all().values('funda_reco_type').annotate(funda_reco_count=Count('funda_reco_type')).
+                order_by('funda_reco_count'))
+
+        context["funda_reco_list"] = funda_reco_list
+
+        labels = []
+        values = []
+        labels_values_dict = {}
+        sum_total = 0
+        for q_row in self.queryset:
+            # sum_total += q_row['scheme_sum']
+            labels_values_dict[q_row['ind_industry']] = q_row['cur_oku_sum']
+        # context['sum_total'] = int(sum_total)
+
+        print('labels values dict', labels_values_dict)
+
+        for k, v in sorted(labels_values_dict.items(), key=lambda item: item[1]):
+            labels.append(k)
+            values.append(v)
+
+        print('labels ', labels)
+        print('values ', values)
+
+        fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+        fig.update_traces(textposition='inside', textinfo='percent+label')
+        # fig.show()
+
+        plot_div_1 = plot(fig, output_type='div', include_plotlyjs=False)
+        context['plot_div_1'] = plot_div_1
+
+        return context
+
+    def get_template_names(self):
+        app_label = 'phealth'
+        template_name_first = app_label + '/' + 'phealth_rebalance.html'
+        template_names_list = [template_name_first]
+        return template_names_list
+
+
 class PhealthListView_AllButNone(ListView):
     # crete task
     # jsched_task_bg(schedule=timezone.now())
-    jsched_task_daily()
+    # jsched_task_daily()
 
     # model = Phealth
     # if pagination is desired
@@ -74,7 +140,7 @@ class PhealthListView_AllButNone(ListView):
             order_by('low_margin')
         return queryset
 
-    @method_decorator(staff_member_required)
+    @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(PhealthListView_AllButNone, self).dispatch(*args, **kwargs)
 
@@ -82,7 +148,7 @@ class PhealthListView_AllButNone(ListView):
         context = super().get_context_data(**kwargs)
         funda_reco_list = (
             Gfundareco.objects.all().values('funda_reco_type').annotate(funda_reco_count=Count('funda_reco_type')).
-                order_by(-'funda_reco_count'))
+                order_by('funda_reco_count'))
 
         context["funda_reco_list"] = funda_reco_list
 
