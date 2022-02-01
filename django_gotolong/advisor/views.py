@@ -6,6 +6,8 @@ from django_gotolong.amfi.models import Amfi
 
 from django_gotolong.bhav.models import Bhav
 
+from django_gotolong.indices.models import Indices
+
 from django_gotolong.corpact.models import Corpact
 
 from django_gotolong.dematsum.models import DematSum
@@ -39,6 +41,7 @@ class AdvisorListView_AllButNone(ListView):
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
     def get_queryset(self):
+        indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
         bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
         ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
         ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -65,12 +68,13 @@ class AdvisorListView_AllButNone(ListView):
                                                      output_field=IntegerField())). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
+            annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             filter(Q(bhav_price__isnull=False)
                    & Q(bat__isnull=False) & Q(ftwhl_low__isnull=False)). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
                    'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
-                   'cap_type'). \
+                   'industry', 'cap_type'). \
             order_by('low_margin')
         return queryset
 
@@ -106,6 +110,7 @@ class AdvisorListView_All(ListView):
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
     def get_queryset(self):
+        indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
         bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
         ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
         ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -132,10 +137,11 @@ class AdvisorListView_All(ListView):
                                                      output_field=IntegerField())). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
+            annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
                    'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
-                   'cap_type'). \
+                   'industry', 'cap_type'). \
             order_by('low_margin')
         return queryset
 
@@ -172,6 +178,7 @@ class AdvisorListView_Insuf(ListView):
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
     def get_queryset(self):
+        indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
         bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
         ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
         ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -198,11 +205,12 @@ class AdvisorListView_Insuf(ListView):
                                                      output_field=IntegerField())). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
+            annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             filter(Q(bhav_price__isnull=True) | Q(bat__isnull=True) | Q(ftwhl_low__isnull=True)). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
                    'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
-                   'cap_type'). \
+                   'industry', 'cap_type'). \
             order_by('low_margin')
         return queryset
 
@@ -233,6 +241,7 @@ class AdvisorListView_Buy(ListView):
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
+    indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
     bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
     ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -258,12 +267,13 @@ class AdvisorListView_Buy(ListView):
                                                  output_field=IntegerField())). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
+        annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
         filter(funda_reco_type='BUY'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
                'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
                'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
-               'cap_type'). \
+               'industry', 'cap_type'). \
         order_by('low_margin')
 
     def get_context_data(self, **kwargs):
@@ -289,6 +299,7 @@ class AdvisorListView_Sell(ListView):
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
+    indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
     bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
     ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -314,11 +325,12 @@ class AdvisorListView_Sell(ListView):
                                                  output_field=IntegerField())). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
+        annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
         filter(funda_reco_type='SELL'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
                'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku',
-               'tbd_oku', 'funda_reco_type', 'funda_reco_cause', 'cap_type'). \
+               'tbd_oku', 'funda_reco_type', 'funda_reco_cause', 'industry', 'cap_type'). \
         order_by('safety_margin')
 
     def get_context_data(self, **kwargs):
@@ -344,6 +356,7 @@ class AdvisorListView_Hold(ListView):
     # paginate_by = 300
     # filter_backends = [filters.OrderingFilter,]
     # ordering_fields = ['sno', 'nse_symbol']
+    indices_qs = Indices.objects.filter(ind_isin=OuterRef("comp_isin"))
     bhav_qs = Bhav.objects.filter(bhav_isin=OuterRef("comp_isin"))
     ca_qs = Corpact.objects.filter(ca_ticker=OuterRef("nse_symbol"))
     ftwhl_qs = Ftwhl.objects.filter(ftwhl_ticker=OuterRef("nse_symbol"))
@@ -369,11 +382,12 @@ class AdvisorListView_Hold(ListView):
                                                  output_field=IntegerField())). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
+        annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
         filter(funda_reco_type='HOLD'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
                'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku',
-               'funda_reco_type', 'funda_reco_cause', 'cap_type'). \
+               'funda_reco_type', 'funda_reco_cause', 'industry', 'cap_type'). \
         order_by('-safety_margin')
 
     def get_context_data(self, **kwargs):

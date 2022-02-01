@@ -54,6 +54,9 @@ Number of object: {{ object_list|length }}
             txn gap
         </th>
         <th>
+            industry
+        </th>
+        <th>
             cap type
         </th>
         <th>
@@ -104,6 +107,10 @@ Number of object: {{ object_list|length }}
         </td>
         <td>
             {{ phealth_row.dt_date|timesince }}
+        </td>
+
+        <td>
+            {{ phealth_row.industry }}
         </td>
 
         <td>
