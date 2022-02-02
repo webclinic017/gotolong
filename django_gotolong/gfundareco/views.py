@@ -106,106 +106,106 @@ class GfundarecoRefreshView(View):
         funda_reco_cause = ''
 
         if ignore_der:
-            b_c1 = True
+            s_c1 = True
         else:
-            b_c1 = der <= self.fr_buy['der']
+            s_c1 = der <= self.fr_buy['der']
 
-        b_c2 = roce3 >= self.fr_buy['roce3']
-        b_c3 = dpr2 >= self.fr_buy['dpr2']
-        b_c4 = sales2 >= self.fr_buy['sales2']
-        b_c5 = profit5 >= self.fr_buy['profit5']
-        b_c6 = pledge <= self.fr_buy['pledge']
+        s_c2 = roce3 >= self.fr_buy['roce3']
+        s_c3 = dpr2 >= self.fr_buy['dpr2']
+        s_c4 = sales2 >= self.fr_buy['sales2']
+        s_c5 = profit5 >= self.fr_buy['profit5']
+        s_c6 = pledge <= self.fr_buy['pledge']
 
         # if isin == 'INE079A01024':
         #    breakpoint()
 
-        if not b_c1:
+        if not s_c1:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(der)"
-        if not b_c2:
+            funda_reco_cause = "-S(der)"
+        if not s_c2:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(roce3)"
-        if not b_c3:
+            funda_reco_cause = "-S(roce3)"
+        if not s_c3:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(dpr2)"
-        if not b_c4:
+            funda_reco_cause = "-S(dpr2)"
+        if not s_c4:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(sales)"
-        if not b_c5:
+            funda_reco_cause = "-S(sales)"
+        if not s_c5:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(profit5)"
-        if not b_c6:
+            funda_reco_cause = "-S(profit5)"
+        if not s_c6:
             funda_reco_cause += " "
-            funda_reco_cause = "-B(pledge)"
+            funda_reco_cause = "-S(pledge)"
 
-        if (b_c1 and b_c2 and b_c3 and b_c4 and b_c5 and b_c6):
-            funda_reco_type = "BUY"
+        if (s_c1 and s_c2 and s_c3 and s_c4 and s_c5 and s_c6):
+            funda_reco_type = "Strong"
             funda_reco_cause = "ALL"
             return (funda_reco_type, funda_reco_cause)
         else:
-            s_c1 = der > self.fr_hold['der']
-            s_c2 = roce3 < self.fr_hold['roce3']
-            s_c3 = dpr2 < self.fr_hold['dpr2']
-            s_c4 = sales2 < self.fr_hold['sales2']
-            s_c5 = profit5 < self.fr_hold['profit5']
-            s_c6 = pledge > self.fr_hold['pledge']
+            w_c1 = der > self.fr_hold['der']
+            w_c2 = roce3 < self.fr_hold['roce3']
+            w_c3 = dpr2 < self.fr_hold['dpr2']
+            w_c4 = sales2 < self.fr_hold['sales2']
+            w_c5 = profit5 < self.fr_hold['profit5']
+            w_c6 = pledge > self.fr_hold['pledge']
             # avoid NONE
             funda_reco_cause_buy = funda_reco_cause
             funda_reco_cause = ''
 
-            if s_c1:
+            if w_c1:
                 if not ignore_der:
                     funda_reco_cause += " "
-                    funda_reco_cause += "S(der/" + str(der) + ")"
-            if s_c2:
+                    funda_reco_cause += "W(der/" + str(der) + ")"
+            if w_c2:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(roce3/" + str(roce3) + ")"
-            if s_c3:
+                funda_reco_cause += "W(roce3/" + str(roce3) + ")"
+            if w_c3:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(dpr2/" + str(dpr2) + ")"
-            if s_c4:
+                funda_reco_cause += "W(dpr2/" + str(dpr2) + ")"
+            if w_c4:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(sales2/" + str(sales2) + ")"
-            if s_c5:
+                funda_reco_cause += "W(sales2/" + str(sales2) + ")"
+            if w_c5:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(profit5/" + str(profit5) + ")"
-            if s_c6:
+                funda_reco_cause += "W(profit5/" + str(profit5) + ")"
+            if w_c6:
                 funda_reco_cause += " "
-                funda_reco_cause += "S(pledge/" + str(pledge) + ")"
+                funda_reco_cause += "W(pledge/" + str(pledge) + ")"
 
             if funda_reco_cause == '':
-                funda_reco_type = "HOLD"
+                funda_reco_type = "Moderate"
             else:
-                funda_reco_type = "SELL"
+                funda_reco_type = "Weak"
 
-        if funda_reco_type == 'HOLD':
-            h_c1 = (der > self.fr_buy['der'] and der <= self.fr_hold['der'])
+        if funda_reco_type == 'Moderate':
+            m_c1 = (der > self.fr_buy['der'] and der <= self.fr_hold['der'])
             # fixed the bug here to get the cause for HOLD
-            h_c2 = (roce3 < self.fr_buy['roce3'] and roce3 >= self.fr_hold['roce3'])
-            h_c3 = (dpr2 < self.fr_buy['dpr2'] and dpr2 >= self.fr_hold['dpr2'])
-            h_c4 = (sales2 < self.fr_buy['sales2'] and sales2 >= self.fr_hold['sales2'])
-            h_c5 = (profit5 < self.fr_buy['profit5'] and profit5 >= self.fr_hold['profit5'])
-            h_c6 = (pledge > self.fr_buy['pledge'] and pledge <= self.fr_hold['pledge'])
+            m_c2 = (roce3 < self.fr_buy['roce3'] and roce3 >= self.fr_hold['roce3'])
+            m_c3 = (dpr2 < self.fr_buy['dpr2'] and dpr2 >= self.fr_hold['dpr2'])
+            m_c4 = (sales2 < self.fr_buy['sales2'] and sales2 >= self.fr_hold['sales2'])
+            m_c5 = (profit5 < self.fr_buy['profit5'] and profit5 >= self.fr_hold['profit5'])
+            m_c6 = (pledge > self.fr_buy['pledge'] and pledge <= self.fr_hold['pledge'])
 
-            if h_c1:
+            if m_c1:
                 if not ignore_der:
                     funda_reco_cause += " "
-                    funda_reco_cause += "H(der/" + str(der) + ")"
-            if h_c2:
+                    funda_reco_cause += "M(der/" + str(der) + ")"
+            if m_c2:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(roce3/" + str(roce3) + ")"
-            if h_c3:
+                funda_reco_cause += "M(roce3/" + str(roce3) + ")"
+            if m_c3:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(dpr2/" + str(dpr2) + ")"
-            if h_c4:
+                funda_reco_cause += "M(dpr2/" + str(dpr2) + ")"
+            if m_c4:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(sales2/" + str(sales2) + ")"
-            if h_c5:
+                funda_reco_cause += "M(sales2/" + str(sales2) + ")"
+            if m_c5:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(profit5/" + str(profit5) + ")"
-            if h_c6:
+                funda_reco_cause += "M(profit5/" + str(profit5) + ")"
+            if m_c6:
                 funda_reco_cause += " "
-                funda_reco_cause += "H(pledge/" + str(pledge) + ")"
+                funda_reco_cause += "M(pledge/" + str(pledge) + ")"
 
             # for debugging
             if funda_reco_cause == '':

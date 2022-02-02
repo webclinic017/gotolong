@@ -8,9 +8,9 @@
 {% endif %}
 
 <a href="/advisor/list/all-none/"> All - None</a> |
-<a href="/advisor/list/buy/"> Buy </a> |
-<a href="/advisor/list/hold/"> Hold </a> |
-<a href="/advisor/list/sell/"> Sell </a> |
+<a href="/advisor/list/strong/"> Strong </a> |
+<a href="/advisor/list/moderate/"> Moderate </a> |
+<a href="/advisor/list/weak/"> Weak </a> |
 <a href="/advisor/list/insuf/"> Insufficient </a> |
 <a href="/advisor/list/all/"> All including Insuf </a> |
 
@@ -37,6 +37,9 @@ Number of object: {{ object_list|length }}
             ftwhl low
         </th>
         <th>
+            Valuation
+        </th>
+        <th>
             mos (%)
         </th>
         <th>
@@ -55,7 +58,7 @@ Number of object: {{ object_list|length }}
             plan oku
         </th>
         <th>
-            funda reco type
+            funda mental
         </th>
         <th>
             funda reco cause
@@ -78,6 +81,9 @@ Number of object: {{ object_list|length }}
         </td>
         <td>
             {{ advisor_row.ftwhl_low }}
+        </td>
+        <td>
+            {{ advisor_row.valuation_reco }}
         </td>
         <td>
             {{ advisor_row.safety_margin }}

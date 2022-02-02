@@ -20,14 +20,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from django_gotolong.advisor.views import AdvisorListView_AllButNone, AdvisorListView_All, AdvisorListView_Buy
-from django_gotolong.advisor.views import AdvisorListView_Sell, AdvisorListView_Hold, AdvisorListView_Insuf
+from django_gotolong.advisor.views import AdvisorListView_AllButNone, AdvisorListView_All
+from django_gotolong.advisor.views import AdvisorListView_Strong
+from django_gotolong.advisor.views import AdvisorListView_Weak
+from django_gotolong.advisor.views import AdvisorListView_Moderate, AdvisorListView_Insuf
 
 urlpatterns = [
     path('list/all-none/', AdvisorListView_AllButNone.as_view(), name='advisor-list-all-but-none'),
     path('list/all/', AdvisorListView_All.as_view(), name='advisor-list-all'),
-    path('list/buy/', AdvisorListView_Buy.as_view(), name='advisor-list-buy'),
-    path('list/hold/', AdvisorListView_Hold.as_view(), name='advisor-list-hold'),
-    path('list/sell/', AdvisorListView_Sell.as_view(), name='advisor-list-sell'),
+    path('list/strong/', AdvisorListView_Strong.as_view(), name='advisor-list-strong'),
+    path('list/moderate/', AdvisorListView_Moderate.as_view(), name='advisor-list-moderate'),
+    path('list/weak/', AdvisorListView_Weak.as_view(), name='advisor-list-weak'),
     path('list/insuf/', AdvisorListView_Insuf.as_view(), name='advisor-list-insuf'),
 ]

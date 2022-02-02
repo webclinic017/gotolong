@@ -20,9 +20,9 @@ from django_gotolong.gweight.models import Gweight
 
 from django_gotolong.trendlyne.models import Trendlyne
 
-from django.db.models import (OuterRef, Subquery, ExpressionWrapper, F, IntegerField, Count, Q)
-
-from django.db.models import (Sum)
+from django.db.models import (OuterRef, Subquery, ExpressionWrapper)
+from django.db.models import (Sum, F, IntegerField, Count, Q)
+from django.db.models import Case, Value, When, CharField
 
 from django_gotolong.jsched.tasks import jsched_task_bg, jsched_task_daily
 from django.utils import timezone
@@ -130,13 +130,21 @@ class PhealthListView_AllButNone(ListView):
             annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
             annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                      output_field=IntegerField())). \
+            annotate(valuation_reco=Case( \
+            When(safety_margin__gt=10, then=Value('Upside')), \
+            When(safety_margin__lt=-10, then=Value('Downside')), \
+            default=Value('Neutral'), \
+            output_field=CharField() \
+            )). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
             annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             filter(Q(cur_oku__isnull=False) & Q(bhav_price__isnull=False)
                    & Q(bat__isnull=False) & Q(ftwhl_low__isnull=False)). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
-                   'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+                   'valuation_reco', 'safety_margin', 'low_margin', 'ca_total',
+                   'dt_date',
+                   'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                    'industry', 'cap_type'). \
             order_by('low_margin')
@@ -199,12 +207,19 @@ class PhealthListView_All(ListView):
             annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
             annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                      output_field=IntegerField())). \
+            annotate(valuation_reco=Case( \
+            When(safety_margin__gt=10, then=Value('Upside')), \
+            When(safety_margin__lt=-10, then=Value('Downside')), \
+            default=Value('Neutral'), \
+            output_field=CharField() \
+            )). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
             annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             filter(cur_oku__isnull=False). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
-                   'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+                   'valuation_reco', 'safety_margin', 'low_margin', 'ca_total',
+                   'dt_date', 'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                    'industry', 'cap_type'). \
             order_by('low_margin')
@@ -268,13 +283,20 @@ class PhealthListView_Insuf(ListView):
             annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
             annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                      output_field=IntegerField())). \
+            annotate(valuation_reco=Case( \
+            When(safety_margin__gt=10, then=Value('Upside')), \
+            When(safety_margin__lt=-10, then=Value('Downside')), \
+            default=Value('Neutral'), \
+            output_field=CharField() \
+            )). \
             annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                                   output_field=IntegerField())). \
             annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
             filter(cur_oku__isnull=False). \
             filter(Q(bhav_price__isnull=True) | Q(bat__isnull=True) | Q(ftwhl_low__isnull=True)). \
             values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
-                   'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+                   'valuation_reco', 'safety_margin', 'low_margin', 'ca_total',
+                   'dt_date', 'plan_oku',
                    'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                    'industry', 'cap_type'). \
             order_by('low_margin')
@@ -331,13 +353,20 @@ class PhealthListView_Buy(ListView):
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                  output_field=IntegerField())). \
+        annotate(valuation_reco=Case( \
+        When(safety_margin__gt=10, then=Value('Upside')), \
+        When(safety_margin__lt=-10, then=Value('Downside')), \
+        default=Value('Neutral'), \
+        output_field=CharField() \
+        )). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(cur_oku__isnull=False) & Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
-        filter(funda_reco_type='BUY'). \
+        filter(funda_reco_type='Strong'). \
         values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
-               'safety_margin', 'low_margin', 'ca_total', 'dt_date', 'plan_oku',
+               'valuation_reco', 'safety_margin', 'low_margin', 'ca_total',
+               'dt_date', 'plan_oku',
                'cur_oku', 'tbd_oku', 'funda_reco_type', 'funda_reco_cause',
                'industry', 'cap_type'). \
         order_by('low_margin')
@@ -389,14 +418,22 @@ class PhealthListView_Sell(ListView):
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                  output_field=IntegerField())). \
+        annotate(valuation_reco=Case( \
+        When(safety_margin__gt=10, then=Value('Upside')), \
+        When(safety_margin__lt=-10, then=Value('Downside')), \
+        default=Value('Neutral'), \
+        output_field=CharField() \
+        )). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(cur_oku__isnull=False) & Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
-        filter(funda_reco_type='SELL'). \
-        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
+        filter(funda_reco_type='Weak'). \
+        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
+               'valuation_reco', 'safety_margin',
                'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku',
-               'tbd_oku', 'funda_reco_type', 'funda_reco_cause', 'industry', 'cap_type'). \
+               'tbd_oku', 'funda_reco_type', 'funda_reco_cause', 'industry',
+               'cap_type'). \
         order_by('safety_margin')
 
     def get_context_data(self, **kwargs):
@@ -445,13 +482,21 @@ class PhealthListView_Hold(ListView):
         annotate(ftwhl_low=Subquery(ftwhl_qs.values('ftwhl_low')[:1])). \
         annotate(safety_margin=ExpressionWrapper((F('bat') - F('bhav_price')) * 100.0 / F('bhav_price'),
                                                  output_field=IntegerField())). \
+        annotate(valuation_reco=Case( \
+        When(safety_margin__gt=10, then=Value('Upside')), \
+        When(safety_margin__lt=-10, then=Value('Downside')), \
+        default=Value('Neutral'), \
+        output_field=CharField() \
+        )). \
         annotate(low_margin=ExpressionWrapper((F('bhav_price') - F('ftwhl_low')) * 100.0 / F('ftwhl_low'),
                                               output_field=IntegerField())). \
         annotate(industry=Subquery(indices_qs.values('ind_industry')[:1])). \
         filter(Q(cur_oku__isnull=False) & Q(bhav_price__isnull=False) & Q(bat__isnull=False)). \
-        filter(funda_reco_type='HOLD'). \
-        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low', 'safety_margin',
-               'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku', 'tbd_oku',
+        filter(funda_reco_type='Moderate'). \
+        values('nse_symbol', 'comp_name', 'bhav_price', 'bat', 'ftwhl_low',
+               'valuation_reco', 'safety_margin',
+               'low_margin', 'ca_total', 'dt_date', 'plan_oku', 'cur_oku',
+               'tbd_oku',
                'funda_reco_type', 'funda_reco_cause', 'industry', 'cap_type'). \
         order_by('-safety_margin')
 
