@@ -36,11 +36,11 @@ Download PostgreSQL (v13) - for validation with Heroku
 
 ## Install Python packages
 
-pip -r requirements/requirements_full.txt
+pip -r requirements/requirements-dev.txt
 
 ## Configure DATABASE_URL
 
-Add following to ~/.profile
+Use git bash console to add following to ~/.profile
 
 export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
 
