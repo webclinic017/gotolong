@@ -36,7 +36,7 @@ Download PostgreSQL (v13) - for validation with Heroku
 
 ## Install Python packages
 
-pip -r requirements/requirements-dev.txt
+pip install -r requirements/requirements-dev.txt
 
 ## Configure DATABASE_URL
 
