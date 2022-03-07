@@ -44,6 +44,7 @@ pip install -r requirements/requirements-dev.txt
 Use git bash console to add following to ~/.bashrc
 
 cd location of gotolong clone
+
 . ./gotolong_config.sh
   
 ### Modify gotolong_config.sh for DB Versions
@@ -52,9 +53,13 @@ For Mariadb version, port# etc
 For PostgreSQL version, port# etc
 
 export PATH=${PATH}:/c/'Program Files'/'MariaDB 10.5'/bin
+
 export PATH=${PATH}:/C/'Program Files'/PostgreSQL/13/bin
+
 export GOTOLONG_MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+
 export GOTOLONG_PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+
 export DATABASE_URL=${GOTOLONG_MY_DATABASE_URL}
 
 ## Create DB
