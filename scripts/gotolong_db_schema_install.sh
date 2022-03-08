@@ -19,6 +19,9 @@ DB_CONN_INFO=$3
 DB_NAME=$(python -m gotolong.config.config_ini db_name)
 DB_USER=$(python -m gotolong.config.config_ini db_user)
 DB_PASS=$(python -m gotolong.config.config_ini db_pass)
+PG_USER=$(python -m gotolong.config.config_ini pg_user)
+PG_PASS=$(python -m gotolong.config.config_ini pg_pass)
+
 
 DB_SCHEMA_SQL=${GOTOLONG_DATA}/db/${DB_NAME}_schema.sql
 DB_DUMP_SQL=${GOTOLONG_DATA}/db/${DB_NAME}_dump.sql
@@ -69,8 +72,8 @@ then
   if test "${DB_COMMAND}" == "create"
   then
         # create just db name
-        PGPASSWORD=${DB_PASS} dropdb -U postgres "${DB_NAME}"
-        PGPASSWORD=${DB_PASS} createdb -U postgres "${DB_NAME}"
+        PGPASSWORD=${PG_PASS} dropdb -U ${PG_USER} "${DB_NAME}"
+        PGPASSWORD=${PG_PASS} createdb -U ${PG_USER} "${DB_NAME}"
   elif test "${DB_COMMAND}" == "import"
   then
     # DB connection information
@@ -83,7 +86,7 @@ then
 
     if test "${DB_CONN_INFO}" == "default"
     then
-      DB_CONN_INFO="dbname=${DB_NAME} host=localhost port=5432 user=postgres password=${DB_PASS}"
+      DB_CONN_INFO="dbname=${DB_NAME} host=localhost port=5432 user=${PG_USER} password=${PG_PASS}"
       echo "using local db conn information" ${DB_CONN_INFO}
     fi
 

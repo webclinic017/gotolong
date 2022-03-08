@@ -17,6 +17,8 @@ class GotoLong_Config(object):
         self.config_db_name = self.cp.get('DATABASE', 'db_name')
         self.config_db_user = self.cp.get('DATABASE', 'db_user')
         self.config_db_pass = self.cp.get('DATABASE', 'db_pass')
+        self.config_pg_user = self.cp.get('DATABASE', 'pg_user')
+        self.config_pg_pass = self.cp.get('DATABASE', 'pg_pass')
 
         self.config_loc_global_data = self.cp.get('LOCATION', 'GLOBAL_DATA')
         self.config_loc_global_reports = self.cp.get('LOCATION', 'GLOBAL_REPORTS')
@@ -94,6 +96,12 @@ class GotoLong_Config(object):
     def get_db_pass(self):
         return self.config_db_pass
 
+    def get_pg_user(self):
+        return self.config_pg_user
+
+    def get_pg_pass(self):
+        return self.config_pg_pass
+
     def get_db_schema(self):
         return os.path.join(self.get_data(), self.config_loc_db_schema)
 
@@ -130,6 +138,10 @@ def main():
         print(config.get_db_user())
     elif cmd == "db_pass":
         print(config.get_db_pass())
+    elif cmd == "pg_user":
+        print(config.get_pg_user())
+    elif cmd == "pg_pass":
+        print(config.get_pg_pass())
     elif cmd == "db_schema":
         print(config.get_db_schema())
 
