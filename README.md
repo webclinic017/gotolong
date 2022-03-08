@@ -36,19 +36,31 @@ Download PostgreSQL (v13) - for validation with Heroku
 
 ## Install Python packages
 
-pip -r requirements/requirements_full.txt
+pip install -r requirements/requirements-dev.txt
 
-## Configure DATABASE_URL
+## Configure PATH, PYTHONPATH, DATABASE_URL
 
-Add following to ~/.profile
+### Modify ~/.bashrc
+Use git bash console to add following to ~/.bashrc
 
-export MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+cd location of gotolong clone
 
-export PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+. ./gotolong_config.sh
+  
+### Modify gotolong_config.sh for DB Versions
 
-export HEROKU_DATABASE_URL=`heroku config:get --app gotolong DATABASE_URL`
+For Mariadb version, port# etc
+For PostgreSQL version, port# etc
 
-export DATABASE_URL=$MY_DATABASE_URL
+export PATH=${PATH}:/c/'Program Files'/'MariaDB 10.5'/bin
+
+export PATH=${PATH}:/C/'Program Files'/PostgreSQL/13/bin
+
+export GOTOLONG_MY_DATABASE_URL=mysql://root:root@localhost:3306/gotolong
+
+export GOTOLONG_PG_DATABASE_URL=postgres://postgres:root@localhost:5432/gotolong
+
+export DATABASE_URL=${GOTOLONG_MY_DATABASE_URL}
 
 ## Create DB
 
