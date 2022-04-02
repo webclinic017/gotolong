@@ -1,0 +1,49 @@
+{% include "top.html" %}
+
+<h2>Users Login </h2>
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+<p><b> NOTE: </b>
+    You can use guest/welcome for demo.
+</p>
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+            <td>(use username <b>guest</b> to login without registration.)</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+            <td>(use password <b>welcome</b> for guest user)</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+<p> | <a href="/users/sign-up/"> Sign-Up </a> |
+    <a href="{% url 'password_change' %}">Change password</a> |
+    <a href="{% url 'password_reset' %}">Lost password?</a> |
+</p>
+
+
+
+

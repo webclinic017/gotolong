@@ -1,0 +1,23 @@
+{
+  "module": "amfi",
+  "logging-level": "INFO",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "amfi-data/out-csv/latest/amfi-mcap-latest.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "amfi-reports/amfi-reports-phase-1.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "amfi-reports/amfi-reports-phase-2.csv"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{% include "top.html" %}
+{% include "global_output_top.html" %}
+
+<h2>Advisor List </h2>
+
+{% if debug %}
+{{object_list}}
+{% endif %}
+
+<a href="/advisor/list/all-none/"> All - None</a> |
+<a href="/advisor/list/strong/"> Strong </a> |
+<a href="/advisor/list/moderate/"> Moderate </a> |
+<a href="/advisor/list/weak/"> Weak </a> |
+<a href="/advisor/list/insuf/"> Insufficient </a> |
+<a href="/advisor/list/all/"> All including Insuf </a> |
+
+<br/>
+
+Number of object: {{ object_list|length }}
+
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+        <th>
+            nse_symbol
+        </th>
+        <th>
+            comp_name
+        </th>
+        <th>
+            bhav price
+        </th>
+        <th>
+            bat
+        </th>
+        <th>
+            ftwhl low
+        </th>
+        <th>
+            Valuation
+        </th>
+        <th>
+            mos (%)
+        </th>
+        <th>
+            +52w low (%)
+        </th>
+        <th>
+            ca total
+        </th>
+        <th>
+            industry
+        </th>
+        <th>
+            cap type
+        </th>
+        <th>
+            plan oku
+        </th>
+        <th>
+            funda mental
+        </th>
+        <th>
+            funda reco cause
+        </th>
+    </thead>
+    <tbody>
+    {% for advisor_row in object_list %}
+    <tr>
+        <td>
+            {{ advisor_row.nse_symbol }}
+        </td>
+        <td>
+            {{ advisor_row.comp_name }}
+        </td>
+        <td>
+            {{ advisor_row.bhav_price }}
+        </td>
+        <td>
+            {{ advisor_row.bat }}
+        </td>
+        <td>
+            {{ advisor_row.ftwhl_low }}
+        </td>
+        <td>
+            {{ advisor_row.valuation_reco }}
+        </td>
+        <td>
+            {{ advisor_row.safety_margin }}
+        </td>
+        <td>
+            {{ advisor_row.low_margin }}
+        </td>
+        <td>
+            {{ advisor_row.ca_total }}
+        </td>
+
+        <td>
+            {{ advisor_row.industry }}
+        </td>
+
+        <td>
+            {{ advisor_row.cap_type }}
+        </td>
+
+        <td>
+            {{ advisor_row.plan_oku}}
+        </td>
+        <td>
+            {{ advisor_row.funda_reco_type }}
+        </td>
+        <td>
+            {{ advisor_row.funda_reco_cause }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No advisor yet.</tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% include "bottom.html" %}

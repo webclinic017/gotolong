@@ -1,0 +1,93 @@
+{% include "top.html" %}
+{% include "user_broker_zerodha_top.html" %}
+
+<h1>Broker zerodha Sum</h1>
+
+<form action="/broker/zerodha/zsum/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+<a href="/broker/zerodha/zsum/reset/">Clear/Reset the data</a> <br>
+
+Number of object: {{ object_list|length }}
+<br>
+
+<table>
+    {% for bzs_row in object_list %}
+    <tr>
+        <td>
+            {{ bzs_row.bzs_instrument }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_quantity }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_average_cost }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_ltp }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_cur_value }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_pnl }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_net_chg }}
+        </td>
+
+        <td>
+            {{ bzs_row.bzs_day_chg }}
+        </td>
+
+
+        <td>
+            {{ bzs_row.comp_rank }}
+        </td>
+
+        <td>
+            {{ bzs_row.cap_type }}
+        </td>
+
+        <td>
+            {{ bzs_row.funda_reco_type }}
+        </td>
+
+        <td>
+            {{ bzs_row.funda_reco_cause }}
+        </td>
+
+        <td>
+            {{ bzs_row.cap_weight }}
+        </td>
+
+        <td>
+            {{ bzs_row.cap_count }}
+        </td>
+        <td>
+            {{ bzs_row.cap_cost }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td>
+            No dematsum yet.
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% include "bottom.html" %}

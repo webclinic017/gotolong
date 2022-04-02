@@ -1,0 +1,95 @@
+{% include "top.html" %}
+{% include "user_mf_top.html" %}
+
+<h1> Mutual Fund </h1>
+
+<br>
+<a href="/mfund/refresh/"> Refresh Mfund </a>
+<br>
+
+<br>
+Number of object: {{ object_list|length }}
+<br>
+
+Sum total : {{sum_total}}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Number of object: {{ object_list|length }}
+        </td>
+    </tr>
+
+    {% for mf_row in object_list %}
+    <tr>
+        <td>
+            {{ mf_row.mf_amc }}
+        </td>
+        <td>
+            {{ mf_row.mf_name }}
+        </td>
+        <td>
+            {{ mf_row.mf_category }}
+        </td>
+        <td>
+            {{ mf_row.mf_subcat }}
+        </td>
+        <td>
+            {{ mf_row.mf_rating }}
+        </td>
+        <td>
+            {{ mf_row.mf_units }}
+        </td>
+        <td>
+            {{ mf_row.mf_acp }}
+        </td>
+        <td>
+            {{ mf_row.mf_cost_value }}
+        </td>
+        <td>
+            {{ mf_row.mf_nav_date }}
+        </td>
+        <td>
+            {{ mf_row.mf_nav }}
+        </td>
+        <td>
+            {{ mf_row.mf_nav_value }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl_realized }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl }}
+        </td>
+        <td>
+            {{ mf_row.mf_pnl_pct }}
+        </td>
+        <td>
+            {{ mf_row.mf_research_reco }}
+        </td>
+
+        <td>
+            {{ mf_row.scheme_sum |floatformat:0 }}
+        </td>
+
+        <td>
+            {% if sum_total %}
+            {% widthratio mf_row.scheme_sum sum_total 100.0 %} %
+            {% endif %}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No Mutual Funds yet.</tr>
+    {% endfor %}
+</table>
+
+{% autoescape off %}
+{{ plot_div_1 }}
+<br/>
+{{ plot_div_2 }}
+{% endautoescape %}
+
+{% include "bottom.html" %}

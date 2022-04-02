@@ -1,0 +1,2 @@
+Following third party code is included.
+https://github.com/lanyrd/mysql-postgresql-converter

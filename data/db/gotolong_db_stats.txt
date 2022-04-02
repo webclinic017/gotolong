@@ -1,0 +1,41 @@
++----------------------------+------------+
+| table_name                 | table_rows |
++----------------------------+------------+
+| user_demat_txn             |       3347 |
+| broker_icidir_txn          |       3170 |
+| user_bstmt_div             |       1311 |
+| user_dividend              |       1130 |
+| global_amfi                |       1000 |
+| global_indices             |        499 |
+| screener                   |        498 |
+| global_ftwhl               |        480 |
+| global_bhav                |        478 |
+| global_corpact             |        451 |
+| global_trendlyne           |        378 |
+| global_funda_reco          |        362 |
+| plan                       |        354 |
+| user_demat_sum             |        321 |
+| broker_icidir_sum          |        321 |
+| user_weight                |        246 |
+| global_fofeti              |        192 |
+| global_nach                |        177 |
+| broker_icidir_mf           |        132 |
+| auth_permission            |         48 |
+| user_mfund                 |         42 |
+| django_migrations          |         25 |
+| user_othinv                |         24 |
+| both_lastrefd              |         20 |
+| django_content_type        |         18 |
+| django_session             |         15 |
+| auth_user                  |          9 |
+| broker_zerodha_txn         |          7 |
+| broker_zerodha_sum         |          7 |
+| global_fratio              |          6 |
+| global_weight              |          4 |
+| django_admin_log           |          0 |
+| auth_user_user_permissions |          0 |
+| auth_group                 |          0 |
+| auth_user_groups           |          0 |
+| user_doc                   |          0 |
+| auth_group_permissions     |          0 |
++----------------------------+------------+

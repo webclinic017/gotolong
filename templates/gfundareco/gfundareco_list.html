@@ -1,0 +1,67 @@
+{% include "top.html" %}
+{% include "global_output_top.html" %}
+
+<h1> Fundamental Reco List </h1>
+
+{% if debug %}
+{{object_list}}
+{% endif %}
+
+<a href="/gfundareco/refresh"> Refresh Recommendation </a>
+
+<br/>
+<br/>
+Number of object: {{ object_list|length }}
+<br/>
+
+{% for funda_reco_row in funda_reco_list %}
+{{ funda_reco_row.funda_reco_type }} : {{ funda_reco_row.funda_reco_count }}
+<br/>
+{% endfor %}
+
+<br/>
+
+
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+
+        <th>
+            funda_reco_ticker
+        </th>
+        <th>
+            funda_reco_isin
+        </th>
+        <th>
+            funda_reco_type
+        </th>
+        <th>
+            funda_reco_cause
+        </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for gfunda_reco_row in object_list %}
+    <tr>
+        <td>
+            {{ gfunda_reco_row.funda_reco_ticker }}
+        </td>
+        <td>
+            {{ gfunda_reco_row.funda_reco_isin }}
+        </td>
+        <td>
+            {{ gfunda_reco_row.funda_reco_type }}
+        </td>
+        <td>
+            {{ gfunda_reco_row.funda_reco_cause }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No gfundareco yet.</tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% include "bottom.html" %}

@@ -1,0 +1,304 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+    <style>
+
+    .display table
+    {
+    background: White;
+    border: White;
+    }
+
+    .display th {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-color: grey;
+    color: White;
+    background: #0066CC;
+    padding-left:4px;
+    padding-right:4px;
+    padding-bottom:2px;
+    margin-color: White;
+    }
+
+    .display td {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-color: grey;
+    color: black;
+    vertical-align:top;
+    margin-color: White;
+    }
+
+    .display tr:nth-child(even) {
+      background-color: #FFFFCC;
+    }
+
+
+    </style>
+
+    <style>
+     #logo   img {
+      float: left;
+    }
+
+    </style>
+
+
+    <link rel="Stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $('#GoLoDataTable').DataTable( {
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+                //to select and search from grid
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
+
+
+
+    </script>
+
+    <!--
+    navigation menu - style
+    used navbar1 instead of navbar to avoid conflict
+    used dropdown1 and dropbtn1 instead of dropdown and dropbtn to avoid conflict
+    -->
+    <style>
+.navbar1 {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar1 a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown1 {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown1 .dropbtn1 {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar1 a:hover, .dropdown1:hover .dropbtn1 {
+  background-color: red;
+}
+
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown1-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown1-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown1:hover .dropdown1-content {
+  display: block;
+}
+
+    </style>
+
+    <title> GotoLong Portfolio Advisor </title>
+
+</head>
+
+
+<body>
+
+
+<div id="logo">
+    <img src="/media/logo/gotolong-logo-7-small.png" width="" height="50">
+</div>
+
+<center><H1>Portfolio Advisor</H1></center>
+
+
+<div class="navbar1">
+    <a href="/page/home">Home</a>
+    <div class="dropdown1">
+        <button class="dropbtn1"> Global Data
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+            <b> Global Input </b>
+            <a href="/amfi/list/"> AMFI </a>
+            <a href="/bhav/list/"> BHAV </a>
+            <a href="/ftwhl/list/"> FTWHL </a>
+            <a href="/indices/list/"> Indices </a>
+            <a href="/screener/list/"> SCREENER </a>
+            <a href="/trendlyne/list/"> TRENDLYNE </a>
+            <a href="/corpact/list/"> CorpAct </a>
+            <b> Global Config </b>
+            <a href="/gweight/list/"> Global WEIGHT </a>
+            <a href="/fratio/list/"> FilterRatio </a>
+            <b> Global Output </b>
+            <a href="/gfundareco/list/"> Fundamental Reco </a>
+            <a href="/advisor/list/all-none/"> Advisor </a>
+            <b> Fof & ETF/Index </b> :
+            <a href="/fofeti/list/"> Fof & ETF/Index </a>
+        </div>
+    </div>
+
+    <div class="dropdown1">
+        <button class="dropbtn1"> User Data
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+
+            <b> Net Worth </b> :
+            <a href="/othinv/list/"> Other Investment </a>
+            <b> MF Central </b> :
+            <a href="/mfund/list/"> MF list </a>
+            <a href="/mfund/amc/list/"> MF list (amc) </a>
+            <a href="/mfund/amc/amount/list/"> MF amc (amount / pct) </a>
+            <a href="/mfund/category/list/"> MF list (category) </a>
+            <a href="/mfund/subcat/amount/list/"> MF captype (amount / pct) </a>
+            <a href="/mfund/subcat/list/"> MF list (subcat) </a>
+            <a href="/mfund/amount/list/"> MF list (amount) </a>
+            <a href="/mfund/reco/list/"> MF list (reco) </a>
+
+            <b> Equity Cumulative </b> :
+            <a href="/demat/sum/list/"> Equity Sum </a>
+            <a href="/demat/txn/list/"> Equity Txn </a>
+            <a href="/phealth/list/all/"> P-HEALTH </a>
+
+            <b> Broker </b>
+
+            <b> ICI Direct </b> :
+            <a href="/broker/icidir/imf/list/"> Broker Icidir MF </a>
+            <a href="/broker/icidir/isum/list/"> Broker Icidir Sum </a>
+            <a href="/broker/icidir/itxn/list/"> Broker Icidir Txn </a>
+
+            <b> Zerodha </b> :
+            <a href="/broker/zerodha/zsum/list/"> Broker Zerodha Sum </a>
+            <a href="/broker/zerodha/ztxn/list/"> Broker Zerodha Txn </a>
+
+        </div>
+    </div>
+
+    <div class="dropdown1">
+        <button class="dropbtn1"> Dividend Aristocrats
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+            <b> Dividend Central </b> :
+            <a href="/dividend/list/"> Dividend List </a>
+            <b> Dividend Bank Stmt </b> :
+            <a href="/bstmtdiv/list/"> Bstmt Dividend </a>
+        </div>
+    </div>
+
+    <div class="dropdown1">
+        <button class="dropbtn1"> Admin
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+            <a href="/lastrefd/list/"> Last Refresh Date </a>
+            <a href="/dbstat/list/"> Db Stats </a>
+            <a href="/admin/"> Admin console </a>
+            <a href="/page/quick-links/"> Quick Links </a>
+            <a href="/page/sitemap/"> Sitemap </a>
+
+        </div>
+    </div>
+
+    <div class="dropdown1">
+        <button class="dropbtn1"> Company
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown1-content">
+            <a href="/page/about/"> About Us </a>
+            <a href="/page/contact/"> Contact Us </a>
+            <a href="/page/annual-report-self/"> Annual Report Self </a>
+
+        </div>
+    </div>
+
+    <a href="/payments/pay/">Payment</a>
+
+</div>
+
+<br>
+|
+{% if user.is_authenticated %}
+User {{ user.username }} | <a href="/users/logout/"> Logout </a> |
+<!-- switched from /accounts/logout that takes to admin login page -->
+
+{% else %}
+<a href="/accounts/login/"> Login </a> |
+{% endif %}
+<br>
+<br>
+
+

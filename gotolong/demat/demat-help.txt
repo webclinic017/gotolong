@@ -1,0 +1,10 @@
+
+1. To know the recent txn.
+
+MariaDB [gotolong]> select stock_symbol, max(txn_date) from user_demat_txn group by stock_symbol;
+
+2. To know the number of days (last time the stock was acquired)
+
+MariaDB [gotolong]> select stock_symbol, max(txn_date), datediff(current_date(),max(txn_date)) from user_demat_txn group by stock_symbol order by max(txn_date) desc;
+
+3.

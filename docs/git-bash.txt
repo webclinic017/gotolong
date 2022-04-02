@@ -6,7 +6,6 @@ create a dummy
 
 ~/.bash_profile that loads ~/.bashrc will be created for you.
 
-
 We have to further enhance it.
 
 $ cat ~/.bashrc

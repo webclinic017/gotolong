@@ -1,0 +1,42 @@
+{
+  "module": "screener",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "screener-data/AC500.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-all.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-fltr-buy.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-fltr-buy-ticker-only.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-fltr-hold-ticker-cause.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-fltr-sale-ticker-cause.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-reco-ticker-cause.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "screener-reports/screener-reports-reco-ticker-without-cause-gotolong.csv"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "module": "bhav",
+  "logging-level": "INFO",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "bhav-data/bhav.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "bhav-reports/bhav-reports.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "bhav-reports/bhav-reports.txt"
+    }
+  ]
+}

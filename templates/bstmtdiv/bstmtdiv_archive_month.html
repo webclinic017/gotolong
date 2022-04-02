@@ -1,0 +1,57 @@
+{% include "top.html" %}
+{% include "bstmtdiv_top.html" %}
+
+<h2>Dividend Archive Monthly List </h2>
+
+
+{% for date in date_list %}
+
+{% if forloop.first %}
+
+<a href=/bstmtdiv/list/> Go Top </a>
+
+<br>
+
+<a href=/bstmtdiv/list/{{ date|date:"Y" }}/> {{ date|date:"Y" }} </a> |
+
+<a href=/bstmtdiv/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+
+<br>
+Days  Archive :
+{% endif %}
+
+{{ date|date:"d" }} |
+{% endfor %}
+
+
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.bsdiv_date }}
+        </td>
+        <td>
+            {{ dividend_row.bsdiv_remarks }}
+        </td>
+        <td>
+            {{ dividend_row.bsdiv_amount }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

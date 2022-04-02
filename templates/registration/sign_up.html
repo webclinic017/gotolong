@@ -1,0 +1,19 @@
+{% include "top.html" %}
+
+<h2>Users signup </h2>
+
+<br>
+Custom Top
+<br>
+<b>You can use e-mail id as username</b>
+<br>
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Sign up">
+</form>
+
+<br>
+Custom bottom
+<br>

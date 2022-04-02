@@ -1,0 +1,51 @@
+{
+  "module": "demat",
+  "logging-level": "INFO",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "PROFILE_DATA",
+      "file": "demat-data/icicidirect/demat-txn-data.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_DATA",
+      "file": "demat-data/icicidirect/demat-summary-data.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-txn-list-detailed.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-txn-list-compressed.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-txn-summary-reports-all.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-txn-summary-reports-positive.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-summary-ticker-only.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-summary-captype.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-summary-hitrate.csv"
+    },
+    {
+      "dir-cfg-key": "PROFILE_REPORTS",
+      "file": "demat-reports/icicidirect/demat-portfolio-holdings-by-amfi-rank.csv"
+    }
+  ]
+}

@@ -1,8 +1,0 @@
-<h1>DematSummary</h1>
-<ul>
-    {% for dematsum_row in object_list %}
-    <li>{{ dematsum_row.stock_symbol }} - {{ dematsum_row.unrealized_pl_pct }}</li>
-    {% empty %}
-    <li>No dematsum yet.</li>
-    {% endfor %}
-</ul>

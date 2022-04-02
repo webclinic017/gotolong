@@ -1,0 +1,150 @@
+{% include "top.html" %}
+{% include "bstmtdiv_top.html" %}
+
+<h2>Dividend </h2>
+
+<form action="/bstmtdiv/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label for="bank">Choose a Bank:</label>
+
+    <select id="bank" name="bank">
+        <option value="icici">ICICI</option>
+        <option value="sbi">SBI</option>
+        <option value="hdfc">HDFC</option>
+        <option value="axis">Axis</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="files1"> Upload files</label>
+    <input type="file" id="files1" name="files" multiple>
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+Total Dividend: {{ total_amount }}
+
+<br>
+
+Annual and Monthly Distribution
+
+<br>
+
+<table>
+
+
+    <tr>
+        <td>
+            key
+        </td>
+        <td>
+            value
+        </td>
+    </tr>
+
+    {% for year_summary in summary_list %}
+
+    {% comment %}
+    {{ year_summary }}
+    {% endcomment %}
+
+    {% for key, value in year_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value}}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+
+
+    <br/>
+
+
+    {% for month_summary in month_summary_list %}
+
+    {% comment %}
+    {{ month_summary }}
+    {% endcomment %}
+
+    {% for key, value in month_summary.items %}
+
+    {% if forloop.counter|divisibleby:2 %}
+    {% comment %}
+    {{ starting index 1 }}
+    {% endcomment %}
+    {% else %}
+    <tr>
+        {% endif %}
+
+        <td>
+            {{ value }}
+        </td>
+
+        {% if forloop.counter|divisibleby:2 %}
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+    {% endfor %}
+
+</table>
+
+
+<br/>
+
+Dividend Archives :
+
+{% for year in year_list %}
+<a href=/bstmtdiv/list/{{ year | date:"Y" }}/> {{year | date:"Y"}} </a> |
+{% endfor %}
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Remarks
+        </td>
+        <td>
+            Amount
+        </td>
+    </tr>
+    {% for dividend_row in object_list %}
+    <tr>
+        <td>
+            {{ dividend_row.bsdiv_date }}
+        </td>
+        <td>
+            {{ dividend_row.bsdiv_remarks }}
+        </td>
+        <td>
+            {{ dividend_row.bsdiv_amount }}
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>No dividend yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

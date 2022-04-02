@@ -1,0 +1,65 @@
+{% include "top.html" %}
+{% include "global_top.html" %}
+
+<h1> Users List </h1>
+
+<table>
+    <tr>
+        <td>
+            id
+        </td>
+        <td>
+            username
+        </td>
+        <td>
+            email
+        </td>
+        <td>
+            last_login
+        </td>
+        <td>
+            date_joined
+        </td>
+        <td>
+            is_superuser
+        </td>
+        <td>
+            is_staff
+        </td>
+        <td>
+            is_active
+        </td>
+    </tr>
+    {% for user_row in object_list %}
+    <tr>
+        <td>
+            {{ user_row.id }}
+        </td>
+        <td>
+            {{ user_row.username }}
+        </td>
+        <td>
+            {{ user_row.email }}
+        </td>
+        <td>
+            {{ user_row.last_login }}
+        </td>
+        <td>
+            {{ user_row.date_joined }}
+        </td>
+        <td>
+            {{ user_row.is_superuser }}
+        </td>
+        <td>
+            {{ user_row.is_staff }}
+        </td>
+        <td>
+            {{ user_row.is_active }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No User yet.</tr>
+    {% endfor %}
+</table>
+
+{% include "bottom.html" %}

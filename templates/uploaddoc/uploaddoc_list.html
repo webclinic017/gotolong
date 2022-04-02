@@ -1,0 +1,27 @@
+{% extends 'uploaddoc/uploaddoc_base.html' %}
+
+{% block content %}
+<ul>
+    <li>
+        <a href="{% url 'uploaddoc-simple' %}">Simple Upload</a>
+    </li>
+    <li>
+        <a href="{% url 'uploaddoc-model-form' %}">Model Form Upload</a>
+    </li>
+</ul>
+
+<p>Uploaded files:</p>
+<ul>
+    {% for obj in documents %}
+    <li>
+        {{ obj.uploaddoc_fpath }} <a href="{{ obj.uploaddoc_fpath.url }}"> Download </a>
+        &nbsp; &nbsp; <a href="/uploaddoc/delete/{{ obj.uploaddoc_id }}"> Delete </a>
+        <br/>
+        <small>(Id: {{ obj.uploaddoc_id }})</small>
+        <small>(Uploaded scope: {{ obj.uploaddoc_scope }})</small>
+        <small>(Uploaded type: {{ obj.uploaddoc_type }})</small>
+        <small>(Uploaded year: {{ obj.uploaddoc_year }})</small>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

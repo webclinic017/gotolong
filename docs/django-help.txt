@@ -10,7 +10,14 @@ python django-admin.py startproject mysite
 
 python manage.py runserver
 
-cd D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root
+cd D:\GoogleDrive\my_github\GitHub\gotolong\src-django-proj-root
+
+cd d:/GoogleDrive/my_github/GitHub/gotolong/src-django-proj-root
+
+d:
+
+python manage.py runserver
+
 
 D:\GoogleDrive\my_github\GitHub\gotolong\src\django-proj-root>python manage.py runserver
 Watching for file changes with StatReloader
@@ -23,9 +30,24 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 
 
-4. admin.py : register model
+4. Steps to add a new add
 
+4.1> python manage.py startapp amfi
+
+It will create amfi directory with several files.
+
+4.2> Add entry of the new app to mysite/settings.py
+
+INSTALLED_APPS = []
+
+4.3> For the table to be visible on admin site
+
+<app>/admin.py : register model
 admin.site.register()
+
+Example :
+admin.site.register(Amfi)
+
 
 5. create special tables for admin :  python manage.py migrate
 
@@ -86,3 +108,71 @@ replaced (blank=True,null=True) with (primary_key=True)
 
 
 8.
+
+
+
+
+
+9. migrations
+
+ python mnaage.py makemigrations
+ pythong manage.py migrate
+
+10.
+
+python manage.py collectstatic
+
+11. Django debug
+
+import pdb; pdb.set_trace()
+or
+
+breakpoint()  #from Python3.7
+
+
+12. naturaltime in templates
+
+To activate these filters, add 'django.contrib.humanize' to your INSTALLED_APPS setting.
+Once you’ve done that,  use {% load humanize %} in a template, and you’ll have access
+to the following filter
+
+12. bootstrap in django templates
+
+https://www.fullstackpython.com/blog/bootstrap-4-django-template.html
+
+13. Disabled validators to allow guest/welcome
+
+'''
+# disabled auth and password validators
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+'''
+
+14. plots using plotly
+https://www.codingwithricky.com/2019/08/28/easy-django-plotly/
+
+15. Fixed Timezone issues - now() with DateTimeField in model.
+USE_TZ is active in settings.py
+
+Solution
+1. Use now from timezone and
+2. Use .%f%z in strftime.
+
+    now = timezone.now()
+    lastrefd_module = module_name
+    # fixed timezone issue
+    lastrefd_date = now.strftime("%Y-%m-%d %H:%M:%S.%f%z")
+
+16.

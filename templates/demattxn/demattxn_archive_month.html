@@ -1,0 +1,57 @@
+{% include "top.html" %}
+{% include "user_top.html" %}
+
+<h1>DematTxn</h1>
+
+<form action="/demat/txn/upload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file1"> Upload a file</label>
+    <input type="file" id="file1" name="file">
+    <small>Only accepts CSV/XLS/XLSX files</small>
+    <button type="submit">Upload</button>
+</form>
+
+Number of object: {{ object_list|length }}
+<br>
+
+{{ date|date:"M" }}  Total Amount: {{ total_amount }}
+
+<br>
+
+<h1>Demat Txn Archive Monthly List </h1>
+
+
+{% for date in date_list %}
+
+{% if forloop.first %}
+
+<a href=/demat/txn/list/> Go Top </a>
+
+<br>
+
+<a href=/demat/txn/list/{{ date|date:"Y" }}/> {{ date|date:"Y" }} </a> |
+<a href=/demat/txn/list/{{ date|date:"Y" }}/{{ date|date:"m" }}/> {{ date|date:"M" }} </a> |
+
+<br>
+Days  Archive :
+{% endif %}
+
+{{ date|date:"d" }} |
+{% endfor %}
+
+<table>
+    {% for demattxn_row in object_list %}
+    <tr>
+        {% include "demattxn/demattxn_fields.html" %}
+    </tr>
+    {% empty %}
+    <tr>
+        <td>
+            No demat txn yet.
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% include "bottom.html" %}

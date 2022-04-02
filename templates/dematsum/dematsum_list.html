@@ -1,0 +1,103 @@
+{% include "top.html" %}
+{% include "user_equity_top.html" %}
+
+<h1>DematSummary </h1>
+<br>
+<a href="/demat/sum/refresh"> Refresh DematSummary </a>
+<br>
+Number of object: {{ object_list|length }}
+<br>
+Total Amount: {{ total_amount }}
+<br>
+Gold ETF : {{ gold_amount }}
+<br>
+Domestic ETF: {{ d_etf_amount }}
+<br>
+International ETF: {{ i_etf_amount }}
+<br>
+REIT: {{ reit_amount }}
+<br>
+Direct Equity: {{ direct_equity_amount }}
+<br>
+
+<table>
+    {% for dematsum_row in object_list %}
+    <tr>
+        <td>
+            {{ dematsum_row.ds_broker }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_ticker }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_isin }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_qty }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_acp }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_costvalue }}
+        </td>
+
+        <td>
+            {{ dematsum_row.ds_mktvalue }}
+        </td>
+
+        <td>
+            {{ dematsum_row.comp_rank }}
+        </td>
+
+        <td>
+            {{ dematsum_row.cap_type }}
+        </td>
+
+        <td>
+            {{ dematsum_row.funda_reco_type }}
+        </td>
+
+        <td>
+            {{ dematsum_row.funda_reco_cause }}
+        </td>
+
+        <td>
+            {{ dematsum_row.cap_weight }}
+        </td>
+
+        <td>
+            {{ dematsum_row.cap_count }}
+        </td>
+        <td>
+            {{ dematsum_row.cap_cost }}
+        </td>
+        <td>
+            {% if direct_equity_amount %}
+            {% widthratio dematsum_row.cap_cost direct_equity_amount 100.0 %} %
+            {% endif %}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td>
+            No dematsum yet.
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% autoescape off %}
+{{ plot_div_1 }}
+<br/>
+{{ plot_div_2 }}
+{% endautoescape %}
+
+
+{% include "bottom.html" %}

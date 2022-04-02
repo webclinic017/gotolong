@@ -1,0 +1,55 @@
+{% include "top.html" %}
+{% include "global_config_top.html" %}
+
+<h1> Filter Ratio List </h1>
+
+<a href="/fratio/add/"> Add </a>
+
+<table id="GoLoDataTable" class="display" cellspacing="0">
+    <thead>
+    <tr>
+        <th>
+            fratio_name
+        </th>
+        <th>
+            fratio_buy
+        </th>
+        <th>
+            fratio_hold
+        </th>
+        <th>
+            fratio_enabled
+        </th>
+
+        <th>
+            Edit/Update
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for fratio_row in object_list %}
+    <tr>
+        <td>
+            {{ fratio_row.fratio_name }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_buy }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_hold }}
+        </td>
+        <td>
+            {{ fratio_row.fratio_enabled}}
+        </td>
+        <td>
+            <a href="{{ fratio_row.get_update_url }}"> Update </a> |
+        </td>
+    </tr>
+    {% empty %}
+    <tr>No fratio yet.</tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% include "bottom.html" %}

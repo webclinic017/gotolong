@@ -1,0 +1,18 @@
+{
+  "module": "trendlyne",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "trendlyne-data/trendlyne-data.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "trendlyne-reports/trendlyne-reports.csv"
+    }
+  ]
+}

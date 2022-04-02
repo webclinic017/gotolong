@@ -1,0 +1,23 @@
+{
+  "module": "ftwhl",
+  "logging-level": "INFO",
+  "truncate-table": "Yes",
+  "save-to-db": "Yes",
+  "pretty-dump": "Yes",
+  "input-files": [
+    {
+      "dir-cfg-key": "GLOBAL_DATA",
+      "file": "ftwhl-data/ftwhl.csv"
+    }
+  ],
+  "output-files": [
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "ftwhl-reports/ftwhl-reports.csv"
+    },
+    {
+      "dir-cfg-key": "GLOBAL_REPORTS",
+      "file": "ftwhl-reports/ftwhl-reports.txt"
+    }
+  ]
+}
